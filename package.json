@@ -13,9 +13,10 @@
     "tailwindcss": "^1.4.4"
   },
   "scripts": {
-    "build": "npm-run-all build:css build:html",
+    "build": "npm-run-all clean build:css build:html",
     "build:css": "postcss src/_includes/css/tailwind.css -o src/css/styles.css",
     "build:html": "eleventy",
+    "clean": "rm -rf dist",
     "develop": "npm-run-all --parallel develop:css develop:html",
     "develop:css": "postcss src/_includes/css/tailwind.css -o src/css/styles.css --watch",
     "develop:html": "eleventy --serve",
