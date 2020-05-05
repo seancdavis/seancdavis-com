@@ -1,0 +1,12 @@
+{
+  "name": "pr-vigilantnow-com",
+  "version": "1.0.0",
+  "author": "Ample <developers@helloample.com>",
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "develop": "eleventy --serve"
+  }
+}
