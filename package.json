@@ -3,10 +3,22 @@
   "version": "1.0.0",
   "author": "Ample <developers@helloample.com>",
   "dependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.10.0",
+    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "autoprefixer": "^9.7.6",
+    "cssnano": "^4.1.10",
+    "html-minifier": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.4.4"
   },
   "scripts": {
-    "build": "eleventy",
-    "develop": "eleventy --serve"
+    "build": "npm-run-all build:css build:html",
+    "build:css": "postcss src/_includes/css/tailwind.css -o src/css/styles.css",
+    "build:html": "eleventy",
+    "develop": "npm-run-all --parallel develop:css develop:html",
+    "develop:css": "postcss src/_includes/css/tailwind.css -o src/css/styles.css --watch",
+    "develop:html": "eleventy --serve",
+    "start": "develop"
   }
 }
