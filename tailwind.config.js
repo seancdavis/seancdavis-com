@@ -1,12 +1,20 @@
 module.exports = {
   theme: {
-    colors: {
-      blue: "#1D5FC1",
-      green: "#01A791"
+    extend: {
+      colors: {
+        blue: "#1D5FC1",
+        green: {
+          dark: "#",
+          default: "#01A791"
+        },
+        white: "#ffffff"
+      }
     },
-    extend: {},
     fontFamily: {
-      serif: ["Lora", "serif"]
+      headings: ["DM Serif Display", "Lora", "serif"],
+      sans: ["Lato", "sans-serif"],
+      serif: ["Lora", "serif"],
+      subheadings: ["Lato", "sans-serif"]
     }
   },
   variants: {},

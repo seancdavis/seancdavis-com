@@ -19,7 +19,7 @@
     "clean": "rm -rf dist",
     "develop": "npm-run-all --parallel develop:css develop:html",
     "develop:css": "postcss src/_includes/css/tailwind.css -o src/css/styles.css --watch",
-    "develop:html": "eleventy --serve",
+    "develop:html": "eleventy --serve --port 8000",
     "start": "develop"
   }
 }

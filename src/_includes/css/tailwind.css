@@ -1,9 +1,22 @@
 @tailwind base;
 
+:root {
+  @apply font-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-headings;
+}
+
+a {
+  @apply text-green;
+}
+
 @tailwind components;
 
 @tailwind utilities;
-
-a {
-  color: theme("colors.green");
-}
