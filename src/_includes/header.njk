@@ -1,0 +1,18 @@
+<header class="py-4">
+  <div class="container mx-auto flex items-center justify-between">
+    <span class="inline-block w-16">
+      {% svg "scd-monogram" %}
+    </span>
+
+    <ul class="flex space-x-6 items-center">
+      {% for item in header_menu %}
+        <li>
+          <a href="{{ item.url }}">{{ item.label }}</a>
+        </li>
+      {% endfor %}
+      <li>
+        {% component "button", label="CTA", url="/" %}
+      </li>
+    </ul>
+  </div>
+</header>

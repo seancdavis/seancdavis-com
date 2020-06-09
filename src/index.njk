@@ -7,7 +7,7 @@ description: This is not a real website. At least not yet.
 <div class="flex items-center justify-center h-screen">
   <div class="p-3 sm:p-0">
     <div class="w-16 mb-1">
-      {% include "scd-monogram.svg" %}
+      {% svg "scd-monogram" %}
     </div>
     <h1 class="text-4xl mb-6">Sean C Davis</h1>
     <p class="mb-1">I'm working on a new site.</p>
@@ -21,6 +21,8 @@ description: This is not a real website. At least not yet.
 
     <hr>
 
-    {% component "button", url="/", label="Hello World" %}
+    {% component "button",
+    url = "/",
+    label = "Hello World" %}
   </div>
 </div>
