@@ -1,13 +1,22 @@
+const nunjucks = require("nunjucks")
+const fs = require("fs")
+const path = require("path")
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css")
   eleventyConfig.addPassthroughCopy("./src/images")
 
-  eleventyConfig.addNunjucksShortcode("button", function (button) {
-    return `
-      <a href="${button.url}" class="bg-green hover:bg-green-dark text-white font-sans py-3 px-8 uppercase inline-block">
-        ${button.label}
-      </a>
-    `
+  /**
+   * Renders component by passing in named arguments to the "component"
+   * shortcode.
+   */
+  eleventyConfig.addNunjucksShortcode("component", function (name, props) {
+    // Path to the component file.
+    const compFilePath = path.join(__dirname, `src/_components/${name}.njk`)
+    // Template content.
+    const rawComp = fs.readFileSync(compFilePath, "utf8")
+    // Pass the props to the component and render.
+    return nunjucks.renderString(rawComp, { ...props })
   })
 
   return {
