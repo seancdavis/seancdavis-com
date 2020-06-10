@@ -2,12 +2,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blue: "#1D5FC1",
-        green: {
-          dark: "#",
-          default: "#01A791"
+        black: "#051c28",
+        blue: {
+          default: "#2260bf",
+          dark: "#1d4a8f"
         },
-        white: "#ffffff"
+        gray: {
+          dark: "#1b3846",
+          default: "#eaeced"
+        },
+        green: {
+          default: "#2260bf"
+        },
+        lime: "#9ce736",
+        orange: "#ff6b00",
+        pink: "#eea2bf",
+        white: "#ffffff",
+        yellow: "#ffd445,"
       }
     },
     fontFamily: {

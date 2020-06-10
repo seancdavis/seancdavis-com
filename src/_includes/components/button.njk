@@ -1,3 +1,19 @@
-<a href="{{ url }}" class="bg-green hover:bg-green-dark text-white font-sans text-sm py-3 px-8 uppercase inline-block">
+{# {% unless color %}
+  {% set color = "gray" %}
+{% endif %} #}
+
+<a href="{{ url }}" class="
+    bg-{{ color }}
+    duration-300
+    font-sans
+    hover:bg-{{ color }}-dark
+    inline-block
+    px-8
+    py-3
+    text-sm
+    text-white
+    transition-all
+    uppercase
+  ">
   {{ label }}
 </a>
