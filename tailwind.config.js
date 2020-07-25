@@ -1,30 +1,37 @@
 module.exports = {
+  purge: [],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem"
+    },
     extend: {
       colors: {
-        black: "#051c28",
+        black: "var(--color-black)",
         blue: {
-          default: "#2260bf",
-          dark: "#1d4a8f"
+          default: "var(--color-blue)",
+          dark: "var(--color-blue-dark)"
         },
         gray: {
-          dark: "#1b3846",
-          default: "#eaeced"
+          blue: "var(--color-gray-blue)",
+          dark: "var(--color-gray-dark)",
+          default: "var(--color-gray)",
+          light: "var(--color-gray-light)"
         },
         green: {
-          default: "#2260bf"
+          default: "var(--color-green)"
         },
-        lime: "#9ce736",
-        orange: "#ff6b00",
-        pink: "#eea2bf",
-        white: "#ffffff",
-        yellow: "#ffd445,"
+        lime: "var(--color-lime)",
+        orange: "var(--color-orange)",
+        pink: "var(--color-pink)",
+        white: "var(--color-white)",
+        yellow: "var(--color-yellow)"
       }
     },
     fontFamily: {
-      headings: ["DM Serif Display", "Lora", "serif"],
+      headings: ["DM Serif Display", "serif"],
       sans: ["Lato", "sans-serif"],
-      serif: ["Lora", "serif"],
+      serif: ["Source Serif Pro", "serif"],
       subheadings: ["Lato", "sans-serif"]
     }
   },

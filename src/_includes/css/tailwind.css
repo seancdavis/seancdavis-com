@@ -1,4 +1,31 @@
+/* ---------------------------------------- | Variables */
+
+:root {
+  /* --breakpoint-sm: 640px; */
+  /* --breakpoint-md: 768px; */
+  /* --breakpoint-lg: 1024px; */
+  /* --breakpoint-xl: 1280px; */
+
+  --color-black: #051c28;
+  --color-blue-dark: #1d4a8f;
+  --color-blue: #2260bf;
+  --color-gray-blue: #4b6a8a;
+  --color-gray-dark: #1b3846;
+  --color-gray-light: #eef1f5;
+  --color-gray: #eaeced;
+  --color-green: #008291;
+  --color-lime: #9ce736;
+  --color-orange: #ff6b00;
+  --color-pink: #eea2bf;
+  --color-white: #ffffff;
+  --color-yellow: #ffd445;
+}
+
+/* ---------------------------------------- | Tailwind Base */
+
 @tailwind base;
+
+/* ---------------------------------------- | Global Styles */
 
 :root {
   @apply font-serif;
@@ -16,6 +43,82 @@ h6 {
 a {
   @apply text-green;
 }
+
+p {
+  @apply mb-4;
+
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
+ol {
+  @apply mb-4
+    pl-5;
+
+  list-style-type: decimal;
+
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
+li {
+  @apply mb-4;
+
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
+/* ---------------------------------------- | Shared Styles */
+
+.section-heading {
+  @apply leading-tight
+    mb-4
+    text-3xl;
+}
+
+@screen sm {
+  .section-heading {
+    @apply text-4xl;
+  }
+}
+
+@screen md {
+  .section-heading {
+    @apply text-5xl;
+  }
+}
+
+.subheading {
+  @apply font-bold
+    font-sans
+    mb-2
+    text-green
+    text-xs
+    uppercase;
+}
+
+@screen md {
+  .subheading {
+    @apply text-sm;
+  }
+}
+
+.links-inherit-color a {
+  color: inherit;
+}
+
+.links-underline a {
+  @apply underline;
+}
+
+.svg-h-full svg {
+  @apply h-full;
+}
+
+/* ---------------------------------------- | Tailwind */
 
 @tailwind components;
 

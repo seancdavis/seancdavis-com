@@ -2,6 +2,8 @@ const nunjucks = require("nunjucks")
 const fs = require("fs")
 const path = require("path")
 
+const components = require("./src/_includes/components")
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css")
   eleventyConfig.addPassthroughCopy("./src/images")
@@ -18,7 +20,12 @@ module.exports = function (eleventyConfig) {
    * shortcode.
    */
   eleventyConfig.addNunjucksShortcode("component", (name, props) => {
-    return nunjucks.renderString(readIncludeFile(`components/${name}.njk`), { ...props })
+    let component = components[name]
+    if (!component) return console.error(`Component not properly configured: ${name}`)
+
+    if (component.transformer) props = component.transformer(props)
+
+    return nunjucks.renderString(readIncludeFile(component.template), { ...props })
   })
 
   /**
@@ -32,6 +39,7 @@ module.exports = function (eleventyConfig) {
       input: "src",
       layouts: "_layouts",
       output: "dist"
-    }
+    },
+    markdownTemplateEngine: "njk"
   }
 }

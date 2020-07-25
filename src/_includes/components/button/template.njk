@@ -1,17 +1,13 @@
-{# {% unless color %}
-  {% set color = "gray" %}
-{% endif %} #}
-
 <a href="{{ url }}" class="
-    bg-{{ color }}
+    bg-{{ bgColor }}
     duration-300
     font-sans
-    hover:bg-{{ color }}-dark
+    hover:bg-{{ bgColor }}-dark
     inline-block
     px-8
     py-3
     text-sm
-    text-white
+    text-{{ textColor }}
     transition-all
     uppercase
   ">
