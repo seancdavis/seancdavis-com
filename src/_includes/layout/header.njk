@@ -16,7 +16,7 @@
 
     {# --- Mobile Nav Trigger --- #}
 
-    <button class="lg:hidden w-8 text-right text-gray-blue w-8 inline-block" onclick="App.Utils.MobileMenu.toggle(event)">
+    <button class="lg:hidden w-8 text-right text-gray-blue w-8 inline-block" onclick="App.MobileMenu.toggle(event)">
       {% svg "menu" %}
     </button>
 
@@ -27,7 +27,7 @@
         <a href="/" class="w-12 inline-block">
           {% svg "seancdavis-logo-white" %}
         </a>
-        <button class="w-8 text-right opacity-50 text-white w-8" onclick="App.Utils.MobileMenu.toggle(event)">
+        <button class="w-8 text-right opacity-50 text-white w-8" onclick="App.MobileMenu.toggle(event)">
           {% svg "cancel" %}
         </button>
       </div>

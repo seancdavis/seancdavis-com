@@ -1,9 +1,3 @@
-import components from "../components/config/webpack"
+import MobileMenuImport from "./utils/mobile-menu"
 
-import MobileMenu from "./utils/mobile-menu"
-
-export const Components = components
-
-export const Utils = {
-  MobileMenu: MobileMenu
-}
+export const MobileMenu = MobileMenuImport
