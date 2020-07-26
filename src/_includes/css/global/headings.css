@@ -1,0 +1,32 @@
+.section-heading {
+  @apply leading-tight
+    mb-4
+    text-3xl;
+}
+
+@screen sm {
+  .section-heading {
+    @apply text-4xl;
+  }
+}
+
+@screen md {
+  .section-heading {
+    @apply text-5xl;
+  }
+}
+
+.subheading {
+  @apply font-bold
+    font-sans
+    mb-2
+    text-green
+    text-xs
+    uppercase;
+}
+
+@screen md {
+  .subheading {
+    @apply text-sm;
+  }
+}

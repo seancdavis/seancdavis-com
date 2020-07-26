@@ -1,0 +1,3 @@
+.svg-h-full svg {
+  @apply h-full;
+}

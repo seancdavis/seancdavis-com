@@ -1,0 +1,20 @@
+:root {
+  /* --breakpoint-sm: 640px; */
+  /* --breakpoint-md: 768px; */
+  /* --breakpoint-lg: 1024px; */
+  /* --breakpoint-xl: 1280px; */
+
+  --color-black: #051c28;
+  --color-blue-dark: #1d4a8f;
+  --color-blue: #2260bf;
+  --color-gray-blue: #4b6a8a;
+  --color-gray-dark: #1b3846;
+  --color-gray-light: #eef1f5;
+  --color-gray: #eaeced;
+  --color-green: #008291;
+  --color-lime: #9ce736;
+  --color-orange: #ff6b00;
+  --color-pink: #eea2bf;
+  --color-white: #ffffff;
+  --color-yellow: #ffd445;
+}
