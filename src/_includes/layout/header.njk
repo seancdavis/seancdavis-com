@@ -1,20 +1,16 @@
-<header class="py-4">
-  <div class="container mx-auto flex items-center justify-between">
-    <span class="inline-block w-16">
+<header class="py-4 relative z-10">
+  <div class="container flex justify-between items-center">
+    <span class="inline-block w-10">
       {% svg "seancdavis-logo" %}
     </span>
 
-    <ul class="flex space-x-6 items-center">
+    {# --- Desktop Nav --- #}
+    <ul class="items-center space-x-4 hidden lg:flex">
       {% for item in header_menu %}
-        <li>
-          <a href="{{ item.url }}">{{ item.label }}</a>
+        <li class="mb-0">
+          <a href="{{ item.url }}" class="layout--header--desktop-link">{{ item.label }}</a>
         </li>
       {% endfor %}
-      <li>
-        {% component "button",
-        label = "CTA",
-        url = "/" %}
-      </li>
     </ul>
   </div>
 </header>

@@ -1,0 +1,28 @@
+.layout--header--desktop-link {
+  @apply font-bold
+    font-sans
+    p-2
+    relative
+    text-gray-blue
+    text-xs
+    tracking-widest
+    uppercase;
+
+  &:before {
+    @apply absolute
+      duration-300
+      left-0
+      bottom-0
+      bg-gray-blue
+      transition-all
+      w-0;
+
+    content: " ";
+    height: 1px;
+  }
+
+  &:hover:before,
+  &.active:before {
+    width: 100%;
+  }
+}
