@@ -8,21 +8,26 @@
     "autoprefixer": "^9.7.6",
     "cssnano": "^4.1.10",
     "html-minifier": "^4.0.0",
+    "lodash": "^4.17.19",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1",
     "postcss-custom-properties": "^9.1.1",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.3",
-    "tailwindcss": "^1.4.4"
+    "tailwindcss": "^1.4.4",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "build": "npm-run-all clean build:css build:html",
+    "build": "npm-run-all clean build:css build:html build:js",
     "build:css": "postcss src/_includes/css/index.css -o src/css/styles.css",
     "build:html": "eleventy",
+    "build:js": "webpack",
     "clean": "rm -rf dist",
-    "develop": "npm-run-all --parallel develop:css develop:html",
+    "develop": "npm-run-all --parallel develop:css develop:html develop:js",
     "develop:css": "postcss src/_includes/css/index.css -o src/css/styles.css --watch",
     "develop:html": "eleventy --serve --port 8000",
+    "develop:js": "webpack",
     "start": "develop"
   }
 }

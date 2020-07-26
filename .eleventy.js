@@ -3,7 +3,7 @@ const MarkdownIt = require("markdown-it")
 const nunjucks = require("nunjucks")
 const path = require("path")
 
-const components = require("./src/_includes/components")
+const components = require("./src/_includes/components/config/eleventy")
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css")
