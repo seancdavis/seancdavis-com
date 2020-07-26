@@ -1,7 +1,7 @@
 <header class="py-4">
   <div class="container mx-auto flex items-center justify-between">
     <span class="inline-block w-16">
-      {% svg "scd-monogram" %}
+      {% svg "seancdavis-logo" %}
     </span>
 
     <ul class="flex space-x-6 items-center">
@@ -11,7 +11,9 @@
         </li>
       {% endfor %}
       <li>
-        {% component "button", label="CTA", url="/" %}
+        {% component "button",
+        label = "CTA",
+        url = "/" %}
       </li>
     </ul>
   </div>
