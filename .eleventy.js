@@ -1,5 +1,6 @@
-const nunjucks = require("nunjucks")
 const fs = require("fs")
+const MarkdownIt = require("markdown-it")
+const nunjucks = require("nunjucks")
 const path = require("path")
 
 const components = require("./src/_includes/components")
@@ -11,7 +12,7 @@ module.exports = function (eleventyConfig) {
   /**
    * Reads a file in the _includes directory and returns the result.
    */
-  const readIncludeFile = (filePath) => {
+  const readIncludeFile = filePath => {
     return fs.readFileSync(path.join(__dirname, `src/_includes/${filePath}`), "utf8")
   }
 
@@ -29,9 +30,17 @@ module.exports = function (eleventyConfig) {
   })
 
   /**
+   * Captures an input string and converts markdown to HTML
+   */
+  eleventyConfig.addPairedNunjucksShortcode("markdown", input => {
+    const md = new MarkdownIt()
+    return md.render(input)
+  })
+
+  /**
    * Reads an SVG from file and inserts its content directly on the page.
    */
-  eleventyConfig.addNunjucksShortcode("svg", (name) => readIncludeFile(`svg/${name}.svg`))
+  eleventyConfig.addNunjucksShortcode("svg", name => readIncludeFile(`svg/${name}.svg`))
 
   return {
     dir: {
