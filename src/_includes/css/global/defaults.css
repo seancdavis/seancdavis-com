@@ -41,3 +41,9 @@ li {
     @apply mb-0;
   }
 }
+
+img,
+svg {
+  @apply h-auto
+    w-full;
+}

@@ -1,3 +1,5 @@
+/* --- Desktop --- */
+
 .layout--header--desktop-link {
   @apply font-bold
     font-sans
@@ -22,7 +24,70 @@
   }
 
   &:hover:before,
-  &.active:before {
+  &.is-active:before {
     width: 100%;
+  }
+}
+
+/* --- Mobile --- */
+
+.layout--header--mobile-menu {
+  @apply bg-gray-blue
+    duration-300
+    ease-in-out
+    fixed
+    h-screen
+    left-0
+    overflow-y-scroll
+    transition-all
+    w-screen
+    z-10;
+
+  top: -100vh;
+
+  &.is-active {
+    @apply top-0;
+
+    .layout--header--mobile-header,
+    .layout--header--mobile-link-list {
+      @apply opacity-100;
+    }
+  }
+
+  .layout--header--mobile-header {
+    @apply delay-500
+      duration-1000
+      flex
+      items-center
+      justify-between
+      mb-8
+      opacity-0
+      py-4
+      text-center
+      transition-all;
+  }
+
+  .layout--header--mobile-link-list {
+    @apply delay-300
+      duration-1000
+      opacity-0
+      text-center
+      transition-all;
+
+    li {
+      @apply mb-8;
+    }
+  }
+
+  .layout--header--mobile-link {
+    @apply p-2
+      text-2xl
+      text-white;
+
+    border-bottom: 1px solid transparent;
+
+    &.is-active {
+      @apply border-white;
+    }
   }
 }
