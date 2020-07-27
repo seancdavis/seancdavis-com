@@ -1,11 +1,10 @@
 const defaults = {
-  color: "blue"
+  theme: "blue"
 }
 
-module.exports = ({ color, ...props }) => {
+module.exports = ({ theme, ...props }) => {
   return {
     ...props,
-    bgColor: color || defaults.color,
-    textColor: "white"
+    theme: theme || defaults.theme
   }
 }

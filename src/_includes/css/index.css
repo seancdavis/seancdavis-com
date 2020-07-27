@@ -4,5 +4,7 @@
 
 @import "./global/index.css";
 @import "../layout/index.css";
+@import "../../_layouts/index.css";
+@import "../components/index.css";
 
 @import "./tailwind/main";
