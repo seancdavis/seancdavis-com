@@ -1,0 +1,9 @@
+{% for image in images %}
+  <img
+        id="particle-image-{{ loop.index0 }}"
+        src="/images/particles/{{ image }}.svg"
+        alt="{{ image }}"
+        class="particles-image hidden">
+{% endfor %}
+
+<canvas id="particles-canvas" class="top-0 left-0 absolute" data-count="{{ count }}"></canvas>

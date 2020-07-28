@@ -9,6 +9,11 @@ description: This is not a real website. At least not yet.
 <div class="layout--home--jumbotron">
   {# TODO: Add background particles #}
   {# <Particles count={15} /> #}
+
+  {% component "particles",
+  images = particles.images,
+  count = 15 %}
+
   <div class="container max-w-5xl">
     <div class="flex container items-center relative justify-between max-w-5xl">
       <div class="max-w-lg mr-16">

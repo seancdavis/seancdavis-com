@@ -1,6 +1,8 @@
 import { toggleMobileMenu } from "./utils/toggle-mobile-menu"
 import { scanLinks } from "./utils/scan-links"
 
+import "../components/particles/particles"
+
 export const MobileMenu = {
   toggle: toggleMobileMenu
 }
