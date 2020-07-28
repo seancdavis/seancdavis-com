@@ -1,6 +1,6 @@
 import lodash from "lodash"
 
-onInit(() => {
+export const initParticles = () => {
   // Quick reference to the canvas element in the DOM.
   let canvas = document.getElementById("particles-canvas")
   // Shared variables, all of which are set in the init() function.
@@ -129,4 +129,4 @@ onInit(() => {
   // Listen for window resizing.
   window.addEventListener("resize", reset)
   // return () => window.removeEventListener("resize", reset)
-})
+}

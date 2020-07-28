@@ -1,6 +1,4 @@
-// import lodash from "lodash"
-
-onInit(() => {
+export const initTypewriter = () => {
   // This process is single-threaded, so there is only ever one active
   // timeout. We share a variable for this timeout so that we can clear it and
   // instantiate a new variable each time we implement a new timeout, helping
@@ -139,4 +137,4 @@ onInit(() => {
   // Return a function that clears the active timeout. This helps avoid memory
   // leakage when the component is unmounted.
   return () => clearTimeout(activeTimeout)
-})
+}
