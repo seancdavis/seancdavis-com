@@ -1,4 +1,4 @@
-export const scanLinks = () => {
+onInit(() => {
   const links = document.getElementsByTagName("a")
 
   for (let link of links) {
@@ -6,4 +6,4 @@ export const scanLinks = () => {
       link.setAttribute("target", "_blank")
     }
   }
-}
+})
