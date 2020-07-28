@@ -6,11 +6,14 @@
     <link rel="icon" type="image/png" href="/images/seancdavis-logo.png">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Source+Serif+Pro:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
-    <title>{{ title }} | Sean C Davis</title>
 
-    {% if description %}
-      <meta name="description" content="{{ description }}">
-    {% endif %}
+    {% component "seo",
+    defaults = seo_defaults,
+    path = page.url,
+    title = title,
+    image = image,
+    description = description,
+    overrides = seo %}
 
     {% if env == 'production' %}
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54661520-1"></script>

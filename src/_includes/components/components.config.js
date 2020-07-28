@@ -7,6 +7,10 @@ module.exports = {
     transformer: require("./particles/particles.transformer"),
     template: "components/particles/particles.template.njk"
   },
+  seo: {
+    transformer: require("./seo/seo.transformer"),
+    template: "components/seo/seo.template.njk"
+  },
   typewriter: {
     transformer: require("./typewriter/typewriter.transformer"),
     template: "components/typewriter/typewriter.template.njk"
