@@ -1,0 +1,39 @@
+@keyframes typewriter-cursor-blink {
+  from,
+  to {
+    @apply bg-black;
+  }
+  50% {
+    @apply bg-transparent;
+  }
+}
+
+.component--typewriter-wrapper {
+  @apply inline-block
+    relative;
+
+  padding-right: 2px;
+
+  &.component--typewriter-isHighlighted {
+    @apply bg-black;
+    @apply text-white;
+  }
+}
+
+.component--typewriter-cursor {
+  @apply absolute
+    bg-black
+    h-full
+    inline-block
+    right-0
+    top-0;
+
+  width: 2px;
+
+  &.component--typewriter-is-blinking {
+    animation-direction: step-end;
+    animation-duration: 1.25s;
+    animation-iteration-count: infinite;
+    animation-name: typewriter-cursor-blink;
+  }
+}
