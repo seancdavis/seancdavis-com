@@ -21,7 +21,8 @@ description: This is not a real website. At least not yet.
         <p class="text-2xl sm:text-3xl md:text-4xl">
           {# TODO: Add typewriter functionality #}
           {# <Typewriter texts={lodash.shuffle(lodash.get(jumbotron, "typewriter_text"))} /> #}
-          {% component "typewriter" %}
+          {% component "typewriter",
+          texts = typewriter.texts %}
         </p>
       </div>
       <div class="layout--home--jumbotron-image">

@@ -8,7 +8,7 @@ module.exports = {
     template: "components/particles/particles.template.njk"
   },
   typewriter: {
-    // transformer: require("./typewriter/typewriter.transformer"),
+    transformer: require("./typewriter/typewriter.transformer"),
     template: "components/typewriter/typewriter.template.njk"
   }
 }

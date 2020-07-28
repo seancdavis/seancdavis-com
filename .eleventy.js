@@ -24,7 +24,7 @@ module.exports = function (eleventyConfig) {
     let component = components[name]
     if (!component) return console.error(`Component not properly configured: ${name}`)
 
-    if (component.transformer) props = component.transformer(props)
+    if (component.transformer) props = component.transformer(props || {})
 
     return nunjucks.renderString(readIncludeFile(component.template), { ...props })
   })

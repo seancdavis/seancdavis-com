@@ -8,19 +8,19 @@
   }
 }
 
-.component--typewriter-wrapper {
+.component--typewriter--wrapper {
   @apply inline-block
     relative;
 
   padding-right: 2px;
 
-  &.component--typewriter-isHighlighted {
+  &.is-highlighted {
     @apply bg-black;
     @apply text-white;
   }
 }
 
-.component--typewriter-cursor {
+.component--typewriter--cursor {
   @apply absolute
     bg-black
     h-full
@@ -30,7 +30,7 @@
 
   width: 2px;
 
-  &.component--typewriter-is-blinking {
+  &.is-blinking {
     animation-direction: step-end;
     animation-duration: 1.25s;
     animation-iteration-count: infinite;
