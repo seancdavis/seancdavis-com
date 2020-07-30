@@ -1,0 +1,7 @@
+.links-inherit-color a {
+  color: inherit;
+}
+
+.links-underline a {
+  @apply underline;
+}

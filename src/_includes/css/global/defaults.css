@@ -1,0 +1,49 @@
+:root {
+  @apply font-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-headings;
+}
+
+a {
+  @apply text-green;
+}
+
+p {
+  @apply mb-4;
+
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
+ol {
+  @apply mb-4
+    pl-5;
+
+  list-style-type: decimal;
+
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
+li {
+  @apply mb-4;
+
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
+img,
+svg {
+  @apply h-auto
+    w-full;
+}

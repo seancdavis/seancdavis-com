@@ -1,0 +1,36 @@
+<div class="bg-black text-white py-12">
+  <div class="container max-w-4xl md:flex justify-between text-center md:text-left">
+    <div class="md:max-w-xs mb-8">
+      <a href="/" class="inline-block w-12 mb-4">
+        {% svg "seancdavis-logo-white" %}
+      </a>
+      <div class="text-sm max-w-sm mx-auto md:mx-0 links-inherit-color links-underline">
+        {% markdown %}
+This site was created and is maintained by [Sean C Davis](https://twitter.com/seancdavis29). It was designed by [Matt Willett](https://mattwillettdesign.com/).
+
+The stack is [Gatsby](https://www.gatsbyjs.org/), [Tailwind CSS](https://tailwindcss.com/), and loads of other open-source software. The code is built, deployed, and hosted with help from [GitHub](https://github.com/) and [Netlify](https://www.netlify.com/).
+
+And here's [a super important legal document](/license) Sean made up.
+        {% endmarkdown %}
+      </div>
+    </div>
+    <div class="md:flex">
+      {% for menu in footer_menus %}
+        <div class="md:ml-8">
+          <span class="block mb-2 font-sans uppercase font-bold text-xs opacity-50">
+            {{ menu.heading }}
+          </span>
+          <ul>
+            {% for link in menu.links %}
+              <li class="block">
+                <a href="{{ link.url }}" class="text-white hover:opacity-75 transition-all duration-300">
+                  {{ link.label }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

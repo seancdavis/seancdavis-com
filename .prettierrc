@@ -1,8 +1,6 @@
 {
-  "bracketSpacing": true,
-  "endOfLine": "lf",
-  "semi": false,
+  "arrowParens": "avoid",
   "printWidth": 100,
-  "tabWidth": 2,
+  "semi": false,
   "trailingComma": "none"
 }

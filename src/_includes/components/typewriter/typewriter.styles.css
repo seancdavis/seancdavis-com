@@ -1,0 +1,28 @@
+@keyframes typewriter-cursor-blink {
+  from,
+  to {
+    border-right-color: var(--color-black);
+  }
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+.component--typewriter {
+  border-right: 2px solid var(--color-black);
+  display: inline;
+  padding: 0.25rem 0;
+  word-break: break-all;
+
+  &.is-highlighted {
+    @apply bg-black;
+    @apply text-white;
+  }
+
+  &.is-blinking {
+    animation-direction: step-end;
+    animation-duration: 1.25s;
+    animation-iteration-count: infinite;
+    animation-name: typewriter-cursor-blink;
+  }
+}

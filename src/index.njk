@@ -1,22 +1,115 @@
 ---
-layout: layout
-title: Maintenance!
-description: This is not a real website. At least not yet.
+layout: home
+title: Hi, I'm Sean.
+seo:
+  image: /images/meta/seancdavis--meta--home.png
+  description: "Hi, I'm Sean. I'm a tinkerer and a teacher. A developer. A sandwich lover. Most of the time I'm only pretending to know what I'm doing."
 ---
 
-<div class="flex items-center justify-center h-screen">
-  <div class="p-3 sm:p-0">
-    <div class="w-16 mb-1">
-      {% include "scd-monogram.svg" %}
+{# --- Jumbotron --- #}
+
+<div class="layout--home--jumbotron">
+  {% component "particles",
+  images = particles.images,
+  count = 15 %}
+
+  <div class="container max-w-5xl">
+    <div class="flex items-center relative justify-between max-w-5xl">
+      <div class="max-w-lg">
+        <h1 class="layout--home--jumbotron-heading">
+          Sean C Davis.
+        </h1>
+        <p class="text-2xl sm:text-3xl md:text-4xl">
+          {% component "typewriter",
+          texts = typewriter.texts %}
+        </p>
+      </div>
+      <div class="layout--home--jumbotron-image">
+        <img src="/images/seancdavis-2020-bg-transparent.png" alt="">
+      </div>
     </div>
-    <h1 class="text-4xl mb-6">Sean C Davis</h1>
-    <p class="mb-1">I'm working on a new site.</p>
-    <p class="mb-1">Yeah, this is actually a maintenance page.</p>
-    <p class="mb-1">The old site was bad.</p>
-    <p class="mb-1">Really bad.</p>
-    <p class="mb-1">The new site will look better than this.</p>
-    <p class="mb-1">I hope.</p>
-    <p class="mb-1">In the meantime, I'm actively writing posts <a href="https://cobwwweb.com/" target="_blank">on my blog</a>.</p>
-    <p>You can also <a href="https://twitter.com/seancdavis29" target="_blank">follow me on Twitter</a>.</p>
+  </div>
+</div>
+
+{# --- About Intro --- #}
+
+<div class="relative">
+  <div class="layout--home--about-intro-bg-laptop" style="background-image: url(/images/laptop-graphic.svg"></div>
+  <div class="layout--home--about-intro-bg-lines" style="background-image: url(/images/laptop-lines.svg"></div>
+  <div class="container py-24 max-w-4xl relative">
+    <div class="max-w-md">
+      <h3 class="subheading">Nice to meet you</h3>
+      <h2 class="section-heading">Hi, I'm Sean.</h2>
+
+      <div class="md:text-xl">
+        <p>I'm a tinkerer and a teacher. I'm driven to learn as much as I can as fast as I can, and then to pass those learnings onto anyone who may find them beneficial.</p>
+
+        <p>I also like long walks in the woods. And talking about the web. But not at the same time. Oh, and meeting new people is fun, too! Maybe we should chat.</p>
+      </div>
+
+      <div class="mt-4">
+        {% for link in social_links %}
+          <a href={{ link.url }} class="layout--home--about-intro-icon">
+            {% svg link.icon %}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{# --- Callout --- #}
+
+<div class="bg-gray-dark text-white">
+  <div class="container py-6 max-w-4xl text-center md:text-left">
+    <div class="md:flex justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <h3 class="text-2xl md:text-3xl">Rather write an email?</h3>
+
+        <p class="md:text-lg md:text-xl max-w-md mx-auto">I can do that, too. But I'm not very good at checking it. Maybe you should make it rhyme.</p>
+      </div>
+      <div>
+        {% component "button",
+        url = "mailto:hello@seancdavis.com",
+        label = "Email Me",
+        theme = "lime" %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{# --- Bio --- #}
+
+<div class="bg-gray-light">
+  <div class="container py-24 max-w-4xl">
+    <div class="grid col-gap-4 sm:grid-cols-2">
+      <div>
+        <h3 class="subheading">About Me</h3>
+        <h2 class="section-heading">A Day in the Life</h2>
+      </div>
+    </div>
+    <div class="layout--home--bio-body">
+      {% markdown %}
+This rubber thing that sits atop an awkward tan line on my wrist starts buzzing at 5:00 AM every morning.
+
+Most days I listen to it and pop right out of bed, already anxious to get to the computer. But first, of course, there's _The Weigh-In_ (long story), letting the dog out, and making a cup of decaf coffee (you know, to wake me up).
+
+While soaking in the rare quiet moments on a busy street near the city, I head up to my office to do what I love — _tinker_ and _teach_. I play with new tools I've discovered or I work on a side project, and then I [share what I've been doing or thinking about](https://cobwwweb.com/).
+
+That's about the time my toddler begins to rise from her glorious, 12-hour slumber to fill the quiet space with some new sound I hadn't known before. I use that as my alarm clock — a cue to transition to the part of the day during which normal people are awake.
+
+The kid and I get dressed and walk to daycare. I leave her with a hug and a hope that she'll enjoy the day, and then set off on a detoured route home, popping on an audio book or calling a loved one while traversing the busy neighborhood streets.
+
+After breakfast, I do stuff someone actually pays me for, as Director of Technology for [Ample](https://www.helloample.com/). I'm likely to spend most of my day exploring how to build [Jamstack](https://cobwwweb.com/wtf-is-jamstack) websites with efficiency and excellence, driving my team to find that perfect balance between quality and speed. Either that or I have eight straight hours of meetings.
+
+The end of the workday often comes with accompanying my wife and dog on another stroll, this time to pick up the girl from daycare. That's the best part of most days, because there's no agenda. We just have to make sure to keep our monsters fed and watered. And bathed occasionally, I suppose. But otherwise, that time is ours. Nothing to create. Nothing to teach. Just to have fun being a family.
+
+Eventually it comes time to put the little noise machine to bed and then it's on to the next thing. Maybe it's a quiet night and I'll read a book. Or maybe I'll dig into another hobby, like playing music, baking bread, writing fiction, or growing plants from seed.
+
+When a day looks like this, I head to bed, exhausted and content, but never satisfied. Because tomorrow I get to wake up and do it all over again, hopefully better than today. So I take a moment to write a few words about the day, noting the wins I achieved, what I'm thankful for, and what I want to tomorrow to bring.
+
+And as I drift off to sleep, thinking about the day, one idea remains, more important than the rest. That in the midst of all the work I did throughout the day — everything that drained the energy from me — that I had a little fun along the way.
+      {% endmarkdown %}
+    </div>
   </div>
 </div>

@@ -1,0 +1,17 @@
+<span
+  id="typewriter-text"
+  class="component--typewriter"
+  data-blank-duration="{{ blankDuration }}"
+  data-character-duration="{{ characterDuration }}"
+  data-highlight-duration="{{ highlightDuration }}"
+  data-texts="{{ texts }}"
+  data-view-duration="{{ viewDuration }}"
+></span>
+
+<script>
+  onInit(function () {
+    App
+      .Typewriter
+      .init()
+  })
+</script>

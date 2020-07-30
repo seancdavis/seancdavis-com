@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" width="324px" height="468px" viewBox="0 0 324 468" version="1.1">
+  <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+  <title>laptop-graphic</title>
+  <desc>Created with Sketch.</desc>
+  <defs>
+    <path d="M73.7572254,17.829197 C73.7572254,7.9824034 81.7452838,2.18180157e-13 91.5862274,2.12851553e-13 L708.644986,-1.21268997e-13 C718.491672,-1.26600709e-13 726.473988,7.97220212 726.473988,17.829197 L726.473988,425.18662 C726.473988,435.033414 718.48593,443.015817 708.644986,443.015817 L91.5862274,443.015817 C81.7395415,443.015817 73.7572254,435.043615 73.7572254,425.18662 L73.7572254,17.829197 Z M91.4285714,16.3903836 L91.4285714,414.007538 C91.4285714,414.209636 91.5932078,414.372468 91.796297,414.372468 L708.203703,414.372468 C708.413063,414.372468 708.571429,414.209083 708.571429,414.007538 L708.571429,16.3903836 C708.571429,16.1882863 708.406792,16.0254545 708.203703,16.0254545 L91.796297,16.0254545 C91.5869367,16.0254545 91.4285714,16.1888389 91.4285714,16.3903836 Z" id="path-1"/>
+    <filter x="-2.0%" y="-2.5%" width="104.0%" height="105.9%" filterUnits="objectBoundingBox" id="filter-2">
+      <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+      <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter1"/>
+    </filter>
+    <filter x="-1.5%" y="-1.8%" width="103.1%" height="104.5%" filterUnits="objectBoundingBox" id="filter-3">
+      <feGaussianBlur stdDeviation="2" in="SourceAlpha" result="shadowBlurInner1"/>
+      <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/>
+      <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"/>
+      <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner2"/>
+      <feOffset dx="0" dy="0" in="shadowBlurInner2" result="shadowOffsetInner2"/>
+      <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"/>
+      <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"/>
+      <feMerge>
+        <feMergeNode in="shadowMatrixInner1"/>
+        <feMergeNode in="shadowMatrixInner2"/>
+      </feMerge>
+    </filter>
+    <path d="M0.354717486,430.741925 C0.158812428,430.741812 0,430.901258 0,431.110134 L0,438.380077 C0,438.380077 22.0989076,450.061091 100.491189,451.565968 C179.094401,451.384686 671.748153,451.565968 671.748153,451.565968 C671.748153,451.565968 767.897743,452.638644 800,438.380077 L800,431.570599 C800,431.368639 799.835548,431.204822 799.645283,431.204712 L0.354717486,430.741925 Z" id="path-4"/>
+    <filter x="-1.6%" y="-52.8%" width="103.2%" height="224.7%" filterUnits="objectBoundingBox" id="filter-5">
+      <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+      <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter1"/>
+    </filter>
+    <filter x="-1.2%" y="-38.4%" width="102.5%" height="196.0%" filterUnits="objectBoundingBox" id="filter-6">
+      <feGaussianBlur stdDeviation="2" in="SourceAlpha" result="shadowBlurInner1"/>
+      <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+      <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/>
+      <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"/>
+      <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner2"/>
+      <feOffset dx="0" dy="0" in="shadowBlurInner2" result="shadowOffsetInner2"/>
+      <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"/>
+      <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"/>
+      <feMerge>
+        <feMergeNode in="shadowMatrixInner1"/>
+        <feMergeNode in="shadowMatrixInner2"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Homepage" transform="translate(0.000000, -619.000000)">
+      <g id="networking-opportunity" transform="translate(-484.000000, 576.000000)">
+        <g id="laptop-graphic" transform="translate(0.000000, 49.000000)">
+          <g id="laptop">
+            <g id="Group-5">
+              <g id="Combined-Shape">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"/>
+                <use fill="#F4F6F7" fill-rule="evenodd" xlink:href="#path-1"/>
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"/>
+              </g>
+              <g id="bottom">
+                <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"/>
+                <use fill="#F4F6F7" fill-rule="evenodd" xlink:href="#path-4"/>
+                <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-4"/>
+              </g>
+            </g>
+          </g>
+          <g id="code-block" transform="translate(474.000000, 79.000000)" stroke-width="3">
+            <g id="line" transform="translate(10.350331, 0.000000)">
+              <path d="M42.0577665,0.5 L98.4526488,0.5" id="Path-3" stroke="#00A691"/>
+              <path d="M0.433333333,0.5 L38.4507283,0.5" id="Path-3" stroke="#FFD445"/>
+              <path d="M102.433333,0.5 L140.450728,0.5" id="Path-3" stroke="#FF6C00"/>
+            </g>
+            <g id="line" transform="translate(0.000000, 23.000000)">
+              <path d="M0.0668875395,0.5 L69.8503313,1" id="Path-3" stroke="#9CE736"/>
+              <path d="M73.5,1 L86.5,1" id="Path-3" stroke="#2260BF"/>
+            </g>
+            <g id="line" transform="translate(9.350331, 47.000000)">
+              <path d="M0.608278115,1 L95.6082781,1" id="Path-3" stroke="#EEA2BF"/>
+              <path d="M99.6082781,1 L112.608278,1" id="Path-3" stroke="#1D5FC1"/>
+            </g>
+            <g id="line" transform="translate(9.783444, 71.000000)">
+              <path d="M95.9331125,0.5 L161.23245,0.5" id="Path-3" stroke="#01A791"/>
+              <path d="M30.0668875,0.5 L91.9331125,0.5" id="Path-3" stroke="#2260BF" fill="#00A691"/>
+              <path d="M165.23245,0.5 L209.098675,0.5" id="Path-3" stroke="#9CE736"/>
+              <path d="M0.0668875395,0.5 L25.3662249,0.5" id="Path-3" stroke="#FF6B00" fill="#00A691"/>
+            </g>
+            <g id="line" transform="translate(14.350331, 94.000000)">
+              <path d="M0.0668875395,0.5 L69.8503313,1" id="Path-3" stroke="#FFD445"/>
+              <path d="M73.8503313,1 L86.8503313,1" id="Path-3" stroke="#00A691"/>
+              <path d="M90.8503313,1 L185.850331,1" id="Path-3" stroke="#EEA2BF"/>
+              <path d="M189.850331,1 L202.850331,1" id="Path-3" stroke="#FF6C00"/>
+            </g>
+          </g>
+          <g id="Group-12" transform="translate(579.000000, 333.000000) scale(-1, 1) translate(-579.000000, -333.000000) translate(474.000000, 285.000000)" stroke-width="3">
+            <g id="line" transform="translate(69.000000, 0.000000)">
+              <path d="M42.0577665,0.5 L98.4526488,0.5" id="Path-3" stroke="#00A691"/>
+              <path d="M0.433333333,0.5 L38.4507283,0.5" id="Path-3" stroke="#FFD445"/>
+              <path d="M102.433333,0.5 L140.450728,0.5" id="Path-3" stroke="#FF6C00"/>
+            </g>
+            <g id="line" transform="translate(166.500000, 48.000000) scale(-1, 1) translate(-166.500000, -48.000000) translate(123.000000, 47.000000)">
+              <path d="M0.0668875395,0.5 L69.8503313,1" id="Path-3" stroke="#9CE736"/>
+              <path d="M73.5,1 L86.5,1" id="Path-3" stroke="#2260BF"/>
+            </g>
+            <g id="line" transform="translate(96.000000, 71.000000)">
+              <path d="M0.608278115,1 L95.6082781,1" id="Path-3" stroke="#EEA2BF"/>
+              <path d="M99.6082781,1 L112.608278,1" id="Path-3" stroke="#1D5FC1"/>
+            </g>
+            <g id="line" transform="translate(0.000000, 95.000000)">
+              <path d="M95.9331125,0.5 L161.23245,0.5" id="Path-3" stroke="#01A791"/>
+              <path d="M30.0668875,0.5 L91.9331125,0.5" id="Path-3" stroke="#2260BF" fill="#00A691"/>
+              <path d="M165.23245,0.5 L209.098675,0.5" id="Path-3" stroke="#9CE736"/>
+              <path d="M0.0668875395,0.5 L25.3662249,0.5" id="Path-3" stroke="#FF6B00" fill="#00A691"/>
+            </g>
+            <g id="line" transform="translate(6.000000, 23.000000)">
+              <path d="M0.0668875395,0.5 L69.8503313,1" id="Path-3" stroke="#FFD445"/>
+              <path d="M73.8503313,1 L86.8503313,1" id="Path-3" stroke="#00A691"/>
+              <path d="M90.8503313,1 L185.850331,1" id="Path-3" stroke="#EEA2BF"/>
+              <path d="M189.850331,1 L202.850331,1" id="Path-3" stroke="#FF6C00"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

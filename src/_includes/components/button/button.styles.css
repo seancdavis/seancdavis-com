@@ -1,0 +1,65 @@
+.component--button {
+  @apply bg-transparent
+    border-2
+    border-blue
+    duration-300
+    font-sans
+    inline-block
+    px-8
+    py-3
+    relative
+    text-sm
+    text-blue
+    transition-all
+    uppercase;
+
+  transform: translate(0);
+
+  &:hover {
+    @apply text-white;
+  }
+
+  &:hover:before {
+    @apply right-0;
+  }
+
+  &:before {
+    @apply absolute
+      bg-blue
+      duration-300
+      transition-all;
+
+    bottom: 0;
+    content: "";
+    left: 0;
+    right: 100%;
+    top: 0;
+    z-index: -1;
+  }
+
+  &.theme-lime {
+    @apply border-lime
+      text-lime;
+
+    &:hover {
+      @apply text-black;
+    }
+
+    &:before {
+      @apply bg-lime;
+    }
+  }
+
+  &.theme-white {
+    @apply border-white
+      text-white;
+
+    &:hover {
+      @apply text-black;
+    }
+
+    &:before {
+      @apply bg-white;
+    }
+  }
+}

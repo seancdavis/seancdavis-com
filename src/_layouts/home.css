@@ -1,0 +1,183 @@
+/* --- Jumbotron --- */
+
+.layout--home--jumbotron {
+  @apply pb-32
+    relative;
+
+  margin-top: -5rem;
+  padding-top: 13rem;
+
+  &:before {
+    @apply absolute block left-0 top-0 w-full;
+
+    background: linear-gradient(90deg, rgba(165, 183, 211, 0.5), #ffffff);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 35%);
+    content: " ";
+    height: 60%;
+    z-index: -1;
+  }
+
+  &::after {
+    @apply absolute block left-0 bottom-0 w-full;
+
+    background: var(--color-gray);
+    clip-path: polygon(0 0, 100% 80%, 100% 100%, 0 100%);
+    content: " ";
+    height: 90%;
+    z-index: -2;
+  }
+}
+
+.layout--home--jumbotron-heading {
+  @apply mb-4;
+
+  background: linear-gradient(153deg, #01a791, #1d5fc1);
+  font-size: 4rem;
+  line-height: 1;
+  max-width: 14rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@screen sm {
+  .layout--home--jumbotron-heading {
+    font-size: 5rem;
+    margin-top: 3rem;
+    max-width: 18rem;
+  }
+}
+
+@screen md {
+  .layout--home--jumbotron-heading {
+    font-size: 6rem;
+    margin-top: 6rem;
+    max-width: 22rem;
+  }
+}
+
+@screen lg {
+  .layout--home--jumbotron-heading {
+    margin-top: 0;
+  }
+}
+
+.layout--home--jumbotron-image {
+  display: none;
+}
+
+@screen sm {
+  .layout--home--jumbotron-image {
+    @apply absolute
+    h-full
+    right-0;
+
+    bottom: 1.2rem;
+    display: block;
+    top: -3rem;
+    width: 14rem;
+  }
+}
+
+@screen md {
+  .layout--home--jumbotron-image {
+    bottom: 4rem;
+    top: -6rem;
+    width: 20rem;
+  }
+}
+
+@screen lg {
+  .layout--home--jumbotron-image {
+    top: auto;
+  }
+}
+
+/* --- About Intro --- */
+
+.layout--home--about-intro-bg-laptop {
+  @apply absolute
+    bg-left
+    bg-no-repeat
+    hidden
+    h-full
+    left-0
+    top-0
+    w-full;
+
+  background-size: auto calc(100% - 8rem);
+
+  @media (min-width: 720px) {
+    display: block;
+
+    transform: scaleX(-1);
+    filter: FlipH;
+  }
+
+  @media (min-width: 1400px) {
+    transform: scaleX(1);
+  }
+}
+
+.layout--home--about-intro-bg-lines {
+  @apply absolute
+    bg-center
+    bg-repeat-x
+    h-full
+    left-0
+    top-0
+    w-full;
+
+  background-size: auto calc(100% - 8rem);
+  z-index: -1;
+}
+
+.layout--home--about-intro-icon {
+  @apply bg-gray-light
+    duration-300
+    inline-block
+    mr-4
+    p-2
+    relative
+    rounded-full
+    transition-all
+    w-12;
+
+  line-height: 0;
+
+  &:before {
+    @apply absolute
+      duration-300
+      h-full
+      left-0
+      rounded-full
+      top-0
+      transition-all
+      w-full;
+
+    border: 2px solid var(--color-gray-light);
+    content: " ";
+  }
+
+  &:hover {
+    transform: scale(0.8);
+
+    &:before {
+      transform: scale(1.25);
+    }
+  }
+}
+
+/* --- Bio --- */
+
+.layout--home--bio-body {
+  @apply max-w-xl;
+}
+
+@screen md {
+  .layout--home--bio-body {
+    @apply max-w-none;
+
+    column-count: 2;
+    column-gap: 2rem;
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "heading": "Social Links",
+    "links": [
+      {
+        "label": "Blog",
+        "url": "https://cobwwweb.com/"
+      },
+      {
+        "label": "Twitter",
+        "url": "https://twitter.com/seancdavis29"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/seancdavis"
+      }
+    ]
+  },
+  {
+    "heading": "Site References",
+    "links": [
+      {
+        "label": "License",
+        "url": "/license"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/seancdavis/seancdavis-com"
+      }
+    ]
+  }
+]

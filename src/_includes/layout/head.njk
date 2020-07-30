@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/seancdavis-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Source+Serif+Pro:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    {% component "seo",
+    defaults = seo_defaults,
+    path = page.url,
+    title = title,
+    image = image,
+    description = description,
+    overrides = seo %}
+
+    {% if env == 'production' %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54661520-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-54661520-1');
+      </script>
+    {% endif %}
+
+    <script>
+      function onInit(callback) {
+        if (typeof App !== 'undefined') 
+          return callback()
+        setTimeout(onInit, 250, callback)
+      }
+    </script>
+  </head>
+
+  <body class="font-serif">

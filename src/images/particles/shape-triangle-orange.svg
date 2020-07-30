@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>shape-triangle-orange</title>
+    <desc>Created with Sketch.</desc>
+    <g id="shape-triangle-orange" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Triangle" fill="#FF6C00" transform="translate(40.000000, 36.000000) rotate(-53.000000) translate(-40.000000, -36.000000) " points="40 -4 80 76 0 76"></polygon>
+    </g>
+</svg>

@@ -1,0 +1,45 @@
+<header class="py-4 relative z-10">
+  <div class="container max-w-5xl flex justify-between items-center">
+    <span class="inline-block w-10">
+      {% svg "seancdavis-logo" %}
+    </span>
+
+    {# --- Desktop Nav --- #}
+
+    <ul class="items-center space-x-4 hidden lg:flex">
+      {% for item in header_menu %}
+        <li class="mb-0">
+          <a href="{{ item.url }}" class="layout--header--desktop-link">{{ item.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {# --- Mobile Nav Trigger --- #}
+
+    <button class="lg:hidden w-8 text-right text-gray-blue inline-block" onclick="App.MobileMenu.toggle(event)">
+      {% svg "menu" %}
+    </button>
+
+    {# --- Mobile Nav --- #}
+
+    <div class="layout--header--mobile-menu" id="layout--header--mobile-menu">
+      <div class="container layout--header--mobile-header">
+        <a href="/" class="w-12 inline-block">
+          {% svg "seancdavis-logo-white" %}
+        </a>
+        <button class="w-8 text-right opacity-50 text-white" onclick="App.MobileMenu.toggle(event)">
+          {% svg "cancel" %}
+        </button>
+      </div>
+
+      <ul class="container layout--header--mobile-link-list">
+        {% for item in header_menu %}
+          <li class="mb-0">
+            <a href="{{ item.url }}" class="layout--header--mobile-link">{{ item.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+</header>
