@@ -3,6 +3,8 @@ const lodash = require("lodash")
 module.exports = ({ defaults, path, title, image, description, overrides }) => {
   const title_template = overrides.title_template || defaults.title_template
 
+  const getTitle = str => title_template.replace("%s", str)
+
   const pageProps = {
     description: description,
     image: image,
@@ -31,14 +33,14 @@ module.exports = ({ defaults, path, title, image, description, overrides }) => {
     og: {
       description: ogProp("description"),
       image: ogProp("image"),
-      title: ogProp("title"),
+      title: getTitle(ogProp("title")),
       type: lodash.get(overrides, "og.type") || lodash.get(defaults, "og.type")
     },
-    title: title_template.replace("%s", overrides.title || title),
+    title: getTitle(overrides.title || title),
     twitter: {
       description: twitterProp("description"),
       image: twitterProp("image"),
-      title: twitterProp("title"),
+      title: getTitle(twitterProp("title")),
       card: lodash.get(overrides, "twitter.card") || lodash.get(defaults, "twitter.card")
     },
     url: `${defaults.base_url}${path}`
