@@ -5,6 +5,7 @@ path: /license
 subheading: This license governs all content and code found within this site.
 seo:
   title: A License (Sort of)
+  image: /images/meta/seancdavis--meta--license.png
   description: This license governs all content and code found within this site.
 ---
 
