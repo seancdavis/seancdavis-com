@@ -1,34 +1,23 @@
 @keyframes typewriter-cursor-blink {
   from,
   to {
-    @apply bg-black;
+    border-right-color: var(--color-black);
   }
   50% {
-    @apply bg-transparent;
+    border-right-color: transparent;
   }
 }
 
-.component--typewriter--wrapper {
-  @apply inline-block
-    relative;
-
-  padding-right: 2px;
+.component--typewriter {
+  border-right: 2px solid var(--color-black);
+  display: inline;
+  padding: 0.25rem 0;
+  word-break: break-all;
 
   &.is-highlighted {
     @apply bg-black;
     @apply text-white;
   }
-}
-
-.component--typewriter--cursor {
-  @apply absolute
-    bg-black
-    h-full
-    inline-block
-    right-0
-    top-0;
-
-  width: 2px;
 
   &.is-blinking {
     animation-direction: step-end;

@@ -1,5 +1,5 @@
 <header class="py-4 relative z-10">
-  <div class="container flex justify-between items-center">
+  <div class="container max-w-5xl flex justify-between items-center">
     <span class="inline-block w-10">
       {% svg "seancdavis-logo" %}
     </span>
@@ -16,7 +16,7 @@
 
     {# --- Mobile Nav Trigger --- #}
 
-    <button class="lg:hidden w-8 text-right text-gray-blue w-8 inline-block" onclick="App.MobileMenu.toggle(event)">
+    <button class="lg:hidden w-8 text-right text-gray-blue inline-block" onclick="App.MobileMenu.toggle(event)">
       {% svg "menu" %}
     </button>
 
@@ -27,7 +27,7 @@
         <a href="/" class="w-12 inline-block">
           {% svg "seancdavis-logo-white" %}
         </a>
-        <button class="w-8 text-right opacity-50 text-white w-8" onclick="App.MobileMenu.toggle(event)">
+        <button class="w-8 text-right opacity-50 text-white" onclick="App.MobileMenu.toggle(event)">
           {% svg "cancel" %}
         </button>
       </div>

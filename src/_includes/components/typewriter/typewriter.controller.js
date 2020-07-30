@@ -11,23 +11,21 @@ export const initTypewriter = () => {
   let currentIdx = -1
 
   // Reference to the typewriter object.
-  const typewriterWrapper = document.getElementById("typewriter-wrapper")
   const typewriterText = document.getElementById("typewriter-text")
-  const typewriterCursor = document.getElementById("typewriter-cursor")
 
   // Pull variables from the DOM.
-  const blankDuration = typewriterWrapper.getAttribute("data-blank-duration")
-  const characterDuration = typewriterWrapper.getAttribute("data-character-duration")
-  const highlightDuration = typewriterWrapper.getAttribute("data-highlight-duration")
-  const texts = typewriterWrapper.getAttribute("data-texts").split(",")
-  const viewDuration = typewriterWrapper.getAttribute("data-view-duration")
+  const blankDuration = typewriterText.getAttribute("data-blank-duration")
+  const characterDuration = typewriterText.getAttribute("data-character-duration")
+  const highlightDuration = typewriterText.getAttribute("data-highlight-duration")
+  const texts = typewriterText.getAttribute("data-texts").split(",")
+  const viewDuration = typewriterText.getAttribute("data-view-duration")
 
   /**
    * Tell cursor to start (or continue) or stop blinking.
    */
   const setIsBlinking = blink => {
     const method = blink ? "add" : "remove"
-    return typewriterCursor.classList[method]("is-blinking")
+    return typewriterText.classList[method]("is-blinking")
   }
 
   /**
@@ -42,7 +40,7 @@ export const initTypewriter = () => {
    */
   const setIsHighlighted = highlight => {
     const method = highlight ? "add" : "remove"
-    return typewriterWrapper.classList[method]("is-highlighted")
+    return typewriterText.classList[method]("is-highlighted")
   }
 
   /**
