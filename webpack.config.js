@@ -1,5 +1,7 @@
 const path = require("path")
 
+const env = process.env.ELEVENTY_ENV || "production"
+
 module.exports = {
   entry: "./src/_includes/js/index.js",
   output: {
@@ -8,6 +10,6 @@ module.exports = {
     libraryTarget: "var",
     library: "App"
   },
-  mode: "production",
-  watch: true
+  mode: env,
+  watch: env === "development"
 }
