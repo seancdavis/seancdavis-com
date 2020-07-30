@@ -5,6 +5,8 @@ module.exports = ({ defaults, path, title, image, description, overrides }) => {
 
   const getTitle = str => title_template.replace("%s", str)
 
+  const buildUrl = path => `${defaults.base_url}${path}`
+
   const pageProps = {
     description: description,
     image: image,
@@ -29,20 +31,20 @@ module.exports = ({ defaults, path, title, image, description, overrides }) => {
 
   return {
     description: overrides.description || description || defaults.description,
-    image: overrides.image || image || defaults.image,
+    image: buildUrl(overrides.image || image || defaults.image),
     og: {
       description: ogProp("description"),
-      image: ogProp("image"),
+      image: buildUrl(ogProp("image")),
       title: getTitle(ogProp("title")),
       type: lodash.get(overrides, "og.type") || lodash.get(defaults, "og.type")
     },
     title: getTitle(overrides.title || title),
     twitter: {
       description: twitterProp("description"),
-      image: twitterProp("image"),
+      image: buildUrl(twitterProp("image")),
       title: getTitle(twitterProp("title")),
       card: lodash.get(overrides, "twitter.card") || lodash.get(defaults, "twitter.card")
     },
-    url: `${defaults.base_url}${path}`
+    url: buildUrl(path)
   }
 }
