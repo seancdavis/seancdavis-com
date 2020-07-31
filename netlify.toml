@@ -4,3 +4,5 @@
 
 [[plugins]]
   package = "@helloample/netlify-plugin-redirects"
+  [plugins.inputs]
+    destination = "./dist/_redirects"
