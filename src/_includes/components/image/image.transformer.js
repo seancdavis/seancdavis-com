@@ -4,8 +4,6 @@ const lodash = require("lodash")
 /**
  * This is a WIP. I would like to:
  *
- * - Make sure tests are running as part of the build. Consider using a build
- *   plugin to achieve that.
  * - Intrinsic sizing built from a ratio?
  * - Use a data-attribute for src on page load and then using srcset (and an
  *   accompanying js component) ???
