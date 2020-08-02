@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Source+Serif+Pro:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 
+    {# --- SEO --- #}
+
     {% component "seo",
     defaults = seo_defaults,
     path = page.url,
@@ -14,6 +16,14 @@
     image = image,
     description = description,
     overrides = seo %}
+
+    {# --- Imgix --- #}
+
+    <meta property="ix:autoInit" content="false">
+    <meta property="ix:host" content="seancdavis.imgix.net">
+    <meta property="ix:useHttps" content="true">
+
+    {# --- Google Analytics --- #}
 
     {% if env == 'production' %}
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54661520-1"></script>
@@ -27,6 +37,8 @@
         gtag('config', 'UA-54661520-1');
       </script>
     {% endif %}
+
+    {# --- Shared JavaScript --- #}
 
     <script>
       function onInit(callback) {

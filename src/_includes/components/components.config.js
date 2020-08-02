@@ -3,6 +3,10 @@ module.exports = {
     transformer: require("./button/button.transformer"),
     template: "components/button/button.template.njk"
   },
+  image: {
+    transformer: require("./image/image.transformer"),
+    template: "components/image/image.template.njk"
+  },
   particles: {
     transformer: require("./particles/particles.transformer"),
     template: "components/particles/particles.template.njk"
