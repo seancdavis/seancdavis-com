@@ -4,17 +4,18 @@ const lodash = require("lodash")
 /**
  * This is a WIP. I would like to:
  *
- * - Get it rendering on the front-end
- * - Figure out a default src
- * - Use the <picture> object
+ * - Make sure tests are running as part of the build. Consider using a build
+ *   plugin to achieve that.
  * - Intrinsic sizing built from a ratio?
  * - Use a data-attribute for src on page load and then using srcset (and an
- *   accompanying js component)
+ *   accompanying js component) ???
  * - Or ... maybe use lazy loading (imgix.js has a recommendation on which one
  *   to use)
- * - Clean up the code.
- * - Wrap it up in a plugin?
  * - Write a blog post (specific to imgix)
+ * - Clean up the code. Wrap it up in a plugin? Or maybe a shared library. I
+ *   feel like this could be a utility that is imported and then made into a
+ *   component. That could be a better fit for a blog post, too, because it
+ *   could lead to a series of them.
  *
  */
 
