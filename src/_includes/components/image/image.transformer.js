@@ -17,7 +17,18 @@ const lodash = require("lodash")
  *
  */
 
-module.exports = ({ xs = "100vw", sm, md, lg, xl, max = 1400, steps = 10, path, ...props }) => {
+module.exports = ({
+  xs = "100vw",
+  sm,
+  md,
+  lg,
+  xl,
+  max = 1400,
+  steps = 10,
+  path,
+  ratio,
+  ...props
+}) => {
   if (!path) {
     console.error("The path argument is required for transforming an image.")
     return props
@@ -30,14 +41,22 @@ module.exports = ({ xs = "100vw", sm, md, lg, xl, max = 1400, steps = 10, path, 
 
   let largestSrc = 0
 
-  const generateUrl = params => client.buildURL(path, { auto: "format,compress", ...params })
+  const generateUrl = width => {
+    let params = { auto: "format,compress", w: width }
+    if (ratio) {
+      const [widthRatio, heightRatio] = ratio.split(":")
+      params["h"] = (width * heightRatio) / widthRatio
+      params["fit"] = "crop"
+    }
+    return client.buildURL(path, params)
+  }
 
   const generateSrcsets = widths => {
     return widths
       .map(width => {
         width = parseInt(width)
         if (width > largestSrc) largestSrc = width
-        return `${generateUrl({ w: width })} ${width}w`
+        return `${generateUrl(width)} ${width}w`
       })
       .join(",")
   }
@@ -109,6 +128,6 @@ module.exports = ({ xs = "100vw", sm, md, lg, xl, max = 1400, steps = 10, path, 
   return {
     ...props,
     sources: lodash.reverse(sources),
-    src: generateUrl({ w: largestSrc / 2 })
+    src: generateUrl(largestSrc / 2)
   }
 }

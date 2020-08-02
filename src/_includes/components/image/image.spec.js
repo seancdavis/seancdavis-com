@@ -62,4 +62,8 @@ describe("Image Transformer", () => {
     const result = transform({ path: "/my-image.jpg", md: "1500px" })
     expect(result.src).toContain("1500")
   })
+  it("adds height and fit params when specifying ratio", () => {
+    const result = transform({ path: "/my-image.jpg", md: "200px", ratio: "2:1" })
+    expect(result.sources[0].srcset).toContain("w=200&h=100&fit=crop")
+  })
 })
