@@ -104,6 +104,7 @@
     top-0
     w-full;
 
+  background-image: url("/images/laptop-graphic.svg");
   background-size: auto calc(100% - 8rem);
 
   @media (min-width: 720px) {
@@ -127,6 +128,7 @@
     top-0
     w-full;
 
+  background-image: url("/images/laptop-lines.svg");
   background-size: auto calc(100% - 8rem);
   z-index: -1;
 }
