@@ -11,6 +11,7 @@ const isProduction = process.env.ELEVENTY_ENV === "production"
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css")
   eleventyConfig.addPassthroughCopy("./src/images")
+  eleventyConfig.addPassthroughCopy("./src/fonts")
 
   /**
    * Reads a file in the _includes directory and returns the result.
