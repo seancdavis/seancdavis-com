@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "DM Serif Display";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("DM Serif Display Italic"), local("DMSerifDisplay-Italic"),
+    url(/fonts/DMSerifDisplay-Italic.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("DM Serif Display Regular"), local("DMSerifDisplay-Regular"),
+    url(/fonts/DMSerifDisplay-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: local("Lato Light Italic"), local("Lato-LightItalic"),
+    url(/fonts/Lato-LightItalic.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Lato Italic"), local("Lato-Italic"), url(/fonts/Lato-Italic.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Lato Bold Italic"), local("Lato-BoldItalic"),
+    url(/fonts/Lato-BoldItalic.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("Lato Light"), local("Lato-Light"), url(/fonts/Lato-Light.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Lato Regular"), local("Lato-Regular"), url(/fonts/Lato-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Lato Bold"), local("Lato-Bold"), url(/fonts/Lato-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Source Serif Pro Italic"), local("SourceSerifPro-It"),
+    url(/fonts/SourceSerifPro-It.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Source Serif Pro"), local("SourceSerifPro-Regular"),
+    url(/fonts/SourceSerifPro-Regular.woff2) format("woff2");
+}

@@ -4,3 +4,8 @@
 
 [[plugins]]
 package = "/.netlify/netlify-plugin-jest"
+
+[[plugins]]
+package = "netlify-plugin-subfont"
+  [plugins.inputs]
+  entryPoints = ["dist/*.html"]
