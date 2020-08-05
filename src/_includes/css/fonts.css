@@ -24,15 +24,6 @@
   src: local("Lato Light Italic"), local("Lato-LightItalic"),
     url(/fonts/Lato-LightItalic.woff2) format("woff2");
 }
-/* latin-ext */
-@font-face {
-  font-family: "Lato";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Lato Italic"), local("Lato-Italic"),
-    url(/fonts/Lato-Italic-LatinExt.woff2) format("woff2");
-}
 
 @font-face {
   font-family: "Lato";
