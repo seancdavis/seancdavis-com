@@ -12,6 +12,7 @@
     "imgix-core-js": "^2.3.1",
     "jest": "^26.2.2",
     "lodash": "^4.17.19",
+    "netlify-plugin-subfont": "^5.0.6",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1",
     "postcss-custom-properties": "^9.1.1",
