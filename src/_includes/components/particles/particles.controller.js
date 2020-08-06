@@ -10,8 +10,15 @@ export const initParticles = () => {
   let context = canvas.getContext("2d")
   // Retrieve the number of particles to use.
   const count = parseInt(canvas.getAttribute("data-count"))
-  // Retrieve the images we can use as shapes.
-  const particleImages = document.querySelectorAll(".particles-image")
+  // Generate images to use as shapes.
+  const particleImages = canvas
+    .getAttribute("data-images")
+    .split(",")
+    .map(name => {
+      const image = new Image()
+      image.src = `/images/particles/${name}.svg`
+      return image
+    })
 
   /**
    * Uses the parameters its given to render a particle to the canvas.
