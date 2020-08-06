@@ -1,8 +1,4 @@
-{% for image in images %}
-  <img src="/images/particles/{{ image }}.svg" class="particles-image hidden">
-{% endfor %}
-
-<canvas id="particles-canvas" class="top-0 left-0 absolute" data-count="{{ count }}"></canvas>
+<canvas id="particles-canvas" class="top-0 left-0 absolute" data-count="{{ count }}" data-images="{{ images }}"></canvas>
 
 <script>
   onInit(function () {
