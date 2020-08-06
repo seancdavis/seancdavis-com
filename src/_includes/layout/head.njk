@@ -25,21 +25,6 @@
     <meta property="ix:host" content="seancdavis.imgix.net">
     <meta property="ix:useHttps" content="true">
 
-    {# --- Google Analytics --- #}
-
-    {% if env == 'production' %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54661520-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-54661520-1');
-      </script>
-    {% endif %}
-
     {# --- Shared JavaScript --- #}
 
     <script>
