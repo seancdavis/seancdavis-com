@@ -9,3 +9,6 @@ package = "/.netlify/netlify-plugin-jest"
 package = "netlify-plugin-subfont"
   [plugins.inputs]
   entryPoints = ["dist/*.html"]
+
+[[plugins]]
+package = "netlify-plugin-inline-critical-css"
