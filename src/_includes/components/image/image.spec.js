@@ -31,18 +31,25 @@ describe("Image Transformer", () => {
   it("sources to the default max (x2 for retina) with default number of steps if no args passed", () => {
     const result = transform({ path: "/my-image.jpg" })
     expect(result.sources.length).toEqual(1)
-    expect(result.sources[0].srcset.split(",").length).toEqual(10)
+    // Implies that we are skipping 0w srcset.
+    expect(result.sources[0].srcset.split(",").length).toEqual(9)
     expect(result.sources[0].srcset).toContain(`${breakpoints.xl.max * 2}w`)
+  })
+  it("doesn't skip the first srcset when the lowest width is not zero", () => {
+    const result = transform({ path: "/my-image.jpg", md: "100vw" })
+    // Implies that the array of sources is reversed.
+    expect(result.sources[0].srcset.split(",").length).toEqual(10)
   })
   // This also implies that the array of sources is reversed.
   it("sources to the next max value (x2 for retina)", () => {
     const result = transform({ path: "/my-image.jpg", md: "400px" })
     expect(result.sources.length).toEqual(2)
-    expect(result.sources[1].srcset.split(",").length).toEqual(10)
+    // Still skipping 0w
+    expect(result.sources[1].srcset.split(",").length).toEqual(9)
     expect(result.sources[1].srcset).toContain(`${breakpoints.md.min * 2}w`)
   })
   it("can adjust the number of steps", () => {
-    const result = transform({ path: "/my-image.jpg", steps: 5 })
+    const result = transform({ path: "/my-image.jpg", md: "100vw", steps: 5 })
     expect(result.sources[0].srcset.split(",").length).toEqual(5)
   })
   it("will adjust srcset based on vw widths", () => {

@@ -46,13 +46,13 @@ module.exports = ({
   // Given an array of widths (as number of pixels), it will return a string
   // that can be used for the srcset attributes for those widths.
   const generateSrcsets = widths => {
-    return widths
-      .map(width => {
-        width = parseInt(width)
-        if (width > largestSrc) largestSrc = width
-        return `${generateUrl(width)} ${width}w`
-      })
-      .join(",")
+    const output = widths.map(width => {
+      width = parseInt(width)
+      if (width === 0) return null
+      if (width > largestSrc) largestSrc = width
+      return `${generateUrl(width)} ${width}w`
+    })
+    return lodash.compact(output).join(",")
   }
 
   // Given a string value, determine if the units are pixels.
