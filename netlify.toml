@@ -17,3 +17,9 @@
   package = "@helloample/netlify-plugin-redirects"
     [plugins.inputs]
       destination = "./dist/_redirects"
+
+[[plugins]]
+  package = "netlify-plugin-a11y"
+    [plugins.inputs]
+      checkPaths = ['/']
+      resultMode = "warn"

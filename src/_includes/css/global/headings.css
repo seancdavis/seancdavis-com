@@ -17,7 +17,8 @@
 }
 
 .subheading {
-  @apply font-bold
+  @apply block
+    font-bold
     font-sans
     mb-2
     text-green
