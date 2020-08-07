@@ -1,1 +1,4 @@
-/test,/something-else,302!
+https://seancdavis-com.netlify.app/*,https://www.seancdavis.com/:splat,302!
+https://www.seancdavis.me/*,https://www.seancdavis.com/:splat,302!
+https://seancdavis.com/*,https://www.seancdavis.com/:splat,302!
+https://seancdavis.me/*,https://www.seancdavis.com/:splat,302!
