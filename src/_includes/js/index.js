@@ -1,6 +1,8 @@
 import { toggleMobileMenu } from "./utils/toggle-mobile-menu"
 import "./utils/scan-links"
 
+import "./lib/analytics"
+
 import { initParticles } from "../components/particles/particles.controller"
 import { initTypewriter } from "../components/typewriter/typewriter.controller"
 

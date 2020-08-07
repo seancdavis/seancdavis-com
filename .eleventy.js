@@ -1,13 +1,17 @@
 const fs = require("fs")
+const htmlmin = require("html-minifier")
 const MarkdownIt = require("markdown-it")
 const nunjucks = require("nunjucks")
 const path = require("path")
 
 const components = require("./src/_includes/components/components.config")
 
+const isProduction = process.env.ELEVENTY_ENV === "production"
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css")
   eleventyConfig.addPassthroughCopy("./src/images")
+  eleventyConfig.addPassthroughCopy("./src/fonts")
 
   /**
    * Reads a file in the _includes directory and returns the result.
@@ -41,6 +45,21 @@ module.exports = function (eleventyConfig) {
    * Reads an SVG from file and inserts its content directly on the page.
    */
   eleventyConfig.addNunjucksShortcode("svg", name => readIncludeFile(`svg/${name}.svg`))
+
+  /**
+   * Minify files in production.
+   */
+  eleventyConfig.addTransform("compress-html", (content, outputPath) => {
+    if (!outputPath.endsWith(".html") || !isProduction) return content
+    const minOpts = {
+      useShortDoctype: true,
+      removeComments: true,
+      collapseWhitespace: true,
+      minifyCSS: true,
+      minifyJS: true
+    }
+    return htmlmin.minify(content, minOpts)
+  })
 
   return {
     dir: {

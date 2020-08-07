@@ -1,4 +1,5 @@
-import lodash from "lodash"
+import random from "lodash/random"
+import sample from "lodash/sample"
 
 export const initParticles = () => {
   // Quick reference to the canvas element in the DOM.
@@ -9,8 +10,15 @@ export const initParticles = () => {
   let context = canvas.getContext("2d")
   // Retrieve the number of particles to use.
   const count = parseInt(canvas.getAttribute("data-count"))
-  // Retrieve the images we can use as shapes.
-  const particleImages = document.querySelectorAll(".particles-image")
+  // Generate images to use as shapes.
+  const particleImages = canvas
+    .getAttribute("data-images")
+    .split(",")
+    .map(name => {
+      const image = new Image()
+      image.src = `/images/particles/${name}.svg`
+      return image
+    })
 
   /**
    * Uses the parameters its given to render a particle to the canvas.
@@ -28,33 +36,33 @@ export const initParticles = () => {
    * all particles move at different rates around the canvas.
    */
   const initParticle = () => {
-    const radius = lodash.random(5, 8)
+    const radius = random(5, 8)
 
     return {
       // Choose a random image from the source refs.
-      image: lodash.sample(particleImages),
+      image: sample(particleImages),
       // The move property controls the direction in which the particle is
       // moving. Plus is to the right or down, and minus is to the left or up.
       // When the particle hits the edge of the canvas, these properties are
       // adjusted.
       move: {
-        x: lodash.sample(["+", "-"]),
-        y: lodash.sample(["+", "-"])
+        x: sample(["+", "-"]),
+        y: sample(["+", "-"])
       },
       // The position property controls the coordinates at which the particles
       // should be drawn on the canvas. This is incremented by the speed
       // property below.
       position: {
-        x: lodash.random(radius, canvasWidth - radius),
-        y: lodash.random(radius, canvasHeight - radius)
+        x: random(radius, canvasWidth - radius),
+        y: random(radius, canvasHeight - radius)
       },
       radius: radius,
       // The value to use to increment or decrement the position property on
       // each animation frame. Note that the speed is relative to the speed at
       // which each frame is rendered on the canvas.
       speed: {
-        x: lodash.random(0.01, 0.15),
-        y: lodash.random(0.01, 0.15)
+        x: random(0.01, 0.15),
+        y: random(0.01, 0.15)
       }
     }
   }

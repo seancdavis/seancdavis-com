@@ -1,16 +1,22 @@
 {
-  "name": "seancdavis-me",
+  "name": "seancdavis-com",
   "version": "1.0.0",
   "author": "Sean C Davis <scdavis41@gmail.com>",
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "@analytics/google-analytics": "^0.4.1",
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "@helloample/netlify-plugin-redirects": "^1.1.4",
+    "analytics": "^0.5.5",
     "autoprefixer": "^9.7.6",
     "cssnano": "^4.1.10",
     "glob": "^7.1.6",
     "html-minifier": "^4.0.0",
+    "imgix-core-js": "^2.3.1",
+    "jest": "^26.2.2",
     "lodash": "^4.17.19",
+    "netlify-plugin-inline-critical-css": "^1.1.3",
+    "netlify-plugin-subfont": "^5.0.6",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1",
     "postcss-custom-properties": "^9.1.1",
@@ -30,6 +36,7 @@
     "develop:css": "postcss src/_includes/css/index.css -o src/css/styles.css --watch",
     "develop:html": "eleventy --serve --port 8000",
     "develop:js": "webpack",
-    "start": "develop"
+    "start": "develop",
+    "test": "jest"
   }
 }
