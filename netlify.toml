@@ -3,12 +3,17 @@
   publish = "dist"
 
 [[plugins]]
-package = "/.netlify/netlify-plugin-jest"
+  package = "/.netlify/netlify-plugin-jest"
 
 [[plugins]]
-package = "netlify-plugin-subfont"
-  [plugins.inputs]
-  entryPoints = ["dist/*.html"]
+  package = "netlify-plugin-subfont"
+    [plugins.inputs]
+      entryPoints = ["dist/*.html"]
 
 [[plugins]]
-package = "netlify-plugin-inline-critical-css"
+  package = "netlify-plugin-inline-critical-css"
+
+[[plugins]]
+  package = "@helloample/netlify-plugin-redirects"
+    [plugins.inputs]
+      destination = "./dist/_redirects"
