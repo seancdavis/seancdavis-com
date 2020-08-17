@@ -5,5 +5,5 @@
 .DS_Store
 .envrc
 
-# Local Netlify folder
-.netlify
+# Netlify CLI Config
+.netlify/state.json
