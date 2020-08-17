@@ -12,6 +12,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css")
   eleventyConfig.addPassthroughCopy("./src/images")
   eleventyConfig.addPassthroughCopy("./src/fonts")
+  eleventyConfig.addPassthroughCopy({ static: "/" })
 
   /**
    * Reads a file in the _includes directory and returns the result.
