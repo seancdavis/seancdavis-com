@@ -1,3 +1,4 @@
+const ImgixClient = require("imgix-core-js")
 const lodash = require("lodash")
 
 module.exports = ({ defaults, path, title, image, description, overrides }) => {
@@ -29,19 +30,35 @@ module.exports = ({ defaults, path, title, image, description, overrides }) => {
     lodash.get(defaults, `og.${key}`) ||
     defaults[key]
 
+  // ---------------------------------------- | Imgix
+
+  // The Imgix client is how the URLs are built (and signed).
+  const client = new ImgixClient({
+    domain: process.env.IMGIX_DOMAIN,
+    secureURLToken: process.env.IMGIX_TOKEN
+  })
+
+  const buildImageUrl = path => {
+    let params = { auto: "format,compress", w: 1200, h: 630, fit: "crop" }
+    const imgixPath = `/meta/${path}`.replace(/\/\/+/gi, "/")
+    return client.buildURL(imgixPath, params)
+  }
+
+  // ---------------------------------------- | Response Object
+
   return {
     description: overrides.description || description || defaults.description,
-    image: buildUrl(overrides.image || image || defaults.image),
+    image: buildImageUrl(overrides.image || image || defaults.image),
     og: {
       description: ogProp("description"),
-      image: buildUrl(ogProp("image")),
+      image: buildImageUrl(ogProp("image")),
       title: getTitle(ogProp("title")),
       type: lodash.get(overrides, "og.type") || lodash.get(defaults, "og.type")
     },
     title: getTitle(overrides.title || title),
     twitter: {
       description: twitterProp("description"),
-      image: buildUrl(twitterProp("image")),
+      image: buildImageUrl(twitterProp("image")),
       title: getTitle(twitterProp("title")),
       card: lodash.get(overrides, "twitter.card") || lodash.get(defaults, "twitter.card")
     },

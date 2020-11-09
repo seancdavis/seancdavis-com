@@ -2,16 +2,14 @@
 layout: home
 title: Hi, I'm Sean.
 seo:
-  image: /images/meta/seancdavis--meta--home.png
+  image: seancdavis--meta--home.png
   description: "Hi, I'm Sean. I'm a tinkerer and a teacher. A developer. A sandwich lover. Most of the time I'm only pretending to know what I'm doing."
 ---
 
 {# --- Jumbotron --- #}
 
 <div class="layout--home--jumbotron">
-  {% component "particles",
-  images = particles.images,
-  count = 15 %}
+  {% component "particles", images = particles.images, count = 15 %}
 
   <div class="container max-w-5xl">
     <div class="flex items-center relative justify-between max-w-5xl">
@@ -70,10 +68,7 @@ seo:
         <p class="md:text-lg md:text-xl max-w-md mx-auto">I can do that, too. But I'm not very good at checking it. Maybe you should make it rhyme.</p>
       </div>
       <div>
-        {% component "button",
-        url = "mailto:hello@seancdavis.com",
-        label = "Email Me",
-        theme = "lime" %}
+        {% component "button", url = "mailto:hello@seancdavis.com", label = "Email Me", theme = "lime" %}
       </div>
     </div>
   </div>
