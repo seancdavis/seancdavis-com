@@ -12,12 +12,12 @@
     {# --- SEO --- #}
 
     {% component "seo",
-    defaults = seo_defaults,
-    path = page.url,
-    title = title,
-    image = image,
-    description = description,
-    overrides = seo %}
+        defaults = seo_defaults,
+        path = page.url,
+        title = title,
+        image = image,
+        description = description,
+        overrides = seo %}
 
     {# --- Imgix --- #}
 
@@ -29,7 +29,7 @@
 
     <script>
       function onInit(callback) {
-        if (typeof App !== 'undefined') 
+        if (typeof App !== 'undefined')
           return callback()
         setTimeout(onInit, 250, callback)
       }

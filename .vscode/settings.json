@@ -4,5 +4,8 @@
     "*.css": "postcss"
   },
   "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true
+  "files.trimFinalNewlines": true,
+  "[nunjucks]": {
+    "editor.formatOnSave": false
+  }
 }
