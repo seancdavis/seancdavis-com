@@ -4,6 +4,7 @@
   "author": "Sean C Davis <scdavis41@gmail.com>",
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "@analytics/google-analytics": "^0.4.1",
     "analytics": "^0.5.5",
     "autoprefixer": "^9.7.6",

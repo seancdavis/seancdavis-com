@@ -1,0 +1,21 @@
+.layout--post--body {
+  > *:not(.language-js) {
+    @apply max-w-2xl
+      mx-auto;
+  }
+
+  pre.language-js {
+    @apply my-8
+      py-8;
+  }
+
+  code.language-js {
+    @apply block
+      max-w-4xl
+      mx-auto;
+  }
+
+  a {
+    border-bottom: 1px dotted var(--color-green);
+  }
+}

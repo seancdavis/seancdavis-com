@@ -30,6 +30,15 @@ module.exports = {
     },
     fontFamily: {
       headings: ["DM Serif Display", "serif"],
+      mono: [
+        "Operator Mono",
+        "Fira Code",
+        "Consolas",
+        "Monaco",
+        "Andale Mono",
+        "Ubuntu Mono",
+        "monospace"
+      ],
       sans: ["Lato", "sans-serif"],
       serif: ["Source Serif Pro", "serif"],
       subheadings: ["Lato", "sans-serif"]

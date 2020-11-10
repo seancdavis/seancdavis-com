@@ -3,12 +3,15 @@ const htmlmin = require("html-minifier")
 const MarkdownIt = require("markdown-it")
 const nunjucks = require("nunjucks")
 const path = require("path")
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
 
 const components = require("./src/_includes/components/components.config")
 
 const isProduction = process.env.ELEVENTY_ENV === "production"
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(syntaxHighlight)
+
   eleventyConfig.addPassthroughCopy("./src/css")
   eleventyConfig.addPassthroughCopy("./src/images")
   eleventyConfig.addPassthroughCopy("./src/fonts")

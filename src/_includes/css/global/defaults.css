@@ -47,3 +47,14 @@ svg {
   @apply h-auto
     w-full;
 }
+
+code {
+  @apply inline-block
+    px-2
+    py-1
+    rounded-md;
+
+  background-color: #1e1e3f;
+  color: rgb(250, 208, 0);
+  font-size: 1rem;
+}
