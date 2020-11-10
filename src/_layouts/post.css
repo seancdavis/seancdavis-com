@@ -1,21 +1,44 @@
 .layout--post--body {
   > *:not(.language-js) {
     @apply max-w-2xl
-      mx-auto;
+      mx-auto
+      px-4;
   }
 
   pre.language-js {
     @apply my-8
+      px-4
       py-8;
   }
 
   code.language-js {
     @apply block
       max-w-4xl
-      mx-auto;
+      mx-auto
+      text-sm;
+
+    line-height: 1.666;
   }
 
   a {
     border-bottom: 1px dotted var(--color-green);
+  }
+}
+
+/* ---------------------------------------- | Medium */
+
+@screen md {
+  .layout--post--body {
+    > *:not(.language-js) {
+      @apply px-0;
+    }
+
+    pre.language-js {
+      @apply px-8;
+    }
+
+    code.language-js {
+      font-size: 1rem;
+    }
   }
 }
