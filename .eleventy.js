@@ -65,6 +65,14 @@ module.exports = function (eleventyConfig) {
     return htmlmin.minify(content, minOpts)
   })
 
+  /**
+   * Creates the "posts" collection using the "model" frontmatter value.
+   */
+  eleventyConfig.addCollection("posts", function (collectionApi) {
+    let posts = collectionApi.getAll().filter(({ data: { model } }) => model === "Post")
+    return posts
+  })
+
   return {
     dir: {
       includes: "_includes",

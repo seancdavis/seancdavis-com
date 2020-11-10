@@ -1,5 +1,12 @@
 ---
 layout: layout
+title: All Posts
 ---
 
-<p>Hello World</p>
+
+{% for post in collections.posts %}
+  <a href="{{ post.url }}">{{ post.data.title }}</a>
+  {{ post.date.toLocaleDateString("en-US") }}
+
+  <br>
+{% endfor %}
