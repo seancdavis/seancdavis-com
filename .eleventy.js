@@ -1,5 +1,6 @@
 const fs = require("fs")
 const htmlmin = require("html-minifier")
+const lodash = require("lodash")
 const MarkdownIt = require("markdown-it")
 const nunjucks = require("nunjucks")
 const path = require("path")
@@ -66,13 +67,56 @@ module.exports = function (eleventyConfig) {
   })
 
   /**
+   * Extract a collection from Eleventy's collectionApi using a "model"
+   * frontmatter key.
+   *
+   * @param {object} api collectionApi objecf from Eleventy
+   * @param {string} model Name of the model to extract (looks for "model"
+   * frontmatter)
+   */
+  const extractCollection = (api, model) => {
+    return api.getAll().filter(({ data }) => data.model === model)
+  }
+
+  /**
+   * Creates the "tags" collection using the "model" frontmatter value, and
+   * makes an association to the tag's posts..
+   */
+  eleventyConfig.addCollection("tags", function (collectionApi) {
+    // Get raw tags and posts collection data.
+    let tags = extractCollection(collectionApi, "Tag")
+    const posts = extractCollection(collectionApi, "Post").sort((a, b) => b.date - a.date)
+    // Apply posts relationship using the tag "title" as they key.
+    const postIncludesTag = (post, tag) => (post.data.tags || []).includes(tag.data.title)
+    tags.map(tag => (tag.data.posts = posts.filter(post => postIncludesTag(post, tag))))
+    // Return the tags collection.
+    return tags
+  })
+
+  /**
    * Creates the "posts" collection using the "model" frontmatter value.
    */
   eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi
-      .getAll()
-      .filter(({ data: { model } }) => model === "Post")
-      .sort((a, b) => b.date - a.date)
+    // Get raw tags and posts collection data.
+    let posts = extractCollection(collectionApi, "Post").sort((a, b) => b.date - a.date)
+    const tags = extractCollection(collectionApi, "Tag").sort((a, b) => a.data.title - b.data.title)
+    // Replace tags with a tag object.
+    const findTagObj = title => lodash.find(tags, tag => tag.data.title === title)
+    posts.map(post => {
+      let postTags = post.data.tags.map(tagName => findTagObj(tagName))
+      post.data.tags = lodash.compact(postTags)
+    })
+    // Return the tags collection.
+    return posts
+  })
+
+  /**
+   * Extracts a property from an object by first looking for a data object, then
+   * falling back to the object itself.
+   */
+  eleventyConfig.addNunjucksFilter("getProp", (obj, prop, defaultValue) => {
+    const dataSource = typeof obj.data === "object" ? obj.data : obj
+    return lodash.get(dataSource, prop) || defaultValue
   })
 
   return {

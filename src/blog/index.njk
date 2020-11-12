@@ -1,6 +1,6 @@
 ---
 layout: blank
-title: All Posts
+title: Blog
 pagination:
   data: collections.posts
   size: 10
@@ -23,8 +23,29 @@ pagination:
   <div class="mb-24">
     {% for post in pagination.items %}
       <div class="max-w-xl mb-6 bg-white p-4 shadow-sm">
-        <h2 class="text-2xl mb-4">
-          <a href="{{ post.url }}">
+        {% if post.data.tags.length > 0 %}
+          <div class="mb-4 text-sm">
+            {% for tag in post.data.tags %}
+              <a
+                href="{{ tag.url }}"
+                class="
+                  bg-{{ tag | getProp('color', 'gray') }}
+                  text-{{ tag | getProp('textColor', 'white') }}
+                  p-1
+                  inline-block
+                  leading-none
+                  transition-all
+                  duration-300
+                  hover:opacity-75
+                "
+              >
+                {{ tag.data.title }}
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <h2 class="text-2xl mb-1">
+          <a href="{{ post.url }}" class="transition-all duration-300 hover:opacity-75">
             {{ post.data.title }}
           </a>
         </h2>
