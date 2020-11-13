@@ -1,34 +1,18 @@
 <div class="max-w-xl mb-6 bg-white p-4 shadow-sm">
-  {% if post.data.tags.length > 0 %}
+  {% if tags.length > 0 %}
     <div class="mb-4 text-sm">
-      {% for tag in post.data.tags %}
-        <a
-          href="{{ tag.url }}"
-          class="
-            bg-{{ tag.data.color }}
-            text-{{ tag.data.textColor }}
-            p-1
-            inline-block
-            leading-none
-            transition-all
-            duration-300
-            hover:opacity-75
-          "
-        >
-          {{ tag.data.title }}
-        </a>
-      {% endfor %}
+      {{ tags | safe }}
     </div>
   {% endif %}
   <h2 class="text-2xl mb-1">
-    <a href="{{ post.url }}" class="transition-all duration-300 hover:opacity-75">
-      {{ post.data.title }}
+    <a href="{{ url }}" class="transition-all duration-300 hover:opacity-75">
+      {{ data.title }}
     </a>
   </h2>
-  {% if post.data.snippet %}
-    <p class="mb-6">{{ post.data.snippet }}</p>
+  {% if data.snippet %}
+    <p class="mb-6">{{ data.snippet }}</p>
   {% endif %}
   <span class="block text-gray-blue font-sans text-sm">
-    {{ post.date.toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" }) }}
+    {{ date.toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" }) }}
   </span>
 </div>

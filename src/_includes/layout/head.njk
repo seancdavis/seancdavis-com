@@ -11,13 +11,13 @@
 
     {# --- SEO --- #}
 
-    {% component "seo",
-        defaults = seo_defaults,
-        path = page.url,
-        title = title,
-        image = image,
-        description = description,
-        overrides = seo %}
+    {% seo
+        defaults=seo_defaults,
+        path=page.url,
+        title=title,
+        image=image,
+        description=description,
+        overrides=seo %}
 
     {# --- Imgix --- #}
 

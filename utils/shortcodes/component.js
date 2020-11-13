@@ -87,12 +87,12 @@ const renderComponent = (component, props) => {
  *
  * @param {object} eleventyConfig Eleventy's configuration object
  */
-exports.default = (eleventyConfig) => {
+exports.default = eleventyConfig => {
   // Grab all the directories in the components dir. Note that this only grabs
   // top-level comps at this time.
-  let components = glob.sync(path.join(getComponentsDir(config), "*"))
+  let components = glob.sync(path.join(getComponentsDir(config), "*"), { ignore: ["**/*.css"] })
   // Loop through each ...
-  components = components.map((compDir) => {
+  components = components.map(compDir => {
     // Extract the name of the directory, which is expected to match the name of
     // the component and its interior files.
     const name = path.basename(compDir)
@@ -108,7 +108,7 @@ exports.default = (eleventyConfig) => {
       })
     } else {
       // Otherwise, render an unpaired component and pass the props directly.
-      eleventyConfig.addNunjucksShortcode(shortcodeName, (props) => {
+      eleventyConfig.addNunjucksShortcode(shortcodeName, props => {
         return renderComponent(component, props)
       })
     }
