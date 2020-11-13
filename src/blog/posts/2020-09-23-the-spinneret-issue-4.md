@@ -1,7 +1,7 @@
 ---
 title: "The Spinneret: Issue #4"
 snippet: "I've launched my new personal website with a perfect 💯💯💯💯 performance score!! Take a look inside to see what else happened in my web development sphere throughout August 2020."
-tags: ["The Spinneret"]
+tagnames: ["The Spinneret"]
 image: /images/200923/spinneret-issue-4--buzz.png
 twitter_card: summary_large_image
 ---
@@ -51,7 +51,6 @@ And last, I added a handful of random articles, including one for [Ample](https:
 - [How to Fix "Integrity check failed ..." Yarn Error](https://cobwwweb.com/fix-yarn-integrity-check-failed)
 
 ## Shop Talk
-
 
 ![The Spinneret Issue #4: Shop Talk](/images/200923/spinneret-issue-4--shop-talk.png){:class="no-border"}
 

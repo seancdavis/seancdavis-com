@@ -1,22 +1,23 @@
-{% include "layout/head.njk" %}
-{% include "layout/header.njk" %}
+---
+layout: blank
+---
 
-<div class="py-24">
-  <div class="container max-w-4xl">
+<div class="container max-w-4xl">
+
+  {# --- Header --- #}
+
+  <div class="pt-24 mb-24">
     <h1 class="text-4xl">{{ title }}</h1>
     {% if content %}
-      <div class="text-2xl">
-        {{ content | safe }}
-      </div>
+      <div class="text-2xl">{{ content | safe }}</div>
     {% endif %}
   </div>
-</div>
 
-<div class="py-24 bg-gray-light">
-  <div class="layout--post--body text-lg">
-    {{ content | safe }}
+  {# --- Posts --- #}
+
+  <div class="mb-24">
+    {% for post in posts %}
+      {% component "post_card", post=post %}
+    {% endfor %}
   </div>
 </div>
-
-{% include "layout/footer.njk" %}
-{% include "layout/foot.njk" %}

@@ -1,7 +1,7 @@
 ---
 title: Programmatically Creating JSON Pages with GatsbyJS
 snippet: "Learn how to generate static JSON pages from markdown files and external data using the Gatsby static site generator."
-tags: ["Gatsby", "Jamstack"]
+tagnames: ["Gatsby", "Jamstack"]
 image: /images/200827/meta--gatsby-dynamic-json-pages.jpg
 twitter_card: summary_large_image
 ---
@@ -16,11 +16,11 @@ So I went looking for an answer and found [this](https://spectrum.chat/gatsby-js
 
 The code he referenced was this:
 
-~~~js
+```js
 exports.onPostBuild = ({ graphql }) = {
   graphql(QUERY).then(result => processAndWriteJSONFiles(result))
 }
-~~~
+```
 
 This was seemed like a great way to get started, so that's where we'll begin. We're going to take this approach and walk through how to programmatically generate JSON pages with Gatsby. We'll explore first how to use markdown files as the data source, before closing by quickly exploring how that differs from using an external API data source, like a headless CMS.
 
@@ -58,14 +58,14 @@ For this example, we're going to assume we have blog post data and want to write
 
 Ultimately we want to end up with a result that looks like this:
 
-~~~json
+```json
 {
   "title": "My Post",
   "slug": "my-post",
   "date": "2020-06-05T10:31:54.720Z",
   "body": "<p>Hello world!</p>"
 }
-~~~
+```
 
 Okay, now we can actually get started. Hooray!
 
@@ -95,14 +95,14 @@ Add the blog post data to `src/content/posts/my-post.md`.
 `src/content/posts/my-post.md`
 {:.file}
 
-~~~md
+```md
 ---
 title: My Post
 date: 2020-06-05T10:31:54.720Z
 ---
 
 Hello world!
-~~~
+```
 
 ### Step 3: Add Remark Transformer
 
@@ -121,7 +121,7 @@ Next, add the plugins to the configuration file:
 `gatsby-config.rb`
 {:.file}
 
-~~~js
+```js
 module.exports = {
   plugins: [
     // ...
@@ -136,7 +136,7 @@ module.exports = {
     // ...
   ]
 }
-~~~
+```
 
 Notice that the filesystem plugin is pointing to the directory in which we put our markdown file. This is crucial. We need the filesystem plugin to source the data so the Remark plugin can transform it into nodes we can query through GraphQL.
 
@@ -150,7 +150,7 @@ Then visit Gatsby's [GraphiQL](https://www.gatsbyjs.org/docs/running-queries-wit
 
 Let's query for all markdown files in the `src/content/posts` directory and see what we get.
 
-~~~graphql
+```graphql
 {
   allMarkdownRemark(filter: { fileAbsolutePath: { regex: "//src/content/posts//" } }) {
     edges {
@@ -165,7 +165,7 @@ Let's query for all markdown files in the `src/content/posts` directory and see 
     }
   }
 }
-~~~
+```
 
 If you haven't worked with Gatsby's GraphQL conventions or the Remark plugin, here are a few notes to add some context:
 
@@ -182,7 +182,7 @@ The file below is commented with what's going on in the appropriate lines.
 `gatsby-node.js`
 {:.file}
 
-~~~js
+```js
 // fs dependency is a Node.js library for working with the filesystem.
 const fs = require("fs")
 // Path is a Node.js library with utilities for working with file paths.
@@ -208,7 +208,7 @@ exports.onPostBuild = async ({ graphql }) => {
         }
       }
     }
-  `).then((result) => {
+  `).then(result => {
     // A reference to where we are going to put the files. Note that the public
     // directory already exists because the build has been completed (since
     // we're in the onPostBuild hook).
@@ -224,7 +224,7 @@ exports.onPostBuild = async ({ graphql }) => {
 
     // Loop through each (filtered) result from the query and write them to
     // file.
-    posts.map((post) => {
+    posts.map(post => {
       // The slug is pulled from the name of the markdown file.
       const slug = path.basename(post.fileAbsolutePath, path.extname(post.fileAbsolutePath))
 
@@ -243,7 +243,7 @@ exports.onPostBuild = async ({ graphql }) => {
     })
   })
 }
-~~~
+```
 
 Run a build to see this in action.
 
@@ -276,7 +276,7 @@ After installing the [gatsby-source-sanity](https://www.gatsbyjs.org/packages/ga
 `gatsby-node.js`
 {:.file}
 
-~~~js
+```js
 const fs = require("fs")
 const path = require("path")
 
@@ -296,20 +296,20 @@ exports.onPostBuild = async ({ graphql }) => {
         }
       }
     }
-  `).then((result) => {
+  `).then(result => {
     const postsPath = "./public/posts"
 
     const posts = result.data.posts.edges.map(({ node }) => node)
 
     if (!fs.existsSync(postsPath)) fs.mkdirSync(postsPath)
 
-    posts.map((post) => {
+    posts.map(post => {
       const data = { ...post, slug: post.slug.current }
       fs.writeFileSync(`${postsPath}/${data.slug}.json`, JSON.stringify(data))
     })
   })
 }
-~~~
+```
 
 If you have external data that doesn't have a Gatsby plugin you'll have to write your own support for it. That process is outside the scope of what we're talking about here.
 

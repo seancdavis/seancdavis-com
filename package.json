@@ -2,6 +2,7 @@
   "name": "seancdavis-com",
   "version": "1.0.0",
   "author": "Sean C Davis <scdavis41@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",

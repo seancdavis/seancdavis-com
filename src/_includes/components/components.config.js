@@ -11,6 +11,10 @@ module.exports = {
     transformer: require("./particles/particles.transformer"),
     template: "components/particles/particles.template.njk"
   },
+  post_card: {
+    transformer: require("./post_card/post_card.transformer"),
+    template: "components/post_card/post_card.template.njk"
+  },
   seo: {
     transformer: require("./seo/seo.transformer"),
     template: "components/seo/seo.template.njk"

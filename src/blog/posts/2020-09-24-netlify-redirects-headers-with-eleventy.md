@@ -1,7 +1,7 @@
 ---
 title: "Add Netlify Redirects and Headers to an Eleventy Project"
 snippet: "What seems like a simple task can be a little tricky to get right with Eleventy. Learn how to add a _redirects file to Eleventy projects deployed with Netlify."
-tags: ["Eleventy", "Netlify"]
+tagnames: ["Eleventy", "Netlify"]
 ---
 
 On the surface, this seems like such a simple task: Create a [`_redirects`](https://docs.netlify.com/routing/redirects/) or [`_headers`](https://docs.netlify.com/routing/headers/) file and drop them into the build directory.
@@ -15,11 +15,11 @@ The configuration looks like this:
 .eleventy.js
 {:.file}
 
-~~~js
+```js
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ static: "/" })
 }
-~~~
+```
 
 That tells us every file in the `static` directory (including files with a preceding underscore) will be copied into the root of the build directory.
 
