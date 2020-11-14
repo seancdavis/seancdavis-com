@@ -1,0 +1,7 @@
+.layout--tag--back-link {
+  svg {
+    @apply inline-block
+      mr-1
+      w-4;
+  }
+}

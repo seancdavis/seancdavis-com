@@ -7,6 +7,10 @@ layout: blank
   {# --- Header --- #}
 
   <div class="pt-24 mb-24">
+    <a href="/blog" class="layout--tag--back-link flex mb-2 link-transition">
+      {% svg "arrow-left" %}
+      <span>All Posts</span>
+    </a>
     <h1 class="text-4xl">{{ title }}</h1>
     {% if content %}
       <div class="text-2xl">{{ content | safe }}</div>
