@@ -1,7 +1,7 @@
 ---
 title: "Run JavaScript when Variable Exists"
 snippet: "It's super frustrating to have a race condition in which some JavaScript code may be run before a variable it needs exists, causing an error. Here's one approach to getting around that."
-tagnames: ["JavaScript"]
+tags: ["javascript"]
 ---
 
 One method for increasing page performance is to defer the loading of [JavaScript](/wtf-is-javascript). But a big caveat that comes along with that approach is that you may have JS elsewhere in your page that wants to run before the deferred script has loaded.

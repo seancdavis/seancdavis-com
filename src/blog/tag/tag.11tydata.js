@@ -1,5 +1,5 @@
 module.exports = {
   layout: "tag",
-  model: "Tag",
+  tags: ["Tag"],
   eleventyComputed: {}
 }

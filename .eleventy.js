@@ -55,55 +55,24 @@ module.exports = function (eleventyConfig) {
   //
   getUtilFiles().map(util => util.default(eleventyConfig))
 
-  /**
-   * Extract a collection from Eleventy's collectionApi using a "model"
-   * frontmatter key.
-   *
-   * @param {object} api collectionApi object from Eleventy
-   * @param {string} model Name of the model to extract (looks for "model"
-   * frontmatter)
-   */
-  const extractCollection = (api, model) => {
-    return api.getAll().filter(({ data }) => data.model === model)
-  }
+  // Merge the cascade of properties rather than overwriting. This is how we're
+  // able to set tags for an entire directory, while then adding to those tags
+  // for the individual items in the directory.
+  eleventyConfig.setDataDeepMerge(true)
 
   /**
-   * Builds a collection of tags. This is abstracted because it is used for
-   * multiple collections.
-   *
-   * @param {object} api The collectionApi object from Eleventy.
-   */
-  const buildTagsCollection = api => {
-    // Get raw tags and posts collection data.
-    let tags = extractCollection(api, "Tag")
-    const posts = extractCollection(api, "Post").sort((a, b) => b.date - a.date)
-    // Apply posts relationship using the tag "title" as they key.
-    const postIncludesTag = (post, tag) => (post.data.tagnames || []).includes(tag.data.title)
-    tags.map(tag => (tag.data.posts = posts.filter(post => postIncludesTag(post, tag))))
-    // Return the tags collection.
-    return tags
-  }
-
-  /**
-   * Creates the "tags" collection using the "model" frontmatter value, and
-   * makes an association to the tag's posts.
-   */
-  eleventyConfig.addCollection("tags", collectionApi => {
-    return buildTagsCollection(collectionApi)
-  })
-
-  /**
-   * Creates the "posts" collection using the "model" frontmatter value.
+   * Creates the "posts" collection from the "Post" tag, attaching "hashtags" as
+   * the "Tag" collection intersection.
    */
   eleventyConfig.addCollection("posts", collectionApi => {
     // Get raw tags and posts collection data.
-    let posts = extractCollection(collectionApi, "Post").sort((a, b) => b.date - a.date)
-    const tags = extractCollection(collectionApi, "Tag").sort((a, b) => a.data.title - b.data.title)
+    const tags = collectionApi.getFilteredByTag("Tag").sort((a, b) => a.data.title - b.data.title)
+    let posts = collectionApi.getFilteredByTag("Post").sort((a, b) => b.date - a.date)
     // Replace tags with a tag object.
-    const findTagObj = title => lodash.find(tags, tag => tag.data.title === title)
+    const findTagObj = slug => lodash.find(tags, tag => tag.fileSlug === slug)
     posts.map(post => {
-      let postTags = (post.data.tagnames || []).map(tagName => findTagObj(tagName))
-      post.data.tags = lodash.compact(postTags)
+      let postTags = (post.data.tags || []).map(tagName => findTagObj(tagName))
+      post.data.hashtags = lodash.compact(postTags)
     })
     // Return the tags collection.
     return posts
