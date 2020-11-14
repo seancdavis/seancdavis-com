@@ -1,6 +1,6 @@
 ---
 title: "Add Netlify Redirects and Headers to an Eleventy Project"
-snippet: "What seems like a simple task can be a little tricky to get right with Eleventy. Learn how to add a _redirects file to Eleventy projects deployed with Netlify."
+description: "What seems like a simple task can be a little tricky to get right with Eleventy. Learn how to add a _redirects file to Eleventy projects deployed with Netlify."
 tags: ["Eleventy", "Netlify"]
 ---
 

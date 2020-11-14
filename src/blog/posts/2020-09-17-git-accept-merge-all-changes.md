@@ -1,6 +1,6 @@
 ---
 title: "Git Merge: Accept All Changes"
-snippet: "Have you encountered a large merge when you know you are going to accept all current or incoming changes? There's a way to achieve without stepping through each file."
+description: "Have you encountered a large merge when you know you are going to accept all current or incoming changes? There's a way to achieve without stepping through each file."
 tags: ["Git"]
 ---
 

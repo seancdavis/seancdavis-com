@@ -1,8 +1,10 @@
 ---
 title: Programmatically Creating JSON Pages with GatsbyJS
-snippet: "Learn how to generate static JSON pages from markdown files and external data using the Gatsby static site generator."
-tags: ["Gatsby", "Jamstack"]
-image: /images/200827/meta--gatsby-dynamic-json-pages.jpg
+description: "Learn how to generate static JSON pages from markdown files and external data using the Gatsby static site generator."
+tags:
+  - gatsby
+  - jamstack
+image: /blog/200827/meta--gatsby-dynamic-json-pages.jpg
 twitter_card: summary_large_image
 ---
 
