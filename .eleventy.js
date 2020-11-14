@@ -51,36 +51,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/fonts")
   eleventyConfig.addPassthroughCopy({ static: "/" })
 
-  // --- Utils --- //
-  //
-  getUtilFiles().map(util => util.default(eleventyConfig))
-
   // Merge the cascade of properties rather than overwriting. This is how we're
   // able to set tags for an entire directory, while then adding to those tags
   // for the individual items in the directory.
   eleventyConfig.setDataDeepMerge(true)
 
-  /**
-   * Creates the "posts" collection from the "Post" tag, attaching "hashtags" as
-   * the "Tag" collection intersection.
-   */
-  eleventyConfig.addCollection("posts", collectionApi => {
-    // Get raw tags and posts collection data.
-    const tags = collectionApi.getFilteredByTag("Tag").sort((a, b) => a.data.title - b.data.title)
-    let posts = collectionApi.getFilteredByTag("Post").sort((a, b) => b.date - a.date)
-    // Replace tags with a tag object.
-    const findTagObj = slug => lodash.find(tags, tag => tag.fileSlug === slug)
-    posts.map(post => {
-      let postTags = (post.data.tags || []).map(tagName => findTagObj(tagName))
-      post.data.hashtags = lodash.compact(postTags)
-    })
-    // Return the tags collection.
-    return posts
-  })
+  // Import utilities from src/utils. See getUtilFiles() above.
+  getUtilFiles().map(util => util.default(eleventyConfig))
 
-  //
-  // --- Return --- //
-  //
   // Return the config object. (This is what actually sets the config for
   // Eleventy. It was written above for reference within utils.)
   return config
