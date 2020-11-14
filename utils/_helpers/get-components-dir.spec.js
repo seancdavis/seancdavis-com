@@ -4,7 +4,7 @@ const { getComponentsDir } = require("./get-components-dir")
 
 describe("getComponentsDir()", () => {
   it("returns the project's object when not specified", () => {
-    expect(getComponentsDir()).toEqual(path.resolve("src/_components"))
+    expect(getComponentsDir()).toEqual(path.resolve("src/_includes/components"))
   })
   it("falls back to a sensible default", () => {
     expect(getComponentsDir({})).toEqual(path.resolve("_components"))
