@@ -1,5 +1,7 @@
 const glob = require("glob")
 const lodash = require("lodash")
+const MarkdownIt = require("markdown-it")
+const MarkdownItAttrs = require("markdown-it-attrs")
 const path = require("path")
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
 
@@ -50,6 +52,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/images")
   eleventyConfig.addPassthroughCopy("./src/fonts")
   eleventyConfig.addPassthroughCopy({ static: "/" })
+
+  // Markdown parser
+  const MarkdownLib = MarkdownIt({ html: true }).use(MarkdownItAttrs)
+  eleventyConfig.setLibrary("md", MarkdownLib)
 
   // Merge the cascade of properties rather than overwriting. This is how we're
   // able to set tags for an entire directory, while then adding to those tags
