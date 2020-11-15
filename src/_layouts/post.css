@@ -1,17 +1,16 @@
 .layout--post--body {
-  > *:not(.language-js) {
+  > *:not([class*="language-"]) {
     @apply max-w-2xl
-      mx-auto
-      px-4;
+      mx-4;
   }
 
-  pre.language-js {
+  pre[class*="language-"] {
     @apply my-8
       px-4
       py-8;
   }
 
-  code.language-js {
+  code[class*="language-"] {
     @apply block
       max-w-4xl
       mx-auto
@@ -20,8 +19,25 @@
     line-height: 1.666;
   }
 
+  h2 {
+    @apply mb-1
+      mt-10
+      text-3xl;
+  }
+
   a {
     border-bottom: 1px dotted var(--color-green);
+  }
+
+  blockquote {
+    @apply italic
+      mb-4
+      p-4
+      text-gray-dark
+      text-xl;
+
+    background-color: #e4e8ed;
+    border-left: 0.4rem solid #d8dde3;
   }
 }
 
@@ -29,15 +45,15 @@
 
 @screen md {
   .layout--post--body {
-    > *:not(.language-js) {
-      @apply px-0;
+    > *:not([class*="language-"]) {
+      @apply mx-auto;
     }
 
-    pre.language-js {
+    pre[class*="language-"] {
       @apply px-8;
     }
 
-    code.language-js {
+    code[class*="language-"] {
       font-size: 1rem;
     }
   }
