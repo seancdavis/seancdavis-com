@@ -1,43 +1,123 @@
 .layout--post--body {
-  > *:not([class*="language-"]) {
+  > *:not(pre):not(blockquote):not(.filename) {
     @apply max-w-2xl
       mx-4;
   }
 
-  pre[class*="language-"] {
-    @apply my-8
-      px-4
-      py-8;
-  }
-
-  code[class*="language-"] {
-    @apply block
-      max-w-4xl
-      mx-auto
-      text-sm;
-
-    line-height: 1.666;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mb-1;
   }
 
   h2 {
-    @apply mb-1
-      mt-10
+    @apply mt-10
       text-3xl;
+  }
+
+  h3 {
+    @apply mt-6
+      text-2xl;
+  }
+
+  h4 {
+    @apply mt-4
+      text-xl;
+  }
+
+  h5 {
+    @apply mt-2
+      text-lg;
   }
 
   a {
     border-bottom: 1px dotted var(--color-green);
   }
 
+  /* --- Lists --- */
+
+  ul,
+  ol {
+    @apply pl-5;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  li {
+    @apply mb-2;
+  }
+
+  /* --- Code Blocks --- */
+  pre {
+    @apply my-8
+      px-4
+      py-8;
+
+    &:not([class*="language-"]) {
+      background-color: var(--color-code-bg);
+      overflow-x: scroll;
+
+      > code {
+        @apply text-white;
+      }
+    }
+
+    > code {
+      @apply bg-transparent
+        inline-block
+        mr-4
+        p-0
+        rounded-none
+        text-sm;
+
+      line-height: 1.666;
+    }
+  }
+
+  .filename {
+    @apply mb-0
+      mt-8
+      rounded-none
+      text-right;
+
+    background-color: var(--color-code-bg);
+
+    > code {
+      @apply bg-transparent
+        block
+        px-4
+        opacity-50
+        py-2
+        text-sm
+        text-white;
+    }
+
+    & + pre {
+      @apply mt-0
+        pt-4;
+    }
+  }
+
+  /* --- Block Quotes --- */
   blockquote {
     @apply italic
-      mb-4
-      p-4
+      my-8
+      px-4
+      py-8
       text-gray-dark
       text-xl;
 
     background-color: #e4e8ed;
-    border-left: 0.4rem solid #d8dde3;
+
+    p {
+      @apply max-w-2xl
+        mx-auto;
+    }
   }
 }
 
@@ -45,16 +125,29 @@
 
 @screen md {
   .layout--post--body {
-    > *:not([class*="language-"]) {
+    > *:not(pre):not(blockquote):not(.filename) {
       @apply mx-auto;
     }
 
-    pre[class*="language-"] {
+    pre {
+      @apply px-8;
+
+      code {
+        @apply block
+          max-w-3xl
+          mx-auto;
+
+        font-size: 1rem;
+      }
+    }
+
+    blockquote {
       @apply px-8;
     }
 
-    code[class*="language-"] {
-      font-size: 1rem;
+    .filename > code {
+      @apply max-w-2xl
+        mx-auto;
     }
   }
 }

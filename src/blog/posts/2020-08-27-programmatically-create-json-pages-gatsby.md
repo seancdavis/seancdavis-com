@@ -77,11 +77,9 @@ Let's begin by treating our data source as local markdown files.
 
 The code you see below is wrapped up in a GitHub repository at [seancdavis/gatsby-json-pages-from-markdown](https://github.com/seancdavis/gatsby-json-pages-from-markdown).
 
-And if you prefer to watch and listen rather than read, here is the correspoding video tutorial:
+And if you prefer to watch and listen rather than read, here is the corresponding video tutorial:
 
-<div class="video-tutorial">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/qvSY-f4fHs8?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% video_tutorial src="https://www.youtube.com/embed/qvSY-f4fHs8" %}
 
 ### Step 1: Setup Project
 
@@ -94,8 +92,7 @@ If you don't have a Gatsby project already, begin by creating one:
 
 Add the blog post data to `src/content/posts/my-post.md`.
 
-`src/content/posts/my-post.md`
-{:.file}
+`src/content/posts/my-post.md` {.filename}
 
 ```md
 ---
@@ -120,8 +117,7 @@ We'll also want the [gatsby-source-filesystem plugin](https://www.gatsbyjs.org/p
 
 Next, add the plugins to the configuration file:
 
-`gatsby-config.rb`
-{:.file}
+`gatsby-config.rb` {.filename}
 
 ```js
 module.exports = {
@@ -154,7 +150,9 @@ Let's query for all markdown files in the `src/content/posts` directory and see 
 
 ```graphql
 {
-  allMarkdownRemark(filter: { fileAbsolutePath: { regex: "//src/content/posts//" } }) {
+  allMarkdownRemark(
+    filter: { fileAbsolutePath: { regex: "//src/content/posts//" } }
+  ) {
     edges {
       node {
         frontmatter {
@@ -181,8 +179,7 @@ Now that we know we can query the data properly, we can take that query and put 
 
 The file below is commented with what's going on in the appropriate lines.
 
-`gatsby-node.js`
-{:.file}
+`gatsby-node.js` {.filename}
 
 ```js
 // fs dependency is a Node.js library for working with the filesystem.
@@ -197,7 +194,9 @@ exports.onPostBuild = async ({ graphql }) => {
   // Run the GraphQL query (from example above).
   await graphql(`
     {
-      posts: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "//src/content/posts//" } }) {
+      posts: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "//src/content/posts//" } }
+      ) {
         edges {
           node {
             frontmatter {
@@ -228,7 +227,10 @@ exports.onPostBuild = async ({ graphql }) => {
     // file.
     posts.map(post => {
       // The slug is pulled from the name of the markdown file.
-      const slug = path.basename(post.fileAbsolutePath, path.extname(post.fileAbsolutePath))
+      const slug = path.basename(
+        post.fileAbsolutePath,
+        path.extname(post.fileAbsolutePath)
+      )
 
       // We then combine the frontmatter object with the slug and body (the
       // converted HTML) to form our data object. This will give us the shape we
@@ -267,16 +269,13 @@ If we wanted to achieve the same result, but our data source comes from an API, 
 
 This section also has a repository ([seancdavis/gatsby-json-pages-external-data](https://github.com/seancdavis/gatsby-json-pages-external-data)) and a video:
 
-<div class="video-tutorial">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/LI6RtnW062U?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+{% video_tutorial src="https://www.youtube.com/embed/LI6RtnW062U" %}
 
 Consider if our post data lived in a headless CMS like [Sanity](https://www.sanity.io/). Instead of querying with `allMarkdownRemark`, we'd use `allSanityPost`. And the resulting data structure is a little different. Otherwise, it all looks pretty much the same.
 
 After installing the [gatsby-source-sanity](https://www.gatsbyjs.org/packages/gatsby-source-sanity/) plugin, adjust the code in `gatsby-node.js` to look like this:
 
-`gatsby-node.js`
-{:.file}
+`gatsby-node.js` {.filename}
 
 ```js
 const fs = require("fs")
