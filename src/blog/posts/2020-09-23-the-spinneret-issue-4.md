@@ -1,8 +1,9 @@
 ---
 title: "The Spinneret: Issue #4"
 description: "I've launched my new personal website with a perfect 💯💯💯💯 performance score!! Take a look inside to see what else happened in my web development sphere throughout August 2020."
-tags: ["The Spinneret"]
-image: /images/200923/spinneret-issue-4--buzz.png
+tags:
+  - spinneret
+image: /blog/200923/spinneret-issue-4--buzz.png
 twitter_card: summary_large_image
 ---
 

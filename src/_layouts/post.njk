@@ -10,7 +10,7 @@
     {% if tags.length > 0 %}
       <div class="mt-4 text-sm">
         {% for tag in hashtags %}
-          {% tag tag=tag %}
+          {% tag tag=tag, classes="mr-1" %}
         {% endfor %}
       </div>
     {% endif %}
