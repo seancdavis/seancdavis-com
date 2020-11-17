@@ -8,9 +8,10 @@
   --color-blue-dark: #1d4a8f;
   --color-blue: #2260bf;
   --color-gray-blue: #4b6a8a;
-  --color-gray-dark: #1b3846;
   --color-gray-light: #eef1f5;
   --color-gray: #eaeced;
+  --color-gray-medium: #e4e8ed;
+  --color-gray-dark: #1b3846;
   --color-green: #007785;
   --color-lime: #9ce736;
   --color-orange: #ff6b00;
@@ -18,5 +19,6 @@
   --color-white: #ffffff;
   --color-yellow: #ffd445;
 
-  --color-code-bg: #1e1e3f;
+  --color-code-block-bg: #1e1e3f;
+  --color-code-block-bg: #1e1e3f;
 }

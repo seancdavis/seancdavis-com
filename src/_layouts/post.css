@@ -61,7 +61,7 @@
       py-8;
 
     &:not([class*="language-"]) {
-      background-color: var(--color-code-bg);
+      background-color: var(--color-code-block-bg);
       overflow-x: scroll;
 
       > code {
@@ -87,7 +87,7 @@
       rounded-none
       text-right;
 
-    background-color: var(--color-code-bg);
+    background-color: var(--color-code-block-bg);
 
     > code {
       @apply bg-transparent
@@ -107,18 +107,22 @@
 
   /* --- Block Quotes --- */
   blockquote {
-    @apply italic
+    @apply bg-gray-medium
+      italic
       my-8
       px-4
       py-8
       text-gray-dark
       text-xl;
 
-    background-color: #e4e8ed;
-
     p {
       @apply max-w-2xl
         mx-auto;
+    }
+
+    code {
+      @apply bg-gray-dark
+        text-gray-light;
     }
   }
 }
