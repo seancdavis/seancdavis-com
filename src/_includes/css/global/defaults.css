@@ -49,14 +49,16 @@ svg {
 }
 
 code {
-  @apply inline-block
+  @apply align-middle
+    inline-block
     px-2
     py-1
-    rounded-md;
+    rounded-md
+    text-xs;
 
   background-color: var(--color-code-bg);
   color: rgb(250, 208, 0);
-  font-size: 1rem;
+  margin-top: -2px;
 }
 
 hr {

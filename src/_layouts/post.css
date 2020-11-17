@@ -1,6 +1,7 @@
 .layout--post--body {
   > *:not(pre):not(blockquote):not(.filename) {
-    @apply max-w-2xl
+    @apply block
+      max-w-2xl
       mx-4;
   }
 
@@ -41,7 +42,8 @@
 
   ul,
   ol {
-    @apply pl-5;
+    @apply mb-6
+      pl-5;
   }
 
   ul {
