@@ -1,0 +1,10 @@
+.component--back-button {
+  @apply flex
+    link-transition;
+
+  svg {
+    @apply inline-block
+      mr-1
+      w-4;
+  }
+}

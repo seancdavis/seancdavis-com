@@ -3,7 +3,10 @@ module.exports = {
   tags: ["Tag"],
   pagination: {
     size: 10,
-    alias: "posts"
+    alias: "posts",
+    before: data => {
+      return data.sort((a, b) => b.date - a.date)
+    }
   },
   eleventyComputed: {}
 }
