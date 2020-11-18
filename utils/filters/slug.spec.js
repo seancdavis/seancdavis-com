@@ -10,8 +10,12 @@ describe("slugifyInput()", () => {
     expect(result).toEqual("hello-world")
   })
   it("removes all unwanted characters", () => {
-    const result = slugifyInput("Hello *+~.()'\"!:@?# World")
+    const result = slugifyInput("Hello :!?'\"@#,:?.(){}[]*+~ World")
     expect(result).toEqual("hello-world")
+  })
+  it("replaces select characters with words", () => {
+    const result = slugifyInput("Hello & % < > $ World")
+    expect(result).toEqual("hello-and-percent-less-greater-dollar-world")
   })
   it("strips lingering spaces", () => {
     const result = slugifyInput("Hello  World ### ")
