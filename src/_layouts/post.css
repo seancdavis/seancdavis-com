@@ -36,6 +36,10 @@
 
   a {
     border-bottom: 1px dotted var(--color-green);
+
+    &:hover {
+      @apply border-solid;
+    }
   }
 
   /* --- Lists --- */
