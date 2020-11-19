@@ -1,5 +1,5 @@
 .layout--post--body {
-  > *:not(pre):not(blockquote):not(.filename) {
+  > *:not(pre):not(blockquote):not(.filename):not(.override-body-constraint) {
     @apply block
       max-w-2xl
       mx-4;
@@ -119,6 +119,16 @@
       text-gray-dark
       text-xl;
 
+    > * {
+      @apply block
+        max-w-2xl
+        mx-4;
+
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+
     p {
       @apply max-w-2xl
         mx-auto;
@@ -135,7 +145,7 @@
 
 @screen md {
   .layout--post--body {
-    > *:not(pre):not(blockquote):not(.filename) {
+    > *:not(pre):not(blockquote):not(.filename):not(.override-body-constraint) {
       @apply mx-auto;
     }
 
@@ -153,6 +163,10 @@
 
     blockquote {
       @apply px-8;
+
+      > * {
+        @apply mx-auto;
+      }
     }
 
     .filename > code {
