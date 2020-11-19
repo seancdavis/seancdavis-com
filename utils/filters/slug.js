@@ -9,7 +9,7 @@ exports.slugifyInput = input => {
   if (!input) {
     return false
   }
-  return slugify(input.toString(), { remove: /[!?'"@#,:.(){}\[\]*+~]/g, lower: true })
+  return slugify(input.toString(), { lower: true, strict: true })
 }
 
 /**
