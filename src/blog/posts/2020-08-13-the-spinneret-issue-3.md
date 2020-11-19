@@ -4,7 +4,6 @@ description: "Keeping up the pace with new blog posts, while engaging the team i
 tags:
   - spinneret
 image: /blog/200813/spinneret-issue-3--in-my-words.jpg
-twitter_card: summary_large_image
 ---
 
 Welcome to the third installment of _The Spinneret_. I suppose if it happens three times it's actually a thing, right?

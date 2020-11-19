@@ -7,7 +7,6 @@ tags:
   - ruby
   - video_tutorial
 image: /blog/200730/earworms-with-data.png
-twitter_card: summary_large_image
 ---
 
 This article is part of a series of tutorials on building a _static API_. You can view the full list of available static API tutorials in [the introductory article](/how-to-build-static-api), which also provides some background on the examples we're using here.

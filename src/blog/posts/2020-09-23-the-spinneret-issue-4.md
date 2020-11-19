@@ -4,7 +4,6 @@ description: "I've launched my new personal website with a perfect 💯💯💯�
 tags:
   - spinneret
 image: /blog/200923/spinneret-issue-4--buzz.png
-twitter_card: summary_large_image
 ---
 
 ## What The Buzz!

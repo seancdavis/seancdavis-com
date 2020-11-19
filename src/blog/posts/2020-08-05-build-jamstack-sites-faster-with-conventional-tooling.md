@@ -4,7 +4,6 @@ description: "The Jamstack presents the opportunity to fly through the process o
 tags:
   - jamstack
 image: /blog/200805/jamstack-project-without-convention.jpg
-twitter_card: summary_large_image
 ---
 
 While these days I mostly work with the [Jamstack](/wtf-is-jamstack) when building products for the web, I came from building _everything_ with [Ruby on Rails](https://rubyonrails.org/).

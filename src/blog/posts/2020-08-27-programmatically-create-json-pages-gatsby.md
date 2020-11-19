@@ -5,7 +5,6 @@ tags:
   - gatsby
   - jamstack
 image: /blog/200827/meta--gatsby-dynamic-json-pages.jpg
-twitter_card: summary_large_image
 ---
 
 As I've been exploring [static APIs](/lets-talk-about-static-apis) over the past few months, I've been adding tutorials to [an introductory example](/how-to-build-static-api) using various tools and frameworks.
