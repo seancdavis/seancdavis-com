@@ -3,7 +3,7 @@ import "./utils/scan-links"
 
 import "./lib/analytics"
 
-import { initBackButton } from "../components/back_button/back_button.controller"
+// import { initBackButton } from "../components/back_button/back_button.controller"
 import { initParticles } from "../components/particles/particles.controller"
 import { initTypewriter } from "../components/typewriter/typewriter.controller"
 
@@ -19,6 +19,6 @@ export const Particles = {
   init: initParticles
 }
 
-onInit(() => {
-  initBackButton()
-})
+// onInit(() => {
+//   initBackButton()
+// })
