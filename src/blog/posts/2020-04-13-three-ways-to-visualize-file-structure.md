@@ -8,7 +8,7 @@ I was writing some documentation for an [Ample](https://www.helloample.com/) int
 
 Many prefer to visualize this structure in a tree format. For example, here's the _List_ view in Mac's Finder application:
 
-![](/images/200413/mac-finder-list-view.png)
+{% post_image src="/blog/200413/mac-finder-list-view.png" %}
 
 As I wrote the doc, I considered the ways in which I have achieved this type of visualization in the past.
 
