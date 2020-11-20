@@ -12,6 +12,10 @@
   h5,
   h6 {
     @apply mb-1;
+
+    code {
+      font-size: 80%;
+    }
   }
 
   h2 {
@@ -87,6 +91,10 @@
         text-sm;
 
       line-height: 1.666;
+    }
+
+    .table {
+      @apply inline-block;
     }
   }
 
