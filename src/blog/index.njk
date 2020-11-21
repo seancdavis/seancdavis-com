@@ -2,6 +2,7 @@
 layout: blank
 title: Blog
 description: Quis aliquip consequat anim eu aliquip aliquip officia est.
+permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
 pagination:
   data: collections.posts
   size: 10
