@@ -4,7 +4,7 @@ description: "Storing multi-line strings in an environment variable is nice and 
 tags: []
 ---
 
-I've previously talked about [when to use environment variables](/when-to-use-environment-variables.html), along with [my favorite tool for managing project-specific values](/when-to-use-environment-variables.html). But neither of these solve a problem I run into occasionally -- how to store multi-line values in an environment variable.
+I've previously talked about [when to use environment variables](/when-to-use-environment-variables.html), along with [my favorite tool for managing project-specific values](/when-to-use-environment-variables.html). But neither of these solve a problem I run into occasionally—how to store multi-line values in an environment variable.
 
 Setting a single line environment variable is simple enough:
 
@@ -48,7 +48,7 @@ Hello, World!
 How are you?
 ```
 
-With interpolation in the command -- by running a command within a command -- the contents of the file can be read and stored as the variable's value, like so:
+With interpolation in the command—by running a command within a command—the contents of the file can be read and stored as the variable's value, like so:
 
     $ export MY_VAR=$(cat my_var)
 

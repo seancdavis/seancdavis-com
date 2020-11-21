@@ -15,7 +15,7 @@ When answering questions like this, I tend to drift toward a balanced approach. 
 
 I use the same approach for new technology, whether it's a new hosting platform, operating system, or JavaScript framework. It looks something like this:
 
-When the tool is brand new, I pay attention to its development and what developers are saying about it. But I stay patient and wait for the honeymoon period to end to see if there's more to it in the community than its novelty. If the positive talks remain, I _try_ it -- I create a proof for concept containing _types_ of features I might use in a production-ready product. I want to get a sense of how well the tool can solve problems I face on projects I get paid to work. Based on the outcome of that POC, I either consider selling the tool it into my next project, or I move along until and unless something urges me to go through the process again.
+When the tool is brand new, I pay attention to its development and what developers are saying about it. But I stay patient and wait for the honeymoon period to end to see if there's more to it in the community than its novelty. If the positive talks remain, I _try_ it—I create a proof for concept containing _types_ of features I might use in a production-ready product. I want to get a sense of how well the tool can solve problems I face on projects I get paid to work. Based on the outcome of that POC, I either consider selling the tool it into my next project, or I move along until and unless something urges me to go through the process again.
 
 To say it more prescriptively:
 
@@ -37,4 +37,4 @@ Over the last two years, I've built proofs of concepts using several tools that 
 
 Since building my proof of concepts, I've used about half of these in production applications. But now I know (generally) what it's like to work with all of them. That means I am not equipped with more tools in my toolbox, along with the ability to make a more informed decision on [which one(s) I should use for my next project](/choose-the-right-tool-for-the-job.html).
 
-Avoid being be too late to the game. But don't get too far into a bind from which you can't escape. Stick yourself right in the middle -- **stay balanced** -- and you'll be a knowledgeable and profitable developer.
+Avoid being be too late to the game. But don't get too far into a bind from which you can't escape. Stick yourself right in the middle—**stay balanced**—and you'll be a knowledgeable and profitable developer.
