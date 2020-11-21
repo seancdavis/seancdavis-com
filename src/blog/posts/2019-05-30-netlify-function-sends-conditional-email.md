@@ -61,7 +61,7 @@ Then [create an API key](https://sendgrid.com/docs/ui/account-and-settings/api-k
 
 Recall from [the setup guide](zero-to-functioning-netlify-function) that the simplest example looks like this:
 
-functions/src/email_notification.js {.filename}
+`functions/src/email_notification.js` {.filename}
 
 ```js
 exports.handler = function (event, context, callback) {

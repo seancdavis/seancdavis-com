@@ -19,7 +19,7 @@ This part is unique among the five in that it requires a bit of background to ge
 
 Create a new file at `src/config.js` that will serve as your main JS configuration. (As stated in other parts, you're welcome to put this file wherever you'd like, you'll just have to update the code appropriately to reflect your changes.)
 
-src/config.js {.filename}
+`src/config.js` {.filename}
 
 ```js
 module.exports = [
@@ -49,7 +49,7 @@ This configuration is unique even to [the introductory article](/dynamic-tasks-g
 
 Because I want to show you how it can work if you add a third-party dependency that isn't available as an NPM package, let's create a dummy dependency at `src/vendor/my-lib.js`:
 
-src/vendor/my-lib.js {.filename}
+`src/vendor/my-lib.js` {.filename}
 
 ```js
 class MyLib {
@@ -63,7 +63,7 @@ class MyLib {
 
 We have some big adjustments to make to the Gulpfile. Here we're still taking a similar approach to Part 2 in having the build run in series with functions `jsDeps()`, `jsBuild()`, `jsConcat()`. The difference is that within each function we are reading the configuration file (`src/config.js`) and building dynamic anonymous tasks for each item within the configuration array. The bulk of this is explained in [the introductory article on dynamic Gulp 4 tasks](/dynamic-tasks-gulp-4.html), but there are some comments in the code to help.
 
-gulpfile.js {.filename}
+`gulpfile.js` {.filename}
 
 ```js
 // Import "parallel" function, along with the others we've

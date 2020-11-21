@@ -157,7 +157,7 @@ To resolve these issues, think about structure and specificity following these r
 
 In other words, don't do this:
 
-card.scss {.filename}
+`card.scss` {.filename}
 
 ```scss
 .card {
@@ -166,7 +166,7 @@ card.scss {.filename}
 }
 ```
 
-utils/margin.scss {.filename}
+`utils/margin.scss` {.filename}
 
 ```scss
 .has-margin-bottom {
@@ -175,7 +175,7 @@ utils/margin.scss {.filename}
 
 Do this:
 
-card.scss {.filename}
+`card.scss` {.filename}
 
 ```scss
 .card {
@@ -229,7 +229,7 @@ Ideally, you accomplish this without duplicating code. It's up to you how you'd 
 
 One way to approach this is to create base component styles with a placeholder and then extend that placeholder and overwrite as needed:
 
-components/\_button.scss {.filename}
+`components/\_button.scss` {.filename}
 
 ```scss
 %button {
@@ -244,7 +244,7 @@ components/\_button.scss {.filename}
 }
 ```
 
-components/\_card.scss {.filename}
+`components/\_card.scss` {.filename}
 
 ```scss
 .card {
@@ -285,7 +285,7 @@ Another approach is to include mixins rather than extending placeholders. That w
 }
 ```
 
-components/\_card.scss {.filename}
+`components/\_card.scss` {.filename}
 
 ```scss
 .card {
@@ -312,7 +312,7 @@ There is one more approach that changes up the result a bit. In the class train 
 }
 ```
 
-components/\_card.scss {.filename}
+`components/\_card.scss` {.filename}
 
 ```scss
 .card-button {

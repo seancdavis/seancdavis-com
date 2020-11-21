@@ -27,7 +27,7 @@ $ npm install --save-dev gulp-concat
 
 We only need to add two lines to the Gulpfile. These are included with comments so you know which lines are new:
 
-gulpfile.js {.filename}
+`gulpfile.js` {.filename}
 
 ```js
 const { src, dest } = require("gulp")
@@ -85,7 +85,7 @@ $ npm install --save-dev jquery lodash
 
 With the dependencies installed we can update the Gulpfile (new behavior is commented):
 
-gulpfile.js {.filename}
+`gulpfile.js` {.filename}
 
 ```js
 // Import the "series" function, too.

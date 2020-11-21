@@ -29,7 +29,7 @@ Once your Gatsby project is up and running locally, let’s start by building a 
 
 The first step is to create the page and add some boilerplate code:
 
-src/pages/contact.js {.filename}
+`src/pages/contact.js` {.filename}
 
 ```jsx
 import React from "react"
@@ -106,7 +106,7 @@ To do this, all you have to do is add an `action` attribute to your form, like s
 
 Notice here that I’ve added a value of `/thank-you` as the `action` on the form. This means that after a successful form submission, users will be redirected to `/thank-you`. In other words, we’ll need a page to receive those users:
 
-src/pages/thank-you.js {.filename}
+`src/pages/thank-you.js` {.filename}
 
 ```jsx
 import React from "react"
@@ -138,7 +138,7 @@ I have found that this is easiest to work with through the [`react-google-recapt
 
 Next, import the package to the top of your page:
 
-src/pages/contact.js {.filename}
+`src/pages/contact.js` {.filename}
 
 ```jsx
 import ReCAPTCHA from "react-google-recaptcha"
@@ -196,7 +196,7 @@ To get started, we’re going to see a few important changes:
 
 The skeleton of that component then looks like this:
 
-src/pages/contact.js {.filename}
+`src/pages/contact.js` {.filename}
 
 ```jsx
 import React from "react"

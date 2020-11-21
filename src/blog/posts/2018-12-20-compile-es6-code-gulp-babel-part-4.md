@@ -37,7 +37,7 @@ There are a few things we're going to do to the Gulpfile:
 
 Here's what the resulting file looks like now (with comments where code was added):
 
-gulpfile.js {.filename}
+`gulpfile.js` {.filename}
 
 ```js
 const { parallel, series, src, dest } = require("gulp")

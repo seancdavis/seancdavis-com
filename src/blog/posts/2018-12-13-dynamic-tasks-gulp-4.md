@@ -14,7 +14,7 @@ With earlier versions of [Gulp](https://gulpjs.com/), creating dynamic tasks was
 
 For example, let's say you have a configuration array in JSON saved to a file called `gulp.config.js`:
 
-gulp.config.js {.filename}
+`gulp.config.js` {.filename}
 
 ```js
 module.exports = [
@@ -31,7 +31,7 @@ module.exports = [
 
 It's easy enough to require that file in the Gulp config and create a task using the `name` property in each item. That may look something like this:
 
-gulpfile.js {.filename}
+`gulpfile.js` {.filename}
 
 ```js
 // [Omitted] Load gulp and other dependencies ...
@@ -63,7 +63,7 @@ Gulp 4 requires [tasks to be exported explicitly](https://gulpjs.com/docs/en/get
 
 The functions exported from the Gulpfile are equal to names of functions within the Gulpfile. For example, let's say your default task (the one that is run when no argument is passed to `gulp` on the command line) runs a `build()` function. That config might look something like this:
 
-gulpfile.js {.filename}
+`gulpfile.js` {.filename}
 
 ```js
 // [Omitted] Load gulp and other dependencies ...
@@ -120,7 +120,7 @@ We can take this idea of tasks run in series (or parallel) and combine it with _
 
 Here's what that looks like:
 
-gulpfile.js {.filename}
+`gulpfile.js` {.filename}
 
 ```js
 const { series } = require("gulp")

@@ -33,7 +33,7 @@ Use your terminal to change into a project directory:
 
 Create a `.envrc` file at the project root and export some environment variable. We'll use `MY_VALUE` as the test case:
 
-.envrc{.filename}
+`.envrc` {.filename}
 
 ```shell
 export MY_VALUE="Hello World"

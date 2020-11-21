@@ -42,7 +42,7 @@ If you don't know the answer you can leave it blank and NPM will set the default
 
 Alternatively, if you don't want to go through the setup process, you can manually create the `package.json` file, but you have to at least include a blank JSON object:
 
-package.json {.filename}
+`package.json` {.filename}
 
 ```json
 {}
@@ -64,7 +64,7 @@ You can install these with a single command:
 
 If your `package.json` file was setup properly, you should now see those dependencies with the appropriate version notation.
 
-package.json {.filename}
+`package.json` {.filename}
 
 ```js
 {
@@ -83,7 +83,7 @@ package.json {.filename}
 
 Running `npm install` not only saved your dependencies config to `package.json`, it also installed your dependencies along with all your dependencies' dependencies into a `node_modules` directory. You'll want to save yourself a massive headache later and ignore that directory from Git if you haven't done so already.
 
-.gitignore {.filename}
+`.gitignore` {.filename}
 
 ```shell
 # ...
@@ -101,7 +101,7 @@ These are simply choices made for these examples. You're welcome to change any v
 
 With that said, let's create two components -- Foo and Bar. We will continue to work with these components throughout all five parts in this series.
 
-src/components/foo.js {.filename}
+`src/components/foo.js` {.filename}
 
 ```js
 class Foo {
@@ -111,7 +111,7 @@ class Foo {
 }
 ```
 
-src/components/bar.js {.filename}
+`src/components/bar.js` {.filename}
 
 ```js
 class Bar {
@@ -127,7 +127,7 @@ Notice these are both ES6 classes and each have a single (but different) instanc
 
 Next, let's create the Gulpfile (`gulpfile.js`). This is our configuration for our build. It is annotated with comments so you can follow what's going on.
 
-gulpfile.js {.filename}
+`gulpfile.js` {.filename}
 
 ```js
 // Import `src` and `dest` from gulp for use in the task.
@@ -177,7 +177,7 @@ But I don't like calling `gulp` directly on the command line because you will in
 
 Therefore, I prefer to use the context of the project by adding a script to `package.json`:
 
-package.json {.filename}
+`package.json` {.filename}
 
 ```js
 {
@@ -200,7 +200,7 @@ After a successful build, you will see a file in the `dist` for each component. 
 
 For example, you could drop an `index.html` file in the `dist` directory and point it to both components.
 
-dist/index.html {.filename}
+`dist/index.html` {.filename}
 
 ```html
 <script src="foo.js"></script>

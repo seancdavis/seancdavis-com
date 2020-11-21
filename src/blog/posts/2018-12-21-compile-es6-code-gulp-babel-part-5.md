@@ -28,7 +28,7 @@ To update the Gulpfile, we're going to do only two things:
 
 This is just one new line and one edited line in an otherwise long Gulpfile. Nevertheless, here's the thing in its entirety with comments where the two new lines are:
 
-gulpfile.js {.filename}
+`gulpfile.js` {.filename}
 
 ```js
 const { parallel, series, src, dest } = require("gulp")

@@ -38,7 +38,7 @@ Note that this will only work if you have a `package.json` file. If you don’t 
 
 Next, if you don’t already have a `netlify.toml` file at the root of your project, create it. Then add these two lines to the file:
 
-netlify.toml {.filename}
+`netlify.toml` {.filename}
 
 ```toml
 [build]
@@ -53,7 +53,7 @@ Also note that what this is saying is that your functions will be built to the `
 
 Next, let’s add a basic function. I like keeping the functions all together, so I typically add them to the `functions/src` directory.
 
-functions/src/hello.js {.filename}
+`functions/src/hello.js` {.filename}
 
 ```js
 exports.handler = function (event, context, callback) {
@@ -70,7 +70,7 @@ The `netlify-lambda` library provides us a means to run the function on a dev se
 
 I like to abstract the command a bit so I don’t have to remember as much. To do that, add a `scripts` section to your `package.json` file with the appropriate command, like so:
 
-package.json {.filename}
+`package.json` {.filename}
 
 ```json
 {
