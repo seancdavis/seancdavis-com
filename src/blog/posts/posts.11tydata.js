@@ -1,5 +1,5 @@
 module.exports = {
-  permalink: "blog/{{ title | slug }}/index.html",
+  permalink: "blog/{{ page.fileSlug }}/index.html",
   layout: "post",
   tags: ["Post"],
   eleventyComputed: {}
