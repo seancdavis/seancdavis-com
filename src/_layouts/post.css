@@ -99,19 +99,23 @@
   }
 
   .filename {
-    @apply mb-0
+    @apply font-mono
+      mb-0
       mt-8
+      px-4
+      py-2
       rounded-none
-      text-right;
+      text-right
+      text-sm
+      text-white;
 
     background-color: var(--color-code-block-bg);
 
     > code {
       @apply bg-transparent
         block
-        px-4
         opacity-50
-        py-2
+        p-0
         text-sm
         text-white;
     }
