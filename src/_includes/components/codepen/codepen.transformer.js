@@ -1,4 +1,4 @@
-module.exports = ({ height = "310", ...props }) => {
+module.exports = ({ height = "500", ...props }) => {
   return {
     ...props,
     height

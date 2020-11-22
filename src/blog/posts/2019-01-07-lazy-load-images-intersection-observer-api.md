@@ -50,7 +50,7 @@ img {
 
 This is the result:
 
-{% codepen user="seancdavis", id="yLJdPJx", title="Pixelated Placeholder Images", height="500" %}
+{% codepen user="seancdavis", id="yLJdPJx", title="Pixelated Placeholder Images" %}
 
 This is not an ideal way to load images on a page because we're loading all the images when the page loads, including some that users may never see unless they scroll. This slows down the load time for the page, ultimately resulting in a longer duration before users can interact with the page's content.
 
@@ -82,7 +82,7 @@ Note that the key to the placeholder trick is being able to set the image width 
 
 This is what we get with only placeholder images (without the necessary JavaScript):
 
-{% codepen user="seancdavis", id="rNLEYMR", title="Pixelated Placeholder Images", height="500" %}
+{% codepen user="seancdavis", id="rNLEYMR", title="Pixelated Placeholder Images" %}
 
 ## Lazy Loader
 
@@ -150,7 +150,7 @@ Note that the Intersection Observer API is not supported by Internet Explorer. I
 
 When we put it all together, this is what we get:
 
-{% codepen user="seancdavis", id="JjKQORP", title="Pixelated Placeholder Images", height="500" %}
+{% codepen user="seancdavis", id="JjKQORP", title="Pixelated Placeholder Images" %}
 
 ## Ways To Improve
 

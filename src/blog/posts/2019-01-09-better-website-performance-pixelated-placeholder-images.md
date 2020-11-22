@@ -59,7 +59,7 @@ img {
 
 At this point the page will look something like this:
 
-{% codepen user="seancdavis", id="oNLroxX", title="Pixelated Placeholder Images", height="500" %}
+{% codepen user="seancdavis", id="oNLroxX", title="Pixelated Placeholder Images" %}
 
 Notice this is a grid of `10px` wide images, but they are stretched to fill their container in the four-column grid.
 
@@ -157,7 +157,7 @@ Notice that there are three different classes used throughout the script. This i
 
 And this is the result:
 
-{% codepen user="seancdavis", id="QWEXqoq", title="Pixelated Placeholder Images", height="500" %}
+{% codepen user="seancdavis", id="QWEXqoq", title="Pixelated Placeholder Images" %}
 
 ## Next Steps
 
