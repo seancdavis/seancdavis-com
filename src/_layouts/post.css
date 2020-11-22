@@ -2,7 +2,8 @@
   > *:not(pre):not(blockquote):not(.cp_embed_wrapper):not(.filename):not(.override-body-constraint) {
     @apply block
       max-w-2xl
-      mx-4;
+      mx-4
+      w-full;
   }
 
   h1,
