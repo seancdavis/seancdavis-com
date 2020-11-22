@@ -33,7 +33,7 @@ To open the session, run the command. You can do this from any directory and the
 
 Your prompt will change and you can author ruby directly:
 
-```text
+```
 irb(main):001:0> puts 'Hello World'
 Hello World
 => nil
