@@ -46,6 +46,11 @@
     }
   }
 
+  code {
+    @apply break-all
+      inline;
+  }
+
   /* --- Lists --- */
 
   ul,
