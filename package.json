@@ -42,6 +42,6 @@
     "develop:html": "eleventy --serve --port 8000",
     "develop:js": "webpack",
     "start": "develop",
-    "test": "jest"
+    "test": "ELEVENTY_ENV=test jest"
   }
 }
