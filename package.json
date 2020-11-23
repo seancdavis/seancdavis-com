@@ -34,7 +34,7 @@
   "scripts": {
     "build": "npm-run-all clean build:css build:html build:js",
     "build:css": "postcss src/_includes/css/index.css -o src/css/styles.css",
-    "build:html": "eleventy",
+    "build:html": "eleventy --quiet",
     "build:js": "webpack",
     "clean": "rm -rf dist",
     "develop": "npm-run-all --parallel develop:css develop:html develop:js",
