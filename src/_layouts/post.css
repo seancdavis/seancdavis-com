@@ -99,10 +99,13 @@
       line-height: 1.666;
     }
 
+    /* This is a class used by Prism and Tailwind. This overrides the Tailwind
+    defaults. */
     .table {
       @apply inline-block;
     }
 
+    /* Successive code blocks that include filenames are pushed together. */
     & + .filename {
       margin-top: -2rem;
     }
