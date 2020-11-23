@@ -5,11 +5,11 @@ tags:
   - ruby
 ---
 
-Our goal here is going to be to grab a web page and parse its [HTML](/wtf-is-html) code, in preparation for doing _something_ with it.
+Our goal here is going to be to grab a web page and parse its [HTML](/blog/wtf-is-html/) code, in preparation for doing _something_ with it.
 
 Before we get started, I want you to know that this can be re-interpreted in many ways. I am going to create an overly-simple, but real example so we can see it work. This example is _to pull a list of the top trending articles from Google and output their title._
 
-But, even though I'm using an example to demonstrate, you should know that there are many other options. For example, you could use it in [a rake task](https://github.com/ruby/rake). Or you could [write a command-line script](/command-line-scripts-using-ruby.html). Or, you may want to pull news articles from several different place. (I'll likely have a few other posts that take the basics of this and apply it to other real-world scenarios.)
+But, even though I'm using an example to demonstrate, you should know that there are many other options. For example, you could use it in [a rake task](https://github.com/ruby/rake). Or you could [write a command-line script](/blog/command-line-scripts-using-ruby/). Or, you may want to pull news articles from several different place. (I'll likely have a few other posts that take the basics of this and apply it to other real-world scenarios.)
 
 In any case, the world is your oyster! This is just a starting point.
 
@@ -116,7 +116,7 @@ _Note: The reason I can do `.each` on the result of the `css` method is because 
 
 ## 04: Wrapping Up
 
-It's pretty awesome how easy Nokogiri makes all of this. You can see the key is using HTML and [CSS](/wtf-is-css) selectors to pinpoint the collection of nodes/elements you want to work with.
+It's pretty awesome how easy Nokogiri makes all of this. You can see the key is using HTML and [CSS](/blog/wtf-is-css/) selectors to pinpoint the collection of nodes/elements you want to work with.
 
 You probably also noticed that with each time we changed our code, it took a little bit longer. That's because parsing HTML is complex and cumbersome. That will make scaling with this type of method pretty difficult.
 

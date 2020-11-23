@@ -1,5 +1,5 @@
 ---
 title: Big Oops
 pagination:
-  data: collections.big_oops
+  data: collections.big-oops
 ---

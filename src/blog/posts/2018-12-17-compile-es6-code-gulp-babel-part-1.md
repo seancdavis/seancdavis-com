@@ -94,7 +94,7 @@ node_modules
 
 For our examples throughout this series, we're going to follow a couple conventions:
 
-1. [Component-Driven JavaScript](/component-based-js-architecture.html), which means we're going to write an individual JavaScript file for each component. The examples will show dummy code, but the structure will demonstrate a focus on components.
+1. [Component-Driven JavaScript](/blog/component-based-js-architecture/), which means we're going to write an individual JavaScript file for each component. The examples will show dummy code, but the structure will demonstrate a focus on components.
 2. All JavaScript source files are going to go into a `src` directory and build files will be placed in a `dist` directory.
 
 These are simply choices made for these examples. You're welcome to change any values you see throughout the series to suit your project.
@@ -196,7 +196,7 @@ And this will run `gulp`, but it does so within the current context (our project
 
 ## Step 7: Test It
 
-After a successful build, you will see a file in the `dist` for each component. Feel free to take these files, plug them into an [HTML](/wtf-is-html) file and then work with them.
+After a successful build, you will see a file in the `dist` for each component. Feel free to take these files, plug them into an [HTML](/blog/wtf-is-html/) file and then work with them.
 
 For example, you could drop an `index.html` file in the `dist` directory and point it to both components.
 
@@ -219,12 +219,12 @@ bar.print("Hello World") // Prints "Hello World" to the DOM.
 
 ---
 
-That's it for Part 1! But there's plenty more to do with Gulp and Babel, so please continue through the series. The next articles is on [concatenating your components into a single file](/compile-es6-code-gulp-babel-part-2.html).
+That's it for Part 1! But there's plenty more to do with Gulp and Babel, so please continue through the series. The next articles is on [concatenating your components into a single file](/blog/compile-es6-code-gulp-babel-part-2/).
 
 Or you can jump around throughout the series:
 
 1. **Part 1: Setup & Simple Implementation**
-2. [Part 2: Concatenated Bundle](/compile-es6-code-gulp-babel-part-2.html)
-3. [Part 3: Dynamic Manifest](/compile-es6-code-gulp-babel-part-3.html)
-4. [Part 4: Clean Files & Minify Output](/compile-es6-code-gulp-babel-part-4.html)
-5. [Part 5: Asset Hashing](/compile-es6-code-gulp-babel-part-5.html)
+2. [Part 2: Concatenated Bundle](/blog/compile-es6-code-gulp-babel-part-2/)
+3. [Part 3: Dynamic Manifest](/blog/compile-es6-code-gulp-babel-part-3/)
+4. [Part 4: Clean Files & Minify Output](/blog/compile-es6-code-gulp-babel-part-4/)
+5. [Part 5: Asset Hashing](/blog/compile-es6-code-gulp-babel-part-5/)

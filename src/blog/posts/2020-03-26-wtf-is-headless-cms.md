@@ -48,9 +48,9 @@ For more than a decade, most CMS products worked like WordPress.
 
 ## Rise of the Jamstack
 
-Eventually we started to see a rise in a different approach to building websites — [the Jamstack](/wtf-is-jamstack). The Jamstack's primary focus is in _decoupling_ (or _detaching_) front-ends from back-ends.
+Eventually we started to see a rise in a different approach to building websites — [the Jamstack](/blog/wtf-is-jamstack/). The Jamstack's primary focus is in _decoupling_ (or _detaching_) front-ends from back-ends.
 
-The Jamstack quickly gained popularity, as it offered an array of benefits to those building and maintaining websites, including cost, security, performance, scale, and developer experience. ([Read more on the subject here](/wtf-is-jamstack).)
+The Jamstack quickly gained popularity, as it offered an array of benefits to those building and maintaining websites, including cost, security, performance, scale, and developer experience. ([Read more on the subject here](/blog/wtf-is-jamstack/).)
 
 While not a requirement, the headless CMS is a core tenet of many Jamstack websites. Therefore, as the Jamstack methodology took hold, so too did the headless CMS approach. And that's likely why you're here.
 
@@ -90,7 +90,7 @@ I know, I'm selling this hard. I'm totally in love with the headless CMS approac
 I find the headless CMS approach to have three challenges:
 
 - **Complexity:** As mentioned above, flexibility is powerful, but it leads to makes them more complex to work with.
-- **Code Required:** Anyone can learn how to use WordPress, Squarespace, Wix, etc. to spin up a website within a few hours for a few dollars. While a Jamstack site can be created at no cost, it requires some knowledge of code (_at least_ [HTML](/wtf-is-html) and CSS) to create a site.
+- **Code Required:** Anyone can learn how to use WordPress, Squarespace, Wix, etc. to spin up a website within a few hours for a few dollars. While a Jamstack site can be created at no cost, it requires some knowledge of code (_at least_ [HTML](/blog/wtf-is-html/) and CSS/) to create a site.
 - **Cost:** API-driven products tend to get pricey really fast. And those pricing models tend to be more about the amount of content and not the traffic on the front-end. Because of that, it can be tough to know how much a headless CMS is going to cost until getting a feel for how the content is architected, which _could_ vary depending on the chosen product.
 
 ---

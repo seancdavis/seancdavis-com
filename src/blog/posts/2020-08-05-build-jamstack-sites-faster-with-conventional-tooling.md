@@ -6,7 +6,7 @@ tags:
 image: /blog/200805/jamstack-project-without-convention.jpg
 ---
 
-While these days I mostly work with the [Jamstack](/wtf-is-jamstack) when building products for the web, I came from building _everything_ with [Ruby on Rails](https://rubyonrails.org/).
+While these days I mostly work with the [Jamstack](/blog/wtf-is-jamstack/) when building products for the web, I came from building _everything_ with [Ruby on Rails](https://rubyonrails.org/).
 
 By the time I began working with Rails, the community had formed and followed a [seasoned doctrine](https://rubyonrails.org/doctrine), a manifesto of sorts. One of the many pillars of this doctrine was (and is still today) [_convention over configuration_](https://rubyonrails.org/doctrine/#convention-over-configuration).
 
@@ -32,7 +32,7 @@ In other words, developers can ultimately move more efficiently if they can foll
 
 As developers of Jamstack projects, we're faced with building most of those conventions ourselves. And they begin before the first line of code.
 
-_What tools will you use to build and power your site?_ Will it be [Gatsby](https://www.gatsbyjs.org/) as the [static site](/why-build-static-sites) generator, [Contentful](https://www.contentful.com/) as the content management system, and [Netlify](https://www.netlify.com/) as the build tooling and host? Or maybe you prefer something more like [Eleventy](https://www.11ty.dev/) (SSG), [Forestry](https://www.forestry.io/) (CMS), and [Vercel](https://vercel.com/) (build/host)? Those are just two examples that don't have any overlap in tooling. And they're two of _hundreds_ of combinations you could create.
+_What tools will you use to build and power your site?_ Will it be [Gatsby](https://www.gatsbyjs.org/) as the [static site](/blog/why-build-static-sites/) generator, [Contentful](https://www.contentful.com/) as the content management system, and [Netlify](https://www.netlify.com/) as the build tooling and host? Or maybe you prefer something more like [Eleventy](https://www.11ty.dev/) (SSG/), [Forestry](https://www.forestry.io/) (CMS/), and [Vercel](https://vercel.com/) (build/host/)? Those are just two examples that don't have any overlap in tooling. And they're two of _hundreds_ of combinations you could create.
 
 Perhaps the best and worst part of the Jamstack is that none of those decisions are inherently wrong.
 

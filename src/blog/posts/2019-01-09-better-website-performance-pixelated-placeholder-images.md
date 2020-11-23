@@ -15,7 +15,7 @@ Let's look at how you can build a similar type of feature on your website to hel
 
 ## Setup
 
-For the [HTML](/wtf-is-html) markup, let's build a grid of images inside a container. For these images, the `src` attribute should be set to the pixelated placeholder and the full-size image URL will be set as the `data-src` attribute.
+For the [HTML](/blog/wtf-is-html/) markup, let's build a grid of images inside a container. For these images, the `src` attribute should be set to the pixelated placeholder and the full-size image URL will be set as the `data-src` attribute.
 
 ```html
 <div class="container">
@@ -136,7 +136,7 @@ When the page loads, the script loops through every image on the page and instan
 3. Once the full-size image is loaded, fade _out_ the pixelated placeholder, giving the illusion that the full-size image is fading _in_.
 4. Remove the pixelated placeholder and the `<span>` wrapper, then apply the original classes from the placeholder image to the new full-size image.
 
-Notice that there are three different classes used throughout the script. This is to control the temporary styling with [CSS](/wtf-is-css) during the loading process. For this to look right, a bit more CSS is required:
+Notice that there are three different classes used throughout the script. This is to control the temporary styling with [CSS](/blog/wtf-is-css/) during the loading process. For this to look right, a bit more CSS is required:
 
 ```css
 .placeholder-wrapper {
@@ -191,7 +191,7 @@ Notice that this approach is built specifically for `<img>` elements and does no
 
 ### Lazy Loading
 
-This approach is just one step in increasing pages slowed down by image loading. It's still true you may spend resources loading images your users never see. That's where lazy loading comes into play. I [have an article on just that subject](/lazy-load-images-intersection-observer-api.html) that may help you get started with incorporating lazy loading into this feature.
+This approach is just one step in increasing pages slowed down by image loading. It's still true you may spend resources loading images your users never see. That's where lazy loading comes into play. I [have an article on just that subject](/blog/lazy-load-images-intersection-observer-api/) that may help you get started with incorporating lazy loading into this feature.
 
 ### Use an Image Processing Library
 
@@ -213,7 +213,7 @@ Alternatively, if using imgix, they have [an imgix.js script](https://ericportis
 
 With the use of a JavaScript class, this script will not work in older browsers. If you are required to support older browsers, consider creating a build pipeline that makes use of [Babel.js](https://babeljs.io/) to support older browsers. Or rewrite the script to be more functional.
 
-If you want to take a look at Babel, I [have a five-part series on compiling ES6 (new JS) code with Gulp and Babel](/compile-es6-code-gulp-babel-part-1.html).
+If you want to take a look at Babel, I [have a five-part series on compiling ES6 (new JS) code with Gulp and Babel](/blog/compile-es6-code-gulp-babel-part-1/).
 
 ---
 

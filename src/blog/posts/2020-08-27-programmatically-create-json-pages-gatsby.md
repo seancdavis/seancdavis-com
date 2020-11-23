@@ -7,9 +7,9 @@ tags:
 image: /blog/200827/meta--gatsby-dynamic-json-pages.jpg
 ---
 
-As I've been exploring [static APIs](/lets-talk-about-static-apis) over the past few months, I've been adding tutorials to [an introductory example](/how-to-build-static-api) using various tools and frameworks.
+As I've been exploring [static APIs](/blog/lets-talk-about-static-apis/) over the past few months, I've been adding tutorials to [an introductory example](/blog/how-to-build-static-api/) using various tools and frameworks.
 
-As I look to add [Gatsby](https://www.gatsbyjs.org/) to that list, I wondered ... _How could I programmatically generate JSON pages from a data source with Gatsby?_ It doesn't seem straightforward out of the box because Gatsby is essentially a React app with pre-rendering. It's built to output [HTML](/wtf-is-html), [CSS](/wtf-is-css), and [JavaScript](/wtf-is-javascript) files.
+As I look to add [Gatsby](https://www.gatsbyjs.org/) to that list, I wondered ... _How could I programmatically generate JSON pages from a data source with Gatsby?_ It doesn't seem straightforward out of the box because Gatsby is essentially a React app with pre-rendering. It's built to output [HTML](/blog/wtf-is-html/), [CSS](/blog/wtf-is-css/), and [JavaScript](/blog/wtf-is-javascript/) files.
 
 So I went looking for an answer and found [this](https://spectrum.chat/gatsby-js/general/generating-json-file-with-gatsby~c539d9a7-970c-4a52-ac79-18a51f254537) from Gatsby's creator, [Kyle Mathews](https://twitter.com/kylemathews):
 

@@ -6,11 +6,11 @@ tags:
   - netlify
 ---
 
-This is a quick look at how to build, deploy, and query a [static API](/lets-talk-about-static-apis). We're going to assume that you are manually writing each JSON file for your output. In other words, there is no [static site generator](https://www.staticgen.com/) or build process involved in creating the files that will be deployed. (I know, I know, how _archaic_.)
+This is a quick look at how to build, deploy, and query a [static API](/blog/lets-talk-about-static-apis/). We're going to assume that you are manually writing each JSON file for your output. In other words, there is no [static site generator](https://www.staticgen.com/) or build process involved in creating the files that will be deployed. (I know, I know, how _archaic_.)
 
 When we have those files, we'll upload them to a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) using [Netlify](https://netlify.com/).
 
-The examples here come from commentary in my article on [how to build static APIs](/how-to-build-static-api). It's worth a skim if you want a bit of background, but all the relevant code is included in this tutorial. And if you would like further explanation on what static APIs are, you can reference [the introductory article](/lets-talk-about-static-apis).
+The examples here come from commentary in my article on [how to build static APIs](/blog/how-to-build-static-api/). It's worth a skim if you want a bit of background, but all the relevant code is included in this tutorial. And if you would like further explanation on what static APIs are, you can reference [the introductory article](/blog/lets-talk-about-static-apis/).
 
 _Before we begin, note that I am not going to cover the basics of [Git](https://git-scm.com/) in this tutorial. But a basic knowledge of Git is required for working with Netlify._
 
@@ -29,7 +29,7 @@ And now we're good to go. We don't need a `package.json` or any similar sort of 
 
 ## Step 2: Add API Files
 
-Now it's time to add those files. We'll continue [the example from the introduction](/how-to-build-static-api), which means there are four files to create following this structure:
+Now it's time to add those files. We'll continue [the example from the introduction](/blog/how-to-build-static-api/), which means there are four files to create following this structure:
 
 ```
 public/
@@ -189,7 +189,7 @@ _That did the trick — hooray!_
 
 The last step is purely optional. I don't have any problem with the home page throwing a 404 error because there is no page there. But in this case our API is so simple that we might as well redirect the home page to the `/earworms.json` page.
 
-Typically I'd add a `_redirects` file to the `public` directory, because I find that easier to work with. But I was using this repo for [my ZEIT tutorial](/deploy-static-api-zeit) as well, and so I didn't want to clutter the output.
+Typically I'd add a `_redirects` file to the `public` directory, because I find that easier to work with. But I was using this repo for [my ZEIT tutorial](/blog/deploy-static-api-zeit/) as well, and so I didn't want to clutter the output.
 
 Therefore, I'm going to put the redirect in a `netlify.toml` file, which produces the same result, just not as cleanly.
 
@@ -211,4 +211,4 @@ Once that change is deployed, go back to your home page and you should be redire
 
 ---
 
-This was a super simple example on how to deploy a static JSON API with Netlify. You can head back to [the intro](/how-to-build-static-api#tutorials) to check out specific tutorials on building static APIs from data files using various static site generators.
+This was a super simple example on how to deploy a static JSON API with Netlify. You can head back to [the intro](/blog/how-to-build-static-api#tutorials/) to check out specific tutorials on building static APIs from data files using various static site generators.

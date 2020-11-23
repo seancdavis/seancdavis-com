@@ -48,4 +48,4 @@ And when you have a solid system for storing sensitive data, you don't have to w
 
 ---
 
-So, don't be afraid! Once you get your head wrapped around how to manage environment variables, they will become one of your closest friends. And, if you want a little help working with and managing environment variables, check out [the tool I like to use](/favorite-tool-managing-project-specific-environment-variables.html).
+So, don't be afraid! Once you get your head wrapped around how to manage environment variables, they will become one of your closest friends. And, if you want a little help working with and managing environment variables, check out [the tool I like to use](/blog/favorite-tool-managing-project-specific-environment-variables/).

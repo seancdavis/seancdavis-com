@@ -38,7 +38,7 @@ Elsewhere in the industry, [Gatsby announced their Recipes Alpha 2](https://www.
 
 It's been an interesting start to supplementing tutorial articles with screencast videos. It's a long process, but I've enjoyed it so far and look forward to adding more over the coming months. I added a couple last month in an article on [programmatically creating JSON pages with GatsbyJS](https://cobwwweb.com/programmatically-create-json-pages-gatsby).
 
-I also added a few foundational articles to the [WTF collection](https://cobwwweb.com/tags/wtf):
+I also added a few foundational articles to the [WTF collection](https://cobwwweb.com/tag/wtf):
 
 - [WTF is Hoisting?](https://cobwwweb.com/wtf-is-hoisting)
 - [WTF is a Closure?](https://cobwwweb.com/wtf-is-a-closure)

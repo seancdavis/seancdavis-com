@@ -10,9 +10,9 @@ tags:
   - netlify
 ---
 
-A few years into my development career, a local non-profit approached me about building them a mobile application. I took the project on ([with an unconventional approach to pricing](/alternative-approach-to-limited-budget-projects)), and spent the next few months building a [hybrid applications](https://getgist.com/difference-between-native-vs-web-vs-hybrid-apps/). I chose to use the first version of [Ionic](https://ionicframework.com/), which was built exclusively on [AngularJS](https://angularjs.org/).
+A few years into my development career, a local non-profit approached me about building them a mobile application. I took the project on ([with an unconventional approach to pricing](/blog/alternative-approach-to-limited-budget-projects/)), and spent the next few months building a [hybrid applications](https://getgist.com/difference-between-native-vs-web-vs-hybrid-apps/). I chose to use the first version of [Ionic](https://ionicframework.com/), which was built exclusively on [AngularJS](https://angularjs.org/).
 
-The application used data retrieved from an open-source [headless CMS](/wtf-is-headless-cms) that I created. It was my fourth version of my homegrown CMS, and I was excited to introduce a client to the product. (Some free sidebar advice: [_Build your own CMS. But also, don't._](https://cobwwweb.com/build-cms-dont-build-cms.html).) The app took the data from the CMS, via its API, transformed it, then rendered it in the app so local community members could consume.
+The application used data retrieved from an open-source [headless CMS](/blog/wtf-is-headless-cms/) that I created. It was my fourth version of my homegrown CMS, and I was excited to introduce a client to the product. (Some free sidebar advice: [_Build your own CMS. But also, don't._](https://cobwwweb.com/build-cms-dont-build-cms/).) The app took the data from the CMS, via its API, transformed it, then rendered it in the app so local community members could consume.
 
 That project had gone so well that it led to another, similar project for that same client. The second project was in support of a biennial event the organization planned to hold. It was to be a single-day event in which volunteers would check-in registered attendees at multiple sites. The attendees would explore these sites, using the app along the way. Therefore, the app needed to include registration, check-in (with auth for volunteers), along with a handful of similar features from the original application.
 
@@ -22,7 +22,7 @@ Well, the event happened. It was a huge success in terms of the number of attend
 
 Two years later that event was to take place once again. Needless to say, the primary concern was addressing the performance issues of the first event. And this time, the org was expecting additional scale, up to 1,000% of the first year.
 
-By the time planning for the second event commenced, I had been working with the headless CMS approach for years, and I was building most of my front-end sites and applications using [the Jamstack](/wtf-is-jamstack).
+By the time planning for the second event commenced, I had been working with the headless CMS approach for years, and I was building most of my front-end sites and applications using [the Jamstack](/blog/wtf-is-jamstack/).
 
 Knowing I needed to deliver the same features from the first version (registration, check-in, content), while being sensitive to performance at scale, I worked with the client to make three major changes. Together, these changes _drastically_ improved the performance of the application, and scaling wasn't an issue.
 
@@ -60,7 +60,7 @@ Instead, I came up with a different idea: I could build an API in between the cu
 
 This was beneficial because it effectively future-proofed the application. It changed the data source URL to one that we owned that was specific to the application. Therefore, _if_ we did want to swap out the underlying data layer in the future, we could, and we wouldn't have to push an update to the application.
 
-The trick was that the data layer would have to be suuuuper speedy because it was going to get absolutely pounded for a few hours. After a lot of research on hosted GraphQL solutions and caching mechanisms, I had a thought — _what if I hosted a [**static API**](/lets-talk-about-static-apis) on Netlify?_
+The trick was that the data layer would have to be suuuuper speedy because it was going to get absolutely pounded for a few hours. After a lot of research on hosted GraphQL solutions and caching mechanisms, I had a thought — _what if I hosted a [**static API**](/blog/lets-talk-about-static-apis/) on Netlify?_
 
 So that's exactly what I did. I spun up a Middleman site (literally, using the [_Middleman_ framework](https://middlemanapp.com/)). I know, Middleman isn't the cool kid in town, and I was already using Gatsby, but a) I was familiar with Middleman, b) Middleman makes it easy to build simple JSON pages, and c) so does [Jekyll](https://jekyllrb.com/), but I was having a power struggle with Jekyll in those days.
 

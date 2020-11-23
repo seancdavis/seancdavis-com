@@ -17,7 +17,7 @@ GitHub is a great community for open source projects, but it can get pricey if y
 
 ## Free Alternatives
 
-If your code needs to be private, there are plenty of free alternatives to GitHub. I mentioned a couple in [this article](/free-alternatives-to-github-for-private-git-hosting.html).
+If your code needs to be private, there are plenty of free alternatives to GitHub. I mentioned a couple in [this article](/blog/free-alternatives-to-github-for-private-git-hosting/).
 
 ## Backup Your Code and Work Cross-Platform
 

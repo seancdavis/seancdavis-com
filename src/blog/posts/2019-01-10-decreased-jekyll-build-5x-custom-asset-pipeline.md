@@ -12,7 +12,7 @@ tags:
 
 _The background to this story:_
 
-My team and I were asked to use Jekyll on a handful of new projects that would transition one of our clients from an Angular application to [the Jamstack](/wtf-is-jamstack.html). One of these projects has _hundreds_ of pages, while another has _thousands_. While we overcame several build performance hurdles during the process, perhaps none were more significant than the issue with faced in building our front-end assets. So let's talk about that, shall we?
+My team and I were asked to use Jekyll on a handful of new projects that would transition one of our clients from an Angular application to [the Jamstack](/blog/wtf-is-jamstack/). One of these projects has _hundreds_ of pages, while another has _thousands_. While we overcame several build performance hurdles during the process, perhaps none were more significant than the issue with faced in building our front-end assets. So let's talk about that, shall we?
 
 ## Jekyll Out-of-the-Box
 
@@ -54,7 +54,7 @@ So we set out to build a custom asset pipeline for these Jekyll projects. And si
 - Support ES6 code.
 - Concatenate multiple JS files into individual bundles based on a separate configuration file.
 - Minify JS bundle(s).
-- Compile Sass (SCSS) to [CSS](/wtf-is-css) code, with support for [node-sass-tilde-importer](https://www.npmjs.com/package/node-sass-tilde-importer).
+- Compile Sass (SCSS) to [CSS](/blog/wtf-is-css/) code, with support for [node-sass-tilde-importer](https://www.npmjs.com/package/node-sass-tilde-importer/).
 - Add cache digests to help with cache invalidation.
 - Provide a means to build `<script>` and `<link>` tags in liquid templates.
 
@@ -62,7 +62,7 @@ So we set out to build a custom asset pipeline for these Jekyll projects. And si
 
 We ended up [creating a new Ruby gem](https://github.com/crdschurch/jekyll-asset-pipeline) with these three features:
 
-1. **The build tool:** Built upon [my five-part series on compiling ES6 code with Gulp and Babel](/compile-es6-code-gulp-babel-part-1.html), the build tool can be run on its own via a `package.json` script. But it needs some help to hook into the Jekyll build process.
+1. **The build tool:** Built upon [my five-part series on compiling ES6 code with Gulp and Babel](/blog/compile-es6-code-gulp-babel-part-1/), the build tool can be run on its own via a `package.json` script. But it needs some help to hook into the Jekyll build process.
 2. **Jekyll hooks:** A series of hooks that are responsible for figuring out whether or not to run the build and, if it should run the build, play the role of triggering the build process. It only runs the build if told to do so, or if the built files are missing or out of date. The hooks are also responsible for passing along the appropriate cache digest to the ...
 3. **Jekyll tags:** A couple plugins that output `<script>` and `<link>` tags for our liquid templates. This must receive the cache digest from the hooks to ensure the filenames are correct.
 

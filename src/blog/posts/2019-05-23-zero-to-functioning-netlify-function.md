@@ -115,7 +115,7 @@ Your function is now available at `/.netlify/functions/hello` within your site. 
 
 For me, using the example from the image above, that means I’d change my URL in Insomnia (or Postman) to `http://scd-netlify-functions-test.netlify.com/.netlify/functions/hello`, but your URL will be different.
 
-## [4] Debugging Practical Use Cases
+## [4] Debugging Practical Use Cases {id="debugging-practical-use-cases"}
 
 That’s great, right! It didn’t take that long to get up and running with this function. And now you can do essentially anything you want because you have an endpoint in your site that will run a node process whenever you hit it.
 

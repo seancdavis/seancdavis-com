@@ -10,7 +10,7 @@ Form Handling is an extremely powerful component within [Netlify’s](https://ww
 
 It’s like [Formspree](https://formspree.io/) or [FormKeep](https://formkeep.com/), but I prefer Netlify's forms feature because it _just works_. There's no signing up for a third-party service. You just add a little markup to your site and — _Voila!_ — you have a form that sends its submissions to Netlify, which then stores the form data on your behalf. An added benefit is that Netlify currently offers 100 submissions per month, sourced from an unlimited number of forms, free of charge. That’s a better free tier than either Formspree or FormKeep.
 
-If you are building a truly static site — where all the [HTML](/wtf-is-html) markup is contained within HTML files, rather than being generated dynamically by JavaScript (JS) — it really is _that easy_ to work with Netlify forms.
+If you are building a truly static site — where all the [HTML](/blog/wtf-is-html/) markup is contained within HTML files, rather than being generated dynamically by JavaScript (JS/) — it really is _that easy_ to work with Netlify forms.
 
 I recently went through the process of adding Netlify's form handling to a [Gatsby](https://www.gatsbyjs.org/) site, why was not _that easy_. Gatsby is a [static site generator](https://www.staticgen.com/) built on top of React. Thus, it's essentially a React app that has pre-cached the data it renders. In other words, Gatsby renders its HTML using JavaScript and, because it's not just a bunch of static HTML files, working with Netlify forms was a bit more complicated.
 

@@ -21,7 +21,7 @@ Everything is constantly changing, and web development is no different. Consider
 - [Vue](https://vuejs.org/)
 - [Webpack](https://webpack.js.org/)
 
-These tools make up _most_ of what I've used to build websites for my entire development career. The only predominant items missing from the list are foundational, like [HTML](/wtf-is-html) and [CSS](/wtf-is-css).
+These tools make up _most_ of what I've used to build websites for my entire development career. The only predominant items missing from the list are foundational, like [HTML](/blog/wtf-is-html/) and [CSS](/blog/wtf-is-css/).
 
 And who knows what this list will look like in another 15 years. In 2034, there will be a new (long) list of tools that we can't live without. And yet, right now, those tools don't even exist.
 
@@ -45,7 +45,7 @@ The ugly developer is at risk of using technology before its community of suppor
 
 The good developer accepts change. They understand change in the web development world is inevitable. They are willing to try something new in hopes that it could be better in some way, whether that's developer experience, speed to market, application performance, or any other among an array of improvements. The good developer is also willing to accept that learning is always valuable—that moving on to something new doesn't mean they've wasted time and effort. Education is all part of the process of becoming a better developer.
 
-The good developer [takes a balanced approach to new languages, tools, and frameworks](/taking-balanced-approach-to-new-technology.html). They know [which tool(s) to use for each project](/choose-the-right-tool-for-the-job.html). They are measured (eager, but patient) in discovering new tools, and understand when it's appropriate to use those tools in production.
+The good developer [takes a balanced approach to new languages, tools, and frameworks](/blog/taking-balanced-approach-to-new-technology/). They know [which tool(s/) to use for each project](/blog/choose-the-right-tool-for-the-job/). They are measured (eager, but patient/) in discovering new tools, and understand when it's appropriate to use those tools in production.
 
 On the flip side, the good developer understands when it's time to leave something behind. They understand technology grows stale and better approaches emerge. They see the value in their past education and will use what they've learned to learn the next thing faster.
 
@@ -55,6 +55,6 @@ I've spent much of my development career as The Bad and The Ugly. Especially whe
 
 It takes experience to become The Good, but it doesn't come naturally to everyone. It's acceptable to spend time as The Bad and The Ugly while getting ramped up in your development career. It makes sense, too—your code will be bad and ugly (just like mine) as you learn so many new things so quickly.
 
-But, eventually you will become The Good. Embrace that. Thank your past self for investing the time to learn [the tools you've put in your toolbox](/choose-the-right-tool-for-the-job.html). And take that education into the next thing you're going to learn. Know that in the developer life, you are always a student. The more you can learn, the better-equipped you'll be to make good decisions about what, when, and how to move on to new technology.
+But, eventually you will become The Good. Embrace that. Thank your past self for investing the time to learn [the tools you've put in your toolbox](/blog/choose-the-right-tool-for-the-job/). And take that education into the next thing you're going to learn. Know that in the developer life, you are always a student. The more you can learn, the better-equipped you'll be to make good decisions about what, when, and how to move on to new technology.
 
 You'll be a good developer.

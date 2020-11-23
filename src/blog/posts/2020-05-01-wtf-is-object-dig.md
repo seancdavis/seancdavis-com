@@ -49,7 +49,7 @@ This is nice for avoiding an error just because a property doesn't exist.
 
 ## I don't use object-dig today
 
-All this said, as much as I love it, I don't use this function much today. If it's the type of functionality I require when working with objects, then I may include it. But I often make use of additional features from [Lodash](/wtf-is-lodash).
+All this said, as much as I love it, I don't use this function much today. If it's the type of functionality I require when working with objects, then I may include it. But I often make use of additional features from [Lodash](/blog/wtf-is-lodash/).
 
 And Lodash has [a `get` method](https://lodash.com/docs#get) which provides similar functionality, so I tend to opt for that.
 

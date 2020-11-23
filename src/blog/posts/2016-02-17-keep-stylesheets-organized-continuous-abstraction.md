@@ -6,7 +6,7 @@ tags:
   - sass
 ---
 
-I've been writing a lot of [CSS](/wtf-is-css) (well, [SCSS](http://sass-lang.com/)) lately. One thing I've noticed is that as you get faster at writing CSS, stylesheets actually get messier faster.
+I've been writing a lot of [CSS](/blog/wtf-is-css/) (well, [SCSS](http://sass-lang.com/)) lately. One thing I've noticed is that as you get faster at writing CSS, stylesheets actually get messier faster.
 
 It requires discipline, backed by a solid system, to keep everything organized. And organized doesn't just mean _you_ know where it is. It means any of your peers can navigate the maze of code efficiently as long as they understand your approach.
 
@@ -46,7 +46,7 @@ Vendor files are anything you would _never write directly into_. [Normalize](htt
 
 #### Base
 
-The base directory is a new one I've adopted since integrating [Bitters](bitters.bourbon.io) into my projects. Here are all the base styles. It's essentially anything you want to add on top of Normalize that the rest of the app will inherit. Simple typography rules, Sass variables, generic mixins, all go in here.
+The base directory is a new one I've adopted since integrating [Bitters](https://github.com/thoughtbot/bitters) into my projects. Here are all the base styles. It's essentially anything you want to add on top of Normalize that the rest of the app will inherit. Simple typography rules, Sass variables, generic mixins, all go in here.
 
 #### Components
 

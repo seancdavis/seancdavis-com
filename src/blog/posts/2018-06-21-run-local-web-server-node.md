@@ -6,7 +6,7 @@ tags:
   - node
 ---
 
-This is a separate approach to [this article](/run-local-web-server-ruby.html), which shows how to run a local web server with a _ruby_ command.
+This is a separate approach to [this article](/blog/run-local-web-server-ruby/), which shows how to run a local web server with a _ruby_ command.
 
 First, install the command-line utility:
 

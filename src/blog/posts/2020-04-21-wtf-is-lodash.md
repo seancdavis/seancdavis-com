@@ -11,7 +11,7 @@ Both of these libraries use their moniker as a representation of the object that
 
 ## A Lodash Example
 
-Whenever I find myself [doing something stupid with JavaScript](/dont-do-stupid-shit-with-javascript), I usually take a step back and realize that someone has probably solved the problem I'm solving before, and there's a better way to do what I'm doing.
+Whenever I find myself [doing something stupid with JavaScript](/blog/dont-do-stupid-shit-with-javascript/), I usually take a step back and realize that someone has probably solved the problem I'm solving before, and there's a better way to do what I'm doing.
 
 When that involves manipulating an object, array, or string, Lodash often comes to my rescue. Let's look at a couple examples.
 

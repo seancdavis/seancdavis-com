@@ -9,7 +9,7 @@ I hear this classic phrase regularly:
 
 > CSS is hard.
 
-[CSS](/wtf-is-css) itself, though, is super simple at its core. It applies a given set of styles to a given set of elements following [a few simple rules of specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity). Take the following example:
+[CSS](/blog/wtf-is-css/) itself, though, is super simple at its core. It applies a given set of styles to a given set of elements following [a few simple rules of specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity/). Take the following example:
 
 ```css
 .element {

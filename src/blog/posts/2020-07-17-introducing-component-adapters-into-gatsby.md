@@ -8,11 +8,11 @@ tags:
 image: /blog/200717/gatsby-adapters--meta-crop.jpg
 ---
 
-Much of my focus on recent projects has been in organizing [components](/wtf-is-a-web-component) so my team can work efficiently. To aid in this effort, we've introduced the concept of [adapters to separate logic from presentation](/simplify-components-by-separating-logic-from-presentation-using-adapters).
+Much of my focus on recent projects has been in organizing [components](/blog/wtf-is-a-web-component/) so my team can work efficiently. To aid in this effort, we've introduced the concept of [adapters to separate logic from presentation](/blog/simplify-components-by-separating-logic-from-presentation-using-adapters/).
 
 This transition has enabled the front-end devs to work outside the context of the data source, helping them fly through creating and styling components. Then, later in a project, some weirdo like me — who actually enjoys working with the data — can wire up static components to the data source, effectively making them _dynamic_. By playing to our devs' strengths, we've been able to build better products faster.
 
-In the [more conceptual adapter article](/simplify-components-by-separating-logic-from-presentation-using-adapters) I used a generic example to emphasize my point. But, as I'm working mostly with [Gatsby](https://www.gatsbyjs.org/) these days, I wanted to share what this approach looks like within a Gatsby project. In these examples, we'll be working with a `<Calendar />` component.
+In the [more conceptual adapter article](/blog/simplify-components-by-separating-logic-from-presentation-using-adapters/) I used a generic example to emphasize my point. But, as I'm working mostly with [Gatsby](https://www.gatsbyjs.org/) these days, I wanted to share what this approach looks like within a Gatsby project. In these examples, we'll be working with a `<Calendar />` component.
 
 Ready? Me too. Let's go ...
 
@@ -22,7 +22,7 @@ The goal of our component is to retrieve all events from the data source, transf
 
 Early in a project, while the back-end devs are working on the data structure, we want the front-end devs to be able to begin building out the UI. To make this happen, we will create a system in which both back- and front-end devs can work efficiently without stepping on the other's toes.
 
-The first thing we're going to do is [group our component files together in a directory](/organize-components-by-keeping-related-files-close). Let's put them in `src/components/calendar`. The structure will look like this:
+The first thing we're going to do is [group our component files together in a directory](/blog/organize-components-by-keeping-related-files-close/). Let's put them in `src/components/calendar`. The structure will look like this:
 
 ```
 src/
@@ -38,8 +38,8 @@ If it seems like a lot, it is. We could put all the code we're going to work wit
 
 The approach I've taken to breaking up files in this way follows two primary paradigms:
 
-- [Single Responsibility Principle](/wtf-is-single-responsibility-principle): Every file has one primary purpose to serve.
-- [Convention over Configuration](/increase-developer-efficiency-by-establishing-conventions): When building project after project, it makes much more sense to create an efficient process that takes a little time to learn than it does to provide more flexibility.
+- [Single Responsibility Principle](/blog/wtf-is-single-responsibility-principle/): Every file has one primary purpose to serve.
+- [Convention over Configuration](/blog/increase-developer-efficiency-by-establishing-conventions/): When building project after project, it makes much more sense to create an efficient process that takes a little time to learn than it does to provide more flexibility.
 
 With that in mind, let's look at each of the files individually.
 
@@ -84,7 +84,7 @@ While this is just an example, what I'm demonstrating here is that we can config
 
 ## The Fixtures
 
-The [fixtures](/wtf-is-a-fixture) file contains static (or _fixed_) data. It's often used for testing purposes (and should be here, too), but we're going to use it for working quickly in development.
+The [fixtures](/blog/wtf-is-a-fixture/) file contains static (or _fixed_) data. It's often used for testing purposes (and should be here, too/), but we're going to use it for working quickly in development.
 
 Before we know what the data source is and can work dynamically, we want to be able to build this component. So we use static data.
 

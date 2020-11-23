@@ -8,7 +8,7 @@ tags:
 
 There are tons and tons of articles out there on closures. This is a brief explanation that ends with references to more in-depth explorations of the topic.
 
-At its core, a closure is a [JavaScript](/wtf-is-javascript) feature in which **a function accesses variables outside its interior scope**.
+At its core, a closure is a [JavaScript](/blog/wtf-is-javascript/) feature in which **a function accesses variables outside its interior scope**.
 
 Consider the following:
 
@@ -58,7 +58,7 @@ This gives us more freedom to be semantic with naming, as we know the scope we'r
 
 ### Closures Help Keep Code Clean
 
-And that also means it's easier to keep our code clean. Breaking up programs into smaller, right-sized chunks can make it easier to understand, test, and refactor. When each part of the program [has one job and does that job well](/wtf-is-single-responsibility-principle), the whole system benefits.
+And that also means it's easier to keep our code clean. Breaking up programs into smaller, right-sized chunks can make it easier to understand, test, and refactor. When each part of the program [has one job and does that job well](/blog/wtf-is-single-responsibility-principle/), the whole system benefits.
 
 ## Other Closure References
 

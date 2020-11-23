@@ -10,7 +10,7 @@ tags:
 I've been using [SVGs](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) a lot lately. Among an array of benefits for using SVG images, there are two that stand above the others in my mind:
 
 1. They are, as their name suggests, _scalable_.
-2. The reason they are scalable is because they are text files (if you've looked at them, they just look like XML). That means they can be rendered to an [HTML](/wtf-is-html) page without a request to the server for an image.
+2. The reason they are scalable is because they are text files (if you've looked at them, they just look like XML). That means they can be rendered to an [HTML](/blog/wtf-is-html/) page without a request to the server for an image.
 
 Let's address the second point within the context of Ruby -- namely, [Rails](http://rubyonrails.org/) or [Middleman](https://middlemanapp.com/).
 

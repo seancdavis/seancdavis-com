@@ -6,7 +6,7 @@ tags:
 description: "When you can't use a JavaScript or CSS concatenater, this method can be useful for adding scripts and styles to your site on the fly."
 ---
 
-This is how we typically add JavaScript and [CSS](/wtf-is-css) files to websites:
+This is how we typically add JavaScript and [CSS](/blog/wtf-is-css/) files to websites:
 
 ```html
 <script type="text/javascript" src="path/to/script.js"></script>
@@ -15,7 +15,7 @@ This is how we typically add JavaScript and [CSS](/wtf-is-css) files to websites
 
 ## The Ideal Scenario
 
-But, as your site gets super awesome, it can also get super cluttered. For example, with stylesheets, you're either going to have a giant, messy stylesheet, or (preferably) you're going to have a handful of (let's hope) nicely-organized stylesheets. The downside to that is the `<head>` section of your [HTML](/wtf-is-html) markup is going to get messy. That's not to mention that every request for a file, like a stylesheet, takes time and resources, and will slow your site down.
+But, as your site gets super awesome, it can also get super cluttered. For example, with stylesheets, you're either going to have a giant, messy stylesheet, or (preferably) you're going to have a handful of (let's hope) nicely-organized stylesheets. The downside to that is the `<head>` section of your [HTML](/blog/wtf-is-html/) markup is going to get messy. That's not to mention that every request for a file, like a stylesheet, takes time and resources, and will slow your site down.
 
 Ideally, you should compile these files into a single, manifest file. There are plenty of tools out there to help you with this. [Compass](http://compass-style.org/) and [Gulp](http://gulpjs.com/) are a couple examples.
 

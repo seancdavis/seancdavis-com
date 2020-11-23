@@ -31,7 +31,7 @@ Okay, _now_ let’s dive in!
 
 ## [1] Setup Functions on Netlify Project
 
-The first step is to get functions up and running on your Netlify project. I’ve written [a detailed article on just that process](/zero-to-functioning-netlify-function), which I’d recommend you follow if you have not worked with Netlify Functions in the past. (If you have, it may help as a quick refresher.)
+The first step is to get functions up and running on your Netlify project. I’ve written [a detailed article on just that process](/blog/zero-to-functioning-netlify-function/), which I’d recommend you follow if you have not worked with Netlify Functions in the past. (If you have, it may help as a quick refresher.)
 
 Follow that setup guide to create a function in your `functions/src` directory (unless you already have functions working elsewhere). I’ll call my function `email_notification.js`, but you are welcome to use whatever name you’d like.
 
@@ -39,7 +39,7 @@ Follow that setup guide to create a function in your `functions/src` directory (
 
 The next piece is to configure the trigger. This is the part where you identify how your function is going to be triggered.
 
-But, before doing that, and while developing locally, you’ll want to expose your local port (`9000` if you’re using `netlify-lambda`). In this case, remember, [`ngrok` is your best friend](https://cobwwweb.com/zero-to-functioning-netlify-function#debugging-practical-use-cases). ngrok will provide you a temporary URL that you can plug into your service while developing.
+But, before doing that, and while developing locally, you’ll want to expose your local port (`9000` if you’re using `netlify-lambda`). In this case, remember, [`ngrok` is your best friend](/blog/zero-to-functioning-netlify-function#debugging-practical-use-cases). ngrok will provide you a temporary URL that you can plug into your service while developing.
 
 ### Netlify Forms
 
@@ -59,7 +59,7 @@ Then [create an API key](https://sendgrid.com/docs/ui/account-and-settings/api-k
 
 ## [4] Parse the Payload
 
-Recall from [the setup guide](zero-to-functioning-netlify-function) that the simplest example looks like this:
+Recall from [the setup guide](/blog/zero-to-functioning-netlify-function/) that the simplest example looks like this:
 
 `functions/src/email_notification.js` {.filename}
 
@@ -93,7 +93,7 @@ But yours may vary. This is the point at which you figure out your conditional v
 
 Next is to figure out which email address(es) should receive the notification. There are several ways to go about this. You could:
 
-1. Use an [environment variable](/favorite-tool-managing-project-specific-environment-variables) to house your addresses.
+1. Use an [environment variable](/blog/favorite-tool-managing-project-specific-environment-variables/) to house your addresses.
 2. Hard-code them into the function.
 3. Store them in some place accessible via API.
 

@@ -13,7 +13,7 @@ Nearly every time I reached a challenging hurdle without a clear solution, I wou
 
 That being said, one area in which I’ve struggled to find easy answers is when [building form handlers using Netlify](https://www.netlify.com/docs/form-handling/). I did a lot of reading, along with a fair amount of trial and error, before I really found a solution that worked well.
 
-And while I came up with [seven points I think you should know before working with Netlify forms](/what-you-need-to-know-about-netlify-forms.html), I wanted to take some time to share how these points translate to a Gatsby project. If you have not read the article, I’d suggest at least skimming it — it’ll help add some context as we pass through the following scenarios.
+And while I came up with [seven points I think you should know before working with Netlify forms](/blog/what-you-need-to-know-about-netlify-forms/), I wanted to take some time to share how these points translate to a Gatsby project. If you have not read the article, I’d suggest at least skimming it — it’ll help add some context as we pass through the following scenarios.
 
 For the rest of this article, we’re going to dive into some specific examples. Since there are many different means of approaching how you work with forms in Gatsby, I’ve provided multiple ways in which you can approach Netlify’s form handling, such that you can choose the best path forward for your project.
 
@@ -78,7 +78,7 @@ I want to call your attention to four key points within this markup (these shoul
 3. The form’s `name` attribute is repeated in a hidden `form-name` field. **This is absolutely necessary**. If you omit this field or mistype the name, your entries will either throw an error or get lost somewhere in the internet abyss.
 4. Every field has a `name` attribute. A field must have a name for that data to be persisted within Netlify.
 
-Another point — which may seem obvious if you’ve worked with Netlify forms in the past — is that Netlify forms do not work in local development. When you first add this code, Netlify doesn’t know about the form and it’s not being submitted to Netlify. Instead, you’ll have to deploy your code (via Netlify) to test the form. I highly recommend doing this via a [Deploy Preview](https://www.netlify.com/tags/deploy-previews/), which will enable you to test before the form goes into production. (As a bonus, as far as I’ve been able to tell, form submissions that originate from preview deploys are not counted toward your total monthly allotment.)
+Another point — which may seem obvious if you’ve worked with Netlify forms in the past — is that Netlify forms do not work in local development. When you first add this code, Netlify doesn’t know about the form and it’s not being submitted to Netlify. Instead, you’ll have to deploy your code (via Netlify) to test the form. I highly recommend doing this via a [Deploy Preview](https://www.netlify.com/tag/deploy-previews/), which will enable you to test before the form goes into production. (As a bonus, as far as I’ve been able to tell, form submissions that originate from preview deploys are not counted toward your total monthly allotment.)
 
 But, that’s it! Commit and push your code to GitHub, kicking off a Netlify build (if everything is configured correctly), and see the form live after the site (or preview) is deployed. Then the form should submit properly and you should see your submissions through the Netlify UI.
 
@@ -128,7 +128,7 @@ Notice this is just a basic page, but it gives some feedback to the user within 
 
 One great feature of Netlify’s form handling is that it has a built-in filter to catch spammy submissions and prevent them from counting toward your monthly allotment. It won’t be perfect, but it’s one more step that a form submission has to get through before being considered valid.
 
-Still, you may want to add additional spam measures, such as [reCAPTCHA](https://en.wikipedia.org/wiki/ReCAPTCHA). If you’ve read through Netlify’s docs or through my [must-know Netlify form tips](/what-you-need-to-know-about-netlify-forms.html), you’ve probably seen that Netlify also offers reCAPTCHA support out of the box. And you may also already know, if you’ve tried to implement this within a Gatsby site, that Netlify’s reCAPTCHA support doesn’t extend to forms rendered by JavaScript (as Gatsby’s pages are).
+Still, you may want to add additional spam measures, such as [reCAPTCHA](https://en.wikipedia.org/wiki/ReCAPTCHA). If you’ve read through Netlify’s docs or through my [must-know Netlify form tips](/blog/what-you-need-to-know-about-netlify-forms/), you’ve probably seen that Netlify also offers reCAPTCHA support out of the box. And you may also already know, if you’ve tried to implement this within a Gatsby site, that Netlify’s reCAPTCHA support doesn’t extend to forms rendered by JavaScript (as Gatsby’s pages are/).
 
 Therefore, if we want a [reCAPTCHA](https://www.google.com/recaptcha) field within our Gatsby site, we must implement it ourselves.
 

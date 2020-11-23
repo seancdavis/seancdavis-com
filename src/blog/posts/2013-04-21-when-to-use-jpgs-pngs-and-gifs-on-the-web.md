@@ -35,7 +35,7 @@ If you're storing and using locally or using in other artwork programs, you shou
 
 ### Web Icons
 
-I'd use PNG only to create complex artwork files you couldn't have otherwise created with CSS. Today, [CSS](/wtf-is-css) is capable of enabling you to create many web elements. And you can't beat CSS for crisp, clear images. Therefore, things like buttons and gradient backgrounds should never be created with an artwork program, but should be created using CSS.
+I'd use PNG only to create complex artwork files you couldn't have otherwise created with CSS. Today, [CSS](/blog/wtf-is-css/) is capable of enabling you to create many web elements. And you can't beat CSS for crisp, clear images. Therefore, things like buttons and gradient backgrounds should never be created with an artwork program, but should be created using CSS.
 
 An even better alternative to this is to consider SVG files, which will maintain their vector form even on the web, although their support is more limited.
 

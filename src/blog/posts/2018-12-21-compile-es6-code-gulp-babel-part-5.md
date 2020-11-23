@@ -7,7 +7,7 @@ tags:
   - javascript
 ---
 
-This is the last of five parts in the series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/compile-es6-code-gulp-babel-part-1.html), I recommend doing so. This last piece is just some icing on the top layer of a real beefy cake.
+This is the last of five parts in the series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/blog/compile-es6-code-gulp-babel-part-1/), I recommend doing so. This last piece is just some icing on the top layer of a real beefy cake.
 
 If you've gone through all four parts already, welcome back! I'm glad you've made it this far and I hope you've been able to make use of this process.
 
@@ -156,7 +156,7 @@ Now when you run the build you will see the hash appended to the filenames:
 $ npm run build
 ```
 
-Notice that this is where cleaning the build directory (mentioned in [Part 4](compile-es6-code-gulp-babel-part-4.html)) could come in handy. With these timestamps appended to the filename, every time you build, there will be a new set of files in your destination directory. Therefore, it would be nice to automate cleaning that directory prior to running the build, but that can lead to limitations depending on how you build that feature.
+Notice that this is where cleaning the build directory (mentioned in [Part 4](/blog/compile-es6-code-gulp-babel-part-4/)) could come in handy. With these timestamps appended to the filename, every time you build, there will be a new set of files in your destination directory. Therefore, it would be nice to automate cleaning that directory prior to running the build, but that can lead to limitations depending on how you build that feature.
 
 ---
 
@@ -170,8 +170,8 @@ If you get stuck or have questions as you go through these exercises, don't hesi
 
 For reference, here is the series in its entirety, in case you want to jump around:
 
-1. [Part 1: Setup & Simple Implementation](/compile-es6-code-gulp-babel-part-1.html)
-2. [Part 2: Concatenated Bundle](/compile-es6-code-gulp-babel-part-2.html)
-3. [Part 3: Dynamic Manifest](/compile-es6-code-gulp-babel-part-3.html)
-4. [Part 4: Clean Files & Minify Output](/compile-es6-code-gulp-babel-part-4.html)
+1. [Part 1: Setup & Simple Implementation](/blog/compile-es6-code-gulp-babel-part-1/)
+2. [Part 2: Concatenated Bundle](/blog/compile-es6-code-gulp-babel-part-2/)
+3. [Part 3: Dynamic Manifest](/blog/compile-es6-code-gulp-babel-part-3/)
+4. [Part 4: Clean Files & Minify Output](/blog/compile-es6-code-gulp-babel-part-4/)
 5. **Part 5: Asset Hashing**

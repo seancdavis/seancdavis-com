@@ -11,7 +11,7 @@ I've jumped aboard that train. And while the question as to _why_ I did it deser
 
 I've been transferring a few of my sites (including this one) to static files using Middleman. To maintain consistency, I wanted to remove all `.html` extensions and trailing slashes. And while that's a functional benefit, I also like it better cosmetically.
 
-## Remove [HTML](/wtf-is-html) Extension
+## Remove [HTML](/blog/wtf-is-html/) Extension
 
 There are a few different ways to go about removing the `.html` extension. I've found the following to work just fine:
 

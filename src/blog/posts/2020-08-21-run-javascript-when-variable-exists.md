@@ -5,7 +5,7 @@ tags:
   - javascript
 ---
 
-One method for increasing page performance is to defer the loading of [JavaScript](/blog/wtf-is-javascript). But a big caveat that comes along with that approach is that you may have JS elsewhere in your page that wants to run before the deferred script has loaded.
+One method for increasing page performance is to defer the loading of [JavaScript](/blog/wtf-is-javascript/). But a big caveat that comes along with that approach is that you may have JS elsewhere in your page that wants to run before the deferred script has loaded.
 
 To overcome that, you can add a script in the `<head>` of your page that waits for the presence of an object (for a maximum amount of time), and runs your code only if (or when) that object exists.
 

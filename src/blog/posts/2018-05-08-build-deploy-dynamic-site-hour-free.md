@@ -22,7 +22,7 @@ We're going to spend the next hour configuring these three tools to work togethe
 
 ---
 
-**There are two articles that set the foundation for the work we're going to do here. [This one on dynamic routing in Middleman](/dynamic-routing-in-middleman.html) and [this one on using Contentful to drive content in Middleman](/dynamic-pages-middleman-contentful.html).** I'm not going to reiterate the foundational concepts I've laid out in those articles. You'll certainly be able to fly through this and copy code if that's what you're looking for, but if you want additional explanation, I highly recommend reading those two articles first.
+**There are two articles that set the foundation for the work we're going to do here. [This one on dynamic routing in Middleman](/blog/dynamic-routing-in-middleman/) and [this one on using Contentful to drive content in Middleman](/blog/dynamic-pages-middleman-contentful/).** I'm not going to reiterate the foundational concepts I've laid out in those articles. You'll certainly be able to fly through this and copy code if that's what you're looking for, but if you want additional explanation, I highly recommend reading those two articles first.
 
 ---
 
@@ -167,7 +167,7 @@ end
 # ...
 ```
 
-What we're doing here is configuring the contentful_middleman gem with custom mappers (which we'll get to next), which will pull in all the pages and posts into their own directories at `data/site/pages` and `data/site/posts` (the `site` directory name comes from using "site" as our keye in the `f.space` configuration option). Again, this is a place where the [previous Contentful-Middleman article](/dynamic-pages-middleman-contentful.html) could come in handy if you want more explanation.
+What we're doing here is configuring the contentful_middleman gem with custom mappers (which we'll get to next), which will pull in all the pages and posts into their own directories at `data/site/pages` and `data/site/posts` (the `site` directory name comes from using "site" as our keye in the `f.space` configuration option). Again, this is a place where the [previous Contentful-Middleman article](/blog/dynamic-pages-middleman-contentful/) could come in handy if you want more explanation.
 
 Now let's add the mappers:
 

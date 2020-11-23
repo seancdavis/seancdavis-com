@@ -7,11 +7,11 @@ tags:
   - jquery
 ---
 
-Before you get started here, I recommend you take a look at [this article](/mutlicolored-dotted-grid-canvas.html) first. It walks through the basics of drawing dots on canvas, and it's what we're going to build on here. But if you're already familiar with canvas and just want to get into it, then please proceed!
+Before you get started here, I recommend you take a look at [this article](/blog/mutlicolored-dotted-grid-canvas/) first. It walks through the basics of drawing dots on canvas, and it's what we're going to build on here. But if you're already familiar with canvas and just want to get into it, then please proceed!
 
 ## 01: Setup
 
-The setup here won't change. So your [HTML](/wtf-is-html) and [CSS](/wtf-is-css) are nice and straightforward.
+The setup here won't change. So your [HTML](/blog/wtf-is-html/) and [CSS](/blog/wtf-is-css/) are nice and straightforward.
 
 `HTML` {.filename}
 
@@ -277,7 +277,7 @@ function drawDot(dot) {
 
 Now let's really have some fun!
 
-Here we're going to use the result of [the multi-colored dot tutorial](/mutlicolored-dotted-grid-canvas.html) and apply some animation to it. This combines Step 05 from the multi-colored dot tutorial with the previous example.
+Here we're going to use the result of [the multi-colored dot tutorial](/blog/mutlicolored-dotted-grid-canvas/) and apply some animation to it. This combines Step 05 from the multi-colored dot tutorial with the previous example.
 
 Two other items we add here are variable speed and some transparency to the dots. You'll see both combine to make it a little more visually interesting.
 

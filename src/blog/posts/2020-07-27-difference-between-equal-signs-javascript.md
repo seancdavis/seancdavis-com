@@ -6,7 +6,7 @@ tags:
   - javascript
 ---
 
-I've begun posting prompts to our development team every morning, often asking a developer to explain some [JavaScript](/wtf-is-javascript)-based concept to the rest of the team. This has been a great exercise, as teaching tends to be more educational than reading or listening.
+I've begun posting prompts to our development team every morning, often asking a developer to explain some [JavaScript](/blog/wtf-is-javascript/)-based concept to the rest of the team. This has been a great exercise, as teaching tends to be more educational than reading or listening.
 
 While the prompts have ranged from foundational questions to more advanced topics, I like this one — exploring the difference between `=`, `==`, and `===` in JS — because there's a range of experience packed in it. On one hand, if you don't know the difference between `=` and `==`, you're not going to get very far. The difference is foundational to being able to write JavaScript code. But `==` and `===` are close enough in behavior that many newer JS developers don't have to face their difference in every day practice. Still, it's important to know what's going on under the hood.
 

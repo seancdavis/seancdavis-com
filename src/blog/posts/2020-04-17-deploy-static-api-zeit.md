@@ -6,7 +6,7 @@ tags:
   - vercel
 ---
 
-This is a quick look at how to deploy and query a [static API](/lets-talk-about-static-apis) using [Vercel](https://zeit.co/) as the deploy and hosting service. The examples here come from the commentary in my introduction on [how to build static APIs](/how-to-build-static-api) and from [a similar tutorial](/deploy-static-api-netlify) which uses [Netlify](https://www.netlify.com/) instead of Vercel.
+This is a quick look at how to deploy and query a [static API](/blog/lets-talk-about-static-apis/) using [Vercel](https://zeit.co/) as the deploy and hosting service. The examples here come from the commentary in my introduction on [how to build static APIs](/blog/how-to-build-static-api/) and from [a similar tutorial](/blog/deploy-static-api-netlify/) which uses [Netlify](https://www.netlify.com/) instead of Vercel.
 
 In this tutorial, I am assuming you are manually writing each of the API's JSON files — i.e. there is no [static site generator](https://www.staticgen.com/) or build process involved in creating the files that will be deployed.
 
@@ -25,7 +25,7 @@ And that's enough to get us started!
 
 ## Step 2: Add API Files
 
-Next, let's add our JSON files. These files pull from [the example in the introduction](_/how-to-build-static-api_). The structure will look like this:
+Next, let's add our JSON files. These files pull from [the example in the introduction](/blog/how-to-build-static-api/). The structure will look like this:
 
 ```
 public/
@@ -197,4 +197,4 @@ Commit and push that change to GitHub (or your Git provider). Vercel will automa
 
 There you go!
 
-This was only a very basic look at static APIs for the purposes of the deploy step. You can head back to [the intro to check out other tutorials on building static APIs](/how-to-build-static-api#tutorials).
+This was only a very basic look at static APIs for the purposes of the deploy step. You can head back to [the intro to check out other tutorials on building static APIs](/blog/how-to-build-static-api#tutorials/).

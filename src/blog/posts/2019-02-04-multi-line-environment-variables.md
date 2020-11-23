@@ -4,7 +4,7 @@ description: "Storing multi-line strings in an environment variable is nice and 
 tags: []
 ---
 
-I've previously talked about [when to use environment variables](/when-to-use-environment-variables.html), along with [my favorite tool for managing project-specific values](/when-to-use-environment-variables.html). But neither of these solve a problem I run into occasionally—how to store multi-line values in an environment variable.
+I've previously talked about [when to use environment variables](/blog/when-to-use-environment-variables/), along with [my favorite tool for managing project-specific values](/blog/when-to-use-environment-variables/). But neither of these solve a problem I run into occasionally—how to store multi-line values in an environment variable.
 
 Setting a single line environment variable is simple enough:
 

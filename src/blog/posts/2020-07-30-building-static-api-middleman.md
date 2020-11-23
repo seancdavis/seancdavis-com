@@ -9,9 +9,9 @@ tags:
 image: /blog/200730/earworms-with-data.png
 ---
 
-This article is part of a series of tutorials on building a _static API_. You can view the full list of available static API tutorials in [the introductory article](/how-to-build-static-api), which also provides some background on the examples we're using here.
+This article is part of a series of tutorials on building a _static API_. You can view the full list of available static API tutorials in [the introductory article](/blog/how-to-build-static-api/), which also provides some background on the examples we're using here.
 
-If you'd like additional information on what a static API is, check out [_WTF is a Static API?_](/lets-talk-about-static-apis)
+If you'd like additional information on what a static API is, check out [_WTF is a Static API?_](/blog/lets-talk-about-static-apis/)
 
 ---
 
@@ -39,7 +39,7 @@ That command cloned the default starter template and installed the bundle (ruby 
 
 ## Step 2: Add Data Files
 
-We're going to use the data examples from [the intro article](/how-to-build-static-api). Middleman's convention is to put [data files in a `data` directory](https://middlemanapp.com/advanced/data-files/). While it's not the only option, using the `data` directory means they will get picked up automatically and be available in your front-end templates.
+We're going to use the data examples from [the intro article](/blog/how-to-build-static-api/). Middleman's convention is to put [data files in a `data` directory](https://middlemanapp.com/advanced/data-files/). While it's not the only option, using the `data` directory means they will get picked up automatically and be available in your front-end templates.
 
 Grouping the files within a subdirectory in the `data` directory means they will be available through a variable matching that name. For example, if we put all our data files in `data/earworms/...` they would all be available via `data.earworms` in the `config.rb` file and in our templates (more on this later).
 

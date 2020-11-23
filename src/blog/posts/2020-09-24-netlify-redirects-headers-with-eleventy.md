@@ -10,7 +10,7 @@ On the surface, this seems like such a simple task: Create a [`_redirects`](http
 
 The difficulty is that Eleventy is configured to not copy over any files that begin with an underscore.
 
-Instead, we can [use the concept of a static directory](/add-static-directory-to-eleventy). Eleventy can be configured to copy all files within a directory into the build directory using the [custom output directory](https://www.11ty.dev/docs/copy/#change-the-output-directory) flavor of the [manual passthrough file copy option](<https://www.11ty.dev/docs/copy/#manual-passthrough-file-copy-(faster)>).
+Instead, we can [use the concept of a static directory](/blog/add-static-directory-to-eleventy/). Eleventy can be configured to copy all files within a directory into the build directory using the [custom output directory](https://www.11ty.dev/docs/copy/#change-the-output-directory/) flavor of the [manual passthrough file copy option](<https://www.11ty.dev/docs/copy/#manual-passthrough-file-copy-(faster/)>).
 
 The configuration looks like this:
 

@@ -5,7 +5,7 @@ tags:
   - ruby
 ---
 
-So there are a set of URLs you'd like to download as images. I'll show you how you can do that with ruby. You could use this [in a command line script](/command-line-scripts-using-ruby.html), a rake task, or anywhere else in your code.
+So there are a set of URLs you'd like to download as images. I'll show you how you can do that with ruby. You could use this [in a command line script](/blog/command-line-scripts-using-ruby/), a rake task, or anywhere else in your code.
 
 ## 01: Create URL Collection
 

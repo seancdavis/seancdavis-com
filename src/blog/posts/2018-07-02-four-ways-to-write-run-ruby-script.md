@@ -116,4 +116,4 @@ The answer, of course, is _it depends_. It depends mostly on what you're doing, 
 - If it's quick, simple, and a one-time thing, I use IRB
 - If it's repeatable and consistent, I use rake
 - If it's complicated, I also use rake, but I may not save the file
-- If it's repeatable but varying, I use the file approach (#2 or #4, the difference being only preference), because it's not as easy to [manage arguments with rake](/4-ways-to-pass-arguments-to-a-rake-task.html)
+- If it's repeatable but varying, I use the file approach (#2 or #4, the difference being only preference), because it's not as easy to [manage arguments with rake](/blog/4-ways-to-pass-arguments-to-a-rake-task/)

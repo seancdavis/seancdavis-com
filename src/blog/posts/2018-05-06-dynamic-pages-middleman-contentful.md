@@ -9,7 +9,7 @@ tags:
 
 Middleman has a powerful feature for [generating dynamic pages](https://middlemanapp.com/advanced/dynamic-pages/).
 
-Building on [my previous article on dynamic content in Middleman](/dynamic-routing-in-middleman.html), Middleman becomes more powerful (and more awesome!) when connected with a [headless CMS](https://en.wikipedia.org/wiki/Headless_CMS). In this article, let's take a look at using Contentful as that CMS.
+Building on [my previous article on dynamic content in Middleman](/blog/dynamic-routing-in-middleman/), Middleman becomes more powerful (and more awesome!) when connected with a [headless CMS](https://en.wikipedia.org/wiki/Headless_CMS/). In this article, let's take a look at using Contentful as that CMS.
 
 _For this example, we're assuming at least some familiarity with Contentful and Middleman. If you have no experience, neither are too difficult to dive into, so you should still be able to follow along. If you have trouble, Contentful has solid [docs](https://www.contentful.com/resources/) along with a [help desk](https://www.contentful.com/support/), and Middleman has [a community forum](https://forum.middlemanapp.com/)._
 
@@ -187,7 +187,7 @@ Now you have content in your data directory, but you don't have it displayed any
 
 We're going to use [Middleman's dynamic pages feature](https://middlemanapp.com/advanced/dynamic-pages/) to build routes using these data files.
 
-_Before getting into this, if you don't understand dynamic pages in Middleman, I encourage you to go through [my article on dynamic routing](/dynamic-routing-in-middleman.html). It gives some useful background on my approach here._
+_Before getting into this, if you don't understand dynamic pages in Middleman, I encourage you to go through [my article on dynamic routing](/blog/dynamic-routing-in-middleman/). It gives some useful background on my approach here._
 
 When you're ready, these routing loops look like this:
 
@@ -365,7 +365,7 @@ Instead, we add one method -- `map`. We call `super` first, which sets all the o
 Here I'm adding three attributes:
 
 - `path`: The display path to the page
-- `file_path`: The path at which we want to write the physical [HTML](/wtf-is-html) file
+- `file_path`: The path at which we want to write the physical [HTML](/blog/wtf-is-html/) file
 - `template`: The path (inside `source`) to the template to use to render the page content
 
 For post we can do something very similar:

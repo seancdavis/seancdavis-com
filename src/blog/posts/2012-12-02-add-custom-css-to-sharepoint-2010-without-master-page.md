@@ -6,7 +6,7 @@ tags:
 description: Here's how you can add custom styles to a specific site collection in SharePoint 2010.
 ---
 
-SharePoint 2010 provides a nice and easy way to add custom styles to your site collection without touching the master page. You can accomplish this on a page-by-page basis by adding your styles to a Content Editor Web Part's [HTML](/wtf-is-html) source between two style tags.
+SharePoint 2010 provides a nice and easy way to add custom styles to your site collection without touching the master page. You can accomplish this on a page-by-page basis by adding your styles to a Content Editor Web Part's [HTML](/blog/wtf-is-html/) source between two style tags.
 
 ```html
 <style>
@@ -14,13 +14,13 @@ SharePoint 2010 provides a nice and easy way to add custom styles to your site c
 </style>
 ```
 
-[This article](/how-to-run-javascript-on-sharepoint-pages.html) describes how to accomplish this in more detail.
+[This article](/blog/how-to-run-javascript-on-sharepoint-pages/) describes how to accomplish this in more detail.
 
 I recommend instead you use the built-in Alternative CSS functionality. This way your CSS is loaded on every page in your site collection.
 
 > To be able to use Alternative CSS functionality, you need to have publishing features turned on.
 
-To get started, create your CSS file and save it in a library somewhere on your SharePoint server. I suggest using just one, organized CSS file for all site collections; saving it in one central location following the [one file, one place](/edit-files-efficiently-in-sharepoint.html) practice.
+To get started, create your CSS file and save it in a library somewhere on your SharePoint server. I suggest using just one, organized CSS file for all site collections; saving it in one central location following the [one file, one place](/blog/edit-files-efficiently-in-sharepoint/) practice.
 
 Next, go to _Site Actions_ (top left corner) > _Site Settings_ > _Look and Feel_ > _Master Page_. Scroll down to the Alternative CSS URL section and add the URL to a custom CSS file. Click OK.
 

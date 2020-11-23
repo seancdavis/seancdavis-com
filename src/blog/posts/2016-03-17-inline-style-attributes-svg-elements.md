@@ -14,7 +14,7 @@ I figured it was clipping masks, and spent some time down that rabbit hole.
 
 _By the way, if you can, you should expand you objects before exporting to SVG, and avoid attempting to export clipping masks. Its behavior doesn't seem to be consistent._
 
-Anyways, I had an _AHA!_ moment when diving deeper into SVGs recently. By default, Adobe Illustrator tries to save space by abstracting the [CSS](/wtf-is-css) directives and using classes to target them. If you look near the top of your SVG file, you might see something like this:
+Anyways, I had an _AHA!_ moment when diving deeper into SVGs recently. By default, Adobe Illustrator tries to save space by abstracting the [CSS](/blog/wtf-is-css/) directives and using classes to target them. If you look near the top of your SVG file, you might see something like this:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

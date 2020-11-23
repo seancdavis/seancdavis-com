@@ -7,7 +7,7 @@ tags:
 
 ## In My Words (and others)
 
-I published more in June than I have in any other month. That is largely because many of them were short, fundamental articles to support a few larger topics I'm currently working on. They are part of a _WTF_ series, in which the goal is to concisely explain core concepts of web development. Here are the new articles in [the collection](https://cobwwweb.com/tags/wtf):
+I published more in June than I have in any other month. That is largely because many of them were short, fundamental articles to support a few larger topics I'm currently working on. They are part of a _WTF_ series, in which the goal is to concisely explain core concepts of web development. Here are the new articles in [the collection](https://cobwwweb.com/tag/wtf):
 
 - [WTF is Component-Driven Development?](https://cobwwweb.com/wtf-is-component-driven-development)
 - [WTF is CSS?](https://cobwwweb.com/wtf-is-css)
@@ -22,7 +22,7 @@ I published more in June than I have in any other month. That is largely because
 
 ### Big Oops!
 
-I've also begun a series called [#BigOops](https://cobwwweb.com/tags/big-oops) which will tell stories of developers' biggest mistakes, all for our entertainment and learning. It'll be somewhat infrequent while I establish what it really looks like, but there are a few stories to start:
+I've also begun a series called [#BigOops](https://cobwwweb.com/tag/big-oops) which will tell stories of developers' biggest mistakes, all for our entertainment and learning. It'll be somewhat infrequent while I establish what it really looks like, but there are a few stories to start:
 
 - [Introducing: Big Oops](https://cobwwweb.com/big-oops)
 - [Big Oops: Just a Few (Old) Notifications](https://cobwwweb.com/big-oops-few-old-notifications)

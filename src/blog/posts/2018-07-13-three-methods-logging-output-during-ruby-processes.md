@@ -5,9 +5,9 @@ tags:
   - ruby
 ---
 
-Ruby is a really fun language to write and, as a result, I prefer to write my heavy-lifting tasks in Ruby. This could be migrating content from one system to another, parsing and processing a set of files, analyzing data, etc. There are [several approaches to writing scripts in ruby](/four-ways-to-write-run-ruby-script.html), be it a rake task, a command-line script, or even a little Ruby library.
+Ruby is a really fun language to write and, as a result, I prefer to write my heavy-lifting tasks in Ruby. This could be migrating content from one system to another, parsing and processing a set of files, analyzing data, etc. There are [several approaches to writing scripts in ruby](/blog/four-ways-to-write-run-ruby-script/), be it a rake task, a command-line script, or even a little Ruby library.
 
-When when working with long-running processes (whether you wrote them or not), it's [a good idea to provide yourself with feedback](/log-output-long-running-processes.html).
+When when working with long-running processes (whether you wrote them or not), it's [a good idea to provide yourself with feedback](/blog/log-output-long-running-processes/).
 
 ## The Methods
 

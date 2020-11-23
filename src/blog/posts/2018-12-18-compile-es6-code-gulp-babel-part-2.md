@@ -7,7 +7,7 @@ tags:
   - javascript
 ---
 
-This is the second part in a five-part series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/compile-es6-code-gulp-babel-part-1.html), I recommend doing so.
+This is the second part in a five-part series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/blog/compile-es6-code-gulp-babel-part-1/), I recommend doing so.
 
 Otherwise, welcome back!
 
@@ -65,7 +65,7 @@ It's important here that you add `concat()` **before running babel** so it only 
 
 At this point, if you run the build (`npm run build`) you will see the files get compiled to a single `main.js` file in the `dist` directory.
 
-That's great, but you will eventually want to work with third-party libraries within your JavaScript components. And while you could load them separately in your [HTML](/wtf-is-html) file(s), it's easier to manage and can be more performant when you include those dependencies in your bundle. Let's try that out.
+That's great, but you will eventually want to work with third-party libraries within your JavaScript components. And while you could load them separately in your [HTML](/blog/wtf-is-html/) file(s/), it's easier to manage and can be more performant when you include those dependencies in your bundle. Let's try that out.
 
 ## Step 3: Add Dependencies
 
@@ -168,12 +168,12 @@ In this case, `jsDeps()` and `jsBuild()` are run in parallel, but `jsConcat()` m
 
 ---
 
-That's it for Part 2! Now you have a concatenated bundle and you're off to the races. If you want to keep digging in, the next part focuses on [building a dynamic manifest file](/compile-es6-code-gulp-babel-part-3.html), which means that when we want to add a new file to our bundle, we don't have to touch the Gulpfile every time, but we can have a separate JS config. We'll also discuss supporting building multiple bundles during the same build.
+That's it for Part 2! Now you have a concatenated bundle and you're off to the races. If you want to keep digging in, the next part focuses on [building a dynamic manifest file](/blog/compile-es6-code-gulp-babel-part-3/), which means that when we want to add a new file to our bundle, we don't have to touch the Gulpfile every time, but we can have a separate JS config. We'll also discuss supporting building multiple bundles during the same build.
 
 Or, if you want to jump around throughout the series, here is a link to each part:
 
-1. [Part 1: Setup & Simple Implementation](/compile-es6-code-gulp-babel-part-1.html)
+1. [Part 1: Setup & Simple Implementation](/blog/compile-es6-code-gulp-babel-part-1/)
 2. **Part 2: Concatenated Bundle**
-3. [Part 3: Dynamic Manifest](/compile-es6-code-gulp-babel-part-3.html)
-4. [Part 4: Clean Files & Minify Output](/compile-es6-code-gulp-babel-part-4.html)
-5. [Part 5: Asset Hashing](/compile-es6-code-gulp-babel-part-5.html)
+3. [Part 3: Dynamic Manifest](/blog/compile-es6-code-gulp-babel-part-3/)
+4. [Part 4: Clean Files & Minify Output](/blog/compile-es6-code-gulp-babel-part-4/)
+5. [Part 5: Asset Hashing](/blog/compile-es6-code-gulp-babel-part-5/)

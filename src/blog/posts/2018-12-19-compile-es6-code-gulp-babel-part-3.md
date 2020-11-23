@@ -7,13 +7,13 @@ tags:
   - javascript
 ---
 
-This is the third part in a five-part series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/compile-es6-code-gulp-babel-part-1.html), I recommend doing so.
+This is the third part in a five-part series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/blog/compile-es6-code-gulp-babel-part-1/), I recommend doing so.
 
 Otherwise, welcome back!
 
 At this point, you have built a single JavaScript bundle consisting of third-party libraries and self-authored components. In Part 3, we're going to add a JS configuration file that will enable us to build multiple bundles with unique dependencies and self-authored components.
 
-This part is unique among the five in that it requires a bit of background to get started. To understand how this is going to work, you should know a bit about building dynamic tasks with Gulp 4. And in this particular approach, we're using a JavaScript configuration file to drive those dynamic tasks. I wrote [an article that follows this approach](/dynamic-tasks-gulp-4.html), and I recommend at least skimming through that before continuing.
+This part is unique among the five in that it requires a bit of background to get started. To understand how this is going to work, you should know a bit about building dynamic tasks with Gulp 4. And in this particular approach, we're using a JavaScript configuration file to drive those dynamic tasks. I wrote [an article that follows this approach](/blog/dynamic-tasks-gulp-4/), and I recommend at least skimming through that before continuing.
 
 ## Step 1: Add JS Config
 
@@ -35,7 +35,7 @@ module.exports = [
 ]
 ```
 
-This configuration is unique even to [the introductory article](/dynamic-tasks-gulp-4.html) -- here's what's going on:
+This configuration is unique even to [the introductory article](/blog/dynamic-tasks-gulp-4/) -- here's what's going on:
 
 - Each item in the exported array is an object.
 - Each object must have a `name` property and either a `deps` or a `files` property.
@@ -61,7 +61,7 @@ class MyLib {
 
 ## Step 3: Update Gulpfile
 
-We have some big adjustments to make to the Gulpfile. Here we're still taking a similar approach to Part 2 in having the build run in series with functions `jsDeps()`, `jsBuild()`, `jsConcat()`. The difference is that within each function we are reading the configuration file (`src/config.js`) and building dynamic anonymous tasks for each item within the configuration array. The bulk of this is explained in [the introductory article on dynamic Gulp 4 tasks](/dynamic-tasks-gulp-4.html), but there are some comments in the code to help.
+We have some big adjustments to make to the Gulpfile. Here we're still taking a similar approach to Part 2 in having the build run in series with functions `jsDeps()`, `jsBuild()`, `jsConcat()`. The difference is that within each function we are reading the configuration file (`src/config.js`) and building dynamic anonymous tasks for each item within the configuration array. The bulk of this is explained in [the introductory article on dynamic Gulp 4 tasks](/blog/dynamic-tasks-gulp-4/), but there are some comments in the code to help.
 
 `gulpfile.js` {.filename}
 
@@ -205,12 +205,12 @@ Upon successful build, notice:
 
 ---
 
-That's it for Part 3! Now you can have multiple JS bundles without messing with the Gulpfile whenever you need to add a new dependency or create a separate bundle. In [the next part](/compile-es6-code-gulp-babel-part-4.html) you will learn how we can minify our bundle and clean up the temporary files.
+That's it for Part 3! Now you can have multiple JS bundles without messing with the Gulpfile whenever you need to add a new dependency or create a separate bundle. In [the next part](/blog/compile-es6-code-gulp-babel-part-4/) you will learn how we can minify our bundle and clean up the temporary files.
 
 Or, if you don't want to go right to the next step, you can jump around throughout the series:
 
-1. [Part 1: Setup & Simple Implementation](/compile-es6-code-gulp-babel-part-1.html)
-2. [Part 2: Concatenated Bundle](/compile-es6-code-gulp-babel-part-2.html)
+1. [Part 1: Setup & Simple Implementation](/blog/compile-es6-code-gulp-babel-part-1/)
+2. [Part 2: Concatenated Bundle](/blog/compile-es6-code-gulp-babel-part-2/)
 3. **Part 3: Dynamic Manifest**
-4. [Part 4: Clean Files & Minify Output](/compile-es6-code-gulp-babel-part-4.html)
-5. [Part 5: Asset Hashing](/compile-es6-code-gulp-babel-part-5.html)
+4. [Part 4: Clean Files & Minify Output](/blog/compile-es6-code-gulp-babel-part-4/)
+5. [Part 5: Asset Hashing](/blog/compile-es6-code-gulp-babel-part-5/)

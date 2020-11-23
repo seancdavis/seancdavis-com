@@ -60,7 +60,7 @@ And within IRB, let's create a new calculator:
 
 Hmmm ... IRB doesn't know what `Calculator` is. Why not? When we open an IRB instance on our machine, it's thinking globally. We haven't provided any context in which to open the session. We can change that by loading our files first.
 
-Let's create a [ruby command-line script](/command-line-scripts-using-ruby.html) to open a console session. We're going to put this file in the `bin` directory.
+Let's create a [ruby command-line script](/blog/command-line-scripts-using-ruby/) to open a console session. We're going to put this file in the `bin` directory.
 
 In its simplest form, this file will look like this:
 
@@ -120,4 +120,4 @@ As your project gets larger, as long as you require your main file in your conso
 
 ---
 
-_**Bonus!** I have a [follow-up article](/add-reload-method-to-ruby-console.html) in which you can add a `reload!` method to your console so you don't have to restart the console session every time you make a change in your project._
+_**Bonus!** I have a [follow-up article](/blog/add-reload-method-to-ruby-console/) in which you can add a `reload!` method to your console so you don't have to restart the console session every time you make a change in your project._

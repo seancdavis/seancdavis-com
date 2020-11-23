@@ -5,7 +5,7 @@ tags:
   - middleman
 ---
 
-I wrote in [the Jekyll equivalent of this article](/add-typekit-to-jekyll.html) that there are three methods Typekit offers for adding its fonts to your site and making them available to use within your [CSS](/wtf-is-css) files.
+I wrote in [the Jekyll equivalent of this article](/blog/add-typekit-to-jekyll/) that there are three methods Typekit offers for adding its fonts to your site and making them available to use within your [CSS](/blog/wtf-is-css/) files.
 
 Via an external stylesheet:
 

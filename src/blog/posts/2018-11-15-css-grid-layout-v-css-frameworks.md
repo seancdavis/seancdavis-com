@@ -5,7 +5,7 @@ tags:
   - css
 ---
 
-[CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) are a set of [CSS](/wtf-is-css) rules that can enable you to build out a grid in your site without the need for a framework. From MDN:
+[CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) are a set of [CSS](/blog/wtf-is-css/) rules that can enable you to build out a grid in your site without the need for a framework. From MDN:
 
 > Like tables, grid layout enables an author to align elements into columns and rows. However, many more layouts are either possible or easier with CSS grid than they were with tables. For example, a grid container's child elements could position themselves so they actually overlap and layer, similar to CSS positioned elements.
 
@@ -104,9 +104,9 @@ To me, the answer is clear. The CSS Grid Layout has a bit of a learning curve to
 
 But, like I mentioned, the real answer is: _It depends_. I would use a CSS framework for my grid when:
 
-- I'm already using a framework on my site. (Although, [should you be using a CSS framework in the first place?](/do-you-need-css-framework.html).)
+- I'm already using a framework on my site. (Although, [should you be using a CSS framework in the first place?](/blog/do-you-need-css-framework/).)
 - I need browser support across the globe in less developed areas. ([See this article on browser support](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/).)
-- The content structure of the site is dynamic. In other words, if your content editors are writing [HTML](/wtf-is-html), it's easier to use a framework because the the grid is (likely) already fleshed out and documented and can supported a wide array of layouts.
+- The content structure of the site is dynamic. In other words, if your content editors are writing [HTML](/blog/wtf-is-html/), it's easier to use a framework because the the grid is (likely/) already fleshed out and documented and can supported a wide array of layouts.
 
 In all other cases, I'm going with the native CSS grid layout.
 

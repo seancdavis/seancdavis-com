@@ -16,7 +16,7 @@ If you don't about Netlify, the workflow is simple on the surface. It's all buil
 
 Because it uses the Jamstack approach, when the build is done, all Netlify has to host are static files that can be consumed by the web. Therefore, Netlify can take advantage of distributing these files via a [content delivery network](https://en.wikipedia.org/wiki/Content_delivery_network) (CDN), which means they are readily available worldwide and (most important) cached. (Plus, one of the best features of Netlify is that they handle the cache invalidation.)
 
-Add to all this that it's basic service is free, and all this makes Netlify a perfect candidate for hosting any type of asset, not _just_ [HTML](/wtf-is-html) and [CSS](/wtf-is-css) files.
+Add to all this that it's basic service is free, and all this makes Netlify a perfect candidate for hosting any type of asset, not _just_ [HTML](/blog/wtf-is-html/) and [CSS](/blog/wtf-is-css/) files.
 
 Consider a scenario where you have a browser-based JavaScript library shared among of a few of your projects, but it's not really any benefit to maintain, support, and distribute via the open-source community. If you want that code available via a URL (i.e. CDN), Netlify is a perfect candidate for helping you distribute it because it will deploy that code automatically to a CDN with a predictable URL.
 
@@ -62,6 +62,6 @@ While Netlify is built upon the concept of [continuous delivery (CD)](https://en
 
 ## Next Steps
 
-This is a really simple example because the concept is simple at its core. But as your JS library and the number of projects it supports grows, the more complex it's going to be. You'll likely want to consider versioning, for example, and write a new file to your `dist` directory whenever there is a new version ready to go. You may even want to make use of [previews](https://www.netlify.com/tags/deploy-previews/) so you can test a production build prior to releasing the new version.
+This is a really simple example because the concept is simple at its core. But as your JS library and the number of projects it supports grows, the more complex it's going to be. You'll likely want to consider versioning, for example, and write a new file to your `dist` directory whenever there is a new version ready to go. You may even want to make use of [previews](https://www.netlify.com/tag/deploy-previews/) so you can test a production build prior to releasing the new version.
 
 The point is there is a lot you can do with the simple idea of using this great (and free!) service for hosting your browser-based JavaScript libraries.

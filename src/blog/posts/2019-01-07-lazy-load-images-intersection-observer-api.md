@@ -29,7 +29,7 @@ With the help of [Unsplash's embedding feature](https://source.unsplash.com/), I
 
 _Note: The dimensions change slightly from image to image so Unsplash delivers a different image for each `<img>` element._
 
-With a little [CSS](/wtf-is-css), the images can be displayed in a four-column grid using [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout):
+With a little [CSS](/blog/wtf-is-css/), the images can be displayed in a four-column grid using [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/):
 
 ```css
 :root {
@@ -144,7 +144,7 @@ Now we can write the JavaScript. Here it is, commented to help you understand wh
 })()
 ```
 
-Hopefully the comments are enough to follow the code. The one thing missing is that that the code is wrapped in an anonymous function (`(function() {})()`) that gets run automatically when the script is loaded. This is a common method for [keeping JavaScript code local](/two-ways-to-keep-javascript-local.html) so the variables and functions don't bleed out into other JS code used throughout the site.
+Hopefully the comments are enough to follow the code. The one thing missing is that that the code is wrapped in an anonymous function (`(function() {})()`) that gets run automatically when the script is loaded. This is a common method for [keeping JavaScript code local](/blog/two-ways-to-keep-javascript-local/) so the variables and functions don't bleed out into other JS code used throughout the site.
 
 Note that the Intersection Observer API is not supported by Internet Explorer. If you need IE support, you'll want to load [the polyfill](https://github.com/w3c/IntersectionObserver) prior to your code.
 
@@ -158,5 +158,5 @@ That's all it takes to get started, but as you can see, it's not super polished.
 
 - Protect against elements not being images, if necessary. We used `data-lazy-load` as the specification for lazy loading an image, but we don't validate that it's an image, enabling a developer to add the attribute to any element. (Or, maybe you want to allow other types of elements for your particular scenario.)
 - Play with the options for `IntersectionObserver`. There is an optional second argument when initialize the observer which is an options object. One option is `rootMargin` which enables you to consider elements as intersecting prior to them hitting the viewport, which may be desirable if you don't want the user to see the loading process.
-- Fade in images rather than replacing them, since replacing them has a flash of no content while the browser downloads the image. I wrote [an article on the subject](/better-website-performance-pixelated-placeholder-images.html) that should help to get you started.
+- Fade in images rather than replacing them, since replacing them has a flash of no content while the browser downloads the image. I wrote [an article on the subject](/blog/better-website-performance-pixelated-placeholder-images/) that should help to get you started.
 - Load placeholder images that will match the dimensions of the resulting image so the page content doesn't jump as images are loaded.

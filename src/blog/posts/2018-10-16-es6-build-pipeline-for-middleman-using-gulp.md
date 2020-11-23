@@ -25,7 +25,7 @@ Alrighty then, let's get to it.
 
 ## JavaScript Components
 
-We're going to use [a component-based structure](/component-based-js-architecture.html) to architect our site's JavaScript. That means that instead of long-form spaghetti code littered with `$(document).ready()` wrappers and event handlers, we're breaking down the responsibilities of JavaScript into components.
+We're going to use [a component-based structure](/blog/component-based-js-architecture/) to architect our site's JavaScript. That means that instead of long-form spaghetti code littered with `$(document/).ready()` wrappers and event handlers, we're breaking down the responsibilities of JavaScript into components.
 
 For example, let's say your site has modal windows and accordions -- you'd have two separate files to handle both functions, probably a `modal.js` and an `accordion.js` or something like that.
 
@@ -119,7 +119,8 @@ To add Lodash via NPM, first create a `package.json` file in the root of the pro
 `package.json` {.filename}
 
 ```js
-{}
+{
+}
 ```
 
 From the command line you can install Lodash.

@@ -39,7 +39,7 @@ Let's take a look at the [_tf-idf_](http://en.wikipedia.org/wiki/Tf%E2%80%93idf)
 
 Here's how were going to relate this theory to posts.
 
-1. Strip down each post so we have only the content -- no [HTML](/wtf-is-html) markup, no code, etc.
+1. Strip down each post so we have only the content -- no [HTML](/blog/wtf-is-html/) markup, no code, etc.
 2. For each post in _the collection_, find the words that intersect with the post at hand. Multiple each of those words by its `idf` and sum to get a related score for each post.
 3. Sort and cache a list of the top five.
 
@@ -51,7 +51,7 @@ While I don't have this issue yet, if you have hundreds or thousands of posts, I
 
 I'll leave scoping up to you.
 
-## The Code
+## The Code {id="the-code"}
 
 We're going to squeeze the code into just your model and controller. I've abstracted this to a [service object](https://netguru.co/blog/service-objects-in-rails-will-help) to keep my model lighter, but it will make more sense if we look at all the logic in one place.
 

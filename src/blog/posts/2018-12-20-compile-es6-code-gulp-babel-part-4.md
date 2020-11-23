@@ -7,11 +7,11 @@ tags:
   - javascript
 ---
 
-This is the fourth part in a five-part series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/compile-es6-code-gulp-babel-part-1.html), I recommend at least skimming through the first three parts. By now we've covered enough in previous steps that you'll be missing a lot of context for what's going on if you start here.
+This is the fourth part in a five-part series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/blog/compile-es6-code-gulp-babel-part-1/), I recommend at least skimming through the first three parts. By now we've covered enough in previous steps that you'll be missing a lot of context for what's going on if you start here.
 
 Otherwise, if you've been through previous parts of the series, welcome back!
 
-In this part we're going to minify the bundle and clean up the files that are created for temporary use during the build. This part relies heavily on [Part 3](/compile-es6-code-gulp-babel-part-3.html), and you should familiarize yourself with that approach before diving in here.
+In this part we're going to minify the bundle and clean up the files that are created for temporary use during the build. This part relies heavily on [Part 3](/blog/compile-es6-code-gulp-babel-part-3/), and you should familiarize yourself with that approach before diving in here.
 
 ## Step 1: Install Dependencies
 
@@ -178,12 +178,12 @@ Note that you _could_ extend this to also clean unwanted files from the build di
 
 That's it for Part 4 -- only one more to go to complete the series!
 
-In fact, you're in really good shape right now and have a powerful asset build pipeline for your project. In [the last part](/compile-es6-code-gulp-babel-part-5.html), we're going to explore the idea of asset hashing, which helps with cache invalidation depending on your means of distribution. But more on that in the next part.
+In fact, you're in really good shape right now and have a powerful asset build pipeline for your project. In [the last part](/blog/compile-es6-code-gulp-babel-part-5/), we're going to explore the idea of asset hashing, which helps with cache invalidation depending on your means of distribution. But more on that in the next part.
 
 Or if you want to jump around, here are all five parts:
 
-1. [Part 1: Setup & Simple Implementation](/compile-es6-code-gulp-babel-part-1.html)
-2. [Part 2: Concatenated Bundle](/compile-es6-code-gulp-babel-part-2.html)
-3. [Part 3: Dynamic Manifest](/compile-es6-code-gulp-babel-part-3.html)
+1. [Part 1: Setup & Simple Implementation](/blog/compile-es6-code-gulp-babel-part-1/)
+2. [Part 2: Concatenated Bundle](/blog/compile-es6-code-gulp-babel-part-2/)
+3. [Part 3: Dynamic Manifest](/blog/compile-es6-code-gulp-babel-part-3/)
 4. **Part 4: Clean Files & Minify Output**
-5. [Part 5: Asset Hashing](/compile-es6-code-gulp-babel-part-5.html)
+5. [Part 5: Asset Hashing](/blog/compile-es6-code-gulp-babel-part-5/)

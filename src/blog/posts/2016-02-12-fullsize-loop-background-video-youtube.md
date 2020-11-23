@@ -22,7 +22,7 @@ First, you'll want to get the ID of the video, which is unique URL segment after
 
 ## 02: Base HTML/CSS
 
-Once you have that, we can move on to the [HTML](/wtf-is-html). Let's keep it nice and simple:
+Once you have that, we can move on to the [HTML](/blog/wtf-is-html/). Let's keep it nice and simple:
 
 `HTML` {.filename}
 

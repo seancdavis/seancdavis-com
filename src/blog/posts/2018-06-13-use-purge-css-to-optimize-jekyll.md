@@ -9,9 +9,9 @@ tags:
 
 Stylesheets are notorious for quickly getting out of hand. Even if you stay super organized, you're going to end up with several rules that your site doesn't need.
 
-And if you use a [CSS](/wtf-is-css) framework, like [Bootstrap](http://getbootstrap.com/) or [Foundation](https://foundation.zurb.com/), there are likely _tons_ of unused styles (because there are so many setting the boilerplate for you).
+And if you use a [CSS](/blog/wtf-is-css/) framework, like [Bootstrap](http://getbootstrap.com/) or [Foundation](https://foundation.zurb.com/), there are likely _tons_ of unused styles (because there are so many setting the boilerplate for you/).
 
-Tools like [PurgeCSS](https://www.purgecss.com/) can be really helpful for cleaning up unused CSS rules. The problem is, in today's world, many of our projects are built either as single page apps (SPAs), using JavaScript to generate the content, or as dynamic, database-driven web applications, where the content can't be predicted. But when you're working with a static site generator (like [Jekyll](https://jekyllrb.com/)) solving this problem is much more obtainable because know all (or at least _most of_) the content after we build our site to flat [HTML](/wtf-is-html) files.
+Tools like [PurgeCSS](https://www.purgecss.com/) can be really helpful for cleaning up unused CSS rules. The problem is, in today's world, many of our projects are built either as single page apps (SPAs), using JavaScript to generate the content, or as dynamic, database-driven web applications, where the content can't be predicted. But when you're working with a static site generator (like [Jekyll](https://jekyllrb.com/)) solving this problem is much more obtainable because know all (or at least _most of_) the content after we build our site to flat [HTML](/blog/wtf-is-html/) files.
 
 So, assuming we're using Jekyll, let's take a look at how we can incorporate PurgeCSS to clean up our stylesheet after we build.
 
@@ -116,7 +116,7 @@ That's it! Build your site and you should see a stylesheet that is similar in si
 
 ## Identifying Your Whitelist
 
-When you test your build (whether on a server or by [running a local server](/run-local-web-server-ruby.html) in your build directory) you naymay likely have some selectors that didn't come through.
+When you test your build (whether on a server or by [running a local server](/blog/run-local-web-server-ruby/) in your build directory/) you naymay likely have some selectors that didn't come through.
 
 If any of your selectors are added to the DOM with JavaScript, PurgeCSS is not going to catch them. For me those selectors were fairly predictable, so I manually added them to the whitelist config. In my example the whitelist adds `.wl-class-1` and `.wl-class-2` to PurgeCSS so it automatically adds rules for those selectors, even if it doesn't find the appropriate elements in thte HTML files.
 

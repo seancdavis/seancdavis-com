@@ -7,9 +7,9 @@ tags:
   - node
 ---
 
-This is one of several tutorials on how to build a static API. For links to the other tutorials, and for some background on this tutorial, see [the introduction article](/how-to-build-static-api).
+This is one of several tutorials on how to build a static API. For links to the other tutorials, and for some background on this tutorial, see [the introduction article](/blog/how-to-build-static-api/).
 
-If you'd like further background on what a static API is and why we're going through this exercise, check out [_Let's Talk about Static APIs_](/lets-talk-about-static-apis).
+If you'd like further background on what a static API is and why we're going through this exercise, check out [_Let's Talk about Static APIs_](/blog/lets-talk-about-static-apis/).
 
 ---
 
@@ -60,7 +60,7 @@ build/
 
 ## Step 2: Data Files
 
-It's time to add our source data. These files come from [the introductory article](/how-to-build-static-api).
+It's time to add our source data. These files come from [the introductory article](/blog/how-to-build-static-api/).
 
 `data/earworms/2020-03-29.yml` {.filename}
 

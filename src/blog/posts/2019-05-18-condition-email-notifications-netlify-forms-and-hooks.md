@@ -8,7 +8,7 @@ tags:
 
 Well, it’s 2019 as I write this, and yet it seems like contact forms aren’t going away any time soon. I always figured we’d have a better solution for capturing user feedback by now. But it makes sense that they’re still around. Forms are a tried-and-true method for accepting dynamic data from a user while keeping that user on the site.
 
-So even as we move on to adopting game-changing new approaches to building websites — i.e. following the [Jamstack](/wtf-is-jamstack.html) and deploying via [Netlify](https://www.netlify.com/) — we still need to consider accepting data from our users using form submissions.
+So even as we move on to adopting game-changing new approaches to building websites — i.e. following the [Jamstack](/blog/wtf-is-jamstack/) and deploying via [Netlify](https://www.netlify.com/) — we still need to consider accepting data from our users using form submissions.
 
 Fortunately, [Netlify offers form handling](https://www.netlify.com/docs/form-handling/) on their free tier, which is kind of amazing.
 
@@ -26,11 +26,11 @@ You’ve been asked to add a contact form to your website. It’s going to colle
 
 To keep it simple, will account for an either-or type of condition for the subject. If the value of `subject` is `Sales`, we want to send the email notification to `sales@helloworld.com`. If the value is `Marketing`, we’ll send the email to `marketing@helloworld.com`.
 
-We’ll keep this SSG-agnostic, which means I’m not going to talk about which [SSG (static site generator)](https://www.staticgen.com/) you might be using. However, I will be considering that we’re in a static context — i.e. that all pages on your site are [HTML](/wtf-is-html) pages that are generated during the build. Some SSGs, like [Gatsby](https://www.gatsbyjs.org/), act like a static website, but are actually running a [single page application (SPA)](https://en.wikipedia.org/wiki/Single-page_application). Working with Netlify forms in contexts like Gatsby make things a little trickier. I’m not going to touch on those nuances here.
+We’ll keep this SSG-agnostic, which means I’m not going to talk about which [SSG (static site generator)](https://www.staticgen.com/) you might be using. However, I will be considering that we’re in a static context — i.e. that all pages on your site are [HTML](/blog/wtf-is-html/) pages that are generated during the build. Some SSGs, like [Gatsby](https://www.gatsbyjs.org/), act like a static website, but are actually running a [single page application (SPA/)](https://en.wikipedia.org/wiki/Single-page_application/). Working with Netlify forms in contexts like Gatsby make things a little trickier. I’m not going to touch on those nuances here.
 
-If you _are_ using a JS-based SSG, I think you can still get some useful information out of this article. You may also gain some insights by reading my [intro guide to Netlify forms](/what-you-need-to-know-about-netlify-forms.html). It outlines what I find to be the essential information you need to know before working with Netlify forms, _especially_ if you’re working with JS-rendered forms.
+If you _are_ using a JS-based SSG, I think you can still get some useful information out of this article. You may also gain some insights by reading my [intro guide to Netlify forms](/blog/what-you-need-to-know-about-netlify-forms/). It outlines what I find to be the essential information you need to know before working with Netlify forms, _especially_ if you’re working with JS-rendered forms.
 
-(Really, I think you’d get good information from [the guide](/what-you-need-to-know-about-netlify-forms.html) regardless of the context in which you’re working.)
+(Really, I think you’d get good information from [the guide](/blog/what-you-need-to-know-about-netlify-forms/) regardless of the context in which you’re working.)
 
 Okay, let’s write some code.
 
@@ -139,7 +139,7 @@ Netlify adds a hidden `form-name` field to every form in your site (if your site
 
 That’s the field we really need to change when the subject field changes. But we’ll change the form’s `name` attribute, too, just for fun!
 
-_Note: This solution does not use best practices. I’m going to use a global JavaScript function only to display the simplicity of this solution. I recommend you consider [making your JS code local](/two-ways-to-keep-javascript-local.html) and using event listeners, rather than a global functional and an inline attribute, which is what we’re about to do._
+_Note: This solution does not use best practices. I’m going to use a global JavaScript function only to display the simplicity of this solution. I recommend you consider [making your JS code local](/blog/two-ways-to-keep-javascript-local/) and using event listeners, rather than a global functional and an inline attribute, which is what we’re about to do._
 
 Here’s the JS code, with comments for reference:
 

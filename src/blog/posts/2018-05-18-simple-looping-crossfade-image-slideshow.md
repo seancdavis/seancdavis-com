@@ -7,7 +7,7 @@ tags:
   - javascript
 ---
 
-With some [CSS](/wtf-is-css) and a little JavaScript, we can easily provide a crossfade animation to a simple slideshow.
+With some [CSS](/blog/wtf-is-css/) and a little JavaScript, we can easily provide a crossfade animation to a simple slideshow.
 
 Here's what we're going to be creating:
 

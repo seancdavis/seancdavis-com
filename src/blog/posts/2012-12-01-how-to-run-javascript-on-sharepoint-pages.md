@@ -16,7 +16,7 @@ Your JavaScript has to be loaded from a Content Editor Web Part. To add, go into
     alt="Add Web Part - How to Run JavaScript on SharePoint Pages",
     src="/blog/121201/Capture3.png" %}
 
-Next, open the web part tools by editing the web part. There are a few different ways to load a script on your page. One way is to add a content link in your web part tools panel (_if you do this, the file has to live in the current site collection_). To follow my best practice of [_one file, one place_](/edit-files-efficiently-in-sharepoint.html) I suggest you go about this a different way.
+Next, open the web part tools by editing the web part. There are a few different ways to load a script on your page. One way is to add a content link in your web part tools panel (_if you do this, the file has to live in the current site collection_). To follow my best practice of [_one file, one place_](/blog/edit-files-efficiently-in-sharepoint/) I suggest you go about this a different way.
 
 With the web part tools open, click inside the Content Editor Web Part (the first time this area will read _Click here to add new content_). With the cursor blinking inside the web part, click the Format Text Tab above the ribbon, then HTML > Edit HTML Source.
 
@@ -75,6 +75,6 @@ A better way to accomplish this is to use an alternative stylesheet (still doesn
     alt="Alternative CSS - How to Run JavaScript on SharePoint Pages",
     src="/blog/121201/Capture7.png" %}
 
-> You obviously need to have a CSS file already created and saved somewhere on your SharePoint server. Again, I suggest keeping the [_one file, one place_](/edit-files-efficiently-in-sharepoint.html) practice in mind.
+> You obviously need to have a CSS file already created and saved somewhere on your SharePoint server. Again, I suggest keeping the [_one file, one place_](/blog/edit-files-efficiently-in-sharepoint/) practice in mind.
 
 It's important to keep in mind a couple things. First, this stylesheet is loaded after all the default SharePoint CSS files. Therefore, you are able to change the default SharePoint styles in this CSS file. Second, without editing the master page, you are only allowed one alternative CSS per site collection. If you're using this stylesheets for many purposes, ensure you're keeping it nice and organized with comments.

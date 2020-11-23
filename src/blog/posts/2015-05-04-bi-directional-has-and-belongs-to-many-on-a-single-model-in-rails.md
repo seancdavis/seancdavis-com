@@ -13,7 +13,7 @@ What we're trying to accomplish is _to associate a record within one Rails model
 
 Phew!
 
-I've talked about a [has_many](/a-has-many-relationship-within-a-single-model-in-rails.html) relationship within a single model, but this is far more complex. This isn't your typical parent/child relationship. In this case, you don't really care which object is the parent or which one is the child. You just want to grab an object and get all of its associated records, and there may be no logical order to that.
+I've talked about a [has_many](/blog/a-has-many-relationship-within-a-single-model-in-rails/) relationship within a single model, but this is far more complex. This isn't your typical parent/child relationship. In this case, you don't really care which object is the parent or which one is the child. You just want to grab an object and get all of its associated records, and there may be no logical order to that.
 
 And your typical [`has_many :through` and `has_and_belongs_to_many`](http://guides.rubyonrails.org/association_basics.html#choosing-between-has-many-through-and-has-and-belongs-to-many) are much simpler because the names associating one record to another are _different_ and _predictable_, which they aren't in this case.
 

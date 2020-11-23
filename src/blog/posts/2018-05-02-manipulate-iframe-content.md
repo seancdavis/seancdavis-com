@@ -6,7 +6,7 @@ tags:
   - javascript
 ---
 
-We've all been there. You need to make a change within an iFrame (from the outside), and it just won't work. Change a class, add some text, adjust [CSS](/wtf-is-css). It just won't work.
+We've all been there. You need to make a change within an iFrame (from the outside), and it just won't work. Change a class, add some text, adjust [CSS](/blog/wtf-is-css/). It just won't work.
 
 Well, I have good news and bad news (more of a _GOTCHA!_, really) for you.
 

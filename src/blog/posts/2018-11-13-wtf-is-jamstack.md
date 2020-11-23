@@ -31,7 +31,7 @@ Using the community's best practices, this is the process for deploying a site u
 3. GitHub webhook notifies a server to build the project.
 4. Server pulls down the changes from GitHub.
 5. Server builds the project.
-6. Server uploads the [HTML](/wtf-is-html) files from the built project (along with any necessary assets) to a CDN.
+6. Server uploads the [HTML](/blog/wtf-is-html/) files from the built project (along with any necessary assets/) to a CDN.
 7. Server informs CDN to invalidate its cache.
 8. Site is live.
 

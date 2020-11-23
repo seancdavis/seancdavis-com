@@ -6,15 +6,15 @@ tags:
   - eleventy
 ---
 
-This is one of several tutorials on how to build a static API. For links to the other tutorials, and for some background on this tutorial, see [the introduction article](/how-to-build-static-api).
+This is one of several tutorials on how to build a static API. For links to the other tutorials, and for some background on this tutorial, see [the introduction article](/blog/how-to-build-static-api/).
 
-If you'd like further background on what a static API is and why we're going through this exercise, check out [_Let's Talk about Static APIs_](/lets-talk-about-static-apis).
+If you'd like further background on what a static API is and why we're going through this exercise, check out [_Let's Talk about Static APIs_](/blog/lets-talk-about-static-apis/).
 
 ---
 
 This tutorial is going to walk through how you can build a static API using the emerging static site generator, [Eleventy](https://www.11ty.dev/). Eleventy takes a very simple approach to building out static sites, which makes it a great fit for simple scenarios, like this one.
 
-One of the first tutorials I wrote on the subject was on [building a static API with a plain Node.js script](/building-static-api-nodejs). I like this one because it shows the power of 11ty — that there's not much to it on the surface, but it just works, works well, and works fast.
+One of the first tutorials I wrote on the subject was on [building a static API with a plain Node.js script](/blog/building-static-api-nodejs/). I like this one because it shows the power of 11ty — that there's not much to it on the surface, but it just works, works well, and works fast.
 
 Okay, let's dig in.
 
@@ -43,7 +43,7 @@ And then add a `.gitignore` file to ignore the `node_modules` directory:
 
 ## Step 2: Add Data Files
 
-To make it easier to work with Eleventy, we're going to add our data a little differently than we do in the other tutorials. In the other tutorials I've opted to go with individual [YAML](https://yaml.org/) files for each earworm. (The earworms example comes from [the intro](/how-to-build-static-api).)
+To make it easier to work with Eleventy, we're going to add our data a little differently than we do in the other tutorials. In the other tutorials I've opted to go with individual [YAML](https://yaml.org/) files for each earworm. (The earworms example comes from [the intro](/blog/how-to-build-static-api/).)
 
 But Eleventy is already setup to consume data files living in a `_data` directory. And it's a little easier to iterate over them if the data is all together. So let's put it in a single `earworms.json` file:
 
@@ -177,12 +177,12 @@ And that's it, really! Now you have a website that is acting as an API — a _st
 
 You have a working static API with Eleventy, but it's just sitting on your computer. The logical next step would be to deploy the API so it is accessible on the web.
 
-To do so, check out the guide on [deploying a static site to Netlify](/deploy-static-api-netlify) and the other on [deploying to Vercel](/deploy-static-api-zeit) (which used to be ZEIT).
+To do so, check out the guide on [deploying a static site to Netlify](/blog/deploy-static-api-netlify/) and the other on [deploying to Vercel](/blog/deploy-static-api-zeit/) (which used to be ZEIT/).
 
 Following successful deployment, I would look to redirect the home page to `/earworms.json` and to also ensure that all routes without the `.json` extension either render the proper file _or_ redirect to the `.json` extension (e.g. `/earworms` should redirect to `/earworms.json`).
 
 ---
 
-You can also reference other tutorials on static APIs from [the intro article](/how-to-build-static-api#tutorials).
+You can also reference other tutorials on static APIs from [the intro article](/blog/how-to-build-static-api#tutorials/).
 
 And you can reference the code I used to build this tutorial [here](https://github.com/seancdavis/cobwwweb-examples/tree/087a5503c3000c47ff5e7f7f379f6289ab0055ac/eleventy-static-api), which includes an example of building out redirects for GitHub.
