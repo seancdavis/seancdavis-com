@@ -102,6 +102,10 @@
     .table {
       @apply inline-block;
     }
+
+    & + .filename {
+      margin-top: -2rem;
+    }
   }
 
   .filename {
