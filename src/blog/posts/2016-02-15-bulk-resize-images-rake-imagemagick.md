@@ -27,9 +27,7 @@ gem 'imagemagick'
 
 Once you've added those, install them to your project. You'll want [Bundler](http://bundler.io/) to help with this.
 
-```text
-$ bundle install
-```
+    $ bundle install
 
 To configure rake, you just need a `Rakefile` at your project's root. Throw this quick one-liner in there.
 

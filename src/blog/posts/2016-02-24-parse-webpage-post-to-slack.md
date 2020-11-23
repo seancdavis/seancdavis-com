@@ -24,7 +24,7 @@ But the power in this is going to be in automatic updating. That means that you'
 
 See [this guide](/command-line-scripts-using-ruby.html) on setting up command line scripts using Ruby. Then, when you add that script to a server running [Cron](https://en.wikipedia.org/wiki/Cron), you'll just want to run it every so often. And you can do that by pointing right to the file. For example, say you threw the file in `/home/slack/bin/post_to_slack`. And let's say you want to run it at 4:00am every morning, then you'd open up your cronjob editor (`crontab -e`) and add:
 
-```text
+```
 0 4 * * * /bin/bash -l -c '/home/slack/bin/post_to_slack'
 ```
 

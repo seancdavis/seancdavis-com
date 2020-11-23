@@ -101,7 +101,7 @@ end
 
 This produces the following output for me:
 
-```text
+```
 Man Accused in Kalamazoo Shootings Has Driven for Uber
 Donald Trump's Victory Spurs Renewed Scrambling Among Republicans
 Why Clinton, Not Sanders, Probably Won the Hispanic Vote in Nevada
