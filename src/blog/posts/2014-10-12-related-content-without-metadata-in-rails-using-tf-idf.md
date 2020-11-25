@@ -1,7 +1,7 @@
 ---
 title: Related Content (without metadata) in Rails using tf-idf
 tags:
-  - ruby_on_rails
+  - ruby-on-rails
 description: Sometimes metadata isn't available. Other times you don't want to rely on it. Here's a method for finding related content using term frequency / inverse document frequency.
 ---
 

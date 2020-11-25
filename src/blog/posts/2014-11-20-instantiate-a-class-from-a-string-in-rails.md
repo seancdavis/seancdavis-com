@@ -1,7 +1,7 @@
 ---
 title: Instantiate a Class from a String in Rails
 tags:
-  - ruby_on_rails
+  - ruby-on-rails
 description: Rails classes need to be called dynamically sometimes. Learn how to do it using the constantize inflector.
 ---
 

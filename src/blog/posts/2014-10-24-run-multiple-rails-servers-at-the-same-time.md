@@ -1,7 +1,7 @@
 ---
 title: Run Multiple Rails Servers at the Same Time
 tags:
-  - ruby_on_rails
+  - ruby-on-rails
 description: It's annoying to shut down and start up your Rails server when jumping between projects. Learn how to run multiple servers at the same time.
 ---
 

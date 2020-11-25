@@ -1,7 +1,7 @@
 ---
 title: Convert PDF to Image with Dragonfly and Rails
 tags:
-  - ruby_on_rails
+  - ruby-on-rails
 description: Converting a PDF to an image using Rails and Dragonfly is actually quite simple. Check it out.
 ---
 

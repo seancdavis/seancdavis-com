@@ -3,7 +3,7 @@ title: Render an Inline SVG in Rails (or Middleman)
 description: You can avoid multiple requests to your server by rendering SVG images inline to the rest of your HTML.
 tags:
   - ruby
-  - ruby_on_rails
+  - ruby-on-rails
   - middleman
 ---
 

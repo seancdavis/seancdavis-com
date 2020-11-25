@@ -1,7 +1,7 @@
 ---
 title: Why I Don't Use has_and_belongs_to_many in Rails
 tags:
-  - ruby_on_rails
+  - ruby-on-rails
 description: "The magic of Rails makes it easy to create simple many-to-many relationships, but I almost never use it, and here's why."
 ---
 

@@ -3,7 +3,7 @@ title: 3 Reasons Why Turbolinks Is Not Worth The Effort
 description: "Turbolinks is a great idea in theory, but it comes with enough problems to offset its benefits."
 tags:
   - javascript
-  - ruby_on_rails
+  - ruby-on-rails
 ---
 
 I would assume, if you're reading this, that you're familiar with [Turbolinks](https://github.com/turbolinks/turbolinks-classic). If not, it's README explains it well:

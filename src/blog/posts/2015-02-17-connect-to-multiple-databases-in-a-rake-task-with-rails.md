@@ -2,7 +2,7 @@
 title: Connect to Multiple Databases in a Rake Task with Rails
 tags:
   - rake
-  - ruby_on_rails
+  - ruby-on-rails
 description: "Sometimes you need access to multiple database within a single rake task, for whatever reason. Here's how you do it."
 ---
 

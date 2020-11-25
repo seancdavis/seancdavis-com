@@ -1,7 +1,7 @@
 ---
 title: Order Rails Query by Virtual Attribute
 tags:
-  - ruby_on_rails
+  - ruby-on-rails
 description: Rails' scopes don't work well with virtual attributes since they resolve to a SQL query. Instead you can throw them in an array and then sort by a virtual attribute.
 ---
 

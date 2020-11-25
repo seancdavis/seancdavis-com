@@ -3,7 +3,7 @@ title: Use Slack For Rails Error Notification
 description: Post a message to one of your Slack channels when your Rails app encounters a 500 error.
 tags:
   - ruby
-  - ruby_on_rails
+  - ruby-on-rails
   - slack
 ---
 

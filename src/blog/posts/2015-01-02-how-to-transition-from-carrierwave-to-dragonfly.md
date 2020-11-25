@@ -1,7 +1,7 @@
 ---
 title: How to Transition from CarrierWave to Dragonfly
 tags:
-  - ruby_on_rails
+  - ruby-on-rails
 description: It can be a process to move away from CarrierWave once you're already using it. Here's a step-by-step process to make it easy to transition to Dragonfly.
 ---
 

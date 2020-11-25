@@ -3,7 +3,7 @@ title: "Rails on Heroku - Redirect Root Domain to www"
 description: 'How to use a "www" subdomain as your primary domain on a Rails app hosted with Heroku.'
 tags:
   - heroku
-  - ruby_on_rails
+  - ruby-on-rails
 ---
 
 I deployed a [Ruby on Rails](https://rubyonrails.org/) application to [Heroku](https://www.heroku.com/home) that was being served via [a custom domain](https://devcenter.heroku.com/articles/custom-domains), using the `www` subdomain of a domain that I owned (e.g. www.example.com).

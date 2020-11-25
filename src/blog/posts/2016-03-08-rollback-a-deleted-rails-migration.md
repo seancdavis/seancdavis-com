@@ -2,7 +2,7 @@
 title: Rollback A Deleted Rails Database Migration
 description: "You got yourself into that pickle where you created a migration, migrated, deleted the migration, then tried to rollback. Here's how you get around it!"
 tags:
-  - ruby_on_rails
+  - ruby-on-rails
 ---
 
 I've run into this pickle a few times. Here's how the story goes:

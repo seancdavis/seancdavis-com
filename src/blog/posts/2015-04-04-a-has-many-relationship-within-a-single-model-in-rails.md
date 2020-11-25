@@ -1,7 +1,7 @@
 ---
 title: A has_many Relationship within a Single Model in Rails
 tags:
-  - ruby_on_rails
+  - ruby-on-rails
 description: Here are a couple methods for dealing with uni-directional many-to-many  associations in Rails.
 ---
 

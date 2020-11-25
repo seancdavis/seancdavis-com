@@ -2,7 +2,7 @@
 title: Connect to a Remote MySQL Database in Rails
 tags:
   - mysql
-  - ruby_on_rails
+  - ruby-on-rails
 description: Using a remote database with rails is useful for collaborating on projects or for keeping all your data in one place. Here's how to get it set up from scratch.
 ---
 

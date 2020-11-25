@@ -2,7 +2,7 @@
 title: Bi-Directional has_and_belongs_to_many on a Single Model in Rails
 description: "Bi-directional HABTM relationships are easy in Rails, but when you need to do it on a single model, that's when it gets tricky. Here's one approach."
 tags:
-  - ruby_on_rails
+  - ruby-on-rails
 ---
 
 [Hold on to your butts](https://youtu.be/-W6as8oVcuM), because this ain't simple.

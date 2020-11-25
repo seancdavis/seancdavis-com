@@ -1,7 +1,7 @@
 ---
 title: Rails has_many :through Polymorphic Association
 tags:
-  - ruby_on_rails
+  - ruby-on-rails
 description: How to maintain HMT behavior on a polymorphic association.
 ---
 

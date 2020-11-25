@@ -2,7 +2,7 @@
 title: Disable Rake Commands in a Rails Project
 tags:
   - rake
-  - ruby_on_rails
+  - ruby-on-rails
 description: Sometimes you want to disable some of the default rake tasks in a rails project. Here's a quick way to do just that.
 ---
 

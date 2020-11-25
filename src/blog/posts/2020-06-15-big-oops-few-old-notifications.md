@@ -3,7 +3,7 @@ title: "Big Oops: Just a Few (Old) Notifications"
 description: "I've learned a few things the hard way. How to properly use Active Record callbacks with Ruby on Rails is one of those things."
 tags:
   - big-oops
-  - ruby_on_rails
+  - ruby-on-rails
 ---
 
 In this very first [#BigOops](/blog/tag/big-oops/) story, I figured I'd tell one of my own stories. During the time I spent working on my podcast, [Squirrel Stories](https://www.squirrelstories.fm/), I found it best to embarrass myself before embarrassing others. While this isn't the same format or audience, it seems appropriate to do the same.
