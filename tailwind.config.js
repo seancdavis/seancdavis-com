@@ -15,6 +15,7 @@ module.exports = {
         gray: {
           blue: "var(--color-gray-blue)",
           dark: "var(--color-gray-dark)",
+          medium: "var(--color-gray-medium)",
           default: "var(--color-gray)",
           light: "var(--color-gray-light)"
         },
@@ -30,6 +31,15 @@ module.exports = {
     },
     fontFamily: {
       headings: ["DM Serif Display", "serif"],
+      mono: [
+        "Operator Mono",
+        "Fira Code",
+        "Consolas",
+        "Monaco",
+        "Andale Mono",
+        "Ubuntu Mono",
+        "monospace"
+      ],
       sans: ["Lato", "sans-serif"],
       serif: ["Source Serif Pro", "serif"],
       subheadings: ["Lato", "sans-serif"]

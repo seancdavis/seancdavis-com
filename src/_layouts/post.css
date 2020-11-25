@@ -1,0 +1,207 @@
+.layout--post--body {
+  > *:not(pre):not(blockquote):not(.cp_embed_wrapper):not(.filename):not(.override-body-constraint) {
+    @apply block
+      max-w-2xl
+      mx-4
+      w-full;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mb-1;
+
+    code {
+      font-size: 80%;
+    }
+  }
+
+  h2 {
+    @apply mt-10
+      text-3xl;
+  }
+
+  h3 {
+    @apply mt-6
+      text-2xl;
+  }
+
+  h4 {
+    @apply mt-4
+      text-xl;
+  }
+
+  h5 {
+    @apply mt-2
+      text-lg;
+  }
+
+  a {
+    border-bottom: 1px dotted var(--color-green);
+
+    &:hover {
+      @apply border-solid;
+    }
+  }
+
+  code {
+    @apply break-all
+      inline;
+  }
+
+  /* --- Lists --- */
+
+  ul,
+  ol {
+    @apply mb-6
+      pl-5;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  li {
+    @apply mb-2;
+
+    ul {
+      @apply mb-0
+        mt-2;
+    }
+  }
+
+  /* --- Code Blocks --- */
+  pre {
+    @apply my-8
+      px-4
+      py-8;
+
+    &:not([class*="language-"]) {
+      background-color: var(--color-code-block-bg);
+      overflow-x: scroll;
+
+      > code {
+        @apply text-white;
+      }
+    }
+
+    > code {
+      @apply bg-transparent
+        inline-block
+        mr-4
+        p-0
+        rounded-none
+        text-sm;
+
+      line-height: 1.666;
+    }
+
+    /* This is a class used by Prism and Tailwind. This overrides the Tailwind
+    defaults. */
+    .table {
+      @apply inline-block;
+    }
+
+    /* Successive code blocks that include filenames are pushed together. */
+    & + .filename {
+      margin-top: -2rem;
+    }
+  }
+
+  .filename {
+    @apply font-mono
+      mb-0
+      mt-8
+      px-4
+      py-2
+      rounded-none
+      text-right
+      text-sm
+      text-white;
+
+    background-color: var(--color-code-block-bg);
+
+    > code {
+      @apply bg-transparent
+        block
+        opacity-50
+        p-0
+        text-sm
+        text-white;
+    }
+
+    & + pre {
+      @apply mt-0
+        pt-4;
+    }
+  }
+
+  /* --- Block Quotes --- */
+  blockquote {
+    @apply bg-gray-medium
+      italic
+      my-8
+      px-4
+      py-8
+      text-gray-dark
+      text-xl;
+
+    > * {
+      @apply block
+        max-w-2xl
+        mx-4;
+
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+
+    p {
+      @apply max-w-2xl
+        mx-auto;
+    }
+
+    code {
+      @apply bg-gray-dark
+        text-gray-light;
+    }
+  }
+}
+
+/* ---------------------------------------- | Medium */
+
+@screen md {
+  .layout--post--body {
+    > *:not(pre):not(blockquote):not(.cp_embed_wrapper):not(.filename):not(.override-body-constraint) {
+      @apply mx-auto;
+    }
+
+    pre {
+      @apply px-8;
+
+      code {
+        @apply block
+          max-w-3xl
+          mx-auto;
+
+        font-size: 1rem;
+      }
+    }
+
+    blockquote {
+      @apply px-8;
+
+      > * {
+        @apply mx-auto;
+      }
+    }
+
+    .filename > code {
+      @apply max-w-2xl
+        mx-auto;
+    }
+  }
+}

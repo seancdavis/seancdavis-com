@@ -1,74 +1,74 @@
-const fs = require("fs")
-const htmlmin = require("html-minifier")
+const glob = require("glob")
+const lodash = require("lodash")
 const MarkdownIt = require("markdown-it")
-const nunjucks = require("nunjucks")
+const MarkdownItAttrs = require("markdown-it-attrs")
 const path = require("path")
 
-const components = require("./src/_includes/components/components.config")
+const pluginRss = require("@11ty/eleventy-plugin-rss")
+const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
 
-const isProduction = process.env.ELEVENTY_ENV === "production"
+const config = require("./eleventy.config")
 
+/**
+ * Require all necessary files
+ */
+const getUtilFiles = () => {
+  // Utils directory.
+  const dir = path.join(__dirname, `./utils`)
+  // Pattern of files to require from the directory.
+  const globFilesPattern = path.join(dir, "**/*.js")
+  // Pattern of files to ignore from the directory.
+  const ignoreFiles = ["**/*.spec.js", "_**/*.js", "**/_*/**/*.js", "**/_*.js"]
+  const ignoreFilesPattern = ignoreFiles.map(pattern => path.join(dir, pattern))
+  // Find all relevant files.
+  let files = glob.sync(globFilesPattern, { ignore: ignoreFilesPattern })
+  // Ensure that they are configured correctly. Remove and log a message for
+  // those that are not configured properly.
+  files = files.map(file => {
+    // Import the file.
+    const module = require(file)
+    // If everything looks good, return the module.
+    if (typeof lodash.get(module, "default") === "function") return module
+    // Otherwise, we have a problem. Gather the appropriate message.
+    const error = module.default
+      ? `Export "default" must be a function.`
+      : `Missing "default" named export.`
+    // Log the message.
+    console.error(`Could not load ${path.basename(file)}. ${error}`)
+    // And return null.
+    return null
+  })
+  // Return all valid imports.
+  return files.filter(util => util)
+}
+
+/**
+ * Eleventy configuration. More info here: https://www.11ty.dev/docs/config/
+ *
+ * @param {object} eleventyConfig Config object coming from Eleventy
+ */
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(pluginSyntaxHighlight)
+  eleventyConfig.addPlugin(pluginRss)
+
   eleventyConfig.addPassthroughCopy("./src/css")
   eleventyConfig.addPassthroughCopy("./src/images")
   eleventyConfig.addPassthroughCopy("./src/fonts")
   eleventyConfig.addPassthroughCopy({ static: "/" })
 
-  /**
-   * Reads a file in the _includes directory and returns the result.
-   */
-  const readIncludeFile = filePath => {
-    return fs.readFileSync(path.join(__dirname, `src/_includes/${filePath}`), "utf8")
-  }
+  // Markdown parser
+  const MarkdownLib = MarkdownIt({ html: true }).use(MarkdownItAttrs)
+  eleventyConfig.setLibrary("md", MarkdownLib)
 
-  /**
-   * Renders component by passing in named arguments to the "component"
-   * shortcode.
-   */
-  eleventyConfig.addNunjucksShortcode("component", (name, props) => {
-    let component = components[name]
-    if (!component) return console.error(`Component not properly configured: ${name}`)
+  // Merge the cascade of properties rather than overwriting. This is how we're
+  // able to set tags for an entire directory, while then adding to those tags
+  // for the individual items in the directory.
+  eleventyConfig.setDataDeepMerge(true)
 
-    if (component.transformer) props = component.transformer(props || {})
+  // Import utilities from src/utils. See getUtilFiles() above.
+  getUtilFiles().map(util => util.default(eleventyConfig))
 
-    return nunjucks.renderString(readIncludeFile(component.template), { ...props })
-  })
-
-  /**
-   * Captures an input string and converts markdown to HTML
-   */
-  eleventyConfig.addPairedNunjucksShortcode("markdown", input => {
-    const md = new MarkdownIt()
-    return md.render(input)
-  })
-
-  /**
-   * Reads an SVG from file and inserts its content directly on the page.
-   */
-  eleventyConfig.addNunjucksShortcode("svg", name => readIncludeFile(`svg/${name}.svg`))
-
-  /**
-   * Minify files in production.
-   */
-  eleventyConfig.addTransform("compress-html", (content, outputPath) => {
-    if (!outputPath.endsWith(".html") || !isProduction) return content
-    const minOpts = {
-      useShortDoctype: true,
-      removeComments: true,
-      collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: true
-    }
-    return htmlmin.minify(content, minOpts)
-  })
-
-  return {
-    dir: {
-      includes: "_includes",
-      input: "src",
-      layouts: "_layouts",
-      output: "dist"
-    },
-    markdownTemplateEngine: "njk"
-  }
+  // Return the config object. (This is what actually sets the config for
+  // Eleventy. It was written above for reference within utils.)
+  return config
 }

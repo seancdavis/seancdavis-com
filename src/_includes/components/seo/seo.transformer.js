@@ -1,7 +1,7 @@
 const ImgixClient = require("imgix-core-js")
 const lodash = require("lodash")
 
-module.exports = ({ defaults, path, title, image, description, overrides }) => {
+module.exports = ({ defaults, path, title, image, description, overrides = {} }) => {
   const title_template = overrides.title_template || defaults.title_template
 
   const getTitle = str => title_template.replace("%s", str)

@@ -9,7 +9,7 @@ seo:
 {# --- Jumbotron --- #}
 
 <div class="layout--home--jumbotron">
-  {% component "particles", images = particles.images, count = 15 %}
+  {% particles images=particles.images, count=15 %}
 
   <div class="container max-w-5xl">
     <div class="flex items-center relative justify-between max-w-5xl">
@@ -18,12 +18,11 @@ seo:
           Sean C Davis.
         </h1>
         <p class="text-2xl sm:text-3xl md:text-4xl">
-          {% component "typewriter",
-          texts = typewriter.texts %}
+          {% typewriter texts=typewriter.texts %}
         </p>
       </div>
       <div class="layout--home--jumbotron-image">
-        {% component "image", path = "seancdavis-2020-bg-transparent.png", sm = "224px", md = "320px", max = "320px" %}
+        {% image path="seancdavis-2020-bg-transparent.png", sm="224px", md="320px", max="320px" %}
       </div>
     </div>
   </div>
@@ -68,7 +67,7 @@ seo:
         <p class="md:text-lg md:text-xl max-w-md mx-auto">I can do that, too. But I'm not very good at checking it. Maybe you should make it rhyme.</p>
       </div>
       <div>
-        {% component "button", url = "mailto:hello@seancdavis.com", label = "Email Me", theme = "lime" %}
+        {% button url="mailto:hello@seancdavis.com", label="Email Me", theme="lime" %}
       </div>
     </div>
   </div>

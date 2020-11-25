@@ -47,3 +47,23 @@ svg {
   @apply h-auto
     w-full;
 }
+
+code {
+  @apply align-middle
+    bg-gray-medium
+    inline-block
+    px-2
+    py-1
+    rounded-md
+    text-gray-dark
+    text-xs;
+
+  margin-top: -2px;
+}
+
+hr {
+  @apply my-8;
+
+  border-width: 2px;
+  border-color: #d3d6db;
+}
