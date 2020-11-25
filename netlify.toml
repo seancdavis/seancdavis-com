@@ -28,3 +28,13 @@
     [plugins.inputs]
       checkPaths = ['/']
       # resultMode = "warn"
+
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  buildDir = "dist"
+  trailingSlash = true
+  exclude = [
+    "404.html"
+  ]

@@ -3,7 +3,9 @@ const lodash = require("lodash")
 const MarkdownIt = require("markdown-it")
 const MarkdownItAttrs = require("markdown-it-attrs")
 const path = require("path")
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
+
+const pluginRss = require("@11ty/eleventy-plugin-rss")
+const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
 
 const config = require("./eleventy.config")
 
@@ -46,7 +48,8 @@ const getUtilFiles = () => {
  * @param {object} eleventyConfig Config object coming from Eleventy
  */
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(syntaxHighlight)
+  eleventyConfig.addPlugin(pluginSyntaxHighlight)
+  eleventyConfig.addPlugin(pluginRss)
 
   eleventyConfig.addPassthroughCopy("./src/css")
   eleventyConfig.addPassthroughCopy("./src/images")

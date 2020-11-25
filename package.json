@@ -5,9 +5,11 @@
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.9",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "@analytics/google-analytics": "^0.4.1",
     "@netlify/plugin-lighthouse": "^1.4.2",
+    "@netlify/plugin-sitemap": "^0.5.1",
     "analytics": "^0.5.5",
     "autoprefixer": "^9.7.6",
     "cssnano": "^4.1.10",
