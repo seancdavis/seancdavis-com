@@ -3,21 +3,28 @@
   publish = "dist"
 
 [[plugins]]
-  package = "netlify-plugin-checklinks"
-
-[[plugins]]
   package = "/.netlify/netlify-plugin-jest"
 
 [[plugins]]
-  package = "netlify-plugin-subfont"
-    [plugins.inputs]
-      entryPoints = ["dist/*.html"]
+  package = "netlify-plugin-checklinks"
 
 [[plugins]]
   package = "netlify-plugin-inline-critical-css"
+
+# This only runs against the home page by default.
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  # optional, fails build when a category is below a threshold
+  [plugins.inputs.thresholds]
+    performance = 0.95
+    accessibility = 1
+    best-practices = 1
+    seo = 1
+    # pwa = 0.9
 
 [[plugins]]
   package = "netlify-plugin-a11y"
     [plugins.inputs]
       checkPaths = ['/']
-      resultMode = "warn"
+      # resultMode = "warn"

@@ -4,6 +4,7 @@ description: "Learn how to generate static JSON pages from markdown files and ex
 tags:
   - gatsby
   - jamstack
+  - video-tutorial
 image: /blog/200827/meta--gatsby-dynamic-json-pages.jpg
 ---
 
@@ -78,7 +79,9 @@ The code you see below is wrapped up in a GitHub repository at [seancdavis/gatsb
 
 And if you prefer to watch and listen rather than read, here is the corresponding video tutorial:
 
-{% video_tutorial src="https://www.youtube.com/embed/qvSY-f4fHs8" %}
+{% video_tutorial
+    src="https://www.youtube.com/embed/qvSY-f4fHs8",
+    title="Create JSON Pages from Markdown Files with Gatsby" %}
 
 ### Step 1: Setup Project
 
@@ -268,7 +271,9 @@ If we wanted to achieve the same result, but our data source comes from an API, 
 
 This section also has a repository ([seancdavis/gatsby-json-pages-external-data](https://github.com/seancdavis/gatsby-json-pages-external-data)) and a video:
 
-{% video_tutorial src="https://www.youtube.com/embed/LI6RtnW062U" %}
+{% video_tutorial
+    src="https://www.youtube.com/embed/LI6RtnW062U",
+    title="Create JSON Pages from External Data with Gatsby" %}
 
 Consider if our post data lived in a headless CMS like [Sanity](https://www.sanity.io/). Instead of querying with `allMarkdownRemark`, we'd use `allSanityPost`. And the resulting data structure is a little different. Otherwise, it all looks pretty much the same.
 

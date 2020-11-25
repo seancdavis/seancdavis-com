@@ -1,5 +1,5 @@
 ---
 title: Video Tutorial
 pagination:
-  data: collections.video_tutorial
+  data: collections.video-tutorial
 ---
