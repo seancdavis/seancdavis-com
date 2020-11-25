@@ -18,11 +18,11 @@
       # resultMode = "warn"
 
 [[plugins]]
-package = "@netlify/plugin-sitemap"
+  package = "@netlify/plugin-sitemap"
 
   [plugins.inputs]
-  buildDir = "dist"
-  trailingSlash = true
-  exclude = [
-    "404.html"
-  ]
+    buildDir = "dist"
+    trailingSlash = true
+    exclude = [
+      "./dist/404.html"
+    ]
