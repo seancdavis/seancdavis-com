@@ -1,11 +1,17 @@
 ---
-title: "Server-Side Components with Eleventy"
+title: "3 Ways to Render Server-Side Components with Eleventy"
 description: "While Eleventy doesn't appear to be built for today's component-driven landscape, here are three approaches we can take to get closer."
 tags:
   - components
   - eleventy
   - javascript
+image: /blog/210110/meta--eleventy-server-components.jpg
 ---
+
+{% video_tutorial
+    src="https://www.youtube.com/embed/YDNouZ8ozv0",
+    title="Server-Side Components with Eleventy",
+    classes="mb-8" %}
 
 I love [Eleventy](https://www.11ty.dev/) as a static site generator! It makes no assumptions about what you what to do with it. Instead, it focuses on being a speedy build platform that outputs static files.
 
@@ -13,7 +19,7 @@ The downside to this approach is it's not super conducive to this component-driv
 
 What would be great is if we could have the best of both worlds — a component-driven system that renders the output of the components to static HTML during the build process.
 
-It turns out that we can totally do this! Here are three methods we can use to build a server-side component system in an Eleventy project:
+It turns out that we can totally do this! Here is a look at three different methods for building out a server-side component system in an Eleventy project:
 
 ## Method #1: Template Includes
 
