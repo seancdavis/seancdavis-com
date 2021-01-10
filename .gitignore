@@ -1,9 +1,16 @@
-/node_modules
-/dist
-/src/css
+# ---------------------------------------- | Shared
 
 .DS_Store
 .envrc
+node_modules
+
+# ---------------------------------------- | SCD Site
+
+# Build files
+/dist
+
+# Temp CSS directory
+/src/css
 
 # Netlify CLI Config
-.netlify/state.json
+/.netlify/state.json
