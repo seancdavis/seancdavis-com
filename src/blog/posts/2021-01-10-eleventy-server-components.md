@@ -15,7 +15,7 @@ image: /blog/210110/meta--eleventy-server-components.jpg
 
 I love [Eleventy](https://www.11ty.dev/) as a static site generator! It makes no assumptions about what you what to do with it. Instead, it focuses on being a speedy build platform that outputs static files.
 
-The downside to this approach is it's not super conducive to this component-driven world we live in. If we want to use a [JavaScript](/wtf-is-javascript) framework like [React](https://reactjs.org/) or [Vue](https://vuejs.org/), we then lose Eleventy's primary benefit — HTML that is immediately available when the browser loads the page. It also makes SEO inherently more difficult to solve.
+The downside to this approach is it's not super conducive to this component-driven world we live in. If we want to use a [JavaScript](/blog/wtf-is-javascript) framework like [React](https://reactjs.org/) or [Vue](https://vuejs.org/), we then lose Eleventy's primary benefit — HTML that is immediately available when the browser loads the page. It also makes SEO inherently more difficult to solve.
 
 What would be great is if we could have the best of both worlds — a component-driven system that renders the output of the components to static HTML during the build process.
 
@@ -153,7 +153,7 @@ Note that we're wrapping up all our arguments — in our example that's `label` 
 
 ### Building for Scale
 
-This solution is a little slicker than the first, but it's not built for scale. My [Eleventy starter kit](https://www.seancdavis.com/twenty-ninety) is built [to handle components](https://github.com/seancdavis/twenty-ninety#components), but [it's a bit more complicated](https://github.com/seancdavis/twenty-ninety/blob/main/utils/shortcodes/component.js). It looks into a specified components directory, extracts the component files, and makes them available as shortcodes automatically. That way I don't have to add to my Eleventy configuration every time I want a new component. I just have to add the component files.
+This solution is a little slicker than the first, but it's not built for scale. My [Eleventy starter kit](https://github.com/seancdavis/twenty-ninety) is built [to handle components](https://github.com/seancdavis/twenty-ninety#components), but [it's a bit more complicated](https://github.com/seancdavis/twenty-ninety/blob/main/utils/shortcodes/component.js). It looks into a specified components directory, extracts the component files, and makes them available as shortcodes automatically. That way I don't have to add to my Eleventy configuration every time I want a new component. I just have to add the component files.
 
 ### Gotcha!
 
