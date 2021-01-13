@@ -3,6 +3,7 @@ title: Building a Static API with Node.js
 description: Learn how to build a static API with Node.js. We'll write a node build script that converts local YAML files into a set of structured JSON output files.
 tags:
   - api
+  - jamstack
   - javascript
   - node
 ---

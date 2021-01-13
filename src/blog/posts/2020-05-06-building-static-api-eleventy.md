@@ -4,6 +4,7 @@ description: "Implement a Static API using the simple and fast static site gener
 tags:
   - api
   - eleventy
+  - jamstack
 ---
 
 This is one of several tutorials on how to build a static API. For links to the other tutorials, and for some background on this tutorial, see [the introduction article](/blog/how-to-build-static-api/).

@@ -3,6 +3,7 @@ title: Deploying a Static API to Netlify
 description: A super simple example of building a static API that walks through the deploy process using Netlify. Part of a series of tutorials on building and deploying static APIs.
 tags:
   - api
+  - jamstack
   - netlify
 ---
 

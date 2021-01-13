@@ -3,6 +3,7 @@ title: "Building a Static API with Middleman"
 description: "Learn to build a static API using the Middleman static site generator."
 tags:
   - api
+  - jamstack
   - middleman
   - ruby
   - video-tutorial
