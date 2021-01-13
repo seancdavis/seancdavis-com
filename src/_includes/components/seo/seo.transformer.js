@@ -38,9 +38,9 @@ module.exports = ({ defaults, path, title, image, description, overrides = {} })
     secureURLToken: process.env.IMGIX_TOKEN
   })
 
-  const buildImageUrl = path => {
+  const buildImageUrl = imgPath => {
     let params = { auto: "format,compress", w: 1200, h: 630, fit: "crop" }
-    const imgixPath = `/meta/${path}`.replace(/\/\/+/gi, "/")
+    const imgixPath = lodash.startsWith(imgPath, "/") ? imgPath : `/${imgPath}`
     return client.buildURL(imgixPath, params)
   }
 

@@ -1,15 +1,15 @@
-<title>{{ title }}</title>
+<title>{{ title | safe }}</title>
 
-<meta name="description" content="{{ description }}">
-<meta name="image" content="{{ image }}">
+<meta name="description" content="{{ description | safe }}">
+<meta name="image" content="{{ image | safe }}">
 
-<meta property="og:description" content="{{ og.description }}">
-<meta property="og:image" content="{{ og.image }}">
-<meta property="og:title" content="{{ og.title }}">
+<meta property="og:description" content="{{ og.description | safe }}">
+<meta property="og:image" content="{{ og.image | safe }}">
+<meta property="og:title" content="{{ og.title | safe }}">
 <meta property="og:type" content="{{ og.type }}">
-<meta property="og:url" content="{{ url }}">
+<meta property="og:url" content="{{ url | safe }}">
 
 <meta property="twitter:card" content="{{ twitter.card }}">
-<meta property="twitter:description" content="{{ twitter.description }}">
-<meta property="twitter:image" content="{{ twitter.image }}">
-<meta property="twitter:title" content="{{ twitter.title }}">
+<meta property="twitter:description" content="{{ twitter.description | safe }}">
+<meta property="twitter:image" content="{{ twitter.image | safe }}">
+<meta property="twitter:title" content="{{ twitter.title | safe }}">
