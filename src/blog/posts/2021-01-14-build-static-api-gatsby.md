@@ -8,13 +8,13 @@ tags:
 image: /blog/210114/meta--gatsby-static-api.jpg
 ---
 
-This article is part of a series of tutorials on building a _Static API_. You can view the full list of available static API tutorials in [the introductory article](/how-to-build-static-api), which also provides some background on the examples we're using here.
+This article is part of a series of tutorials on building a _Static API_. You can view the full list of available static API tutorials in [the introductory article](/blog/how-to-build-static-api), which also provides some background on the examples we're using here.
 
-If you'd like additional information on what a static API is, check out [_WTF is a Static API?_](/lets-talk-about-static-apis)
+If you'd like additional information on what a static API is, check out [_WTF is a Static API?_](/blog/lets-talk-about-static-apis)
 
 ---
 
-We're going to walk through building a static API using [GatsbyJS](https://www.gatsbyjs.org/). Gatsby is a [static site generator](https://www.staticgen.com/) written in [JavaScript](/wtf-is-javascript), built on top of [React](https://reactjs.org/), a JavaScript framework for building out UI components.
+We're going to walk through building a static API using [GatsbyJS](https://www.gatsbyjs.org/). Gatsby is a [static site generator](https://www.staticgen.com/) written in [JavaScript](/blog/wtf-is-javascript), built on top of [React](https://reactjs.org/), a JavaScript framework for building out UI components.
 
 If you're a visual learner and prefer the screencast approach, here is a video, which walks through _most of_ the steps in this tutorial.
 
@@ -46,7 +46,7 @@ Once that is running, visit [http://localhost:8000/](http://localhost:8000/) and
 
 ## Step 2: Add Data Files
 
-Now that we're rolling with Gatsby, let's add our data source, which we're going to consider to be local YAML files. The data examples come from [the intro article](/how-to-build-static-api).
+Now that we're rolling with Gatsby, let's add our data source, which we're going to consider to be local YAML files. The data examples come from [the intro article](/blog/how-to-build-static-api).
 
 We're using YAML in this project because that's been my approach throughout the various static API tutorials I've written. It likely makes more sense for you to use a data source familiar to your project. ([See the JSON pages article for a few examples](/blog/programmatically-create-json-pages-gatsby/).)
 
