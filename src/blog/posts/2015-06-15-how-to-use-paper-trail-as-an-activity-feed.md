@@ -138,7 +138,7 @@ Now, instead of finding a user like this:
 We can do this:
 
 ```erb
-<% user = @version_users.select { |u| u.id == version.whodunnit.to_i }.first %>
+<% user = @version_users.find { |u| u.id == version.whodunnit.to_i } %>
 ```
 
 It might look more complicated, but the point is that we're accessing the `@version_users` array, which is stored in memory, instead of hitting the database again.
