@@ -134,7 +134,7 @@ Therefore, if we want a [reCAPTCHA](https://www.google.com/recaptcha) field with
 
 I have found that this is easiest to work with through the [`react-google-recaptcha`](https://github.com/dozoisch/react-google-recaptcha) library. You can install this like so:
 
-    $ yarn add react-google-recaptcha
+    $ npm install react-google-recaptcha
 
 Next, import the package to the top of your page:
 
