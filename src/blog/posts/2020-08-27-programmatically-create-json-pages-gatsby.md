@@ -113,7 +113,7 @@ Use the [gatsby-transformer-remark plugin](https://www.gatsbyjs.org/packages/gat
 
 Or, if you prefer Yarn (like I do):
 
-    $ yarn add gatsby-transformer-remark
+    $ npm install gatsby-transformer-remark
 
 We'll also want the [gatsby-source-filesystem plugin](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/) to source the data before it is transformed. It's likely your project already has the filesystem plugin. If not, now is the time to install it.
 

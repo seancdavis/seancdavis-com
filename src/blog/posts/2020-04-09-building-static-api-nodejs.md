@@ -29,11 +29,9 @@ Since we're using a plain old node script here, there's no fancy command for get
 
 ### Create `package.json`
 
-Next, create a `package.json` file. You could do this manually, but I like to use Yarn's built-in `init` function:
+Next, create a `package.json` file. You could do this manually, or with an interactive process:
 
-    $ yarn init
-
-_Note: I prefer [Yarn](https://yarnpkg.com/) over [NPM](https://docs.npmjs.com/cli/npm). You are welcome to use `npm` in the place of `yarn` throughout this tutorial, though you'll have to look up the equivalent commands._
+    $ npm init
 
 You don't have to fill anything out when going through the `init` prompts. If you hit `return` through the steps, Yarn will fill in sensible defaults.
 
@@ -43,7 +41,7 @@ After completing that step, take a look at the `package.json` file. You should s
 
 We're going to use three libraries (plus a couple built-in Node libraries) for our build script. Install them:
 
-    $ yarn add js-yaml glob http-server
+    $ npm install js-yaml glob http-server
 
 ### Add `.gitignore`
 
@@ -98,7 +96,7 @@ spotify_url: https://open.spotify.com/track/7EqpEBPOohgk7NnKvBGFWo?si=eceqQWGATk
 
 ## Step 3: The Build Script
 
-First, let's get setup. We're going to add two scripts to our `package.json` file. We do this to abstract the `build` and `serve` commands so that all you have to worry about is running `yarn build` or `yarn serve`, which are easier to remember (and can be consistent from project to project).
+First, let's get setup. We're going to add two scripts to our `package.json` file. We do this to abstract the `build` and `serve` commands so that all you have to worry about is running `npm run build` or `npm run serve`, which are easier to remember (and can be consistent from project to project).
 
 `package.json` {.filename}
 
@@ -201,7 +199,7 @@ _Note: There isn't a ton of benefit from that in this case because we're abstrac
 
 Okay, now you can run the script:
 
-    $ yarn build
+    $ npm run build
 
 If everything went successfully, you should now see a `build` directory with the `earworms.json` file, along with the individual files.
 
@@ -209,7 +207,7 @@ If everything went successfully, you should now see a `build` directory with the
 
 And you can check that everything is looking good by running the server in your build directory and checking the output. To start the server, run the `serve` command:
 
-    $ yarn serve
+    $ npm run serve
 
 And then navigate to the appropriate place in your browser. Your index page is at [localhost:8000/earworms.json](http://localhost:8000/earworms.json) and the individual pages are nested under `earworms`, e.g. [localhost:8000/earworms/1.json](http://localhost:8000/earworms/1.json).
 

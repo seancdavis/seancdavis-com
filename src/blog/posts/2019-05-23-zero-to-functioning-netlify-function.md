@@ -28,9 +28,9 @@ Netlify does a good job laying out [how to get started with JS functions](https:
 
 ### Add `netlify-lambda` Package
 
-I typically like to use `yarn` to install packages, but you may want to use `npm`, which tends to be the more popular approach. So, first, let’s install `netlify-lambda`:
+First, let’s install `netlify-lambda`:
 
-    $ npm i netlify-lambda
+    $ npm install netlify-lambda
 
 Note that this will only work if you have a `package.json` file. If you don’t already have one in your project, you can generate it by running `npm init` and answering the series of questions prompted.
 
