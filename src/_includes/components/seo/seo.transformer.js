@@ -1,12 +1,16 @@
 const ImgixClient = require("imgix-core-js")
 const lodash = require("lodash")
 
-module.exports = ({ defaults, path, title, image, description, overrides }) => {
+module.exports = ({ defaults, path, title, image, description, overrides = {} }) => {
   const title_template = overrides.title_template || defaults.title_template
 
-  const getTitle = str => title_template.replace("%s", str)
+  const getTitle = str => safeString(title_template.replace("%s", str))
 
   const buildUrl = path => `${defaults.base_url}${path}`
+
+  // Removes double quotes from strings. This is because the content is rendered
+  // directly to the page. This protects against invalid HTML.
+  const safeString = str => str.replace(/\"/g, "")
 
   const pageProps = {
     description: description,
@@ -38,26 +42,26 @@ module.exports = ({ defaults, path, title, image, description, overrides }) => {
     secureURLToken: process.env.IMGIX_TOKEN
   })
 
-  const buildImageUrl = path => {
+  const buildImageUrl = imgPath => {
     let params = { auto: "format,compress", w: 1200, h: 630, fit: "crop" }
-    const imgixPath = `/meta/${path}`.replace(/\/\/+/gi, "/")
-    return client.buildURL(imgixPath, params)
+    const imgixPath = lodash.startsWith(imgPath, "/") ? imgPath : `/${imgPath}`
+    return safeString(client.buildURL(imgixPath, params))
   }
 
   // ---------------------------------------- | Response Object
 
   return {
-    description: overrides.description || description || defaults.description,
+    description: safeString(overrides.description || description || defaults.description),
     image: buildImageUrl(overrides.image || image || defaults.image),
     og: {
-      description: ogProp("description"),
+      description: safeString(ogProp("description")),
       image: buildImageUrl(ogProp("image")),
       title: getTitle(ogProp("title")),
       type: lodash.get(overrides, "og.type") || lodash.get(defaults, "og.type")
     },
     title: getTitle(overrides.title || title),
     twitter: {
-      description: twitterProp("description"),
+      description: safeString(twitterProp("description")),
       image: buildImageUrl(twitterProp("image")),
       title: getTitle(twitterProp("title")),
       card: lodash.get(overrides, "twitter.card") || lodash.get(defaults, "twitter.card")

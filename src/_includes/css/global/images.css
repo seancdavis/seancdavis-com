@@ -1,3 +1,6 @@
-.icon path {
-  fill: currentColor;
+.icon {
+  path,
+  polygon {
+    fill: currentColor;
+  }
 }

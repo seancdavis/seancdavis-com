@@ -1,0 +1,9 @@
+{% set body_classes = "bg-gray-light" %}
+
+{% include "layout/head.njk" %}
+{% include "layout/header.njk" %}
+
+{{ content | safe }}
+
+{% include "layout/footer.njk" %}
+{% include "layout/foot.njk" %}

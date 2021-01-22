@@ -5,3 +5,12 @@
 .links-underline a {
   @apply underline;
 }
+
+.link-transition {
+  @apply duration-300
+    transition-all;
+
+  &:hover {
+    @apply opacity-75;
+  }
+}

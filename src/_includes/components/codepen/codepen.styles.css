@@ -1,0 +1,5 @@
+.cp_embed_wrapper {
+  @apply max-w-4xl
+    mb-4
+    mx-auto;
+}

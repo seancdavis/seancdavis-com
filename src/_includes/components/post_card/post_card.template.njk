@@ -1,0 +1,25 @@
+<div class="max-w-xl mb-6 bg-white shadow-sm">
+  {% if image %}
+    <div class="mb-4">
+      {{ image | safe }}
+    </div>
+  {% endif %}
+  <div class="p-4">
+    {% if tags.length > 0 %}
+      <div class="mb-4 text-sm">
+        {{ tags | safe }}
+      </div>
+    {% endif %}
+    <h2 class="text-2xl mb-1">
+      <a href="{{ url }}" class="link-transition">
+        {{ data.title }}
+      </a>
+    </h2>
+    {% if data.description %}
+      <p class="mb-6">{{ data.description }}</p>
+    {% endif %}
+    <span class="block text-gray-blue font-sans text-sm">
+      {{ date.toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" }) }}
+    </span>
+  </div>
+</div>

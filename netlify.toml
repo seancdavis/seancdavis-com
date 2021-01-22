@@ -6,9 +6,7 @@
   package = "/.netlify/netlify-plugin-jest"
 
 [[plugins]]
-  package = "netlify-plugin-subfont"
-    [plugins.inputs]
-      entryPoints = ["dist/*.html"]
+  package = "netlify-plugin-checklinks"
 
 [[plugins]]
   package = "netlify-plugin-inline-critical-css"
@@ -17,4 +15,14 @@
   package = "netlify-plugin-a11y"
     [plugins.inputs]
       checkPaths = ['/']
-      resultMode = "warn"
+      # resultMode = "warn"
+
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+    buildDir = "dist"
+    trailingSlash = true
+    exclude = [
+      "./dist/404.html"
+    ]

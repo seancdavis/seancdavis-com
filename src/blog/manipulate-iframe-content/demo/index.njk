@@ -1,0 +1,28 @@
+{% set body_classes = "bg-gray" %}
+
+{% include "layout/head.njk" %}
+
+<div class="p-4">
+  <input type="text" id="my-message" placeholder="Type message ..." onkeyup="sendToFrame(event)">
+  <iframe src="iframe.html" frameborder="0" id="my-iframe"></iframe>
+</div>
+
+
+<style>
+  iframe {
+    background-color: #ededed;
+    padding: 1rem;
+    width: 100%;
+  }
+</style>
+
+<script>
+  function sendToFrame(event) {
+    var iframe = document.getElementById('my-iframe');
+    if (iframe && iframe.contentWindow) {
+      iframe.contentWindow.postMessage(event.target.value, '*');
+    }
+  }
+</script>
+
+{% include "layout/foot.njk" %}

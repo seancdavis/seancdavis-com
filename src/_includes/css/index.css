@@ -1,11 +1,12 @@
 @import "./variables.css";
 @import "./fonts.css";
 
-@import "./tailwind/base";
+@import "./lib/prismjs-theme";
+@import "./lib/tailwind-base";
 
 @import "./global/index.css";
 @import "../layout/index.css";
 @import "../../_layouts/index.css";
 @import "../components/index.css";
 
-@import "./tailwind/main";
+@import "./lib/tailwind-main";

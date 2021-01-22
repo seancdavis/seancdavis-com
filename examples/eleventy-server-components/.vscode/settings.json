@@ -1,0 +1,7 @@
+{
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": false,
+  "[nunjucks]": {
+    "editor.formatOnSave": false
+  }
+}

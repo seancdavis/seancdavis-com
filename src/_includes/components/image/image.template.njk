@@ -1,10 +1,10 @@
-<picture>
+<picture class="{{ classes }}">
   {% for source in sources %}
-    <source
-      {% if source.media %}media="{{ source.media }}"{% endif %}
-      {% if source.sizes %}sizes="{{ source.sizes }}"{% endif %}
-      srcset="{{ source.srcset }}"
-    >
+  <source
+    {% if source.media %}media="{{ source.media }}"{% endif %}
+    {% if source.sizes %}sizes="{{ source.sizes }}"{% endif %}
+    srcset="{{ source.srcset }}"
+  >
   {% endfor %}
-  <img src="{{ src }}" alt="">
+  <img src="{{ src }}" alt="{{ alt }}">
 </picture>

@@ -1,0 +1,79 @@
+{% set body_classes = "bg-gray" %}
+
+{% include "layout/head.njk" %}
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+
+<div class="container">
+  <button class="btn-light" data-theme="light">Light Theme</button>
+  <button class="btn-light" data-theme="dark">Dark Theme</button>
+  <br>
+  <br>
+  <iframe src="iframe.html" frameborder="0" id="my-iframe"></iframe>
+</div>
+
+<style>
+  .container {
+    padding: 1rem;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  .btn-light {
+    background-color: #ededed;
+    border-radius: .5rem;
+    color: #444;
+    padding: .5rem 1rem;
+  }
+
+  .btn-light:first-child {
+    margin-right: 1rem;
+  }
+
+  .btn-light:hover,
+  .btn-light:active,
+  .btn-light:focus {
+    background-color: #ddd;
+    color: #444;
+  }
+
+  .btn-light.active {
+    background-color: #00A388;
+    color: #fff;
+  }
+
+  .btn-light.active:hover,
+  .btn-light.active:active,
+  .btn-light.active:focus {
+    background-color: #00826d;
+    color: #fff;
+  }
+</style>
+
+<script>
+  (function() {
+    $('#my-iframe').on('load', function() {
+      activateTheme('light');
+    });
+
+    $('button[data-theme]').on('click', function(event) {
+      activateTheme($(this).data('theme'));
+    });
+
+    function activateTheme(theme) {
+      var iframe = document.getElementById('my-iframe');
+      if (iframe && iframe.contentWindow) {
+        $('button[data-theme]').removeClass('active');
+        $('[data-theme="' + theme + '"]').addClass('active');
+        iframe.contentWindow.postMessage(theme, '*');
+      }
+    }
+  })();
+</script>
+
+{% include "layout/foot.njk" %}

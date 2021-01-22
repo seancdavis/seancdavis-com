@@ -1,0 +1,8 @@
+<div class="{{ classes }}">
+  {{ image | safe }}
+  {% if caption %}
+  <figcaption class="block mt-1 mb-0 text-xs text-center text-gray-dark">
+    {{ caption | safe }}
+  </figcaption>
+  {% endif %}
+</div>
