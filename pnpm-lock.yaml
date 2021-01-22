@@ -1,9 +1,9 @@
 importers:
   .:
     dependencies:
-      '@11ty/eleventy': 0.10.0
-      '@11ty/eleventy-plugin-rss': 1.1.0_@11ty+eleventy@0.10.0
-      '@11ty/eleventy-plugin-syntaxhighlight': 3.0.6_@11ty+eleventy@0.10.0
+      '@11ty/eleventy': 0.11.1
+      '@11ty/eleventy-plugin-rss': 1.1.0_@11ty+eleventy@0.11.1
+      '@11ty/eleventy-plugin-syntaxhighlight': 3.0.6_@11ty+eleventy@0.11.1
       '@analytics/google-analytics': 0.4.1
       '@netlify/plugin-sitemap': 0.5.2
       analytics: 0.5.5
@@ -29,32 +29,32 @@ importers:
       webpack: 4.46.0_webpack-cli@3.3.12
       webpack-cli: 3.3.12_webpack@4.46.0
     specifiers:
-      '@11ty/eleventy': ^0.10.0
-      '@11ty/eleventy-plugin-rss': ^1.0.9
-      '@11ty/eleventy-plugin-syntaxhighlight': ^3.0.4
+      '@11ty/eleventy': ^0.11.1
+      '@11ty/eleventy-plugin-rss': ^1.1.0
+      '@11ty/eleventy-plugin-syntaxhighlight': ^3.0.6
       '@analytics/google-analytics': ^0.4.1
-      '@netlify/plugin-sitemap': ^0.5.1
+      '@netlify/plugin-sitemap': ^0.5.2
       analytics: ^0.5.5
-      autoprefixer: ^9.7.6
+      autoprefixer: ^9.8.6
       cssnano: ^4.1.10
       glob: ^7.1.6
       html-minifier: ^4.0.0
-      imgix-core-js: ^2.3.1
-      jest: ^26.2.2
-      lodash: ^4.17.19
-      markdown-it: ^12.0.2
+      imgix-core-js: ^2.3.2
+      jest: ^26.6.3
+      lodash: ^4.17.20
+      markdown-it: ^12.0.4
       markdown-it-attrs: ^3.0.3
       netlify-plugin-a11y: ^0.0.12
       netlify-plugin-checklinks: ^4.1.1
       netlify-plugin-inline-critical-css: ^1.1.3
       npm-run-all: ^4.1.5
-      postcss-cli: ^7.1.1
+      postcss-cli: ^7.1.2
       postcss-custom-properties: ^10.0.0
       postcss-import: ^12.0.1
       postcss-nested: ^4.2.3
       slugify: ^1.4.6
-      tailwindcss: ^1.4.4
-      webpack: ^4.44.0
+      tailwindcss: ^1.9.6
+      webpack: ^4.46.0
       webpack-cli: ^3.3.12
   examples/eleventy-server-components:
     dependencies:
@@ -101,9 +101,9 @@ packages:
     dev: false
     resolution:
       integrity: sha512-2FWYlkphQ/83MG7b9qqBJfJJ0K9zupNz/6n4EdDuNLw6hQHGp4Sp4UMDRyBvA/xCTYDBaPSuSjHuu45tSujegg==
-  /@11ty/eleventy-plugin-rss/1.1.0_@11ty+eleventy@0.10.0:
+  /@11ty/eleventy-plugin-rss/1.1.0_@11ty+eleventy@0.11.1:
     dependencies:
-      '@11ty/eleventy': 0.10.0
+      '@11ty/eleventy': 0.11.1
       debug: 4.3.1
       posthtml: 0.15.1
       posthtml-urls: 1.0.0
@@ -112,9 +112,9 @@ packages:
       '@11ty/eleventy': ^0.11.0
     resolution:
       integrity: sha512-4+qMcuSgHv6UzyOAOCIl2m6uCtJv7Fm9iWAjwiNSs43SWACVc+0KDzNjN/jkDGuDMKBi3zjvmuFg1PhJZsuO7g==
-  /@11ty/eleventy-plugin-syntaxhighlight/3.0.6_@11ty+eleventy@0.10.0:
+  /@11ty/eleventy-plugin-syntaxhighlight/3.0.6_@11ty+eleventy@0.11.1:
     dependencies:
-      '@11ty/eleventy': 0.10.0
+      '@11ty/eleventy': 0.11.1
       jsdom: 16.4.0
       prismjs: 1.23.0
     dev: false
@@ -122,46 +122,6 @@ packages:
       '@11ty/eleventy': '>=0.5.4'
     resolution:
       integrity: sha512-7dpstp5gl1qp2LLS7QXnDyPgVZtlndP6Me5rXcqfe7r/pkr0t++Z670cMFhbE+mKqHLMFpb25JATCBJIvWCgvA==
-  /@11ty/eleventy/0.10.0:
-    dependencies:
-      '@11ty/dependency-tree': 1.0.0
-      browser-sync: 2.26.13_debug@4.3.1
-      chalk: 3.0.0
-      chokidar: 3.5.1
-      debug: 4.3.1
-      dependency-graph: 0.8.1
-      ejs: 2.7.4
-      fast-glob: 3.2.5
-      fs-extra: 8.1.0
-      gray-matter: 4.0.2
-      hamljs: 0.6.2
-      handlebars: 4.7.6
-      javascript-stringify: 2.0.1
-      liquidjs: 6.4.3
-      lodash: 4.17.20
-      luxon: 1.25.0
-      markdown-it: 8.4.2
-      minimist: 1.2.5
-      moo: 0.5.1
-      multimatch: 4.0.0
-      mustache: 2.3.2
-      normalize-path: 3.0.0
-      nunjucks: 3.2.2
-      parse-filepath: 1.0.2
-      please-upgrade-node: 3.2.0
-      pretty: 2.0.0
-      pug: 2.0.4
-      recursive-copy: 2.0.11
-      semver: 7.3.4
-      slugify: 1.4.6
-      time-require: 0.1.2
-      valid-url: 1.0.9
-    dev: false
-    engines:
-      node: '>=8'
-    hasBin: true
-    resolution:
-      integrity: sha512-GOgG5ZvFfdJ4fMDlF+OHLQyvwu4cDkCdE8U0x/cfKze2Bu+27htaJ7qW8XbaGArySlBvYGhJD/z8vjdn/+hpLw==
   /@11ty/eleventy/0.11.1:
     dependencies:
       '@11ty/dependency-tree': 1.0.0
@@ -6264,12 +6224,6 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
-  /dependency-graph/0.8.1:
-    dev: false
-    engines:
-      node: '>= 0.6.0'
-    resolution:
-      integrity: sha512-g213uqF8fyk40W8SBjm079n3CZB4qSpCrA2ye1fLGzH/4HEgB6tzuW2CbLE7leb4t45/6h44Ud59Su1/ROTfqw==
   /dependency-graph/0.9.0:
     dev: false
     engines:
@@ -12489,17 +12443,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-34RwOXZT8kyuOJy25oJNJoulO8L0bTHYWXcdZBYZqFnjIy3NgjeoM3FmPXIOFQ26/lSHYMr8oc62B6adxXcb3Q==
-  /markdown-it/8.4.2:
-    dependencies:
-      argparse: 1.0.10
-      entities: 1.1.2
-      linkify-it: 2.2.0
-      mdurl: 1.0.1
-      uc.micro: 1.0.6
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha512-GcRz3AWTqSUphY3vsUqQSFMbgR38a4Lh3GWlHRh/7MRwz8mcu9n2IO7HOh+bXHrR9kOPDl5RNCaEsrneb+xhHQ==
   /markdown-table/1.1.3:
     dev: true
     resolution:
