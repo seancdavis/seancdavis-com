@@ -1,6 +1,5 @@
 import { toggleMobileMenu } from "./utils/toggle-mobile-menu"
 import "./utils/scan-links"
-import "./utils/update-browser"
 
 import "./lib/analytics"
 

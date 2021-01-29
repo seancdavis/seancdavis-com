@@ -1,0 +1,14 @@
+<div class="bg-yellow text-center py-2 shadow-md sticky z-20 top-0 hidden" id="outdated-browser-warning">
+  <p>
+    This site does not support your browser.
+    <br>
+    Please upgrade to a modern browser for optimal experience.
+  </p>
+</div>
+
+<script>
+  if(!!window.MSInputMethodContext && !!document.documentMode) {
+    var warning = document.getElementById("outdated-browser-warning")
+    warning.classList.remove("hidden")
+  }
+</script>
