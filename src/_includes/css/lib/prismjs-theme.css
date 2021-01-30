@@ -207,6 +207,10 @@ pre > code.line-highlight[data-end]:after {
     color: #fad000;
   }
 
+  .token.url .operator {
+    color: #fad000;
+  }
+
   .token.url .string {
     color: #ff9d00;
   }
