@@ -199,3 +199,15 @@ pre .line-highlight[data-end]:after,
 pre > code.line-highlight[data-end]:after {
   content: "";
 }
+
+/* --- Markdown Overrides --- */
+
+.language-md {
+  .token.url {
+    color: #fad000;
+  }
+
+  .token.url .string {
+    color: #ff9d00;
+  }
+}
