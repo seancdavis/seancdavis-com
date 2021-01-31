@@ -9,7 +9,7 @@ Static websites are back in gaining popularity, even in these days where everyth
 
 I've jumped aboard that train. And while the question as to _why_ I did it deserves its own article, I can say the main motivation for me is speed and cost.
 
-I've been transferring a few of my sites (including this one) to static files using Middleman. To maintain consistency, I wanted to remove all `.html` extensions and trailing slashes. And while that's a functional benefit, I also like it better cosmetically.
+I've been transferring a few of my sites to static files using Middleman. To maintain consistency, I wanted to remove all `.html` extensions and trailing slashes. And while that's a functional benefit, I also like it better cosmetically.
 
 ## Remove [HTML](/blog/wtf-is-html/) Extension
 
@@ -36,7 +36,7 @@ server {
 
 After that first step, we have a URL without a `.html` extension. However, if the file of interest was an `index.html` file, it could still be accessed via the name of the parent directory with a trailing slash.
 
-For me, for example, I was getting a URL at [http://cobwwweb.com/page/2/](http://cobwwweb.com/page/2/), but I didn't want the trailing slash.
+For me, for example, I was getting a URL at [https://example.com/page/2/](https://example.com/page/2/), but I didn't want the trailing slash.
 
 We have to remove the trailing slash _after_ we have removed the `.html` extension.
 
@@ -59,7 +59,7 @@ To pull it all together, I'll share a slightly-altered version of my config for 
 ```nginx
 server {
   listen   80;
-  server_name cobwwweb.com *.cobwwweb.com;
+  server_name example.com *.example.com;
 
   rewrite ^(/.*)\.html(\?.*)?$ $1$2 permanent;
   rewrite ^/(.*)/$ /$1 permanent;

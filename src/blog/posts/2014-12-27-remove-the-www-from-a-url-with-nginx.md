@@ -5,9 +5,9 @@ tags:
 description: "For SEO purposes, it's best to choose between www and no www. See how to do it with Nginx."
 ---
 
-In moving away from the _old-school standard_ of prefixing our root domains with _www_, it's nice to still allow traffic with and without the _www_ in the domain name. For example, you can get to this site by going to [cobwwweb.com](http://cobwwweb.com), but you can also get here by going to [www.cobwwweb.com](http://www.cobwwweb.com).
+If you don't want to include _www_ as your primary domain, it's nice to still allow traffic with and without the _www_ in the domain name. For example, if your primary domain is [example.com](http://example.com), you'd also want to allow traffic to [www.example.com](http://www.example.com).
 
-You may have noticed that if you try the second URL (the one with the _www_), it gets removed from the address bar. It is ideal for SEO (search engine optimization) purposes that you choose one (with or without _www_) and stick with it by redirecting traffic from the other domain to your main domain.
+It is ideal for SEO (search engine optimization) purposes that you choose one (with or without _www_) and stick with it by redirecting traffic from the other domain to your main domain.
 
 With Nginx as your web server, the proper way of doing so is to perform a `301` redirect in a separate `server` directive. Use the following **in addition to** your main `server` directive.
 

@@ -23,7 +23,7 @@ I took more than a week off in May to unplug in a cabin in the woods with my fam
 
 ### Static APIs
 
-I've been exploring the idea of [_Static APIs_](https://cobwwweb.com/lets-talk-about-static-apis) over the last few months, trying to add a new tutorial here and there. Last month I added a quick tutorial on [Building a Static API with Eleventy](https://cobwwweb.com/building-static-api-eleventy). I also got some love from [@chriscoyier](https://twitter.com/chriscoyier) on [CSS Tricks](https://css-tricks.com/wtf-is-a-static-api/)!
+I've been exploring the idea of [_Static APIs_](/blog/lets-talk-about-static-apis) over the last few months, trying to add a new tutorial here and there. Last month I added a quick tutorial on [Building a Static API with Eleventy](/blog/building-static-api-eleventy). I also got some love from [@chriscoyier](https://twitter.com/chriscoyier) on [CSS Tricks](https://css-tricks.com/wtf-is-a-static-api/)!
 
 ### Jamstack Exploration
 
@@ -70,7 +70,7 @@ I introduced my team to a wonderfully weird JavaScript problem:
 
 WTF?
 
-I love it. It's so weird. That led me to write an introductory article on [passing a function as an argument to a JavaScript function](https://cobwwweb.com/pass-func-as-arg-javascript). But [here's the explanation for this specific problem](https://medium.com/dailyjs/parseint-mystery-7c4368ef7b21).
+I love it. It's so weird. That led me to write an introductory article on [passing a function as an argument to a JavaScript function](/blog/pass-func-as-arg-javascript). But [here's the explanation for this specific problem](https://medium.com/dailyjs/parseint-mystery-7c4368ef7b21).
 
 ## Resources & References
 
