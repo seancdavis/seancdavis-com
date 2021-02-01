@@ -22,38 +22,38 @@ I went down a few new roads and visited a few old topics.
 
 I submitted a talk to a local tech conference that revolves around building websites with components. Thus, I've begun diving deep into an exploration on topics that will ultimately support that talk. I'm just brushing the surface, but here are a few to start:
 
-- [Using Web Components to Build a House, Room-by-Room](https://cobwwweb.com/use-web-components-to-build-house-room-by-room)
-- [Simplify Components by Separating Logic from Presentation using Adapters](https://cobwwweb.com/simplify-components-by-separating-logic-from-presentation-using-adapters)
-- [Organize Components by Keeping Related Files Close](https://cobwwweb.com/organize-components-by-keeping-related-files-close)
-- [Introducing Component Adapters into a Gatsby Project](https://cobwwweb.com/introducing-component-adapters-into-gatsby)
+- [Using Web Components to Build a House, Room-by-Room](/blog/use-web-components-to-build-house-room-by-room)
+- [Simplify Components by Separating Logic from Presentation using Adapters](/blog/simplify-components-by-separating-logic-from-presentation-using-adapters)
+- [Organize Components by Keeping Related Files Close](/blog/organize-components-by-keeping-related-files-close)
+- [Introducing Component Adapters into a Gatsby Project](/blog/introducing-component-adapters-into-gatsby)
 
 ### #jsQuestionOfTheDay
 
 I started another new thing. Most weekday mornings I begin by asking some technical or conceptual question to one or all the devs on my team. When relevant, I've also been sharing those questions on Twitter under #jsQuestionOfTheDay. This was an experiment that began in July and will surely evolve over the coming months, as I've had a positive response from it.
 
-I suspect some of the questions will turn into articles, like [this one](https://cobwwweb.com/difference-between-equal-signs-javascript).
+I suspect some of the questions will turn into articles, like [this one](/blog/difference-between-equal-signs-javascript).
 
 ### Video Tutorials
 
 Finally! I've been wanting to do this for awhile. I _finally_ have an article with an accompanying video tutorial. I started with something that's unlikely to get a ton of traffic, just to get my feet wet. But, as I get more comfortable with recording on screen, I'll be adding many more of these on a regular basis.
 
-- [Building a Static API with Middleman](https://cobwwweb.com/building-static-api-middleman)
+- [Building a Static API with Middleman](/blog/building-static-api-middleman)
 
 ### More WTFs
 
 There are a few more foundational articles:
 
-- [WTF is Component-Driven Development?](https://cobwwweb.com/wtf-is-component-driven-development)
-- [WTF is a Fixture?](https://cobwwweb.com/wtf-is-a-fixture)
-- [WTF is the DOM?](https://cobwwweb.com/wtf-is-the-dom)
+- [WTF is Component-Driven Development?](/blog/wtf-is-component-driven-development)
+- [WTF is a Fixture?](/blog/wtf-is-a-fixture)
+- [WTF is the DOM?](/blog/wtf-is-the-dom)
 
 ### Odds and Ends
 
 And articles that don't fit into one of the buckets above:
 
-- [Increase Developer Efficiency by Establishing Conventions](https://cobwwweb.com/increase-developer-efficiency-by-establishing-conventions)
+- [Increase Developer Efficiency by Establishing Conventions](/blog/increase-developer-efficiency-by-establishing-conventions)
 - [Is it time for a new website?](https://www.helloample.com/blog/is-it-time-for-a-new-website)
-- [You Will Make Mistakes](https://cobwwweb.com/you-will-make-mistakes)
+- [You Will Make Mistakes](/blog/you-will-make-mistakes)
 
 ## Shop Talk
 
