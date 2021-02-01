@@ -7,32 +7,32 @@ tags:
 
 ## In My Words (and others)
 
-I published more in June than I have in any other month. That is largely because many of them were short, fundamental articles to support a few larger topics I'm currently working on. They are part of a _WTF_ series, in which the goal is to concisely explain core concepts of web development. Here are the new articles in [the collection](https://cobwwweb.com/tag/wtf):
+I published more in June than I have in any other month. That is largely because many of them were short, fundamental articles to support a few larger topics I'm currently working on. They are part of a _WTF_ series, in which the goal is to concisely explain core concepts of web development. Here are the new articles in [the collection](/blog/tag/wtf):
 
-- [WTF is Component-Driven Development?](https://cobwwweb.com/wtf-is-component-driven-development)
-- [WTF is CSS?](https://cobwwweb.com/wtf-is-css)
-- [WTF is HTML?](https://cobwwweb.com/wtf-is-html)
-- [WTF is JavaScript?](https://cobwwweb.com/wtf-is-javascript)
-- [WTF is Node.js?](https://cobwwweb.com/wtf-is-node)
-- [WTF is NPM?](https://cobwwweb.com/wtf-is-npm)
-- [WTF is a Package Manager?](https://cobwwweb.com/wtf-is-a-package-manager)
-- [WTF is React?](https://cobwwweb.com/wtf-is-react)
-- [WTF is the Single-Responsibility Principle?](https://cobwwweb.com/wtf-is-single-responsibility-principle)
-- [WTF is a Web Component?](https://cobwwweb.com/wtf-is-a-web-component)
+- [WTF is Component-Driven Development?](/blog/wtf-is-component-driven-development)
+- [WTF is CSS?](/blog/wtf-is-css)
+- [WTF is HTML?](/blog/wtf-is-html)
+- [WTF is JavaScript?](/blog/wtf-is-javascript)
+- [WTF is Node.js?](/blog/wtf-is-node)
+- [WTF is NPM?](/blog/wtf-is-npm)
+- [WTF is a Package Manager?](/blog/wtf-is-a-package-manager)
+- [WTF is React?](/blog/wtf-is-react)
+- [WTF is the Single-Responsibility Principle?](/blog/wtf-is-single-responsibility-principle)
+- [WTF is a Web Component?](/blog/wtf-is-a-web-component)
 
 ### Big Oops!
 
-I've also begun a series called [#BigOops](https://cobwwweb.com/tag/big-oops) which will tell stories of developers' biggest mistakes, all for our entertainment and learning. It'll be somewhat infrequent while I establish what it really looks like, but there are a few stories to start:
+I've also begun a series called [#BigOops](/blog/tag/big-oops) which will tell stories of developers' biggest mistakes, all for our entertainment and learning. It'll be somewhat infrequent while I establish what it really looks like, but there are a few stories to start:
 
-- [Introducing: Big Oops](https://cobwwweb.com/big-oops)
-- [Big Oops: Just a Few (Old) Notifications](https://cobwwweb.com/big-oops-few-old-notifications)
-- [Big Oops: I Need a Little More Time](https://cobwwweb.com/big-oops-need-more-time)
+- [Introducing: Big Oops](/blog/big-oops)
+- [Big Oops: Just a Few (Old) Notifications](/blog/big-oops-few-old-notifications)
+- [Big Oops: I Need a Little More Time](/blog/big-oops-need-more-time)
 
 ### A Bit of Advice
 
-Last month was also marked by some sadness, as I experienced someone leaving my team for the first time. And it hurt a little more because he was a dear friend, so I'll get to see him a little less now. Before he left, I asked him to [share some words with the team](https://cobwwweb.com/wise-words-from-warren).
+Last month was also marked by some sadness, as I experienced someone leaving my team for the first time. And it hurt a little more because he was a dear friend, so I'll get to see him a little less now. Before he left, I asked him to [share some words with the team](/blog/wise-words-from-warren).
 
-I also took a minute to share [advice I received when starting out](https://cobwwweb.com/put-everything-on-github), which I find valuable to this day.
+I also took a minute to share [advice I received when starting out](/blog/put-everything-on-github), which I find valuable to this day.
 
 ## Shop Talk
 
@@ -94,4 +94,4 @@ I found this one funny, too, although I'm sure I'd seen it elsewhere before:
 
 - I found [yet another headless CMS](https://buttercms.com/).
 - I began using [Buttondown](https://buttondown.email/) to distribute my newsletter (i.e. this article). I like how simple it is. It's pushed me to not do much with the design but just get the content out there, and there's something to be said for that approach. But, we'll see how it goes.
-- I've been using [Notability](https://www.gingerlabs.com/) to make little sketches that I can then import into posts, like [this one](https://cobwwweb.com/simplify-components-by-separating-logic-from-presentation-using-adapters). I draw with the Apple Pencil on the iPad, then open the note on the Mac, convert it to an image, crop, and ... _There's probably a better way to do all of this_, but it's working for now, and it's been a relief to readers to break up my articles with some imagery.
+- I've been using [Notability](https://www.gingerlabs.com/) to make little sketches that I can then import into posts, like [this one](/blog/simplify-components-by-separating-logic-from-presentation-using-adapters). I draw with the Apple Pencil on the iPad, then open the note on the Mac, convert it to an image, crop, and ... _There's probably a better way to do all of this_, but it's working for now, and it's been a relief to readers to break up my articles with some imagery.

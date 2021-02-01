@@ -36,23 +36,23 @@ Elsewhere in the industry, [Gatsby announced their Recipes Alpha 2](https://www.
     src="/blog/200923/spinneret-issue-4--my-words.jpg",
     alt="The Spinneret Issue #4: In My Words" %}
 
-It's been an interesting start to supplementing tutorial articles with screencast videos. It's a long process, but I've enjoyed it so far and look forward to adding more over the coming months. I added a couple last month in an article on [programmatically creating JSON pages with GatsbyJS](https://cobwwweb.com/programmatically-create-json-pages-gatsby).
+It's been an interesting start to supplementing tutorial articles with screencast videos. It's a long process, but I've enjoyed it so far and look forward to adding more over the coming months. I added a couple last month in an article on [programmatically creating JSON pages with GatsbyJS](/blog/programmatically-create-json-pages-gatsby).
 
-I also added a few foundational articles to the [WTF collection](https://cobwwweb.com/tag/wtf):
+I also added a few foundational articles to the [WTF collection](/blog/tag/wtf):
 
-- [WTF is Hoisting?](https://cobwwweb.com/wtf-is-hoisting)
-- [WTF is a Closure?](https://cobwwweb.com/wtf-is-a-closure)
+- [WTF is Hoisting?](/blog/wtf-is-hoisting)
+- [WTF is a Closure?](/blog/wtf-is-a-closure)
 
-I enjoyed exploring work I've been doing recently on [building websites faster by creating conventional tooling](https://cobwwweb.com/build-jamstack-sites-faster-with-conventional-tooling).
+I enjoyed exploring work I've been doing recently on [building websites faster by creating conventional tooling](/blog/build-jamstack-sites-faster-with-conventional-tooling).
 
-A colleague asked me how to get started writing JavaScript, so I wrote him [a guide](https://cobwwweb.com/right-way-to-learn-javascript-2020).
+A colleague asked me how to get started writing JavaScript, so I wrote him [a guide](/blog/right-way-to-learn-javascript-2020).
 
 And last, I added a handful of random articles, including one for [Ample](https://www.ample.co/) (the agency I work for):
 
 - [What makes developers happy?](https://www.ample.co/blog/3-things-that-make-developers-happy)
-- [Run JavaScript when Variable Exists](https://cobwwweb.com/run-javascript-when-variable-exists)
-- [Add a Static Directory to an Eleventy Project](https://cobwwweb.com/add-static-directory-to-eleventy)
-- [How to Fix "Integrity check failed ..." Yarn Error](https://cobwwweb.com/fix-yarn-integrity-check-failed)
+- [Run JavaScript when Variable Exists](/blog/run-javascript-when-variable-exists)
+- [Add a Static Directory to an Eleventy Project](/blog/add-static-directory-to-eleventy)
+- [How to Fix "Integrity check failed ..." Yarn Error](/blog/fix-yarn-integrity-check-failed)
 
 ## Shop Talk
 
