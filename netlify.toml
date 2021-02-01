@@ -2,27 +2,29 @@
   command = "npm run build"
   publish = "dist"
 
-[[plugins]]
-  package = "/.netlify/netlify-plugin-jest"
+# [[plugins]]
+#   package = "/.netlify/netlify-plugin-jest"
 
-[[plugins]]
-  package = "netlify-plugin-checklinks"
+# [[plugins]]
+#   package = "netlify-plugin-checklinks"
 
 [[plugins]]
   package = "netlify-plugin-inline-critical-css"
-
-[[plugins]]
-  package = "netlify-plugin-a11y"
     [plugins.inputs]
-      checkPaths = ['/']
-      # resultMode = "warn"
+      matchFiles = ['/index.html']
 
-[[plugins]]
-  package = "@netlify/plugin-sitemap"
+# [[plugins]]
+#   package = "netlify-plugin-a11y"
+#     [plugins.inputs]
+#       checkPaths = ['/']
+#       # resultMode = "warn"
 
-  [plugins.inputs]
-    buildDir = "dist"
-    trailingSlash = true
-    exclude = [
-      "./dist/404.html"
-    ]
+# [[plugins]]
+#   package = "@netlify/plugin-sitemap"
+
+#   [plugins.inputs]
+#     buildDir = "dist"
+#     trailingSlash = true
+#     exclude = [
+#       "./dist/404.html"
+#     ]
