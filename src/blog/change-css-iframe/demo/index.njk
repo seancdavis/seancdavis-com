@@ -1,6 +1,4 @@
-{% set body_classes = "bg-gray" %}
-
-{% include "layout/head.njk" %}
+{% include "layout/head-blank.njk" %}
 
 <script
   src="https://code.jquery.com/jquery-1.12.4.min.js"
@@ -16,6 +14,10 @@
 </div>
 
 <style>
+  body {
+    background-color: #ededed;
+  }
+
   .container {
     padding: 1rem;
   }
@@ -76,4 +78,4 @@
   })();
 </script>
 
-{% include "layout/foot.njk" %}
+{% include "layout/foot-blank.njk" %}

@@ -1,6 +1,4 @@
-{% set body_classes = "bg-gray" %}
-
-{% include "layout/head.njk" %}
+{% include "layout/head-blank.njk" %}
 
 <div class="p-4">
   <input type="text" id="my-message" placeholder="Type message ..." onkeyup="sendToFrame(event)">
@@ -9,6 +7,10 @@
 
 
 <style>
+  body {
+    background-color: #ededed;
+  }
+
   iframe {
     background-color: #ededed;
     padding: 1rem;
@@ -25,4 +27,4 @@
   }
 </script>
 
-{% include "layout/foot.njk" %}
+{% include "layout/foot-blank.njk" %}
