@@ -18,7 +18,7 @@ importers:
       markdown-it-attrs: 3.0.3_markdown-it@12.0.4
       netlify-plugin-a11y: 0.0.12
       netlify-plugin-checklinks: 4.1.1
-      netlify-plugin-inline-critical-css: 1.1.3
+      netlify-plugin-inline-critical-css: github.com/seancdavis/netlify-plugin-inline-critical-css/ca116d438a0b687247f3c1609e059ce2b863625f
       npm-run-all: 4.1.5
       postcss-cli: 7.1.2
       postcss-custom-properties: 10.0.0
@@ -46,7 +46,7 @@ importers:
       markdown-it-attrs: ^3.0.3
       netlify-plugin-a11y: ^0.0.12
       netlify-plugin-checklinks: ^4.1.1
-      netlify-plugin-inline-critical-css: ^1.1.3
+      netlify-plugin-inline-critical-css: seancdavis/netlify-plugin-inline-critical-css
       npm-run-all: ^4.1.5
       postcss-cli: ^7.1.2
       postcss-custom-properties: ^10.0.0
@@ -5493,7 +5493,7 @@ packages:
       lodash: 4.17.20
       make-dir: 3.1.0
       meow: 8.1.2
-      oust: 1.0.3
+      oust: 1.0.4
       p-all: 3.0.0
       penthouse: 2.3.2
       plugin-error: 1.0.1
@@ -6545,7 +6545,7 @@ packages:
       integrity: sha512-wonvpGbed9PlcvQ0xfb0ov8QoKR9Tk7GiIGrOto6ykPdAtmtQXFBUS10Ifm/1srPkrvcOB4Hsexb/Okt7CeOwg==
   /domutils/1.5.1:
     dependencies:
-      dom-serializer: 0.1.1
+      dom-serializer: 0.2.2
       domelementtype: 1.3.1
     dev: false
     resolution:
@@ -13093,15 +13093,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-qakK2aOJRa/O2XQJhoDR3VqmW8NnmPJkrOoxoDQq/mBfaa7iwC84Wy6OHqgjP6xhcjVAA0RxC+/9UpgKP2+wfQ==
-  /netlify-plugin-inline-critical-css/1.1.3:
-    dependencies:
-      critical: 2.0.6
-      readdirp: 3.5.0
-    dev: false
-    engines:
-      node: '>=10.3.0'
-    resolution:
-      integrity: sha512-riFrnK6nHDuOSuLa1VU4ubFH40sidQW5BRJv7J53VwH6FLhTHXn8jgluNRREhBFspDPcaYy97HXwd+DtHCXGCw==
   /nice-try/1.0.5:
     dev: false
     resolution:
@@ -13698,7 +13689,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
-  /oust/1.0.3:
+  /oust/1.0.4:
     dependencies:
       cheerio: 0.22.0
       minimist: 1.2.5
@@ -13707,7 +13698,7 @@ packages:
       node: '>=8'
     hasBin: true
     resolution:
-      integrity: sha512-C1lam2PiYUmEe79Ya2zzAdTORpZC0uI01GyCdMgbtGwZm2EmdjSXgOrKrsWBg0SXofIIqmxOE10VqoshkRZEGA==
+      integrity: sha512-SkoxkeaiCAAhcRNld8cFLMxza3VDRM6iNMAODeQKjFbyxLt83npm4YtXyKPm623iF3TUy2ih9pST8pxslYlXyg==
   /ow/0.17.0:
     dependencies:
       type-fest: 0.11.0
@@ -13826,14 +13817,6 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-iwqZSOoWIW+Ew4kAGUlN16J4M7OB3ysMLSZtnhmqx7njIHFPlxWBX8xo3lVTyFVq6mI/lL9qt2IsN1sHwaxJkg==
-  /p-limit/3.1.0:
-    dependencies:
-      yocto-queue: 0.1.0
-    dev: false
-    engines:
-      node: '>=10'
-    resolution:
-      integrity: sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==
   /p-locate/2.0.0:
     dependencies:
       p-limit: 1.3.0
@@ -13860,7 +13843,7 @@ packages:
       integrity: sha512-R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==
   /p-locate/5.0.0:
     dependencies:
-      p-limit: 3.1.0
+      p-limit: 3.0.2
     dev: false
     engines:
       node: '>=10'
@@ -20157,12 +20140,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
-  /yocto-queue/0.1.0:
-    dev: false
-    engines:
-      node: '>=10'
-    resolution:
-      integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
   /yoga-layout-prebuilt/1.10.0:
     dependencies:
       '@types/yoga-layout': 1.9.2
@@ -20187,3 +20164,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==
+  github.com/seancdavis/netlify-plugin-inline-critical-css/ca116d438a0b687247f3c1609e059ce2b863625f:
+    dependencies:
+      critical: 2.0.6
+      readdirp: 3.5.0
+    dev: false
+    engines:
+      node: '>=10.3.0'
+    name: netlify-plugin-inline-critical-css
+    resolution:
+      tarball: https://codeload.github.com/seancdavis/netlify-plugin-inline-critical-css/tar.gz/ca116d438a0b687247f3c1609e059ce2b863625f
+    version: 1.1.3
