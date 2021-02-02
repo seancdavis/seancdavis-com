@@ -11,9 +11,12 @@ jobs:
         with:
           node-version: 10.x
       - name: npm install, build
+        env:
+          NETLIFY_APP_ID: ${{ secrets.NETLIFY_APP_ID }}
         run: |
           npm install
           npm install -g netlify-cli
+          netlify link --id $NETLIFY_APP_ID
           netlify build
       - name: run Lighthouse CI
         run: |
