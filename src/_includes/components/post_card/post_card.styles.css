@@ -1,0 +1,5 @@
+.post-card--image-wrapper img {
+  max-height: 18.875rem;
+  object-fit: cover;
+  object-position: center;
+}
