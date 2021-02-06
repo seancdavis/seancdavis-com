@@ -14,7 +14,7 @@ Sass, out of the box, provides us one giant benefit over plain CSS -- the abilit
 
 ## Continuous Abstraction
 
-[Continuous abstraction](http://thepolymathlab.com/introducing-continuous-abstraction) is a term I coined to explain how to find balance in the abstraction process -- to know _when_ and _how much to_ abstract.
+[Continuous abstraction](/blog/introducing-continuous-abstraction) is a term I coined to explain how to find balance in the abstraction process -- to know _when_ and _how much to_ abstract.
 
 The article I wrote to explain it (linked above), is ... long. So let's do this cool thing:
 

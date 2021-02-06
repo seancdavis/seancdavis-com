@@ -141,13 +141,13 @@ People often say their job _requires_ them to work 60 hours every week. I think 
 
 To that I say it's more important that you learn how to spend your 40 hours wisely than it is to spend 60 hours. Let the little things slide away and focus on what will demonstrate you are achieving positive results.
 
-One great strategy is to learn how and when to say, "No." _No_ is really powerful if used in the write way. And I wrote [an article](http://thepolymathlab.com/how-to-use-no-effectively) on just that subject.
+One great strategy is to learn how and when to say, "No." _No_ is really powerful if used in the write way. And I wrote [an article](/blog/how-to-use-no-effectively) on just that subject.
 
 ### Use Inspiration As Fuel
 
 Inspiration can be short-lived. It's important you take the proper steps to ensure that what you choose to spend your time on is worthwhile. You want to be working on projects where the inspiration will either persist or be recycled. That's why you don't want to begin a project immediately after coming up with your next big idea. Most ideas that feel that way aren't that way at all.
 
-I wrote [an article on this subject](http://thepolymathlab.com/act-on-inspiration-before-it-runs-away) to explore capitalizing on inspiration.
+I wrote [an article on this subject](/blog/act-on-inspiration-before-it-runs-away) to explore capitalizing on inspiration.
 
 One topic the article discusses is how you should be able to ...
 
