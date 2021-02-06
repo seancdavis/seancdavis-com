@@ -102,7 +102,7 @@ Now you have your current set of needs. Moving from the top to the bottom, list 
 
 Once you have your list of actionable items for each of your needs, step back and look at what you have. It's **a list of the tasks on which you should spend the majority your time.**
 
-I'm serious. Get rid of the other noise. [Maybe you need to learn how to say, "No."](/how-to-use-no-effectively.html) Maybe you need a new job. Maybe you need to have a serious talk with your life partner. Maybe you need to sell your house. Maybe you need to move to San Francisco.
+I'm serious. Get rid of the other noise. [Maybe you need to learn how to say, "No."](/blog/how-to-use-no-effectively) Maybe you need a new job. Maybe you need to have a serious talk with your life partner. Maybe you need to sell your house. Maybe you need to move to San Francisco.
 
 Whatever it is, do it. And for Pete's sake, do it right now. Well, finish reading this, and then do it!
 

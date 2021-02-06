@@ -10,7 +10,7 @@ attribution:
     license: Unsplash
 ---
 
-Trees are pretty simple, right? They [compete for sunlight](https://www.hindustantimes.com/india/how-plants-compete-for-sunlight/story-MrCTSibJPrrJGyqeJpMGNL.html), in the most simplistic sense. You can learn the age of a tree by [cutting a cross-section through it](https://simple.wikipedia.org/wiki/Growth_ring) (which also leads to insights on the climate during its lifetime). They need light and water. There's something called [photosynthesis](https://en.wikipedia.org/wiki/Photosynthesis) -- a process I forget immediately upon graduating high school-that helps us humans breathe.
+Trees are pretty simple, right? They [compete for sunlight](https://www.hindustantimes.com/india/how-plants-compete-for-sunlight/story-MrCTSibJPrrJGyqeJpMGNL), in the most simplistic sense. You can learn the age of a tree by [cutting a cross-section through it](https://simple.wikipedia.org/wiki/Growth_ring) (which also leads to insights on the climate during its lifetime). They need light and water. There's something called [photosynthesis](https://en.wikipedia.org/wiki/Photosynthesis) -- a process I forget immediately upon graduating high school-that helps us humans breathe.
 
 Trees are good. But simple.
 

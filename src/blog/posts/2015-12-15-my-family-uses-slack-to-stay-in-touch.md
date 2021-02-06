@@ -38,7 +38,7 @@ That was, as they say, my final straw. There had been a few other instances like
 
 The simple solution would have been to discuss as a family how we use email and plan events and that sort of thing. But all too often in life we recognize a problem, talk about it, solve it in the short term, and improve our happiness a bit. And don't those problems always come back in one form or another? I know, it can be part of life sometimes. But this felt different. We needed to shake it up.
 
-I had been using a new messaging tool at work called [Slack](https://slack.com/). If you haven't heard of Slack, it's awesome. It's built for teams to communicate with each other. And it's been so successful that it [was evaluated at $2 billion within two years of launch](http://www.cnbc.com/2015/05/01/race-to-2-billion-the-fastest-growing-start-up.html).
+I had been using a new messaging tool at work called [Slack](https://slack.com/). If you haven't heard of Slack, it's awesome. It's built for teams to communicate with each other. And it's been so successful that it [was evaluated at $2 billion within two years of launch](http://www.cnbc.com/2015/05/01/race-to-2-billion-the-fastest-growing-start-up).
 
 At that time, I also was working on a side project with a few friends. We had decided to drop email completely and communicate almost solely using Slack.
 

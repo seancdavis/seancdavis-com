@@ -184,6 +184,6 @@ Following successful deployment, I would look to redirect the home page to `/ear
 
 ---
 
-You can also reference other tutorials on static APIs from [the intro article](/blog/how-to-build-static-api#tutorials/).
+You can also reference other tutorials on static APIs from [the intro article](/blog/how-to-build-static-api#tutorials).
 
 And you can reference the code I used to build this tutorial [here](https://github.com/seancdavis/cobwwweb-examples/tree/087a5503c3000c47ff5e7f7f379f6289ab0055ac/eleventy-static-api), which includes an example of building out redirects for GitHub.

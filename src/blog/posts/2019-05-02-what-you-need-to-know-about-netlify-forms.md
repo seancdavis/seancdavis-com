@@ -14,7 +14,7 @@ If you are building a truly static site — where all the [HTML](/blog/wtf-is-ht
 
 I recently went through the process of adding Netlify's form handling to a [Gatsby](https://www.gatsbyjs.org/) site, why was not _that easy_. Gatsby is a [static site generator](https://www.staticgen.com/) built on top of React. Thus, it's essentially a React app that has pre-cached the data it renders. In other words, Gatsby renders its HTML using JavaScript and, because it's not just a bunch of static HTML files, working with Netlify forms was a bit more complicated.
 
-Integrating Netlify forms within a site powered mostly by JS (or [JSX](https://reactjs.org/docs/introducing-jsx.html)) required digging deeply into [the documentation](https://www.netlify.com/docs/form-handling/) and talking with Netlify's support team until I could get the forms working properly. It was a challenging process to work through, and that's why we're here right now.
+Integrating Netlify forms within a site powered mostly by JS (or [JSX](https://reactjs.org/docs/introducing-jsx)) required digging deeply into [the documentation](https://www.netlify.com/docs/form-handling/) and talking with Netlify's support team until I could get the forms working properly. It was a challenging process to work through, and that's why we're here right now.
 
 Now that I have worked through several scenarios to get Netlify forms up and running on my latest project, I want to share with you what I've found to be the core tenets of understanding how Netlify forms really work. I hope that you'll be able to use this information to more easily add Netlify's form handlers to your site, regardless of whether it's fully static or rendered on the fly by JavaScript.
 

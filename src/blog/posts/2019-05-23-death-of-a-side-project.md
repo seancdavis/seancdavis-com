@@ -10,7 +10,7 @@ attribution:
     license: Unsplash
 ---
 
-Most side projects, especially if they are ongoing projects, will eventually hit [_The Grind_](/lifecycle-of-a-side-project.html). The inevitable can be prolonged with goal-setting, planning, and regular check-ins, but not forever.
+Most side projects, especially if they are ongoing projects, will eventually hit [_The Grind_](/blog/lifecycle-of-a-side-project). The inevitable can be prolonged with goal-setting, planning, and regular check-ins, but not forever.
 
 At some point, something will feel _off_ about a project. That usually means there are one of two scenarios at play:
 
@@ -19,7 +19,7 @@ At some point, something will feel _off_ about a project. That usually means the
 
 ## Transitioning From The Grind via The Shift
 
-I wrote in [_The Lifecycle of a Side Project_](/lifecycle-of-a-side-project.html) that the way to overcome The Grind is by moving into The Shift as quickly as possible. It’s during The Shift that we choose the project’s fate.
+I wrote in [_The Lifecycle of a Side Project_](/blog/lifecycle-of-a-side-project) that the way to overcome The Grind is by moving into The Shift as quickly as possible. It’s during The Shift that we choose the project’s fate.
 
 One such fate is to stop working on — to _kill_ — the project. This is often difficult to do, especially when you feel personally attached to the project. The longer a side project has been in your life and the more personal its purpose is to your purpose, the more difficult it is to kill.
 
@@ -53,7 +53,7 @@ But more importantly, kill it or don’t. Avoid falling in between. Don’t let 
 
 ## When it Makes Sense to Pause
 
-You may know that one potential outcome of The Shift is [to /pause/ a project](/lifecycle-of-a-side-project#shift). That is a specific case, and you should know what you’re doing if you’re going to pause a project.
+You may know that one potential outcome of The Shift is [to /pause/ a project](/blog/lifecycle-of-a-side-project#shift). That is a specific case, and you should know what you’re doing if you’re going to pause a project.
 
 Pausing a project means something is currently **and temporarily** in the way of your project being able to achieve its goals. The only way to pause effectively is to know when and how you’re going to resume. Otherwise, you’ve killed the project but failed to admit it. And while there are worse decisions you can make, if a project _feels_ paused when it’s really dead, it will take up brain space for you that should be used on something more meaningful.
 

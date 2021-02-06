@@ -44,7 +44,7 @@ That's the point at which I realized I should have been solving a different prob
 
 For the third step in the process, I came up with what I thought was a perfect solution. I was going to get the logo we had made for our wedding tattooed on my finger where a ring would have been. Then the symbol would remain and I wouldn't have the burden of being constantly distracted by the material on my finger.
 
-But since I had written on the subject, I felt I had to follow [The Tattoo Rule](/the-tattoo-rule.html). So, with the design and location decided, I waited. And during my period of waiting I told others what my plan was.
+But since I had written on the subject, I felt I had to follow [The Tattoo Rule](/blog/the-tattoo-rule). So, with the design and location decided, I waited. And during my period of waiting I told others what my plan was.
 
 No one liked it. My wife was lukewarm on the idea, but pretty much everyone else I talked to thought it was a terrible idea. (Some had misguided advice from their own personal experiences, but it still meant they disapproved of my approach.)
 
@@ -52,7 +52,7 @@ And that's the point at which I realized something _else_ was wrong. I was _stil
 
 ### The 5 Whys
 
-During lunch one day, I was telling coworkers about my tattoo idea -- my _solution_. Perhaps without realizing he was doing it, one coworker dove into a series of questions, loosely based on the [5 Whys](/find-root-cause-by-asking-why.html).
+During lunch one day, I was telling coworkers about my tattoo idea -- my _solution_. Perhaps without realizing he was doing it, one coworker dove into a series of questions, loosely based on the [5 Whys](/blog/find-root-cause-by-asking-why).
 
 It went something like this:
 
@@ -69,7 +69,7 @@ The night I had that conversation with my wife, I took my ring off and put it in
 
 ---
 
-The lesson here is this: It's important to [understand the entire problem before trying to solve it](/a-puzzle-without-a-box.html). Without a clear picture of what the root cause of the problem is, it's difficult to properly solve it.
+The lesson here is this: It's important to [understand the entire problem before trying to solve it](/blog/a-puzzle-without-a-box). Without a clear picture of what the root cause of the problem is, it's difficult to properly solve it.
 
 It took me years to solve a problem that, in the end, was as simple as taking a ring off and putting it in a drawer.
 

@@ -41,7 +41,7 @@ Now, I will say that sitting alone in your home office is a very different envir
 
 ## 02: An Array of Alternatives
 
-There are plenty of alternatives to working alone in your home. Working remotely doesn't have to mean being alone. For example, [Basecamp](basecamp.com) offers [\$100/month to its employees to put towards coworking space](https://m.signalvnoise.com/employee-benefits-at-basecamp-d2d46fd06c58#.dy9gvr89d) if they prefer to be in an office setting. There are also coffee shops, which people have been using in lieu of offices for years.
+There are plenty of alternatives to working alone in your home. Working remotely doesn't have to mean being alone. For example, [Basecamp](https://basecamp.com/) offers [\$100/month to its employees to put towards coworking space](https://m.signalvnoise.com/employee-benefits-at-basecamp-d2d46fd06c58#.dy9gvr89d) if they prefer to be in an office setting. There are also coffee shops, which people have been using in lieu of offices for years.
 
 ---
 

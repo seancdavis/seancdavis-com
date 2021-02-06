@@ -8,7 +8,7 @@ tags:
 
 In [a previous article on distributing JavaScript libraries](/blog/use-netlify-host-js-libraries/) I used [an example](https://github.com/seancdavis/hello-world-js/) that uses [Webpack](https://webpack.js.org/) to build (and Babel to transpile/) an ES6 class and expose it as a global variable.
 
-Most of this process came from [an article on this very subject](http://siawyoung.com/coding/javascript/exporting-es6-modules-as-single-scripts-with-webpack.html).
+Most of this process came from [an article on this very subject](http://siawyoung.com/coding/javascript/exporting-es6-modules-as-single-scripts-with-webpack).
 
 That articles states that there are only a few steps. I'll demonstrate those steps quickly with [my `HelloWorld` example](https://github.com/seancdavis/hello-world-js):
 

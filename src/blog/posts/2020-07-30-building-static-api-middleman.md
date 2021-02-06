@@ -121,7 +121,7 @@ And then visit [localhost:4567/earworms.json](http://localhost:4567/earworms.jso
 
 Following the direction of the intro article, let's next add meta to our object. We learned in the intro that it's a good practice to put our results in a `results` object so that we have more flexibility to change the structure of the response down the road.
 
-For now, all we want to do is return the count, or the number of earworms that we have in the collection. To do that, we can use [Ruby's JSON module](https://ruby-doc.org/stdlib-2.7.1/libdoc/json/rdoc/JSON.html). The [`generate` method](https://ruby-doc.org/stdlib-2.7.1/libdoc/json/rdoc/JSON.html#method-i-generate) will help us convert a ruby hash or array into valid JSON, and we _could_ even make it pretty (we're not going to worry about that, though).
+For now, all we want to do is return the count, or the number of earworms that we have in the collection. To do that, we can use [Ruby's JSON module](https://ruby-doc.org/stdlib-2.7.1/libdoc/json/rdoc/JSON). The [`generate` method](https://ruby-doc.org/stdlib-2.7.1/libdoc/json/rdoc/JSON.html#method-i-generate) will help us convert a ruby hash or array into valid JSON, and we _could_ even make it pretty (we're not going to worry about that, though).
 
 `source/earworms.json.erb` {.filename}
 

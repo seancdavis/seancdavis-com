@@ -8,7 +8,7 @@ tags:
   - middleman
 ---
 
-For its first three major versions, Middleman used [Rails' asset pipeline](https://guides.rubyonrails.org/asset_pipeline.html) for its asset pipeline. But as of v4, [Middleman has abandoned using Rails' asset pipeline](https://middlemanapp.com/advanced/asset-pipeline/) in favor of a more customize approach -- [the external pipeline](https://middlemanapp.com/advanced/external-pipeline/).
+For its first three major versions, Middleman used [Rails' asset pipeline](https://guides.rubyonrails.org/asset_pipeline) for its asset pipeline. But as of v4, [Middleman has abandoned using Rails' asset pipeline](https://middlemanapp.com/advanced/asset-pipeline/) in favor of a more customize approach -- [the external pipeline](https://middlemanapp.com/advanced/external-pipeline/).
 
 The idea of the external pipeline is that you can build your own customized front-end build pipeline and easily hook it into the Middleman serve and build processes. Note that this affects only JavaScript, as Middleman still handles processing an SCSS bundle on its own.
 

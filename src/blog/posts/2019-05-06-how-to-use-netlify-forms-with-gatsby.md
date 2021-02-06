@@ -190,7 +190,7 @@ One way to keep the process acting smooth is to use AJAX or an XHR request to as
 To get started, we’re going to see a few important changes:
 
 1. Bring in two more packages — [`axios`](https://github.com/axios/axios) for handling the request and [`query-string`](https://github.com/sindresorhus/query-string) for encoding our data properly.
-2. Convert our page component to a class so that we can work with [React state](https://reactjs.org/docs/state-and-lifecycle.html) and give feedback to the user.
+2. Convert our page component to a class so that we can work with [React state](https://reactjs.org/docs/state-and-lifecycle) and give feedback to the user.
 3. Add an event listener to the form submission event so we can catch it and override it.
 4. Every field in the form gets a `ref` attribute matching the name of the field.
 

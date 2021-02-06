@@ -52,7 +52,7 @@ Transmit is one of the pricier apps I've purchased, but it is 100% worth every s
 
 I don't work much with transferring files via FTP today, but if I did, this would _absolutely_ be a lifesaver. It has a clean interface and it's really pleasant to work with.
 
-I use Transmit more for sending and viewing files on external cloud storage providers like [Amazon S3](https://aws.amazon.com/s3/), [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html), and so on. I tend to only use this for viewing or transferring a smaller number of files. When it becomes a mass transfer, I switch over to using a lower-level tool, like the [AWS S3 CLI](https://docs.aws.amazon.com/cli/latest/reference/s3/), which is more performant.
+I use Transmit more for sending and viewing files on external cloud storage providers like [Amazon S3](https://aws.amazon.com/s3/), [Backblaze B2](https://www.backblaze.com/b2/cloud-storage), and so on. I tend to only use this for viewing or transferring a smaller number of files. When it becomes a mass transfer, I switch over to using a lower-level tool, like the [AWS S3 CLI](https://docs.aws.amazon.com/cli/latest/reference/s3/), which is more performant.
 
 I also use it as a great alternative to the [Dropbox](https://www.dropbox.com) and [Google Drive](https://www.google.com/drive/) clients, as I can upload and download files at will on multiple accounts and it doesn't take up any space on my computer. This wouldn't work if you are an avid user of one of these services, as it would surely slow you down, but it's been good to me.
 

@@ -33,7 +33,7 @@ Writing a sentence you will remember can be an easy way. And why not add spaces 
 
 Random words will also work. You want the words to have little correlation so a robot can't figure it out as easily. But you also want something memorable. Again, feel free to use spaces. For example, `steak knife card shark` or `con job boot cut`.
 
-And guess what can work for both these methods? Lyrics, especially those from the [Red Hot Chili Peppers](http://www.azlyrics.com/lyrics/redhotchilipeppers/bytheway.html). Lyrics are memorable, and if you remember a long enough line, it could be a good password. Try to make it a little obscure, though.
+And guess what can work for both these methods? Lyrics, especially those from the [Red Hot Chili Peppers](http://www.azlyrics.com/lyrics/redhotchilipeppers/bytheway). Lyrics are memorable, and if you remember a long enough line, it could be a good password. Try to make it a little obscure, though.
 
 ## 02: Don't Overuse a Password
 

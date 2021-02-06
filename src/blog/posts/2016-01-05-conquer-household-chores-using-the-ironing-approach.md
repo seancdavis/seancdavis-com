@@ -12,7 +12,7 @@ attribution:
 
 Let's talk about small batches. If you've been around [lean manufacturing](https://en.wikipedia.org/wiki/Lean_manufacturing), [lean thinking](https://en.wikipedia.org/wiki/Lean_thinking), [lean startup](https://en.wikipedia.org/wiki/Lean_thinking), or any other practice in the lean family, you've probably run across the idea of small batches.
 
-There's a popular anecdote to describe the power of small batches that comes from [Lean Thinking](http://smile.amazon.com/dp/0743249275) and is mentioned in [The Lean Startup](http://smile.amazon.com/dp/0307887898). Eric Ries, author of _The Lean Startup_ tells the story in [a blog article](http://www.startuplessonslearned.com/2011/09/power-of-small-batches.html). It's worth reading, but the gist is:
+There's a popular anecdote to describe the power of small batches that comes from [Lean Thinking](http://smile.amazon.com/dp/0743249275) and is mentioned in [The Lean Startup](http://smile.amazon.com/dp/0307887898). Eric Ries, author of _The Lean Startup_ tells the story in [a blog article](http://www.startuplessonslearned.com/2011/09/power-of-small-batches). It's worth reading, but the gist is:
 
 _A father and his two daughters need to stuff envelopes. The girls think they should do each step (fold, stuff, stamp) one at a time. The father disagrees -- he wants to do one at a time, all the way through -- so they race. He wins, but not because he's better. It's because when thinking about this process, our mind ignores the time it takes to sort, stack, move piles, etc. And when we work in small batches we get better at the process._
 

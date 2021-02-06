@@ -42,7 +42,7 @@ And I'd also say, although I'd get ready on any other day, too, I'd probably put
 
 Best case scenario is I added 30 minutes to my one-hour meeting. That's absolute best case. It's usually more than that.
 
-It's not just that I'm not going to get that time back. That's [sunk cost](/make-smarter-decisions-by-ignoring-sunk-costs.html), and I don't care about it from a time perspective. But, when I make a sale, I'm going to consider how much time it took to make that sale. I'm going to consider how much time I'll spend in meetings while I'm managing the account.
+It's not just that I'm not going to get that time back. That's [sunk cost](/blog/make-smarter-decisions-by-ignoring-sunk-costs), and I don't care about it from a time perspective. But, when I make a sale, I'm going to consider how much time it took to make that sale. I'm going to consider how much time I'll spend in meetings while I'm managing the account.
 
 So, when you consider rounding, that means that a client is going to pay almost double the time they spent in a one-hour meeting. If being there made that much of a difference, then it's worth it. But I have never seen that be the case. Not for meetings.
 

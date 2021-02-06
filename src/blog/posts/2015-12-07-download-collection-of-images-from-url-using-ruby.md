@@ -23,7 +23,7 @@ urls = [
 
 Next, let's write a method that converts a URL of an image into a local image file.
 
-It's important that wherever you place or write this method, you've included the [`OpenURI`](http://ruby-doc.org/stdlib-2.1.0/libdoc/open-uri/rdoc/OpenURI.html) class.
+It's important that wherever you place or write this method, you've included the [`OpenURI`](http://ruby-doc.org/stdlib-2.1.0/libdoc/open-uri/rdoc/OpenURI) class.
 
 ```ruby
 require 'open-uri'

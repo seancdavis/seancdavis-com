@@ -10,7 +10,7 @@ attribution:
     license: CC BY 2.0
 ---
 
-By this time every year (February), the social media posts on New Year's Resolutions have long died out. And probably most of the people who set out the year with a resolution have already failed. (That's because [they don't work](http://www.lifehack.org/articles/featured/new-years-resolutions-dont-work-heres-why.html).)
+By this time every year (February), the social media posts on New Year's Resolutions have long died out. And probably most of the people who set out the year with a resolution have already failed. (That's because [they don't work](http://www.lifehack.org/articles/featured/new-years-resolutions-dont-work-heres-why).)
 
 In the aftermath of the holidays of late December and early January, _time_ often becomes a major factor in people's lives.
 

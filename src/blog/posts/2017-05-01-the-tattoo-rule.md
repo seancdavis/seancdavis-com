@@ -10,7 +10,7 @@ attribution:
     license: Unsplash
 ---
 
-I spend a lot of time talking about jumping right into an idea (e.g. [this article](/act-on-inspiration-before-it-runs-away.html)), exploring the possibilities without thinking too much-simple going for it.
+I spend a lot of time talking about jumping right into an idea (e.g. [this article](/blog/act-on-inspiration-before-it-runs-away)), exploring the possibilities without thinking too much-simple going for it.
 
 In many cases, this approach works wonders. The sooner we act, the sooner we are able to learn more about the thing we're doing. That learning creates the information needed to do better work in the future.
 

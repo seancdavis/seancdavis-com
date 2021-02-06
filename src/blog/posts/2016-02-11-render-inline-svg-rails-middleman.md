@@ -81,7 +81,7 @@ So, to render inside a view is as simple as:
 
 ### Boost Performance With Fragment Caching
 
-After publishing this post, I received a tip from [Hans Gerwitz](http://hans.gerwitz.com/) on [fragment caching](http://guides.rubyonrails.org/caching_with_rails.html) (with the Rails approach).
+After publishing this post, I received a tip from [Hans Gerwitz](http://hans.gerwitz.com/) on [fragment caching](http://guides.rubyonrails.org/caching_with_rails) (with the Rails approach).
 
 All you need to do is wrap the method's output in a `cache` block. But, you'd likely only want to cache if you find the file. So, something like this should do the trick.
 

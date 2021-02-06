@@ -9,7 +9,7 @@ Adding visual references to blog posts is a great way to help a reader understan
 
 But when it comes to making the graphics, I've always struggled. I like good design, I appreciate good design, I'm a bit of a perfectionist, and I'm also not very good at designing things.
 
-In my early blogging days, I made used an art program like [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) or [Sketch](https://www.sketch.com/). [This article](/blog/how-the-web-works/) has an early version of my approach (branded for the blog on which it was first published). But getting those right was time-consuming. I wanted the graphics to remain refined, but I didn't work in those art programs for hours trying to get it right. I knew I wasn't going to be efficient with my approach, given the low frequency at which I had to create art files.
+In my early blogging days, I made used an art program like [Adobe Illustrator](https://www.adobe.com/products/illustrator) or [Sketch](https://www.sketch.com/). [This article](/blog/how-the-web-works/) has an early version of my approach (branded for the blog on which it was first published). But getting those right was time-consuming. I wanted the graphics to remain refined, but I didn't work in those art programs for hours trying to get it right. I knew I wasn't going to be efficient with my approach, given the low frequency at which I had to create art files.
 
 Within the last year, my writing has transitioned more conceptual and theoretical — a healthy balance of _how-tos_ and _what-ifs_. That has pushed me to figure out how to get back into adding visuals to posts. I didn't want to go down that same road of tedium and frustration.
 

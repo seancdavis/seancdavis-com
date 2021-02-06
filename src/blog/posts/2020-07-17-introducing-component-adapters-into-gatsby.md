@@ -47,7 +47,7 @@ With that in mind, let's look at each of the files individually.
 
 The component file is straightforward. It's probably just a simpler version of the component files you're used to working with.
 
-Its goal is to focus entirely on **the function and style of the rendered on screen**. Assuming we're using some third-party library (calendars are hard) for the calendar (like [this one](http://jquense.github.io/react-big-calendar/examples/index.html)), there's probably not much to it other than some configuration tweaks and a little custom styling.
+Its goal is to focus entirely on **the function and style of the rendered on screen**. Assuming we're using some third-party library (calendars are hard) for the calendar (like [this one](http://jquense.github.io/react-big-calendar/examples/index)), there's probably not much to it other than some configuration tweaks and a little custom styling.
 
 The base of the component should look something like this:
 

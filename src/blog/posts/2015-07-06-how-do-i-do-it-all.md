@@ -131,7 +131,7 @@ Seriously, stop answering emails at night. Stop answering them before you shower
 
 If you didn't get it done within your 40-hour time slot, then you can't get it done. You either have too much on your plate, or you need a new job (or both).
 
-People who work 40 hours or less seem happier (based on my personal observations) and [have to be more efficient](http://www.nytimes.com/2012/08/19/opinion/sunday/be-more-productive-shorten-the-workweek.html). I mean, seriously, how fast do you think you're running that report on your fifteenth hour of the workday? Turn the computer off and do it when you're fresh. You're working your life away.
+People who work 40 hours or less seem happier (based on my personal observations) and [have to be more efficient](http://www.nytimes.com/2012/08/19/opinion/sunday/be-more-productive-shorten-the-workweek). I mean, seriously, how fast do you think you're running that report on your fifteenth hour of the workday? Turn the computer off and do it when you're fresh. You're working your life away.
 
 I have found myself defending this, because although I keep my paid job to 40 hours, I've been doing similar work for another 20 or more hours _on the side_. I used to think that meant I was okay, I wasn't working too much. I don't think that's the case, and that's why I'm currently working on transitioning my side development projects into my day job, and leaving the side project and hobby time for different types of projects, like writing and playing music.
 

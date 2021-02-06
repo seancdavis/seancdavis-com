@@ -30,7 +30,7 @@ Using the example above, to choose to see one movie over another because you lik
 
 But, to go to a movie simply because you already bought a ticket makes no logical sense.
 
-We do this all the time. I came across [an article by Michael Davidson](http://www.lifehack.org/articles/communication/how-the-sunk-cost-fallacy-makes-you-act-stupid.html) that provides a few good and common examples. That article said a lot of what I wanted to say here. The only thing I don't love is that it tells you how you're being stupid, not how to be smart. So, let's try that.
+We do this all the time. I came across [an article by Michael Davidson](http://www.lifehack.org/articles/communication/how-the-sunk-cost-fallacy-makes-you-act-stupid) that provides a few good and common examples. That article said a lot of what I wanted to say here. The only thing I don't love is that it tells you how you're being stupid, not how to be smart. So, let's try that.
 
 ## ... with a side of guilt
 

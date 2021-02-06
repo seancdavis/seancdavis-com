@@ -9,7 +9,7 @@ tags:
 
 > Like tables, grid layout enables an author to align elements into columns and rows. However, many more layouts are either possible or easier with CSS grid than they were with tables. For example, a grid container's child elements could position themselves so they actually overlap and layer, similar to CSS positioned elements.
 
-So, grid layout is inspired by the old-school table layout approach, while taking cues from CSS frameworks like [Bootstrap](https://getbootstrap.com/docs/4.1/layout/grid/) and [Foundation](https://foundation.zurb.com/sites/docs/grid.html). And [it's surprisingly well-supported](https://caniuse.com/#search=css%20grid).
+So, grid layout is inspired by the old-school table layout approach, while taking cues from CSS frameworks like [Bootstrap](https://getbootstrap.com/docs/4.1/layout/grid/) and [Foundation](https://foundation.zurb.com/sites/docs/grid). And [it's surprisingly well-supported](https://caniuse.com/#search=css%20grid).
 
 The question is: _Should you be using the native CSS grid or a CSS framework to lay out the content of your site?_
 
@@ -27,22 +27,14 @@ Many CSS frameworks have a similar approach to their grid layouts, which is to w
 
 ```html
 <header class="row">
-  <div class="col-sm-12">
-    Header
-  </div>
+  <div class="col-sm-12">Header</div>
 </header>
 <div class="row">
-  <main class="col-md-8">
-    Main
-  </main>
-  <aside class="col-md-4">
-    Sidebar
-  </aside>
+  <main class="col-md-8">Main</main>
+  <aside class="col-md-4">Sidebar</aside>
 </div>
 <footer class="row">
-  <div class="col-sm-12">
-    Footer
-  </div>
+  <div class="col-sm-12">Footer</div>
 </footer>
 ```
 

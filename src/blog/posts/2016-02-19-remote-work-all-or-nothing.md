@@ -44,16 +44,16 @@ That's backwards.
 
 Instead, remote work requires that you be a good communicator.
 
-I wrote an article recently on how [emergencies tend to be self-inflicted](/emergencies-are-usually-self-inflicted.html). That applies here, too. If he has a question keeping him from doing work, _why_ does he have that question? Or, another way to ask it is why doesn't he have other work he can do in the meantime?
+I wrote an article recently on how [emergencies tend to be self-inflicted](/blog/emergencies-are-usually-self-inflicted). That applies here, too. If he has a question keeping him from doing work, _why_ does he have that question? Or, another way to ask it is why doesn't he have other work he can do in the meantime?
 
 It all goes back to planning. Plan well and you decrease the number of unplanned events. Plan well and communication doesn't need to happen in real-time. Plan well and everyone knows what they are supposed to do, so it doesn't really matter when they do it, especially if they are measured by a set of goals, and not time.
 
-Remote work can't be approached halfway. [You can't half-ass it](/never-half-ass-two-things-whole-ass-one-thing.html). Remote work with strict guidelines and without good communication or planning leads to a bunch of satellite offices working under the same principles of those people who hated happiness and created a five-day work week.
+Remote work can't be approached halfway. [You can't half-ass it](/blog/never-half-ass-two-things-whole-ass-one-thing). Remote work with strict guidelines and without good communication or planning leads to a bunch of satellite offices working under the same principles of those people who hated happiness and created a five-day work week.
 
 I've read about other companies that have gone halfway with remote work. They let some people do it and not others. Or they let you do it, but only one day a week. Or they let some departments do it.
 
 I understand, it's a big step. It's more work for managers. It's a different way of working. It requires a different way of measuring success. So small steps seem like progress.
 
-And while I always say [life is about balance](/balance-belongs-in-everything-you-do.html), it doesn't always work that way. You don't step slowly into a cold lake. You don't peel off a Band-Aid as slowly as you can. That's not how those things work. You jump in and you rip it off. Remote work is the same way. You don't create the efficiencies a little at a time.
+And while I always say [life is about balance](/blog/balance-belongs-in-everything-you-do), it doesn't always work that way. You don't step slowly into a cold lake. You don't peel off a Band-Aid as slowly as you can. That's not how those things work. You jump in and you rip it off. Remote work is the same way. You don't create the efficiencies a little at a time.
 
 Do it or don't it.

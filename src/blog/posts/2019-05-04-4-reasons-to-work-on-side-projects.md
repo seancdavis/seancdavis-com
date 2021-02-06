@@ -53,7 +53,7 @@ And not all projects have to be about learning or making something great. Some p
 
 I save success for last because I think it's the most complex of the four benefits.
 
-When I talk about making a side project successful, many immediately jump to the conclusion that I'm talking about _financial success_. And that _can_ be true. A side project can certainly be financially successful enough that you could turn it into a full-time gig. Shoot, [here's a list of 21 side projects that became million-dollar startups](https://www.inc.com/jeff-haden/21-side-projects-that-became-million-dollar-startups-and-how-yours-can-too.html).
+When I talk about making a side project successful, many immediately jump to the conclusion that I'm talking about _financial success_. And that _can_ be true. A side project can certainly be financially successful enough that you could turn it into a full-time gig. Shoot, [here's a list of 21 side projects that became million-dollar startups](https://www.inc.com/jeff-haden/21-side-projects-that-became-million-dollar-startups-and-how-yours-can-too).
 
 But, to me, we use constructs like money and wealth to mask what we're really after. I think that all anyone really wants is to feel good, to be happy. Most of the time that doesn't mean money, although it certainly can. But when I talk about a project being successful, I just mean that it is providing you exactly what you want it to provide you, and that what it provides makes you happy. Only then can you consider it successful.
 

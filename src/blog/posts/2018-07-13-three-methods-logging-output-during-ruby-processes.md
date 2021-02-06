@@ -27,7 +27,7 @@ print 'Exporting data ... '
 print "Done.\n"
 ```
 
-Or you can work directly with [Ruby's IO class](https://ruby-doc.org/core-2.5.0/IO.html). In this case you have an object as either `$stdout` or `STDOUT` from which you can write to [standard output](https://en.wikipedia.org/wiki/Standard_streams). Your code from above may look more like this:
+Or you can work directly with [Ruby's IO class](https://ruby-doc.org/core-2.5.0/IO). In this case you have an object as either `$stdout` or `STDOUT` from which you can write to [standard output](https://en.wikipedia.org/wiki/Standard_streams). Your code from above may look more like this:
 
 ```rb
 $stdout.write('Exporting data ... ')

@@ -10,7 +10,7 @@ attribution:
     license: Unsplash
 ---
 
-I enjoy working on side projects because they bring a variability and freshness to life. Most side hustles provide at least one of [four potential benefits](/4-reasons-to-work-on-side-projects.html) — benefits that can help justify getting a little less sleep and doing a little more “work.”
+I enjoy working on side projects because they bring a variability and freshness to life. Most side hustles provide at least one of [four potential benefits](/blog/4-reasons-to-work-on-side-projects) — benefits that can help justify getting a little less sleep and doing a little more “work.”
 
 While these side gigs can _provide_ variability, they can also _be_ variable. Projects can differ in discipline, scope, industry, team, etc. But there’s one thing all side projects have in common:
 

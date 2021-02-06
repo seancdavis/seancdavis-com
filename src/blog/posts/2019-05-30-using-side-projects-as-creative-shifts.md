@@ -30,7 +30,7 @@ I write code (or manage people writing code) 40+ hours every week. I’m lucky t
 
 Let me make that one bold line from the previous section absolutely clear. This may be called a “creative shift,” but **that doesn’t mean it’s exclusively reserved for creatives**. We all need breaks from our everyday lives, and most of us are capable of doing _something_ that will really make us tick.
 
-While you should know [the time and balance](/time-balance-how-we-manage-our-most-valauble-asset) it’s going to require to take on a new project, there are plenty of options out there, even if you aren’t used to working on side projects. It could be anything from exercising regularly, to taking a pottery class, to spending dedicated time reading every day, or even making your own podcast.
+While you should know [the time and balance](/blog/time-balance-how-we-manage-our-most-valauble-asset) it’s going to require to take on a new project, there are plenty of options out there, even if you aren’t used to working on side projects. It could be anything from exercising regularly, to taking a pottery class, to spending dedicated time reading every day, or even making your own podcast.
 
 It’s not about being talented or skilled enough to do something. It’s about finding what you _really_ want to do, saying, “Screw it!” and diving right in.
 

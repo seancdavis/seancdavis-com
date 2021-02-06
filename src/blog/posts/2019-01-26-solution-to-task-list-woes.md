@@ -60,7 +60,7 @@ Lists are great for things that are all on the same level, like shopping lists, 
 
 One morning I was reading in bed instead of getting up and being productive. I came across an article that struck my attention. (I can't seem to find the article -- if only I had a list). It was about throwing out to-do lists and using [Trello](https://trello.com) to manage personal tasks. Trello uses the [Kanban](https://en.wikipedia.org/wiki/Kanban) style of management in which cards (each representing a task) are physically moved across columns on a board as the state of the card changes.
 
-At the time, I had been practicing this style of working with one of my company's clients. They used this awful product called [Rally](https://www.ca.com/us.html) (I guess now it's called _CA Technologies_). As clunky as the thing is, it had gotten me used to the kanban style of working (we were _technically_ using the [agile](https://en.wikipedia.org/wiki/Agile_software_development) approach, but it's similar enough to kanban).
+At the time, I had been practicing this style of working with one of my company's clients. They used this awful product called [Rally](https://www.ca.com/us) (I guess now it's called _CA Technologies_). As clunky as the thing is, it had gotten me used to the kanban style of working (we were _technically_ using the [agile](https://en.wikipedia.org/wiki/Agile_software_development) approach, but it's similar enough to kanban).
 
 This approach to managing personal tasks with the kanban style of management felt _different_. It felt _unique_ in taking a project management tool and applying to personal life. It felt like it was at least worth a shot.
 
