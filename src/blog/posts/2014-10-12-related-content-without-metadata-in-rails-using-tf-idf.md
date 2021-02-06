@@ -13,7 +13,7 @@ Marketing folks have discovered a great way to keep people on your site is to in
 
 Our challenge is _how do we programmatically determine the relatability of a particular post?_
 
-During one iteration on [The Polymath Lab](http://thepolymathlab.com), I had 77 published posts to move over. Not that many. I worked through several solutions before finding one I was satisfied with. And, even so, with less than 100 posts, it's can be difficult to be accurate, especially when the topics of this space are so widespread.
+During one iteration on The Polymath Lab (a former blog of mine), I had 77 published posts to move over. Not that many. I worked through several solutions before finding one I was satisfied with. And, even so, with less than 100 posts, it's can be difficult to be accurate, especially when the topics of this space are so widespread.
 
 ## Approaches
 

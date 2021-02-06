@@ -198,4 +198,4 @@ Commit and push that change to GitHub (or your Git provider). Vercel will automa
 
 There you go!
 
-This was only a very basic look at static APIs for the purposes of the deploy step. You can head back to [the intro to check out other tutorials on building static APIs](/blog/how-to-build-static-api#tutorials/).
+This was only a very basic look at static APIs for the purposes of the deploy step. You can head back to [the intro to check out other tutorials on building static APIs](/blog/how-to-build-static-api#tutorials).

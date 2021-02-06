@@ -148,7 +148,7 @@ In situations like this, I love refactoring. Let's see how we can make this even
 (1..3).to_a.each { |i| FileUtils.mkdir_p("#{dir}/dir_#{i + 1}") }
 ```
 
-Ah, much cleaner. For a look on `FileUtils`, see [this page](http://www.ruby-doc.org/stdlib-2.1.4/libdoc/fileutils/rdoc/FileUtils.html).
+Ah, much cleaner. For a look on `FileUtils`, see [this page](http://www.ruby-doc.org/stdlib-2.1.4/libdoc/fileutils/rdoc/FileUtils).
 
 Last, all we need to do is create the empty `README.md` file.
 

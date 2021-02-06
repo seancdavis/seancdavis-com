@@ -7,9 +7,9 @@ tags:
 
 There are a lot of tools out there for searching and replacing across multiple files. Heck, even the code editor I'm using now -- [VS Code](https://code.visualstudio.com/) -- supports search and replace (and it's pretty quick about it).
 
-But when I recently went to search and replace a multi-line string in all files throughout a directory, I noticed there was a lack of tools to accomplish this. [The `sed` command](https://www.gnu.org/software/sed/manual/sed.html) won't do it and neither will my code editor (at least at the time of writing this).
+But when I recently went to search and replace a multi-line string in all files throughout a directory, I noticed there was a lack of tools to accomplish this. [The `sed` command](https://www.gnu.org/software/sed/manual/sed) won't do it and neither will my code editor (at least at the time of writing this).
 
-It turns out this is quite easy to accomplish in ruby with an ad hoc script using [the `Dir` class](https://ruby-doc.org/core-2.5.1/Dir.html) to identify the files and [the `File` class](https://ruby-doc.org/core-2.5.1/File.html) to read and rewrite the file.
+It turns out this is quite easy to accomplish in ruby with an ad hoc script using [the `Dir` class](https://ruby-doc.org/core-2.5.1/Dir) to identify the files and [the `File` class](https://ruby-doc.org/core-2.5.1/File) to read and rewrite the file.
 
 **Before we get into the guts of this thing, know that this can be a dangerous path down which to proceed. This particular approach is a destructive action and if you're not using version control and you write an error into your script, you could incorrectly and permanently alter files in a negative way. I highly recommend tracking these files with [git](https://git-scm.com/) so you can protect against mistakes.**
 
@@ -37,7 +37,7 @@ end
 
 Where you put this script so it can be run is entirely up to you and the way in which you like to work. In general, there are three solid ways in which you can run a ruby script:
 
-1. Open an [IRB](http://ruby-doc.org/stdlib-2.5.1/libdoc/irb/rdoc/IRB.html) instance, paste the command and then run it.
+1. Open an [IRB](http://ruby-doc.org/stdlib-2.5.1/libdoc/irb/rdoc/IRB) instance, paste the command and then run it.
 
 2. Put the command in a file, and then run `ruby path/to/file.rb` where `path/to/file.rb` is the path to your ruby file.
 

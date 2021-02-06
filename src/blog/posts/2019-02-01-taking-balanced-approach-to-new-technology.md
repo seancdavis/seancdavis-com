@@ -11,7 +11,7 @@ Or take a look at [static site generators](https://www.staticgen.com/). For year
 
 How can you possibly take the time to know [which tools are best for your project](/blog/choose-the-right-tool-for-the-job/)? When is the appropriate time to jump into a new language or framework? When is it time to start using a tool and how do you know which tool to use?
 
-When answering questions like this, I tend to drift toward a balanced approach. I believe [balance belongs in everything you do](https://www.thepolymathlab.com/balance-belongs-in-everything-you-do), and I use practices like [checking in with myself](https://www.thepolymathlab.com/maintain-balance-by-checking-in) to make sure I (and what I'm doing) remains in balance.
+When answering questions like this, I tend to drift toward a balanced approach. I believe [balance belongs in everything you do](/blog/balance-belongs-in-everything-you-do), and I use practices like [checking in with myself](/blog/maintain-balance-by-checking-in) to make sure I (and what I'm doing) remains in balance.
 
 I use the same approach for new technology, whether it's a new hosting platform, operating system, or JavaScript framework. It looks something like this:
 

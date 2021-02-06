@@ -31,7 +31,7 @@ If you are returned with a bunch of HTML text, then you are good to go!
 
 ## 03: Parse
 
-The cool thing with Nokogiri is that we can [search within a document](http://www.nokogiri.org/tutorials/searching_a_xml_html_document.html) to target specific elements.
+The cool thing with Nokogiri is that we can [search within a document](http://www.nokogiri.org/tutorials/searching_a_xml_html_document) to target specific elements.
 
 For example, let's see how long the string of output is from the original request.
 

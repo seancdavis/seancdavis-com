@@ -30,7 +30,7 @@ Welcome _components_ to our lives. We began creating reusable bits of code, ofte
 
 This idea was followed in short succession by CSS frameworks, like [Bootstrap](https://getbootstrap.com/). CSS frameworks provided the means to enforce consistency of styling and functionality for commonly-used components like buttons, navigation, or alerts.
 
-The [first version of Bootstrap](https://getbootstrap.com/1.0.0/) (2011) didn't call what it was providing _components_, although that's exactly what they were. [2.0 did](https://getbootstrap.com/2.0.0/components.html), shipping right on the heels of its predecessor in early 2012.
+The [first version of Bootstrap](https://getbootstrap.com/1.0.0/) (2011) didn't call what it was providing _components_, although that's exactly what they were. [2.0 did](https://getbootstrap.com/2.0.0/components), shipping right on the heels of its predecessor in early 2012.
 
 Okay, now we're working efficiently?
 
