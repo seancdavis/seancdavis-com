@@ -1,5 +1,5 @@
 ---
-title: "Delete Entire Word in iTerm2"
+title: "Delete Entire Word in Terminal and iTerm2"
 description: Ever find yourself holding down the Delete key on the command line? Here's a way to work faster.
 image: /blog/210208/git-push-graphic.png
 tags:
