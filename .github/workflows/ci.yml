@@ -6,6 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
+      - uses: pnpm/action-setup@v1.2.1
+        with:
+          version: 5.16.0
       - name: Use Node.js 10.x
         uses: actions/setup-node@v1
         with:
@@ -14,11 +17,9 @@ jobs:
         env:
           NETLIFY_APP_ID: ${{ secrets.NETLIFY_APP_ID }}
         run: |
-          npm install
-          npm install -g netlify-cli
-          netlify link --id $NETLIFY_APP_ID
-          netlify build
+          pnpm install
+          ./node_modules/.bin/netlify link --id $NETLIFY_APP_ID
+          ./node_modules/.bin/netlify build
       - name: run Lighthouse CI
         run: |
-          npm install -g @lhci/cli@0.6.x
-          lhci autorun
+          ./node_modules/.bin/lhci autorun
