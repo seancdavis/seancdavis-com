@@ -21,6 +21,7 @@ jobs:
       - name: Build
         env:
           NETLIFY_APP_ID: ${{ secrets.NETLIFY_APP_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
           ./node_modules/.bin/netlify link --id $NETLIFY_APP_ID
           ./node_modules/.bin/netlify build
