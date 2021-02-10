@@ -9,17 +9,21 @@ jobs:
       - uses: pnpm/action-setup@v1.2.1
         with:
           version: 5.16.0
-      - name: Use Node.js 10.x
+      - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: 10.x
-      - name: npm install, build
+          node-version: 12.x
+      - name: Install Dependencies
         env:
           NETLIFY_APP_ID: ${{ secrets.NETLIFY_APP_ID }}
         run: |
           pnpm install
+      - name: Build
+        env:
+          NETLIFY_APP_ID: ${{ secrets.NETLIFY_APP_ID }}
+        run: |
           ./node_modules/.bin/netlify link --id $NETLIFY_APP_ID
           ./node_modules/.bin/netlify build
-      - name: run Lighthouse CI
+      - name: Run Lighthouse CI
         run: |
           ./node_modules/.bin/lhci autorun
