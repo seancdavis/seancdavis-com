@@ -14,7 +14,7 @@ Images can be a great way to enhance your documentation in README files or other
 The [original documentation](https://daringfireball.net/projects/markdown/syntax#img) specifies that images should be written like so:
 
 ```md
-![Alt text](/path/to/img.jpg "Optional title")
+![Alt text](/blog/path/to/img.jpg "Optional title")
 ```
 
 HTML code is also valid within most markdown renderers, including [GitHub's flavor](https://github.github.com/gfm/#raw-html). That means you could also render an the image above like this:

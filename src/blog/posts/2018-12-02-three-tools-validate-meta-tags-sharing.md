@@ -38,7 +38,7 @@ Because Facebook is the leader in this space, it also takes on the responsibilit
 
 Twitter also has its own protocol separate from Facebook and Open Graph. In my experience, these tags are only used by Twitter, as most other social platforms assume either the OG tags or the generic meta tags (title, description).
 
-Most of the focus with the Twitter tags is in having more control over manipulating how the card representing your webpage appears on their platforms. And for that, they have [a massive list](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup.html) of options you can include. Again, you can usually just stick to the basics, or you can ignore Twitter entirely and let them use the OG tags. In fact, [on that list](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup.html), Twitter displays which of their tags fall back to which OG tags.
+Most of the focus with the Twitter tags is in having more control over manipulating how the card representing your webpage appears on their platforms. And for that, they have [a massive list](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup) of options you can include. Again, you can usually just stick to the basics, or you can ignore Twitter entirely and let them use the OG tags. In fact, [on that list](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup), Twitter displays which of their tags fall back to which OG tags.
 
 In any case, Twitter tags are good to use if you want more control over what shows up on Twitter when others share your content. And they have [a validator](https://cards-dev.twitter.com/validator) to help you preview and debug you meta tags.
 

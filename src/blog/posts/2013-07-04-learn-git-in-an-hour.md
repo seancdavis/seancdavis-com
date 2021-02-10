@@ -38,7 +38,7 @@ Okay, this is the last time I'm pushing you to The Book. But if you don't have i
 Now we need to configure a few things. Open Terminal on Mac or Git Bash on Windows, and type in the following commands (substituting your information):
 
     $ git config --global user.name "Sean C Davis"
-    $ git config --global user.email sean@thepolymathlab.com
+    $ git config --global user.email eatallthe@sandwiches.com
 
 _Note: the `--global` option sets this across your Git application, which means you only have to change it once. It's like changing a preference in any desktop application. If you ever need to reference your settings, you can run:_
 

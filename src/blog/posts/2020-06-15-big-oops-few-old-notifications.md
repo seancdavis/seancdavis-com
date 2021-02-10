@@ -20,7 +20,7 @@ It was 2014 and I was working for an agency. I was "The Lead" on a website redes
 
 One task within this redesign was to take two forms and merge them into a single contact form. My approach was to take two old Rails models and merge them into one, since they were now going to share much of the same logic.
 
-At this time I was also new to the idea of [Active Record callbacks](https://guides.rubyonrails.org/active_record_callbacks.html), which enabled a developer to bake in actions as data in the database changed via a data model. This is a powerful idea, but one must really know what they're doing when working with them. (I didn't.)
+At this time I was also new to the idea of [Active Record callbacks](https://guides.rubyonrails.org/active_record_callbacks), which enabled a developer to bake in actions as data in the database changed via a data model. This is a powerful idea, but one must really know what they're doing when working with them. (I didn't.)
 
 I also wanted to send an email notification to users who filled out the form saying thank you and that someone would be in touch — you know, that typical garbage email you receive after filling out an online form.
 

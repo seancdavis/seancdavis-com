@@ -101,7 +101,7 @@ If you want more info on DNS, look [here](http://www.howstuffworks.com/dns.htm "
 
 We said a web server was just a computer, right? So when the appropriate server receives the request for "yahoo.com" it has to know where to look. This gets technical, so let's just say the server *knows* where to look.
 
-That *file* the web server returns exists in what we like to call the *root directory*. But now, let's say you click on a link on a page that takes you to [http://yahoo.com/stories/all.html](http://yahoo.com/stories/all.html) (this is an example, it's not a real page). Then what is happening is the *file* that is returned is called *all.html* and it lives in a folder called *stories*, which is a folder within the *root directory*.
+That *file* the web server returns exists in what we like to call the *root directory*. But now, let's say you click on a link on a page that takes you to [http://yahoo.com/stories/all.html](http://yahoo.com/stories/all) (this is an example, it's not a real page). Then what is happening is the *file* that is returned is called *all.html* and it lives in a folder called *stories*, which is a folder within the *root directory*.
 
 {% post_image
     alt="how the web works",

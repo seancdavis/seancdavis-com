@@ -65,7 +65,7 @@ A [headless CMS](https://headlesscms.org/), sometimes called a _decoupled CMS_, 
 There are two types of headless CMS products, the distinguishing factor being how they store the content:
 
 - **API-Driven CMS:** An API-driven CMS handles its own content storage (usually in a database), and makes that content available via an [API](https://en.wikipedia.org/wiki/Application_programming_interface). Developers can use that API to build out the front-end(s). (Fun fact: WordPress also [has an API](https://developer.wordpress.org/rest-api/), which means it _could_ be used as a headless CMS.)
-- **Git-Based CMS:** Instead of storing content in a database, a git-based CMS stores its content in data files alongside the front-end code (usually as [markdown](https://daringfireball.net/projects/markdown/), [JSON](https://www.json.org/json-en.html), or [YAML](https://yaml.org/)). Developers of the site use those files to visually create the front-end.
+- **Git-Based CMS:** Instead of storing content in a database, a git-based CMS stores its content in data files alongside the front-end code (usually as [markdown](https://daringfireball.net/projects/markdown/), [JSON](https://www.json.org/json-en), or [YAML](https://yaml.org/)). Developers of the site use those files to visually create the front-end.
 
 ### The Headless CMS Market
 

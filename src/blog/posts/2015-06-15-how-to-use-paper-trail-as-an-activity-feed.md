@@ -84,7 +84,7 @@ This is a very simple use case. Let's look at each item and our assumptions.
 - `unless user.nil?`: We're checking to ensure the user exists before we render anything.
 - `user.name`: We assume a `name` method on the `User` object. You may need to use a different method depending on your model.
 - `version.event`: How the object was changed. The trailing `d` is because the event is stored in present tense (there are more foolproof ways of achieving past tense, like [the verbs gem](https://github.com/rossmeissl/verbs).
-- `version.item_type.downcase`: Using [inflectors](http://api.rubyonrails.org/classes/ActiveSupport/Inflector.html) to turn something like `Post` into `post`. _This does not account for camel cased model names. I'll leave that up to you_.
+- `version.item_type.downcase`: Using [inflectors](http://api.rubyonrails.org/classes/ActiveSupport/Inflector) to turn something like `Post` into `post`. _This does not account for camel cased model names. I'll leave that up to you_.
 - `time_ago_in_words(version.created_at)`: A nice rails helper for turning a date into something you can write in a sentence.
 
 ## Finding Routes

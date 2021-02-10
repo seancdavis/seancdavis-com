@@ -7,7 +7,7 @@ tags:
 
 There are times when you need to get to a class to be able to run a migration, but that class doesn't exist anymore.
 
-This has happened to me a few times. Most recently, I was working on a project using [single table inheritance](http://api.rubyonrails.org/classes/ActiveRecord/Inheritance.html). I had to rename one of the subclasses. But I also needed to make sure the data that already existed in production migrated effectively. In other words, I wanted that class for just a second -- to run a quick query and then be done.
+This has happened to me a few times. Most recently, I was working on a project using [single table inheritance](http://api.rubyonrails.org/classes/ActiveRecord/Inheritance). I had to rename one of the subclasses. But I also needed to make sure the data that already existed in production migrated effectively. In other words, I wanted that class for just a second -- to run a quick query and then be done.
 
 _Note: There are other ways to get around my specific STI case -- I'm using it as a demonstration._
 

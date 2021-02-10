@@ -17,7 +17,7 @@ The tradeoff is that it can be somewhat complex and overwhelming to put together
 
 ## References
 
-- [Create a New React App – React](https://reactjs.org/docs/create-a-new-react-app.html)
+- [Create a New React App – React](https://reactjs.org/docs/create-a-new-react-app)
 - [Learn React JS - Full Course for Beginners from freeCodeCamp](https://youtu.be/DLX62G4lc44)
 - [React For Beginners from Wes Bos](https://reactforbeginners.com/)
 - [React 101 from Codeacademy](https://www.codecademy.com/learn/react-101)

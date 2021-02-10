@@ -23,7 +23,7 @@ Yeah, that's it.
 
 ## 01: IRB
 
-The first method is using [IRB](http://ruby-doc.org/stdlib-2.5.1/libdoc/irb/rdoc/IRB.html). IRB stands for "Interactive Ruby" and opens up an active ruby session.
+The first method is using [IRB](http://ruby-doc.org/stdlib-2.5.1/libdoc/irb/rdoc/IRB). IRB stands for "Interactive Ruby" and opens up an active ruby session.
 
 All you have to do is run `irb` and you'll be placed into an interactive ruby session. This will look familiar if you've ever worked with Rails because this is what the Rails console uses.
 

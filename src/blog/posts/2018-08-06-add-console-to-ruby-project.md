@@ -7,7 +7,7 @@ tags:
 
 The [Rails console](https://guides.rubyonrails.org/command_line.html#rails-console) is a really powerful way to interact with your Rails applications via the command line. And when I started writing Ruby applications (without Rails) it was something I immediately missed dearly. But, as it turns out, those feelings I had were unfounded, as it's quite easy to add a console to your project.
 
-Under the hood the Rails console uses [IRB](http://ruby-doc.org/stdlib-2.5.1/libdoc/irb/rdoc/IRB.html). You may remember IRB from your early days learning Ruby. IRB stands for _interactive Ruby_. All it does is provide a way for you to execute ruby expressions on the command line -- it provides a _shell_ in a ruby environment.
+Under the hood the Rails console uses [IRB](http://ruby-doc.org/stdlib-2.5.1/libdoc/irb/rdoc/IRB). You may remember IRB from your early days learning Ruby. IRB stands for _interactive Ruby_. All it does is provide a way for you to execute ruby expressions on the command line -- it provides a _shell_ in a ruby environment.
 
 If you have Ruby installed on your machine, then you have IRB. And you can start IRB by running the `irb` command:
 

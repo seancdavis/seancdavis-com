@@ -80,7 +80,7 @@ The visualization above uses four key characters to represent structure:
 - `│` (not the same as the pipe character: `|`)
 - `─` (not the same as a hyphen: `-`)
 
-These characters are considered [box-drawing characters](https://en.wikipedia.org/wiki/Box-drawing_character), and [they go back a long time](https://theasciicode.com.ar/extended-ascii-code/box-drawing-character-single-line-lower-left-corner-ascii-code-192.html).
+These characters are considered [box-drawing characters](https://en.wikipedia.org/wiki/Box-drawing_character), and [they go back a long time](https://theasciicode.com.ar/extended-ascii-code/box-drawing-character-single-line-lower-left-corner-ascii-code-192).
 
 To build the structure, we combine the characters together. This makes it a little it easier to read. It works like this:
 

@@ -169,7 +169,7 @@ Remember how I said you can't use JavaScript framework components with Eleventy?
 
 There are also other plugins popping up with this approach for other frameworks. [Here's one for React](https://www.npmjs.com/package/eleventy-plugin-react).
 
-This is a new concept — rendering client-side JS components on the server — but I suspect we'll see a lot of this in 2021. In fact, [React has mentioned they are going to be focusing on it](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html).
+This is a new concept — rendering client-side JS components on the server — but I suspect we'll see a lot of this in 2021. In fact, [React has mentioned they are going to be focusing on it](https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components).
 
 ## Client-Side JavaScript
 
