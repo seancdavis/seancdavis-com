@@ -7,6 +7,10 @@ tags:
   - quick-tip
 ---
 
+{% video_tutorial
+    src="https://www.youtube.com/embed/Ljj1wGFJqPY",
+    title="3 Methods for Adding Images to GItHub README Files" %}
+
 Images can be a great way to enhance your documentation in README files or other markdown documentation. While there is a standard way to add an image in markdown, the nuance is in the image's source. Here are three methods for adding images to markdown files in a GitHub repository.
 
 ## Markdown Syntax
