@@ -141,12 +141,12 @@
 
   /* --- Block Quotes --- */
   blockquote {
-    @apply bg-gray-medium
+    @apply bg-gray-300
       italic
       my-8
       px-4
       py-8
-      text-gray-dark
+      text-gray-800
       text-xl;
 
     > * {
@@ -165,8 +165,8 @@
     }
 
     code {
-      @apply bg-gray-dark
-        text-gray-light;
+      @apply bg-gray-800
+        text-gray-100;
     }
   }
 }
