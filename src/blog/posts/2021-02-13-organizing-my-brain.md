@@ -53,8 +53,8 @@ Here is the list of tools within my system:
 
 - [Apple Notes](#apple-notes-for-quick-notes)
 - [Bear](#bear-for-drafting-blog-posts)
-- [Notion](#notion-for-long-term%2C-structure-content-%26-task%2Fproject-management)
-- [Google Docs](<#google-docs-for-collaboration%2C-spreadsheets%2C-presentations-(sometimes)>)
+- [Notion](#notion-for-long-term-structure-content-and-taskproject-management)
+- [Google Docs](#google-docs-for-collaboration-spreadsheets-presentations-sometimes)
 - [Dropbox](#dropbox-for-document-storage)
 - [Notability](#notability-for-meeting-notes)
 - [Google Photos](#google-photos-for-photos)

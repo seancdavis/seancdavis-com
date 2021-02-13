@@ -1,9 +1,10 @@
 const glob = require("glob")
 const lodash = require("lodash")
 const MarkdownIt = require("markdown-it")
-const MarkdownItAttrs = require("markdown-it-attrs")
 const MarkdownItAnchor = require("markdown-it-anchor")
+const MarkdownItAttrs = require("markdown-it-attrs")
 const path = require("path")
+const slugify = require("slugify")
 
 const pluginRss = require("@11ty/eleventy-plugin-rss")
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
@@ -58,7 +59,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ static: "/" })
 
   // Markdown parser
-  const MarkdownLib = MarkdownIt({ html: true }).use(MarkdownItAttrs).use(MarkdownItAnchor)
+  const MarkdownLib = MarkdownIt({ html: true })
+    .use(MarkdownItAttrs)
+    .use(MarkdownItAnchor, { slugify: s => slugify(s, { lower: true, strict: true }) })
   eleventyConfig.setLibrary("md", MarkdownLib)
 
   // Merge the cascade of properties rather than overwriting. This is how we're
