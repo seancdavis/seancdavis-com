@@ -1,4 +1,7 @@
 module.exports = {
+  future: {
+    purgeLayersByDefault: true
+  },
   purge: ["./src/**/*.html", "./src/**/*.njk", "./src/**/*.md"],
   theme: {
     container: {
