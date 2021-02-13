@@ -4,14 +4,20 @@
   /* --breakpoint-lg: 1024px; */
   /* --breakpoint-xl: 1280px; */
 
-  --color-black: #051c28;
+  --color-gray-100: #eef1f5;
+  --color-gray-200: #eaeced;
+  --color-gray-300: #e4e8ed;
+  --color-gray-400: #c6cfd4;
+  --color-gray-500: #a0b0b8;
+  --color-gray-600: #76858d;
+  --color-gray-700: #4f6068;
+  --color-gray-800: #1b3846;
+  --color-gray-900: #051c28;
+
+  --color-black: var(--color-gray-900);
   --color-blue-dark: #1d4a8f;
   --color-blue: #2260bf;
   --color-gray-blue: #4b6a8a;
-  --color-gray-light: #eef1f5;
-  --color-gray: #eaeced;
-  --color-gray-medium: #e4e8ed;
-  --color-gray-dark: #1b3846;
   --color-green: #007785;
   --color-lime: #9ce736;
   --color-orange: #ff6b00;

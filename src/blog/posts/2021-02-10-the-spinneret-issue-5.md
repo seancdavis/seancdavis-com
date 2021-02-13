@@ -37,7 +37,7 @@ I was pretty quiet on my blog in the autumn. Much of that was to prepare for [my
 
 Nevertheless, I got back to writing in January, and here's what I put out in the last month:
 
-- [Components: Server-Side vs. Client-Side](https://css-tricks.com/components-server-side-vs-client-side/) <small class="text-gray-dark">(CSS-Tricks)</small>
+- [Components: Server-Side vs. Client-Side](https://css-tricks.com/components-server-side-vs-client-side/) <small class="text-gray-800">(CSS-Tricks)</small>
 - [3 Ways to Render Server-Side Components with Eleventy](https://www.seancdavis.com/blog/eleventy-server-components/)
 - [How I Add Sketches to Blog Posts](https://www.seancdavis.com/blog/how-i-add-sketches-to-blog-posts/)
 - [Use Cmd+K Terminal Trick to Stay Organized](https://www.seancdavis.com/blog/cmd-k-terminal-shortcut/)
