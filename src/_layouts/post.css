@@ -68,8 +68,11 @@
     @apply mb-2;
 
     ul {
-      @apply mb-0
-        mt-2;
+      @apply mt-2;
+
+      &:last-child {
+        @apply mb-0;
+      }
     }
   }
 
