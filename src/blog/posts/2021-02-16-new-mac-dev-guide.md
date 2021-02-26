@@ -252,7 +252,7 @@ I like [direnv](https://direnv.net/) for managing contextual environment variabl
 
 And add the hook to your `~/.zshrc` (or similar) file:
 
-    $ eval "$(direnv hook zsh)" to ~/.zshrc
+    $ echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
 
 ### nvm
 
