@@ -11,6 +11,26 @@ I don't just work out in the open because it looks cool. I would love your help 
 - Comments, feedback, and bug reports via [GitHub Issues](https://github.com/seancdavis/seancdavis-com/issues)
 - Fixes to silly typos, adjustments to outdated code examples, or other wild ideas via [a pull request](https://github.com/seancdavis/seancdavis-com/pulls)
 
+## Developing
+
+The site is built using [Eleventy](https://www.11ty.dev/). But it's actually a bit more that that. It has a demos and other code examples. So it's become a monorepo. Therefore, the best way to get started is to first install [PNPM](https://pnpm.js.org/). I use [Homebrew](https://brew.sh/) to do that:
+
+    $ brew install pnpm
+
+And then install the dependencies
+
+    $ pnpm install
+
+Note: If you don't plan on working in any of the JavaScript-based code examples, you should be fine by running `npm install` from the root. You may run into version discrepancies, which may or may not cause problems.
+
+To start up the dev server:
+
+    $ npm run dev
+
+And then view the site at [http://localhost:8000](http://localhost:8000).
+
+This site _technically_ precedes my Eleventy Starter Kit, [Twenty-Ninety](https://github.com/seancdavis/twenty-ninety). But it follows many of the same patterns. If you have a look at that documentation, you'll get a sense for what is going on here.
+
 ## License
 
 I don't use a typical software license. I'm here to make the web better and to have some fun doing it! You can [read my license page](https://www.seancdavis.com/license/) for those fine-grained, nitty-gritty, legal(ish) details.
