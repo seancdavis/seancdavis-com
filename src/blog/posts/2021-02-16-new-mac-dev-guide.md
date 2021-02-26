@@ -221,11 +221,14 @@ These items I've been able to install in the past, but did not work when running
 
 ## Install More Programs!
 
-There's more to install with Homebrew. The programs in this section are not casks and some require extra effort after installation.
+There's more to install with Homebrew. The programs in this section are not casks and some require extra effort after installation. They get installed without the `--cask` option:
+
+    $ brew install [item]
 
 Those that didn't require any extra work, at least initially were:
 
-    $ brew install docker
+- `docker`
+- `netlify-cli`
 
 ### Services
 
@@ -249,7 +252,7 @@ I like [direnv](https://direnv.net/) for managing contextual environment variabl
 
 And add the hook to your `~/.zshrc` (or similar) file:
 
-    $ eval "$(direnv hook zsh)" to ~/.zshrc
+    $ echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
 
 ### nvm
 
