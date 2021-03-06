@@ -44,7 +44,11 @@
     "develop:css": "postcss src/_includes/css/index.css -o src/css/styles.css --watch",
     "develop:html": "eleventy --serve --port 8000",
     "develop:js": "webpack",
+    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skiping pnpm install",
     "start": "develop",
     "test": "ELEVENTY_ENV=test jest"
+  },
+  "devDependencies": {
+    "pnpm": "^5.18.3"
   }
 }
