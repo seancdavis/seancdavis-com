@@ -4,9 +4,9 @@ importers:
       '@11ty/eleventy': 0.11.1
       '@11ty/eleventy-plugin-rss': 1.1.0_@11ty+eleventy@0.11.1
       '@11ty/eleventy-plugin-syntaxhighlight': 3.1.0_@11ty+eleventy@0.11.1
-      '@analytics/google-analytics': 0.4.1
+      '@analytics/google-analytics': 0.5.2
       '@netlify/plugin-sitemap': 0.7.0
-      analytics: 0.5.5
+      analytics: 0.7.3
       autoprefixer: 9.8.6
       cssnano: 4.1.10
       glob: 7.1.6
@@ -33,9 +33,9 @@ importers:
       '@11ty/eleventy': ^0.11.1
       '@11ty/eleventy-plugin-rss': ^1.1.0
       '@11ty/eleventy-plugin-syntaxhighlight': ^3.1.0
-      '@analytics/google-analytics': ^0.4.1
+      '@analytics/google-analytics': ^0.5.2
       '@netlify/plugin-sitemap': ^0.7.0
-      analytics: ^0.5.5
+      analytics: ^0.7.3
       autoprefixer: ^9.8.6
       cssnano: ^4.1.10
       glob: ^7.1.6
@@ -168,18 +168,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-RiMAVpSluRbWb2hlT9wMJ0r2l+MUZzScYjY+w2iWRzjOr9Zzzs4tYzJT6Sd94PDz3LzCuf4aGOwS6pkKXTEBLw==
-  /@analytics/core/0.6.2:
+  /@analytics/core/0.10.3:
     dependencies:
-      analytics-utils: 0.2.2
+      analytics-utils: 0.4.2
     dev: false
     resolution:
-      integrity: sha512-qXBfef5/HK5RZkGlkVqRKnjFQuPZejU6NLqnzx/DH3EU28w7a7IgUN+qZ2VSWFr3aMtNJ0qVybfHDxcJBtrLtQ==
-  /@analytics/google-analytics/0.4.1:
+      integrity: sha512-pF3Y8jPLoNbsPQksgOucsHaOQUeDiX7r8oqoCiyja4zB7WYCJAum1wll3lBbFUrUDWQHZ1xg/nMBe5mvKN6Qmw==
+  /@analytics/google-analytics/0.5.2:
     dependencies:
       universal-analytics: 0.4.23
     dev: false
     resolution:
-      integrity: sha512-OyRWBRk0OSE6Nz7cnHBVr50PWPZxXTUAAr+GycXv2X4SxfYPv2vLtQjiB5jd9RxZOaE+15Hp1760ZVJXyfmf5A==
+      integrity: sha512-6jviLzo6s7MLvsfPLCSppGgoHb9piShCk/n66s75yR8XN+Pz8ADk1Rh28jRErbLSJToJcCMOwDXikCF7U4exMQ==
   /@analytics/storage-utils/0.2.4:
     dependencies:
       '@analytics/cookie-utils': 0.2.3
@@ -3309,20 +3309,20 @@ packages:
     dev: false
     resolution:
       integrity: sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
-  /analytics-utils/0.2.2:
+  /analytics-utils/0.4.2:
     dependencies:
       '@analytics/storage-utils': 0.2.4
       dlv: 1.1.3
     dev: false
     resolution:
-      integrity: sha512-fdbc+MeoNrkwCAbGD/qgedyvRbPnImmWiInAgZ51KpINmKITpdtWV+6riHVA1YBSrb8IyYlfxn98IeWyN9a0+Q==
-  /analytics/0.5.5:
+      integrity: sha512-Lgu0uCz6kt0Wk63u6iU6Gi2if0Zaoo097zFtoPAQFfIPp73S1jT44gvvUjAqP48Ak3xTA/oyLqs+sCNH0XN5HA==
+  /analytics/0.7.3:
     dependencies:
-      '@analytics/core': 0.6.2
+      '@analytics/core': 0.10.3
       '@analytics/storage-utils': 0.2.4
     dev: false
     resolution:
-      integrity: sha512-43JBzud8n1OoN5TUehHpsp38rDyDteFgS9ZPWLyuj5JGc7JgjLAQNN1BCwyM9js4U7LIRxhEyWXPkifndMsOeA==
+      integrity: sha512-9GLywnay2nTZH1ltMPJz2gUqmTcmb9ZcqpjXJY94aUz7g59RZey/Xt4QqWsRCerEp0A0H33RxqX7sKkV/MPRKA==
   /anser/2.0.1:
     dev: false
     resolution:
