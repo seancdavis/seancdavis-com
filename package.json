@@ -46,5 +46,8 @@
     "develop:js": "webpack",
     "start": "develop",
     "test": "ELEVENTY_ENV=test jest"
+  },
+  "devDependencies": {
+    "pnpm": "^5.18.3"
   }
 }
