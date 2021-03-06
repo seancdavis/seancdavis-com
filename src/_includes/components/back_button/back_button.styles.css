@@ -3,7 +3,8 @@
     link-transition;
 
   svg {
-    @apply inline-block
+    @apply h-6
+      inline-block
       mr-1
       w-4;
   }
