@@ -2,7 +2,7 @@
   > *:not(pre):not(blockquote):not(.cp_embed_wrapper):not(.filename):not(.override-body-constraint) {
     @apply block
       max-w-2xl
-      mx-4
+      px-4
       w-full;
   }
 
@@ -56,8 +56,10 @@
 
   ul,
   ol {
-    @apply mb-6
-      pl-5;
+    @apply mb-6;
+
+    /* Force an override the generic positioning issue at the top of this file. */
+    padding-left: 2rem !important;
   }
 
   ul {
