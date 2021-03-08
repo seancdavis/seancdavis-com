@@ -30,7 +30,7 @@
     "postcss-nested": "^4.2.3",
     "slugify": "^1.4.7",
     "tailwindcss": "^1.9.6",
-    "webpack": "^4.46.0",
+    "webpack": "^5.24.3",
     "webpack-cli": "^4.5.0"
   },
   "scripts": {
