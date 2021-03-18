@@ -8,7 +8,6 @@
     "@11ty/eleventy-plugin-rss": "^1.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
     "@analytics/google-analytics": "^0.5.2",
-    "@netlify/plugin-sitemap": "^0.7.0",
     "analytics": "^0.7.3",
     "autoprefixer": "^9.8.6",
     "cssnano": "^4.1.10",
@@ -20,10 +19,6 @@
     "markdown-it": "^12.0.4",
     "markdown-it-anchor": "^7.1.0",
     "markdown-it-attrs": "^4.0.0",
-    "netlify-plugin-a11y": "^0.0.12",
-    "netlify-plugin-checklinks": "^4.1.1",
-    "netlify-plugin-inline-critical-css": "^1.2.0",
-    "netlify-plugin-pnpm": "^0.1.0-alpha.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.2",
     "postcss-custom-properties": "^10.0.0",
@@ -49,6 +44,11 @@
     "test": "ELEVENTY_ENV=test jest"
   },
   "devDependencies": {
+    "@netlify/plugin-sitemap": "^0.7.0",
+    "netlify-plugin-a11y": "^0.0.12",
+    "netlify-plugin-checklinks": "^4.1.1",
+    "netlify-plugin-inline-critical-css": "^1.2.0",
+    "netlify-plugin-pnpm": "^0.1.0-alpha.0",
     "pnpm": "^5.18.3"
   }
 }
