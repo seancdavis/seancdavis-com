@@ -127,7 +127,7 @@ Then, in our [Eleventy config file](https://www.11ty.dev/docs/config/), add the 
 `.eleventy.js` {.filename}
 
 ```js
-const fs = require("fs")
+const fs = require("fs")
 const path = require("path")
 const nunjucks = require("nunjucks")
 
