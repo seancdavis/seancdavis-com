@@ -26,7 +26,7 @@ In other words, working within an established convention should be the goal.
 
 ## A Lot of Little Decisions
 
-But we have to establish those conventions for ourselves with the Jamstack. And there are a lot of questions to answer. How are you going to build your next site? Will it be [Gatsby](https://www.gatsbyjs.org/) as the [static site](/why-build-static-sites) generator, [Contentful](https://www.contentful.com/) as the content management system, and [Netlify](https://www.netlify.com/) as the build tooling and host? Or maybe you'd prefer something more like [Eleventy](https://www.11ty.dev/) (SSG), [Forestry](https://www.forestry.io/) (CMS), and [Vercel](https://vercel.com/) (build/host)? Those are just two examples that don't have any overlap. There are countless more combinations you could conjure.
+But we have to establish those conventions for ourselves with the Jamstack. And there are a lot of questions to answer. How are you going to build your next site? Will it be [Gatsby](https://www.gatsbyjs.org/) as the [static site](/blog/why-build-static-sites) generator, [Contentful](https://www.contentful.com/) as the content management system, and [Netlify](https://www.netlify.com/) as the build tooling and host? Or maybe you'd prefer something more like [Eleventy](https://www.11ty.dev/) (SSG), [Forestry](https://www.forestry.io/) (CMS), and [Vercel](https://vercel.com/) (build/host)? Those are just two examples that don't have any overlap. There are countless more combinations you could conjure.
 
 And none of them are wrong.
 
