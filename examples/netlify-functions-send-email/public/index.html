@@ -39,7 +39,10 @@
         formData.forEach((value, key) => (jsonData[key] = value))
         // Send the data to the Netlify function.
         request.open("POST", "/.netlify/functions/send-email")
-        request.send(jsonData)
+        request.send(JSON.stringify(jsonData))
+        // Clear the form.
+        alert("Email request submitted!")
+        event.target.reset()
       }
     </script>
   </body>
