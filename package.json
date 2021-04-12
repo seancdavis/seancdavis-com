@@ -48,6 +48,6 @@
     "test": "ELEVENTY_ENV=test jest"
   },
   "devDependencies": {
-    "pnpm": "^5.18.3"
+    "pnpm": "^6.0.1"
   }
 }
