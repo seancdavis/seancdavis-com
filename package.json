@@ -11,7 +11,7 @@
     "@netlify/plugin-sitemap": "^0.8.0",
     "analytics": "^0.7.3",
     "autoprefixer": "^9.8.6",
-    "cssnano": "^4.1.10",
+    "cssnano": "^5.0.0",
     "glob": "^7.1.6",
     "html-minifier": "^4.0.0",
     "imgix-core-js": "^2.3.2",
