@@ -14,6 +14,7 @@ fs.mkdirSync(tmpDir, { recursive: true })
 // - [ ] Consider a scenario in which a redirect fails — "strict mode" that
 //   requires all links to return 200.
 // - [ ] List the invalid links and their pages.
+// - [ ] Check for existence of id values from anchor hashes.
 
 const hostname = "localhost"
 const port = 3001
