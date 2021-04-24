@@ -1,11 +1,13 @@
 ---
 layout: blank
-title: Blog
-description: Thoughts, ideas, and tutorials on web development, working efficiently, staying organized, and having a little fun along the way.
+title: The Blog
+description: Thoughts, ideas, and tutorials on web development, the Jamstack, working efficiently, staying organized, and having a little fun along the way.
 permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
 pagination:
   data: collections.posts
   size: 10
+seo:
+  image: meta/seancdavis--meta--blog.png
 ---
 
 
