@@ -1,7 +1,7 @@
 const lodash = require("lodash")
 
 /**
- * Provides a method for adding NJK components.
+ * Extends Eleventy's configuration.
  *
  * @param {object} eleventyConfig Eleventy's configuration object
  */
