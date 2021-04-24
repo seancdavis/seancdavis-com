@@ -1,5 +1,4 @@
 import { toggleMobileMenu } from "./utils/toggle-mobile-menu"
-import "./utils/scan-links"
 
 import "./lib/analytics"
 
