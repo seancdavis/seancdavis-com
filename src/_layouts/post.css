@@ -145,6 +145,7 @@
   }
 
   /* --- Callouts --- */
+  pre + .component--callout,
   .component--callout + .filename,
   .component--callout + pre {
     margin-top: -2rem;
