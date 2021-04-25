@@ -122,9 +122,11 @@ import CalendarFixtures from "components/calendar/fixtures"
 const calendar = <Calendar {...CalendarFixtures.simple_calendar} />
 ```
 
-_Note: You'd likely have to update your import paths, but the point here is that it will *just work*. There is no data coming from the data source. We're mocking that with a fixture._
+{% callout type="note" %}
+You'd likely have to update your import paths, but the point here is that it will _just work_. There is no data coming from the data source. We're mocking that with a fixture.
 
-_Also note: The `{...}` syntax represents a [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). It's worth looking into if you are unfamiliar with the concept._
+Also, the `{...}` syntax represents a [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). It's worth looking into if you are unfamiliar with the concept.
+{% endcallout %}
 
 ## The Adapter
 
@@ -132,7 +134,9 @@ Ultimately, we know we want to pull data from a data source, which may not match
 
 The adapter is responsible for retrieving and transforming the data. After transformation, it renders the calendar component. In other words, it's a _data wrapper_ for the the main component.
 
-_Quick sidebar: I know I mentioned the *single responsibility principle* above and this deviates from that in retrieving *and* transforming data. If you really want to stick to it, you could create a separate *transformer* file that only focuses on mapping raw data fields to the component. (I'm working on a smart version of that but am not there yet, so I'm currently shoving both of those responsibilities into the component adapter.)_
+{% callout type="sidebar" %}
+I know I mentioned the _single responsibility principle_ above and this deviates from that in retrieving _and_ transforming data. If you really want to stick to it, you could create a separate _transformer_ file that only focuses on mapping raw data fields to the component. (I'm working on a smart version of that but am not there yet, so I'm currently shoving both of those responsibilities into the component adapter.)
+{% endcallout %}
 
 Let's assume that we have a GraphQL query we can run in our Gatsby project called `allEvents` that returns all the events. Except the properties don't quite match what we'd expect. Instead of `starts` and `ends`, we have `starts_at` and `ends_at`. So we can do something like this:
 

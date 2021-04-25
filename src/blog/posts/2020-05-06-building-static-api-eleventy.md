@@ -116,7 +116,8 @@ Now let's start the Eleventy dev server:
 
 _(You can learn more about command-line usage [here](https://www.11ty.dev/docs/usage/).)_
 
-Note: I typically like to wrap this command up in the `package.json` file so that I only have to remember a simple command like `npm run dev`. To do that, add to the `scripts` section of `package.json`:
+{% callout type="note" %}
+I typically like to wrap this command up in the `package.json` file so that I only have to remember a simple command like `npm run dev`. To do that, add to the `scripts` section of `package.json`:
 
 `package.json` {.filename}
 
@@ -130,6 +131,7 @@ Note: I typically like to wrap this command up in the `package.json` file so tha
 ```
 
 Now I could run `npm run dev` to start the server.
+{% endcallout %}
 
 Once the server is running, check it out on your computer by opening a browser window and navigating to [http://localhost:8080/earworms.json](http://localhost:8080/earworms.json).
 
