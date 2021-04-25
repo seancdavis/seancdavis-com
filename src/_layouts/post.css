@@ -144,6 +144,12 @@
     }
   }
 
+  /* --- Callouts --- */
+  .component--callout + .filename,
+  .component--callout + pre {
+    margin-top: -2rem;
+  }
+
   /* --- Block Quotes --- */
   blockquote {
     @apply bg-gray-300
