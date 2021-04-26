@@ -2,7 +2,8 @@
 title: "The Spinneret: Issue #6"
 description: "Quick tips, more video content, website updates, and a myriad of new tools I've discovered. Come see what happened in my Jamstack world in February 2021."
 image: /blog/210310/the-spinneret--06.png
-tags: ["The Spinneret"]
+tags:
+  - spinneret
 ---
 
 Hey there!
