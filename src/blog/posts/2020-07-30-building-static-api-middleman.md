@@ -135,11 +135,13 @@ Now, refreshing the page, you should see the count of `3` nested within a `meta`
     src="/blog/200730/earworms-meta-count.png",
     alt="Earworms - Meta Count" %}
 
-_Note: I like using a Chrome extension to format JSON for me. It's called [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en). It cleans up the output to look like this:_
+{% callout type="note" %}
+I like using a Chrome extension to format JSON for me. It's called [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en). It cleans up the output to look like this:
 
 {% post_image
     src="/blog/200730/earworms-meta-count-formatted.png",
     alt="Earworms - Meta Count, Formatted Code" %}
+{% endcallout %}
 
 ### Add the Earworms Data
 

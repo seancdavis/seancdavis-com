@@ -20,8 +20,8 @@ But, now Git has a newer config option available in which you can set the defaul
 
     $ git config --global init.defaultBranch main
 
+{% callout type="note" %}
+You need to be on a newer version of Git for this to work. [See here for determining if you have the option available](/blog/git-list-all-config-options). If you don't and the command doesn't work for you, you likely have to upgrade Git. [Here's a nice guide](https://medium.com/@katopz/how-to-upgrade-git-ff00ea12be18) on how to do that on Mac.
+{% endcallout %}
+
 And now every time you run `git init`, the branch Git will provide you will be `main`!
-
----
-
-Note: You need to be on a newer version of Git for this to work. [See here for determining if you have the option available](/blog/git-list-all-config-options). If you don't and the command doesn't work for you, you likely have to upgrade Git. [Here's a nice guide](https://medium.com/@katopz/how-to-upgrade-git-ff00ea12be18) on how to do that on Mac.

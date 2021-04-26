@@ -12,7 +12,9 @@ To see all the configuration options available to you, you can [use the referenc
 
     $ git help -c
 
-_Note: If this command doesn't work for you, you likely have to upgrade Git. [Here's a nice guide](https://medium.com/@katopz/how-to-upgrade-git-ff00ea12be18) on how to do that on Mac._
+{% callout type="note" %}
+If this command doesn't work for you, you likely have to upgrade Git. [Here's a nice guide](https://medium.com/@katopz/how-to-upgrade-git-ff00ea12be18) on how to do that on Mac.
+{% endcallout %}
 
 ### Filtering the Results
 

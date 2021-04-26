@@ -50,7 +50,9 @@ Next, we'll want to install PNPM. Since NPM is already installed, you can actual
 
 Netlify should run this automatically before running `build`. This will use a remote version of PNPM to install your packages.
 
-Note: This is where I ended up running into trouble. I had other processes that were running prior to the `prebuild` script. That's why I ended up going the plugin route.
+{% callout type="note" %}
+This is where I ended up running into trouble. I had other processes that were running prior to the `prebuild` script. That's why I ended up going the plugin route.
+{% endcallout %}
 
 But if this works for you, that's great! You can use `npm` to run your build scripts just as you would have otherwise, but now you've used `pnpm` to manage your dependencies. You can be confident that the packages you're using in production are the same as those you use to develop locally.
 
