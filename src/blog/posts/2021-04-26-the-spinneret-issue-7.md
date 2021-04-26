@@ -1,7 +1,7 @@
 ---
 title: "The Spinneret: Issue #7"
 description: "Well, now there's another Davis and a lot more poop. Also, new code stuff and things."
-image: /blog/210426/the-spinneret--06.png
+image: /blog/210426/the-spinneret--07.png
 tags:
   - spinneret
 ---
