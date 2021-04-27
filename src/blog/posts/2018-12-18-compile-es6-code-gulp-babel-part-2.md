@@ -65,7 +65,7 @@ It's important here that you add `concat()` **before running babel** so it only 
 
 At this point, if you run the build (`npm run build`) you will see the files get compiled to a single `main.js` file in the `dist` directory.
 
-That's great, but you will eventually want to work with third-party libraries within your JavaScript components. And while you could load them separately in your [HTML](/blog/wtf-is-html/) file(s/), it's easier to manage and can be more performant when you include those dependencies in your bundle. Let's try that out.
+That's great, but you will eventually want to work with third-party libraries within your JavaScript components. And while you could load them separately in your [HTML](/blog/wtf-is-html/) file(s), it's easier to manage and can be more performant when you include those dependencies in your bundle. Let's try that out.
 
 ## Step 3: Add Dependencies
 
