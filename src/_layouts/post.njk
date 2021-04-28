@@ -2,6 +2,11 @@
 {% include "layout/header.njk" %}
 
 <div class="py-24">
+  {% if image %}
+    <div class="layout--post--header-image">
+      {% image path=image, sm="100vw" %}
+    </div>
+  {% endif %}
   <div class="container max-w-4xl relative">
     {% back_button href="/blog", label="All Posts", classes="mb-2" %}
     <h1 class="text-4xl leading-snug mb-3">{{ title }}</h1>
