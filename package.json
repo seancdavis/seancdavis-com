@@ -48,9 +48,10 @@
     "develop:css": "postcss src/_includes/css/index.css -o src/css/styles.css --watch",
     "develop:html": "eleventy --serve --port 8000",
     "develop:js": "webpack",
-    "pretest": "npm run build",
+    "pretest:visual": "DISABLE_PARTICLES=true DISABLE_TYPEWRITER=true npm run build",
     "start": "develop",
-    "test": "ELEVENTY_ENV=test jest"
+    "test": "ELEVENTY_ENV=test jest --testPathIgnorePatterns __tests__/visual-regression.spec.js",
+    "test:visual": "./node_modules/.bin/jest __tests__/visual-regression.spec.js"
   },
   "devDependencies": {
     "pnpm": "^6.0.1"
