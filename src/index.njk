@@ -9,7 +9,9 @@ seo:
 {# --- Jumbotron --- #}
 
 <div class="layout--home--jumbotron">
-  {% particles images=particles.images, count=15 %}
+  {% if particles.images.length > 0 %}
+    {% particles images=particles.images, count=15 %}
+  {% endif %}
 
   <div class="container max-w-5xl">
     <div class="flex items-center relative justify-between max-w-5xl">
