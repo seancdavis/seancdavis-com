@@ -62,7 +62,8 @@ code {
 }
 
 hr {
-  @apply my-8;
+  @apply box-border
+    my-8;
 
   border-width: 2px;
   border-color: #d3d6db;

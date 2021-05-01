@@ -102,7 +102,9 @@ Since you know you're only going to have one object, you could also return the o
 }
 ```
 
-_Note: For the tutorials listed at the end of the article, we're going to stick with the former approach, for consistency._
+{% callout type="note" %}
+For the tutorials listed at the end of the article, we're going to stick with the former approach, for consistency.
+{% endcallout %}
 
 Now let's look at the _automatic_ portion of the API – deploying and hosting it.
 

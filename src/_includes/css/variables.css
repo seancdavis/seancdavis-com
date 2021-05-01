@@ -25,6 +25,9 @@
   --color-white: #ffffff;
   --color-yellow: #ffd445;
 
+  --color-callout-warning-bg: #fae8ac;
+  --color-callout-warning-label: #bf9404;
+
   --color-code-block-bg: #1e1e3f;
   --color-code-block-bg: #1e1e3f;
 }
