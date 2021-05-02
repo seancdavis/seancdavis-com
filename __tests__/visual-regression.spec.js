@@ -12,7 +12,7 @@ const testPaths = [
   "/blog/tag/javascript/",
   "/blog/tag/javascript/page-2/",
   // twitter embed, youtube embed, code block filename, code blocks, image (GIF)
-  "/blog/three-ways-to-add-image-to-github-readme/",
+  // "/blog/three-ways-to-add-image-to-github-readme/",
   // top 5 posts
   "/blog/git-accept-merge-all-changes/",
   "/blog/wait-until-all-images-loaded/",
