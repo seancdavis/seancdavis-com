@@ -1,0 +1,13 @@
+name: Visual Regression
+on: [workflow_dispatch]
+jobs:
+  Run-Visual-Regression:
+    name: "Run Visual Regression"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.0.1
+      - name: Install dependencies
+        run: pnpm install
+      - name: Run tests
+        run: npm run test:visual
