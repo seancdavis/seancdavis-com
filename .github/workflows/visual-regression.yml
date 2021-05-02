@@ -13,3 +13,6 @@ jobs:
         run: pnpm install
       - name: Run tests
         run: npm run test:visual
+        env:
+          IMGIX_DOMAIN: ${{ secrets.IMGIX_DOMAIN }}
+          IMGIX_TOKEN: ${{ secrets.IMGIX_TOKEN }}
