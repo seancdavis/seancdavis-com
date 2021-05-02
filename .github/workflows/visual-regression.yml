@@ -1,7 +1,7 @@
 name: Visual Regression
 on: [workflow_dispatch]
 jobs:
-  Run-Visual-Regression:
+  run_visual_regression:
     name: "Run Visual Regression"
     runs-on: ubuntu-latest
     steps:
