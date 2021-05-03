@@ -10,7 +10,11 @@ Since this is part of the larger monorepo and you probably don't want to clone t
 
 You can also reference `index.html` for a basic example on submitting a form to the function to be processed.
 
-If you do want to start by deploying this project, this directory is ready to go as a Netlify project. It even has a `netlify.toml` with some basics to get started.
+This is technically ready to run out of the box if you want to copy it wholesale. You can deploy to Netlify or [run locally](https://www.netlify.com/products/dev/). But make note of the caveat explained below.
+
+### ⚠️ Caveats!
+
+If you do want to start by deploying this project, this directory is _technically_ ready to go as a Netlify project. It even has a `netlify.toml` with some basics to get started. However, it is using an Ethereal test account. That means the inbox is generated on the fly and you won't actually be able to see the email messages. You're welcome to swap these values out for something more stable.
 
 ## Issues
 
