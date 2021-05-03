@@ -114,6 +114,14 @@ importers:
       gatsby-transformer-remark: 2.15.0_gatsby@2.31.1
       prettier: 2.0.5
 
+  examples/netlify-functions-send-email:
+    specifiers:
+      http-server: ^0.12.3
+      nodemailer: ^6.5.0
+    dependencies:
+      http-server: 0.12.3
+      nodemailer: 6.6.0
+
 packages:
 
   /@11ty/dependency-tree/1.0.0:
@@ -13668,6 +13676,11 @@ packages:
     dependencies:
       has: 1.0.3
       is: 3.3.0
+    dev: false
+
+  /nodemailer/6.6.0:
+    resolution: {integrity: sha512-ikSMDU1nZqpo2WUPE0wTTw/NGGImTkwpJKDIFPZT+YvvR9Sj+ze5wzu95JHkBMglQLoG2ITxU21WukCC/XsFkg==}
+    engines: {node: '>=6.0.0'}
     dev: false
 
   /noms/0.0.0:
