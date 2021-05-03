@@ -164,7 +164,9 @@ Again, you should see your `package.json` file updated with the new packages.
 
 The Gulp configuration goes into a `gulpfile.js` file at the root of the project.
 
-**WARNING!** While I say this is simple, there's a lot of code here, so this may be a bit overwhelming at first glance. To help, I've injected comments throughout the file so you can see what's going on. I encourage you to read through the code and I'll summarize below the block.
+{% callout type="warning" %}
+While I say this is simple, there's a lot of code here, so this may be a bit overwhelming at first glance. To help, I've injected comments throughout the file so you can see what's going on. I encourage you to read through the code and I'll summarize below the block.
+{% endcallout %}
 
 `gulpfile.js` {.filename}
 

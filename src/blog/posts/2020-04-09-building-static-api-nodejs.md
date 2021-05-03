@@ -116,7 +116,9 @@ The `build` command will run our `build` script, which we haven't created yet. A
 
 Here's the full build script, with comments so you can follow what's happening. There's not a ton to it, really. It runs through our data files and parses them. Then it prepares our build directories and writes the parsed data as JSON files in the appropriate location.
 
-_Note: I like to put scripts in a `bin` directory so they are tucked away from the rest of the code. You're welcome to put this script anywhere you'd like, but will need to adjust the `build` script in your `package.json` file to point to the correct location._
+{% callout type="note" %}
+I like to put scripts in a `bin` directory so they are tucked away from the rest of the code. You're welcome to put this script anywhere you'd like, but will need to adjust the `build` script in your `package.json` file to point to the correct location.
+{% endcallout %}
 
 `bin/build.js` {.filename}
 
@@ -193,7 +195,9 @@ Once that's in place, you can run the command directly:
 
     $ ./bin/build.js
 
-_Note: There isn't a ton of benefit from that in this case because we're abstracting the command in a `package.json` script anyways._
+{% callout type="note" %}
+There isn't a ton of benefit from that in this case because we're abstracting the command in a `package.json` script anyways.
+{% endcallout %}
 
 ### Run the Command!
 
