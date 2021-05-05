@@ -1,8 +1,8 @@
 name: Visual Regression
 on: [workflow_dispatch, pull_request]
 jobs:
-  Run-Visual-Regression:
-    name: "Run Visual Regression"
+  Update-Visual-Regression-Snapshots:
+    name: "Update Visual Regression Snapshots"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,11 +11,36 @@ jobs:
           version: 6.0.2
       - name: Install dependencies
         run: pnpm install
-      - name: Run tests
-        run: npm run test:visual
+      - name: Build site
+        run: npm run pretest:visual
         env:
           IMGIX_DOMAIN: ${{ secrets.IMGIX_DOMAIN }}
           IMGIX_TOKEN: ${{ secrets.IMGIX_TOKEN }}
-          AWS_BUCKET: ${{ secrets.AWS_BUCKET }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Run tests
+        # Note: Shouldn't need env vars because the site is already built and we
+        # won't have any failures. We're committing to the repo directly.
+        run: JEST_CONFIG=visual ELEVENTY_ENV=test ./node_modules/.bin/jest --updateSnapshot
+      - name: Commit new snapshots
+        run: |
+          git config --global user.name 'Sean C Davis'
+          git config --global user.email 'scdavis41@gmail.com'
+          git commit -am "Update snapshots"
+          git push
+  # Run-Visual-Regression:
+  #   name: "Run Visual Regression"
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: pnpm/action-setup@v2.0.1
+  #       with:
+  #         version: 6.0.2
+  #     - name: Install dependencies
+  #       run: pnpm install
+  #     - name: Run tests
+  #       run: npm run test:visual
+  #       env:
+  #         IMGIX_DOMAIN: ${{ secrets.IMGIX_DOMAIN }}
+  #         IMGIX_TOKEN: ${{ secrets.IMGIX_TOKEN }}
+  #         AWS_BUCKET: ${{ secrets.AWS_BUCKET }}
+  #         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
