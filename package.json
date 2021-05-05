@@ -12,6 +12,8 @@
     "@netlify/plugin-sitemap": "^0.8.0",
     "analytics": "^0.7.3",
     "autoprefixer": "^9.8.6",
+    "aws-sdk": "^2.900.0",
+    "chalk": "^4.1.1",
     "cssnano": "^4.1.10",
     "glob": "^7.1.6",
     "html-minifier": "^4.0.0",
@@ -50,8 +52,8 @@
     "develop:js": "webpack",
     "pretest:visual": "DISABLE_PARTICLES=true DISABLE_TYPEWRITER=true npm run build",
     "start": "develop",
-    "test": "ELEVENTY_ENV=test jest --testPathIgnorePatterns __tests__/visual-regression.spec.js",
-    "test:visual": "./node_modules/.bin/jest __tests__/visual-regression.spec.js"
+    "test": "ELEVENTY_ENV=test jest",
+    "test:visual": "JEST_CONFIG=visual npm run test"
   },
   "devDependencies": {
     "pnpm": "^6.0.1"
