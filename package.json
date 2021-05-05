@@ -50,8 +50,8 @@
     "develop:js": "webpack",
     "pretest:visual": "DISABLE_PARTICLES=true DISABLE_TYPEWRITER=true npm run build",
     "start": "develop",
-    "test": "ELEVENTY_ENV=test jest --testPathIgnorePatterns __tests__/visual-regression.spec.js",
-    "test:visual": "./node_modules/.bin/jest __tests__/visual-regression.spec.js"
+    "test": "ELEVENTY_ENV=test jest",
+    "test:visual": "JEST_CONFIG=visual npm run test"
   },
   "devDependencies": {
     "pnpm": "^6.0.1"
