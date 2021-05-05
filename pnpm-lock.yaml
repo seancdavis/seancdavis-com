@@ -12,6 +12,8 @@ importers:
       '@netlify/plugin-sitemap': ^0.8.0
       analytics: ^0.7.3
       autoprefixer: ^9.8.6
+      aws-sdk: ^2.900.0
+      chalk: ^4.1.1
       cssnano: ^4.1.10
       glob: ^7.1.6
       html-minifier: ^4.0.0
@@ -46,6 +48,8 @@ importers:
       '@netlify/plugin-sitemap': 0.8.0
       analytics: 0.7.3
       autoprefixer: 9.8.6
+      aws-sdk: 2.900.0
+      chalk: 4.1.1
       cssnano: 4.1.10
       glob: 7.1.6
       html-minifier: 4.0.0
@@ -3979,6 +3983,22 @@ packages:
       postcss-value-parser: 4.1.0
     dev: false
 
+  /aws-sdk/2.900.0:
+    resolution: {integrity: sha512-MtLsmuE5z0F3+lEdybh8j8cThIN+VK0qF8Len83gpOaK5pj4D9aJNS95Tb7xZ0/3yqGzugk/+nRv9xXQq/Fkfg==}
+    engines: {node: '>= 0.8.0'}
+    requiresBuild: true
+    dependencies:
+      buffer: 4.9.2
+      events: 1.1.1
+      ieee754: 1.1.13
+      jmespath: 0.15.0
+      querystring: 0.2.0
+      sax: 1.2.1
+      url: 0.10.3
+      uuid: 3.3.2
+      xml2js: 0.4.19
+    dev: false
+
   /aws-sign2/0.7.0:
     resolution: {integrity: sha1-tG6JCTSpWR8tL2+G1+ap8bP+dqg=}
     dev: false
@@ -4016,7 +4036,7 @@ packages:
   /axios/0.21.1_debug@4.3.1:
     resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
     dependencies:
-      follow-redirects: 1.13.1_debug@4.3.1
+      follow-redirects: 1.13.1
     transitivePeerDependencies:
       - debug
     dev: false
@@ -4742,7 +4762,7 @@ packages:
     resolution: {integrity: sha512-xq+q3SRMOxGivLhBNaUdC64hDTQwejJ+H0T/NB1XMtTVEwNTrfFF3gAxiyW0Bu/xWEGhjVKgUcMhCrUy2+uCWg==}
     dependencies:
       base64-js: 1.5.1
-      ieee754: 1.2.1
+      ieee754: 1.1.13
       isarray: 1.0.0
     dev: false
 
@@ -7740,6 +7760,11 @@ packages:
     resolution: {integrity: sha1-LUH1Y+H+QA7Uli/hpNXGp1Od9/Y=}
     dev: false
 
+  /events/1.1.1:
+    resolution: {integrity: sha1-nr23Y1rQmccNzEwqH1AEKI6L2SQ=}
+    engines: {node: '>=0.4.x'}
+    dev: false
+
   /events/3.3.0:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
     engines: {node: '>=0.8.x'}
@@ -10437,6 +10462,10 @@ packages:
     resolution: {integrity: sha512-slx8Q6oywCCSfKgPgL0sEsXtPVnSbTLWpyiDcu6msHOyKOLari1TD1qocXVCft80umnkk3/Qqh3lwoFt8T/BPQ==}
     dev: false
 
+  /ieee754/1.1.13:
+    resolution: {integrity: sha512-4vf7I2LYV/HaWerSo3XmlMkp5eZ83i+/CDluXi/IGTs/O1sejBNhTtnxzmRZfvOUqj7lZjqHkeTvpgSFDlWZTg==}
+    dev: false
+
   /ieee754/1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
     dev: false
@@ -11971,6 +12000,11 @@ packages:
       '@jimp/plugins': 0.14.0_@jimp+custom@0.14.0
       '@jimp/types': 0.14.0_@jimp+custom@0.14.0
       regenerator-runtime: 0.13.7
+    dev: false
+
+  /jmespath/0.15.0:
+    resolution: {integrity: sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=}
+    engines: {node: '>= 0.6.0'}
     dev: false
 
   /joi/17.3.0:
@@ -16943,6 +16977,10 @@ packages:
       postcss: 7.0.35
     dev: true
 
+  /sax/1.2.1:
+    resolution: {integrity: sha1-e45lYZCyKOgaZq6nSEgNgozS03o=}
+    dev: false
+
   /sax/1.2.4:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
     dev: false
@@ -19322,6 +19360,13 @@ packages:
     engines: {node: '>= 4'}
     dev: false
 
+  /url/0.10.3:
+    resolution: {integrity: sha1-Ah5NnHcF8hu/N9A861h2dAJ3TGQ=}
+    dependencies:
+      punycode: 1.3.2
+      querystring: 0.2.0
+    dev: false
+
   /url/0.11.0:
     resolution: {integrity: sha1-ODjpfPxgUh63PFJajlW/3Z4uKPE=}
     dependencies:
@@ -19390,6 +19435,11 @@ packages:
   /utils-merge/1.0.1:
     resolution: {integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=}
     engines: {node: '>= 0.4.0'}
+    dev: false
+
+  /uuid/3.3.2:
+    resolution: {integrity: sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==}
+    hasBin: true
     dev: false
 
   /uuid/3.4.0:
@@ -20216,6 +20266,13 @@ packages:
     resolution: {integrity: sha1-qQKekp09vN7RafPG4oI42VpdWig=}
     dev: false
 
+  /xml2js/0.4.19:
+    resolution: {integrity: sha512-esZnJZJOiJR9wWKMyuvSE1y6Dq5LCuJanqhxslH2bxM6duahNZ+HMpCLhBQGZkbX6xRf8x1Y2eJlgt2q3qo49Q==}
+    dependencies:
+      sax: 1.2.1
+      xmlbuilder: 9.0.7
+    dev: false
+
   /xml2js/0.4.23:
     resolution: {integrity: sha512-ySPiMjM0+pLDftHgXY4By0uswI3SPKLDw/i3UXbnO8M/p28zqexCUoPmQFrYD+/1BzhGJSs2i1ERWKJAtiLrug==}
     engines: {node: '>=4.0.0'}
@@ -20232,6 +20289,11 @@ packages:
   /xmlbuilder/13.0.2:
     resolution: {integrity: sha512-Eux0i2QdDYKbdbA6AM6xE4m6ZTZr4G4xF9kahI2ukSEMCzwce2eX9WlTI5J3s+NU7hpasFsr8hWIONae7LluAQ==}
     engines: {node: '>=6.0'}
+    dev: false
+
+  /xmlbuilder/9.0.7:
+    resolution: {integrity: sha1-Ey7mPS7FVlxVfiD0wi35rKaGsQ0=}
+    engines: {node: '>=4.0'}
     dev: false
 
   /xmlchars/2.2.0:

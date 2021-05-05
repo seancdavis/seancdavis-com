@@ -1,5 +1,5 @@
 name: Visual Regression
-on: [workflow_dispatch]
+on: [workflow_dispatch, pull_request]
 jobs:
   Run-Visual-Regression:
     name: "Run Visual Regression"
@@ -16,3 +16,6 @@ jobs:
         env:
           IMGIX_DOMAIN: ${{ secrets.IMGIX_DOMAIN }}
           IMGIX_TOKEN: ${{ secrets.IMGIX_TOKEN }}
+          AWS_BUCKET: ${{ secrets.AWS_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
