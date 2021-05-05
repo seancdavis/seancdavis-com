@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 6.0.2
@@ -20,12 +22,13 @@ jobs:
         # Note: Shouldn't need env vars because the site is already built and we
         # won't have any failures. We're committing to the repo directly.
         run: JEST_CONFIG=visual ELEVENTY_ENV=test ./node_modules/.bin/jest --updateSnapshot
-      - name: Commit new snapshots
-        run: |
-          git config --global user.name 'Sean C Davis'
-          git config --global user.email 'scdavis41@gmail.com'
-          git commit -am "Update snapshots"
-          git push
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Updating things automatically
+          commit_user_name: Sean C Davis
+          commit_user_email: scdavis41@gmail.com
+          commit_author: Sean C Davis <scdavis41@gmail.com>
+          branch: ${{ github.head_ref }}
   # Run-Visual-Regression:
   #   name: "Run Visual Regression"
   #   runs-on: ubuntu-latest
