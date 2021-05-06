@@ -9,7 +9,7 @@ tags:
   - node
 ---
 
-While [Netlify](/wtf-is-netlify) supports email notifications around triggers and features within its system (e.g. [deploy events](https://docs.netlify.com/site-deploys/notifications/), [form submissions](https://docs.netlify.com/forms/notifications/)), you may want to add custom email notification triggered by actions from users on your site.
+While [Netlify](/blog/wtf-is-netlify) supports email notifications around triggers and features within its system (e.g. [deploy events](https://docs.netlify.com/site-deploys/notifications/), [form submissions](https://docs.netlify.com/forms/notifications/)), you may want to add custom email notification triggered by actions from users on your site.
 
 Notifications sound tricky, though, don't they?
 
