@@ -17,3 +17,6 @@ node_modules
 
 # Local Netlify folder
 .netlify
+
+# Lighthouse Reports
+.lighthouseci/
