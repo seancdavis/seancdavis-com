@@ -2,7 +2,7 @@
   > *:not(pre):not(blockquote):not(.cp_embed_wrapper):not(.filename):not(.override-body-constraint) {
     @apply block
       max-w-2xl
-      mx-4
+      px-4
       w-full;
   }
 
@@ -56,8 +56,10 @@
 
   ul,
   ol {
-    @apply mb-6
-      pl-5;
+    @apply mb-6;
+
+    /* Force an override the generic positioning issue at the top of this file. */
+    padding-left: 2rem !important;
   }
 
   ul {
@@ -68,8 +70,11 @@
     @apply mb-2;
 
     ul {
-      @apply mb-0
-        mt-2;
+      @apply mt-2;
+
+      &:last-child {
+        @apply mb-0;
+      }
     }
   }
 
@@ -139,14 +144,21 @@
     }
   }
 
+  /* --- Callouts --- */
+  pre + .component--callout,
+  .component--callout + .filename,
+  .component--callout + pre {
+    margin-top: -2rem;
+  }
+
   /* --- Block Quotes --- */
   blockquote {
-    @apply bg-gray-medium
+    @apply bg-gray-300
       italic
       my-8
       px-4
       py-8
-      text-gray-dark
+      text-gray-800
       text-xl;
 
     > * {
@@ -165,8 +177,8 @@
     }
 
     code {
-      @apply bg-gray-dark
-        text-gray-light;
+      @apply bg-gray-800
+        text-gray-100;
     }
   }
 }

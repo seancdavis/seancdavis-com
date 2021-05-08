@@ -20,7 +20,7 @@
   &::after {
     @apply absolute block left-0 bottom-0 w-full;
 
-    background: var(--color-gray);
+    background: var(--color-gray-200);
     clip-path: polygon(0 0, 100% 80%, 100% 100%, 0 100%);
     content: " ";
     height: 90%;
@@ -134,7 +134,7 @@
 }
 
 .layout--home--about-intro-icon {
-  @apply bg-gray-light
+  @apply bg-gray-100
     duration-300
     inline-block
     mr-4
@@ -156,7 +156,7 @@
       transition-all
       w-full;
 
-    border: 2px solid var(--color-gray-light);
+    border: 2px solid var(--color-gray-100);
     content: " ";
   }
 

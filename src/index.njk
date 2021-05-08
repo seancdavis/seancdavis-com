@@ -9,7 +9,9 @@ seo:
 {# --- Jumbotron --- #}
 
 <div class="layout--home--jumbotron">
-  {% particles images=particles.images, count=15 %}
+  {% if particles.images.length > 0 %}
+    {% particles images=particles.images, count=15 %}
+  {% endif %}
 
   <div class="container max-w-5xl">
     <div class="flex items-center relative justify-between max-w-5xl">
@@ -18,7 +20,9 @@ seo:
           Sean C Davis.
         </h1>
         <p class="text-2xl sm:text-3xl md:text-4xl">
-          {% typewriter texts=typewriter.texts %}
+          {% if typewriter.texts.length > 0 %}
+            {% typewriter texts=typewriter.texts %}
+          {% endif %}
         </p>
       </div>
       <div class="layout--home--jumbotron-image">
@@ -58,13 +62,13 @@ seo:
 
 {# --- Callout --- #}
 
-<div class="bg-gray-dark text-white">
+<div class="bg-gray-800 text-white">
   <div class="container py-6 max-w-4xl text-center md:text-left">
     <div class="md:flex justify-between items-center">
       <div class="mb-4 md:mb-0">
         <h3 class="text-2xl md:text-3xl">Rather write an email?</h3>
 
-        <p class="md:text-lg md:text-xl max-w-md mx-auto">I can do that, too. But I'm not very good at checking it. Maybe you should make it rhyme.</p>
+        <p class="md:text-xl max-w-md mx-auto">I can do that, too. But I'm not very good at checking it. Maybe you should make it rhyme.</p>
       </div>
       <div>
         {% button url="mailto:hello@seancdavis.com", label="Email Me", theme="lime" %}
@@ -75,7 +79,7 @@ seo:
 
 {# --- Bio --- #}
 
-<div class="bg-gray-light">
+<div class="bg-gray-100">
   <div class="container py-24 max-w-4xl">
     <div class="grid col-gap-4 sm:grid-cols-2">
       <div>
