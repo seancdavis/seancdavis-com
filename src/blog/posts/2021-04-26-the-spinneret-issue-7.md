@@ -31,26 +31,26 @@ _New blog posts and videos I published last month._ {.text-sm}
 The two articles I'm most excited about this month are:
 
 - [Why Typescript and Svelte are a match made in heaven](https://www.sanity.io/guides/using-typescript-with-svelte): This was a guide I put together for Sanity. I hadn't spent a ton of time with Sanity, Svelte, or TypeScript, so it was really interesting and challenging to explore them all at once. I really like what came out of it.
-- [The Good and the Bad of Component-Driven Development](https://www.seancdavis.com/blog/why-build-with-components/): There's nothing fancy about this article. But it puts me back on track for building out a whole suite of component articles, which will serve as the foundation for an exciting new project I'm considering.
+- [The Good and the Bad of Component-Driven Development](/blog/why-build-with-components/): There's nothing fancy about this article. But it puts me back on track for building out a whole suite of component articles, which will serve as the foundation for an exciting new project I'm considering.
 
 As I look to figure out how to publish more content (that is meaningful), I've started by cleaning out some things I've had laying around for a bit.
 
-- [Dynamically Changing a Netlify Form Name](https://www.seancdavis.com/blog/dynamically-change-netlify-form-name/)
-- [Develop Long-Term Efficiency by Creating Conventions](https://www.seancdavis.com/blog/long-term-efficiency-through-conventions/)
+- [Dynamically Changing a Netlify Form Name](/blog/dynamically-change-netlify-form-name/)
+- [Develop Long-Term Efficiency by Creating Conventions](/blog/long-term-efficiency-through-conventions/)
 
-Plus a new Quick Tip: [Use a Code Spell Checker](https://www.seancdavis.com/blog/use-code-spell-checker/)
+Plus a new Quick Tip: [Use a Code Spell Checker](/blog/use-code-spell-checker/)
 
-A couple new [WTF articles](https://www.seancdavis.com/blog/tag/wtf/):
+A couple new [WTF articles](/blog/tag/wtf/):
 
-- [WTF is PNPM?](https://www.seancdavis.com/blog/wtf-is-pnpm/)
-- [WTF is a Monorepo?](https://www.seancdavis.com/blog/wtf-is-monorepo/)
+- [WTF is PNPM?](/blog/wtf-is-pnpm/)
+- [WTF is a Monorepo?](/blog/wtf-is-monorepo/)
 
 And I solved a few random problems:
 
-- [Git: List All Config Options](https://www.seancdavis.com/blog/git-list-all-config-options/)
-- [Git: Set Default Branch to "main" on "init"](https://www.seancdavis.com/blog/git-set-default-branch/)
-- [How to Use PNPM in Netlify Build](https://www.seancdavis.com/blog/use-pnpm-with-netlify/)
-- [VS Code Spell Checker Not Working](https://www.seancdavis.com/blog/vscode-spell-checker-not-working/)
+- [Git: List All Config Options](/blog/git-list-all-config-options/)
+- [Git: Set Default Branch to "main" on "init"](/blog/git-set-default-branch/)
+- [How to Use PNPM in Netlify Build](/blog/use-pnpm-with-netlify/)
+- [VS Code Spell Checker Not Working](/blog/vscode-spell-checker-not-working/)
 
 ## My Reads
 
