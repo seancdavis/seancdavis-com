@@ -81,11 +81,9 @@ importers:
 
   examples/bear-to-markdown:
     specifiers:
-      sequelize: ^6.6.2
       slugify: ^1.5.1
       sqlite3: ^5.0.2
     dependencies:
-      sequelize: 6.6.2_sqlite3@5.0.2
       slugify: 1.5.1
       sqlite3: 5.0.2
 
@@ -3687,10 +3685,6 @@ packages:
     resolution: {integrity: sha1-gwtoCqflbzNFHUsEnzvYBESY7ic=}
     dev: false
 
-  /any-promise/1.3.0:
-    resolution: {integrity: sha1-q8av7tzqUugJzcA3au0845Y10X8=}
-    dev: false
-
   /anymatch/2.0.0:
     resolution: {integrity: sha512-5teOsQWABXHHBFP9y3skS5P3d/WfWXpv3FUpy+LorMrNYaT9pI4oLMQX7jzQ2KklNpGpWHzdCXTDT2Y3XGlZBw==}
     dependencies:
@@ -4107,7 +4101,7 @@ packages:
   /axios/0.21.1_debug@3.2.7:
     resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
     dependencies:
-      follow-redirects: 1.13.1
+      follow-redirects: 1.13.1_debug@3.2.7
     transitivePeerDependencies:
       - debug
     dev: false
@@ -4115,7 +4109,7 @@ packages:
   /axios/0.21.1_debug@4.3.1:
     resolution: {integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==}
     dependencies:
-      follow-redirects: 1.13.1
+      follow-redirects: 1.13.1_debug@4.3.1
     transitivePeerDependencies:
       - debug
     dev: false
@@ -7146,10 +7140,6 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /dottie/2.0.2:
-    resolution: {integrity: sha512-fmrwR04lsniq/uSr8yikThDTrM7epXHBAAjH9TbeH3rEA8tdCO7mRzB9hdmdGyJCxF8KERo9CITcm3kGuoyMhg==}
-    dev: false
-
   /download/6.2.5:
     resolution: {integrity: sha512-DpO9K1sXAST8Cpzb7kmEhogJxymyVUd5qz/vCOSyvwtp2Klj2XcDt5YUuasgxka44SxF0q5RriKIwJmQHG2AuA==}
     engines: {node: '>=4'}
@@ -9551,6 +9541,17 @@ packages:
       once: 1.4.0
       path-is-absolute: 1.0.1
 
+  /glob/7.1.7:
+    resolution: {integrity: sha512-OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3/tAQSPIu/lHxXYSZmpXlUHeqAIdKzBLQ==}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 3.0.4
+      once: 1.4.0
+      path-is-absolute: 1.0.1
+    dev: false
+
   /global-dirs/0.1.1:
     resolution: {integrity: sha1-sxnA3UYH81PzvpzKTHL8FIxJ9EU=}
     engines: {node: '>=4'}
@@ -10480,7 +10481,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.13.1
+      follow-redirects: 1.13.1_debug@3.2.7
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
@@ -10641,8 +10642,8 @@ packages:
     resolution: {integrity: sha1-xg7taebY/bazEEofy8ocGS3FtQE=}
     dev: false
 
-  /ignore-walk/3.0.3:
-    resolution: {integrity: sha512-m7o6xuOaT1aqheYHKf8W6J5pYH85ZI9w077erOzLje3JsB1gkafkAhHHY19dqjulgIZHFm32Cp5uNZgcQqdJKw==}
+  /ignore-walk/3.0.4:
+    resolution: {integrity: sha512-PY6Ii8o1jMRA1z4F2hRkH/xN59ox43DavKvD3oDpfurRlOJyAHpifIwpbdv1n4jt4ov0jSpw3kQ4GhJnpBL6WQ==}
     dependencies:
       minimatch: 3.0.4
     dev: false
@@ -10807,11 +10808,6 @@ packages:
 
   /infer-owner/1.0.4:
     resolution: {integrity: sha512-IClj+Xz94+d7irH5qRyfJonOdfTzuDaifE6ZPWfx0N0+/ATZCbuTPq2prFl526urkQd90WyUKIh1DfBQ2hMz9A==}
-    dev: false
-
-  /inflection/1.12.0:
-    resolution: {integrity: sha1-ogCTVlbW9fa8TcdQLhrstwMihBY=}
-    engines: {'0': node >= 0.4.0}
     dev: false
 
   /inflight/1.0.6:
@@ -13788,12 +13784,6 @@ packages:
     hasBin: true
     dev: false
 
-  /moment-timezone/0.5.33:
-    resolution: {integrity: sha512-PTc2vcT8K9J5/9rDEPe5czSIKgLoGsH8UNpA4qZTVw0Vd/Uz19geE9abbIOQKaAQFcnQ3v5YEXrbSc5BpshH+w==}
-    dependencies:
-      moment: 2.29.1
-    dev: false
-
   /moment/2.29.1:
     resolution: {integrity: sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==}
     dev: false
@@ -14030,7 +14020,7 @@ packages:
     hasBin: true
     dependencies:
       fstream: 1.0.12
-      glob: 7.1.6
+      glob: 7.1.7
       graceful-fs: 4.2.6
       mkdirp: 0.5.5
       nopt: 3.0.6
@@ -14269,7 +14259,7 @@ packages:
   /npm-packlist/1.4.8:
     resolution: {integrity: sha512-5+AZgwru5IevF5ZdnFglB5wNlHG1AOOuw28WhUq8/8emhBmLv6jX5by4WJCh7lW0uSYZYS6DXqIsyZVIXRZU9A==}
     dependencies:
-      ignore-walk: 3.0.3
+      ignore-walk: 3.0.4
       npm-bundled: 1.1.2
       npm-normalize-package-bin: 1.0.1
     dev: false
@@ -17370,12 +17360,6 @@ packages:
       unherit: 1.1.3
     dev: true
 
-  /retry-as-promised/3.2.0:
-    resolution: {integrity: sha512-CybGs60B7oYU/qSQ6kuaFmRd9sTZ6oXSc0toqePvV74Ac6/IFZSI1ReFQmtCN+uvW1Mtqdwpvt/LGOiCBAY2Mg==}
-    dependencies:
-      any-promise: 1.3.0
-    dev: false
-
   /retry/0.12.0:
     resolution: {integrity: sha1-G0KmJmoh8HQh0bC1S33BZ7AcATs=}
     engines: {node: '>= 4'}
@@ -17404,7 +17388,7 @@ packages:
     resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
     hasBin: true
     dependencies:
-      glob: 7.1.6
+      glob: 7.1.7
     dev: false
 
   /rimraf/3.0.2:
@@ -17685,14 +17669,6 @@ packages:
       lru-cache: 6.0.0
     dev: false
 
-  /semver/7.3.5:
-    resolution: {integrity: sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      lru-cache: 6.0.0
-    dev: false
-
   /send/0.16.2:
     resolution: {integrity: sha512-E64YFPUssFHEFBvpbbjr44NCLtI1AohxQ8ZSiJjQLskAdKuriYEP6VyGEsRDH8ScozGpkaX1BGvhanqCwkcEZw==}
     engines: {node: '>= 0.8.0'}
@@ -17729,53 +17705,6 @@ packages:
       on-finished: 2.3.0
       range-parser: 1.2.1
       statuses: 1.5.0
-    dev: false
-
-  /sequelize-pool/6.1.0:
-    resolution: {integrity: sha512-4YwEw3ZgK/tY/so+GfnSgXkdwIJJ1I32uZJztIEgZeAO6HMgj64OzySbWLgxj+tXhZCJnzRfkY9gINw8Ft8ZMg==}
-    engines: {node: '>= 10.0.0'}
-    dev: false
-
-  /sequelize/6.6.2_sqlite3@5.0.2:
-    resolution: {integrity: sha512-H/zrzmTK+tis9PJaSigkuXI57nKBvNCtPQol0yxCvau1iWLzSOuq8t3tMOVeQ+Ep8QH2HoD9/+FCCIAqzUr/BQ==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      mariadb: '*'
-      mysql2: '*'
-      pg: '*'
-      pg-hstore: '*'
-      sqlite3: '*'
-      tedious: '*'
-    peerDependenciesMeta:
-      mariadb:
-        optional: true
-      mysql2:
-        optional: true
-      pg:
-        optional: true
-      pg-hstore:
-        optional: true
-      sqlite3:
-        optional: true
-      tedious:
-        optional: true
-    dependencies:
-      debug: 4.3.1
-      dottie: 2.0.2
-      inflection: 1.12.0
-      lodash: 4.17.21
-      moment: 2.29.1
-      moment-timezone: 0.5.33
-      retry-as-promised: 3.2.0
-      semver: 7.3.5
-      sequelize-pool: 6.1.0
-      sqlite3: 5.0.2
-      toposort-class: 1.0.1
-      uuid: 8.3.2
-      validator: 10.11.0
-      wkx: 0.5.0
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /serialize-javascript/4.0.0:
@@ -19396,10 +19325,6 @@ packages:
       ieee754: 1.2.1
     dev: false
 
-  /toposort-class/1.0.1:
-    resolution: {integrity: sha1-f/0feMi+KMO6Rc1OGj9e4ZO9mYg=}
-    dev: false
-
   /tough-cookie/2.5.0:
     resolution: {integrity: sha512-nlLsUzgm1kfLXSXfRZMc1KLAugd4hqJHDTvc2hDIwS3mZAfMEuMbc03SujMF+GEcpaX/qboeycw6iO8JwVv2+g==}
     engines: {node: '>=0.8'}
@@ -20202,11 +20127,6 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: false
 
-  /validator/10.11.0:
-    resolution: {integrity: sha512-X/p3UZerAIsbBfN/IwahhYaBbY68EN/UQBWHtsbXGT5bfrH/p4NQzUCG1kF/rtKaNpnJ7jAu6NGTdSNtyNIXMw==}
-    engines: {node: '>= 0.10'}
-    dev: false
-
   /vary/1.1.2:
     resolution: {integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=}
     engines: {node: '>= 0.8'}
@@ -20738,12 +20658,6 @@ packages:
       '@babel/types': 7.13.0
       assert-never: 1.2.1
       babel-walk: 3.0.0-canary-5
-    dev: false
-
-  /wkx/0.5.0:
-    resolution: {integrity: sha512-Xng/d4Ichh8uN4l0FToV/258EjMGU9MGcA0HV2d9B/ZpZB3lqQm7nkOdZdm5GhKtLLhAE7PiVQwN4eN+2YJJUg==}
-    dependencies:
-      '@types/node': 15.0.2
     dev: false
 
   /word-wrap/1.2.3:
