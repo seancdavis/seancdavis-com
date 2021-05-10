@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepare": "node ./utils/copyDatabase.js",
+    "preexport": "node ./utils/copyDatabase.js",
     "export": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
