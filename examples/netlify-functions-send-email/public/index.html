@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Send Email Notifications with Netlify Functions</title>
+  </head>
+  <body>
+    <form onsubmit="submitForm(event)">
+      <div style="margin-bottom: 1rem">
+        <label for="email">Email Address</label>
+        <input
+          id="email"
+          type="text"
+          name="email"
+          placeholder="Where should I send the message?"
+          required
+        />
+      </div>
+
+      <div style="margin-bottom: 1rem">
+        <label for="body">Message</label>
+        <textarea id="body" name="body" cols="30" rows="10" required></textarea>
+      </div>
+
+      <input type="submit" value="Send email" />
+    </form>
+
+    <script>
+      function submitForm(event) {
+        // Stop the browser's default behavior.
+        event.preventDefault()
+        // Retrieve data from the form.
+        const formData = new FormData(event.target)
+        const request = new XMLHttpRequest()
+        // Convert data to JSON object.
+        var jsonData = {}
+        formData.forEach((value, key) => (jsonData[key] = value))
+        // Send the data to the Netlify function.
+        request.open("POST", "/.netlify/functions/send-email")
+        request.send(JSON.stringify(jsonData))
+        // Clear the form.
+        alert("Email request submitted!")
+        event.target.reset()
+      }
+    </script>
+  </body>
+</html>
