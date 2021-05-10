@@ -32,13 +32,13 @@ As expected, April was a slow month for me. We welcomed our second child early i
 
 Of the four articles I published, I'm really excited about two:
 
-- In [10 Unspoken Truths on Being a Developer](https://www.seancdavis.com/blog/10-unspoken-developer-truths/), I added some commentary to a particularly valuable series of tweets from [@laurieontech](https://twitter.com/laurieontech).
-- [Components: They Take a Village](https://www.seancdavis.com/blog/components-they-take-the-village/) is helping me get back into the habit of writing about components, as I mentioned last month.
+- In [10 Unspoken Truths on Being a Developer](/blog/10-unspoken-developer-truths/), I added some commentary to a particularly valuable series of tweets from [@laurieontech](https://twitter.com/laurieontech).
+- [Components: They Take a Village](/blog/components-they-take-the-village/) is helping me get back into the habit of writing about components, as I mentioned last month.
 
 And here are a couple other quick hits on JavaScript:
 
-- [Converting FormData to JSON in JavaScript](https://www.seancdavis.com/blog/convert-form-data-to-json/)
-- [Incrementing Variables in JavaScript](https://www.seancdavis.com/blog/incrementing-variables-javascript/)
+- [Converting FormData to JSON in JavaScript](/blog/convert-form-data-to-json/)
+- [Incrementing Variables in JavaScript](/blog/incrementing-variables-javascript/)
 
 ## My Reads
 
