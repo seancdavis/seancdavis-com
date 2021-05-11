@@ -1,10 +1,15 @@
-const sqlite3 = require("sqlite3").verbose()
+const fs = require("fs")
+const path = require("path")
 const slugify = require("slugify")
-
-const db = new sqlite3.Database("./database.sqlite")
+const sqlite3 = require("sqlite3").verbose()
+const yaml = require("js-yaml")
 const { promisify } = require("util")
 
+const db = new sqlite3.Database("./database.sqlite")
 const query = promisify(db.all).bind(db)
+
+const outputDir = path.join(__dirname, "./tmp/export")
+if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true })
 
 const getNotesQuery = `
   SELECT
@@ -51,12 +56,21 @@ const main = async () => {
     // Build the object and return it.
     return { id, title, slug, body, deleted, updatedAt, tags }
   }
+  // Builds frontmatter and then writes the note to file.
+  const exportNote = note => {
+    const filePath = path.join(outputDir, `${note.slug}.md`)
+    const { id, title, slug, body, tags } = note
+    const frontmatter = yaml.dump({ id, title, slug, tags })
+    const content = `---\n${frontmatter}---\n\n${body}`
+    fs.writeFileSync(filePath, content)
+    return { filePath, content }
+  }
   // Loop through the notes and store the result in the notes object.
   noteIds.forEach(id => {
-    notes.push(buildNoteObject(id))
+    const note = buildNoteObject(id)
+    const { filePath } = exportNote(note)
+    console.log(`Wrote note to file: ${filePath}`)
   })
-  // Log our result.
-  console.log(notes)
 }
 
 main()

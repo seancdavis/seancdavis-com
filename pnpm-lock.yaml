@@ -81,9 +81,11 @@ importers:
 
   examples/bear-to-markdown:
     specifiers:
+      js-yaml: ^4.1.0
       slugify: ^1.5.1
       sqlite3: ^5.0.2
     dependencies:
+      js-yaml: 4.1.0
       slugify: 1.5.1
       sqlite3: 5.0.2
 
@@ -12331,6 +12333,13 @@ packages:
     dependencies:
       argparse: 1.0.10
       esprima: 4.0.1
+
+  /js-yaml/4.1.0:
+    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
+    hasBin: true
+    dependencies:
+      argparse: 2.0.1
+    dev: false
 
   /jsbn/0.1.1:
     resolution: {integrity: sha1-peZUwuWi3rXyAdls77yoDA7y9RM=}
