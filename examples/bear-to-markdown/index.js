@@ -1,4 +1,6 @@
 const sqlite3 = require("sqlite3").verbose()
+const slugify = require("slugify")
+
 const db = new sqlite3.Database("./database.sqlite")
 const { promisify } = require("util")
 
@@ -44,8 +46,10 @@ const main = async () => {
     // Collect the tag names. Each row in the query result has its own unique
     // tag name, assuming the tag was only used once in the document.
     const tags = rows.map(row => row["Tags.title"])
+    // Build a slug from the title. This is what will be used as the filename.
+    const slug = slugify(title, { lower: true, strict: true })
     // Build the object and return it.
-    return { id, title, body, deleted, updatedAt, tags }
+    return { id, title, slug, body, deleted, updatedAt, tags }
   }
   // Loop through the notes and store the result in the notes object.
   noteIds.forEach(id => {
