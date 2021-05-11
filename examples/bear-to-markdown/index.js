@@ -33,11 +33,18 @@ const main = async () => {
   // Collects all notes matching the passed ID and builds an object to represent
   // that note.
   const buildNoteObject = noteId => {
+    // Find all rows from the query result matching the passed ID.
     const rows = queryResult.filter(row => row.id === noteId)
+    // Return a null object if we were given a bad ID.
     if (rows.length === 0) return null
+    // Extract relevant attributes out of the first row. Each of these is
+    // assumed to be the same value in any row. We're picking the first one
+    // because we know there will always be a first one.
     const { id, title, body, deleted, updatedAt } = rows[0]
+    // Collect the tag names. Each row in the query result has its own unique
+    // tag name, assuming the tag was only used once in the document.
     const tags = rows.map(row => row["Tags.title"])
-
+    // Build the object and return it.
     return { id, title, body, deleted, updatedAt, tags }
   }
   // Loop through the notes and store the result in the notes object.
