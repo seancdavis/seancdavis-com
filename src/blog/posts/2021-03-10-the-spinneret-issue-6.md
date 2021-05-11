@@ -39,11 +39,11 @@ Here are links to the majority of pieces I published this month. I've continued 
 
 ### Blog Posts
 
-- [A Guide to Setting up a New Mac Developer Machine](https://www.seancdavis.com/blog/new-mac-dev-guide/)
-- [How I Organize My Brain](https://www.seancdavis.com/blog/organizing-my-brain/)
-- [Delete Entire Word in Terminal and iTerm2](https://www.seancdavis.com/blog/delete-full-words-terminal/)
-- [Balancing Flexibility and Productivity in Your CMS](https://www.seancdavis.com/blog/balancing-cms-productivity-flexibility/)
-- [3 Rules for Keeping Components Organized](https://www.seancdavis.com/blog/three-rules-keep-components-organized/)
+- [A Guide to Setting up a New Mac Developer Machine](/blog/new-mac-dev-guide/)
+- [How I Organize My Brain](/blog/organizing-my-brain/)
+- [Delete Entire Word in Terminal and iTerm2](/blog/delete-full-words-terminal/)
+- [Balancing Flexibility and Productivity in Your CMS](/blog/balancing-cms-productivity-flexibility/)
+- [3 Rules for Keeping Components Organized](/blog/three-rules-keep-components-organized/)
 - [Reconciling Editor Experience and Developer Experience in the CMS](https://css-tricks.com/reconciling-editor-experience-and-developer-experience-in-the-cms/) <small>(CSS-Tricks)</small>
 
 ## Website Updates
@@ -54,7 +54,7 @@ _Notable changes made [to my website codebase](https://github.com/seancdavis/sea
     src="/blog/210310/the-spinneret--my-code.png",
     alt="The Spinneret - My Code" %}
 
-- I'm slowly importing posts from other mediums I've used in the past. I used to have a blog called _The Polymath Lab_, which was about organization, productivity, communication, and inspiration. I sunset that site and brought all the relevant content into [the blog](http://seancdavis.com/blog).
+- I'm slowly importing posts from other mediums I've used in the past. I used to have a blog called _The Polymath Lab_, which was about organization, productivity, communication, and inspiration. I sunset that site and brought all the relevant content into [the blog](/blog).
 - [The project I built to benchmark and compare SSG build times](https://github.com/seancdavis/ssg-build-performance-tests) is not sustainable in how it runs the specs. I'm (slowly) working on automating the process using GitHub Actions. Hoping to be in a stable spot in March.
 - And lots of other behind-the-scenes stuff, including some bug fixes and swapping out NPM for [PNPM](https://pnpm.js.org/), which has great monorepo support.
 
@@ -106,7 +106,7 @@ And here are some other quick-hitters.
 - I love Bejamas. I think they are doing great stuff in the Jamstack space. Their [free Jamstack resources](https://bejamas.io/resources/) page is a thing of beauty.
 - This piece — [The Dark Side of Becoming a Self-Taught Developer](https://medium.com/swlh/the-dark-side-of-becoming-a-self-taught-developer-8e38814a2f83) — seems like it's going to be dark, but it's not. I found it quite inspirational. A great message for aspiring developers.
 - [Getting Started With useQuery (React Query)](https://medium.com/swlh/getting-started-with-usequery-react-query-9ea181c3dd47) seems super useful. I haven't had the need to use it yet, but am looking forward to exploring it in the future.
-- I came across [_A Better Way to Structure React Projects_](https://www.freecodecamp.org/news/a-better-way-to-structure-react-projects/). I nerd-out over this kind of stuff, but didn't really like the approach here. I feel strongly that components exist to build a reusable system. Grouping by page they are used on defeats that purpose. I have a much larger picture I'm piecing together with several articles, but for now, you can start to see what I'm going toward with this take: [Organize Components by Keeping Related Files Close](https://www.seancdavis.com/blog/organize-components-by-keeping-related-files-close/).
+- I came across [_A Better Way to Structure React Projects_](https://www.freecodecamp.org/news/a-better-way-to-structure-react-projects/). I nerd-out over this kind of stuff, but didn't really like the approach here. I feel strongly that components exist to build a reusable system. Grouping by page they are used on defeats that purpose. I have a much larger picture I'm piecing together with several articles, but for now, you can start to see what I'm going toward with this take: [Organize Components by Keeping Related Files Close](/blog/organize-components-by-keeping-related-files-close/).
 
 ## My Finds
 

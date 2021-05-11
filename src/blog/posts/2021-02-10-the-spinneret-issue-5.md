@@ -6,7 +6,7 @@ tags:
   - spinneret
 ---
 
-I'm back! I let these newsletters fade as I worked through transitioning all my content to [my new website](https://www.seancdavis.com/). Now that I'm comfortably up and running (and continuing to improve), I figured it was time to bring this thing back.
+I'm back! I let these newsletters fade as I worked through transitioning all my content to [my new website](/). Now that I'm comfortably up and running (and continuing to improve), I figured it was time to bring this thing back.
 
 For now, the format will remain the same, with the same general sections and coming to your inbox _about once a month_. As I gain new subscribers, I'm guessing the format will shift.
 
@@ -38,11 +38,11 @@ I was pretty quiet on my blog in the autumn. Much of that was to prepare for [my
 Nevertheless, I got back to writing in January, and here's what I put out in the last month:
 
 - [Components: Server-Side vs. Client-Side](https://css-tricks.com/components-server-side-vs-client-side/) <small class="text-gray-800">(CSS-Tricks)</small>
-- [3 Ways to Render Server-Side Components with Eleventy](https://www.seancdavis.com/blog/eleventy-server-components/)
-- [How I Add Sketches to Blog Posts](https://www.seancdavis.com/blog/how-i-add-sketches-to-blog-posts/)
-- [Use Cmd+K Terminal Trick to Stay Organized](https://www.seancdavis.com/blog/cmd-k-terminal-shortcut/)
-- [Leaving a Job the Right Way](https://www.seancdavis.com/blog/leaving-job-right-way/)
-- [3 Ways to Add an Image to GitHub README](https://www.seancdavis.com/blog/three-ways-to-add-image-to-github-readme/)
+- [3 Ways to Render Server-Side Components with Eleventy](/blog/eleventy-server-components/)
+- [How I Add Sketches to Blog Posts](/blog/how-i-add-sketches-to-blog-posts/)
+- [Use Cmd+K Terminal Trick to Stay Organized](/blog/cmd-k-terminal-shortcut/)
+- [Leaving a Job the Right Way](/blog/leaving-job-right-way/)
+- [3 Ways to Add an Image to GitHub README](/blog/three-ways-to-add-image-to-github-readme/)
 
 ## Resources & References
 
@@ -57,7 +57,7 @@ I didn't come across many great references over the last month. The coolest thin
 
 In starting a new job, I came across several new tools that I hadn't before heard about.
 
-- [Excalidraw](https://excalidraw.com/): After posting about [how I add sketches to blog posts](https://www.seancdavis.com/blog/how-i-add-sketches-to-blog-posts/), I was pointed toward this tool, and I'm hooked. It has the perfect number of options. It's super fast and simple and has had everything I've needed it for so far. I see myself using this regularly over the coming months.
+- [Excalidraw](https://excalidraw.com/): After posting about [how I add sketches to blog posts](/blog/how-i-add-sketches-to-blog-posts/), I was pointed toward this tool, and I'm hooked. It has the perfect number of options. It's super fast and simple and has had everything I've needed it for so far. I see myself using this regularly over the coming months.
 - [Jamboard](https://workspace.google.com/products/jamboard/): A Google sticky note board tool. It's simple, but it gets the job done.
 - [Riverside](https://riverside.fm/): Recording platform for remote interviews. I haven't used it yet, but I'm planning to start it for a new show I'm working on!
 - [Tuple](https://tuple.app/): They call it "The best remote pair programming app on macOS." I have to say I haven't tried many others out, but this thing is amazing. The video is super clear, flexible, and the pairing controls are easy to use. 100% worth the cost.
