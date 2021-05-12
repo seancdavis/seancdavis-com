@@ -116,7 +116,7 @@ Ultimately, the way in which we want to host these static JSON files is on a [CD
 
 But you'll also need to build the project first, so you have that set of JSON files to upload. Again, you _could_ do this all manually — build locally and upload to CDN. But then you have all sorts of other challenges to overcome, like setting up DNS for your CDN, or invalidating caches when you want to make an update.
 
-The alternative is to look at a tool like [Netlify](https://www.netlify.com/) or [ZEIT](https://zeit.co/). These tools will run a build process and upload to a CDN that is already configured on your behalf. And they can do that automatically using [webhooks](https://en.wikipedia.org/wiki/Webhook)! (Netlify calls them [_build hooks_](https://docs.netlify.com/configure-builds/build-hooks/) and ZEIT calls them [_deploy hooks_](https://zeit.co/docs/v2/more/deploy-hooks).)
+The alternative is to look at a tool like [Netlify](/blog/wtf-is-netlify/) or [ZEIT](https://zeit.co/). These tools will run a build process and upload to a CDN that is already configured on your behalf. And they can do that automatically using [webhooks](https://en.wikipedia.org/wiki/Webhook)! (Netlify calls them [_build hooks_](https://docs.netlify.com/configure-builds/build-hooks/) and ZEIT calls them [_deploy hooks_](https://zeit.co/docs/v2/more/deploy-hooks).)
 
 Each of these tools are low-cost options for building, deploying, and hosting your static API automatically.
 

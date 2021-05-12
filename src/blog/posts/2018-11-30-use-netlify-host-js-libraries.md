@@ -6,7 +6,7 @@ tags:
   - netlify
 ---
 
-[Netlify's](https://www.netlify.com/) focus is in on hosting websites following the [Jamstack approach](https://jamstack.org/), and it's really good at doing that.
+[Netlify's](/blog/wtf-is-netlify/) focus is in on hosting websites following the [Jamstack approach](https://jamstack.org/), and it's really good at doing that.
 
 If you don't about Netlify, the workflow is simple on the surface. It's all built around continuous delivery. When you push a change to GitHub, here's what happens:
 

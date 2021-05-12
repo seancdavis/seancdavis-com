@@ -126,7 +126,7 @@ Notice that the whitelist is an array of strings without the leading `.` for the
 
 When you're ready to go to production, there are two items we have to address.
 
-First, make sure installing `purgecss` is part of the build process if your site is being built on an external server. For example, I'm using [Netlify](https://www.netlify.com/), so I have prepended my build task with `npm i -g purgecss` so the build process has the `purgecss` command available to it.
+First, make sure installing `purgecss` is part of the build process if your site is being built on an external server. For example, I'm using [Netlify](/blog/wtf-is-netlify/), so I have prepended my build task with `npm i -g purgecss` so the build process has the `purgecss` command available to it.
 
 And lastly, you're going to see an error with the integrity of the manifest stylesheet in production. Why? Because we changed the file after it was generated, which is what the [integrity attribute](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) is built to catch.
 

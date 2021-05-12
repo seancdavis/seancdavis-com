@@ -19,7 +19,7 @@ So let’s dive right in, shall we?
 
 ## [0] The Scenario
 
-Let’s consider this problem and its solution to be service-agnostic. That means that this solution will get you _started_ no matter where the form data comes from. However, because we’ll be writing our [serverless functions](https://en.wikipedia.org/wiki/Serverless_computing) with [Netlify](https://www.netlify.com/), I’ll regularly mention how to apply the solutions to a project using [Netlify Forms](https://www.netlify.com/docs/form-handling/).
+Let’s consider this problem and its solution to be service-agnostic. That means that this solution will get you _started_ no matter where the form data comes from. However, because we’ll be writing our [serverless functions](https://en.wikipedia.org/wiki/Serverless_computing) with [Netlify](/blog/wtf-is-netlify/), I’ll regularly mention how to apply the solutions to a project using [Netlify Forms](https://www.netlify.com/docs/form-handling/).
 
 If you aren’t familiar with Netlify Functions, know that they are essentially one function that runs a single time when triggered. That trigger is an endpoint URL that accepts a POST request. That request could come directly from your site, or perhaps you have a [headless CMS](https://headlesscms.org/) that uses a webhook to send a request whenever you create new content. It could even be an outgoing webhook from Netlify that gets triggered when a new Netlify Form is submitted.
 

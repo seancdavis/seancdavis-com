@@ -32,7 +32,7 @@ In other words, developers can ultimately move more efficiently if they can foll
 
 As developers of Jamstack projects, we're faced with building most of those conventions ourselves. And they begin before the first line of code.
 
-_What tools will you use to build and power your site?_ Will it be [Gatsby](https://www.gatsbyjs.org/) as the [static site](/blog/why-build-static-sites/) generator, [Contentful](https://www.contentful.com/) as the content management system, and [Netlify](https://www.netlify.com/) as the build tooling and host? Or maybe you prefer something more like [Eleventy](https://www.11ty.dev/) (SSG/), [Forestry](https://www.forestry.io/) (CMS/), and [Vercel](https://vercel.com/) (build/host/)? Those are just two examples that don't have any overlap in tooling. And they're two of _hundreds_ of combinations you could create.
+_What tools will you use to build and power your site?_ Will it be [Gatsby](https://www.gatsbyjs.org/) as the [static site](/blog/why-build-static-sites/) generator, [Contentful](https://www.contentful.com/) as the content management system, and [Netlify](/blog/wtf-is-netlify/) as the build tooling and host? Or maybe you prefer something more like [Eleventy](https://www.11ty.dev/) (SSG/), [Forestry](https://www.forestry.io/) (CMS/), and [Vercel](https://vercel.com/) (build/host/)? Those are just two examples that don't have any overlap in tooling. And they're two of _hundreds_ of combinations you could create.
 
 Perhaps the best and worst part of the Jamstack is that none of those decisions are inherently wrong.
 
