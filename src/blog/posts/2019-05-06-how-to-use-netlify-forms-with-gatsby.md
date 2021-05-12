@@ -7,7 +7,7 @@ tags:
   - netlify
 ---
 
-I’ve (somewhat unexpectedly) become a serious fanboy of both [Netlify](https://www.netlify.com/) and [GatsbyJS](https://www.gatsbyjs.org/). For the first time since I was discovering [Rails](https://rubyonrails.org/) I have felt like a tool (library, framework, etc.) had an answer to every question I was seeking.
+I’ve (somewhat unexpectedly) become a serious fanboy of both [Netlify](/blog/wtf-is-netlify/) and [GatsbyJS](https://www.gatsbyjs.org/). For the first time since I was discovering [Rails](https://rubyonrails.org/) I have felt like a tool (library, framework, etc.) had an answer to every question I was seeking.
 
 Nearly every time I reached a challenging hurdle without a clear solution, I would do a bit of googling and, sure enough, Netlify or Gatsby (depending on the challenge) would have the answer ready and waiting. That’s a seriously uplifting way to work and that’s going to keep me coming back to these two products.
 
