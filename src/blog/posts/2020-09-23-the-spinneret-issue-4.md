@@ -19,7 +19,7 @@ It was a long time coming, and this site is really just one page today. But it's
 The stack for this site is:
 
 - [Eleventy](https://www.11ty.dev/)
-- [Netlify](https://www.netlify.com/)
+- [Netlify](/blog/wtf-is-netlify/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
 When I build out a blog for it, I may end up using a CMS, but have omitted one while it's only a single page site.

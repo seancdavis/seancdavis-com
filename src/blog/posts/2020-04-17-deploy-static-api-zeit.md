@@ -7,7 +7,7 @@ tags:
   - vercel
 ---
 
-This is a quick look at how to deploy and query a [static API](/blog/lets-talk-about-static-apis/) using [Vercel](https://zeit.co/) as the deploy and hosting service. The examples here come from the commentary in my introduction on [how to build static APIs](/blog/how-to-build-static-api/) and from [a similar tutorial](/blog/deploy-static-api-netlify/) which uses [Netlify](https://www.netlify.com/) instead of Vercel.
+This is a quick look at how to deploy and query a [static API](/blog/lets-talk-about-static-apis/) using [Vercel](https://zeit.co/) as the deploy and hosting service. The examples here come from the commentary in my introduction on [how to build static APIs](/blog/how-to-build-static-api/) and from [a similar tutorial](/blog/deploy-static-api-netlify/) which uses [Netlify](/blog/wtf-is-netlify/) instead of Vercel.
 
 In this tutorial, I am assuming you are manually writing each of the API's JSON files — i.e. there is no [static site generator](https://www.staticgen.com/) or build process involved in creating the files that will be deployed.
 

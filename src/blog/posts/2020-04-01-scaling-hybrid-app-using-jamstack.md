@@ -40,7 +40,7 @@ Unfortunately, while Eventbrite supports a check-in process, it only does so for
 
 So the next thing I did was to extract the check-in process from the app and move it to its own (web) application. Once again, it felt like we were breaking out a crucial element of the application. We were. But the attendees never saw it, only the volunteers. And the volunteers didn't care where the check-in process lived, they just had to be able to access it with their mobile device.
 
-I built that feature using [GatsbyJS](https://www.gatsbyjs.org/), which pulled data from Eventbrite and provided a means for volunteers to check attendees in. We deployed that site to [Netlify](https://www.netlify.com/). (I realize plain old [React](https://reactjs.org/), or even [Next.js](https://nextjs.org/), would have been a more appropriate choice, but it was crunch-time and I was already familiar with Gatsby.)
+I built that feature using [GatsbyJS](https://www.gatsbyjs.org/), which pulled data from Eventbrite and provided a means for volunteers to check attendees in. We deployed that site to [Netlify](/blog/wtf-is-netlify/). (I realize plain old [React](https://reactjs.org/), or even [Next.js](https://nextjs.org/), would have been a more appropriate choice, but it was crunch-time and I was already familiar with Gatsby.)
 
 That being said, it wasn't the front-end that was the problem. It was that we were posting registrations to the CMS, and they were getting in the way of attendees retrieving content from that same CMS during the event.
 

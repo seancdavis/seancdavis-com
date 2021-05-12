@@ -6,7 +6,7 @@ tags:
   - netlify
 ---
 
-Form Handling is an extremely powerful component within [Netlify’s](https://www.netlify.com/) product, as it provides a way to accept dynamic data from users on a static site.
+Form Handling is an extremely powerful component within [Netlify’s](/blog/wtf-is-netlify/) product, as it provides a way to accept dynamic data from users on a static site.
 
 It’s like [Formspree](https://formspree.io/) or [FormKeep](https://formkeep.com/), but I prefer Netlify's forms feature because it _just works_. There's no signing up for a third-party service. You just add a little markup to your site and — _Voila!_ — you have a form that sends its submissions to Netlify, which then stores the form data on your behalf. An added benefit is that Netlify currently offers 100 submissions per month, sourced from an unlimited number of forms, free of charge. That’s a better free tier than either Formspree or FormKeep.
 
