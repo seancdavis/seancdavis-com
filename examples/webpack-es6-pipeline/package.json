@@ -1,0 +1,18 @@
+{
+  "name": "webpack-es6-pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "WEBPACK_ENV=production webpack",
+    "develop": "webpack",
+    "serve": "http-server dist -p 8000"
+  },
+  "keywords": [],
+  "author": "Sean C Davis",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "webpack": "^5.37.0"
+  }
+}
