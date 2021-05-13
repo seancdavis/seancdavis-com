@@ -3,7 +3,7 @@
 .DS_Store
 .envrc
 node_modules
-pnpm-debug.log
+.pnpm-debug.log
 
 # ---------------------------------------- | SCD Site
 
