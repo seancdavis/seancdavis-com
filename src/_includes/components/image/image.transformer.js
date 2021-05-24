@@ -1,4 +1,4 @@
-const ImgixClient = require("imgix-core-js")
+const ImgixClient = require("@imgix/js-core")
 const lodash = require("lodash")
 
 module.exports = ({
