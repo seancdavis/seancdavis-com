@@ -9,9 +9,6 @@
   package = "/.netlify/netlify-plugin-pnpm"
 
 [[plugins]]
-  package = "netlify-plugin-chromium"
-
-[[plugins]]
   package = "/.netlify/netlify-plugin-jest"
 
 [[plugins]]

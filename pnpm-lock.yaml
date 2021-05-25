@@ -16,6 +16,7 @@ importers:
       autoprefixer: ^10.2.5
       aws-sdk: ^2.912.0
       chalk: ^4.1.1
+      chromium: ^3.0.2
       cssnano: ^5.0.4
       glob: ^7.1.7
       html-minifier: ^4.0.0
@@ -30,7 +31,6 @@ importers:
       netlify-cli: ^3.31.0
       netlify-plugin-a11y: ^0.0.12
       netlify-plugin-checklinks: ^4.1.1
-      netlify-plugin-chromium: ^1.1.4
       netlify-plugin-inline-critical-css: ^1.2.0
       npm-run-all: ^4.1.5
       pnpm: ^6.4.0
@@ -56,6 +56,7 @@ importers:
       autoprefixer: 10.2.5_postcss@8.3.0
       aws-sdk: 2.912.0
       chalk: 4.1.1
+      chromium: 3.0.2
       cssnano: 5.0.4_postcss@8.3.0
       glob: 7.1.7
       html-minifier: 4.0.0
@@ -70,7 +71,6 @@ importers:
       netlify-cli: 3.31.0
       netlify-plugin-a11y: 0.0.12
       netlify-plugin-checklinks: 4.1.1
-      netlify-plugin-chromium: 1.1.4
       netlify-plugin-inline-critical-css: 1.2.0
       npm-run-all: 4.1.5
       postcss: 8.3.0
@@ -412,7 +412,7 @@ packages:
       '@babel/core': ^7.0.0
     dependencies:
       '@babel/compat-data': 7.14.0
-      '@babel/core': 7.14.3
+      '@babel/core': 7.14.3_supports-color@7.2.0
       '@babel/helper-validator-option': 7.12.17
       browserslist: 4.16.6
       semver: 6.3.0
@@ -1310,7 +1310,7 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
-      '@babel/core': 7.14.3
+      '@babel/core': 7.14.3_supports-color@7.2.0
       '@babel/helper-plugin-utils': 7.13.0
     dev: false
 
@@ -1544,7 +1544,7 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
-      '@babel/core': 7.14.3
+      '@babel/core': 7.14.3_supports-color@7.2.0
       '@babel/helper-plugin-utils': 7.13.0
     dev: false
 
@@ -4783,7 +4783,7 @@ packages:
     dependencies:
       '@types/http-cache-semantics': 4.0.0
       '@types/keyv': 3.1.1
-      '@types/node': 15.6.0
+      '@types/node': 15.6.1
       '@types/responselike': 1.0.0
     dev: false
 
@@ -4928,7 +4928,7 @@ packages:
   /@types/keyv/3.1.1:
     resolution: {integrity: sha512-MPtoySlAZQ37VoLaPcTHCu1RWJ4llDkULYZIzOYxlhxBqYPB0RsRlmMU0R6tahtFe27mIdkHV+551ZWV4PLmVw==}
     dependencies:
-      '@types/node': 15.6.0
+      '@types/node': 15.6.1
     dev: false
 
   /@types/lodash/4.14.168:
@@ -5045,7 +5045,7 @@ packages:
   /@types/responselike/1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
-      '@types/node': 15.6.0
+      '@types/node': 15.6.1
     dev: false
 
   /@types/rimraf/2.0.4:
@@ -7362,7 +7362,7 @@ packages:
       http-cache-semantics: 4.1.0
       keyv: 4.0.3
       lowercase-keys: 2.0.0
-      normalize-url: 4.5.0
+      normalize-url: 4.5.1
       responselike: 2.0.0
     dev: false
 
@@ -7761,6 +7761,23 @@ packages:
   /chrome-trace-event/1.0.3:
     resolution: {integrity: sha512-p3KULyQg4S7NIHixdwbGX+nFHkoBiA4YQmyWtjb8XngSKV124nJmRysgAeujbUVb15vh+RvFUfCPqU7rXk+hZg==}
     engines: {node: '>=6.0'}
+    dev: false
+
+  /chromium/3.0.2:
+    resolution: {integrity: sha512-jxkcLjAYc4Oa72UaVnk60k6qGbbsxsqK4Z6GpvW3mhw8GmUX4Udr4vTs3Z91UtxJmbw7mKPvovE7INkqBlVdvg==}
+    os: [darwin, linux, win32]
+    requiresBuild: true
+    dependencies:
+      cachedir: 2.3.0
+      debug: 4.3.1
+      extract-zip: 1.7.0
+      got: 11.8.2
+      progress: 2.0.3
+      rimraf: 2.7.1
+      tmp: 0.0.33
+      tunnel: 0.0.6
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /ci-info/1.6.0:
@@ -17808,10 +17825,6 @@ packages:
       - utf-8-validate
     dev: false
 
-  /netlify-plugin-chromium/1.1.4:
-    resolution: {integrity: sha512-yLgw6YePOF38URWVsHg3nBBoVSKcbMabKxziJX5i01/weyXWtFQVFvDWSOhyWkQgoMJ6zwF2UznA0Icy+m4pow==}
-    dev: false
-
   /netlify-plugin-inline-critical-css/1.2.0:
     resolution: {integrity: sha512-40X5CnCyOihTjx/1tTXXiLLMEVcet8BeAcAJ/lpp2iYhwBobGiubkL8UnFFLCq9VxdTeTIipWHAXMzZXwwzvOQ==}
     engines: {node: '>=10.3.0'}
@@ -24142,6 +24155,11 @@ packages:
     resolution: {integrity: sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=}
     dependencies:
       safe-buffer: 5.2.1
+    dev: false
+
+  /tunnel/0.0.6:
+    resolution: {integrity: sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg==}
+    engines: {node: '>=0.6.11 <=0.7.0 || >=0.7.3'}
     dev: false
 
   /tweetnacl/0.14.5:
