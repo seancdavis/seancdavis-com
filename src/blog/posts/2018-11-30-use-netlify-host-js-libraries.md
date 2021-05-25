@@ -24,7 +24,7 @@ Let's take a look at an example.
 
 ## The JavaScript Library
 
-Let's say I have a really simple library. [Here's an example](https://github.com/seancdavis/hello-world-js) I put together that uses [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/) to take a ES6 module and make it available globally when loaded by the browser. The global class is called `HelloWorld` and it has two static methods:
+Let's say I have a really simple library. [Here's an example](https://github.com/seancdavis/hello-world-js) I put together that uses [webpack](/blog/wtf-is-webpack/) and [Babel](https://babeljs.io/) to take a ES6 module and make it available globally when loaded by the browser. The global class is called `HelloWorld` and it has two static methods:
 
 - `log()`: Logs "Hello World!" to the console.
 - `write()`: Appends "Hello World!" to the DOM's body.
@@ -36,7 +36,7 @@ HelloWorld.log() // Logs "Hello World!" to the console.
 HelloWorld.write() // Appends "Hello World!" to the DOM's body.
 ```
 
-This Webpack bundle is built by running `npm run build` (specified in `package.json`) and is output to `dist/hello-world.js`.
+This webpack bundle is built by running `npm run build` (specified in `package.json`) and is output to `dist/hello-world.js`.
 
 ## Setting Up Netlify
 

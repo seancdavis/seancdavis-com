@@ -1,5 +1,5 @@
 ---
-title: Webpack
+title: webpack
 pagination:
   data: collections.webpack
 ---
