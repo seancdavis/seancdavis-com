@@ -29,7 +29,7 @@ If you're finding this background verbosely exhausting, feel free to [jump right
 
 In the years since I wrote that article, the Jamstack has absolutely **exploded**! And I've loved watching it grow. It was truly a revolutionary solution — one which took the best of Web 1.0 and Web 2.0 and combined them into a powerful pattern for the fragmented landscape that is the web today.
 
-That explosion led to a lot of **competition** in the space. For example, at first [Netlify](/blog/wtf-is-netlify) was the only _platform_ offering this type of build and deploy process. Today there are newer companies and startup competitors like [Vercel](https://vercel.com/) and [Moovweb](https://www.moovweb.com/), big players like [Azure](https://azure.microsoft.com/en-us/services/app-service/static/) and [AWS](https://aws.amazon.com/amplify/), and even open-source side projects like [Coolify](https://github.com/coollabsio/coolify).
+That explosion led to a lot of **competition** in the space. For example, at first [Netlify](/blog/wtf-is-netlify) was the only _platform_ offering this type of build and deploy process. Today there are newer companies and startup competitors like [Vercel](https://vercel.com/) and [Layer0](https://www.layer0.co/), big players like [Azure](https://azure.microsoft.com/en-us/services/app-service/static/) and [AWS](https://aws.amazon.com/amplify/), and even open-source side projects like [Coolify](https://github.com/coollabsio/coolify).
 
 To beat the competition, the providers of Jamstack tools have had to be super **innovative**. For example, Vercel and [Next.js](https://nextjs.org/) blew up in 2020 for integrating server-side rendering and static-site generation within the same framework.
 
