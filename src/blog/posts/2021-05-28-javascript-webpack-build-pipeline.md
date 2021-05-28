@@ -19,7 +19,7 @@ Fortunately, the fine folks building this free and open source tool have been wo
 
 Let's do that. Let's build a super simple build pipeline to bundle multiple [JavaScript](/blog/wtf-is-javascript/) modules together into a single file that we can load from any HTML page.
 
-You can take a look at [the full code example](https://github.com/seancdavis/seancdavis-com/tree/0d0883d/examples/webpack-es6-pipeline) at any point if you get stuck.
+You can take a look at [the full code example](https://github.com/seancdavis/seancdavis-com/tree/0cc19cb/examples/webpack-es6-pipeline) at any point if you get stuck.
 
 ### Gotcha!
 
@@ -170,7 +170,7 @@ If you want to to make changes to JavaScript and see them reflected without relo
 
 ## References
 
-- [Full code example](https://github.com/seancdavis/seancdavis-com/tree/0d0883d/examples/webpack-es6-pipeline)
+- [Full code example](https://github.com/seancdavis/seancdavis-com/tree/0cc19cb/examples/webpack-es6-pipeline)
 
 ---
 
