@@ -19,6 +19,8 @@ Fortunately, the fine folks building this free and open source tool have been wo
 
 Let's do that. Let's build a super simple build pipeline to bundle multiple [JavaScript](/blog/wtf-is-javascript/) modules together into a single file that we can load from any HTML page.
 
+You can take a look at [the full code example](https://github.com/seancdavis/seancdavis-com/tree/0d0883d/examples/webpack-es6-pipeline) at any point if you get stuck.
+
 ### Gotcha!
 
 There's one big gotcha we'll have to overcome along the way. The output bundle is obfuscated and anonymous. That means we can't access it by default. And even if we could, we likely wouldn't know how to navigate it.
@@ -165,6 +167,10 @@ Then you can run the web server:
 Now visit localhost:8000, open your browser's console, and you should see the message `"Hi!"` printed!
 
 If you want to to make changes to JavaScript and see them reflected without reloading your web server, you can use two terminal tabs. Run `npm run serve` in one to run the web server, and `npm run dev` in the other, which will watch for JavaScript changes and rebuild.
+
+## References
+
+- [Full code example](https://github.com/seancdavis/seancdavis-com/tree/0d0883d/examples/webpack-es6-pipeline)
 
 ---
 
