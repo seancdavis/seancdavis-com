@@ -2,6 +2,9 @@
 title: Pratham
 twitter: Prathkum
 image: /authors/pratham.jpg
+seo:
+  title: Posts by Pratham
+  description: Amet ipsum cupidatat nostrud eiusmod aliquip ullamco minim ea do occaecat nisi culpa. Culpa cupidatat consequat id sunt.
 pagination:
   data: collections.author:pratham
 ---
