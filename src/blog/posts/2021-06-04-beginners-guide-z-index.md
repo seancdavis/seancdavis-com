@@ -1,12 +1,13 @@
 ---
 title: A Beginner's Guide to Z-Index
-description: "The Z-index is a powerful yet confusing concept of CSS. Let's make it easy!"
+description: "The z-index is a powerful yet confusing concept of CSS. Let's make it easy!"
 image: /blog/210604/z-index--main.png
 author: pratham
 seo:
   image: /blog/210604/z-index--meta.png
 tags:
   - css
+  - author:pratham
 ---
 
 `z-index` is a [CSS](/blog/wtf-is-css/) property that controls stacking order of elements along a z-axis. Let's first take a look at what the z-axis is, and then get you started with a few tips to help you solve situations that tend to trip up developers.
