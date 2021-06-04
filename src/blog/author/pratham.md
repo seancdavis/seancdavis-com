@@ -4,9 +4,9 @@ twitter: Prathkum
 image: /authors/pratham.jpg
 seo:
   title: Posts by Pratham
-  description: Amet ipsum cupidatat nostrud eiusmod aliquip ullamco minim ea do occaecat nisi culpa. Culpa cupidatat consequat id sunt.
+  description: I am Pratham, deeply interested in web technologies. I love creating content and trying to make web development easy for everyone so they can start with zero effort.
 pagination:
   data: collections.author:pratham
 ---
 
-Amet ipsum cupidatat nostrud eiusmod aliquip ullamco minim ea do occaecat nisi culpa. Culpa cupidatat consequat id sunt. Do Lorem eiusmod eiusmod consectetur in id laborum ex duis laboris. Sint laboris in cillum dolor deserunt enim culpa duis ullamco irure eiusmod pariatur. Dolor excepteur anim nisi nisi mollit elit.
+I am Pratham, deeply interested in web technologies. I love creating content and trying to make web development easy for everyone so they can start with zero effort.
