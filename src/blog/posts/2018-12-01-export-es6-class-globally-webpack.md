@@ -1,12 +1,12 @@
 ---
-title: Export ES6 Class Globally with Webpack
-description: "Webpack creates its own scope for your bundle, but you can make it globally available."
+title: Export ES6 Class Globally with webpack
+description: "webpack creates its own scope for your bundle, but you can make it globally available."
 tags:
   - javascript
   - webpack
 ---
 
-In [a previous article on distributing JavaScript libraries](/blog/use-netlify-host-js-libraries/) I used [an example](https://github.com/seancdavis/hello-world-js/) that uses [Webpack](https://webpack.js.org/) to build (and Babel to transpile/) an ES6 class and expose it as a global variable.
+In [a previous article on distributing JavaScript libraries](/blog/use-netlify-host-js-libraries/) I used [an example](https://github.com/seancdavis/hello-world-js/) that uses [webpack](/blog/wtf-is-webpack/) to build (and Babel to transpile/) an ES6 class and expose it as a global variable.
 
 Most of this process came from [an article on this very subject](http://siawyoung.com/coding/javascript/exporting-es6-modules-as-single-scripts-with-webpack).
 

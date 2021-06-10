@@ -19,7 +19,7 @@ Everything is constantly changing, and web development is no different. Consider
 - [Sublime Text](https://www.sublimetext.com/)
 - [VS Code](https://code.visualstudio.com/)
 - [Vue](https://vuejs.org/)
-- [Webpack](https://webpack.js.org/)
+- [webpack](/blog/wtf-is-webpack/)
 
 These tools make up _most_ of what I've used to build websites for my entire development career. The only predominant items missing from the list are foundational, like [HTML](/blog/wtf-is-html/) and [CSS](/blog/wtf-is-css/).
 
