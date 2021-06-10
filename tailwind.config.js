@@ -11,18 +11,21 @@ module.exports = {
       center: true,
       padding: "2rem"
     },
-    // fontSize: {
-    //   xs: '0.75rem',
-    //   sm: '0.875rem',
-    //   base: '1rem',
-    //   lg: '1.125rem',
-    //   xl: '1.25rem',
-    //   '2xl': '1.5rem',
-    //   '3xl': '1.875rem',
-    //   '4xl': '2.25rem',
-    //   '5xl': '3rem',
-    //   '6xl': '4rem',
-    // },
+    fontSize: {
+      xs: ["0.75rem", { lineHeight: "1.5" }],
+      sm: ["0.875rem", { lineHeight: "1.5" }],
+      base: ["1rem", { lineHeight: "1.5" }],
+      lg: ["1.125rem", { lineHeight: "1.5" }],
+      xl: ["1.25rem", { lineHeight: "1.5" }],
+      "2xl": ["1.5rem", { lineHeight: "1.5" }],
+      "3xl": ["1.875rem", { lineHeight: "1.5" }],
+      "4xl": ["2.25rem", { lineHeight: "1.5" }],
+      "5xl": ["3rem", { lineHeight: "1.5" }],
+      "6xl": ["3.75rem", { lineHeight: "1" }],
+      "7xl": ["4.5rem", { lineHeight: "1" }],
+      "8xl": ["6rem", { lineHeight: "1" }],
+      "9xl": ["8rem", { lineHeight: "1" }]
+    },
     extend: {
       colors: {
         black: "var(--color-black)",
