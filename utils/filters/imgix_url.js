@@ -1,4 +1,4 @@
-const ImgixClient = require("imgix-core-js")
+const ImgixClient = require("@imgix/js-core")
 
 /**
  * Converts a path to an image in S3 to a full (signed) Imgix URL.
