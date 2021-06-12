@@ -63,9 +63,19 @@ exports.default = function (done) {
 
 It's important here that you add `concat()` **before running babel** so it only compiles the code once. If you run Babel first it will slow down your build significantly, while creating duplicate code in the process.
 
+{% callout type="warning" %}
+This will not work if you're using `import` and `export` statements, as is common in newer JavaScript modules. Here we're making the assumption that you are not using these features, as we're compiling everything together anyways.
+
+If you want to stick with imports and exports (which are a great pattern), I'd suggest building out a pipeline using a build tool like [webpack](/blog/wtf-is-webpack/). I wrote [an introductory guide on getting started with webpack](/blog/javascript-webpack-build-pipeline/).
+
+You could also [use webpack with Gulp](https://www.npmjs.com/package/webpack-stream), but I'm not covering that here.
+
+If you'd like, feel free to add your thoughts to [the discussion on this topic](https://github.com/seancdavis/seancdavis-com/issues/57).
+{% endcallout %}
+
 At this point, if you run the build (`npm run build`) you will see the files get compiled to a single `main.js` file in the `dist` directory.
 
-That's great, but you will eventually want to work with third-party libraries within your JavaScript components. And while you could load them separately in your [HTML](/blog/wtf-is-html/) file(s/), it's easier to manage and can be more performant when you include those dependencies in your bundle. Let's try that out.
+That's great, but you will eventually want to work with third-party libraries within your JavaScript components. And while you could load them separately in your [HTML](/blog/wtf-is-html/) file(s), it's easier to manage and can be more performant when you include those dependencies in your bundle. Let's try that out.
 
 ## Step 3: Add Dependencies
 
