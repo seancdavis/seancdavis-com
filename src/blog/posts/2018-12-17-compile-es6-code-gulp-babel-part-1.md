@@ -13,40 +13,16 @@ Cool? Cool. Let's dig in.
 
 ## Step 1: Create `package.json` File
 
-The [`package.json` file](https://docs.npmjs.com/files/package.json) is a configuration file used in many front-end projects. It works with JavaScript package managers -- like [`npm`](https://www.npmjs.com/) and [`yarn`](https://yarnpkg.com/en/) -- to manage your project's dependencies, releases, scripts, and so on.
+The [`package.json` file](https://docs.npmjs.com/files/package.json) is a configuration file used in many front-end projects. It works with JavaScript package managers — like [NPM](/blog/wtf-is-npm) and [Yarn](https://yarnpkg.com/en/) — to manage your project's dependencies, releases, scripts, and so on.
 
 To prep this project, first make sure you have NPM installed. Alternatively, you can use Yarn, but the examples here will use NPM. I won't go through the installation process under the assumption that you've already used NPM and have it installed. (If you haven't, read through [this guide](https://www.npmjs.com/get-npm).)
 
 With NPM installed, change into your project directory and run the initialize script from NPM.
 
-```
-$ cd path/to/your/project
-$ npm init
-```
+    $ cd path/to/your/project
+    $ npm init -y
 
-This will ask you a series of questions about your project.
-
-```
-package name:
-version: (1.0.0)
-description:
-entry point: (index.js)
-test command:
-git repository:
-keywords:
-author:
-license: (ISC)
-```
-
-If you don't know the answer you can leave it blank and NPM will set the default value. Follow this step you should see a `package.json` file with some basic values in there. You can change these values directly at any point, if necessary.
-
-Alternatively, if you don't want to go through the setup process, you can manually create the `package.json` file, but you have to at least include a blank JSON object:
-
-`package.json` {.filename}
-
-```json
-{}
-```
+You should now have a `package.json` file with some basic values in there. You can change these values directly at any point, if necessary.
 
 ## Step 2: Install Dependencies
 
@@ -62,33 +38,21 @@ You can install these with a single command:
 
     $ npm install --save-dev @babel/core @babel/preset-env gulp@4 gulp-babel gulp-plumber
 
-If your `package.json` file was setup properly, you should now see those dependencies with the appropriate version notation.
+Those dependencies will now be listed in your `package.json` file.
 
-`package.json` {.filename}
+## Step 3: Initialize Git
 
-```js
-{
-  // ...
-  "devDependencies": {
-    "@babel/core": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
-    "gulp": "^4.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-plumber": "^1.2.1"
-  }
-}
-```
-
-## Step 3: Ignore Node Modules
-
-Running `npm install` not only saved your dependencies config to `package.json`, it also installed your dependencies along with all your dependencies' dependencies into a `node_modules` directory. You'll want to save yourself a massive headache later and ignore that directory from Git if you haven't done so already.
+This is a good point to initialize Git. Before you do, create a `.gitignore` file in the root of your project and add `node_modules` to it. `node_modules` is where your dependencies were installed, and you'll save yourself a massive headache by not tracking this code.
 
 `.gitignore` {.filename}
 
 ```shell
-# ...
 node_modules
 ```
+
+Then you can initialize your repository:
+
+    $ git init
 
 ## Step 4: Write JavaScript Components
 
@@ -99,7 +63,7 @@ For our examples throughout this series, we're going to follow a couple conventi
 
 These are simply choices made for these examples. You're welcome to change any values you see throughout the series to suit your project.
 
-With that said, let's create two components -- Foo and Bar. We will continue to work with these components throughout all five parts in this series.
+With that said, let's create two components — `Foo` and `Bar`. We will continue to work with these components throughout all five parts in this series.
 
 `src/components/foo.js` {.filename}
 
@@ -216,8 +180,6 @@ foo.log("Hello World") // Prints "Hello World" to the console.
 var bar = new Bar()
 bar.print("Hello World") // Prints "Hello World" to the DOM.
 ```
-
----
 
 That's it for Part 1! But there's plenty more to do with Gulp and Babel, so please continue through the series. The next articles is on [concatenating your components into a single file](/blog/compile-es6-code-gulp-babel-part-2/).
 
