@@ -11,6 +11,12 @@ module.exports = ({ post }) => {
     })
     .join("")
 
+  let author
+  if (post.data.rich_author) {
+    const component = new Component("author", { author: post.data.rich_author, classes: "mb-2" })
+    author = component.render()
+  }
+
   let image
   if (post.data.image) {
     const component = new Component("image", { path: post.data.image, sm: "576px" })
@@ -19,6 +25,7 @@ module.exports = ({ post }) => {
 
   return {
     ...post,
+    author,
     image,
     tags
   }

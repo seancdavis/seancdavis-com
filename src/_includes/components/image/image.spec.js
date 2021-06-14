@@ -54,7 +54,7 @@ describe("Image Transformer", () => {
   })
   it("will adjust srcset based on vw widths", () => {
     const result = transform({ path: "/my-image.jpg", lg: "50vw" })
-    expect(result.sources[0].srcset).toContain(breakpoints.xl.max)
+    expect(result.sources[0].srcset).toContain(breakpoints.xl.max.toString())
   })
   it("will only build two srcset values for a size sent a px value", () => {
     const result = transform({ path: "/my-image.jpg", md: "200px" })

@@ -5,11 +5,14 @@
   <div class="container max-w-4xl relative">
     {% back_button href="/blog", label="All Posts", classes="mb-2" %}
     <h1 class="text-4xl leading-snug mb-3">{{ title }}</h1>
+    {% if rich_author %}
+      {% author author=rich_author, classes="mb-2" %}
+    {% endif %}
     {% if description %}
-        <p class="text-2xl">{{ description }}</p>
+      <p class="text-2xl mb-0">{{ description }}</p>
     {% endif %}
     {% if image %}
-      <div class="layout--post--header-image">
+      <div class="mt-2">
         {% image path=image, lg="832px" %}
       </div>
     {% endif %}
