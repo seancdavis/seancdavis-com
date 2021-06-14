@@ -55,12 +55,6 @@ are not subject to any claim arising from use of this code.
 
 And [here's the current version of it](https://github.com/seancdavis/seancdavis-com/blob/main/LICENSE).
 
-## Adding Specific Examples
-
-I intentionally left this open-ended. The points are clear — take and use, but share. _Don't be a dick._
-
-Having this text was great for the code and the site's content, but I thought I should reflect it on the website as well. So I updated [my license page](https://www.seancdavis.com/license/) with some specific examples on how I expect it to be interpreted for my site.
-
 ## It's All Yours
 
 If you like it and want to use it, it's all yours. Do what the license says! Take it, use or modify it, and share the love.

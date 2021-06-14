@@ -34,6 +34,12 @@ ol {
   }
 }
 
+ul {
+  @apply list-disc
+    mb-4
+    ml-4;
+}
+
 li {
   @apply mb-4;
 
@@ -67,4 +73,14 @@ hr {
 
   border-width: 2px;
   border-color: #d3d6db;
+}
+
+blockquote {
+  @apply bg-gray-300
+    italic
+    my-8
+    px-4
+    py-8
+    text-gray-800
+    text-xl;
 }
