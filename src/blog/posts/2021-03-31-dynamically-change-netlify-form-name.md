@@ -43,9 +43,11 @@ That means you could change the `value` attribute of the `form-name` field and, 
 
 Well ... sort of.
 
-**Netlify must know about the form after your site is built**. In other words, you technically need to render some form with a `name` attribute for every form you want to submit on the site.
+**Netlify must know about the form after your site is built**. In other words, you technically need to render a form with a `name` attribute for every form you want to submit on the site.
 
-But there are ways to be clever about that. You could hide the forms. You could put them on a page that no one ever sees. It doesn't really matter, they just have to be _somewhere_ on the site so Netlify can process them.
+But there are ways to be clever about that. You could hide the forms. You could put them on a page that no one ever sees. It doesn't really matter, they just have to be _somewhere_ on the site so Netlify can process them. And that form must include all the fields you want to accept for it.
+
+These are security measures Netlify puts in place to ensure proper content is being submitted as form entries.
 
 If you just make up a value for `form-name` on the fly, Netlify is not going to store the data. It'll ignore the submission with the assumption that you're trying to do something suspicious.
 
@@ -74,10 +76,24 @@ Remember, we technically need a form for both options. So our HTML code may look
   <button type="submit">Send</button>
 </form>
 
-<form name="Contact-Other" method="POST" netlify style="display: none;"></form>
+<form name="Contact-Other" method="POST" netlify style="display: none;">
+  <select name="subject" required>
+    <option value="Sales">Sales</option>
+    <option value="Other">Other</option>
+  </select>
+  <input type="email" name="email" required />
+  <textarea name="message" required></textarea>
+  <button type="submit">Send</button>
+</form>
 ```
 
-Notice that I've hidden the second form. Netlify will still know it's a form that can be submitted on the site.
+{% callout type="note" %}
+Two important notes from this code:
+
+1. The second form is hidden. Netlify will still know it's a form that can be submitted on the site.
+1. The form fields are duplicated within the hidden form. This seems verbose (and it is), but it's another protection Netlify puts in place. You must show all the fields available for each variation of the form.
+
+{% endcallout %}
 
 ### The JavaScript
 

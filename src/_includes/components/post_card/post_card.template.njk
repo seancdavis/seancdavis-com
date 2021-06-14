@@ -18,6 +18,9 @@
     {% if data.description %}
       <p class="mb-6">{{ data.description }}</p>
     {% endif %}
+    {% if author %}
+      {{ author | safe }}
+    {% endif %}
     <span class="block text-gray-blue font-sans text-sm">
       {{ date.toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" }) }}
     </span>

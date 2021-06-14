@@ -8,7 +8,7 @@ tags:
 
 [Microservices](https://en.wikipedia.org/wiki/Microservices) are a key part of what makes [Jamstack](https://jamstack.org/) sites different from static sites. In a [service-oriented architecture](https://en.wikipedia.org/wiki/Service-oriented_architecture), microservices provide a means for your static site to interact with back-end systems. And typically they follow the [single-responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), meaning each _service_ is responsible for doing one thing.
 
-Often these services come in the form of [serverless functions](https://en.wikipedia.org/wiki/Serverless_computing). Before we had amazing tools like [Netlify](https://www.netlify.com/) at our disposal, we had to manage these services individually, or perhaps use a build framework like [Serverless](https://serverless.com/) to help us.
+Often these services come in the form of [serverless functions](https://en.wikipedia.org/wiki/Serverless_computing). Before we had amazing tools like [Netlify](/blog/wtf-is-netlify/) at our disposal, we had to manage these services individually, or perhaps use a build framework like [Serverless](https://serverless.com/) to help us.
 
 But now, we _do_ have Netlify! Netlify comes packed with an array of features to enable static sites to appear as though they are dynamic applications. One such feature is [Netlify Functions](https://www.netlify.com/docs/functions/). These are functions we can add to our sites that are deployed with Netlify. (Netlify uses [AWS Lambda](https://aws.amazon.com/lambda/) to serve these functions.)
 

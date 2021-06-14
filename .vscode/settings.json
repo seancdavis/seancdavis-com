@@ -5,6 +5,14 @@
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    },
+    "editor.quickSuggestionsDelay": 250
+  },
   "[nunjucks]": {
     "editor.formatOnSave": false
   }

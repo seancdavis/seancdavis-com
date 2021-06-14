@@ -8,7 +8,7 @@ tags:
 
 Well, it’s 2019 as I write this, and yet it seems like contact forms aren’t going away any time soon. I always figured we’d have a better solution for capturing user feedback by now. But it makes sense that they’re still around. Forms are a tried-and-true method for accepting dynamic data from a user while keeping that user on the site.
 
-So even as we move on to adopting game-changing new approaches to building websites — i.e. following the [Jamstack](/blog/wtf-is-jamstack/) and deploying via [Netlify](https://www.netlify.com/) — we still need to consider accepting data from our users using form submissions.
+So even as we move on to adopting game-changing new approaches to building websites — i.e. following the [Jamstack](/blog/wtf-is-jamstack/) and deploying via [Netlify](/blog/wtf-is-netlify/) — we still need to consider accepting data from our users using form submissions.
 
 Fortunately, [Netlify offers form handling](https://www.netlify.com/docs/form-handling/) on their free tier, which is kind of amazing.
 
@@ -177,8 +177,8 @@ And the `<select>` field should look like this:
 
 ```html
 <select name="subject" required onchange="changeFormName(event)">
-  <!-- ... --></select
->
+  <!-- ... -->
+</select>
 ```
 
 Demo here: [https://codepen.io/seancdavis/pen/pmNdXK](https://codepen.io/seancdavis/pen/pmNdXK)

@@ -16,7 +16,7 @@ The problem with this approach was that there was a piece missing. Even if the h
 
 In other words, why not just build a [Rails](https://rubyonrails.org/) or [Django](https://www.djangoproject.com/) project and deploy it to [Heroku](https://http://heroku.com/)? Or hell, why not just use [WordPress](https://wordpress.com/) or [SquareSpace](https://www.squarespace.com/)?
 
-Enter, [Netlify](https://www.netlify.com/). Netlify handles the entire build process for you, and it hosts the code. It listens to receive webhooks from GitHub and your headless CMS so any code or content change can trigger a new build. And it does all of this free of charge.
+Enter, [Netlify](/blog/wtf-is-netlify). Netlify handles the entire build process for you, and it hosts the code. It listens to receive webhooks from GitHub and your headless CMS so any code or content change can trigger a new build. And it does all of this free of charge.
 
 We're going to spend the next hour configuring these three tools to work together, and at the end of it you will have the beginning of your own site deployed to a server you're not managing or paying for.
 
@@ -267,7 +267,7 @@ You're welcome to make the repo public if you want, assuming you've not tracked 
 
 ## Step 04: Netlify
 
-After GitHub is configured, sign up for a [Netlify](https://www.netlify.com/) account and log in.
+After GitHub is configured, sign up for a [Netlify](https://app.netlify.com/) account and log in.
 
 Once logged in, there should be a button on your dashboard to create a new site from Git. Do so and connect it to the repository you just created.
 
@@ -310,4 +310,5 @@ _If you have issues or questions, do not hesitate to [bug me](https://twitter.co
 - [Contentful](https://www.contentful.com/)
 - [Middleman](https://middlemanapp.com/)
 - [Contentful Middleman](https://github.com/contentful/contentful_middleman)
-- [Netlify](https://www.netlify.com/)
+- [WTF is Netlify?](/blog/wtf-is-netlify)
+- [Netlify Website](https://www.netlify.com/)

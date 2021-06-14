@@ -6,13 +6,15 @@
 
 @screen sm {
   .section-heading {
-    @apply text-4xl;
+    @apply leading-tight
+      text-4xl;
   }
 }
 
 @screen md {
   .section-heading {
-    @apply text-5xl;
+    @apply leading-tight
+      text-5xl;
   }
 }
 

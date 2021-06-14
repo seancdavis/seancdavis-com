@@ -9,7 +9,9 @@ seo:
 {# --- Jumbotron --- #}
 
 <div class="layout--home--jumbotron">
-  {% particles images=particles.images, count=15 %}
+  {% if particles.images.length > 0 %}
+    {% particles images=particles.images, count=15 %}
+  {% endif %}
 
   <div class="container max-w-5xl">
     <div class="flex items-center relative justify-between max-w-5xl">
@@ -18,7 +20,9 @@ seo:
           Sean C Davis.
         </h1>
         <p class="text-2xl sm:text-3xl md:text-4xl">
-          {% typewriter texts=typewriter.texts %}
+          {% if typewriter.texts.length > 0 %}
+            {% typewriter texts=typewriter.texts %}
+          {% endif %}
         </p>
       </div>
       <div class="layout--home--jumbotron-image">
@@ -77,7 +81,7 @@ seo:
 
 <div class="bg-gray-100">
   <div class="container py-24 max-w-4xl">
-    <div class="grid col-gap-4 sm:grid-cols-2">
+    <div class="grid gap-x-4 sm:grid-cols-2">
       <div>
         <strong class="subheading">About Me</strong>
         <h2 class="section-heading">A Day in the Life</h2>

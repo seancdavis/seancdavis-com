@@ -12,14 +12,14 @@ image: /blog/200923/spinneret-issue-4--buzz.png
     src="/blog/200923/spinneret-issue-4--buzz.png",
     alt="The Spinneret Issue #4: What The Buzz!" %}
 
-Big news! I launched [my new website](https://www.seancdavis.com/)!
+Big news! I launched [my new website](/)!
 
 It was a long time coming, and this site is really just one page today. But it's going to eventually be the new home for my blog posts. I plan to add pages and features to it here and there, and will announce those in these newsletters and [on Twitter](https://twitter.com/seancdavis29).
 
 The stack for this site is:
 
 - [Eleventy](https://www.11ty.dev/)
-- [Netlify](https://www.netlify.com/)
+- [Netlify](/blog/wtf-is-netlify/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
 When I build out a blog for it, I may end up using a CMS, but have omitted one while it's only a single page site.

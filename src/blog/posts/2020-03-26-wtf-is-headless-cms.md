@@ -69,7 +69,7 @@ There are two types of headless CMS products, the distinguishing factor being ho
 
 ### The Headless CMS Market
 
-This approach is gaining so much popularity that it seems like there is a new headless CMS to try every week. To list them would be exhausting. Fortunately, the fine folks at [Netlify](https://www.netlify.com/) (the same ones who coined the term _Jamstack_) are tireless, and have created an archive of headless content management systems at [headlesscms.org](https://headlesscms.org/).
+This approach is gaining so much popularity that it seems like there is a new headless CMS to try every week. To list them would be exhausting. Fortunately, the fine folks at [Netlify](/blog/wtf-is-netlify/) (the same ones who coined the term _Jamstack_) are tireless, and have created an archive of headless content management systems at [headlesscms.org](https://headlesscms.org/).
 
 The other reference I frequent is [this article](https://www.helloample.com/blog/comparing-headless-content-management-systems) and [its corresponding chart](https://uploads-ssl.webflow.com/5a2e8a9f7cc425000195064c/5db3471c4b211e0cec7d6356_ample-blog-tl-jamstack-headless-cms-cheatsheet.pdf) that my colleague authored. It lists a handful of the more popular headless CMS options, along with a solid feature comparison.
 
