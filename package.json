@@ -59,6 +59,7 @@
     "test:visual": "JEST_CONFIG=visual npm run test"
   },
   "devDependencies": {
+    "netlify-cli": "^3.37.26",
     "pnpm": "^6.7.4"
   }
 }
