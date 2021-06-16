@@ -1,0 +1,19 @@
+{
+  "name": "bear-to-markdown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preexport": "node ./utils/copyDatabase.js",
+    "export": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "slugify": "^1.5.1",
+    "sqlite3": "^5.0.2"
+  }
+}
