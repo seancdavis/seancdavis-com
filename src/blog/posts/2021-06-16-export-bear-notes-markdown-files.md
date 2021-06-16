@@ -80,7 +80,7 @@ For Step 4, we're going to work with a few libraries:
 
 We can install them with one command:
 
-    $ npm run sqlite3 slugify js-yaml
+    $ npm install sqlite3 slugify js-yaml
 
 We'll deal with the `package.json` scripts later on.
 
