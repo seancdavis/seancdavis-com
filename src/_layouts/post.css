@@ -153,14 +153,6 @@
 
   /* --- Block Quotes --- */
   blockquote {
-    @apply bg-gray-300
-      italic
-      my-8
-      px-4
-      py-8
-      text-gray-800
-      text-xl;
-
     > * {
       @apply block
         max-w-2xl
