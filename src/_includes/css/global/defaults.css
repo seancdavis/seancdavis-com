@@ -1,5 +1,6 @@
 :root {
-  @apply font-serif;
+  @apply font-serif
+    text-black;
 }
 
 h1,
