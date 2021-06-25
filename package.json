@@ -27,7 +27,6 @@
     "markdown-it": "^12.0.6",
     "markdown-it-anchor": "^8.0.3",
     "markdown-it-attrs": "^4.0.0",
-    "netlify-cli": "^3.37.26",
     "netlify-plugin-a11y": "^0.0.12",
     "netlify-plugin-checklinks": "^4.1.1",
     "netlify-plugin-inline-critical-css": "^1.2.0",
