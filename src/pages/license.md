@@ -11,16 +11,31 @@ seo:
 
 This site exists to inspire and help those working with the web. I don't want some silly, protective and complicated license to get in the way of that.
 
-In fact, I actually _want_ you to take what you find on this site and use it in your own projects. Use it to have fun. Use it to make money. Either way, use it how you see fit — that's what it's here for. All the [code that powers the site](https://github.com/seancdavis/seancdavis-com) is publicly available in an open-source GitHub repo.
+I want you to take what you find on this site and use it in your own projects. Have fun with it, make some money, and share the love! Just don't straight up take credit for something you didn't create.
 
-That said, there are three points of clarification to append to the _do whatever you want_ rule:
+You can find an updated version of the license [in the code repository](https://github.com/seancdavis/seancdavis-com/blob/main/LICENSE). And [here's some background on why I felt the need to create a new license](/blog/use-with-love-public-license/).
 
-1. You may not copy my brand directly. You can use it for inspiration. But please don't up and lift it for your own, at least without asking first. I'm also happy to put you in touch with the designer who created it.
+The license text is as follows:
 
-2. If you copy and publish wholesale articles, you must recognize my article the original by [adding a canonical meta tag](https://moz.com/learn/seo/canonicalization) to yours.
-
-3. While you don't have to credit me (although I'd be forever grateful if you did), I'd love for you to share your work with me. I like knowing that what I'm doing is helping, and that's a great way to give back for what you've received.
+> Permission is hereby granted, free of charge, to any person obtaining a copy of
+> this software to use, copy, modify, and distribute under the following
+> conditions:
+>
+> 1. Outright copyright infringement is not permitted. Only reasonably modified
+>    versions of the original work may be distributed.
+>
+> 2. Share the love. This software was provided to you, free of charge, to help
+>    you. If you benefit from it, support the original work in some way.
+>
+> 3. Creative assets used within this software may not be used or copied without
+>    written consent from the copyright holder.
+>
+> 4. Works derived from modification of this code must be distributed under an
+>    equally open license.
+>
+> 5. The software is provided without warranty of any kind. The copyright holders
+>    are not subject to any claim arising from use of this code.
 
 In the end, I want you to have fun playing with the web. I want you to earn money from it. I want you to help make it better. And if you can use something here to do that, do it!
 
-Use your best judgment and don't let this silly license get in the way.
+Use your best judgment and work to make the web better for everyone!

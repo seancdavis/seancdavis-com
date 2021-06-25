@@ -70,12 +70,15 @@
   .layout--header--mobile-link-list {
     @apply delay-300
       duration-1000
+      list-none
+      m-0
       opacity-0
       text-center
       transition-all;
 
     li {
-      @apply mb-8;
+      @apply mb-8
+        mx-0;
     }
   }
 

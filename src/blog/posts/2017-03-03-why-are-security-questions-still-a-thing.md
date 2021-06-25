@@ -21,7 +21,7 @@ Why?
 
 **The answers are limited.** Similarly, in thinking about entropy, the answers to these questions are limited. Brute force attacks can happen so much faster because the number of possible answers is so limited to one particular category.
 
-**The answers are difficult to remember.** _What street did you grow up on?_ Let’s say it’s, “Martin Luther King, Jr., Ave.” Hmmm … I don’t like writing all that, so sometimes it’s _MLK Jr. Ave._, but recently I haven’t been using periods. Oh, and there was that one stretch in my life when I chose to abbreviate _avenue_ as _AV_. In other words, the answers aren’t easy to remember even when you know the answer.
+**The answers are difficult to remember.** _What street did you grow up on?_ Let’s say it’s, “Martin Luther King, Jr., Ave.” Hmmm ... I don’t like writing all that, so sometimes it’s _MLK Jr. Ave._, but recently I haven’t been using periods. Oh, and there was that one stretch in my life when I chose to abbreviate _avenue_ as _AV_. In other words, the answers aren’t easy to remember even when you know the answer.
 
 **The answers are meant to be memorized.** We now have these awesome tools like [LastPass](https://www.lastpass.com/) and [1Password](https://1password.com/) that can generate and store passwords for us. And while they _could_ be used to store security answers, they aren’t really built for it and don’t make it super easy. But isn’t that the thing with security questions, you’re supposed to _know_ the answer! The great thing about tools like LastPass and 1Password is that you don’t have to know the password. Instead, every password can be different and difficult to guess.
 
