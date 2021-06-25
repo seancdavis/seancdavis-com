@@ -37,7 +37,6 @@ importers:
       postcss-custom-properties: ^11.0.0
       postcss-import: ^14.0.2
       postcss-nested: ^5.0.5
-      puppeteer: ^10.0.0
       slugify: ^1.5.3
       tailwindcss: ^2.1.4
       webpack: ^5.38.1
@@ -61,7 +60,7 @@ importers:
       http-server: 0.12.3
       jest: 27.0.4
       jest-image-snapshot: 4.5.0_jest@27.0.4
-      jest-puppeteer: 5.0.4_puppeteer@10.0.0
+      jest-puppeteer: 5.0.4
       lodash: 4.17.21
       markdown-it: 12.0.6
       markdown-it-anchor: 8.0.3_markdown-it@12.0.6
@@ -75,7 +74,6 @@ importers:
       postcss-custom-properties: 11.0.0_postcss@8.3.2
       postcss-import: 14.0.2_postcss@8.3.2
       postcss-nested: 5.0.5_postcss@8.3.2
-      puppeteer: 10.0.0
       slugify: 1.5.3
       tailwindcss: 2.1.4_32565eec2408f3b70f749fe37ad22ae2
       webpack: 5.38.1_webpack-cli@4.7.2
@@ -3184,13 +3182,6 @@ packages:
     dependencies:
       '@types/yargs-parser': 20.2.0
     dev: false
-
-  /@types/yauzl/2.9.1:
-    resolution: {integrity: sha512-A1b8SU4D10uoPjwb0lnHmmu8wZhR9d+9o2PKBQT2jU5YPTKsxac6M2qGAdY7VcL+dHHhARVUDmeg0rOrcd9EjA==}
-    dependencies:
-      '@types/node': 15.12.2
-    dev: false
-    optional: true
 
   /@types/yoga-layout/1.9.2:
     resolution: {integrity: sha512-S9q47ByT2pPvD65IvrWp7qppVMpk9WGMbVq9wbWZOHg6tnXSD4vyhao6nOSBwwfDdV2p3Kx9evA9vI+XWTfDvw==}
@@ -7374,10 +7365,6 @@ packages:
       tslib: 1.14.1
     dev: false
 
-  /devtools-protocol/0.0.883894:
-    resolution: {integrity: sha512-33idhm54QJzf3Q7QofMgCvIVSd2o9H3kQPWaKT/fhoZh+digc+WSiMhbkeG3iN79WY4Hwr9G05NpbhEVrsOYAg==}
-    dev: false
-
   /dicer/0.3.0:
     resolution: {integrity: sha512-MdceRRWqltEG2dZqO769g27N/3PXfcKl04VhYnBlo2YhH7zPi88VebsjTKclaOyiuMaGU72hTfw3VkUitGcVCA==}
     engines: {node: '>=4.5.0'}
@@ -8686,20 +8673,6 @@ packages:
       debug: 2.6.9
       mkdirp: 0.5.5
       yauzl: 2.10.0
-    dev: false
-
-  /extract-zip/2.0.1:
-    resolution: {integrity: sha512-GDhU9ntwuKyGXdZBUgTIe+vXnWj0fppUEtMDL0+idd5Sta8TGpHssn/eusA9mrPr9qNDym6SxAYZjNvCn/9RBg==}
-    engines: {node: '>= 10.17.0'}
-    hasBin: true
-    dependencies:
-      debug: 4.3.1
-      get-stream: 5.2.0
-      yauzl: 2.10.0
-    optionalDependencies:
-      '@types/yauzl': 2.9.1
-    transitivePeerDependencies:
-      - supports-color
     dev: false
 
   /extsprintf/1.3.0:
@@ -12676,14 +12649,13 @@ packages:
       jest-resolve: 27.0.4
     dev: false
 
-  /jest-puppeteer/5.0.4_puppeteer@10.0.0:
+  /jest-puppeteer/5.0.4:
     resolution: {integrity: sha512-IUOVKgHEaKsLqahZy/J/DvXB59SQx4AVpZKTRDvJzCdkvdGc3NVsNwUhovr6SK+HOK1TOiqAiXPTAPiIq3mkrg==}
     peerDependencies:
       puppeteer: '>= 1.5.0 < 10'
     dependencies:
       expect-puppeteer: 5.0.4
       jest-environment-puppeteer: 5.0.4
-      puppeteer: 10.0.0
     transitivePeerDependencies:
       - debug
       - supports-color
@@ -17859,11 +17831,6 @@ packages:
     engines: {node: '>= 0.6.0'}
     dev: false
 
-  /progress/2.0.1:
-    resolution: {integrity: sha512-OE+a6vzqazc+K6LxJrX5UPyKFvGnL5CYmq2jFGNIBWHpc4QyE49/YOumcrpQFJpfejmvRtbJzgO1zPmMCqlbBg==}
-    engines: {node: '>=0.4.0'}
-    dev: false
-
   /progress/2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
     engines: {node: '>=0.4.0'}
@@ -18118,29 +18085,6 @@ packages:
       ws: 6.2.1
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /puppeteer/10.0.0:
-    resolution: {integrity: sha512-AxHvCb9IWmmP3gMW+epxdj92Gglii+6Z4sb+W+zc2hTTu10HF0yg6hGXot5O74uYkVqG3lfDRLfnRpi6WOwi5A==}
-    engines: {node: '>=10.18.1'}
-    requiresBuild: true
-    dependencies:
-      debug: 4.3.1
-      devtools-protocol: 0.0.883894
-      extract-zip: 2.0.1
-      https-proxy-agent: 5.0.0
-      node-fetch: 2.6.1
-      pkg-dir: 4.2.0
-      progress: 2.0.1
-      proxy-from-env: 1.1.0
-      rimraf: 3.0.2
-      tar-fs: 2.0.0
-      unbzip2-stream: 1.3.3
-      ws: 7.4.6
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
     dev: false
 
   /puppeteer/2.1.1:
@@ -20717,15 +20661,6 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /tar-fs/2.0.0:
-    resolution: {integrity: sha512-vaY0obB6Om/fso8a8vakQBzwholQ7v5+uy+tF3Ozvxv1KNezmVQAiWtcNmMHFSFPqL3dJA8ha6gdtFbfX9mcxA==}
-    dependencies:
-      chownr: 1.1.4
-      mkdirp: 0.5.5
-      pump: 3.0.0
-      tar-stream: 2.2.0
-    dev: false
-
   /tar-fs/2.1.1:
     resolution: {integrity: sha512-V0r2Y9scmbDRLCNex/+hYzvp/zyYjvFbHPNgVTKfQvVrb6guiE/fxP+XblDNR011utopbkex2nM4dHNV6GDsng==}
     dependencies:
@@ -21397,13 +21332,6 @@ packages:
       has-bigints: 1.0.1
       has-symbols: 1.0.2
       which-boxed-primitive: 1.0.2
-    dev: false
-
-  /unbzip2-stream/1.3.3:
-    resolution: {integrity: sha512-fUlAF7U9Ah1Q6EieQ4x4zLNejrRvDWUYmxXUpN3uziFYCHapjWFaCAnreY9bGgxzaMCFAPPpYNng57CypwJVhg==}
-    dependencies:
-      buffer: 5.7.1
-      through: 2.3.8
     dev: false
 
   /unbzip2-stream/1.4.3:

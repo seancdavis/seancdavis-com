@@ -36,7 +36,6 @@
     "postcss-custom-properties": "^11.0.0",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.5",
-    "puppeteer": "^10.0.0",
     "slugify": "^1.5.3",
     "tailwindcss": "^2.1.4",
     "webpack": "^5.38.1",
