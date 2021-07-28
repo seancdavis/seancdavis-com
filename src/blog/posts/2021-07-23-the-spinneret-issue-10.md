@@ -34,7 +34,7 @@ I don't have an "official" guest authorship program. If you're interested in wri
 
 ### Evolution of "Jamstack"
 
-I mentioned this last month. The conversation around the definition of "Jamstack" has been hot in the last couple months. For me, it started with [being interviewed by JavaScript Jabber](https://devchat.tv/js-jabber/changes-in-the-jamstack-landscape-with-sean-c-davis-jsj-482/). Then I [wrote an opinionated article on the subject](https://www.seancdavis.com/blog/jamstack-evolution-and-redefinition/), which led to [sitting on a panel for the JavaScript podcast](https://www.javascriptjam.com/episode/episode-5-panel-debate-what-is-jamstack). I'm interested to keep a pulse on this conversation, especially as the company I've joined is so heavily invested in the term _Jamstack_.
+I mentioned this last month. The conversation around the definition of "Jamstack" has been hot in the last couple months. For me, it started with [being interviewed by JavaScript Jabber](https://devchat.tv/js-jabber/changes-in-the-jamstack-landscape-with-sean-c-davis-jsj-482/). Then I [wrote an opinionated article on the subject](/blog/jamstack-evolution-and-redefinition/), which led to [sitting on a panel for the JavaScript podcast](https://www.javascriptjam.com/episode/episode-5-panel-debate-what-is-jamstack). I'm interested to keep a pulse on this conversation, especially as the company I've joined is so heavily invested in the term _Jamstack_.
 
 ### Good Websites Club
 
@@ -50,28 +50,28 @@ _New blog posts and videos I published last month._ {.text-sm}
     src="/blog/210426/the-spinneret--my-words.png",
     alt="The Spinneret - My Words" %}
 
-I wrote _a lot_ in June, but not much in July. (And I expect the lull to continue through September.) Aside from introducing a new guest author, I had a couple pieces I was really excited about. [_Exporting Bear Notes as Markdown Files_](https://www.seancdavis.com/blog/export-bear-notes-markdown-files/) was a fun tutorial that I will eventually spin off into exploring Bear as a CMS (wild idea, I know!). And I also [introduced a new license](https://www.seancdavis.com/blog/use-with-love-public-license/) for my open source projects. It felt a little tacky at first, but I'm happy with where it landed.
+I wrote _a lot_ in June, but not much in July. (And I expect the lull to continue through September.) Aside from introducing a new guest author, I had a couple pieces I was really excited about. [_Exporting Bear Notes as Markdown Files_](/blog/export-bear-notes-markdown-files/) was a fun tutorial that I will eventually spin off into exploring Bear as a CMS (wild idea, I know!). And I also [introduced a new license](/blog/use-with-love-public-license/) for my open source projects. It felt a little tacky at first, but I'm happy with where it landed.
 
 ### Guest Articles
 
-- [A Beginner's Guide to Z-Index](https://www.seancdavis.com/blog/beginners-guide-z-index/) by Pratham
-- [CSS Animations Quick Start Guide](https://www.seancdavis.com/blog/css-animations-quick-start-guide/) by Pratham
+- [A Beginner's Guide to Z-Index](/blog/beginners-guide-z-index/) by Pratham
+- [CSS Animations Quick Start Guide](/blog/css-animations-quick-start-guide/) by Pratham
 
 ### New Definitions
 
-- [WTF is Frontmatter?](https://www.seancdavis.com/blog/wtf-is-frontmatter/)
-- [WTF is a Static Site Generator?](https://www.seancdavis.com/blog/wtf-is-ssg/)
-- [WTF is Continuous Integration?](https://www.seancdavis.com/blog/wtf-is-continuous-integration/)
-- [WTF is Markdown?](https://www.seancdavis.com/blog/wtf-is-markdown/)
+- [WTF is Frontmatter?](/blog/wtf-is-frontmatter/)
+- [WTF is a Static Site Generator?](/blog/wtf-is-ssg/)
+- [WTF is Continuous Integration?](/blog/wtf-is-continuous-integration/)
+- [WTF is Markdown?](/blog/wtf-is-markdown/)
 
 ### And the Rest
 
-- [A Simple CSS Build Pipeline Using PostCSS](https://www.seancdavis.com/blog/getting-started-with-postcss/)
-- [Start with the Wins](https://www.seancdavis.com/blog/start-with-the-wins/)
-- [Export Bear Notes to Markdown Files](https://www.seancdavis.com/blog/export-bear-notes-markdown-files/)
-- [Commit Code Changes Using GitHub Actions](https://www.seancdavis.com/blog/commit-github-actions-code-changes/)
-- [The Use With Love Public License](https://www.seancdavis.com/blog/use-with-love-public-license/)
-- [Delete Multiple Local Git Branches](https://www.seancdavis.com/blog/git-delete-multiple-local-branches/)
+- [A Simple CSS Build Pipeline Using PostCSS](/blog/getting-started-with-postcss/)
+- [Start with the Wins](/blog/start-with-the-wins/)
+- [Export Bear Notes to Markdown Files](/blog/export-bear-notes-markdown-files/)
+- [Commit Code Changes Using GitHub Actions](/blog/commit-github-actions-code-changes/)
+- [The Use With Love Public License](/blog/use-with-love-public-license/)
+- [Delete Multiple Local Git Branches](/blog/git-delete-multiple-local-branches/)
 
 ## My Reads
 
