@@ -10,7 +10,7 @@ In software development, an "environment" is the context in which a program or p
 
 An environment variable is a value that adjusts the environment — i.e. the process — in some way.
 
-For example, consider some value you want to be different when developing locally versus running in production. Although you could achieve by writing a conditional in your code, it's much easier (and a better practice) to use a variable. Here's what this looks like in a [Node.js](/blog/wtf-is-node/) application.
+For example, consider some value you want to be different when developing locally versus running in production. Although you could achieve that by writing a conditional in your code, it's much easier (and a better practice) to use a variable. Here's and example in a [Node.js](/blog/wtf-is-node/) application:
 
 ```js
 // bad
@@ -22,7 +22,7 @@ const myVar = process.env.MY_VAR
 
 ## Setting Environment Variables
 
-Environment variables can be set in a number of ways, and those depend on the system in which the process is running. The action is often performed on the command line, but many programming languages have mechanisms and libraries for making this process easier for you.
+You can set environment variables in a number of ways, and those depend on the system in which the process is running. The action is often performed on the command line, but many programming languages have mechanisms and libraries for making this process easier for you.
 
 ## Storing Sensitive Information
 
