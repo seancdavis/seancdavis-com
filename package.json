@@ -19,7 +19,7 @@
     "cssnano": "^5.0.6",
     "glob": "^7.1.7",
     "html-minifier": "^4.0.0",
-    "http-server": "^0.12.3",
+    "http-server": "^13.0.0",
     "jest": "^27.0.4",
     "jest-image-snapshot": "^4.5.0",
     "jest-puppeteer": "^5.0.4",
