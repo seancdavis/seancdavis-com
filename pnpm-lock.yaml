@@ -19,7 +19,7 @@ importers:
       cssnano: ^5.0.6
       glob: ^7.1.7
       html-minifier: ^4.0.0
-      http-server: ^0.12.3
+      http-server: ^13.0.0
       jest: ^27.0.4
       jest-image-snapshot: ^4.5.0
       jest-puppeteer: ^5.0.4
@@ -57,7 +57,7 @@ importers:
       cssnano: 5.0.6_postcss@8.3.2
       glob: 7.1.7
       html-minifier: 4.0.0
-      http-server: 0.12.3
+      http-server: 13.0.0
       jest: 27.0.4
       jest-image-snapshot: 4.5.0_jest@27.0.4
       jest-puppeteer: 5.0.4
@@ -11085,6 +11085,27 @@ packages:
       portfinder: 1.0.28
       secure-compare: 3.0.1
       union: 0.5.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /http-server/13.0.0:
+    resolution: {integrity: sha512-tqOx2M1CiZ3aVaE7Ue/0lup9kOG+Zqg6wdT1HygvxFnvPpU9doBMPcQ1ffT0/QS3J9ua35gipg0o3Dr8N0K0Tg==}
+    engines: {node: '>=6'}
+    hasBin: true
+    dependencies:
+      basic-auth: 1.1.0
+      colors: 1.4.0
+      corser: 2.0.1
+      he: 1.2.0
+      http-proxy: 1.18.1
+      mime: 1.6.0
+      minimist: 1.2.5
+      opener: 1.5.2
+      portfinder: 1.0.28
+      secure-compare: 3.0.1
+      union: 0.5.0
+      url-join: 2.0.5
     transitivePeerDependencies:
       - debug
     dev: false
