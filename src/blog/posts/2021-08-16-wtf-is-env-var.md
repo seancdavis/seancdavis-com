@@ -8,9 +8,9 @@ tags:
 
 In software development, an "environment" is the context in which a program or process runs.
 
-An environment variable is a value that adjusts the environment — i.e. the process — in some way.
+An environment variable is a value that adjusts the environment (the _process_) in some way.
 
-For example, consider some value you want to be different when developing locally versus running in production. Although you could achieve that by writing a conditional in your code, it's much easier (and a better practice) to use a variable. Here's and example in a [Node.js](/blog/wtf-is-node/) application:
+For example, consider some variable whose value you want to be different when developing locally versus running in production. Although you could achieve that by writing a conditional in your code, it's much easier (and a better practice) to use an environment variable. Here's and example in a [Node.js](/blog/wtf-is-node/) application:
 
 ```js
 // bad
