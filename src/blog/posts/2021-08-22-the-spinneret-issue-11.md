@@ -1,7 +1,7 @@
 ---
 title: "The Spinneret: Issue #11"
 description: A month of transitioning into a new job and working to wrap a side project so I can get back to focusing on this newsletter and website.
-image: /blog/210824/the-spinneret--11.png
+image: /blog/210822/the-spinneret--11.png
 tags:
   - spinneret
 ---
@@ -11,7 +11,7 @@ tags:
 _Notable changes in my life, [on my website](https://github.com/seancdavis/seancdavis-com), and in other projects._ {.text-sm}
 
 {% post_image
-    src="/blog/210824/the-spinneret--my-code.png",
+    src="/blog/210822/the-spinneret--my-code.png",
     alt="The Spinneret - My Code" %}
 
 I spent most of the last month getting my bearings at [Stackbit](https://www.stackbit.com/), beginning to explore the wide world of developer experience/relations/advocacy.
@@ -25,7 +25,7 @@ I'm also finishing up a hybrid app using [Ionic](https://ionicframework.com/). I
 _New blog posts and videos I published last month._ {.text-sm}
 
 {% post_image
-    src="/blog/210824/the-spinneret--my-words.png",
+    src="/blog/210822/the-spinneret--my-words.png",
     alt="The Spinneret - My Words" %}
 
 The piece I was most excited about this month was [_How to Convert Static HTML into Powerful Templates_](https://www.stackbit.com/blog/jamstack-journey-templatize-static-html/), partially because it was my first piece published for Stackbit, but mostly because it's the first in a series of three that will take beginners on a Jamstack journey. All will be released by mid-September.
@@ -52,7 +52,7 @@ And just a few other articles during a quiet month.
 _Articles and news I read last month that I found interesting, with some commentary._ {.text-sm}
 
 {% post_image
-    src="/blog/210824/the-spinneret--my-reads.png",
+    src="/blog/210822/the-spinneret--my-reads.png",
     alt="The Spinneret - My Reads" %}
 
 Two big announcements from startups I really like:
@@ -74,7 +74,7 @@ And two others that caught my attention:
 _New tools that I've recently discovered. They aren't necessarily new._ {.text-sm}
 
 {% post_image
-    src="/blog/210824/the-spinneret--my-finds.png",
+    src="/blog/210822/the-spinneret--my-finds.png",
     alt="The Spinneret - My Finds" %}
 
 And a wide assortment of tools that caught my attention.

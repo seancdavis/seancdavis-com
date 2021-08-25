@@ -1,7 +1,7 @@
 ---
 title: WTF is Jest?
 description: Learn the basics of the JavaScript testing framework, Jest.
-image: /blog/210825/wtf--jest.png
+image: /blog/210823/wtf--jest.png
 tags:
   - javascript
   - jest
