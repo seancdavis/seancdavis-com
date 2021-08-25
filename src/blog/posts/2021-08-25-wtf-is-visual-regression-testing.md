@@ -1,7 +1,7 @@
 ---
 title: WTF is Visual Regression Testing?
 description: Learn the basics of visual regression testing, along with resources for implementing the practice in your projects.
-image: /blog/210826/wtf--visual-regression.png
+image: /blog/210825/wtf--visual-regression.png
 tags:
   - testing
   - wtf
@@ -30,7 +30,7 @@ It is super valuable to automate visual regressions testing because it can captu
 Here's an example that shows how visual regression testing can come in handy even in the most nuanced situations. This shows how a small change shifted just a few elements on the page. The left image was the original page in production, and the right is the new. The middle shows the difference.
 
 {% post_image
-    src="/blog/210826/visual-regression-example.png",
+    src="/blog/210825/visual-regression-example.png",
     alt="Visual Regression Example" %}
 
 ## Making Smart Decisions
