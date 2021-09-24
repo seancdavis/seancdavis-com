@@ -4,11 +4,11 @@ Hi, I'm Sean! This is my website. I prefer to work out in the open and share my 
 
 ## Contributing
 
-I don't just work out in the open because it looks cool. I would love your help in keeping this website useful to its readers. I welcome any form of contribution to this site, including:
+I welcome any form of contribution to this site, including:
 
 - Share some love [on Twitter](https://twitter.com/seancdavis29)
 - Guest posts via [a pull request](https://github.com/seancdavis/seancdavis-com/pulls)
-- Comments, feedback, and bug reports via [GitHub Issues](https://github.com/seancdavis/seancdavis-com/issues)
+- Comments, questions, feedback, and bug reports via [GitHub Issues](https://github.com/seancdavis/seancdavis-com/issues)
 - Fixes to silly typos, adjustments to outdated code examples, or other wild ideas via [a pull request](https://github.com/seancdavis/seancdavis-com/pulls)
 
 ## Developing
@@ -23,11 +23,12 @@ And then install the dependencies
 
 Note: If you don't plan on working in any of the JavaScript-based code examples, you should be fine by running `npm install` from the root. You may run into version discrepancies, which may or may not cause problems.
 
-To start up the dev server:
+To start up the dev server, change into the `www` directory and run the `dev` command:
 
+    $ cd www
     $ npm run dev
 
-And then view the site at [http://localhost:8000](http://localhost:8000).
+The site will be available at [http://localhost:8000](http://localhost:8000).
 
 This site _technically_ precedes my Eleventy Starter Kit, [Twenty-Ninety](https://github.com/seancdavis/twenty-ninety). But it follows many of the same patterns. If you have a look at that documentation, you'll get a sense for what is going on here.
 
