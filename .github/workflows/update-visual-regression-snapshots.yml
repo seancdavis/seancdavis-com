@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - website/**
 jobs:
   Update-Visual-Regression-Snapshots:
     name: "Update Visual Regression Snapshots"
