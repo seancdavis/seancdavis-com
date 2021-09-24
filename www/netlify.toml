@@ -6,10 +6,10 @@
   NPM_FLAGS="--prefix=/dev/null"
 
 [[plugins]]
-  package = "/.netlify/netlify-plugin-pnpm"
+  package = ".netlify/netlify-plugin-pnpm"
 
 [[plugins]]
-  package = "/.netlify/netlify-plugin-jest"
+  package = ".netlify/netlify-plugin-jest"
 
 [[plugins]]
   package = "netlify-plugin-checklinks"
