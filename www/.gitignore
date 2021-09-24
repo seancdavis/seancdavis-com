@@ -1,11 +1,11 @@
 # Build files
-/dist
+dist
 
 # Temp CSS directory
-/src/css
+src/css
 
 # Netlify CLI Config
-/.netlify/state.json
+.netlify/state.json
 
 # Local Netlify folder
 .netlify
