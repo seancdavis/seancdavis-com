@@ -1,23 +1,4 @@
-# ---------------------------------------- | Shared
-
 .DS_Store
 .envrc
 node_modules
 .pnpm-debug.log
-
-# ---------------------------------------- | SCD Site
-
-# Build files
-/dist
-
-# Temp CSS directory
-/src/css
-
-# Netlify CLI Config
-/.netlify/state.json
-
-# Local Netlify folder
-.netlify
-
-# Lighthouse Reports
-.lighthouseci/
