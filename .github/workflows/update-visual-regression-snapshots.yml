@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - website/**
+      - www/**
 jobs:
   Update-Visual-Regression-Snapshots:
     name: "Update Visual Regression Snapshots"
