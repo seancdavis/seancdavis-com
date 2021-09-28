@@ -16,7 +16,9 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build site
-        run: npm run pretest:visual
+        run: |
+          cd www
+          npm run pretest:visual
         env:
           IMGIX_DOMAIN: ${{ secrets.IMGIX_DOMAIN }}
           IMGIX_TOKEN: ${{ secrets.IMGIX_TOKEN }}
