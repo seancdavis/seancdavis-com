@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "seancdavis-com",
+  "workspaces": [
+    "www",
+    "examples/*",
+    "packages/*"
+  ]
+}

@@ -2,12 +2,6 @@
   command = "npm run build"
   publish = "dist"
 
-[build.environment]
-  NPM_FLAGS="--prefix=/dev/null"
-
-[[plugins]]
-  package = "@seancdavis/netlify-plugin-pnpm"
-
 [[plugins]]
   package = "@seancdavis/netlify-plugin-jest"
 
