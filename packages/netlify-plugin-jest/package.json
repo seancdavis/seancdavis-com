@@ -1,0 +1,19 @@
+{
+  "name": "@seancdavis/netlify-plugin-jest",
+  "version": "0.1.0",
+  "description": "Runs test suite (npm test --ci) before Netlify build",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seancdavis/seancdavis-com.git"
+  },
+  "author": "Sean C Davis",
+  "license": "SEE LICENSE IN ../../LICENSE",
+  "bugs": {
+    "url": "https://github.com/seancdavis/seancdavis-com/issues"
+  },
+  "homepage": "https://github.com/seancdavis/seancdavis-com/blob/main/packages/netlify-plugin-jest#readme"
+}

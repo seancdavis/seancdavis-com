@@ -1,0 +1,14 @@
+# Build files
+dist
+
+# Temp CSS directory
+src/css
+
+# Netlify CLI Config
+.netlify/state.json
+
+# Local Netlify folder
+.netlify
+
+# Lighthouse Reports
+.lighthouseci/
