@@ -11,26 +11,19 @@ I welcome any form of contribution to this site, including:
 - Comments, questions, feedback, and bug reports via [GitHub Issues](https://github.com/seancdavis/seancdavis-com/issues)
 - Fixes to silly typos, adjustments to outdated code examples, or other wild ideas via [a pull request](https://github.com/seancdavis/seancdavis-com/pulls)
 
-## Developing
+## Website
 
-The site is built using [Eleventy](https://www.11ty.dev/). But it's actually a bit more that that. It has a demos and other code examples. So it's become a monorepo. Therefore, the best way to get started is to first install [PNPM](https://pnpm.js.org/). I use [Homebrew](https://brew.sh/) to do that:
+The code for the website is in the `www` directory. There is a README in that directory with more information on working with the project.
 
-    $ brew install pnpm
+## Examples
 
-And then install the dependencies
+The projects in the `examples` directory are meant self-contained examples, mostly used in support of a blog post.
 
-    $ pnpm install
+I don't prioritize keeping these up to date, but if you find a bug or have a question, you're welcome to create an issue.
 
-Note: If you don't plan on working in any of the JavaScript-based code examples, you should be fine by running `npm install` from the root. You may run into version discrepancies, which may or may not cause problems.
+## Packages
 
-To start up the dev server, change into the `www` directory and run the `dev` command:
-
-    $ cd www
-    $ npm run dev
-
-The site will be available at [http://localhost:8000](http://localhost:8000).
-
-This site _technically_ precedes my Eleventy Starter Kit, [Twenty-Ninety](https://github.com/seancdavis/twenty-ninety). But it follows many of the same patterns. If you have a look at that documentation, you'll get a sense for what is going on here.
+The `packages` directory contains projects that are published to NPM. Each should have its own README file with more information about itself.
 
 ## License
 
