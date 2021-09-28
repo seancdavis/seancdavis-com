@@ -95,6 +95,8 @@ importers:
       '@imgix/js-core': ^3.1.3
       '@lhci/cli': ^0.8.0
       '@netlify/plugin-sitemap': ^0.8.1
+      '@seancdavis/netlify-plugin-jest': ^0.1.0
+      '@seancdavis/netlify-plugin-pnpm': ^0.1.0
       analytics: ^0.7.5
       autoprefixer: ^10.2.6
       aws-sdk: ^2.926.0
@@ -133,6 +135,8 @@ importers:
       '@imgix/js-core': 3.2.1
       '@lhci/cli': 0.8.1
       '@netlify/plugin-sitemap': 0.8.1
+      '@seancdavis/netlify-plugin-jest': 0.1.0
+      '@seancdavis/netlify-plugin-pnpm': 0.1.0
       analytics: 0.7.14
       autoprefixer: 10.3.5_postcss@8.3.7
       aws-sdk: 2.994.0
@@ -1833,7 +1837,7 @@ packages:
     dev: false
 
   /@hirusi/eleventy-plugin-safe-external-links/0.14.3:
-    resolution: {integrity: sha512-ALlQQxw6haIVoiFsxGRkWzTeSCpVPelEGcVjzcqyptZmLqU9l0SBigj1ejkVqRl8jGxbFmT+Yk+2YXcE8GJe9A==}
+    resolution: {integrity: sha512-ALlQQxw6haIVoiFsxGRkWzTeSCpVPelEGcVjzcqyptZmLqU9l0SBigj1ejkVqRl8jGxbFmT+Yk+2YXcE8GJe9A==, tarball: '@hirusi/eleventy-plugin-safe-external-links/-/eleventy-plugin-safe-external-links-0.14.3.tgz'}
     dependencies:
       cheerio: 1.0.0-rc.10
     dev: false
@@ -1843,7 +1847,7 @@ packages:
     dev: false
 
   /@imgix/js-core/3.2.1:
-    resolution: {integrity: sha512-Evw7rDybGuOH8sU39JIZUmDue1IjV6SXqrv4f52rb9SzIow/uV+L7ch+3dCFiFTU3YXg5qodP6snIzXCj3gZvQ==}
+    resolution: {integrity: sha512-Evw7rDybGuOH8sU39JIZUmDue1IjV6SXqrv4f52rb9SzIow/uV+L7ch+3dCFiFTU3YXg5qodP6snIzXCj3gZvQ==, tarball: '@imgix/js-core/-/js-core-3.2.1.tgz'}
     dependencies:
       js-base64: 3.6.2
       md5: 2.3.0
@@ -2586,6 +2590,14 @@ packages:
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
       react-lifecycles-compat: 3.0.4
+    dev: false
+
+  /@seancdavis/netlify-plugin-jest/0.1.0:
+    resolution: {integrity: sha512-6rnfJgLtnAjp5R/l5E5BWm6JLDmI+Yz/tKAgH8tE4LNKV9rEe8Pj64sGMPwX3RF9RNVjr4G6JVoxkB3NmZzRFQ==}
+    dev: false
+
+  /@seancdavis/netlify-plugin-pnpm/0.1.0:
+    resolution: {integrity: sha512-vByBXKo+MGOuupUGeYIocH4xf32J+oqzovWEDNuRrMEnESMFv6Ilbj9ocUkl71jR01FV+uV804qe3mUa898RJw==}
     dev: false
 
   /@sideway/address/4.1.2:
@@ -4107,7 +4119,7 @@ packages:
   /axios/0.21.4_debug@4.3.2:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
     dependencies:
-      follow-redirects: 1.14.4_debug@4.3.2
+      follow-redirects: 1.14.4
     transitivePeerDependencies:
       - debug
     dev: false
