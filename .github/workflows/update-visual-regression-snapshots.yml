@@ -25,7 +25,9 @@ jobs:
       - name: Run tests
         # Note: Shouldn't need env vars because the site is already built and we
         # won't have any failures. We're committing to the repo directly.
-        run: JEST_CONFIG=visual ELEVENTY_ENV=test ./node_modules/.bin/jest --updateSnapshot
+        run: |
+          cd www
+          JEST_CONFIG=visual ELEVENTY_ENV=test ./node_modules/.bin/jest --updateSnapshot
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Bot] Update jest snapshots"
