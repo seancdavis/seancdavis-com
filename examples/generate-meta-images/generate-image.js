@@ -4,7 +4,7 @@ const fs = require("fs");
 const { formatTitle } = require("./utils/format-title");
 
 const post = {
-  title: "Draw and save images with Canvas",
+  title: "Draw and save images",
 };
 
 const width = 1200;
