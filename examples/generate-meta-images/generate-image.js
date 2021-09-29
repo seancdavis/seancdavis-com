@@ -4,7 +4,7 @@ const fs = require("fs");
 const { formatTitle } = require("./utils/format-title");
 
 const post = {
-  title: "Draw and save images",
+  title: "Draw and save images with Canvas and Node",
   author: "Sean C Davis",
 };
 const titleText = formatTitle(post.title);
