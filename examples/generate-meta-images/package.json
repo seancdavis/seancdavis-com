@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "description": "A simple example on generating markdown images for blog posts without an image",
   "scripts": {
-    "generate:image": "node scripts/generate-image.js"
+    "generate:image": "node scripts/generate-image.js",
+    "generate:files": "node scripts/generate-post-files.js"
   },
   "keywords": [],
   "author": "Sean C Davis",
   "license": "SEE LICENSE IN PROJECT ROOT",
   "dependencies": {
     "canvas": "^2.8.0",
-    "slugify": "^1.6.0"
+    "faker": "^5.5.3",
+    "glob": "^7.2.0",
+    "slugify": "^1.6.0",
+    "yaml": "^1.10.2"
   }
 }
