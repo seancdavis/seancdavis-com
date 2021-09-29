@@ -1,7 +1,7 @@
 const { createCanvas, loadImage } = require("canvas");
 const fs = require("fs");
 
-const { formatTitle } = require("./utils/format-title");
+const { formatTitle } = require("../utils/format-title");
 
 const post = {
   title: "Draw and save images with Canvas and Node",
