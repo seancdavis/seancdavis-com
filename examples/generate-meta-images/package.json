@@ -1,0 +1,15 @@
+{
+  "name": "@seancdavis/generate-meta-images",
+  "version": "1.0.0",
+  "description": "A simple example on generating markdown images for blog posts without an image",
+  "main": "index.js",
+  "scripts": {
+    "generate:image": "node generate-image.js"
+  },
+  "keywords": [],
+  "author": "Sean C Davis",
+  "license": "SEE LICENSE IN PROJECT ROOT",
+  "dependencies": {
+    "canvas": "^2.8.0"
+  }
+}
