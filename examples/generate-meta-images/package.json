@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A simple example on generating markdown images for blog posts without an image",
   "scripts": {
-    "generate:image": "node scripts/generate-image.js",
+    "generate:images": "node scripts/generate-images.js",
     "generate:files": "node scripts/generate-post-files.js"
   },
   "keywords": [],
