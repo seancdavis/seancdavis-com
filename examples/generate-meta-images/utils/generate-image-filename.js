@@ -2,6 +2,7 @@ const slugify = require("slugify");
 
 exports.generateImageFilename = (post) => {
   const slugifyOptions = { strict: true, lower: true };
-  const basename = slugify(`${post.date}-${post.title}`, slugifyOptions);
+  const formattedDate = new Date(post.date).toISOString().split("T")[0];
+  const basename = slugify(`${formattedDate}-${post.title}`, slugifyOptions);
   return `${basename}.png`;
 };
