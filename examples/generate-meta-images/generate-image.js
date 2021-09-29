@@ -1,4 +1,4 @@
-const { createCanvas } = require("canvas");
+const { createCanvas, loadImage } = require("canvas");
 const fs = require("fs");
 
 const { formatTitle } = require("./utils/format-title");
@@ -7,12 +7,19 @@ const post = {
   title: "Draw and save images with Canvas and Node",
   author: "Sean C Davis",
 };
+const titleText = formatTitle(post.title);
 
 const width = 1200;
 const height = 627;
-const titleY = 170;
-const lineHeight = 100;
-const authorY = 500;
+const imagePosition = {
+  w: 400,
+  h: 88,
+  x: 400,
+  y: titleText.length === 2 ? 75 : 100,
+};
+const titleY = titleText.length === 2 ? 300 : 350;
+const titleLineHeight = 100;
+const authorY = titleText.length === 2 ? 525 : 500;
 
 const canvas = createCanvas(width, height);
 const context = canvas.getContext("2d");
@@ -24,12 +31,16 @@ context.font = "bold 70pt 'PT Sans'";
 context.textAlign = "center";
 context.fillStyle = "#fff";
 
-const text = formatTitle(post.title);
-context.fillText(text[0], 600, titleY);
-if (text[1]) context.fillText(text[1], 600, titleY + lineHeight);
+context.fillText(titleText[0], 600, titleY);
+if (titleText[1]) context.fillText(titleText[1], 600, titleY + titleLineHeight);
 
 context.font = "40pt 'PT Sans'";
 context.fillText(`by ${post.author}`, 600, authorY);
 
-const buffer = canvas.toBuffer("image/png");
-fs.writeFileSync("./image.png", buffer);
+loadImage("./assets/logo.png").then((image) => {
+  const { w, h, x, y } = imagePosition;
+  context.drawImage(image, x, y, w, h);
+
+  const buffer = canvas.toBuffer("image/png");
+  fs.writeFileSync("./image.png", buffer);
+});
