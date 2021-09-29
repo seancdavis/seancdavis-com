@@ -1,10 +1,16 @@
 const { createCanvas, loadImage } = require("canvas");
 const fs = require("fs");
+const path = require("path");
 
 const { formatTitle } = require("../utils/format-title");
+const { generateImageFilename } = require("../utils/generate-image-filename");
+
+const imagesDir = path.join(__dirname, "../images");
+if (!fs.existsSync(imagesDir)) fs.mkdirSync(imagesDir);
 
 const post = {
   title: "Draw and save images with Canvas and Node",
+  date: "2021-09-29",
   author: "Sean C Davis",
 };
 const titleText = formatTitle(post.title);
@@ -41,6 +47,9 @@ loadImage("./assets/logo.png").then((image) => {
   const { w, h, x, y } = imagePosition;
   context.drawImage(image, x, y, w, h);
 
+  const imageFilename = generateImageFilename(post);
+  const imagePath = path.join(imagesDir, imageFilename);
+
   const buffer = canvas.toBuffer("image/png");
-  fs.writeFileSync("./image.png", buffer);
+  fs.writeFileSync(imagePath, buffer);
 });

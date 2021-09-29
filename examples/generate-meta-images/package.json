@@ -9,6 +9,7 @@
   "author": "Sean C Davis",
   "license": "SEE LICENSE IN PROJECT ROOT",
   "dependencies": {
-    "canvas": "^2.8.0"
+    "canvas": "^2.8.0",
+    "slugify": "^1.6.0"
   }
 }
