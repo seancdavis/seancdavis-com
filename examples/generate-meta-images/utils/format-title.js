@@ -32,7 +32,7 @@ const getMaxNextLine = (input, maxChars = 20) => {
  * @param {string} title The title of the object being built.
  * @returns {array}
  */
-exports.formatTitle = (title) => {
+module.exports = (title) => {
   let output = [];
   // If the title is 40 characters or longer, look to add ellipses at the end of
   // the second line.

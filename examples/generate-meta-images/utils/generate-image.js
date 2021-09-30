@@ -1,8 +1,20 @@
 const { createCanvas, loadImage } = require("canvas");
+const fs = require("fs");
+const path = require("path");
 
-const { formatTitle } = require("../utils/format-title");
+const formatTitle = require("./format-title");
+const getImageFilename = require("./get-image-filename");
 
-exports.generateImage = async (post) => {
+const config = require("../config");
+
+/**
+ * Given a post with a title and an author, generate an image and save it to
+ * file, returning the absolute path to the file.
+ *
+ * @param {object} post Post object containing a title and author
+ * @returns string
+ */
+module.exports = async (post) => {
   const titleText = formatTitle(post.title);
 
   const width = 1200;
@@ -38,6 +50,11 @@ exports.generateImage = async (post) => {
   const { w, h, x, y } = imagePosition;
   context.drawImage(image, x, y, w, h);
 
+  const imageFilename = getImageFilename(post);
+  const imagePath = path.join(config.imagesDir, imageFilename);
+
   const buffer = canvas.toBuffer("image/png");
-  return buffer;
+
+  fs.writeFileSync(imagePath, buffer);
+  return imagePath;
 };
