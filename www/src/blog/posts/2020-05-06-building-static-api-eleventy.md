@@ -180,7 +180,7 @@ And that's it, really! Now you have a website that is acting as an API — a _st
 
 You have a working static API with Eleventy, but it's just sitting on your computer. The logical next step would be to deploy the API so it is accessible on the web.
 
-To do so, check out the guide on [deploying a static site to Netlify](/blog/deploy-static-api-netlify/) and the other on [deploying to Vercel](/blog/deploy-static-api-zeit/) (which used to be ZEIT/).
+To do so, check out the guide on [deploying a static site to Netlify](/blog/deploy-static-api-netlify/) and the other on [deploying to Vercel](/blog/deploy-static-api-vercel/).
 
 Following successful deployment, I would look to redirect the home page to `/earworms.json` and to also ensure that all routes without the `.json` extension either render the proper file _or_ redirect to the `.json` extension (e.g. `/earworms` should redirect to `/earworms.json`).
 

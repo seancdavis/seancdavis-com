@@ -225,7 +225,7 @@ If this was something I would eventually take into production, I'd likely do a b
 2. **Account for errors:** You should account for errors in the build script. One option for this is to wait until you run into an error before catching it. Another is to proactively research the commands we've used and ensure you're catching errors. Being proactive will help your future self know what went wrong without as much digging.
 3. **Print output:** As you make progress throughout the build step, it's nice to log some output. This doesn't mean printing every data file you process — that would really slow you down. Maybe you just have a before and after message, like `Processing ## ear worms ...` and then `Done.`.
 
-Following those steps, I'd feel comfortable enough to use the script to build and deploy the API, via a service like [Netlify](/blog/wtf-is-netlify/) or [ZEIT](https://zeit.co/).
+Following those steps, I'd feel comfortable enough to use the script to build and deploy the API, via a service like [Netlify](/blog/wtf-is-netlify/) or [Vercel](https://vercel.com/).
 
 But if you wanted to take it a step further, here are a couple other ideas for adjustments you could make to the code:
 

@@ -190,7 +190,7 @@ _That did the trick — hooray!_
 
 The last step is purely optional. I don't have any problem with the home page throwing a 404 error because there is no page there. But in this case our API is so simple that we might as well redirect the home page to the `/earworms.json` page.
 
-Typically I'd add a `_redirects` file to the `public` directory, because I find that easier to work with. But I was using this repo for [my ZEIT tutorial](/blog/deploy-static-api-zeit/) as well, and so I didn't want to clutter the output.
+Typically I'd add a `_redirects` file to the `public` directory, because I find that easier to work with. But I was using this repo for [my Vercel tutorial](/blog/deploy-static-api-vercel/) as well, and so I didn't want to clutter the output.
 
 Therefore, I'm going to put the redirect in a `netlify.toml` file, which produces the same result, just not as cleanly.
 
