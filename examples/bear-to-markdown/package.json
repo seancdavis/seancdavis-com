@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "js-yaml": "^4.1.0",
-    "slugify": "^1.5.1",
+    "slugify": "^1.6.1",
     "sqlite3": "^5.0.2"
   }
 }
