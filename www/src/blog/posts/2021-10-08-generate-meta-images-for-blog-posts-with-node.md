@@ -142,7 +142,9 @@ module.exports = post => {
 }
 ```
 
-Note that this is not checking for duplicate files. If there is a conflicting filename, this file simply overwrites the file in its way. If using this in a production capacity, you likely don't want to forcefully overwrite files like this.
+{% callout type="warning" %}
+This is not checking for duplicate files. If there is a conflicting filename, this file simply overwrites the file in its way. If using this in a production capacity, you likely don't want to forcefully overwrite files like this.
+{% endcallout %}
 
 ### Running the Script
 
@@ -257,7 +259,15 @@ If you put this all together you can run it and see what happens.
 
     npm run generate:images
 
-This will generate images for any post that isn't already referencing one. If I used the files generated from the `generate:files` script I shared above, I now have an image file at `images/2021-03-27-a-delectus-non-qui-quo.png` (notice it adds the date to the image to help ensure it will be unique).
+This will generate images for any post that isn't already referencing one. If I used the files generated from the `generate:files` script I shared above, I now have an image file at `images/2021-03-27-a-delectus-non-qui-quo.png`. (The date was added to the image filename to help ensure it will be unique)
+
+{% post_image
+    src="/blog/211007/2021-03-27-a-delectus-non-qui-quo.png",
+    alt="Automatically generated meta image from example post" %}
+
+{% callout type="note" %}
+I pulled this from the LogRocket example, which is why the image is styled in this way.
+{% endcallout %}
 
 And if I look back at `content/a-delectus-non-qui-quo.md` I now see an `image` reference.
 
