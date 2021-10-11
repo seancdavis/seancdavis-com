@@ -15,7 +15,7 @@
     "@seancdavis/netlify-plugin-jest": "^0.1.0",
     "analytics": "^0.7.15",
     "autoprefixer": "^10.3.7",
-    "aws-sdk": "^2.926.0",
+    "aws-sdk": "^2.1005.0",
     "chalk": "^4.1.1",
     "cssnano": "^5.0.6",
     "glob": "^7.1.7",
