@@ -17,6 +17,8 @@ const testPaths = [
   "/blog/build-static-api-gatsby/",
   // code blocsk with filenames, warning callout
   "/blog/getting-started-with-postcss/",
+  // blockquote, images
+  "/blog/git-safe-force-push/",
   // top 5 posts
   "/blog/git-accept-merge-all-changes/",
   "/blog/wait-until-all-images-loaded/",

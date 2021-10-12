@@ -45,6 +45,19 @@
       inline;
   }
 
+  /*  */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p:not(.filename),
+  ol,
+  ul {
+    @apply max-w-2xl;
+  }
+
   /* --- Lists --- */
 
   ul,
@@ -77,7 +90,6 @@
 
     &:not([class*="language-"]) {
       background-color: var(--color-code-block-bg);
-      overflow-x: scroll;
 
       > code {
         @apply text-white;
@@ -90,8 +102,10 @@
         mr-4
         p-0
         rounded-none
-        text-sm;
+        whitespace-pre-wrap;
 
+      /* Fits 81 characters on the line at max-w-3xl */
+      font-size: 0.85rem;
       line-height: 1.666;
     }
 
@@ -147,6 +161,8 @@
 
   /* --- Block Quotes --- */
   blockquote {
+    @apply my-6;
+
     > * {
       @apply block
         max-w-2xl
@@ -184,7 +200,7 @@
     }
 
     blockquote {
-      @apply px-8;
+      @apply px-6;
 
       > * {
         @apply mx-auto;
