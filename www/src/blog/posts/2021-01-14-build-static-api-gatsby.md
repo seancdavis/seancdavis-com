@@ -20,8 +20,7 @@ If you're a visual learner and prefer the screencast approach, here is a video, 
 
 {% video_tutorial
     src="https://www.youtube.com/embed/bvLQ9nD2jLQ",
-    title="Building a Static API with GatsbyJS",
-    classes="mb-8" %}
+    title="Building a Static API with GatsbyJS" %}
 
 The written tutorial follows. But if you're just looking for the code reference, [you can find that here](https://github.com/seancdavis/seancdavis-com/tree/main/examples/gatsby-static-api).
 
@@ -85,7 +84,9 @@ artist: Leslie Odom Jr.
 spotify_url: https://open.spotify.com/track/7EqpEBPOohgk7NnKvBGFWo?si=eceqQWGATkO1HJ7n-gKOEQ
 ```
 
-_Note that if you've looked at other static API articles I've written, I'm typically using `id` as the unique identifier for these data objects. However, Gatsby's GraphQL service reserves `id` as field on these objects. Therefore, we're going to use `song_id` as our unique identifier._
+{% callout type="note" %}
+If you've looked at other static API articles I've written, I'm typically using `id` as the unique identifier for these data objects. However, Gatsby's GraphQL service reserves `id` as field on these objects. Therefore, we're going to use `song_id` as our unique identifier.
+{% endcallout %}
 
 ## Step 3: Query Data Files
 

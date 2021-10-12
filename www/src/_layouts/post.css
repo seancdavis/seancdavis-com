@@ -1,11 +1,4 @@
 .layout--post--body {
-  > *:not(pre):not(blockquote):not(.cp_embed_wrapper):not(.filename):not(.override-body-constraint) {
-    @apply block
-      max-w-2xl
-      px-4
-      w-full;
-  }
-
   h1,
   h2,
   h3,
@@ -57,9 +50,6 @@
   ul,
   ol {
     @apply mb-6;
-
-    /* Force an override the generic positioning issue at the top of this file. */
-    padding-left: 2rem !important;
   }
 
   ul {
@@ -80,9 +70,10 @@
 
   /* --- Code Blocks --- */
   pre {
-    @apply my-8
+    @apply my-6
       px-4
-      py-8;
+      py-6
+      rounded-md;
 
     &:not([class*="language-"]) {
       background-color: var(--color-code-block-bg);
@@ -119,25 +110,22 @@
     .table {
       @apply inline-block;
     }
-
-    /* Successive code blocks that include filenames are pushed together. */
-    & + .filename {
-      margin-top: -2rem;
-    }
   }
 
   .filename {
     @apply font-mono
       mb-0
-      mt-8
+      mt-6
       px-4
       py-2
       rounded-none
       text-right
       text-sm
-      text-white;
+      text-black;
 
     background-color: var(--color-code-block-bg);
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
 
     > code {
       @apply bg-transparent
@@ -151,15 +139,10 @@
     & + pre {
       @apply mt-0
         pt-4;
-    }
-  }
 
-  /* --- Callouts --- */
-  pre + .component--callout,
-  .component--callout + .filename,
-  .component--callout + pre,
-  .component--callout + .component--callout {
-    margin-top: -2rem;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
   }
 
   /* --- Block Quotes --- */
@@ -190,19 +173,13 @@
 
 @screen md {
   .layout--post--body {
-    > *:not(pre):not(blockquote):not(.cp_embed_wrapper):not(.filename):not(.override-body-constraint) {
-      @apply mx-auto;
-    }
-
     pre {
-      @apply px-8;
+      @apply px-4;
 
       code {
         @apply block
           max-w-3xl
           mx-auto;
-
-        font-size: 1rem;
       }
     }
 
