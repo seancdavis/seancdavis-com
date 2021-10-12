@@ -99,7 +99,6 @@
     > code {
       @apply bg-transparent
         inline-block
-        mr-4
         p-0
         rounded-none
         whitespace-pre-wrap;
