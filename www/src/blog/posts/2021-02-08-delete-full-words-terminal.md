@@ -22,7 +22,7 @@ But often it would be better to delete one word at a time, as you can in most te
 {% post_image
     src="/blog/210208/option-delete-terminal.png",
     alt="Option+Delete in Terminal",
-    classes="mb-4" %}
+    flatten=true %}
 
 ## Setting Up `option`+`delete` in Terminal
 
@@ -33,4 +33,4 @@ But often it would be better to delete one word at a time, as you can in most te
 {% post_image
     src="/blog/210208/option-delete-iterm2.png",
     alt="Option+Delete in iTerm2",
-    classes="mb-4" %}
+    flatten=true %}

@@ -32,29 +32,25 @@ This is my process today:
 {% post_image
     tag="span",
     alt="Blog Posts Sketch - Step 1",
-    src="/blog/210122/post-sketch-step-01.png",
-    classes="mb-8 shadow-sm" %}
+    src="/blog/210122/post-sketch-step-01.png" %}
 
 **Step 2:** Open the note in Notability on the Mac laptop.
 
 {% post_image tag="span",
     alt="Blog Posts Sketch - Step 2",
-    src="/blog/210122/post-sketch-step-02.png",
-    classes="mb-8 shadow-sm" %}
+    src="/blog/210122/post-sketch-step-02.png" %}
 
 **Step 3:** Open the PDF in Preview and export each page individually as a JPG.
 
 {% post_image tag="span",
     alt="Blog Posts Sketch - Step 3",
-    src="/blog/210122/post-sketch-step-03.png",
-    classes="mb-8 shadow-sm" %}
+    src="/blog/210122/post-sketch-step-03.png" %}
 
 **Step 4:** Open the JPG up in Preview. Crop it and re-save.
 
 {% post_image tag="span",
     alt="Blog Posts Sketch - Step 4",
-    src="/blog/210122/post-sketch-step-04.png",
-    classes="mb-8 shadow-sm" %}
+    src="/blog/210122/post-sketch-step-04.png" %}
 
 Then I have the images I need for the post. And I have the sketches stored digitally in Notability, so if I need to go back and edit at some point, it's no big deal, I just go through all these steps again.
 

@@ -15,7 +15,8 @@
       font-size: 80%;
     }
 
-    + .component--post-image {
+    + .component--post-image,
+    + .component--video-tutorial {
       @apply mt-0;
     }
   }

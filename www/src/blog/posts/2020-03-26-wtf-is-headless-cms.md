@@ -38,7 +38,7 @@ Here's a super simple diagram of the process:
 {% post_image
     src="/blog/200326/legacy-cms.png",
     alt="Legacy CMS Workflow",
-    classes="mb-4" %}
+    flatten=true %}
 
 Being _tightly coupled_ means WordPress powers the entire website within a single application, from creating and editing the content, to storing content, to how the post looks when a visitor is reading it.
 
