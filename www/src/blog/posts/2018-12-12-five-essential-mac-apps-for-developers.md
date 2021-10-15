@@ -65,7 +65,8 @@ Most of us are hosting assets somewhere in the cloud, and while we can see and w
 {% post_image
     alt="Ulysses",
     src="/blog/181212/ulysses.png",
-    classes="override-body-constraint mb-4 max-w-xs mx-auto" %}
+    maxWidth="xs",
+    flatten=true  %}
 
 While a markdown editor isn't necessarily essential, it can really come in handy. Markdown tends to be the preferred means of writing prose for developers and it's nice to have a client that can provide a preview of the rendered output from your input.
 
@@ -82,7 +83,8 @@ And I mean there really are others if you do a bit of Googling. The two that hav
 {% post_image
     alt="Little Ipsum",
     src="/blog/181212/little-ipsum.png",
-    classes="override-body-constraint mb-4 max-w-xs mx-auto" %}
+    maxWidth="xs",
+    flatten=true  %}
 
 We developers regularly need some sort of placeholder text. What's nice about Little Ipsum is that its icon sits in the menu tray and provides a quick and easy means for copying placeholder text.
 

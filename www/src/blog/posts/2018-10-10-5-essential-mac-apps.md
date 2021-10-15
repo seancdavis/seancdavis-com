@@ -16,7 +16,8 @@ So here it is: a quick list of five Mac apps I use to make my experience more ef
 {% post_image
     src="/blog/181010/alfred.png",
     alt="Alfred",
-    classes="override-body-constraint max-w-sm mx-auto" %}
+    maxWidth="sm",
+    flatten=true %}
 
 ### 1\. Spotlight Replacement: [Alfred](https://www.alfredapp.com/)
 
@@ -36,7 +37,8 @@ But there are two changes I’ve made to Alfred:
 {% post_image
     src="/blog/181010/spectacle.png",
     alt="Spectacle",
-    classes="override-body-constraint max-w-sm mx-auto" %}
+    maxWidth="sm",
+    flatten=true %}
 
 ### 2\. Window Manager: [Spectacle](https://www.spectacleapp.com/)
 
@@ -53,7 +55,8 @@ Like Alfred, Spectacle is also configurable, which came in handy when one of its
 {% post_image
     src="/blog/181010/copyclip2.png",
     alt="CopyClip 2",
-    classes="override-body-constraint max-w-sm mx-auto" %}
+    maxWidth="sm",
+    flatten=true %}
 
 ### 3\. Clipboard Manager: [CopyClip 2](https://fiplab.com/apps/copyclip-for-mac)
 
@@ -70,7 +73,8 @@ I’ve only picked this up within the last year, but it’s something I wished I
 {% post_image
     src="/blog/181010/shift.png",
     alt="Shift",
-    classes="override-body-constraint max-w-md mx-auto" %}
+    maxWidth="md",
+    flatten=true %}
 
 ### 4\. Email Client: [Shift](https://tryshift.com/)
 

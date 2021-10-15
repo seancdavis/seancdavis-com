@@ -41,7 +41,8 @@ I'll be slow to get back into writing upon my return from the woods, but I expec
 {% post_image
     src="/blog/200616/spinneret-may-2020--shop-talk.svg",
     alt="The Spinneret, May 2020 - Shop Talk",
-    classes="mb-8 mt-4 w-56" %}
+    classes="mb-8 mt-4 w-56 mx-auto",
+    flatten=true %}
 
 While I had my head down banging out code on a couple hot projects this last month, I was able to take a bit of time and talk shop with my team. Here were my three favorite topics:
 
@@ -110,27 +111,31 @@ _Note: While I was unable to attend Jamstack Conf, I plan to include a separate 
 
 ## New (to me) Tools
 
-<div class="flex items-center justify-center override-body-constraint mt-4 my-6">
+<div class="flex items-center justify-center mt-4 my-6">
 
 {% post_image
     src="/blog/200616/spinneret-may-2020--tools-01.png",
     alt="The Spinneret, May 2020 - Tools",
-    classes="inline-block w-24 mx-2" %}
+    classes="inline-block w-24 mx-2",
+    flatten=true %}
 
 {% post_image
     src="/blog/200616/spinneret-may-2020--tools-02.png",
     alt="The Spinneret, May 2020 - Tools",
-    classes="inline-block w-24 mx-2" %}
+    classes="inline-block w-24 mx-2",
+    flatten=true %}
 
 {% post_image
     src="/blog/200616/spinneret-may-2020--tools-03.png",
     alt="The Spinneret, May 2020 - Tools",
-    classes="inline-block w-24 mx-2" %}
+    classes="inline-block w-24 mx-2",
+    flatten=true %}
 
 {% post_image
     src="/blog/200616/spinneret-may-2020--tools-04.svg",
     alt="The Spinneret, May 2020 - Tools",
-    classes="inline-block w-24 mx-2" %}
+    classes="inline-block w-24 mx-2",
+    flatten=true %}
 
 </div>
 

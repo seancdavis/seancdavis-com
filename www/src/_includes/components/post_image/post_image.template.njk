@@ -1,5 +1,7 @@
-<div class="{{ classes }}">
-  {{ image | safe }}
+<div class="component--post-image {{ classes }}">
+  <div class="{{ imgClasses }}">
+    {{ image | safe }}
+  </div>
   {% if caption %}
   <figcaption class="block mt-1 mb-0 text-xs text-center text-gray-800">
     {{ caption | safe }}

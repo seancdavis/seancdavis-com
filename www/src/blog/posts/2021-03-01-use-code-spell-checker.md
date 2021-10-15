@@ -18,7 +18,7 @@ One of my favorite VS Code plugins is [Code Spell Checker](https://github.com/st
 {% post_image
     src="/blog/210301/spell-checker.png",
     alt="Spell Checker - Incorrect Word",
-    classes="mb-4 shadow-sm max-w-lg override-body-constraint mx-auto" %}
+    maxWidth="lg"  %}
 
 It's even smart enough that it uses casing to determine where word breaks should be. (Look at the example above and notice that only the misspelled `Compnoent` is underlined, while `My` is left alone.)
 
