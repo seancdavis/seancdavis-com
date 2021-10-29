@@ -21,7 +21,7 @@ Let's say that code was merged into the main branch, resulting in a commit that 
 {% post_image
     src="/blog/210722/210621--git-feature-branch.png",
     alt="git feature branch",
-    classes="mb-4" %}
+    flatten=true %}
 
 The main branch has two commits: `A`, which we have in our current branch, and `B`, which is only in the main branch. Our feature branch has a commit `C` that occurred _after_ commit `B`.
 
@@ -41,7 +41,7 @@ That results in a landscape that looks like this:
 {% post_image
     src="/blog/210722/210621--git-remote-rebase.png",
     alt="git remote rebase",
-    classes="mb-4" %}
+    flatten=true %}
 
 Now we have commit `B` on our _local_ feature branch, but it's still not in the remote feature branch. And notice that commit `B` occurs _behind_ `C` since it happened earlier. This is the result of the rebase.
 
@@ -50,7 +50,7 @@ That means we have a different history. So if we tried to push, the remote repos
 {% post_image
     src="/blog/210722/210621--git-remote-rebase-fail.png",
     alt="git remote rebase fail",
-    classes="mb-4" %}
+    flatten=true %}
 
 That's because the remote branch has commit `C` but not `B`. And it is protecting itself against rewriting history. You have to tell it you know you want to rewrite the history.
 
@@ -83,6 +83,6 @@ In this case, if you ran `git push --force` you would lose commit `D`. But if yo
 {% post_image
     src="/blog/210722/210621--git-remote-force-lease-fail.png",
     alt="git remote force lease fail",
-    classes="mb-4" %}
+    flatten=true %}
 
 This is a great option because it enables you to work with the rebase and squashed merges workflows without having to worry about overwriting work when pushing.

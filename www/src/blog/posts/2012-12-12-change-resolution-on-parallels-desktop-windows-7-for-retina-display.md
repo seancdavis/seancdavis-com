@@ -15,6 +15,7 @@ I started a trial of Parellels Desktop to run Windows 7 on my retina MacBook Pro
 {% post_image
     alt="parallels desktop resolution",
     src="/blog/121212/Screen-Shot-2012-12-12-at-8.49.48-PM-1024x802.png",
-    classes="my-0" %}
+    classes="my-0",
+    flatten=true %}
 
 I hope this works for you, too!

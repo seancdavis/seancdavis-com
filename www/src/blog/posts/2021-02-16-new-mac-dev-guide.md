@@ -58,19 +58,20 @@ That's the purpose of this guide. This is a reference largely to serve future me
 {% post_image
     src="/blog/210216/sysprefs--apple-id-01.png",
     alt="System Preferences - Apple ID #1",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 {% post_image
     src="/blog/210216/sysprefs--apple-id-02.png",
     alt="System Preferences - Apple ID #2",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 3. **Remove all applications from dock.** I like a clean dock. Plus, I don't use the majority of those applications. You can remove them by dragging the icon from the dock to the main desktop background. A little _Remove_ tooltip should appear. Let go of the mouse and _Poof!_ it's gone.
 
 {% post_image
     src="/blog/210216/remove-dock-item.gif",
-    alt="Remove Application from Dock",
-    classes="mb-6 shadow-sm" %}
+    alt="Remove Application from Dock" %}
 
 4. **Delete unwanted Apple apps.** At the time of writing this, the only ones I've been able to delete are Garage Band and iMovie.
 
@@ -79,7 +80,8 @@ That's the purpose of this guide. This is a reference largely to serve future me
 {% post_image
     src="/blog/210216/sysprefs--dock.png",
     alt="System Preferences - Dock & Menu",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 6. (Touch Bar machines only) [**Remove Siri from the touch bar**](https://support.apple.com/en-om/guide/mac-help/mchl5a63b060/11.0/mac/11.0). It's possible that nothing in this world makes me angrier than unintentionally prompting Siri.
 
@@ -88,7 +90,8 @@ That's the purpose of this guide. This is a reference largely to serve future me
 {% post_image
     src="/blog/210216/sysprefs--keyboard.png",
     alt="System Preferences - Keyboard",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 ## Messages App & Contacts
 
@@ -101,14 +104,16 @@ I also don't use Apple Contacts. I prefer to use my Google account to manage my 
 {% post_image
     src="/blog/210216/sysprefs--internet-accounts.png",
     alt="System Preferences - Internet Accounts",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 2. **Setup messages.** Open Messages application, then go to _Preferences_ > _iMessage_ tab and check _Enable Messages in iCloud_ for my Apple ID. This syncs previous messages.
 
 {% post_image
     src="/blog/210216/sysprefs--messages.png",
     alt="iMessage - Preferences",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 ## Finder Preferences
 
@@ -118,22 +123,23 @@ I have found that I can move faster through Finder with a few adjustments.
 
 {% post_image
     src="/blog/210216/finder--cols.png",
-    alt="Finder Preferences - Columns View",
-    classes="mb-6 shadow-sm" %}
+    alt="Finder Preferences - Columns View" %}
 
 2. **Start new sessions in my home directory.** Go to _Preferences_ (`cmd`+`,`) > _General_ tab and choose my home directory for the _New Finder windows show_ setting.
 
 {% post_image
     src="/blog/210216/finder--new-window.png",
     alt="Finder Preferences - New Window Setting",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 3. **Enable filename extensions.** Also in _Preferences_, but in the _Advanced_ tab, check _Show all filename extensions_.
 
 {% post_image
     src="/blog/210216/finder--extensions.png",
     alt="Finder Preferences - Enable File Extensions",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 4. **Show hidden files.** In any Finder window, use the shortcut `cmd`+`shift`+`.` to toggle viewing hidden files and folders. I like to see them.
 
@@ -152,7 +158,8 @@ The command line is where the fun really begins! This is the foundation for pret
 {% post_image
     src="/blog/210216/terminal--info.png",
     alt="Terminal - Get Info",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 2.  **Install command-line tools.** Open Terminal and run:
 
@@ -316,7 +323,8 @@ Now that all these apps are installed, it's time to get them set up.
 {% post_image
     src="/blog/210216/spectacle--prefs.png",
     alt="Spectacle Preferences",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 ### Alfred
 
@@ -325,21 +333,24 @@ Now that all these apps are installed, it's time to get them set up.
 {% post_image
     src="/blog/210216/sysprefs--keyboard-shortcuts.png",
     alt="System Preferences - Keyboard Shortcuts",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 2. Set Alfred hotkey shortcut to `cmd`+`spacebar`.
 
 {% post_image
     src="/blog/210216/alfred--hotkey.png",
     alt="Alfred Preferences - Hotkey",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 3. Put prefixes in front of all the system commands. I've accidentally shut down my computer for the last time! (Another option is to prompt a confirmation, but I like this pattern.)
 
 {% post_image
     src="/blog/210216/alfred--system.png",
     alt="Alfred Preferences - System",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 ### iTerm2
 
@@ -349,7 +360,8 @@ Now that all these apps are installed, it's time to get them set up.
 {% post_image
     src="/blog/210216/iterm--meta.png",
     alt="iTerm2 Preferences - Meta Key",
-    classes="mb-0" %}
+    classes="my-0",
+    flatten=true %}
 
 3. [Install Dracula theme](https://draculatheme.com/iterm/) (or your theme of choice).
 4. [Open new tabs in the previous workspace](https://medium.com/ayuth/new-tab-iterm2-with-in-current-directory-627b0c31734a).
@@ -361,7 +373,8 @@ Now that all these apps are installed, it's time to get them set up.
 {% post_image
     src="/blog/210216/vscode--settings-sync.png",
     alt="VS Code Settings Sync",
-    classes="mb-6 shadow-sm" %}
+    classes="my-0",
+    flatten=true %}
 
 ## Setup Git & GitHub
 

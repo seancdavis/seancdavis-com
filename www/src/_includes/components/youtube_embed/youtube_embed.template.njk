@@ -1,0 +1,15 @@
+<div class="component--video-tutorial {% if classes %}{{ classes }}{% else %}my-6{% endif %}">
+  <div class="h-0 overflow-hidden relative" style="padding-bottom: 56.25%">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/{{ id }}?rel=0"
+      srcdoc="<style>*{padding:0;margin:0;overflow:hidden;}html,body{height:100%;}a{position:relative;display:grid;text-decoration:none;box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);}img,span{grid-area:1/2;}img{width:100%;}span{color:#fff;display:flex;flex-direction:column;font:5rem sans-serif;justify-content:center;text-align:center;text-shadow:0 0 0.5em #000;}</style><a href='https://www.youtube.com/embed/{{ id }}?autoplay=1&rel=0'><img src='https://img.youtube.com/vi/{{ id }}/maxresdefault.jpg' alt='{{ title }}'><span>▶</span></a>"
+      title="{{ title }}"
+      class="absolute h-full left-0 top-0 w-full"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>

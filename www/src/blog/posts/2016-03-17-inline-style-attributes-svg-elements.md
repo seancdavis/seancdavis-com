@@ -46,6 +46,7 @@ When you are saving to SVG, just choose _Style Attributes_ **not** Style Element
 {% post_image
     alt="Adobe Illustrator Inline Styles",
     src="/blog/160317/svg-inline-styles.png",
-    classes="my-0" %}
+    classes="my-0",
+    flatten=true %}
 
 Do that and then you'll see the styles spread throughout and avoid those nasty conflicts!

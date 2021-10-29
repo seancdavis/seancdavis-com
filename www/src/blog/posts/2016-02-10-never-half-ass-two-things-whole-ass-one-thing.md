@@ -12,8 +12,8 @@ attribution:
 
 The title quote comes from [Ron Swanson](https://en.wikipedia.org/wiki/Ron_Swanson), a character on [Parks and Recreation](https://en.wikipedia.org/wiki/Parks_and_Recreation). Here's the scene if you haven't seen (or don't remember) it:
 
-{% video_tutorial
-    src="https://www.youtube.com/embed/k6hZ9KdG1QU",
+{% youtube_embed
+    id="k6hZ9KdG1QU",
     title="Never Half-Ass Two Things, Whole-Ass One Thing" %}
 
 When I first viewed the episode with the scene above, I thought about it pretty much as Ron says it -- _don't do too much to the point where you stretch yourself too thin and make mistakes_. Or, don't do so many things that you forget to do things that are important to you. Something like that.

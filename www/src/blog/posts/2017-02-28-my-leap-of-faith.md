@@ -44,8 +44,8 @@ I crunched the numbers and _if_ the startup seemed stable enough to keep the con
 
 It seemed risky, but when I laid out those facts to my trusted advisors, The conversations began to lean more toward, “Leap and the net will appear.” To bring even more power behind her words, my mother sent me this video:
 
-{% video_tutorial
-    src="https://www.youtube.com/embed/-PdjNJz7B1Q",
+{% youtube_embed
+    id="-PdjNJz7B1Q",
     title="Steve Harvey - Leap of Faith" %}
 
 My wife was on board, too! I was inspired and (finally) convinced I could do it.

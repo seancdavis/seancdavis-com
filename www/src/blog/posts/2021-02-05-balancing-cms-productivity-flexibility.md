@@ -41,7 +41,7 @@ Generally speaking, it works like this:
 {% post_image
     src="/blog/210205/flexible-vs-structured-diagram.png",
     alt="Diagram: Flexible vs Structured Page Design",
-    classes="mb-4" %}
+    flatten=true %}
 
 A structured (content-first) design maps fields to specific places on a page. Looking at the example above, you can see we have four fields
 

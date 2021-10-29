@@ -17,7 +17,8 @@ As always, if you have ideas, questions, criticisms, please [open a GitHub issue
 {% post_image
     src="/blog/210210/grouparoo-logo.png",
     alt="Grouparoo Logo",
-    classes="my-8 mx-auto max-w-sm override-body-constraint" %}
+    maxWidth="sm",
+    flatten=true %}
 
 Last month I did something a little scary. I quit my super awesome job at [Ample](https://www.ample.co/) to work for a brand new startup. As their first employee.
 
@@ -53,7 +54,8 @@ I didn't come across many great references over the last month. The coolest thin
 {% post_image
     src="/blog/210210/tuple-logo.png",
     alt="Tuple Logo",
-    classes="my-8 mx-auto max-w-sm override-body-constraint" %}
+    maxWidth="sm",
+    flatten=true  %}
 
 In starting a new job, I came across several new tools that I hadn't before heard about.
 

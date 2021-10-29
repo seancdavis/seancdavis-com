@@ -59,7 +59,8 @@ And last, I added a handful of random articles, including one for [Ample](https:
 {% post_image
     src="/blog/200923/spinneret-issue-4--shop-talk.png",
     alt="The Spinneret Issue #4: Shop Talk",
-    classes="mb-4 w-48" %}
+    classes="mb-6 w-48 mx-auto",
+    flatten=true %}
 
 I've begun the process of diving deep into web page performance. While I've started with an Eleventy project, my plan is to eventually expand the expertise I gain to other frameworks with which I have less control over the build output, like [Gatsby](https://www.gatsbyjs.org).
 
@@ -70,7 +71,8 @@ One developer on my team is going to join me on this performance journey, as he 
 {% post_image
     src="/blog/200923/spinneret-issue-4--tools.png",
     alt="The Spinneret Issue #4: New (to me) Tools",
-    classes="my-8 w-56" %}
+    classes="my-8 w-56 mx-auto",
+    flatten=true %}
 
 And here are some new tools I discovered last month:
 

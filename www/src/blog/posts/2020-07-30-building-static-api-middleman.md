@@ -20,8 +20,8 @@ This tutorial will walk through building a static API using [Middleman](https://
 
 Oh, and hey! This tutorial also marks one of the first with an accompanying video! If that's more of your style of learning, watch the video below instead:
 
-{% video_tutorial
-    src="https://www.youtube.com/embed/yT20EwSVo6A",
+{% youtube_embed
+    id="yT20EwSVo6A",
     title="How to Build a Static API with Middleman" %}
 
 The written tutorial follows. But if you're just looking for the code reference, [you can find that here](https://github.com/seancdavis/middleman-static-api).

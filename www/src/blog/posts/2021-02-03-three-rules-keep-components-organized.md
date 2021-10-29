@@ -29,7 +29,7 @@ For example, let's say that I've built my pages such that layout elements wrap t
 {% post_image
     src="/blog/210203/component-organization--comp-types.png",
     alt="Component Organization by Type",
-    classes="mb-4" %}
+    flatten=true %}
 
 Even though layouts, templates, and blocks are (or _could be_) all _technically_ a type of component, I like keeping them separate from one another. Something like this:
 
@@ -71,7 +71,7 @@ Visually that comes together like this:
 {% post_image
     src="/blog/210203/component-organization--shared-comps.png",
     alt="Sharing Components",
-    classes="mb-4" %}
+    flatten=true %}
 
 In that case, my directory structure might look like this:
 

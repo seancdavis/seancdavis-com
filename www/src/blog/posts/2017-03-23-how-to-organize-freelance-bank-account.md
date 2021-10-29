@@ -14,7 +14,8 @@ I’ve written previously about [one way to design a freelance financial ecosyst
 {% post_image
     src="/blog/170323/freelance-bank.png",
     alt="Freelance Bank Account",
-    classes="max-w-sm override-body-constraint mx-auto" %}
+    maxWidth="sm",
+    flatten=true %}
 
 {% callout type="TL;dr" %}
 The important piece is that you have a separate bank account to hold your freelance money. That account is responsible for saving for taxes and retirement, and you use that account to pay yourself a salary. In other words, you have configured regular, automatic transfers that move a consistent, pre-specified amount of money from your freelance account to your personal checking account, having already accounted for taxes.

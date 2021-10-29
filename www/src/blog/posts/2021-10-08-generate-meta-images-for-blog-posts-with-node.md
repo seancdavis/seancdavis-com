@@ -42,6 +42,8 @@ If you are starting from scratch, follow [my handy guide](/blog/new-javascript-p
 
 And the scripts look [like this](https://github.com/seancdavis/seancdavis-com/blob/1c86b1f8e5333d5239caa10fd000be0e371997cb/examples/generate-meta-images/package.json#L5-L8).
 
+`package.json` {.filename}
+
 ```json
 {
   "scripts": {
@@ -54,6 +56,8 @@ And the scripts look [like this](https://github.com/seancdavis/seancdavis-com/bl
 ### Configuration File
 
 I also wanted to extract the configurable values into a single place. So I created [a `config.js` file](https://github.com/seancdavis/seancdavis-com/blob/1c86b1f8e5333d5239caa10fd000be0e371997cb/examples/generate-meta-images/config.js) in the root of the project.
+
+`config.js` {.filename}
 
 ```js
 const path = require("path")
@@ -72,6 +76,8 @@ Last thing is to create the `content` and `images` directories (or the values yo
 ## Generating Random Markdown Files
 
 Let's get our hands dirty by starting with generating random markdown files. Let's look at [the script](https://github.com/seancdavis/seancdavis-com/blob/1c86b1f8e5333d5239caa10fd000be0e371997cb/examples/generate-meta-images/scripts/generate-post-files.js) in `scripts/generate-post-files.js`.
+
+`scripts/generate-post-files.js` {.filename}
 
 ```js
 const { generateRandomPost, writePostToFile } = require("../utils")
@@ -96,6 +102,8 @@ Let's take a look at what those helpers are doing.
 
 There's not a whole lot to [the `generateRandomPost()` function](https://github.com/seancdavis/seancdavis-com/blob/1c86b1f8e5333d5239caa10fd000be0e371997cb/examples/generate-meta-images/utils/generate-random-post.js) (in `utils/generate-random-post.js`).
 
+`utils/generate-random-post.js` {.filename}
+
 ```js
 const faker = require("faker")
 
@@ -116,6 +124,8 @@ It uses [the faker.js library](https://www.npmjs.com/package/faker) to generate 
 Once we have a post object, we're ready to write it to file. This is done in `utils/write-post-to-file.js` ([see here](https://github.com/seancdavis/seancdavis-com/blob/1c86b1f8e5333d5239caa10fd000be0e371997cb/examples/generate-meta-images/utils/write-post-to-file.js)).
 
 In this function, we extract the `body` from the post because it is treated as the main content area. The remaining attributes of the post are kept as frontmatter for the markdown file. We then convert the post object to a markdown string and write the string to a file, using a filename-friendly version of the title as the filename.
+
+`utils/write-post-to-file.js` {.filename}
 
 ```js
 const fs = require("fs")
@@ -156,6 +166,8 @@ This should place 10 files (or whatever count you have in `config.js`) in your `
 
 Here's an example of a file:
 
+`content/a-delectus-non-qui-quo.md` {.filename}
+
 ```markdown
 ---
 title: a delectus non qui quo
@@ -173,6 +185,8 @@ Nulla voluptatem et libero. Est consequatur tempora qui. Magnam voluptas nemo es
 ## Generate Missing Images
 
 [The `scripts/generate-images.js` file](https://github.com/seancdavis/seancdavis-com/blob/1c86b1f8e5333d5239caa10fd000be0e371997cb/examples/generate-meta-images/scripts/generate-images.js) has a little more going on, but seems simple at first glance.
+
+`scripts/generate-images.js` {.filename}
 
 ```js
 const fs = require("fs")
@@ -219,6 +233,8 @@ The [the `utils/get-posts.js` helper](https://github.com/seancdavis/seancdavis-c
 4. Return an array of post objects representing the files in the `content` directory.
 
 Here's the code:
+
+`utils/get-posts.js` {.filename}
 
 ```js
 const fs = require("fs")
@@ -270,6 +286,8 @@ I pulled this from the LogRocket example, which is why the image is styled in th
 {% endcallout %}
 
 And if I look back at `content/a-delectus-non-qui-quo.md` I now see an `image` reference.
+
+`content/a-delectus-non-qui-quo.md` {.filename}
 
 ```markdown
 ---

@@ -12,4 +12,4 @@ You'll notice the builder is built for SP 2003 and 2007 without mention of 2010.
 {% post_image
     alt="U2U CAML Query Builder",
     src="/blog/121130/Capture-253x300.png",
-    classes="override-body-constraint max-w-sm mx-auto" %}
+    maxWidth="sm" %}

@@ -47,6 +47,8 @@ For Step 4 in the setup, we're going to install the following dependencies:
 
 Add for Step 5 in the setup, we'll add the following script to `package.json`:
 
+`package.json` {.filename}
+
 ```json
 {
   "generate": "node scripts/generate.js"
@@ -58,6 +60,8 @@ Add for Step 5 in the setup, we'll add the following script to `package.json`:
 Let's begin by adding our script to `scripts/generate.js`. In that file, let's write a single function that generates random post data and logs it to the console.
 
 We'll use the [faker](https://www.npmjs.com/package/faker) JS library that is really helpful when generating random data.
+
+`scripts/generate.js` {.filename}
 
 ```js
 const faker = require("faker")
@@ -97,6 +101,8 @@ Hooray! That should have printed something like this to your terminal.
 
 Next, we're going to add a function that takes a post object and converts it to markdown.
 
+`scripts/generate.js` {.filename}
+
 ```js/1,3-7,18-19
 const faker = require("faker")
 const yaml = require("yaml")
@@ -122,6 +128,8 @@ console.log(formatMarkdown(post))
 
 Run it again and you should now see a nicely-formatted markdown string that we'll be able to write to file.
 
+`content/quia-quia-occaecati-aperiam-quia.md` {.filename}
+
 ```markdown
 ---
 title: quia quia occaecati aperiam quia
@@ -139,6 +147,8 @@ Autem reiciendis veritatis nihil fugiat officia enim maxime. Aperiam est sit exc
 ## Step 4: Write to File
 
 Next, let's add a function that calls these other two functions and then writes the resulting markdown string to file. It will create the filename based on the title of the post using the [slugify](https://www.npmjs.com/package/slugify) JS library.
+
+`scripts/generate.js` {.filename}
 
 ```js/1-3,6,23-32,34
 const faker = require("faker")
@@ -207,6 +217,8 @@ After you create the `content` directory (or add the logic to the script) and ru
 ## Step 5: Add the Loop
 
 Last, let's add a total number of files we want to generate, and then iterate that number of times, creating a file for each.
+
+`scripts/generate.js` {.filename}
 
 ```js/7,35
 const faker = require("faker")
