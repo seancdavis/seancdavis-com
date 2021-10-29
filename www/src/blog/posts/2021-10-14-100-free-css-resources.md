@@ -115,22 +115,16 @@ This is a long list! Things are always changing on the web. As resources become 
 
 68. [CSS Tutorial - Zero to Hero](https://www.youtube.com/1Rs2ND1ryYc)
 
-{% video_tutorial
-    src="https://www.youtube.com/embed/1Rs2ND1ryYc",
-    title="CSS Tutorial - Zero to Hero" %}
+{% youtube_embed id="1Rs2ND1ryYc", title="CSS Tutorial - Zero to Hero" %}
 
 69. [CSS Crash Course For Absolute Beginners](https://youtu.be/yfoY53QXEnI)
 
-{% video_tutorial
-    src="https://www.youtube.com/embed/yfoY53QXEnI",
-    title="CSS Crash Course For Absolute Beginners" %}
+{% youtube_embed id="yfoY53QXEnI", title="CSS Crash Course For Absolute Beginners" %}
 
 70. [Code Artist](https://www.youtube.com/channel/UC15exV5s79D_aYGADudlwpQ) (channel)
 71. [CSS Crash Course In One Hour](https://youtu.be/3_9znKVNe5g)
 
-{% video_tutorial
-    src="https://www.youtube.com/embed/3_9znKVNe5g",
-    title="CSS Crash Course In One Hour" %}
+{% youtube_embed id="3_9znKVNe5g", title="CSS Crash Course In One Hour" %}
 
 72. [Red Stapler](https://www.youtube.com/channel/UCRthRrv06q1iOl86-tTKJhg) (channel)
 
