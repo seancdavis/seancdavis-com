@@ -44,8 +44,8 @@ My team has been discussing developing internal tool to help with moving more ef
 
 ### Jamstack Conf Recap
 
-{% video_tutorial
-    src="https://www.youtube.com/embed/w9yrrQBBKos",
+{% youtube_embed
+    id="w9yrrQBBKos",
     title="Jamstack Conf 2020 Keynote" %}
 
 I asked my team what they found most valuable from [Jamstack Conf Virtual](https://jamstackconf.com/virtual/). These were the talks they highlighted:

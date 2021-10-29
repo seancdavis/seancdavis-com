@@ -6,8 +6,8 @@ tags:
   - vscode
 ---
 
-{% video_tutorial
-    src="https://www.youtube.com/embed/Trhj3d9TK5k",
+{% youtube_embed
+    id="Trhj3d9TK5k",
     title="Quick Tip: Use a Code Spell Checker" %}
 
 [I ❤️ Code Spell Checker](/blog/use-code-spell-checker) plugin for [VS Code](https://code.visualstudio.com/). It has led to fewer stupid mistakes in my code.

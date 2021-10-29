@@ -18,8 +18,8 @@ We're going to walk through building a static API using [GatsbyJS](https://www.g
 
 If you're a visual learner and prefer the screencast approach, here is a video, which walks through _most of_ the steps in this tutorial.
 
-{% video_tutorial
-    src="https://www.youtube.com/embed/bvLQ9nD2jLQ",
+{% youtube_embed
+    id="bvLQ9nD2jLQ",
     title="Building a Static API with GatsbyJS" %}
 
 The written tutorial follows. But if you're just looking for the code reference, [you can find that here](https://github.com/seancdavis/seancdavis-com/tree/main/examples/gatsby-static-api).

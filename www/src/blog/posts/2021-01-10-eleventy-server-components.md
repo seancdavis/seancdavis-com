@@ -8,8 +8,8 @@ tags:
 image: /blog/210110/meta--eleventy-server-components.jpg
 ---
 
-{% video_tutorial
-    src="https://www.youtube.com/embed/YDNouZ8ozv0",
+{% youtube_embed
+    id="YDNouZ8ozv0",
     title="Server-Side Components with Eleventy" %}
 
 I love [Eleventy](https://www.11ty.dev/) as a static site generator! It makes no assumptions about what you what to do with it. Instead, it focuses on being a speedy build platform that outputs static files.

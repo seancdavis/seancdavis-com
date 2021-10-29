@@ -7,8 +7,8 @@ tags:
   - vscode
 ---
 
-{% video_tutorial
-    src="https://www.youtube.com/embed/Trhj3d9TK5k",
+{% youtube_embed
+    id="Trhj3d9TK5k",
     title="Quick Tip: Use a Code Spell Checker" %}
 
 We move fast as developers. It's one thing to make a spelling mistake in documentation. Spelling mistakes in your code can lead to bugs. Bugs that could have been easily avoided with the help of a code spell checker.
