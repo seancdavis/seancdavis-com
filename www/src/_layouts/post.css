@@ -54,7 +54,10 @@
       inline;
   }
 
-  /*  */
+  iframe {
+    @apply w-full;
+  }
+
   h1,
   h2,
   h3,
