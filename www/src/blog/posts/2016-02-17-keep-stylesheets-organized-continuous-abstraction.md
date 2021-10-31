@@ -1,9 +1,11 @@
 ---
 title: Keep Stylesheets Organized With Continuous Abstraction
-description: "Stylesheets can get out of control really quickly. Here's the approach I use to stay organized."
+description: Stylesheets can get out of control really quickly. Here's the
+  approach I use to stay organized.
 tags:
   - css
   - sass
+image: /blog/default/default-blue-02.png
 ---
 
 I've been writing a lot of [CSS](/blog/wtf-is-css/) (well, [SCSS](http://sass-lang.com/)) lately. One thing I've noticed is that as you get faster at writing CSS, stylesheets actually get messier faster.

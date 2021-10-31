@@ -1,6 +1,8 @@
 ---
 title: The Most Important Question for a Developer
-description: "There is but one question you should repeatedly ask yourself as a developer to ensure you're on the right track."
+description: There is but one question you should repeatedly ask yourself as a
+  developer to ensure you're on the right track.
+image: /blog/default/default-yellow-01.png
 ---
 
 As a developer, there is one question that stands above the rest. One question that will keep you on track. One question that will ensure you're doing what you should be doing.

@@ -1,9 +1,11 @@
 ---
 title: WTF is deep-for-each?
-description: Explore an introduction to the super cool, single-function JavaScript package, deep-for-each.
+description: Explore an introduction to the super cool, single-function
+  JavaScript package, deep-for-each.
 tags:
   - javascript
   - wtf
+image: /blog/default/default-lime-02.png
 ---
 
 [deep-for-each](https://github.com/moxystudio/js-deep-for-each) is a JavaScript package that ships a single function used for recursively iterating over an object. It is most useful when wanting to manipulate or extract from an object with an unpredictable structure.

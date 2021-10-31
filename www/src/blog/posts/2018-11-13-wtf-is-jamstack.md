@@ -1,9 +1,11 @@
 ---
 title: WTF is Jamstack?
-description: This term "Jamstack" is becoming a buzzword among development communities. But what does it mean and why should you care about it?
+description: This term "Jamstack" is becoming a buzzword among development
+  communities. But what does it mean and why should you care about it?
 tags:
   - jamstack
   - wtf
+image: /blog/default/default-yellow-03.png
 ---
 
 [Jamstack](https://jamstack.org/) is this new(ish) term gaining popularity among web development communities. In fact, the premier [Jamstack Conference](https://jamstackconf.com/) was held just last month (October 2018).

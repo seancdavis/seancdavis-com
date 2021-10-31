@@ -3,6 +3,7 @@ title: Backup Your Code and Develop Cross-Platform Using Git
 tags:
   - git
 description: I recently discovered Git and it changed everything.
+image: /blog/default/default-lime-01.png
 ---
 
 I've recently been introduced to Git, the new most amazing thing in my development life. Git is a version control application for managing source code. Git can be used either on the command line or on a [Git GUI client](http://git-scm.com/downloads/guis).

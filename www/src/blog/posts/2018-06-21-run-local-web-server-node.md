@@ -1,9 +1,11 @@
 ---
-title: "Run a Local Web Server with Node"
-description: "No need to mess with Apache or Nginx to run a web server on your local machine. Just use this node command."
+title: Run a Local Web Server with Node
+description: No need to mess with Apache or Nginx to run a web server on your
+  local machine. Just use this node command.
 tags:
   - javascript
   - node
+image: /blog/default/default-green-03.png
 ---
 
 This is a separate approach to [this article](/blog/run-local-web-server-ruby/), which shows how to run a local web server with a _ruby_ command.

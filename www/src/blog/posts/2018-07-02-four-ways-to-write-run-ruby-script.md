@@ -1,8 +1,10 @@
 ---
-title: "4 Ways to Write and Run a Ruby Script"
-description: "Ruby is fun to write, and it's pretty easy to use Ruby to perform ad hoc services for you. Here are a few approaches."
+title: 4 Ways to Write and Run a Ruby Script
+description: Ruby is fun to write, and it's pretty easy to use Ruby to perform
+  ad hoc services for you. Here are a few approaches.
 tags:
   - ruby
+image: /blog/default/default-orange-01.png
 ---
 
 One-off ruby scripts run the gamut on the services they can provide you. From little helpers to full-on command-line utilities, the possibilities are endless.

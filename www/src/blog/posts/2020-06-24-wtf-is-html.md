@@ -1,9 +1,10 @@
 ---
-title: "WTF is HTML?"
-description: "A brief description of HTML, before suggesting a couple free courses."
+title: WTF is HTML?
+description: A brief description of HTML, before suggesting a couple free courses.
 tags:
   - html
   - wtf
+image: /blog/default/default-lime-01.png
 ---
 
 HTML is the foundation of web pages. It stands for _hypertext markup language_.

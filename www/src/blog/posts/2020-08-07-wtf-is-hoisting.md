@@ -1,9 +1,12 @@
 ---
-title: "WTF is Hoisting?"
-description: "Sometimes JavaScript code appears to behave oddly. Hoisting is one of the reasons why. Here's an introduction to the concept, with references to more in-depth explorations."
+title: WTF is Hoisting?
+description: Sometimes JavaScript code appears to behave oddly. Hoisting is one
+  of the reasons why. Here's an introduction to the concept, with references to
+  more in-depth explorations.
 tags:
   - javascript
   - wtf
+image: /blog/default/default-orange-03.png
 ---
 
 _Hoisting_ is a JavaScript concept in which variable, function, and class definitions are _hoisted_ (lifted) to the top of their lexical environment (their scope) before execution.

@@ -1,8 +1,10 @@
 ---
 title: How to Organize Your Freelance Bank Account
-description: "Managing and organizing income is one of the most stressful and important tasks for a full-time freelancer."
+description: Managing and organizing income is one of the most stressful and
+  important tasks for a full-time freelancer.
 tags:
   - organization
+image: /blog/default/default-green-01.png
 ---
 
 It’s a great feeling to begin earning real money as a freelancer. It’s liberating! _Who the heck knew you didn’t need a boss to earn income?_

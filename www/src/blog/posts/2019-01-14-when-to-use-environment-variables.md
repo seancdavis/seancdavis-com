@@ -1,6 +1,9 @@
 ---
 title: When to Use Environment Variables
-description: "Environment variables can seem like overkill to new developers, but there are two scenarios in which they are extremely beneficial to efficiency and security."
+description: Environment variables can seem like overkill to new developers, but
+  there are two scenarios in which they are extremely beneficial to efficiency
+  and security.
+image: /blog/default/default-yellow-03.png
 ---
 
 As a new developer, it can be difficult to understand the value of environment variables and when they make sense to use.

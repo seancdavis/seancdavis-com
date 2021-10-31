@@ -1,9 +1,11 @@
 ---
 title: Use Netlify to Host JavaScript Libraries
-description: "Netlify is built to host websites, but it can be a handy resource for JavaScript libraries, too."
+description: Netlify is built to host websites, but it can be a handy resource
+  for JavaScript libraries, too.
 tags:
   - javascript
   - netlify
+image: /blog/default/default-yellow-03.png
 ---
 
 [Netlify's](/blog/wtf-is-netlify/) focus is in on hosting websites following the [Jamstack approach](https://jamstack.org/), and it's really good at doing that.

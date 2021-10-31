@@ -1,10 +1,12 @@
 ---
-title: "WTF is Node.js?"
-description: "An brief introduction to Node.js, along with links to dig in further with a tutorial or course."
+title: WTF is Node.js?
+description: An brief introduction to Node.js, along with links to dig in
+  further with a tutorial or course.
 tags:
   - javascript
   - node
   - wtf
+image: /blog/default/default-lime-01.png
 ---
 
 Node.js is, in a nutshell, just [JavaScript](/blog/wtf-is-javascript/) run outside the browser. JavaScript was originally intended to run in the browser and dates back to 1995. Its focus was to bring dynamic behavior to static web pages, created with [HTML](/blog/wtf-is-html/), [CSS](/blog/wtf-is-css/), and other media files.

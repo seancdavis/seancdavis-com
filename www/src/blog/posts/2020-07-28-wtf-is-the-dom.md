@@ -1,9 +1,11 @@
 ---
-title: "WTF is the DOM?"
-description: "A brief introduction to the DOM with a quick example on manipulating it, and a link to digging in deeper."
+title: WTF is the DOM?
+description: A brief introduction to the DOM with a quick example on
+  manipulating it, and a link to digging in deeper.
 tags:
   - html
   - wtf
+image: /blog/default/default-orange-03.png
 ---
 
 A web page is just a file, or a _representation_ of a file. Usually an [HTML](/blog/wtf-is-html/) file. The DOM, or _document object model_, is the API through which that file's HTML code can be accessed and manipulated.

@@ -1,9 +1,11 @@
 ---
 title: Component-Based JavaScript Architecture
-description: "Keep your JavaScript code organized by continuously abstracting it while focusing on patterns within your site's components."
+description: Keep your JavaScript code organized by continuously abstracting it
+  while focusing on patterns within your site's components.
 tags:
   - components
   - javascript
+image: /blog/default/default-pink-02.png
 ---
 
 It's really easy for JavaScript to get out of hand. We've all been there. The classic case is when a project loads a single JS file wrapped around a `$(document).ready()` callback. All the functions and functional JS are strung together in this file in a way that is unclear to anyone else who many dare to enter.

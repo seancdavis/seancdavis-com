@@ -1,10 +1,13 @@
 ---
 title: WTF is a Headless CMS
-description: "The headless CMS is a core tenet of the Jamstack approach, a gamechanging approach to building modern websites. Here is an intro to the headless CMS approach."
+description: The headless CMS is a core tenet of the Jamstack approach, a
+  gamechanging approach to building modern websites. Here is an intro to the
+  headless CMS approach.
 tags:
   - cms
   - jamstack
   - wtf
+image: /blog/default/default-orange-02.png
 ---
 
 [Content management systems](https://en.wikipedia.org/wiki/Content_management_system) (CMS) have been around for awhile. Some of the biggest players in the space go back a long time (in web years):

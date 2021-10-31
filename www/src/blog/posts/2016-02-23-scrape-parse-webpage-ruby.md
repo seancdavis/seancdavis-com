@@ -1,8 +1,9 @@
 ---
 title: Scrape and Parse A Webpage with Ruby (using Nokogiri)
-description: "A quick way to pull content from a URL and parse it using Ruby."
+description: A quick way to pull content from a URL and parse it using Ruby.
 tags:
   - ruby
+image: /blog/default/default-green-01.png
 ---
 
 Our goal here is going to be to grab a web page and parse its [HTML](/blog/wtf-is-html/) code, in preparation for doing _something_ with it.

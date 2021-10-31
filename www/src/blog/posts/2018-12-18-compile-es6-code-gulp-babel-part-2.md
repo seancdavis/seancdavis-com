@@ -1,10 +1,13 @@
 ---
 title: Compile ES6 Code with Gulp and Babel, Part 2
-description: "In the second of five parts on compiling multiple ES6 files into a minified bundle, you will learn how to concatenate multiple files into a single file."
+description: In the second of five parts on compiling multiple ES6 files into a
+  minified bundle, you will learn how to concatenate multiple files into a
+  single file.
 tags:
   - babel
   - gulp
   - javascript
+image: /blog/default/default-pink-01.png
 ---
 
 This is the second part in a five-part series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/blog/compile-es6-code-gulp-babel-part-1/), I recommend doing so.

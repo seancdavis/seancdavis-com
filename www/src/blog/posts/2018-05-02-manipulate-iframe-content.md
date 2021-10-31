@@ -1,9 +1,11 @@
 ---
-title: "Manipulate iFrame Content"
-description: "When you can communicate with the code inside an iFrame, you can make any change you want to the code within that iFrame."
+title: Manipulate iFrame Content
+description: When you can communicate with the code inside an iFrame, you can
+  make any change you want to the code within that iFrame.
 tags:
   - html
   - javascript
+image: /blog/default/default-green-02.png
 ---
 
 We've all been there. You need to make a change within an iFrame (from the outside), and it just won't work. Change a class, add some text, adjust [CSS](/blog/wtf-is-css/). It just won't work.

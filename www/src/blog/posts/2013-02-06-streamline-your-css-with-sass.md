@@ -4,6 +4,7 @@ tags:
   - css
   - sass
 description: I began using Sass yesterday and I am already in love.
+image: /blog/default/default-orange-02.png
 ---
 
 I began using [Sass](http://sass-lang.com/) yesterday and I am already in love. You can very quickly and easily streamline your CSS with Sass.

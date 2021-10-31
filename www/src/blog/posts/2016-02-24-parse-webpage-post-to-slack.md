@@ -1,9 +1,12 @@
 ---
 title: Parse a Web Page and Post to Slack Using Ruby
-description: "When another website is doing the heavy-lifting updating some content you want to keep up on, but there's no good integration with Slack, you can parse it yourself and post directly to a Slack channel."
+description: When another website is doing the heavy-lifting updating some
+  content you want to keep up on, but there's no good integration with Slack,
+  you can parse it yourself and post directly to a Slack channel.
 tags:
   - slack
   - ruby
+image: /blog/default/default-pink-02.png
 ---
 
 While I will have a more specific example of how this might be used, I wanted to publish a quick set of thoughts on combining two of my recently articles.

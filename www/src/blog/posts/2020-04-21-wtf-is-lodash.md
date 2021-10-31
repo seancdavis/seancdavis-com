@@ -1,8 +1,10 @@
 ---
 title: WTF is Lodash?
-description: "Explore an introduction to Lodash and what it can do to support your JavaScript code."
+description: Explore an introduction to Lodash and what it can do to support
+  your JavaScript code.
 tags:
   - javascript
+image: /blog/default/default-yellow-03.png
 ---
 
 [Lodash](https://lodash.com/) is a JavaScript library that brings a set of utilities on top of _vanilla_ JavaScript (i.e. JS without any extras). It's a funny play on [Underscore.js](https://underscorejs.org/), and has since [become a superset of Underscore](https://stackoverflow.com/a/13898916/2241124).

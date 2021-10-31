@@ -1,11 +1,14 @@
 ---
 title: ES6 Build Pipeline for Middleman using Gulp
-description: "Middleman has abandoned its asset pipeline in favor of a more flexible and customized approach. Let's use this new approach to get ES6 modules into our Middleman project."
+description: Middleman has abandoned its asset pipeline in favor of a more
+  flexible and customized approach. Let's use this new approach to get ES6
+  modules into our Middleman project.
 tags:
   - babel
   - gulp
   - javascript
   - middleman
+image: /blog/default/default-orange-01.png
 ---
 
 For its first three major versions, Middleman used [Rails' asset pipeline](https://guides.rubyonrails.org/asset_pipeline) for its asset pipeline. But as of v4, [Middleman has abandoned using Rails' asset pipeline](https://middlemanapp.com/advanced/asset-pipeline/) in favor of a more customize approach -- [the external pipeline](https://middlemanapp.com/advanced/external-pipeline/).

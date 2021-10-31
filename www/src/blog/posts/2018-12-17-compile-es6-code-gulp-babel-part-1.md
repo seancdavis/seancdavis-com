@@ -1,10 +1,13 @@
 ---
 title: Compile ES6 Code with Gulp and Babel, Part 1
-description: "In the first of five parts on compiling multiple ES6 files into a minified bundle, you will learn how to setup the project and build a simple implementation."
+description: In the first of five parts on compiling multiple ES6 files into a
+  minified bundle, you will learn how to setup the project and build a simple
+  implementation.
 tags:
   - babel
   - gulp
   - javascript
+image: /blog/default/default-yellow-02.png
 ---
 
 Welcome to the five-part series on compiling and concatenating ES6 code with Gulp and Babel. In this first part we're going to setup the project and learn how to build a simple Gulp script that compiles ES6 code so it can be supported by older browsers.

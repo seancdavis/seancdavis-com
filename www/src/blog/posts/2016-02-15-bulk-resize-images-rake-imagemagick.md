@@ -1,9 +1,11 @@
 ---
 title: Bulk Resize Images Using Rake and ImageMagick
-description: Got a set of images you need all to conform to the same size? Hate doing it manually? Me too. Let's write a rake task to solve our challenge.
+description: Got a set of images you need all to conform to the same size? Hate
+  doing it manually? Me too. Let's write a rake task to solve our challenge.
 tags:
   - rake
   - ruby
+image: /blog/default/default-yellow-01.png
 ---
 
 I'm occasionally left with a set of images of all different sizes, when ultimately I want to use them with a specific size. [ImageMagick](http://www.imagemagick.org/script/index.php) and [Rake](https://github.com/ruby/rake) can help us accomplish this without having to mess with Photoshop.

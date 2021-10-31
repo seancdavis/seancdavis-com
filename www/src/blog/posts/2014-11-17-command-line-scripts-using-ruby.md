@@ -3,6 +3,7 @@ title: Command Line Scripts Using Ruby
 tags:
   - ruby
 description: Command line scripts aren't so bad to write when you've got Ruby on your side.
+image: /blog/default/default-green-03.png
 ---
 
 As a novice programmer, writing command line scripts was an intimidating

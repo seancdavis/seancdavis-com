@@ -1,8 +1,11 @@
 ---
-title: "Using Web Components to Build a House, Room-by-Room"
-description: "You could build a house one brick at a time. Every room could be unique. That would take a long time and it'd cost a lot of money, as houses usually do. But what if you could build a house room-by-room?"
+title: Using Web Components to Build a House, Room-by-Room
+description: You could build a house one brick at a time. Every room could be
+  unique. That would take a long time and it'd cost a lot of money, as houses
+  usually do. But what if you could build a house room-by-room?
 tags:
   - components
+image: /blog/default/default-yellow-02.png
 ---
 
 Web pages, in their simplest form, are just bunches of [HTML](/blog/wtf-is-html/) code — element tags that determine content and structure. We don't really _need_ anything else to build a web page. But we add [CSS](/blog/wtf-is-css/) to make pages look nice and [JavaScript](/blog/wtf-is-javascript/) to add interactivity.

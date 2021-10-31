@@ -1,8 +1,10 @@
 ---
 title: "Introducing: The Spinneret"
-description: "The Spinneret is my monthly collection of news, tools, references, and more from within my sphere of web development."
+description: The Spinneret is my monthly collection of news, tools, references,
+  and more from within my sphere of web development.
 tags:
   - spinneret
+image: /blog/default/default-lime-03.png
 ---
 
 _The Spinneret_ is to be my monthly collection of all things web development. An issue will typically include:

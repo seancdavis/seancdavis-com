@@ -1,8 +1,10 @@
 ---
 title: Do You Need a CSS Framework?
-description: "It's 2018. CSS is pretty powerful on its own. Do you really need to implement a framework?"
+description: It's 2018. CSS is pretty powerful on its own. Do you really need to
+  implement a framework?
 tags:
   - css
+image: /blog/default/default-pink-03.png
 ---
 
 There are [a lot of CSS frameworks out there](https://github.com/troxler/awesome-css-frameworks). A lot. And many of them are well-maintained and supported by the community.

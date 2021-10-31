@@ -1,6 +1,8 @@
 ---
 title: How I Scaled a Hybrid Application using the Jamstack
-description: I built an app for a one-day event that did not account properly for scale and took a huge performance hit. This is how we overcame that performance struggle using the Jamstack.
+description: I built an app for a one-day event that did not account properly
+  for scale and took a huge performance hit. This is how we overcame that
+  performance struggle using the Jamstack.
 tags:
   - fauna
   - gatsby
@@ -8,6 +10,7 @@ tags:
   - jamstack
   - middleman
   - netlify
+image: /blog/default/default-orange-01.png
 ---
 
 A few years into my development career, a local non-profit approached me about building them a mobile application. I took the project on ([with an unconventional approach to pricing](/blog/alternative-approach-to-limited-budget-projects/)), and spent the next few months building a [hybrid applications](https://getgist.com/difference-between-native-vs-web-vs-hybrid-apps/). I chose to use the first version of [Ionic](https://ionicframework.com/), which was built exclusively on [AngularJS](https://angularjs.org/).

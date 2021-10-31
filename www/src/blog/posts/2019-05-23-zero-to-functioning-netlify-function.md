@@ -1,9 +1,12 @@
 ---
 title: From Zero to Functioning Netlify Function
-description: "A services-oriented architecture is a key component of the Jamstack, as it brings dynamic functionality to static sites. Here's how to get your feet wet by writing your first Netlify function."
+description: A services-oriented architecture is a key component of the
+  Jamstack, as it brings dynamic functionality to static sites. Here's how to
+  get your feet wet by writing your first Netlify function.
 tags:
   - jamstack
   - netlify
+image: /blog/default/default-yellow-02.png
 ---
 
 [Microservices](https://en.wikipedia.org/wiki/Microservices) are a key part of what makes [Jamstack](https://jamstack.org/) sites different from static sites. In a [service-oriented architecture](https://en.wikipedia.org/wiki/Service-oriented_architecture), microservices provide a means for your static site to interact with back-end systems. And typically they follow the [single-responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), meaning each _service_ is responsible for doing one thing.

@@ -1,10 +1,13 @@
 ---
 title: Compile ES6 Code with Gulp and Babel, Part 5
-description: "In the last of the five part series on compiling multiple ES6 files into a minified bundle, you will learn how to add an asset hash to your bundles."
+description: In the last of the five part series on compiling multiple ES6 files
+  into a minified bundle, you will learn how to add an asset hash to your
+  bundles.
 tags:
   - babel
   - gulp
   - javascript
+image: /blog/default/default-yellow-03.png
 ---
 
 This is the last of five parts in the series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/blog/compile-es6-code-gulp-babel-part-1/), I recommend doing so. This last piece is just some icing on the top layer of a real beefy cake.

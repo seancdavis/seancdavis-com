@@ -1,9 +1,12 @@
 ---
 title: Introducing Component-Driven CSS (CDCSS)
-description: "Yes, it's yet another CSS methodology. CDCSS combines inspiration from other methodologies to help your system stay focused on being a system, while also being simple, consistent, and flexible."
+description: Yes, it's yet another CSS methodology. CDCSS combines inspiration
+  from other methodologies to help your system stay focused on being a system,
+  while also being simple, consistent, and flexible.
 tags:
   - components
   - css
+image: /blog/default/default-pink-03.png
 ---
 
 Writing clean [CSS](/blog/wtf-is-css/) code that is easy to maintain over the life of a growing and changing project is a challenging task. The only way to overcome such a challenge is to have a solid and consistent system that all developers understand and follow closely.

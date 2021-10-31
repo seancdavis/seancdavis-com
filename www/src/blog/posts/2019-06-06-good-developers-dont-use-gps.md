@@ -1,6 +1,8 @@
 ---
-title: "Good Developers Don’t Use a GPS"
-description: "If you always let a GPS guide you to your destination, will you ever really understand how you got there?"
+title: Good Developers Don’t Use a GPS
+description: If you always let a GPS guide you to your destination, will you
+  ever really understand how you got there?
+image: /blog/default/default-lime-01.png
 ---
 
 A friend of mine lives six miles from my house. She’s lived there for the better part of a decade, but it wasn’t until recently that I was able to drive to her house without any direction. That’s a little ridiculous when you think about it. This is a house I had visited a couple dozen times and I couldn’t get there without assistance.

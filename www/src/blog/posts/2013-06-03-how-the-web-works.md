@@ -1,6 +1,7 @@
 ---
 title: How the Web Works
-description: "Learn how the web works."
+description: Learn how the web works.
+image: /blog/default/default-yellow-01.png
 ---
 
 I've tried (unsuccessfully), on several occasions, to explain *how the web works*. To the few people that gazed hopelessly at me (while silently wishing I'd stop talking), I said, "I'll write a blog post on it, and *then* you'll understand." So, here we go -- I hope it works.

@@ -1,8 +1,10 @@
 ---
 title: Add a "reload!" Method to your Ruby Console
-description: "Once you are running a console in your ruby project, it's nice to not have to restart the console session every time you make a change."
+description: Once you are running a console in your ruby project, it's nice to
+  not have to restart the console session every time you make a change.
 tags:
   - ruby
+image: /blog/default/default-orange-02.png
 ---
 
 I wrote another article on [creating a console session for your ruby project](/blog/add-console-to-ruby-project/). That is a powerful method for working with your (non-Rails/) Ruby project on the fly. The problem with that approach is that you have to restart the console every time you make a change because the console has stored the state of your codebase when it started.

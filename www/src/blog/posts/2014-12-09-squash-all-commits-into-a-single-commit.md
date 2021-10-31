@@ -2,7 +2,9 @@
 title: Squash all Commits into a Single Commit
 tags:
   - git
-description: Sometimes it makes sense to start over in Git's history while maintaining the current state of your code.
+description: Sometimes it makes sense to start over in Git's history while
+  maintaining the current state of your code.
+image: /blog/default/default-pink-03.png
 ---
 
 Git has many built-in tools to [rewrite history](http://git-scm.com/book/en/v2/Git-Tools-Rewriting-History). But, sometimes, you just want to take where you are in history, squash _everything_ into a single commit, and move forward from there.

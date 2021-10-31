@@ -1,9 +1,12 @@
 ---
 title: Conditional Email Notifications through Netlify Forms and Hooks
-description: "Sending conditional email notifications based on the value of a user-submitted form field is still very much a thing, and it can be achieved via fun workaround when using Netlify forms."
+description: Sending conditional email notifications based on the value of a
+  user-submitted form field is still very much a thing, and it can be achieved
+  via fun workaround when using Netlify forms.
 tags:
   - jamstack
   - netlify
+image: /blog/default/default-blue-02.png
 ---
 
 Well, it’s 2019 as I write this, and yet it seems like contact forms aren’t going away any time soon. I always figured we’d have a better solution for capturing user feedback by now. But it makes sense that they’re still around. Forms are a tried-and-true method for accepting dynamic data from a user while keeping that user on the site.

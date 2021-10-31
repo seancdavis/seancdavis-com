@@ -2,7 +2,9 @@
 title: Why I Don't Use has_and_belongs_to_many in Rails
 tags:
   - ruby-on-rails
-description: "The magic of Rails makes it easy to create simple many-to-many relationships, but I almost never use it, and here's why."
+description: The magic of Rails makes it easy to create simple many-to-many
+  relationships, but I almost never use it, and here's why.
+image: /blog/default/default-lime-03.png
 ---
 
 Rails has [two built-in methods](http://guides.rubyonrails.org/association_basics.html#choosing-between-has-many-through-and-has-and-belongs-to-many) for dealing with many-to-many relationships: `has_many :through` (HMT) and `has_and_belongs_to_many` (HABTM).

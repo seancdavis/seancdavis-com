@@ -1,10 +1,12 @@
 ---
-title: "Create a Multi-Colored, Dotted Grid with HTML5 Canvas"
-description: "The wide world of canvas is open-ended. Here's a fun example to dig in and learn some of the basics of HTML5 canvas."
+title: Create a Multi-Colored, Dotted Grid with HTML5 Canvas
+description: The wide world of canvas is open-ended. Here's a fun example to dig
+  in and learn some of the basics of HTML5 canvas.
 tags:
   - html
   - javascript
   - jquery
+image: /blog/default/default-orange-03.png
 ---
 
 [HTML5 Canvas](https://en.wikipedia.org/wiki/Canvas_element) is a great way to build, animate, and interact with shapes in your website or web application.

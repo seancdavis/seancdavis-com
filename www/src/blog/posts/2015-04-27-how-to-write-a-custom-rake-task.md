@@ -3,7 +3,9 @@ title: How to Write a Custom Rake Task
 tags:
   - rake
   - ruby-on-rails
-description: Rake provides a great way to automate repetitive or complex tasks. Here's a look at creating a simple and a more complex task.
+description: Rake provides a great way to automate repetitive or complex tasks.
+  Here's a look at creating a simple and a more complex task.
+image: /blog/default/default-orange-01.png
 ---
 
 [Rake](https://github.com/ruby/rake) is a nice, powerful tool for automating tasks in a ruby project.

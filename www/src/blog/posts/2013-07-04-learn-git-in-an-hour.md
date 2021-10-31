@@ -2,7 +2,9 @@
 title: Learn Git in an Hour
 tags:
   - git
-description: "Although I'm no expert, I've outlined the things I think you need to know to get started using Git."
+description: Although I'm no expert, I've outlined the things I think you need
+  to know to get started using Git.
+image: /blog/default/default-pink-03.png
 ---
 
 I'd say you know what you're getting into here, right? About an hour of learning for a lifetime of happiness? Well, allow me to preface this article with two thoughts.

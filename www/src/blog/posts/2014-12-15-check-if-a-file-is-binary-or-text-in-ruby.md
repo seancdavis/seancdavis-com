@@ -2,7 +2,9 @@
 title: Check if a File is Binary or Text in Ruby
 tags:
   - ruby
-description: Here's a cool little trick to determining if a file is text or binary in Ruby just by using the path to that file.
+description: Here's a cool little trick to determining if a file is text or
+  binary in Ruby just by using the path to that file.
+image: /blog/default/default-lime-01.png
 ---
 
 Sometimes when you want to read a file in Ruby you need to know whether that file is binary or text, to help you avoid some unwelcome errors.

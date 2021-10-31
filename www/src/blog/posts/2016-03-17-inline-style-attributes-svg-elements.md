@@ -1,9 +1,11 @@
 ---
 title: Use Inline Style Attributes on SVG Elements to Avoid Overwriting Styles
-description: "When SVGs starting looking weird on your website, it might be because their styles are being overwritten."
+description: When SVGs starting looking weird on your website, it might be
+  because their styles are being overwritten.
 tags:
   - css
   - svg
+image: /blog/default/default-pink-03.png
 ---
 
 For the past few months, I've been working on a fun project with a lot of animation and iconography. I used it as an excuse to dive into SVGs, and to attempt to use SVG elements as much as possible.

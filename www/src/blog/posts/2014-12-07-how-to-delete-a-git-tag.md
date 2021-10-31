@@ -3,6 +3,7 @@ title: How To Delete a Git Tag
 tags:
   - git
 description: It's easy to delete a git tag from your local and remote repositories.
+image: /blog/default/default-green-02.png
 ---
 
 Let's say you created tag `v1.0` too early. You can delete it from your local repository by running the following command.

@@ -1,8 +1,10 @@
 ---
 title: Simplify CSS Measurements using REMs
-description: "Using REMs exclusively for measurements in CSS is a handy tool for enforcing a stronger design system."
+description: Using REMs exclusively for measurements in CSS is a handy tool for
+  enforcing a stronger design system.
 tags:
   - css
+image: /blog/default/default-pink-03.png
 ---
 
 Design systems are inherently difficult to manage as projects grow. The higher the number of scenarios, the more complex the nuance of maintaining consistent components across the ecosystem becomes. In other words, as projects grow, it can quickly become a challenge to maintain a consistent sizing approach throughout the system.

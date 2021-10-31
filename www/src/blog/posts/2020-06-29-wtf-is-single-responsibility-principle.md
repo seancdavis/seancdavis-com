@@ -1,8 +1,11 @@
 ---
-title: "WTF is the Single-Responsibility Principle?"
-description: "I often talk about the single-responsibility principle in the articles I write. What does it really mean? (Spoiler: It's probably exactly what you think.)"
+title: WTF is the Single-Responsibility Principle?
+description: "I often talk about the single-responsibility principle in the
+  articles I write. What does it really mean? (Spoiler: It's probably exactly
+  what you think.)"
 tags:
   - wtf
+image: /blog/default/default-pink-03.png
 ---
 
 The single-responsibility principle is somewhat self-explanatory. It means that, in programming, everything — e.g. a class, function, module, plugin — should do one thing.

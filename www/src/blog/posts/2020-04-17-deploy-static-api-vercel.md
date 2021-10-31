@@ -1,10 +1,13 @@
 ---
 title: Deploying a Static API to Vercel
-description: A super simple example of building a static API that walks through the deploy process using Vercel Now. It's part of a series of tutorials on building and deploying static APIs.
+description: A super simple example of building a static API that walks through
+  the deploy process using Vercel Now. It's part of a series of tutorials on
+  building and deploying static APIs.
 tags:
   - api
   - jamstack
   - vercel
+image: /blog/default/default-pink-03.png
 ---
 
 This is a quick look at how to deploy and query a [static API](/blog/lets-talk-about-static-apis/) using [Vercel](https://vercel.com/) as the deploy and hosting service. The examples here come from the commentary in my introduction on [how to build static APIs](/blog/how-to-build-static-api/) and from [a similar tutorial](/blog/deploy-static-api-netlify/) which uses [Netlify](/blog/wtf-is-netlify/) instead of Vercel.

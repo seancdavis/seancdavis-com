@@ -3,7 +3,9 @@ title: CSS clearfix
 tags:
   - html
   - css
-description: In working with CSS you're going to come across a class called "clearfix" at some point.
+description: In working with CSS you're going to come across a class called
+  "clearfix" at some point.
+image: /blog/default/default-lime-03.png
 ---
 
 In working with CSS you're going to come across a class called "clearfix" at some point.

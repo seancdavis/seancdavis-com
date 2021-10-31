@@ -1,8 +1,9 @@
 ---
-title: "Ignore _site Build Directory in Eleventy"
-description: "How to ignore the build output when adding it to gitignore causes problems."
+title: Ignore _site Build Directory in Eleventy
+description: How to ignore the build output when adding it to gitignore causes problems.
 tags:
   - eleventy
+image: /blog/default/default-pink-02.png
 ---
 
 The other day I ran into a scenario with Eleventy in which having a `.gitignore` file without ignoring the build output directory (usually `_site`) caused the build to fail.

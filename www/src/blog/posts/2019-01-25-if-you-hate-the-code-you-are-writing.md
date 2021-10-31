@@ -1,6 +1,8 @@
 ---
 title: If You Hate the Code You're Writing...
-description: "Here are four ways in which I remedy hating the code I'm writing, and what you should do if you hate the code you're writing."
+description: Here are four ways in which I remedy hating the code I'm writing,
+  and what you should do if you hate the code you're writing.
+image: /blog/default/default-blue-03.png
 ---
 
 **STOP IT!** {.text-center .text-xl}

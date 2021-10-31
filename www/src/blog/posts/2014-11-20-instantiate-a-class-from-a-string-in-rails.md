@@ -2,7 +2,9 @@
 title: Instantiate a Class from a String in Rails
 tags:
   - ruby-on-rails
-description: Rails classes need to be called dynamically sometimes. Learn how to do it using the constantize inflector.
+description: Rails classes need to be called dynamically sometimes. Learn how to
+  do it using the constantize inflector.
+image: /blog/default/default-blue-03.png
 ---
 
 Sometimes you want your class names to be dynamic. Rails has a nice [`constantize` inflector](http://apidock.com/rails/String/constantize) that makes this easy.

@@ -1,8 +1,10 @@
 ---
 title: Lazy Load Images Using Intersection Observer API
-description: "Use just a little JavaScript and you'll be able to postpone loading images until they are available in the viewport."
+description: Use just a little JavaScript and you'll be able to postpone loading
+  images until they are available in the viewport.
 tags:
   - javascript
+image: /blog/default/default-orange-03.png
 ---
 
 Our goal here is simple. We want to load images only when we can see them within the [viewport](https://developer.mozilla.org/en-US/docs/Glossary/Viewport).

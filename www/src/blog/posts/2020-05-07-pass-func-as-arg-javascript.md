@@ -1,8 +1,9 @@
 ---
-title: "Passing a Function as an Argument to a JavaScript Function"
-description: "Learn the basics of callback functions in JavaScript."
+title: Passing a Function as an Argument to a JavaScript Function
+description: Learn the basics of callback functions in JavaScript.
 tags:
   - javascript
+image: /blog/default/default-blue-03.png
 ---
 
 A powerful idiom in JavaScript is to pass a function as an argument to another function. This is commonly referred to as a callback function. [As MDN says](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function):

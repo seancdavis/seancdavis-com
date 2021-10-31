@@ -3,6 +3,7 @@ title: Round to the nearest 0.5 in Ruby
 tags:
   - ruby
 description: A cool and quick trick to round floats to the nearest 0.5 in Ruby.
+image: /blog/default/default-green-03.png
 ---
 
 To round a number to the nearest 0.5 in most programming languages, you multiply the number by 2, round it, then divide the result by 2.

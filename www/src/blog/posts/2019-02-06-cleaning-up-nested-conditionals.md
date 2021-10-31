@@ -1,6 +1,8 @@
 ---
 title: Cleaning Up Nested Conditionals
-description: "Flattening the logic of if/else conditionals can go a long way toward cleaning up your code."
+description: Flattening the logic of if/else conditionals can go a long way
+  toward cleaning up your code.
+image: /blog/default/default-blue-01.png
 ---
 
 (The examples in this article are written in JavaScript, but the principles can be applied to any language.)

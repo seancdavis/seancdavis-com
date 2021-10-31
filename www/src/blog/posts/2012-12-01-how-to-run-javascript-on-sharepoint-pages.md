@@ -3,7 +3,9 @@ title: How to Run JavaScript on SharePoint Pages
 tags:
   - javascript
   - sharepoint
-description: Here's a cool trick to run JavaScript on SharePoint 2010 wiki pages without editing the master page.
+description: Here's a cool trick to run JavaScript on SharePoint 2010 wiki pages
+  without editing the master page.
+image: /blog/default/default-lime-02.png
 ---
 
 A great way to extend SharePoint is to create what I like to call _mini applications_ -- run JavaScript on SharePoint pages. And the best part:  **you don't need to edit the master page**. Here's how you run JavaScript on a SharePoint 2010 wiki page:

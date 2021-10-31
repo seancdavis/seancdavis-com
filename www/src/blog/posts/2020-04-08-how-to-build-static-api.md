@@ -1,10 +1,12 @@
 ---
 title: How to Build a Static API
-description: An introduction on how to approach building a static API, which serves as the background for several specific tutorials on the topic.
+description: An introduction on how to approach building a static API, which
+  serves as the background for several specific tutorials on the topic.
 tags:
   - api
   - jamstack
   - netlify
+image: /blog/default/default-blue-02.png
 ---
 
 Most [APIs](https://en.wikipedia.org/wiki/Application_programming_interface) out in the wild are _dynamic_ APIs. (We just call them _APIs_.) When a user asks for data from a dynamic API, it communicates with a database in real-time, providing the relevant information back to the requester. Many times APIs have some sort of authentication system, as they want to track or limit who is using the system and how much they are using.

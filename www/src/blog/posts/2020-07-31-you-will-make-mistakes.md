@@ -1,7 +1,9 @@
 ---
-title: "You Will Make Mistakes"
-description: "It's not making a mistake that matters, it's what you do after you make a mistake."
+title: You Will Make Mistakes
+description: It's not making a mistake that matters, it's what you do after you
+  make a mistake.
 tags: []
+image: /blog/default/default-lime-01.png
 ---
 
 On a coworker's last day with the company, I asked him to [share some advice our team of developers](/blog/wise-words-from-warren/). This was one of his three points:

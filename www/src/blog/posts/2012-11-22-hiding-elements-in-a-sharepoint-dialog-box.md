@@ -2,7 +2,9 @@
 title: Hiding Elements in a SharePoint Dialog Box
 tags:
   - sharepoint
-description: Elements added to a SharePoint 2010 master page may show up in every dialog box. Learn how to remove them from dialog boxes.
+description: Elements added to a SharePoint 2010 master page may show up in
+  every dialog box. Learn how to remove them from dialog boxes.
+image: /blog/default/default-orange-01.png
 ---
 
 Have you tried to add elements to a SharePoint 2010 master page and then noticed they also appear in every dialog box?

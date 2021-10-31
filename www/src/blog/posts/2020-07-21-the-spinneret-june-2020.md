@@ -1,8 +1,10 @@
 ---
 title: "The Spinneret: Issue #2"
-description: "WTF happened on June 29!? Read more in the June 2020 collection of web development articles, shop talk, news, and tools."
+description: WTF happened on June 29!? Read more in the June 2020 collection of
+  web development articles, shop talk, news, and tools.
 tags:
   - spinneret
+image: /blog/default/default-blue-01.png
 ---
 
 ## In My Words (and others)

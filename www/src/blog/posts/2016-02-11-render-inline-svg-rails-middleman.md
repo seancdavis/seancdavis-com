@@ -1,10 +1,12 @@
 ---
 title: Render an Inline SVG in Rails (or Middleman)
-description: You can avoid multiple requests to your server by rendering SVG images inline to the rest of your HTML.
+description: You can avoid multiple requests to your server by rendering SVG
+  images inline to the rest of your HTML.
 tags:
   - ruby
   - ruby-on-rails
   - middleman
+image: /blog/default/default-blue-01.png
 ---
 
 I've been using [SVGs](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) a lot lately. Among an array of benefits for using SVG images, there are two that stand above the others in my mind:

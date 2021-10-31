@@ -1,8 +1,9 @@
 ---
 title: WTF is object-dig?
-description: 'Tired of "Cannot read property of undefined" errors? object-dig can help!'
+description: Tired of "Cannot read property of undefined" errors? object-dig can help!
 tags:
   - javascript
+image: /blog/default/default-yellow-03.png
 ---
 
 [object-dig](https://github.com/joe-re/object-dig) is one of my favorite JavaScript libraries that isn't all that popular (I'll tell you why).

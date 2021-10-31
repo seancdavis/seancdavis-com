@@ -1,8 +1,10 @@
 ---
-title: "Dynamic Attributes on Instances in Ruby"
-description: "Although it's not usually the right choice, when you want to create individual attribute behavior on instances, Ruby has your back."
+title: Dynamic Attributes on Instances in Ruby
+description: Although it's not usually the right choice, when you want to create
+  individual attribute behavior on instances, Ruby has your back.
 tags:
   - ruby
+image: /blog/default/default-yellow-02.png
 ---
 
 If you've been around Ruby at all, you know about its [getter and setter methods](http://qr.ae/TUTTE6), available through [the `attr_accessor` method](https://stackoverflow.com/a/4371458/2241124).

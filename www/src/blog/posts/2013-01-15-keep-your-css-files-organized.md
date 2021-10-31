@@ -3,7 +3,9 @@ title: Keep Your CSS Files Organized
 tags:
   - css
   - organization
-description: CSS files are notorious for very quickly growing long, jumbled and confusing. Here's how I stay organized
+description: CSS files are notorious for very quickly growing long, jumbled and
+  confusing. Here's how I stay organized
+image: /blog/default/default-blue-01.png
 ---
 
 CSS files are notorious for very quickly growing long, jumbled and confusing. I'm not formally trained in design/development, so I don't know of the accepted way to keep a CSS file organized, but I know how I do it, and it works for me. So it just may help you, too.

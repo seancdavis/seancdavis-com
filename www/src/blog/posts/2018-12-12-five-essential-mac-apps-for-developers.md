@@ -1,7 +1,9 @@
 ---
 title: 5 Essential Mac Apps for Developers
-description: "These are five of the most useful applications for developers working with Mac OS X."
+description: These are five of the most useful applications for developers
+  working with Mac OS X.
 tags: []
+image: /blog/default/default-blue-02.png
 ---
 
 I should start with a caveat: I've already written an article called [_5 Essential Mac Apps_](https://medium.com/@seancdavis/5-essential-mac-apps-9538946a3606). These apps in this article are those which I feel could benefit any Mac user, regardless of what they use their Mac for:
