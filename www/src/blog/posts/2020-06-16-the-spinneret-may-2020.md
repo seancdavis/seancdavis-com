@@ -1,8 +1,10 @@
 ---
 title: "The Spinneret: Issue #1"
-description: "The first issue of my monthly collection of web development topics, ideas, tools, and references, along with some commentary."
+description: The first issue of my monthly collection of web development topics,
+  ideas, tools, and references, along with some commentary.
 tags:
   - spinneret
+image: /blog/default/default-blue-03.png
 ---
 
 Welcome to the very first issue of _The Spinneret_! This is an idea I've had for awhile. It's taken different forms over the last few months, but has led to this — a blog article and email newsletter that consolidates what's happening in my sphere of web development.

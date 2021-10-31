@@ -1,8 +1,10 @@
 ---
-title: "Add a Static Directory to an Eleventy Project"
-description: "Copy static files from a directory into the root of the build directory with Eleventy."
+title: Add a Static Directory to an Eleventy Project
+description: Copy static files from a directory into the root of the build
+  directory with Eleventy.
 tags:
   - eleventy
+image: /blog/default/default-yellow-02.png
 ---
 
 Some static site generators, like [Gatsby](https://www.gatsbyjs.org/), have the concept of a [static folder](https://www.gatsbyjs.com/docs/static-folder/), in which anything you drop into that folder makes its way (unprocessed) to the build directory during the build process.

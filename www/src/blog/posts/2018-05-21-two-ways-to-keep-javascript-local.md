@@ -1,8 +1,10 @@
 ---
-title: "2 Ways to Keep JavaScript Local"
-description: "It's far too easy to let your JS code pollute the global namespace. Here are two methods for keeping your code local."
+title: 2 Ways to Keep JavaScript Local
+description: It's far too easy to let your JS code pollute the global namespace.
+  Here are two methods for keeping your code local.
 tags:
   - javascript
+image: /blog/default/default-green-01.png
 ---
 
 One of the most common problems I see with novice programmers writing JavaScript is that they pollute the global namespace.

@@ -1,8 +1,10 @@
 ---
 title: "Big Oops: I Need a Little More Time"
-description: "Warren had to go ask his boss for more time because he wasn't going to meet a deadline. And it was all because of one line of code."
+description: Warren had to go ask his boss for more time because he wasn't going
+  to meet a deadline. And it was all because of one line of code.
 tags:
   - big-oops
+image: /blog/default/default-orange-03.png
 ---
 
 I have had the pleasure of working with a good friend of mine, [Warren Harrison](https://twitter.com/hungrymedia), on and off for the last several years. As he departs his current role, I mourn the loss of him with a story to embarrass him.

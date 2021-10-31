@@ -1,10 +1,12 @@
 ---
 title: Building a Static API with Eleventy
-description: "Implement a Static API using the simple and fast static site generator, Eleventy."
+description: Implement a Static API using the simple and fast static site
+  generator, Eleventy.
 tags:
   - api
   - eleventy
   - jamstack
+image: /blog/default/default-lime-01.png
 ---
 
 This is one of several tutorials on how to build a static API. For links to the other tutorials, and for some background on this tutorial, see [the introduction article](/blog/how-to-build-static-api/).

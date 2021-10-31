@@ -1,9 +1,12 @@
 ---
-title: "WTF is Component-Driven Development?"
-description: "If the web is organized by pages, shouldn't we build it that way? Introducing component-driven design and development, explained through the lens of the evolution of the web."
+title: WTF is Component-Driven Development?
+description: If the web is organized by pages, shouldn't we build it that way?
+  Introducing component-driven design and development, explained through the
+  lens of the evolution of the web.
 tags:
   - components
   - wtf
+image: /blog/default/default-green-02.png
 ---
 
 The web is organized by pages.

@@ -1,6 +1,7 @@
 ---
 title: Decreased Jekyll Build Times 5x with a Custom Asset Pipeline
-description: "My team and I ditched the jekyll-assets gem for a homegrown asset pipeline and decreased build times by a factor of five. This is how we did it."
+description: My team and I ditched the jekyll-assets gem for a homegrown asset
+  pipeline and decreased build times by a factor of five. This is how we did it.
 tags:
   - babel
   - css
@@ -8,6 +9,7 @@ tags:
   - javascript
   - jekyll
   - sass
+image: /blog/default/default-pink-01.png
 ---
 
 _The background to this story:_

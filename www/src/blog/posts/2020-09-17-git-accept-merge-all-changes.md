@@ -1,8 +1,11 @@
 ---
 title: "Git Merge: Accept All Changes"
-description: "Have you encountered a large merge when you know you are going to accept all current or incoming changes? There's a way to achieve without stepping through each file."
+description: Have you encountered a large merge when you know you are going to
+  accept all current or incoming changes? There's a way to achieve without
+  stepping through each file.
 tags:
   - git
+image: /blog/default/default-blue-01.png
 ---
 
 I ran into a scenario recently in which I had about 100 merge conflicts. It was going to be a daunting (and tedious) task. When that happens to me, I spend a little time brainstorming if there is a better way. To my surprise, this was as cool and relaxing as a walk in a park.

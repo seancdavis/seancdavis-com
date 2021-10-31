@@ -1,7 +1,8 @@
 ---
-title: "Wise Words from Warren"
-description: "The three most important lessons learned over a few decades as a developer."
+title: Wise Words from Warren
+description: The three most important lessons learned over a few decades as a developer.
 tags: []
+image: /blog/default/default-pink-02.png
 ---
 
 [Warren Harrison](https://twitter.com/hungrymedia) is one of my good, good friends. And today marks the last day he'll spend on my team, which makes me sad. (It also marks the first time someone has quit on me since I began managing developers, but we'll talk about that later.)

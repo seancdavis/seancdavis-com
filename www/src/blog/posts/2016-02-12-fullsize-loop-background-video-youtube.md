@@ -1,9 +1,12 @@
 ---
-title: "Full-Size, Looping Background Video with YouTube Video"
-description: "It seems looping background videos are the new thing. But you don't have to serve up the video on your server. Let's use a YouTube video to accomplish it!"
+title: Full-Size, Looping Background Video with YouTube Video
+description: It seems looping background videos are the new thing. But you don't
+  have to serve up the video on your server. Let's use a YouTube video to
+  accomplish it!
 tags:
   - html
   - css
+image: /blog/default/default-blue-03.png
 ---
 
 **UPDATE:** I have rewritten much of this article to incorporate the [YouTube IFrame API](https://developers.google.com/youtube/iframe_api_reference), which is now the preferred method for doing this.

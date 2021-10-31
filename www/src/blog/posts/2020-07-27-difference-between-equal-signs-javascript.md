@@ -1,9 +1,11 @@
 ---
-title: "The Difference Between =, == and === in JavaScript"
+title: The Difference Between =, == and === in JavaScript
 permalink: blog/difference-between-equal-signs-javascript/
-description: "They may look similar, but they each do something very different from the next, and it's important to understand the differences."
+description: They may look similar, but they each do something very different
+  from the next, and it's important to understand the differences.
 tags:
   - javascript
+image: /blog/default/default-yellow-01.png
 ---
 
 I've begun posting prompts to our development team every morning, often asking a developer to explain some [JavaScript](/blog/wtf-is-javascript/)-based concept to the rest of the team. This has been a great exercise, as teaching tends to be more educational than reading or listening.

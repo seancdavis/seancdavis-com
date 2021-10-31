@@ -1,7 +1,10 @@
 ---
 title: A Product You Can Build in a Day That You Shouldn't Build in a Day
 tags: []
-description: It's easy for time to get away from you when you're building one of your brilliant ideas. Here's a way to put valuable constraints on yourself and your team.
+description: It's easy for time to get away from you when you're building one of
+  your brilliant ideas. Here's a way to put valuable constraints on yourself and
+  your team.
+image: /blog/default/default-blue-02.png
 ---
 
 I had an idea.

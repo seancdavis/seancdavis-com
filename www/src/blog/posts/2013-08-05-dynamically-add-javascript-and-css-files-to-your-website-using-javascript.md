@@ -3,7 +3,9 @@ title: Dynamically Add JavaScript and CSS Files to Your Website Using JavaScript
 tags:
   - css
   - javascript
-description: "When you can't use a JavaScript or CSS concatenater, this method can be useful for adding scripts and styles to your site on the fly."
+description: When you can't use a JavaScript or CSS concatenater, this method
+  can be useful for adding scripts and styles to your site on the fly.
+image: /blog/default/default-lime-02.png
 ---
 
 This is how we typically add JavaScript and [CSS](/blog/wtf-is-css/) files to websites:

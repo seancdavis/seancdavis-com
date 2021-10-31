@@ -1,9 +1,11 @@
 ---
-title: "WTF is a Web Component?"
-description: "What are components? What makes them different from (or similar to) HTML elements? How are they being used today? Let's find out."
+title: WTF is a Web Component?
+description: What are components? What makes them different from (or similar to)
+  HTML elements? How are they being used today? Let's find out.
 tags:
   - components
   - wtf
+image: /blog/default/default-blue-02.png
 ---
 
 We throw the term _component_ around a lot these days, but what does it really mean?

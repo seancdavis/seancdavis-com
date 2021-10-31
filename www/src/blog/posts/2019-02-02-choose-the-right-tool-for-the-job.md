@@ -1,6 +1,9 @@
 ---
 title: Choose the Right Tool for the Job
-description: "A handyman (or handywoman) has a toolbox full of tools for any job that comes their way. What should be in your toolbox? And when should you open it?"
+description: A handyman (or handywoman) has a toolbox full of tools for any job
+  that comes their way. What should be in your toolbox? And when should you open
+  it?
+image: /blog/default/default-green-03.png
 ---
 
 I have a handyman that comes to my house every so often to help with some little projects around the house that I'm either too lazy or too unskilled to do myself. When the appointment arrives, the handyman knocks on my door and we do a walk-thru of everything I want accomplished. He takes notes, then departs, and calls a few days later with an estimate. If I'm comfortable with the estimate, we set up a time for him to return to do the work. And when that work day arrives, he shows up with his toolbox, any new hardware he may need, and he does the job.

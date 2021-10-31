@@ -1,8 +1,10 @@
 ---
 title: Remove HTML Extension And Trailing Slash In Nginx Config
-description: "When you have a static site, sometimes you want to get rid of the HTML extensions and those pesky trailing slashes. Here's how I've done it."
+description: When you have a static site, sometimes you want to get rid of the
+  HTML extensions and those pesky trailing slashes. Here's how I've done it.
 tags:
   - nginx
+image: /blog/default/default-green-02.png
 ---
 
 Static websites are back in gaining popularity, even in these days where everything can be driven by a database. With tools like [Middleman](https://middlemanapp.com/) and [Jekyll](http://jekyllrb.com/), web developers have the ability to build fairly complex sites and render them as individual, static files.

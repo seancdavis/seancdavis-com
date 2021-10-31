@@ -1,7 +1,9 @@
 ---
 title: What is the Purpose of "www" in Website URLs?
 tags: []
-description: "Some websites use www in their domain name, and others don't. What the heck? Find out why and what you should do here ... "
+description: "Some websites use www in their domain name, and others don't. What
+  the heck? Find out why and what you should do here ... "
+image: /blog/default/default-yellow-01.png
 ---
 
 _Note: This article is written with the assumption you know very little about the technical, inner-workings of DNS. If you are looking for a more technical answer, I like [this answer](http://serverfault.com/a/145781/257018) (and its comments) a lot._

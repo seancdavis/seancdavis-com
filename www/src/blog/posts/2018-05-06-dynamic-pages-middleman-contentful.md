@@ -1,10 +1,12 @@
 ---
-title: "Dynamic Pages in Middleman using Contentful"
-description: "How to configure and use the Contentful Middleman gem to generate pages in Middleman driven by a content management system."
+title: Dynamic Pages in Middleman using Contentful
+description: How to configure and use the Contentful Middleman gem to generate
+  pages in Middleman driven by a content management system.
 tags:
   - contentful
   - middleman
   - ruby
+image: /blog/default/default-lime-01.png
 ---
 
 Middleman has a powerful feature for [generating dynamic pages](https://middlemanapp.com/advanced/dynamic-pages/).

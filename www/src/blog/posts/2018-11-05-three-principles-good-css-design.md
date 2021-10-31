@@ -1,8 +1,10 @@
 ---
 title: The 3 Principles of Good CSS Design
-description: "CSS is hard, but we make it that way. Keep to the basics and you'll be empower yourself to build and scale products quickly."
+description: CSS is hard, but we make it that way. Keep to the basics and you'll
+  be empower yourself to build and scale products quickly.
 tags:
   - css
+image: /blog/default/default-blue-03.png
 ---
 
 I hear this classic phrase regularly:

@@ -3,6 +3,7 @@ title: Download a Collection of Images from URLs using Ruby
 description: A quick method and loop to download a collection of images with Ruby.
 tags:
   - ruby
+image: /blog/default/default-lime-03.png
 ---
 
 So there are a set of URLs you'd like to download as images. I'll show you how you can do that with ruby. You could use this [in a command line script](/blog/command-line-scripts-using-ruby/), a rake task, or anywhere else in your code.

@@ -3,6 +3,7 @@ title: CAML Query Builder for SharePoint 2010
 tags:
   - sharepoint
 description: A useful tool for building CAML queries in Microsoft SharePoint 2010.
+image: /blog/default/default-yellow-02.png
 ---
 
 [This handy CAML Query Builder from U2U](http://www.u2u.be/res/tools/camlquerybuilder.aspx) can be very useful in SharePoint development. I'll use it from time-to-time in future SharePoint and SPServices posts, but wanted to bring it to your attention

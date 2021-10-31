@@ -1,6 +1,9 @@
 ---
 title: Taking a Balanced Approach to New Technology
-description: '"New" is a dangerous word in the tech world. With so much changing every day, how do we make sure we know which tools and technologies to invest our time in and which ones to leave behind?'
+description: '"New" is a dangerous word in the tech world. With so much changing
+  every day, how do we make sure we know which tools and technologies to invest
+  our time in and which ones to leave behind?'
+image: /blog/default/default-yellow-03.png
 ---
 
 In the tech world, using "new" as a prefix can evoke a certain burdensome connotation. _New technology_, _new language_, _new framework_, _new phone_, _new feature_, etc. It feels like there's something new every day, as though one could spend their entire life reading about new technology, leaving no time to actually _use_ the technology. In other words, the tech world is in a constant state of disruption.

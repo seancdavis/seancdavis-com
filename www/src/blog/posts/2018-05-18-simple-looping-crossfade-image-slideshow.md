@@ -1,10 +1,12 @@
 ---
-title: "Simple Looping Crossfade Image Slideshow"
-description: "A simple way to give the appearance of a full-screen looping slideshow with crossfading animation."
+title: Simple Looping Crossfade Image Slideshow
+description: A simple way to give the appearance of a full-screen looping
+  slideshow with crossfading animation.
 tags:
   - css
   - html
   - javascript
+image: /blog/default/default-blue-03.png
 ---
 
 With some [CSS](/blog/wtf-is-css/) and a little JavaScript, we can easily provide a crossfade animation to a simple slideshow.

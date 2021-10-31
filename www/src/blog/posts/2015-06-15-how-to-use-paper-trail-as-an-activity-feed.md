@@ -1,8 +1,10 @@
 ---
 title: How To Use Paper Trail As An Activity Feed
-description: "That whole killing two birds with one stone approach might just work in using PaperTrail as an activity log, at least in simpler projects."
+description: That whole killing two birds with one stone approach might just
+  work in using PaperTrail as an activity log, at least in simpler projects.
 tags:
   - ruby-on-rails
+image: /blog/default/default-blue-03.png
 ---
 
 If you're here, I assume you already know about [the PaperTrail gem](https://github.com/airblade/paper_trail). If not, check it out, it's a powerful way to track changes on records within a model.

@@ -1,8 +1,10 @@
 ---
-title: "3 Methods for Logging Output During Ruby Processes"
-description: "Logging output during ruby processes is hugely beneficial for gaining insight into running code."
+title: 3 Methods for Logging Output During Ruby Processes
+description: Logging output during ruby processes is hugely beneficial for
+  gaining insight into running code.
 tags:
   - ruby
+image: /blog/default/default-blue-02.png
 ---
 
 Ruby is a really fun language to write and, as a result, I prefer to write my heavy-lifting tasks in Ruby. This could be migrating content from one system to another, parsing and processing a set of files, analyzing data, etc. There are [several approaches to writing scripts in ruby](/blog/four-ways-to-write-run-ruby-script/), be it a rake task, a command-line script, or even a little Ruby library.

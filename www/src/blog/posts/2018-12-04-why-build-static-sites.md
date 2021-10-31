@@ -1,8 +1,10 @@
 ---
 title: Why Build Static Sites?
-description: "With all the tools at our disposal today, why would we waste our time building static sites? I'll give you four reasons."
+description: With all the tools at our disposal today, why would we waste our
+  time building static sites? I'll give you four reasons.
 tags:
   - jamstack
+image: /blog/default/default-pink-03.png
 ---
 
 There are so many tools at web developers' disposal today. There are [single-page app](https://en.wikipedia.org/wiki/Single-page_application) frameworks like [React](https://reactjs.org/), [Vue.js](https://vuejs.org/), and [Angular](https://angular.io/). There are full-stack frameworks like [Ruby on Rails](https://rubyonrails.org/) (Ruby), [Django](https://www.djangoproject.com/) (Python), and [Laravel](https://laravel.com/) (PHP). And those projects can be easily hosted with services [Heroku](https://www.heroku.com/) and [Digital Ocean](https://www.digitalocean.com/).

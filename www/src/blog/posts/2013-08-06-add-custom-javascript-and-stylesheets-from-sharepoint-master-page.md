@@ -4,7 +4,10 @@ tags:
   - css
   - javascript
   - sharepoint
-description: You can add JavaScript and CSS files to your master page if you want to overwrite some default styles or add some functionality via a new script.
+description: You can add JavaScript and CSS files to your master page if you
+  want to overwrite some default styles or add some functionality via a new
+  script.
+image: /blog/default/default-green-02.png
 ---
 
 I just finished authoring a post on [how to dynamically add javascripts and stylesheets to a website](/blog/dynamically-add-javascript-and-css-files-to-your-website-using-javascript/). The purpose of this post is to elaborate and discuss the previous post in the context of SharePoint.

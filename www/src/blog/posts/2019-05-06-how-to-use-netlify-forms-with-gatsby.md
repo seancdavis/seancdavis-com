@@ -1,10 +1,15 @@
 ---
 title: How to Use Netlify Forms in a Gatsby Project
-description: "Netlify form handling is an extremely powerful feature that enables you to collect dynamic data from your users on your static sites. But it's a little tricky to get it working right within a Gatsby project. Here's a detailed look at a couple different ways of approaching Netlify forms for a Gatsby site."
+description: Netlify form handling is an extremely powerful feature that enables
+  you to collect dynamic data from your users on your static sites. But it's a
+  little tricky to get it working right within a Gatsby project. Here's a
+  detailed look at a couple different ways of approaching Netlify forms for a
+  Gatsby site.
 tags:
   - gatsby
   - jamstack
   - netlify
+image: /blog/default/default-yellow-03.png
 ---
 
 I’ve (somewhat unexpectedly) become a serious fanboy of both [Netlify](/blog/wtf-is-netlify/) and [GatsbyJS](https://www.gatsbyjs.org/). For the first time since I was discovering [Rails](https://rubyonrails.org/) I have felt like a tool (library, framework, etc.) had an answer to every question I was seeking.

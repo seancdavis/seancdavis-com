@@ -1,6 +1,9 @@
 ---
 title: My Favorite Tool for Managing Project-Specific Environment Variables
-description: "With many local projects, environment variables often conflict with one another. I tried several tools before landing on my favorite for managing project-specific values."
+description: With many local projects, environment variables often conflict with
+  one another. I tried several tools before landing on my favorite for managing
+  project-specific values.
+image: /blog/default/default-lime-01.png
 ---
 
 How many code-based projects do you have on your machine? I have more than 30 that I've touched within the last month. More than half [use environment variables to manage sensitive and environment-specific data](/blog/when-to-use-environment-variables/).

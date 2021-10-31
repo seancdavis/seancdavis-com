@@ -1,9 +1,11 @@
 ---
-title: "WTF is a Closure?"
-description: "A brief explanation of JavaScript closures, along with a few examples and references to other in-depth explorations on the topic."
+title: WTF is a Closure?
+description: A brief explanation of JavaScript closures, along with a few
+  examples and references to other in-depth explorations on the topic.
 tags:
   - javascript
   - wtf
+image: /blog/default/default-orange-01.png
 ---
 
 There are tons and tons of articles out there on closures. This is a brief explanation that ends with references to more in-depth explorations of the topic.

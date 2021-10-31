@@ -1,6 +1,9 @@
 ---
 title: Two Methods for Writing Better Code
-description: "Take yourself to the next level in any programming language by using the powers and talents of those that have come and done before you, and by reflecting those powers back on others who will come after you."
+description: Take yourself to the next level in any programming language by
+  using the powers and talents of those that have come and done before you, and
+  by reflecting those powers back on others who will come after you.
+image: /blog/default/default-lime-01.png
 ---
 
 If you are like most developers, you know why you wrote the code you in the way you did. You know what it does and how it works (hopefully). You know why you chose the names you did. You know why it is organized in the way it is. Maybe you haven't considered every approach, and sure, you could always have written it better, but you know how it works and that's enough.

@@ -1,8 +1,11 @@
 ---
 title: Add a Console to your Ruby Project
-description: "A powerful way to debug Rails applications is in using the Rails console. But even when you're not using Rails for your Ruby project, you can still have a console."
+description: A powerful way to debug Rails applications is in using the Rails
+  console. But even when you're not using Rails for your Ruby project, you can
+  still have a console.
 tags:
   - ruby
+image: /blog/default/default-green-03.png
 ---
 
 The [Rails console](https://guides.rubyonrails.org/command_line.html#rails-console) is a really powerful way to interact with your Rails applications via the command line. And when I started writing Ruby applications (without Rails) it was something I immediately missed dearly. But, as it turns out, those feelings I had were unfounded, as it's quite easy to add a console to your project.

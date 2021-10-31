@@ -1,9 +1,13 @@
 ---
 title: What You Need to Know When Using Netlify Forms
-description: "Netlify forms are an incredibly powerful feature. They enable you to accept dynamically-driven user data on your static site. But you must understand a few key concepts about Netlify forms if you're going to have success working with them."
+description: Netlify forms are an incredibly powerful feature. They enable you
+  to accept dynamically-driven user data on your static site. But you must
+  understand a few key concepts about Netlify forms if you're going to have
+  success working with them.
 tags:
   - jamstack
   - netlify
+image: /blog/default/default-yellow-02.png
 ---
 
 Form Handling is an extremely powerful component within [Netlify’s](/blog/wtf-is-netlify/) product, as it provides a way to accept dynamic data from users on a static site.

@@ -3,6 +3,7 @@ title: Don't Do Stupid Shit with JavaScript
 description: The JavaScript community is large. Use it to make your code better.
 tags:
   - javascript
+image: /blog/default/default-pink-01.png
 ---
 
 The other day I found myself writing a snippet of code that looked _something_ like this:

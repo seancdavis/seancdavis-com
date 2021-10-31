@@ -2,7 +2,9 @@
 title: 3 CSS Button Generators To Help You Style Buttons
 tags:
   - css
-description: A few references for styling buttons with CSS. I'll also point you to a couple CSS frameworks.
+description: A few references for styling buttons with CSS. I'll also point you
+  to a couple CSS frameworks.
+image: /blog/default/default-blue-03.png
 ---
 
 If you're having trouble getting your button styled just right, perhaps begin with one of these generators:

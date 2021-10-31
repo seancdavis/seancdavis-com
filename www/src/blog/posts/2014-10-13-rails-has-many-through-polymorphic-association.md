@@ -3,6 +3,7 @@ title: Rails has_many :through Polymorphic Association
 tags:
   - ruby-on-rails
 description: How to maintain HMT behavior on a polymorphic association.
+image: /blog/default/default-orange-02.png
 ---
 
 If you're not familiar with the [`has_many ..., :through ...`](http://guides.rubyonrails.org/association_basics.html#the-has-many-through-association) association in rails, it's a great way to add a many-to-many relationship, between two models, _while storing more than just the association on the join model_.

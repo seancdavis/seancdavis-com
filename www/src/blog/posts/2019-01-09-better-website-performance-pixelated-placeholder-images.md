@@ -1,8 +1,11 @@
 ---
 title: Better Website Performance with Pixelated Placeholder Images
-description: "Page load times decrease as the number of images on a page increase. Learn the pixelated placeholder method that mitigates performance issues caused by images without negatively impacting user experience."
+description: Page load times decrease as the number of images on a page
+  increase. Learn the pixelated placeholder method that mitigates performance
+  issues caused by images without negatively impacting user experience.
 tags:
   - javascript
+image: /blog/default/default-green-02.png
 ---
 
 Images are notorious for slowing down web pages. All too often images used are larger than they need to be. And in many cases all images are loaded when the page loads, which means a user may not even see all the images without scrolling to the bottom of the page.

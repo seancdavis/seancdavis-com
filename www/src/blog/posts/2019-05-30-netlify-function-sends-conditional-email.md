@@ -1,10 +1,12 @@
 ---
 title: A Netlify Function That Sends Conditional Email Notifications
-description: "Conditional email notifications may be immortal, but we can still figure out how to implement them on emerging Jamstack websites."
+description: Conditional email notifications may be immortal, but we can still
+  figure out how to implement them on emerging Jamstack websites.
 tags:
   - jamstack
   - netlify
   - sendgrid
+image: /blog/default/default-yellow-02.png
 ---
 
 It seems that the whole _conditional contact form email notification_ is immortal.

@@ -1,9 +1,11 @@
 ---
 title: Use Ruby To Post Content To Slack
-description: "Once you learn how to use Slack's incoming webhooks, the possibilities are endless. See how to post to Slack using Ruby."
+description: Once you learn how to use Slack's incoming webhooks, the
+  possibilities are endless. See how to post to Slack using Ruby.
 tags:
   - ruby
   - slack
+image: /blog/default/default-orange-01.png
 ---
 
 Slack has a really nice feature called [Incoming Webhooks](https://api.slack.com/incoming-webhooks). It enables you to post messages with dynamic content, using a dynamic username and avatar.

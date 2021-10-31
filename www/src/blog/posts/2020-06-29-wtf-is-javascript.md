@@ -1,9 +1,10 @@
 ---
-title: "WTF is JavaScript?"
-description: "A brief description of JavaScript, with a few links to dig in and learn more."
+title: WTF is JavaScript?
+description: A brief description of JavaScript, with a few links to dig in and learn more.
 tags:
   - javascript
   - wtf
+image: /blog/default/default-blue-01.png
 ---
 
 I like to think of JavaScript as interactivity at runtime for web pages.

@@ -4,7 +4,9 @@ tags:
   - s3
   - git
   - gitlab
-description: Make sure you don't lose all that precious GitLab data by backing regularly and syncing with an Amazon S3 bucket.
+description: Make sure you don't lose all that precious GitLab data by backing
+  regularly and syncing with an Amazon S3 bucket.
+image: /blog/default/default-blue-03.png
 ---
 
 I've found [GitLab](https://about.gitlab.com) to be a nice solution for storing all my git repositories. But it's a little scary hosting it myself. There are a lot of _what-ifs_ for something that is somewhat of a lifeline.

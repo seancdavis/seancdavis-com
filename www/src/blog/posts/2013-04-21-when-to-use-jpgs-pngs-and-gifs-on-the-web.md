@@ -1,6 +1,7 @@
 ---
 title: When to Use JPGs, PNGs and GIFs on the Web
 description: Each filetype has its own place on the web. See where they fit in.
+image: /blog/default/default-green-01.png
 ---
 
 The other day my boss asked me to send a graphic. I sent a PNG, but was informed it needed to be a JPG. That seemed an appropriate opportunity to utter my generation's mantra -- _Why?_ Like many conversations that begin with, _I need this filetype instead of that_, I found it wasn't really a need.

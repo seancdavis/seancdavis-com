@@ -1,8 +1,10 @@
 ---
 title: CSS Grid Layout v CSS Frameworks
-description: "Should you be using a CSS Framework to build your grid or should you use the native CSS Grid Layout?"
+description: Should you be using a CSS Framework to build your grid or should
+  you use the native CSS Grid Layout?
 tags:
   - css
+image: /blog/default/default-green-01.png
 ---
 
 [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) are a set of [CSS](/blog/wtf-is-css/) rules that can enable you to build out a grid in your site without the need for a framework. From MDN:

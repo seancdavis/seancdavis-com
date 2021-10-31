@@ -1,10 +1,13 @@
 ---
-title: "Use PurgeCSS To Optimize Stylesheet with Jekyll"
-description: "Typically your application's stylesheet bundle contains several rules your site doesn't need. Here's how to use PurgeCSS to remove those unused styles when you're working on a Jekyll site."
+title: Use PurgeCSS To Optimize Stylesheet with Jekyll
+description: Typically your application's stylesheet bundle contains several
+  rules your site doesn't need. Here's how to use PurgeCSS to remove those
+  unused styles when you're working on a Jekyll site.
 tags:
   - css
   - jekyll
   - optimization
+image: /blog/default/default-green-02.png
 ---
 
 Stylesheets are notorious for quickly getting out of hand. Even if you stay super organized, you're going to end up with several rules that your site doesn't need.

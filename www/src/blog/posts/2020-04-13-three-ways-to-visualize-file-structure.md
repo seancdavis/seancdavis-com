@@ -1,7 +1,9 @@
 ---
 title: Three Ways to Visualize File Structure in Documentation
-description: There are several methods for representing file trees. Here are three, along with some quick pros and cons for each.
+description: There are several methods for representing file trees. Here are
+  three, along with some quick pros and cons for each.
 tags: []
+image: /blog/default/default-lime-01.png
 ---
 
 I was writing some documentation for an [Ample](https://www.helloample.com/) internal project a few weeks ago in which I wanted to show the way a project's files and directories were organized.

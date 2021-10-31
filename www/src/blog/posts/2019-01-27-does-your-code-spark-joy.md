@@ -1,6 +1,7 @@
 ---
 title: Does Your Code Spark Joy?
-description: "What would Marie Kondo say about your code?"
+description: What would Marie Kondo say about your code?
+image: /blog/default/default-blue-03.png
 ---
 
 [Marie Kondo](https://en.wikipedia.org/wiki/Marie_Kondo) and [her new Netflix show (_Tidying Up_)](https://www.imdb.com/title/tt8115560/) have been the talk of the town lately. Marie invented [the KonMari method of tidying up](https://konmari.com/) and [published a book on the subject](https://www.amazon.com/dp/1607747308) in 2014.

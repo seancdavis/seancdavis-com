@@ -1,10 +1,13 @@
 ---
 title: Deploying a Static API to Netlify
-description: A super simple example of building a static API that walks through the deploy process using Netlify. Part of a series of tutorials on building and deploying static APIs.
+description: A super simple example of building a static API that walks through
+  the deploy process using Netlify. Part of a series of tutorials on building
+  and deploying static APIs.
 tags:
   - api
   - jamstack
   - netlify
+image: /blog/default/default-lime-03.png
 ---
 
 This is a quick look at how to build, deploy, and query a [static API](/blog/lets-talk-about-static-apis/). We're going to assume that you are manually writing each JSON file for your output. In other words, there is no [static site generator](https://www.staticgen.com/) or build process involved in creating the files that will be deployed. (I know, I know, how _archaic_.)

@@ -3,7 +3,9 @@ title: Add Custom CSS to SharePoint 2010 without Master Page
 tags:
   - css
   - sharepoint
-description: Here's how you can add custom styles to a specific site collection in SharePoint 2010.
+description: Here's how you can add custom styles to a specific site collection
+  in SharePoint 2010.
+image: /blog/default/default-blue-01.png
 ---
 
 SharePoint 2010 provides a nice and easy way to add custom styles to your site collection without touching the master page. You can accomplish this on a page-by-page basis by adding your styles to a Content Editor Web Part's [HTML](/blog/wtf-is-html/) source between two style tags.

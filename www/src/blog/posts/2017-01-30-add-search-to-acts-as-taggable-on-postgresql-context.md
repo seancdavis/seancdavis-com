@@ -1,9 +1,11 @@
 ---
-title: "Add Search to ActsAsTaggableOn with PostgreSQL and Context"
-description: "ActsAsTaggableOn is a great gem for working with tags in your application, but it can be a PITA when you want to be able to search for tags."
+title: Add Search to ActsAsTaggableOn with PostgreSQL and Context
+description: ActsAsTaggableOn is a great gem for working with tags in your
+  application, but it can be a PITA when you want to be able to search for tags.
 tags:
   - postgresql
   - ruby
+image: /blog/default/default-lime-03.png
 ---
 
 I have always been one to build my own system when it comes to adding a tagging

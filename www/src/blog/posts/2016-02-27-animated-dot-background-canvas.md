@@ -1,10 +1,11 @@
 ---
-title: "Animating Dots Using HTML5 Canvas"
-description: "This builds on a previous example and brings some movement to our dots!"
+title: Animating Dots Using HTML5 Canvas
+description: This builds on a previous example and brings some movement to our dots!
 tags:
   - html
   - javascript
   - jquery
+image: /blog/default/default-lime-02.png
 ---
 
 Before you get started here, I recommend you take a look at [this article](/blog/mutlicolored-dotted-grid-canvas/) first. It walks through the basics of drawing dots on canvas, and it's what we're going to build on here. But if you're already familiar with canvas and just want to get into it, then please proceed!

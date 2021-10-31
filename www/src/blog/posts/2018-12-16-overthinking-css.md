@@ -1,8 +1,11 @@
 ---
 title: Are You Overthinking CSS?
-description: "CSS is inherently simple. Maybe you're overthinking it. Maybe you don't need some crazy system guiding your CSS. Maybe you just need a few simple rules."
+description: CSS is inherently simple. Maybe you're overthinking it. Maybe you
+  don't need some crazy system guiding your CSS. Maybe you just need a few
+  simple rules.
 tags:
   - css
+image: /blog/default/default-green-03.png
 ---
 
 [CSS](/blog/wtf-is-css/) is inherently simple, right? You have a selector and a set of rules for that selector, most of which are relatively semantic. And yet, any sizeable project requires so much CSS to look presentable that it's really easy for CSS code to get out of hand. Without a system in place it can become difficult to maintain the stylesheets for any given project.

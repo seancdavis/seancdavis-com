@@ -1,10 +1,12 @@
 ---
-title: "WTF is React?"
-description: "A brief introduction to React, along with a list of references for more learning."
+title: WTF is React?
+description: A brief introduction to React, along with a list of references for
+  more learning.
 tags:
   - javascript
   - react
   - wtf
+image: /blog/default/default-pink-01.png
 ---
 
 React is a framework for building user interfaces with [JavaScript](/blog/wtf-is-javascript/). It is essentially a library that renders components, although they aren't traditional [web components](/blog/wtf-is-a-web-component/).

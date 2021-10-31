@@ -1,8 +1,10 @@
 ---
 title: Access A Deleted Class In A Rails Migration
-description: "Sometimes you need to get to a class that you have deleted or renamed within a migration file. Here's how you do it."
+description: Sometimes you need to get to a class that you have deleted or
+  renamed within a migration file. Here's how you do it.
 tags:
   - ruby-on-rails
+image: /blog/default/default-lime-02.png
 ---
 
 There are times when you need to get to a class to be able to run a migration, but that class doesn't exist anymore.

@@ -1,9 +1,11 @@
 ---
-title: "Wait Until All Images are Loaded"
-description: "When you don't want to perform an action until the browser has downloaded all appropriate images."
+title: Wait Until All Images are Loaded
+description: When you don't want to perform an action until the browser has
+  downloaded all appropriate images.
 tags:
   - html
   - javascript
+image: /blog/default/default-lime-02.png
 ---
 
 Not know the state of images being loaded can have several side effects.

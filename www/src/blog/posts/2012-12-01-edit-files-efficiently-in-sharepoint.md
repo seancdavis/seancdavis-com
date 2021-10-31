@@ -3,6 +3,7 @@ title: Edit Files Efficiently in SharePoint
 tags:
   - sharepoint
 description: Eliminate the need to duplicate files across site collections.
+image: /blog/default/default-orange-02.png
 ---
 
 Whether your SharePoint site uses one site collection or many, there are ways to make your design and development more efficient. See below for some best practices I've developed.

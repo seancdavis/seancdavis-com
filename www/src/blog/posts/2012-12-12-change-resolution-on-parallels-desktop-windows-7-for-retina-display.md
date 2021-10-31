@@ -2,6 +2,7 @@
 title: Change Resolution on Parallels Desktop Windows 7 for Retina Display
 tags: []
 description: Here's how I was able to scale my Parellels VM to work with a retina display.
+image: /blog/default/default-blue-01.png
 ---
 
 I started a trial of Parellels Desktop to run Windows 7 on my retina MacBook Pro. Every time I resized the screen, Windows 7 resized itself, and everything was super, super small. I did some research and found that there may not be a tried and true answer, but here's what I did, and now Windows 7 looks awesome on my screen:

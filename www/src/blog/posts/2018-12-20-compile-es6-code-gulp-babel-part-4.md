@@ -1,10 +1,13 @@
 ---
 title: Compile ES6 Code with Gulp and Babel, Part 4
-description: "In the fourth of five parts on compiling multiple ES6 files into a minified bundle, you will learn how to minify your bundle and automatically clean up temporary build files."
+description: In the fourth of five parts on compiling multiple ES6 files into a
+  minified bundle, you will learn how to minify your bundle and automatically
+  clean up temporary build files.
 tags:
   - babel
   - gulp
   - javascript
+image: /blog/default/default-blue-03.png
 ---
 
 This is the fourth part in a five-part series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/blog/compile-es6-code-gulp-babel-part-1/), I recommend at least skimming through the first three parts. By now we've covered enough in previous steps that you'll be missing a lot of context for what's going on if you start here.

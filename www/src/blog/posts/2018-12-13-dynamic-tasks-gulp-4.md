@@ -1,9 +1,12 @@
 ---
 title: Dynamic Tasks with Gulp 4
-description: "With earlier versions of Gulp, dynamic tasks were as simple as a creating for loop. Gulp 4 changed this, but it's still possible to create dynamic tasks."
+description: With earlier versions of Gulp, dynamic tasks were as simple as a
+  creating for loop. Gulp 4 changed this, but it's still possible to create
+  dynamic tasks.
 tags:
   - Gulp
   - JavaScript
+image: /blog/default/default-yellow-03.png
 ---
 
 Gulp 4 brought some big changes to the way in which tasks are built. While it's still possible to build tasks dynamically, it works differently than it used to. For reference, let's begin by looking at the old way.

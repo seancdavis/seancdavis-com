@@ -1,7 +1,10 @@
 ---
-title: "Increase Developer Efficiency by Establishing Conventions"
-description: "Developer efficiency is largely driven by the number and type of decisions to make. That number can be reduced by establishing solid (but balanced) conventions."
+title: Increase Developer Efficiency by Establishing Conventions
+description: Developer efficiency is largely driven by the number and type of
+  decisions to make. That number can be reduced by establishing solid (but
+  balanced) conventions.
 tags: []
+image: /blog/default/default-yellow-02.png
 ---
 
 How do you measure _efficiency_?

@@ -1,11 +1,13 @@
 ---
-title: "Build & Deploy a Dynamic Site in an Hour for Free"
-description: "Combine the forces of Contentful, Middleman, and Netlify to build and deploy dynamic-like site for free in less than an hour."
+title: Build & Deploy a Dynamic Site in an Hour for Free
+description: Combine the forces of Contentful, Middleman, and Netlify to build
+  and deploy dynamic-like site for free in less than an hour.
 tags:
   - contentful
   - middleman
   - netlify
   - ruby
+image: /blog/default/default-blue-02.png
 ---
 
 [Static site generators](https://www.staticgen.com/) are powerful tools. They enable developers to build and deploy static web pages, which are (typically) faster and more secure than their database-driven counterparts.

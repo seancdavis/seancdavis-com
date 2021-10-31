@@ -1,9 +1,11 @@
 ---
-title: "Change CSS within an iFrame"
-description: "When you have access to the code inside an iFrame, you can manipulate its DOM that can lead to style changes."
+title: Change CSS within an iFrame
+description: When you have access to the code inside an iFrame, you can
+  manipulate its DOM that can lead to style changes.
 tags:
   - html
   - javascript
+image: /blog/default/default-lime-02.png
 ---
 
 This is a more specific (and perhaps more useful) case built from [my base article on communicating with an iFrame](/blog/manipulate-iframe-content/). (That article has some base content, but it's not required to understand this article.)

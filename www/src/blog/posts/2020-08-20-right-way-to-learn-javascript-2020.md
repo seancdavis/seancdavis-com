@@ -1,8 +1,10 @@
 ---
-title: "The Right Way to Learn JavaScript in 2020"
-description: "At first glance, the JavaScript ecosystem is overwhelming. Here are thoughts on how to slow down, center yourself, and find a place to begin."
+title: The Right Way to Learn JavaScript in 2020
+description: At first glance, the JavaScript ecosystem is overwhelming. Here are
+  thoughts on how to slow down, center yourself, and find a place to begin.
 tags:
   - javascript
+image: /blog/default/default-blue-01.png
 ---
 
 It's 2020, the world is losing its mind, and you want to learn [JavaScript](/blog/wtf-is-javascript/)?

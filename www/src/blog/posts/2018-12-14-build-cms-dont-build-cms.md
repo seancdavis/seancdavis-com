@@ -1,8 +1,10 @@
 ---
-title: "Build Your Own CMS. But Also, Don't."
-description: "3 reasons you should never build a CMS, along with 3 reasons you should. So which is it?"
+title: Build Your Own CMS. But Also, Don't.
+description: 3 reasons you should never build a CMS, along with 3 reasons you
+  should. So which is it?
 tags:
   - cms
+image: /blog/default/default-yellow-02.png
 ---
 
 I built my first CMS six years ago after becoming frustrated with [WordPress](https://wordpress.org/) and learning [Ruby on Rails](https://rubyonrails.org/).

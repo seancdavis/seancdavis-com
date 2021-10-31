@@ -1,8 +1,10 @@
 ---
-title: "WTF is a Package Manager?"
-description: "A brief description of package managers, with some examples using referencing JavaScript packages."
+title: WTF is a Package Manager?
+description: A brief description of package managers, with some examples using
+  referencing JavaScript packages.
 tags:
   - wtf
+image: /blog/default/default-yellow-01.png
 ---
 
 A package manager is a collection of distributed software. I like to think of it as a giant repository of plugins — code libraries that don't come native to an environment or programming language, but provide some functionality on top of it.

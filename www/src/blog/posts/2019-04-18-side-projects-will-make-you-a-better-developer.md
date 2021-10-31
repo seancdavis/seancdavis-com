@@ -1,6 +1,9 @@
 ---
 title: Side Projects Will Make You a Better Developer
-description: "There is often a substantial difference between a new developer who works on side projects and one who doesn't. But how do you make sure you're working on the right side project?"
+description: There is often a substantial difference between a new developer who
+  works on side projects and one who doesn't. But how do you make sure you're
+  working on the right side project?
+image: /blog/default/default-orange-03.png
 ---
 
 It is often trivial to tell the difference between a new developer (with less than three years of experience) who works on dev-based side projects and one who does not.

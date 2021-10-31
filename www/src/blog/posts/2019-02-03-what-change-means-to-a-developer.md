@@ -1,6 +1,9 @@
 ---
 title: What Change Means to a Developer
-description: "Three developers—The Good, The Bad, and The Ugly—each handle change in their own way. What does it take to become The Good, to ride off into the sunset with the gold?"
+description: Three developers—The Good, The Bad, and The Ugly—each handle change
+  in their own way. What does it take to become The Good, to ride off into the
+  sunset with the gold?
+image: /blog/default/default-yellow-01.png
 ---
 
 Change is inevitable. Time is all we have and it's constantly moving on, transforming the world around us.

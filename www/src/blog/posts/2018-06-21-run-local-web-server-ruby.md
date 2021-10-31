@@ -1,8 +1,10 @@
 ---
-title: "Run a Local Web Server with Ruby"
-description: "No need to mess with Apache or Nginx to run a web server on your local machine. Just use this ruby command."
+title: Run a Local Web Server with Ruby
+description: No need to mess with Apache or Nginx to run a web server on your
+  local machine. Just use this ruby command.
 tags:
   - ruby
+image: /blog/default/default-green-03.png
 ---
 
 Running a web server on your local machine doesn't have to be complicated. If you already have ruby installed on your machine, you can use a simple command to run a web server from any directory on any port.

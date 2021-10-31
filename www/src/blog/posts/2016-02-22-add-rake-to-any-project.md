@@ -1,9 +1,11 @@
 ---
 title: Add Rake To Any Project
-description: Rake is an awesome tool. You may want to use it in a non-Ruby project or a project that isn't configured for it.
+description: Rake is an awesome tool. You may want to use it in a non-Ruby
+  project or a project that isn't configured for it.
 tags:
   - rake
   - ruby
+image: /blog/default/default-green-01.png
 ---
 
 [Rake](https://github.com/ruby/rake) is a really powerful tool for automating any type of task. It can come in handy even in a project that doesn't have it installed. Heck, you can even use it in a non-ruby project if you want.

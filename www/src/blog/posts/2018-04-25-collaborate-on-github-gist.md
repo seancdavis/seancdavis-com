@@ -1,9 +1,11 @@
 ---
-title: "Collaborate On A GitHub Gist"
-description: "GitHub gists are designed to be user-specific and not for team collaboration. But you can make it work with a little finagling."
+title: Collaborate On A GitHub Gist
+description: GitHub gists are designed to be user-specific and not for team
+  collaboration. But you can make it work with a little finagling.
 tags:
   - git
   - github
+image: /blog/default/default-yellow-02.png
 ---
 
 GitHub gists are typically used to share a snippet or series of snippets with

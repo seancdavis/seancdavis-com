@@ -2,6 +2,7 @@
 title: Create Automatic Backup by Installing WAMP Server in the Cloud
 tags: []
 description: Learn how to create backups for your code using a WAMP server.
+image: /blog/default/default-yellow-01.png
 ---
 
 **UPDATE: I've had trouble getting this solution to work exactly how I had envisioned. I've moved to the solution found [here](/blog/backup-your-code-and-develop-cross-platform-using-git/).**
