@@ -4,6 +4,8 @@
  *
  * It requires installing yaml, which was removed since it's not used otherwise
  * in this project (at the time of writing the script).
+ *
+ * See #277 and #278 for more information.
  */
 
 const fs = require("fs");
