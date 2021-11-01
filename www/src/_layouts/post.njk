@@ -30,7 +30,36 @@
   <div class="layout--post--body text-lg max-w-3xl mx-auto px-4">
     {{ content | safe }}
   </div>
+
+  {% if related_posts and related_posts.length > 0 %}
+    <div class="max-w-3xl mx-auto px-4 mt-12">
+      <h3 class="subheading">More Reading</h3>
+
+      {% for post in collections.posts | get_posts_by_slug(related_posts) %}
+        {% post_card post=post %}
+      {% endfor %}
+    </div>
+  {% endif %}
 </div>
 
 {% include "layout/footer.njk" %}
 {% include "layout/foot.njk" %}
+
+
+{#
+
+TODO:
+
+1. Add prop for layout, which can be horizontal or vertical. (Default is vertical.)
+2. Hide description if horizontal (or description is missing). Or skip and do
+   3c instead.
+3. Add appropriate class adjustments if horizontal. (Might be easiest to do this
+   by setting a parent class and using the CSS, rather than injecting more
+   logic into the template.)
+      a. Full image height? (Might not matter.)
+      b. Grid and grid layout on wrapper.
+      c. Hide description.
+4. Test by checking the layout on list pages as well. (The default shouldn't change.)
+5. Rest of the logic for adding related posts automatically.
+
+ #}
