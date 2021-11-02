@@ -1,5 +1,27 @@
+.component--post-card[data-layout="horizontal"] {
+  @apply max-w-md;
+
+  .post-card--description {
+    display: none;
+  }
+}
+
+@screen sm {
+  .component--post-card[data-layout] {
+    @apply max-w-xl;
+  }
+
+  .component--post-card[data-layout="horizontal"] {
+    @apply grid;
+
+    grid-template-columns: 12rem 1fr;
+  }
+}
+
 .post-card--image-wrapper img {
+  @apply h-full
+    object-center
+    object-cover;
+
   max-height: 18.875rem;
-  object-fit: cover;
-  object-position: center;
 }

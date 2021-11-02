@@ -1,32 +1,39 @@
-const lodash = require("lodash")
-const { Component } = require("../../../../utils/shortcodes/component")
+const lodash = require("lodash");
+const { Component } = require("../../../../utils/shortcodes/component");
 
-module.exports = ({ post }) => {
-  const tagData = lodash.get(post, "data.hashtags") || []
+module.exports = ({ post, layout = "vertical" }) => {
+  const tagData = lodash.get(post, "data.hashtags") || [];
 
   const tags = tagData
-    .map(tag => {
-      const component = new Component("tag", { tag, classes: "mr-1" })
-      return component.render()
+    .map((tag) => {
+      const component = new Component("tag", { tag, classes: "mr-1" });
+      return component.render();
     })
-    .join("")
+    .join("");
 
-  let author
+  let author;
   if (post.data.rich_author) {
-    const component = new Component("author", { author: post.data.rich_author, classes: "mb-2" })
-    author = component.render()
+    const component = new Component("author", {
+      author: post.data.rich_author,
+      classes: "mb-2",
+    });
+    author = component.render();
   }
 
-  let image
+  let image;
   if (post.data.image) {
-    const component = new Component("image", { path: post.data.image, sm: "576px" })
-    image = component.render()
+    const component = new Component("image", {
+      path: post.data.image,
+      sm: "576px",
+    });
+    image = component.render();
   }
 
   return {
     ...post,
     author,
     image,
-    tags
-  }
-}
+    tags,
+    layout,
+  };
+};
