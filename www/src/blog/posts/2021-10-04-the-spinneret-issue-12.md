@@ -30,13 +30,13 @@ _New blog posts and videos I published last month._ {.text-sm}
 
 [Astro: Build faster apps with less JavaScript](https://blog.logrocket.com/astro-build-faster-apps-less-javascript/) is a piece I wrote for LogRocket. (LogRocket's blog practice is _impressive_.) This was my chance to really dig into Astro, and I'm in love!
 
-[5 Reasons I'm Excited about Astro](https://www.seancdavis.com/blog/five-reasons-excited-about-astro/) was a precursor article I wrote when working on the Astro tutorial. It's my argument for 1) why I think Astro is great, and 2) why you may not need to immediately jump from 11ty if that's your current SSG of choice.
+[5 Reasons I'm Excited about Astro](/blog/five-reasons-excited-about-astro/) was a precursor article I wrote when working on the Astro tutorial. It's my argument for 1) why I think Astro is great, and 2) why you may not need to immediately jump from 11ty if that's your current SSG of choice.
 
 And a few others:
 
 - [How to Separate Content from Website Code](https://www.stackbit.com/blog/jamstack-journey-separate-content/) <small>(Stackbit)</small>
-- [WTF is Visual Regression Testing?](https://www.seancdavis.com/blog/wtf-is-visual-regression-testing/)
-- [WTF is Jest?](https://www.seancdavis.com/blog/wtf-is-jest/)
+- [WTF is Visual Regression Testing?](/blog/wtf-is-visual-regression-testing/)
+- [WTF is Jest?](/blog/wtf-is-jest/)
 
 ## My Reads
 

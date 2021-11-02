@@ -28,24 +28,24 @@ _New blog posts and videos I published last month._ {.text-sm}
     src="/blog/210426/the-spinneret--my-words.png",
     alt="The Spinneret - My Words" %}
 
-As I'd hoped, I got back into publishing regularly in May. The article that got the most attention was [_The Evolution and Redefinition of The Jamstack_](https://www.seancdavis.com/blog/jamstack-evolution-and-redefinition/). This was my commentary on how the Jamstack has evolved and the words we should be using to describe it today. It received a lot of criticism and led to many great discussions.
+As I'd hoped, I got back into publishing regularly in May. The article that got the most attention was [_The Evolution and Redefinition of The Jamstack_](/blog/jamstack-evolution-and-redefinition/). This was my commentary on how the Jamstack has evolved and the words we should be using to describe it today. It received a lot of criticism and led to many great discussions.
 
 ### Tutorials
 
 Also, a handful of tutorials:
 
-- [How I Begin New JavaScript Projects](https://www.seancdavis.com/blog/new-javascript-project-setup/)
-- [Simple JavaScript Pipeline with webpack](https://www.seancdavis.com/blog/javascript-webpack-build-pipeline/)
-- [Use Netlify Functions to Send Email Notifications](https://www.seancdavis.com/blog/netlify-functions-email-notifications/)
-- [Use git-lfs on File Already Committed](https://www.seancdavis.com/blog/git-lfs-track-files-alread-committed/)
+- [How I Begin New JavaScript Projects](/blog/new-javascript-project-setup/)
+- [Simple JavaScript Pipeline with webpack](/blog/javascript-webpack-build-pipeline/)
+- [Use Netlify Functions to Send Email Notifications](/blog/netlify-functions-email-notifications/)
+- [Use git-lfs on File Already Committed](/blog/git-lfs-track-files-alread-committed/)
 
 ### New Definitions
 
 And a few new definition type posts:
 
-- [WTF is Netlify?](https://www.seancdavis.com/blog/wtf-is-netlify/)
-- [WTF is webpack?](https://www.seancdavis.com/blog/wtf-is-webpack/)
-- [WTF is YAML?](https://www.seancdavis.com/blog/wtf-is-yaml/)
+- [WTF is Netlify?](/blog/wtf-is-netlify/)
+- [WTF is webpack?](/blog/wtf-is-webpack/)
+- [WTF is YAML?](/blog/wtf-is-yaml/)
 
 ## My Reads
 

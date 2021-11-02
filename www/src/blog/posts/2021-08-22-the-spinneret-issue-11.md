@@ -34,18 +34,18 @@ And just a few other articles during a quiet month.
 
 ### Guest Articles
 
-- [Everything You Need to Know about CSS Position Property](https://www.seancdavis.com/blog/css-position-guide/) by [Pratham](https://twitter.com/prathkum)
+- [Everything You Need to Know about CSS Position Property](/blog/css-position-guide/) by [Pratham](https://twitter.com/prathkum)
 
 ### New Terms
 
-- [WTF is a Regression?](https://www.seancdavis.com/blog/wtf-is-regression/)
-- [WTF is an Environment Variable?](https://www.seancdavis.com/blog/wtf-is-environment-variable/)
+- [WTF is a Regression?](/blog/wtf-is-regression/)
+- [WTF is an Environment Variable?](/blog/wtf-is-environment-variable/)
 
 ### And The Rest
 
-- [How to Set Environment Variables in JavaScript Projects](https://www.seancdavis.com/blog/set-env-var-js-projects/)
-- [Safely Force Pushing in Git](https://www.seancdavis.com/blog/git-safe-force-push/)
-- [Adding S3 Credentials for Node.js AWS SDK](https://www.seancdavis.com/blog/credentials-node-aws-sdk/)
+- [How to Set Environment Variables in JavaScript Projects](/blog/set-env-var-js-projects/)
+- [Safely Force Pushing in Git](/blog/git-safe-force-push/)
+- [Adding S3 Credentials for Node.js AWS SDK](/blog/credentials-node-aws-sdk/)
 
 ## My Reads
 
