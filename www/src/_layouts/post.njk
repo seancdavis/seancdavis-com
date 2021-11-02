@@ -35,7 +35,7 @@
     <div class="max-w-3xl mx-auto px-4 mt-12">
       <h3 class="subheading">More Reading</h3>
 
-      {% for post in collections.posts | get_related_posts(related_posts, tags, page.fileSlug) %}
+      {% for post in collections.posts | get_related_posts(related_posts, tags, page.fileSlug, content) %}
         {% post_card post=post, layout="horizontal" %}
       {% endfor %}
     </div>

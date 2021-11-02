@@ -1,12 +1,32 @@
 const { shuffle } = require("../_helpers/shuffle");
 
-exports.getRelatedPosts = (posts, relatedPosts, tags, currentSlug) => {
+// TODO: Add comments and specs.
+
+exports.getRelatedPosts = (posts, relatedPosts, tags, currentSlug, content) => {
+  // If related_posts in frontmatter is an empty array, return the empty array.
   if (relatedPosts === []) return [];
-  posts = posts.filter((post) => post.fileSlug !== currentSlug);
+  // If related_posts is an array, retrieve the posts from the collection and
+  // return.
   if (relatedPosts?.length > 0) {
     return exports.getPostsBySlugs(posts, relatedPosts);
   }
-  return exports.getPostsByTags(posts, tags);
+  // Otherwise, use some logic. Begin by removing the current post from the
+  // posts collection.
+  posts = posts.filter((post) => post.fileSlug !== currentSlug);
+  // Then, find any referenced posts.
+  let result = exports.getReferencedPosts(posts, content);
+  // If there were at least three referenced posts, return them.
+  if (result.length >= 3) return result;
+  // If we don't have three yet, first remove the ones we have from the
+  // collection, so we don't end up with duplicates.
+  const resultSlugs = result.map((post) => post.fileSlug);
+  posts = posts.filter((post) => !resultSlugs.includes(post.fileSlug));
+  // Then use tag intersection to add more related posts, up to a total of
+  // three.
+  const postsByTag = exports.getPostsByTags(posts, tags, 3 - result.length);
+  result = result.concat(postsByTag);
+  // Return the result, which should be a collection of three posts.
+  return result;
 };
 
 exports.getPostsBySlugs = (posts, slugs) => {
@@ -16,9 +36,20 @@ exports.getPostsBySlugs = (posts, slugs) => {
   return result;
 };
 
-exports.getPostsByTags = (posts, tags) => {
+exports.getReferencedPosts = (posts, content) => {
+  const linkPattern = /"\/blog\/([A-Za-z0-9\-\_]+)(\/?)(index.html)?"/g;
+  const links = [...content.matchAll(linkPattern)];
+  let slugs = links.map((link) => link[1]);
+  if (slugs.length > 3) slugs = shuffle(slugs).slice(0, 3);
+  return exports.getPostsBySlugs(posts, slugs);
+};
+
+exports.getPostsByTags = (posts, tags, limit = 3) => {
   const tagsToMatch = [...tags];
-  tagsToMatch.splice(tagsToMatch.indexOf("Post"), 1);
+
+  if (tagsToMatch.indexOf("Post") >= 0) {
+    tagsToMatch.splice(tagsToMatch.indexOf("Post"), 1);
+  }
 
   const postsWithMatchCount = posts.map((post) => {
     const matchingTags = post.data.tags.filter((t) => tagsToMatch.includes(t));
@@ -27,7 +58,7 @@ exports.getPostsByTags = (posts, tags) => {
 
   const result = shuffle(postsWithMatchCount)
     .sort((a, b) => (b.matchCount > a.matchCount ? 1 : -1))
-    .slice(0, 3)
+    .slice(0, limit)
     .map((obj) => obj.post);
 
   return result;
@@ -45,33 +76,14 @@ exports.getPostsByTags = (posts, tags) => {
 exports.default = (eleventyConfig) => {
   eleventyConfig.addFilter(
     "get_related_posts",
-    (posts, relatedPosts, tags, currentSlug) => {
-      return exports.getRelatedPosts(posts, relatedPosts, tags, currentSlug);
+    (posts, relatedPosts, tags, currentSlug, content) => {
+      return exports.getRelatedPosts(
+        posts,
+        relatedPosts,
+        tags,
+        currentSlug,
+        content
+      );
     }
   );
 };
-
-/**
- * NOTES:
- *
- * I'm thinking all the logic for related posts goes in here.
- *
- * When resorting to tags:
- * 1. Duplicate tags array without Post.
- * 2. Filter posts for those that have at least one intersecting tag, and create
- *    a reference object that stores the number of intersecting tags.
- * 3. Shuffle the array.
- * 4. Sort by number of intersecting tags.
- *
- * Write tests for all this logic, as best as possible. I want to make sure it's
- * a) random, but b) respecting the intersecting rule.
- *
- * I'm thinking I don't do the internal file reading. That's unnecessarily
- * complicated. However, I can think about building reference objects in
- * frontmatter and then building out a rich experience for that. Maybe create a
- * new issue for this? Then there is less magic, but another point at which to
- * add visually appealing links to other posts.*
- *
- * Add specs for shuffle.
- *
- */
