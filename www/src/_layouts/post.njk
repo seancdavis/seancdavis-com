@@ -36,7 +36,7 @@
       <h3 class="subheading">More Reading</h3>
 
       {% for post in collections.posts | get_posts_by_slug(related_posts) %}
-        {% post_card post=post %}
+        {% post_card post=post, layout="horizontal" %}
       {% endfor %}
     </div>
   {% endif %}
