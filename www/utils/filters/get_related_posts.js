@@ -1,7 +1,28 @@
 const { shuffle } = require("../_helpers/shuffle");
 
-// TODO: Add comments and specs.
-
+/**
+ * The main controller for finding related posts. The logic works like this:
+ *
+ *    1. If related_posts (frontmatter) is an empty array, return the empty
+ *       array.
+ *    2. If related_posts was specified, find those posts objects from the
+ *       collection and return.
+ *    3. If no related_posts are specified, first look for other blog posts
+ *       referenced in the content. Return up to three, shuffling the result.
+ *    4. If related_posts returned less than three, add to them posts that share
+ *       the tag. The more tags in common, the higher weighted. If the post has
+ *       no tags, then every post is at play and could show up.
+ *
+ * @param {array} posts 11ty collection of posts (see
+ * utils/collections/posts.js).
+ * @param {array} relatedPosts Array of strings for explicitly specifying
+ * related posts using the fileSlug property.
+ * @param {array} tags Array of tags coming from the current post.
+ * @param {string} currentSlug fileSlug of the current post.
+ * @param {string} content HTML content of the current post.
+ *
+ * @returns array of post collection items
+ */
 exports.getRelatedPosts = (posts, relatedPosts, tags, currentSlug, content) => {
   // If related_posts in frontmatter is an empty array, return the empty array.
   if (relatedPosts === []) return [];
@@ -29,47 +50,75 @@ exports.getRelatedPosts = (posts, relatedPosts, tags, currentSlug, content) => {
   return result;
 };
 
+/**
+ * Given the posts collection and an array of slugs, resolve the slugs by
+ * extracting the appropriate post(s).
+ *
+ * @param {array} posts 11ty collection of posts
+ * @param {array} slugs Array of slugs to resolve
+ *
+ * @returns array of post collection items
+ */
 exports.getPostsBySlugs = (posts, slugs) => {
   const result = slugs.map((slug) =>
     posts.find((post) => post.fileSlug === slug)
   );
-  return result;
+  return result.filter((x) => x);
 };
 
+/**
+ * Given the content of the current post, extract posts that are linked from
+ * within the content.
+ *
+ * @param {array} posts 11ty collection of posts.
+ * @param {string} content HTML content of the current post.
+ *
+ * @returns array of post collection items
+ */
 exports.getReferencedPosts = (posts, content) => {
   const linkPattern = /"\/blog\/([A-Za-z0-9\-\_]+)(\/?)(index.html)?"/g;
   const links = [...content.matchAll(linkPattern)];
+  // link[0] would be the full matching URL, but we just want the basename
+  // segment (slug).
   let slugs = links.map((link) => link[1]);
+  // Max out at three posts.
   if (slugs.length > 3) slugs = shuffle(slugs).slice(0, 3);
   return exports.getPostsBySlugs(posts, slugs);
 };
 
+/**
+ * Given an array of tags, find the posts with the most tags in common. Shuffle
+ * the resulting set so it is different every time (if possible).
+ *
+ * @param {array} posts 11ty collection of posts.
+ * @param {array} tags Array of tags coming from the current post.
+ * @param {number} limit Maximum number of posts to return (default: 3)
+ *
+ * @returns array of post collection items
+ */
 exports.getPostsByTags = (posts, tags, limit = 3) => {
   const tagsToMatch = [...tags];
-
+  // Remove "Post" from the tags array, which is there by default for all posts.
   if (tagsToMatch.indexOf("Post") >= 0) {
     tagsToMatch.splice(tagsToMatch.indexOf("Post"), 1);
   }
-
+  // Build an array of objects that reference the original post and a count for
+  // how many tags it matched.
   const postsWithMatchCount = posts.map((post) => {
     const matchingTags = post.data.tags.filter((t) => tagsToMatch.includes(t));
     return { post, matchCount: matchingTags.length };
   });
-
-  const result = shuffle(postsWithMatchCount)
+  // Shuffle all the posts, and then sort the collection by the number of
+  // matches. This prioritizes posts with more tags in common.
+  return shuffle(postsWithMatchCount)
     .sort((a, b) => (b.matchCount > a.matchCount ? 1 : -1))
     .slice(0, limit)
     .map((obj) => obj.post);
-
-  return result;
 };
 
 /**
- * Find the related items to a post. If related_posts are defined on the post,
- * then we retrieve those objects directly.
- *
- * Otherwise, we use tag intersection with a bit of fanciness to automatically
- * generate a series of three related posts.
+ * Find the related items to a post. This filter is passed on directly to
+ * getRelatedPosts. See that doc for more information on how this works.
  *
  * @param {object} eleventyConfig Eleventy's configuration object
  */
