@@ -1,14 +1,30 @@
 [
   {
     "fileSlug": "blog-post-01",
-    "title": "Blog Post #1"
+    "title": "Blog Post #1",
+    "data": {
+      "tags": ["Post", "tag-a", "tag-b"]
+    }
   },
   {
     "fileSlug": "blog-post-02",
-    "title": "Blog Post #2"
+    "title": "Blog Post #2",
+    "data": {
+      "tags": ["Post"]
+    }
   },
   {
     "fileSlug": "blog-post-03",
-    "title": "Blog Post #3"
+    "title": "Blog Post #3",
+    "data": {
+      "tags": ["Post", "tag-a"]
+    }
+  },
+  {
+    "fileSlug": "blog-post-04",
+    "title": "Blog Post #4",
+    "data": {
+      "tags": ["Post", "tag-a"]
+    }
   }
 ]

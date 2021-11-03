@@ -25,7 +25,7 @@ const { shuffle } = require("../_helpers/shuffle");
  */
 exports.getRelatedPosts = (posts, relatedPosts, tags, currentSlug, content) => {
   // If related_posts in frontmatter is an empty array, return the empty array.
-  if (relatedPosts === []) return [];
+  if (Array.isArray(relatedPosts) && relatedPosts.length === 0) return [];
   // If related_posts is an array, retrieve the posts from the collection and
   // return.
   if (relatedPosts?.length > 0) {
