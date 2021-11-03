@@ -8,7 +8,7 @@ tags:
   - node
 ---
 
-Let's write a little [Node.js](https://www.seancdavis.com/blog/wtf-is-node/) script that generates a series of 10 random markdown files in a `content` directory. We'll consider these to be blog posts, where each post has a `title`, `date`, and `author` displayed as frontmatter, and a `body` that gets rendered as the main content area of the file.
+Let's write a little [Node.js](/blog/wtf-is-node/) script that generates a series of 10 random markdown files in a `content` directory. We'll consider these to be blog posts, where each post has a `title`, `date`, and `author` displayed as frontmatter, and a `body` that gets rendered as the main content area of the file.
 
 Here's an example of the structure of a post object:
 
@@ -39,7 +39,7 @@ Quae molestiae earum et ipsum est ea nisi et. Perspiciatis reiciendis minus eos 
 
 ## Step 1: Setup
 
-First, let's start with a fresh project. I have [a handy guide](https://www.seancdavis.com/blog/new-javascript-project-setup/) that walks through the process of setting up [JavaScript](https://www.seancdavis.com/blog/wtf-is-javascript/) projects, if that's not super familiar to you.
+First, let's start with a fresh project. I have [a handy guide](/blog/new-javascript-project-setup/) that walks through the process of setting up [JavaScript](/blog/wtf-is-javascript/) projects, if that's not super familiar to you.
 
 For Step 4 in the setup, we're going to install the following dependencies:
 

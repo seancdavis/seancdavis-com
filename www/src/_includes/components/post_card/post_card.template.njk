@@ -1,6 +1,6 @@
-<div class="max-w-xl mb-6 bg-white shadow-sm">
+<div class="component--post-card max-w-xl mb-6 bg-white shadow-sm" data-layout="{{ layout }}">
   {% if image %}
-    <div class="mb-4 post-card--image-wrapper">
+    <div class="post-card--image-wrapper">
       {{ image | safe }}
     </div>
   {% endif %}
@@ -16,7 +16,7 @@
       </a>
     </h2>
     {% if data.description %}
-      <p class="mb-6">{{ data.description }}</p>
+      <p class="mb-6 post-card--description">{{ data.description }}</p>
     {% endif %}
     {% if author %}
       {{ author | safe }}
