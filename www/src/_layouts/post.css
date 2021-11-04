@@ -1,4 +1,8 @@
-.layout--post--body {
+.layout--post {
+  @apply bg-gray-100;
+}
+
+.layout--post--content {
   *:first-child {
     @apply mt-0;
   }
@@ -96,7 +100,7 @@
   /* --- Code Blocks --- */
   pre {
     @apply my-6
-      px-4
+      px-8
       py-6;
 
     &:not([class*="language-"]) {
@@ -194,9 +198,9 @@
 /* ---------------------------------------- | Medium */
 
 @screen md {
-  .layout--post--body {
+  .layout--post--content {
     pre {
-      @apply px-4;
+      @apply px-8;
 
       code {
         @apply block
