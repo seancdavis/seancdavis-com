@@ -60,6 +60,7 @@
       flex
       items-center
       justify-between
+      max-w-5xl
       mb-8
       opacity-0
       py-4
@@ -71,7 +72,8 @@
     @apply delay-300
       duration-1000
       list-none
-      m-0
+      mx-auto
+      my-0
       opacity-0
       text-center
       transition-all;
