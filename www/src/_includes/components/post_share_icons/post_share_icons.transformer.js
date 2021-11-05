@@ -8,19 +8,22 @@ const SocialLink = ({ icon, url, classes }) => {
 
 module.exports = ({ base_url, page_url, title, classes = "" }) => {
   const encodedTitle = encodeURIComponent(`${title} by @seancdavis29`);
-  const encodedUrl = encodeURIComponent(`${base_url}${page_url}`);
+  const fullUrl = `${base_url}${page_url}`;
+  const encodedUrl = encodeURIComponent(fullUrl);
 
   const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`;
-  const twitterIcon = SocialLink({ icon: "twitter", url: twitterUrl, classes });
+  let icons = [SocialLink({ icon: "twitter", url: twitterUrl, classes })];
 
   const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
-  const linkedinIcon = SocialLink({
-    icon: "linkedin",
-    url: linkedinUrl,
-    classes,
-  });
+  icons.push(SocialLink({ icon: "linkedin", url: linkedinUrl, classes }));
 
-  const githubIcon = SocialLink({ icon: "github", url: "/", classes });
+  const copyButtonProps = {
+    icon: "link",
+    text: fullUrl,
+    classes: `${classes} component--social-link text-green`,
+  };
+  const copyButton = new Component("copy_button", copyButtonProps);
+  icons.push(copyButton.render());
 
-  return { content: [twitterIcon, linkedinIcon, githubIcon].join("") };
+  return { content: icons.join("") };
 };

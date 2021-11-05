@@ -1,24 +1,20 @@
-import { toggleMobileMenu } from "./utils/toggle-mobile-menu"
+import { toggleMobileMenu } from "./utils/toggle-mobile-menu";
 
-import "./lib/analytics"
+import "./lib/analytics";
 
-import "../components/codepen/codepen.controller"
-// import { initBackButton } from "../components/back_button/back_button.controller"
-import { initParticles } from "../components/particles/particles.controller"
-import { initTypewriter } from "../components/typewriter/typewriter.controller"
+import "../components/codepen/codepen.controller";
+import "../components/copy_button/copy_button.controller";
+import { initParticles } from "../components/particles/particles.controller";
+import { initTypewriter } from "../components/typewriter/typewriter.controller";
 
 export const MobileMenu = {
-  toggle: toggleMobileMenu
-}
+  toggle: toggleMobileMenu,
+};
 
 export const Typewriter = {
-  init: initTypewriter
-}
+  init: initTypewriter,
+};
 
 export const Particles = {
-  init: initParticles
-}
-
-// onInit(() => {
-//   initBackButton()
-// })
+  init: initParticles,
+};
