@@ -2,8 +2,7 @@
   @apply bg-gray-100
     duration-300
     inline-block
-    mr-4
-    p-2
+    p-3
     relative
     rounded-full
     transition-all
@@ -29,6 +28,8 @@
     transform: scale(0.8);
 
     &:before {
+      @apply border-green;
+
       transform: scale(1.25);
     }
   }
