@@ -103,6 +103,12 @@
     margin-right: -2rem;
   }
 
+  /* --- Videos --- */
+  .component--video-tutorial {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
   /* --- Code Blocks --- */
   pre {
     @apply my-6
