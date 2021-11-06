@@ -1,38 +1,46 @@
 {% include "layout/head.njk" %}
 {% include "layout/header.njk" %}
 
-<div class="py-24">
-  <div class="container max-w-4xl relative">
-    {% back_button href="/blog", label="All Posts", classes="mb-2" %}
-    <h1 class="text-4xl leading-snug mb-3">{{ title }}</h1>
-    {% if rich_author %}
-      {% author author=rich_author, classes="mb-2" %}
-    {% endif %}
-    {% if description %}
-      <p class="text-2xl mb-0">{{ description }}</p>
-    {% endif %}
+<div class="pt-12 pb-24">
+  <div class="layout--post--body text-lg max-w-3xl mx-auto bg-white shadow-sm">
     {% if image %}
       <div class="mt-2">
         {% image path=image, lg="832px" %}
       </div>
     {% endif %}
-    {% if tags.length > 0 %}
-      <div class="mt-4 text-sm">
-        {% for tag in hashtags %}
-          {% tag tag=tag, classes="mr-1" %}
-        {% endfor %}
-      </div>
-    {% endif %}
-  </div>
-</div>
 
-<div class="py-24 bg-gray-100">
-  <div class="layout--post--body text-lg max-w-3xl mx-auto px-4">
-    {{ content | safe }}
+    <div class="p-8">
+      <div class="text-center">
+        {% if tags.length > 0 %}
+          <div class="mb-4 text-sm">
+            {% for tag in hashtags %}
+              {% tag tag=tag, classes="mr-1" %}
+            {% endfor %}
+          </div>
+        {% endif %}
+        <h1 class="text-4xl leading-snug mb-4 max-w-lg mx-auto">
+          {{ title }}
+        </h1>
+        {% if rich_author %}
+          {% author author=rich_author, classes="mb-4 justify-center" %}
+        {% endif %}
+        {% if description %}
+          <p class="text-xl mb-0 text-gray-700 max-w-2xl mx-auto">
+            {{ description }}
+          </p>
+        {% endif %}
+      </div>
+
+      <div class="my-12 h-1 bg-gray-200 w-24 mx-auto"></div>
+
+      <div class="layout--post--content">
+        {{ content | safe }}
+      </div>
+    </div>
   </div>
 
   {% if related_posts.length !== 0 %}
-    <div class="max-w-3xl mx-auto px-4 mt-12">
+    <div class="max-w-md sm:max-w-xl mx-auto px-4 mt-12">
       <h3 class="subheading">More Reading</h3>
 
       {% for post in collections.posts | get_related_posts(related_posts, tags, page.fileSlug, content) %}

@@ -1,4 +1,8 @@
-.layout--post--body {
+.layout--post {
+  @apply bg-gray-100;
+}
+
+.layout--post--content {
   *:first-child {
     @apply mt-0;
   }
@@ -58,18 +62,6 @@
     @apply w-full;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p:not(.filename),
-  ol,
-  ul {
-    @apply max-w-2xl;
-  }
-
   /* --- Lists --- */
 
   ul,
@@ -93,11 +85,26 @@
     }
   }
 
+  /* --- Images --- */
+  .component--post-image {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
+  /* --- Videos --- */
+  .component--video-tutorial {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
   /* --- Code Blocks --- */
   pre {
     @apply my-6
-      px-4
+      px-8
       py-6;
+
+    margin-left: -2rem;
+    margin-right: -2rem;
 
     &:not([class*="language-"]) {
       background-color: var(--color-code-block-bg);
@@ -133,6 +140,10 @@
     .table {
       @apply inline-block;
     }
+
+    & + .filename {
+      margin-top: -1.5rem;
+    }
   }
 
   .filename {
@@ -146,6 +157,8 @@
       text-black;
 
     background-color: var(--color-code-block-bg);
+    margin-left: -2rem;
+    margin-right: -2rem;
 
     > code {
       @apply bg-transparent
@@ -165,23 +178,35 @@
     }
   }
 
+  /* --- Callouts --- */
+
+  .component--callout {
+    margin-left: -2rem;
+    margin-right: -2rem;
+
+    .component--post-image {
+      @apply mx-0;
+    }
+  }
+
+  pre + .component--callout,
+  .component--post-image + .component--callout,
+  .component--callout + .filename,
+  .component--callout + pre,
+  .component--callout + .component--callout {
+    margin-top: -1.5rem;
+  }
+
   /* --- Block Quotes --- */
   blockquote {
-    @apply my-6;
+    @apply my-6
+      px-12;
 
-    > * {
-      @apply block
-        max-w-2xl
-        mx-4;
+    margin-left: -2rem;
+    margin-right: -2rem;
 
-      &:last-child {
-        @apply mb-0;
-      }
-    }
-
-    p {
-      @apply max-w-2xl
-        mx-auto;
+    > *:last-child {
+      @apply mb-0;
     }
 
     code {
@@ -194,22 +219,14 @@
 /* ---------------------------------------- | Medium */
 
 @screen md {
-  .layout--post--body {
+  .layout--post--content {
     pre {
-      @apply px-4;
+      @apply px-8;
 
       code {
         @apply block
           max-w-3xl
           mx-auto;
-      }
-    }
-
-    blockquote {
-      @apply px-6;
-
-      > * {
-        @apply mx-auto;
       }
     }
 
