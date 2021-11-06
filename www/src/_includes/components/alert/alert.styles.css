@@ -1,0 +1,49 @@
+@keyframes alert-slide-in {
+  from {
+    @apply opacity-0;
+    bottom: 0;
+  }
+  to {
+    @apply opacity-90;
+    bottom: 1rem;
+  }
+}
+
+@keyframes alert-slide-out {
+  0% {
+    @apply opacity-90;
+    bottom: 1rem;
+  }
+  99% {
+    @apply opacity-0;
+    bottom: 0;
+  }
+  100% {
+    @apply bottom-0
+      opacity-0;
+  }
+}
+
+#component--alert {
+  @apply bottom-0
+    opacity-0;
+  right: 1rem;
+  z-index: -1;
+
+  &.slide-in {
+    @apply z-50;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-name: alert-slide-in;
+  }
+
+  &.slide-out {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-name: alert-slide-out;
+  }
+}
+
+.component--alert--grid {
+  grid-template-columns: 1fr 1rem;
+}

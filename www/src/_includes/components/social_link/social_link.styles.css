@@ -1,0 +1,36 @@
+.component--social-link {
+  @apply bg-gray-100
+    duration-300
+    inline-block
+    p-3
+    relative
+    rounded-full
+    transition-all
+    w-12;
+
+  line-height: 0;
+
+  &:before {
+    @apply absolute
+      duration-300
+      h-full
+      left-0
+      rounded-full
+      top-0
+      transition-all
+      w-full;
+
+    border: 2px solid var(--color-gray-100);
+    content: " ";
+  }
+
+  &:hover {
+    transform: scale(0.8);
+
+    &:before {
+      @apply border-green;
+
+      transform: scale(1.25);
+    }
+  }
+}

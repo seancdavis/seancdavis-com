@@ -2,6 +2,31 @@
   @apply bg-gray-100;
 }
 
+/* ---------------------------------------- | Grid */
+
+.layout--post--grid {
+  > div:first-child,
+  > div:last-child {
+    display: none;
+  }
+}
+
+@media (min-width: 60rem) {
+  .layout--post--grid {
+    @apply gap-4
+    grid;
+
+    grid-template-columns: 1fr fit-content(48rem) 1fr;
+
+    > div:first-child,
+    > div:last-child {
+      display: block;
+    }
+  }
+}
+
+/* ---------------------------------------- | Content */
+
 .layout--post--content {
   *:first-child {
     @apply mt-0;
@@ -156,6 +181,9 @@
       text-sm
       text-black;
 
+    margin-left: -2rem;
+    margin-right: -2rem;
+
     background-color: var(--color-code-block-bg);
     margin-left: -2rem;
     margin-right: -2rem;
@@ -216,13 +244,9 @@
   }
 }
 
-/* ---------------------------------------- | Medium */
-
 @screen md {
   .layout--post--content {
     pre {
-      @apply px-8;
-
       code {
         @apply block
           max-w-3xl
