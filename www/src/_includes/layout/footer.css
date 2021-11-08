@@ -1,7 +1,13 @@
 .footer--newsletter {
-  background-image: url("/images/the-spinneret-logo.svg");
+  /* background-image: url("/images/the-spinneret-logo.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 35rem;
-  margin-bottom: -3rem;
+  margin-bottom: -3rem; */
+
+  background: linear-gradient(
+    180deg,
+    var(--color-white) 30%,
+    rgba(169, 240, 255, 1) 100%
+  );
 }
