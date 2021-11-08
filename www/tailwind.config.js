@@ -5,11 +5,11 @@ module.exports = {
       sm: "640px",
       md: "768px",
       lg: "1024px",
-      xl: "1280px"
+      xl: "1280px",
     },
     container: {
       center: true,
-      padding: "2rem"
+      padding: "2rem",
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1.5" }],
@@ -24,14 +24,14 @@ module.exports = {
       "6xl": ["3.75rem", { lineHeight: "1" }],
       "7xl": ["4.5rem", { lineHeight: "1" }],
       "8xl": ["6rem", { lineHeight: "1" }],
-      "9xl": ["8rem", { lineHeight: "1" }]
+      "9xl": ["8rem", { lineHeight: "1" }],
     },
     extend: {
       colors: {
         black: "var(--color-black)",
         blue: {
           DEFAULT: "var(--color-blue)",
-          dark: "var(--color-blue-dark)"
+          dark: "var(--color-blue-dark)",
         },
         gray: {
           blue: "var(--color-gray-blue)",
@@ -44,17 +44,18 @@ module.exports = {
           600: "var(--color-gray-600)",
           700: "var(--color-gray-700)",
           800: "var(--color-gray-800)",
-          900: "var(--color-gray-900)"
+          900: "var(--color-gray-900)",
         },
         green: {
-          DEFAULT: "var(--color-green)"
+          DEFAULT: "var(--color-green)",
+          light: "var(--color-green-light)",
         },
         lime: "var(--color-lime)",
         orange: "var(--color-orange)",
         pink: "var(--color-pink)",
         white: "var(--color-white)",
-        yellow: "var(--color-yellow)"
-      }
+        yellow: "var(--color-yellow)",
+      },
     },
     fontFamily: {
       headings: ["DM Serif Display", "serif"],
@@ -65,13 +66,13 @@ module.exports = {
         "Monaco",
         "Andale Mono",
         "Ubuntu Mono",
-        "monospace"
+        "monospace",
       ],
       sans: ["Lato", "sans-serif"],
       serif: ["Source Serif Pro", "serif"],
-      subheadings: ["Lato", "sans-serif"]
-    }
+      subheadings: ["Lato", "sans-serif"],
+    },
   },
   variants: {},
-  plugins: []
-}
+  plugins: [],
+};

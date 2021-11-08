@@ -1,0 +1,8 @@
+@layer components {
+  @screen md {
+    .page--content {
+      padding-bottom: 22rem;
+      margin-bottom: -16rem;
+    }
+  }
+}
