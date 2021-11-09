@@ -1,17 +1,38 @@
-.component--post-card[data-layout="horizontal"] {
-  @apply max-w-md;
-
-  .post-card--description {
-    display: none;
-  }
+.component--post-card.layout-horizontal {
+  @apply max-w-lg;
 }
 
 @screen sm {
-  .component--post-card[data-layout] {
+  .component--post-card.layout {
     @apply max-w-xl;
   }
 
-  .component--post-card[data-layout="horizontal"] {
+  .component--post-card.layout-horizontal,
+  .component--post-card.sm\:layout-horizontal {
+    @apply grid;
+
+    grid-template-columns: 12rem 1fr;
+  }
+}
+
+@screen md {
+  .component--post-card.md\:layout-vertical {
+    @apply block;
+  }
+
+  .component--post-card.md\:layout-horizontal {
+    @apply grid;
+
+    grid-template-columns: 12rem 1fr;
+  }
+}
+
+@screen lg {
+  .component--post-card.lg\:layout-vertical {
+    @apply block;
+  }
+
+  .component--post-card.lg\:layout-horizontal {
     @apply grid;
 
     grid-template-columns: 12rem 1fr;

@@ -1,7 +1,7 @@
 const lodash = require("lodash");
 const { Component } = require("../../../../utils/shortcodes/component");
 
-module.exports = ({ post, layout = "vertical" }) => {
+module.exports = ({ post, classes = "mb-6" }) => {
   const tagData = lodash.get(post, "data.hashtags") || [];
 
   const tags = tagData
@@ -31,9 +31,9 @@ module.exports = ({ post, layout = "vertical" }) => {
 
   return {
     ...post,
+    classes,
     author,
     image,
     tags,
-    layout,
   };
 };
