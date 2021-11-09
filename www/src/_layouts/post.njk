@@ -1,8 +1,8 @@
 {% include "layout/head.njk" %}
 {% include "layout/header.njk" %}
 
-<div class="pt-12 pb-24">
-  <div class="layout--post--grid">
+<div class="py-12">
+  <div class="layout--post--grid mb-12">
     {# --- Left Column --- #}
     <div><!-- --></div>
 
@@ -42,16 +42,6 @@
           </div>
         </div>
       </div>
-
-      {% if related_posts.length !== 0 %}
-        <div class="max-w-md sm:max-w-xl mx-auto px-4 mt-12">
-          <h3 class="subheading">More Reading</h3>
-
-          {% for post in collections.posts | get_related_posts(related_posts, tags, page.fileSlug, content) %}
-            {% post_card post=post, layout="horizontal" %}
-          {% endfor %}
-        </div>
-      {% endif %}
     </div>
 
     {# --- Right Column --- #}
@@ -65,6 +55,19 @@
       </div>
     </div>
   </div>
+
+  {% if related_posts.length !== 0 %}
+    <div class="max-w-md md:max-w-xl lg:max-w-7xl mx-auto px-4 py-12">
+      <h3 class="subheading">Keep Reading</h3>
+
+      <div class="grid gap-4 grid-cols-1 lg:grid-cols-3">
+        {% for post in collections.posts | get_related_posts(related_posts, tags, page.fileSlug, content) %}
+          {% post_card post=post, classes="mb-0 md:layout-horizontal lg:layout-vertical" %}
+        {% endfor %}
+      </div>
+
+    </div>
+  {% endif %}
 </div>
 
 {% include "layout/footer.njk" %}
