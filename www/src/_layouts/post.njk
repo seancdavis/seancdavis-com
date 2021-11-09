@@ -56,6 +56,23 @@
     </div>
   </div>
 
+  {# --- Connect --- #}
+
+  <div class="container text-center py-8">
+    <h3 class="subheading">Let's Connect</h3>
+    {% social_link
+        link={ icon: "twitter", url: "https://twitter.com/messages/compose?recipient_id=23583938" },
+        classes="mx-3 bg-white shadow-sm" %}
+    {% social_link
+        link={ icon:"linkedin", url: "https://www.linkedin.com/in/seancdavis29/" },
+        classes="mx-3 bg-white shadow-sm" %}
+    {% social_link
+        link={ icon:"email", url: "mailto:hello@seancdavis.com" },
+        classes="mx-3 bg-white shadow-sm" %}
+  </div>
+
+  {# --- Related Articles --- #}
+
   {% if related_posts.length !== 0 %}
     <div class="max-w-md md:max-w-xl lg:max-w-7xl mx-auto px-4 py-12">
       <h3 class="subheading">Keep Reading</h3>
