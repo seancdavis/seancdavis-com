@@ -8,6 +8,10 @@ tags:
   - gulp
   - javascript
 image: /blog/default/default-yellow-02.png
+related_posts:
+  - compile-es6-code-gulp-babel-part-2
+  - compile-es6-code-gulp-babel-part-3
+  - compile-es6-code-gulp-babel-part-4
 ---
 
 Welcome to the five-part series on compiling and concatenating ES6 code with Gulp and Babel. In this first part we're going to setup the project and learn how to build a simple Gulp script that compiles ES6 code so it can be supported by older browsers.

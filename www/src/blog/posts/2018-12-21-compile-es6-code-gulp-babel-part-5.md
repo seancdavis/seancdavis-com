@@ -8,6 +8,7 @@ tags:
   - gulp
   - javascript
 image: /blog/default/default-yellow-03.png
+related_posts: []
 ---
 
 This is the last of five parts in the series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/blog/compile-es6-code-gulp-babel-part-1/), I recommend doing so. This last piece is just some icing on the top layer of a real beefy cake.
