@@ -80,7 +80,7 @@ exports.getReferencedPosts = (posts, content) => {
   const links = [...content.matchAll(linkPattern)];
   // link[0] would be the full matching URL, but we just want the basename
   // segment (slug).
-  let slugs = links.map((link) => link[1]);
+  let slugs = [...new Set(links.map((link) => link[1]))];
   // Max out at three posts.
   if (slugs.length > 3) slugs = shuffle(slugs).slice(0, 3);
   return exports.getPostsBySlugs(posts, slugs);

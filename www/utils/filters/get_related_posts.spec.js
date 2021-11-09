@@ -137,6 +137,16 @@ describe("getReferencedPosts()", () => {
     expect(firstResults).not.toEqual(wrongResult);
     expect(firstResults.filter((x) => x).length).toBeGreaterThan(0);
   });
+  it("does not duplicate posts", () => {
+    const content = `
+      <p>Lorem ipsum ...</p>
+      <a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>
+      <a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>
+      <a href="/blog/${postsFixture[1].fileSlug}/">Post #1</a>
+    `;
+    const result = getReferencedPosts(postsFixture, content);
+    expect(result.length).toEqual(2);
+  });
 });
 
 /* --- getRelatedPosts() --- */
