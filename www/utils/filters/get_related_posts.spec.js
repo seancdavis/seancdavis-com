@@ -137,6 +137,16 @@ describe("getReferencedPosts()", () => {
     expect(firstResults).not.toEqual(wrongResult);
     expect(firstResults.filter((x) => x).length).toBeGreaterThan(0);
   });
+  it("does not duplicate posts", () => {
+    const content = `
+      <p>Lorem ipsum ...</p>
+      <a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>
+      <a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>
+      <a href="/blog/${postsFixture[1].fileSlug}/">Post #1</a>
+    `;
+    const result = getReferencedPosts(postsFixture, content);
+    expect(result.length).toEqual(2);
+  });
 });
 
 /* --- getRelatedPosts() --- */
@@ -234,6 +244,32 @@ describe("getRelatedPosts()", () => {
         postsFixture[2],
         postsFixture[3],
       ]);
+    });
+  });
+  it("will not duplicate objects", () => {
+    // Also a similar pattern, but use a scenario where we'll have to protect
+    // against duplicates.
+    const content = `
+      <p>Lorem ipsum ...</p>
+      <a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>
+      <a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>
+      <a href="/blog/${postsFixture[1].fileSlug}/">Post #1</a>
+    `;
+    Array.from({ length: 100 }, () => {
+      let result = getRelatedPosts(
+        postsFixture,
+        undefined,
+        ["tag-b"], // this is only applied to the first one.
+        undefined,
+        content
+      );
+      result = result.sort((a, b) => (a.fileSlug > b.fileSlug ? 1 : -1));
+      // We have three results, but only see the references posts once.
+      expect(result.length).toEqual(3);
+      expect(result[0]).toEqual(postsFixture[0]);
+      expect(result[1]).toEqual(postsFixture[1]);
+      expect(result[2]).not.toEqual(postsFixture[0]);
+      expect(result[2]).not.toEqual(postsFixture[1]);
     });
   });
 });
