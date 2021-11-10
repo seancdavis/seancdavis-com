@@ -1,0 +1,15 @@
+@import "instantsearch.css/themes/reset.css";
+
+.layout--search {
+  .ais-Hits {
+    @apply container;
+  }
+
+  .ais-Hits-list {
+    @apply gap-4
+      grid
+      grid-cols-1
+      md:grid-cols-2
+      xl:grid-cols-3;
+  }
+}

@@ -1,3 +1,4 @@
+import "./utils/search";
 import { toggleMobileMenu } from "./utils/toggle-mobile-menu";
 
 import "./lib/analytics";
