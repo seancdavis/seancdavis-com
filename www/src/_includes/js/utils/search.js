@@ -14,6 +14,10 @@ onInit(() => {
   const search = instantsearch({
     indexName: "netlify_e4573f7c-db71-4713-864b-2a907bff675a_main_all",
     searchClient,
+    searchFunction: function (helper) {
+      if (helper.state.query === "") return;
+      return helper.search();
+    },
   });
 
   search.addWidgets([
