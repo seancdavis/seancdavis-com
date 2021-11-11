@@ -19,6 +19,7 @@ onInit(() => {
   search.addWidgets([
     searchBox({
       container: "#search-box",
+      autofocus: true,
     }),
 
     hits({

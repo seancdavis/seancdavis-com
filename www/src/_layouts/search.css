@@ -1,8 +1,28 @@
 @import "instantsearch.css/themes/reset.css";
 
 .layout--search {
-  .ais-Hits {
-    @apply container;
+  .ais-SearchBox {
+    @apply max-w-4xl;
+  }
+
+  .ais-SearchBox-form {
+    @apply grid;
+
+    grid-template-columns: 1fr 4rem 4rem;
+  }
+
+  .ais-SearchBox-input {
+    @apply p-4;
+  }
+
+  .ais-SearchBox-reset,
+  .ais-SearchBox-submit {
+    @apply mx-auto
+      w-6;
+
+    svg path {
+      fill: var(--color-black);
+    }
   }
 
   .ais-Hits-list {
