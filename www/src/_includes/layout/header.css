@@ -1,7 +1,8 @@
 /* --- Desktop --- */
 
 .layout--header--desktop-link {
-  @apply font-bold
+  @apply block
+    font-bold
     font-sans
     p-2
     relative
