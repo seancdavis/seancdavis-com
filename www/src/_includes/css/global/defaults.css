@@ -3,6 +3,14 @@
     text-black;
 }
 
+body {
+  @apply flex
+    flex-col
+    justify-between;
+
+  min-height: 100vh;
+}
+
 h1,
 h2,
 h3,
