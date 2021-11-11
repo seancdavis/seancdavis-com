@@ -13,6 +13,13 @@
           <a href="{{ item.url }}" class="layout--header--desktop-link">{{ item.label }}</a>
         </li>
       {% endfor %}
+
+      <li class="m-0">
+        <a href="/search" class="layout--header--desktop-link w-9">
+          {% svg "search" %}
+          <span class="visible-hidden">search</span>
+        </a>
+      </li>
     </ul>
 
     {# --- Mobile Nav Trigger --- #}
@@ -42,6 +49,13 @@
             <a href="{{ item.url }}" class="layout--header--mobile-link">{{ item.label }}</a>
           </li>
         {% endfor %}
+
+        <li class="mb-0">
+          <a href="/search" class="layout--header--mobile-link flex items-center justify-center">
+            <span class="inline-block mr-3 w-6">{% svg "search" %}</span>
+            <span class="inline-block">Search</span>
+          </a>
+        </li>
       </ul>
     </div>
 
