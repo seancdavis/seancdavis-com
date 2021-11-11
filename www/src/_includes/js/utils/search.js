@@ -6,13 +6,10 @@ onInit(() => {
   const el = document.getElementById("search-page-content");
   if (!el) return;
 
-  const searchClient = algoliasearch(
-    "YBEAPU4J0W",
-    "40923c0e59f7d0b4a3bb6a6708bfb069"
-  );
+  const searchClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_API_KEY);
 
   const search = instantsearch({
-    indexName: "netlify_e4573f7c-db71-4713-864b-2a907bff675a_main_all",
+    indexName: ALGOLIA_INDEX_NAME,
     searchClient,
     searchFunction: function (helper) {
       if (helper.state.query === "") return;
