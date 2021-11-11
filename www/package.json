@@ -25,7 +25,7 @@
     "http-server": "^13.0.0",
     "instantsearch.css": "^7.4.5",
     "instantsearch.js": "^4.33.1",
-    "jest": "^27.0.4",
+    "jest": "^27.3.1",
     "jest-image-snapshot": "^4.5.0",
     "jest-puppeteer": "^6.0.0",
     "lodash": "^4.17.21",
