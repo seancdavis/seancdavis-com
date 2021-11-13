@@ -111,7 +111,7 @@
   }
 
   /* --- Images --- */
-  .component--post-image {
+  .component--post-image:not([class*="mx-"]) {
     margin-left: -2rem;
     margin-right: -2rem;
   }
