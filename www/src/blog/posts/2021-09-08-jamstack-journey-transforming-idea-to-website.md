@@ -73,7 +73,7 @@ After going through the design phase, you're left with the _deliverables_ — ar
 And this is an example of what a style tiles spec might look like:
 
 {% post_image
-    src="/blog/210908/unmute--style-tiles.png"
+    src="/blog/210908/unmute--style-tiles.png",
     alt="An example of style tiles — styles that apply to all (or most) pages on the site" %}
 
 _(This example is from [Unmute](https://www.unmutedstories.com/), a side project I'm involved with.)_
