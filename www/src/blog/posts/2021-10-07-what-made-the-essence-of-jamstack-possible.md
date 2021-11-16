@@ -96,4 +96,5 @@ This post was motivated by a conversation I had with our CEO, [Ohad Eder-Pressma
 
 {% youtube_embed
     id="FepIBME2BpA",
-    title="What Made Jamstack Possible" %}
+    title="What Made Jamstack Possible",
+    image="/blog/211007/211007-essence-of-jamstack.png" %}
