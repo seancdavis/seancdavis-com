@@ -60,7 +60,7 @@ Even given the structure of the first rule, there's still a very good likelihood
 
 Therefore, I use some additional logic to decide how to further structure a potentially gigantic directory of components.
 
-Many times a component is only used in one place, by one other component. In that case, it isn’t necessary for that component to be exposed right in the primary components directory. Instead, it could be nested within the directory of the component that uses it.
+Many times a component is only used in one place, by one other component. In that case, it isn't necessary for that component to be exposed right in the primary components directory. Instead, it could be nested within the directory of the component that uses it.
 
 In other words, **the top-level of a directory of components should be in use _either_ by more than one other component _or_ by some other _type_ of component**.
 

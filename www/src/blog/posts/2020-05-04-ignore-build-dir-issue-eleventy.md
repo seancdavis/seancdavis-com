@@ -27,7 +27,7 @@ Unhandled rejection in promise ([object Promise]): (more in DEBUG output)
 
 The reason this occurs is likely because [Eleventy is trying to process files in the `node_modules` directory](https://github.com/11ty/eleventy/issues/318#issuecomment-449766302):
 
-> Paths listed in your project’s `.gitignore` file are automatically ignored ...
+> Paths listed in your project's `.gitignore` file are automatically ignored ...
 >
 > If you do not have a `.gitignore` file in your project, the `node_modules` directory will be ignored automatically. This makes new Eleventy projects a little easier and helps developers new to Eleventy get ramped up easier too.
 

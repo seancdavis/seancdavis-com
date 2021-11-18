@@ -29,7 +29,7 @@ Side projects are a great way to change the pace of life. There's an article I r
 
 Side projects can be truly refreshing.
 
-It’s easy to feel like you aren’t in control over what you do during the day. Full-time jobs can be demanding, typically relying on many other people for any given portion of it. And it can be difficult to pull away from undesirable circumstances during the day when you (and your partner, family, etc.) rely on the income that job provides.
+It's easy to feel like you aren't in control over what you do during the day. Full-time jobs can be demanding, typically relying on many other people for any given portion of it. And it can be difficult to pull away from undesirable circumstances during the day when you (and your partner, family, etc.) rely on the income that job provides.
 
 But a side project can be a relief to the demands of everyday work because the bounds of a side project are (relatively) limitless. If you want to be the boss, great, go be the boss. Shoot, you could do the same thing you do all day at work, but having full control and ownership of the thing you create can feel so refreshing. I build websites every day at work. And I still build websites at home because I love it and I get to do it exactly how I want and no one can tell me otherwise.
 
@@ -37,7 +37,7 @@ Side projects can be anything you want them to be, and that can be a welcome bre
 
 ## Discovery
 
-A side project can also be a great space in which to learn something new. Although I didn't _need_ another project, earlier this year I started picking up candle making. That’s not because I'm going to be the next great candlemaker and not because it's going to make me a ton of money (or _any_, for that matter). But because it gets my brain moving in a different, more methodical way, and that's desirable to me.
+A side project can also be a great space in which to learn something new. Although I didn't _need_ another project, earlier this year I started picking up candle making. That's not because I'm going to be the next great candlemaker and not because it's going to make me a ton of money (or _any_, for that matter). But because it gets my brain moving in a different, more methodical way, and that's desirable to me.
 
 Another way to look at this could be to create a playground — a sandbox, so to speak — that serves your day job. In the website-building industry, the tools we have available to us are constantly evolving. There's virtually no way to keep up. I occasionally use a side project to try something new and if it proves valuable, I take my findings back to my day-job team.
 
@@ -61,4 +61,4 @@ But, to me, we use constructs like money and wealth to mask what we're really af
 
 Side projects are an incredibly important part of my life. I work on each one for a different reason, but every project I work on provides me _at least_ one of the four benefits listed above. I find it crucial to ensure that every side project provides me some personal benefit. Otherwise, why work on it?
 
-And that’s what I’ll leave you with — if you stay guided on your side projects, you will ensure that each project plays the role it should play, while providing you with exactly what you seek from it.
+And that's what I'll leave you with — if you stay guided on your side projects, you will ensure that each project plays the role it should play, while providing you with exactly what you seek from it.

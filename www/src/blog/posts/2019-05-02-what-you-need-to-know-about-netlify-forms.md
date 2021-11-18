@@ -10,9 +10,9 @@ tags:
 image: /blog/default/default-yellow-02.png
 ---
 
-Form Handling is an extremely powerful component within [Netlify’s](/blog/wtf-is-netlify/) product, as it provides a way to accept dynamic data from users on a static site.
+Form Handling is an extremely powerful component within [Netlify's](/blog/wtf-is-netlify/) product, as it provides a way to accept dynamic data from users on a static site.
 
-It’s like [Formspree](https://formspree.io/) or [FormKeep](https://formkeep.com/), but I prefer Netlify's forms feature because it _just works_. There's no signing up for a third-party service. You just add a little markup to your site and — _Voila!_ — you have a form that sends its submissions to Netlify, which then stores the form data on your behalf. An added benefit is that Netlify currently offers 100 submissions per month, sourced from an unlimited number of forms, free of charge. That’s a better free tier than either Formspree or FormKeep.
+It's like [Formspree](https://formspree.io/) or [FormKeep](https://formkeep.com/), but I prefer Netlify's forms feature because it _just works_. There's no signing up for a third-party service. You just add a little markup to your site and — _Voila!_ — you have a form that sends its submissions to Netlify, which then stores the form data on your behalf. An added benefit is that Netlify currently offers 100 submissions per month, sourced from an unlimited number of forms, free of charge. That's a better free tier than either Formspree or FormKeep.
 
 If you are building a truly static site — where all the [HTML](/blog/wtf-is-html/) markup is contained within HTML files, rather than being generated dynamically by JavaScript (JS/) — it really is _that easy_ to work with Netlify forms.
 
@@ -26,15 +26,15 @@ Alright, that's enough of the boring intro. Let's dig in ...
 
 ## 1. Forms are processed when the code is deployed.
 
-If you’ve successfully deployed a form, you’ll notice that the form appears in a list of forms for your site within the Netlify UI (`https://app.netlify.com/sites/[your_site]/forms`). This is because Netlify processes your forms after building and before deploying your code.
+If you've successfully deployed a form, you'll notice that the form appears in a list of forms for your site within the Netlify UI (`https://app.netlify.com/sites/[your_site]/forms`). This is because Netlify processes your forms after building and before deploying your code.
 
 Netlify does this by looking for `data-netlify` and `name` attributes on forms generated within your built HTML (or JS) files. In other words, you register a new form by simply including the correct markup in your code.
 
 This seems super obvious, but it provides the foundational knowledge necessary to help you understand and debug issues you run into along the way.
 
-## 2. A form’s `method` and `action` are important.
+## 2. A form's `method` and `action` are important.
 
-Consider a static site in which every page is a flat HTML file (thanks to frameworks like Gatsby, that’s not how all static sites work). If those files are uploaded to a web-accessible server or [CDN](https://en.wikipedia.org/wiki/Content_delivery_network), then sending a [GET request](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) to any HTML page on your site would result in the HTML file's contents in response.
+Consider a static site in which every page is a flat HTML file (thanks to frameworks like Gatsby, that's not how all static sites work). If those files are uploaded to a web-accessible server or [CDN](https://en.wikipedia.org/wiki/Content_delivery_network), then sending a [GET request](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) to any HTML page on your site would result in the HTML file's contents in response.
 
 That makes sense, right? That's how the web works.
 
@@ -44,34 +44,34 @@ Well, that would depend on the server (or CDN) on which your site is hosted. But
 
 But what Netlify does is listen for POST requests to your domain, and then it processes those requests as form submissions. This leads to two important notes:
 
-1. A form _must_ send a POST request. That means either using a `method=“POST"` attribute on the form and submitting directly, or by ensuring you are sending a POST request via [AJAX](<https:en.wikipedia.org_wiki_Ajax_(programming)>)/[XHR](https://en.wikipedia.org/wiki/XMLHttpRequest).
+1. A form _must_ send a POST request. That means either using a `method="POST"` attribute on the form and submitting directly, or by ensuring you are sending a POST request via [AJAX](<https:en.wikipedia.org_wiki_Ajax_(programming)>)/[XHR](https://en.wikipedia.org/wiki/XMLHttpRequest).
 2. The `action` attribute on the form is the path to which you are going to submit your form. This can be any path. The attribute can also be omitted (which means it will be submitted to the current URL). The value of the `action` attribute simply **determines where the user will end up after the form is submitted**. This is only relevant if you are submitting the form via HTTP (not AJAX/XHR).
 
 ## 3. There is a spam filter!
 
-Netlify uses [Akismet](https://akismet.com/) to filter entries to the form. This is beneficial in that it provides additional filtering beyond what a [ReCAPTCHA](https://en.wikipedia.org/wiki/ReCAPTCHA) or [honeypot](<https://en.wikipedia.org/wiki/Honeypot_(computing)>) field can provide. It also won’t count spam entries toward your total submissions for the month.
+Netlify uses [Akismet](https://akismet.com/) to filter entries to the form. This is beneficial in that it provides additional filtering beyond what a [ReCAPTCHA](https://en.wikipedia.org/wiki/ReCAPTCHA) or [honeypot](<https://en.wikipedia.org/wiki/Honeypot_(computing)>) field can provide. It also won't count spam entries toward your total submissions for the month.
 
-The downside is that **you need to use real data when testing forms**. It’s so easy to want to put in bogus data. But if you submit too many forms too fast, or if you use repeated or obviously fake content, you may not see those entries appear on the back-end. However, on the front-end of the site it will appear as though the submission went through. And unfortunately, there is no visibility into what gets picked up by the spam filter without talking to Netlify’s support team. This means entries that you submitted may appear to be lost in the ether forever.
+The downside is that **you need to use real data when testing forms**. It's so easy to want to put in bogus data. But if you submit too many forms too fast, or if you use repeated or obviously fake content, you may not see those entries appear on the back-end. However, on the front-end of the site it will appear as though the submission went through. And unfortunately, there is no visibility into what gets picked up by the spam filter without talking to Netlify's support team. This means entries that you submitted may appear to be lost in the ether forever.
 
 ## 4. JS-rendered forms require an extra field.
 
 Netlify adds a hidden field to each static HTML form after the build is completed (and before it is deployed). This field is named `form-name` and contains the value of the `name` attribute on the form. Netlify uses the value of the `form-name` field to know in which form to place the entry.
 
-Netlify doesn’t handle this when the form is rendered via JS because that happens dynamically and Netlify can’t insert itself in that process.
+Netlify doesn't handle this when the form is rendered via JS because that happens dynamically and Netlify can't insert itself in that process.
 
-So, if you are sending a JS(X) form submission via HTTP, you’d have to include a hidden field like this:
+So, if you are sending a JS(X) form submission via HTTP, you'd have to include a hidden field like this:
 
 ```html
 <input name="form-name" value="Netlify Rocks" type="hidden" />
 ```
 
-Or, if you are submitting via AJAX/XHR, you’d have to add that key-value pair to the data you are posting.
+Or, if you are submitting via AJAX/XHR, you'd have to add that key-value pair to the data you are posting.
 
 ## 5. ReCAPTCHA is tricky for JS-rendered forms.
 
 Netlify [offers a ReCAPTCHA out of the box](https://www.netlify.com/docs/form-handling/#explicit-recaptcha-2), which is super awesome. Within a static HTML page, all you have to do is add the `data-netlify-recaptcha="true"` attribute to the form **and** to a `<div>` inside the form in which you want the ReCAPTCHA to appear.
 
-However, if using a JS-rendered form, because Netlify can’t inject itself during the rendering process, the default ReCAPTCHA is not going to work. Fortunately, you can provide your own, [but it takes some extra setup](https://www.netlify.com/docs/form-handling#custom-recaptcha-2-with-your-own-settings). And, if submitting via AJAX/XHR, it requires that you send the `g-recaptcha-response` field’s value along with your form data.
+However, if using a JS-rendered form, because Netlify can't inject itself during the rendering process, the default ReCAPTCHA is not going to work. Fortunately, you can provide your own, [but it takes some extra setup](https://www.netlify.com/docs/form-handling#custom-recaptcha-2-with-your-own-settings). And, if submitting via AJAX/XHR, it requires that you send the `g-recaptcha-response` field's value along with your form data.
 
 ## 6. Submissions sent via JS must be encoded.
 
@@ -96,8 +96,8 @@ Lastly, although not mentioned in the documentation, from what I can tell, the n
 
 ---
 
-So there you have it. Netlify’s forms are an extremely powerful feature. They provide a way to accept dynamic data from users on your static sites, which could otherwise be a tricky challenge to overcome. There’s a lot of (really good) documentation, but some of the crucial elements can get lost in the weeds.
+So there you have it. Netlify's forms are an extremely powerful feature. They provide a way to accept dynamic data from users on your static sites, which could otherwise be a tricky challenge to overcome. There's a lot of (really good) documentation, but some of the crucial elements can get lost in the weeds.
 
-I hope these items I’ve called out have either helped you debug or helped get you started building Netlify forms.
+I hope these items I've called out have either helped you debug or helped get you started building Netlify forms.
 
 Now go capture some user data!

@@ -69,6 +69,6 @@ That's a brushstroke on the surface of _closures_. There are _so many_ more arti
 While a quick google search will yield an abundance of options, here are a few of my favorites:
 
 - [Closures - JavaScript (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures). It's boring, official documentation, but I really like MDN references.
-- [What the fork is a closure?](https://whatthefork.is/closure) (Dan’s JavaScript Glossary)
+- [What the fork is a closure?](https://whatthefork.is/closure) (Dan's JavaScript Glossary)
 - [A simple guide to help you understand closures in JavaScript](https://medium.com/@prashantramnyc/javascript-closures-simplified-d0d23fa06ba4) (Prashant Ram)
 - [Master the JavaScript Interview: What is a Closure?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36) (JavaScript Scene)

@@ -35,7 +35,7 @@ The way this typically works is that you provide some form of _spec_ to a design
 
 ### Delivering a Good Spec
 
-The “spec” you provide the designer should be more then, “I need a website.” Before you bring a designer into your project, consider spending time to gather the following:
+The "spec" you provide the designer should be more then, "I need a website." Before you bring a designer into your project, consider spending time to gather the following:
 
 - A list of pages on the site, along with the purpose of each page. Bonus points if you also include content, as you'll reduce the variability of the design when it is transformed into code.
 - Brand assets or other visual specifications you have — logos, colors, typography, etc.

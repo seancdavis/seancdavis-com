@@ -14,9 +14,9 @@ Here they are, in order, with my commentary and with links to the original posts
 
 ## #1: We are gatekeeping our industry
 
-> Coding is hard to learn because we’ve made it that way.
+> Coding is hard to learn because we've made it that way.
 >
-> Without the gatekeeping there would be a lot more people in the industry and we wouldn’t be in such high demand.
+> Without the gatekeeping there would be a lot more people in the industry and we wouldn't be in such high demand.
 >
 > \- [@laurieontech](https://twitter.com/laurieontech/status/1377064010621857792)
 
@@ -36,7 +36,7 @@ Still, I took that job. (I wanted the open door.) I left it after two years, and
 >
 > Almost always they can be coached.
 >
-> The developers you don’t want to work with are typically the ones that are unable to collaborate.
+> The developers you don't want to work with are typically the ones that are unable to collaborate.
 >
 > \- [@laurieontech](https://twitter.com/laurieontech/status/1377064340734554119)
 
@@ -50,7 +50,7 @@ Most people want to be good at their jobs. Remember that.
 
 ## #3: Someone else's ego will make your job harder
 
-> 99% of the worst parts of being a developer have to do with someone else’s ego.
+> 99% of the worst parts of being a developer have to do with someone else's ego.
 >
 > E.g. interviews, a list of tech you "have to" learn, criticism of perfectly reasonable code, etc.
 >
@@ -68,7 +68,7 @@ As someone in that senior role, don't be afraid to be vulnerable. And don't feel
 >
 > You will break things more often than you make them work.
 >
-> If you can push forward towards a solution then you’ll like being a dev just fine.
+> If you can push forward towards a solution then you'll like being a dev just fine.
 >
 > \- [@laurieontech](https://twitter.com/laurieontech/status/1377065065845825540)
 
@@ -82,7 +82,7 @@ And, seriously, everyone makes mistakes. The worst ones turn into the best stori
 
 ## #5: School is for theory and interview questions
 
-> Computer science programs don’t do a great job of teaching people how to be developers in real live companies.
+> Computer science programs don't do a great job of teaching people how to be developers in real live companies.
 >
 > People with non-traditional backgrounds often have more relevant skills.
 >
@@ -102,9 +102,9 @@ Secondary education is formal and theoretical. The real world is not. Your backg
 
 > Tech twitter is a horrendous metric for determining what is popular.
 >
-> It’ll show you what’s bleeding edge, and what might be up and coming in JavaScript.
+> It'll show you what's bleeding edge, and what might be up and coming in JavaScript.
 >
-> Beyond that better to tune it out if you’re trying to pick what to learn.
+> Beyond that better to tune it out if you're trying to pick what to learn.
 >
 > \- [@laurieontech](https://twitter.com/laurieontech/status/1377066084528951298)
 
@@ -116,7 +116,7 @@ Secondary education is formal and theoretical. The real world is not. Your backg
 >
 > All those awesome portfolio projects?
 >
-> Ya, you’re doing way more there than your average feature or bug fix.
+> Ya, you're doing way more there than your average feature or bug fix.
 >
 > \- [@laurieontech](https://twitter.com/laurieontech/status/1377067490950451202)
 
@@ -128,11 +128,11 @@ It's sounds fun, and it _is_ fun to get started. But it becomes dull and bulky a
 
 And that's okay. But set your expectations appropriately. Most of your time is going to be maintaining and improving, not starting from scratch. And that's good! The times in my career I learned the most were when I was forced to work with messy codebases that someone else created.
 
-## #8: The more “senior” you get, the less you’ll code.
+## #8: The more "senior" you get, the less you'll code.
 
-> The more “senior” you get, the less you’ll code.
+> The more "senior" you get, the less you'll code.
 >
-> You’ll sit in meetings, create architectures, help other debug, do research on new potential tech, etc.
+> You'll sit in meetings, create architectures, help other debug, do research on new potential tech, etc.
 >
 > \- [@laurieontech](https://twitter.com/laurieontech/status/1377068412392898560)
 
@@ -150,9 +150,9 @@ If you want to keep writing code, you can absolutely do that. Your career option
 
 ## #9: You can be a generalist or a specialist
 
-> You’re never going to be an expert in everything, or even most things.
+> You're never going to be an expert in everything, or even most things.
 >
-> Companies that want you to be a hero and “just make it work” are in for a world of hurt when stuff breaks.
+> Companies that want you to be a hero and "just make it work" are in for a world of hurt when stuff breaks.
 >
 > Find the expert when you need them.
 >
@@ -164,9 +164,9 @@ Smaller companies often want generalists — folks who can be relatively success
 
 But, if you're going to generalize (which is fine), it's important to know when something is out of your wheelhouse. Or even when it would be more valuable to hire an expert to help. For example, I know a lot about SEO. But not enough. And I don't really like doing it. So, whenever it comes up in conversation, I typically suggest we hire someone to help do research and run reports. Someone who does that all day every day. Because we'll get much more value that way.
 
-## #10: The best tech companies are rarely the ones you’ve heard of
+## #10: The best tech companies are rarely the ones you've heard of
 
-> The best tech companies are rarely the ones you’ve heard of.
+> The best tech companies are rarely the ones you've heard of.
 >
 > \- [@laurieontech](https://twitter.com/laurieontech/status/1377069423824097281)
 

@@ -12,7 +12,7 @@ attribution:
 
 Life as a human is hard.
 
-We’re constantly at work, attempting to:
+We're constantly at work, attempting to:
 
 - Earn enough money to be comfortable
 - Create and maintain loving human relationships
@@ -25,6 +25,6 @@ The list goes on. And on. And on.
 
 The role of _being a good human_ will never cease to demand more.
 
-You’re doing a great job! Believe in yourself and keep pushing yourself to do better.
+You're doing a great job! Believe in yourself and keep pushing yourself to do better.
 
-But don’t forget to take a break from it all and shove a [Big Mac](https://en.wikipedia.org/wiki/Big_Mac) in your face every once in awhile.
+But don't forget to take a break from it all and shove a [Big Mac](https://en.wikipedia.org/wiki/Big_Mac) in your face every once in awhile.

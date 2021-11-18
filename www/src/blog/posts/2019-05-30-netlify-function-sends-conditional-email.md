@@ -11,51 +11,51 @@ image: /blog/default/default-yellow-02.png
 
 It seems that the whole _conditional contact form email notification_ is immortal.
 
-It goes like this: Your site has a contact form, which collects basic information about the user filling out the form. One such field is the subject or topic of that user’s message. The value of the subject field determines who will receive an email notification, which typically includes data from the submitted form.
+It goes like this: Your site has a contact form, which collects basic information about the user filling out the form. One such field is the subject or topic of that user's message. The value of the subject field determines who will receive an email notification, which typically includes data from the submitted form.
 
 This is a common problem, especially with corporate clients, and its solution is not super straightforward within emerging [Jamstack](https://jamstack.org/) websites.
 
 One way we can solve solve this problem is by using [Netlify Functions](https://www.netlify.com/docs/functions/) to receive form data, adding a little logic to determine where to send the notification, and then actually sending the notification.
 
-So let’s dive right in, shall we?
+So let's dive right in, shall we?
 
 ## [0] The Scenario
 
-Let’s consider this problem and its solution to be service-agnostic. That means that this solution will get you _started_ no matter where the form data comes from. However, because we’ll be writing our [serverless functions](https://en.wikipedia.org/wiki/Serverless_computing) with [Netlify](/blog/wtf-is-netlify/), I’ll regularly mention how to apply the solutions to a project using [Netlify Forms](https://www.netlify.com/docs/form-handling/).
+Let's consider this problem and its solution to be service-agnostic. That means that this solution will get you _started_ no matter where the form data comes from. However, because we'll be writing our [serverless functions](https://en.wikipedia.org/wiki/Serverless_computing) with [Netlify](/blog/wtf-is-netlify/), I'll regularly mention how to apply the solutions to a project using [Netlify Forms](https://www.netlify.com/docs/form-handling/).
 
-If you aren’t familiar with Netlify Functions, know that they are essentially one function that runs a single time when triggered. That trigger is an endpoint URL that accepts a POST request. That request could come directly from your site, or perhaps you have a [headless CMS](https://headlesscms.org/) that uses a webhook to send a request whenever you create new content. It could even be an outgoing webhook from Netlify that gets triggered when a new Netlify Form is submitted.
+If you aren't familiar with Netlify Functions, know that they are essentially one function that runs a single time when triggered. That trigger is an endpoint URL that accepts a POST request. That request could come directly from your site, or perhaps you have a [headless CMS](https://headlesscms.org/) that uses a webhook to send a request whenever you create new content. It could even be an outgoing webhook from Netlify that gets triggered when a new Netlify Form is submitted.
 
-There are countless scenarios in which you may want to trigger a serverless function. The key is figuring out how to parse the data so you know which email address(es) to use. We’ll touch on the nuance of that as we get into the weeds.
+There are countless scenarios in which you may want to trigger a serverless function. The key is figuring out how to parse the data so you know which email address(es) to use. We'll touch on the nuance of that as we get into the weeds.
 
-And one last thing before we get started. The examples here are written in JavaScript, meaning the function will be run using Node.js. While [AWS Lambda](https://aws.amazon.com/lambda/) — the service Netlify Functions use — supports multiple programming languages, Netlify Functions work best when using JavaScript, so that’s where we’re going to focus our attention.
+And one last thing before we get started. The examples here are written in JavaScript, meaning the function will be run using Node.js. While [AWS Lambda](https://aws.amazon.com/lambda/) — the service Netlify Functions use — supports multiple programming languages, Netlify Functions work best when using JavaScript, so that's where we're going to focus our attention.
 
-Okay, _now_ let’s dive in!
+Okay, _now_ let's dive in!
 
 ## [1] Setup Functions on Netlify Project
 
-The first step is to get functions up and running on your Netlify project. I’ve written [a detailed article on just that process](/blog/zero-to-functioning-netlify-function/), which I’d recommend you follow if you have not worked with Netlify Functions in the past. (If you have, it may help as a quick refresher.)
+The first step is to get functions up and running on your Netlify project. I've written [a detailed article on just that process](/blog/zero-to-functioning-netlify-function/), which I'd recommend you follow if you have not worked with Netlify Functions in the past. (If you have, it may help as a quick refresher.)
 
-Follow that setup guide to create a function in your `functions/src` directory (unless you already have functions working elsewhere). I’ll call my function `email_notification.js`, but you are welcome to use whatever name you’d like.
+Follow that setup guide to create a function in your `functions/src` directory (unless you already have functions working elsewhere). I'll call my function `email_notification.js`, but you are welcome to use whatever name you'd like.
 
 ## [2] Configure Trigger Hook(s)
 
 The next piece is to configure the trigger. This is the part where you identify how your function is going to be triggered.
 
-But, before doing that, and while developing locally, you’ll want to expose your local port (`9000` if you’re using `netlify-lambda`). In this case, remember, [`ngrok` is your best friend](/blog/zero-to-functioning-netlify-function#debugging-practical-use-cases). ngrok will provide you a temporary URL that you can plug into your service while developing.
+But, before doing that, and while developing locally, you'll want to expose your local port (`9000` if you're using `netlify-lambda`). In this case, remember, [`ngrok` is your best friend](/blog/zero-to-functioning-netlify-function#debugging-practical-use-cases). ngrok will provide you a temporary URL that you can plug into your service while developing.
 
 ### Netlify Forms
 
-If you’re using Netlify forms, go to _Settings_, then _Forms_, then choose to create an outgoing webhook notification. This is where you can add the ngrok URL.
+If you're using Netlify forms, go to _Settings_, then _Forms_, then choose to create an outgoing webhook notification. This is where you can add the ngrok URL.
 
-If you’re using a different service, that’s totally fine. Just point that URL to the one provided by ngrok.
+If you're using a different service, that's totally fine. Just point that URL to the one provided by ngrok.
 
 The purpose of all of this is that we have the hook working right so we can examine the payload and extract the correct data.
 
 ## [3] Setup Email Service
 
-Next, let’s get an email service setup. We aren’t sending emails directly from the server on which the (serverless) function resides. Instead, we’ll use a third-party service.
+Next, let's get an email service setup. We aren't sending emails directly from the server on which the (serverless) function resides. Instead, we'll use a third-party service.
 
-My service of choice is [SendGrid](https://sendgrid.com/) because it’s easy to work with and they offer a free tier. The code within this example will use SendGrid, so if you want to follow along, sign up for an account.
+My service of choice is [SendGrid](https://sendgrid.com/) because it's easy to work with and they offer a free tier. The code within this example will use SendGrid, so if you want to follow along, sign up for an account.
 
 Then [create an API key](https://sendgrid.com/docs/ui/account-and-settings/api-keys/#creating-an-api-key) so we can send emails.
 
@@ -74,7 +74,7 @@ exports.handler = function (event, context, callback) {
 }
 ```
 
-That’s enough to get us up and running, but the next step is to use the payload to find the data necessary to send the email.
+That's enough to get us up and running, but the next step is to use the payload to find the data necessary to send the email.
 
 The data comes packed in `event.body` as a string. So, the way in which we get through the data is to first convert it to an object, like so:
 
@@ -82,7 +82,7 @@ The data comes packed in `event.body` as a string. So, the way in which we get t
 const body = JSON.parse(event.body)
 ```
 
-And this is where we’ll all start to drift apart, as the structure of the data sent to the function may differ. For example, if I built a Netlify form (and corresponding outgoing webhook) with a field `type_of_inquiry` that had the value I wanted to use to figure out which email to send, then my code might look like this:
+And this is where we'll all start to drift apart, as the structure of the data sent to the function may differ. For example, if I built a Netlify form (and corresponding outgoing webhook) with a field `type_of_inquiry` that had the value I wanted to use to figure out which email to send, then my code might look like this:
 
 ```js
 const body = JSON.parse(event.body)
@@ -99,9 +99,9 @@ Next is to figure out which email address(es) should receive the notification. T
 2. Hard-code them into the function.
 3. Store them in some place accessible via API.
 
-We’re only going to cover #2 here. Acquiring them externally or via environment variable will be up to you. (But I’ll briefly touch on env vars in the next section).
+We're only going to cover #2 here. Acquiring them externally or via environment variable will be up to you. (But I'll briefly touch on env vars in the next section).
 
-Next, we’ll use a JavaScript object to match the submission type and find the email address(es). Something like this:
+Next, we'll use a JavaScript object to match the submission type and find the email address(es). Something like this:
 
 ```js
 const body = JSON.parse(event.body)
@@ -117,7 +117,7 @@ Now I could get to the correct email with `emails[type]`. No big deal, right?
 
 ## [6] Send the Email
 
-Sending email using [SendGrid’s node library](https://github.com/sendgrid/sendgrid-nodejs) is a simple and pleasant experience if everything is setup properly. In its simplest form, it looks something like this:
+Sending email using [SendGrid's node library](https://github.com/sendgrid/sendgrid-nodejs) is a simple and pleasant experience if everything is setup properly. In its simplest form, it looks something like this:
 
 ```js
 const sgMail = require("@sendgrid/mail")
@@ -133,13 +133,13 @@ sgMail.send({
 })
 ```
 
-You’ll notice there’s not much to this. We import the library, set the API key, and then send the message. When we put it into practice, it’ll be a little more complicated, but not much.
+You'll notice there's not much to this. We import the library, set the API key, and then send the message. When we put it into practice, it'll be a little more complicated, but not much.
 
-But, before we move on, let’s look at the API key for a moment.
+But, before we move on, let's look at the API key for a moment.
 
 ### API Key
 
-You’ll want to use an environment variable to store the API key so that you don’t leave it hard-coded in your code repository (which presents a security risk).
+You'll want to use an environment variable to store the API key so that you don't leave it hard-coded in your code repository (which presents a security risk).
 
 Netlify environment variables are available at runtime and can be accessed through the `process.env` object. You can read about Netlify environment variables [here](https://www.netlify.com/docs/continuous-deployment/#environment-variables).
 
@@ -147,7 +147,7 @@ Note that you can also set them locally and the will be available on the netlify
 
 ## [7] Put It All Together
 
-When it all comes together, it looks something like this. Note that this follows the examples I’ve set forth throughout this article. Your solution may end up looking quite different, but I’ve commented throughout this function so you can follow and adjust as necessary.
+When it all comes together, it looks something like this. Note that this follows the examples I've set forth throughout this article. Your solution may end up looking quite different, but I've commented throughout this function so you can follow and adjust as necessary.
 
 ```js
 const sgMail = require("@sendgrid/mail")
@@ -214,4 +214,4 @@ exports.handler = function (event, context, callback) {
 }
 ```
 
-That’s all, folks! I hope you can pull all the necessary pieces together and get up and running sending emails via Netlify like a crazy person!
+That's all, folks! I hope you can pull all the necessary pieces together and get up and running sending emails via Netlify like a crazy person!
