@@ -1,20 +1,3 @@
-# TODO:
-#
-# - [ ] Add component with transformer that adds a tag badge to the original post
-# - [ ] Add mapping to external post base urls
-# - [ ] Use "Posted from [mapping]" as the tag text
-# - [ ] Add colors to mapping
-# - [ ] Add colors to tag
-# - [ ] Place remaining guest posts somewhere?
-
-# - [ ] Or maybe treat "Reposted from Grouparoo" as a tag (with color), and then
-#   have a separate note within the post body with the original URL.
-#     - There's more of a foundation in place to make this move quicker.
-#     - And it has the added benefit of a page for all posts from that source.
-
-# - [ ] Ask permission from Ample to repost
-# - [ ] Repost the Sanity article. (There is markdown content on Dev.to)
-
 - title: Comparing Static Site Generator Build Times
   url: https://css-tricks.com/comparing-static-site-generator-build-times/
   date: 2020-10-28
