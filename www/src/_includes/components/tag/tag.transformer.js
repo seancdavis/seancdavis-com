@@ -1,9 +1,13 @@
-const lodash = require("lodash")
-
 module.exports = ({ tag, ...props }) => {
+  let style = "";
+
+  if (tag?.data?.bgColor) style += `background-color: ${tag.data.bgColor};`;
+  if (tag?.data?.textColor) style += `color: ${tag.data.textColor};`;
+
   return {
     ...props,
-    label: lodash.get(tag, "data.title"),
-    url: tag.url
-  }
-}
+    label: tag?.data?.title,
+    url: tag.url,
+    style,
+  };
+};

@@ -50,5 +50,5 @@ GIF really isn't useful for anything today other than animations. If you're usin
 
 **References**
 
-- [What’s the Difference Between JPG, PNG, and GIF?](http://www.howtogeek.com/howto/30941/whats-the-difference-between-jpg-png-and-gif/)
-- [Web Designer’s Guide to PNG Image Format](http://sixrevisions.com/web_design/web-designers-guide-to-png-image-format/)
+- [What's the Difference Between JPG, PNG, and GIF?](http://www.howtogeek.com/howto/30941/whats-the-difference-between-jpg-png-and-gif/)
+- [Web Designer's Guide to PNG Image Format](http://sixrevisions.com/web_design/web-designers-guide-to-png-image-format/)

@@ -62,8 +62,8 @@ Here are a few updates from products I've come to love:
 
 For some reason, I came across a large number of articles in the headless CMS space. There's some overlap here, but all worth a read (or at least a skim to see if it's relevant to you):
 
-- [Don’t Lose Your Head: Evaluating Headless](https://www.smashingmagazine.com/2021/04/evaluating-headless/)
-- [Going Headless: Use Cases And What It’s Good For](https://www.smashingmagazine.com/2021/03/going-headless-use-cases/)
+- [Don't Lose Your Head: Evaluating Headless](https://www.smashingmagazine.com/2021/04/evaluating-headless/)
+- [Going Headless: Use Cases And What It's Good For](https://www.smashingmagazine.com/2021/03/going-headless-use-cases/)
 - [How to develop the right content modeling strategy](https://www.contentful.com/blog/2021/04/05/develop-content-model-strategy/)
 
 ### Static Site Generators
@@ -87,7 +87,7 @@ Odds and ends on the subject:
 JavaScript is ... _weird_. Really weird. Here is a collection of new resources to help you understand and work efficiently with JavaScript:
 
 - [3 Ways to Make Better Use of the JavaScript Console](https://javascript.plainenglish.io/javascript-tips-3-ways-to-use-the-console-in-a-better-way-49c95d008080)
-- [7 JavaScript Features You Probably Don’t Know](https://javascript.plainenglish.io/7-javascript-features-nobody-is-talking-about-4bf61297628c)
+- [7 JavaScript Features You Probably Don't Know](https://javascript.plainenglish.io/7-javascript-features-nobody-is-talking-about-4bf61297628c)
 - [8 JavaScript Tips & Tricks That No One Teaches](https://dev.to/worldindev/8-javascript-tips-tricks-that-no-one-teaches-24g1)
 - [JavaScript best practices to improve code quality](https://javascript.plainenglish.io/improve-javascript-code-quality-with-these-best-practices-ee883a124d8e)
 - [Solving a Mystery Behavior of parseInt() in JavaScript](https://dmitripavlutin.com/parseint-mystery-javascript/)

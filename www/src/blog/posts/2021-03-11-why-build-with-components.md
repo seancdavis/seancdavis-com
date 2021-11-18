@@ -35,7 +35,7 @@ Reusability leads to other benefits in working with components. Here are a few m
 
 ## Components: The Hard Parts
 
-But that doesn’t mean it’s always cupcakes and rainbows and dance parties. While working with components can benefit a project, they don't come without challenge. In my experience, two challenges stand above all:
+But that doesn't mean it's always cupcakes and rainbows and dance parties. While working with components can benefit a project, they don't come without challenge. In my experience, two challenges stand above all:
 
 First, although components often require less design and dev time over the course of a project, **they often require more effort at the beginning**. Building a solid system in which you can work productively takes time.
 
@@ -43,7 +43,7 @@ When building a new website for someone else, this can be challenging for the cu
 
 It's still totally worth it, but it takes some convincing for folks who are used to seeing results faster.
 
-Second, _component_ is a generic term. Even frameworks like [React](/blog/wtf-is-react/) and [Vue](https://vuejs.org/) that exist to help you build components tend to leave a number of important decisions up to the developer. That’s totally okay, but it means you’re going to spend more time making low-level decisions (like how to name and organize files).
+Second, _component_ is a generic term. Even frameworks like [React](/blog/wtf-is-react/) and [Vue](https://vuejs.org/) that exist to help you build components tend to leave a number of important decisions up to the developer. That's totally okay, but it means you're going to spend more time making low-level decisions (like how to name and organize files).
 
 It also means it's up to you to design a component. Knowing the right time to break up a component into smaller components will help you stay organized, but there's no perfect formula for it.
 

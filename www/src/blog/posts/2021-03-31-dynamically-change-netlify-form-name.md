@@ -16,7 +16,7 @@ Well, I've found that you can do that on the fly with just a little [JavaScript]
 
 ## Understanding the `form-name` Attribute
 
-In my [Netlify Forms Intro Guide](/blog/what-you-need-to-know-about-netlify-forms/), I mentioned that **the `form-name` attribute that comes along with the data submitted to Netlify is extremely important**. It’s what tells Netlify where to put your submission, which can determine additional behavior, such as email notifications.
+In my [Netlify Forms Intro Guide](/blog/what-you-need-to-know-about-netlify-forms/), I mentioned that **the `form-name` attribute that comes along with the data submitted to Netlify is extremely important**. It's what tells Netlify where to put your submission, which can determine additional behavior, such as email notifications.
 
 You'll notice that if you're working with a truly static site — whether plain HTML, or using a static site generator like [Eleventy](https://www.11ty.dev/) that outputs static HTML — Netlify performs some magic for you.
 
@@ -53,7 +53,7 @@ If you just make up a value for `form-name` on the fly, Netlify is not going to 
 
 ## Dynamically Changing the `form-name` Field
 
-Let’s say that we have a simple contact form with three fields:
+Let's say that we have a simple contact form with three fields:
 
 - `subject`
 - `email`

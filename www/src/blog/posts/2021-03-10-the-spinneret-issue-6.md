@@ -92,7 +92,7 @@ In the end, it comes down to this recommendation:
 >
 > If you have a larger project: Use Digital Ocean.
 >
-> I wouldn’t choose Vercel anymore because of that dark pattern pricing strategy.
+> I wouldn't choose Vercel anymore because of that dark pattern pricing strategy.
 
 This is terrible advice. It has nothing to do with addressing the problem you are trying to solve. It's not a matter of _small v large_.
 

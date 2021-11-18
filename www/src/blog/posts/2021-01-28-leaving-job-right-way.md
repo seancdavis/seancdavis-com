@@ -6,33 +6,33 @@ tags:
   - communication
 ---
 
-Leaving a job (for a new one) is an exciting thing. It’s a new step in your life, in your personal adventure. It’s progress.
+Leaving a job (for a new one) is an exciting thing. It's a new step in your life, in your personal adventure. It's progress.
 
-In most cases, there must exist some frustration to prompt a move. Most people don’t leave a job that makes them fully happy. I’m sure it happens, but often a job change is a quest for greener grass. That is totally fine. It’s your journey, after all.
+In most cases, there must exist some frustration to prompt a move. Most people don't leave a job that makes them fully happy. I'm sure it happens, but often a job change is a quest for greener grass. That is totally fine. It's your journey, after all.
 
 You're probably going to leave your current job at some point. The important part isn't the decision to go (it is to be expected that you will go at some point). What matters more is _how_ you leave. The way in which you leave can greatly affect your future relationships and opportunities.
 
-I’ve left four jobs in the first decade of my career. Each time was more difficult than the last, because with each job I honed in on what I really wanted to be doing with my time. Every job was better than the previous in _some_ way. But I still maintain relationships from each one of my previous jobs. Many of those relationships have presented new opportunities along the way, and I suspect they will continue to do so for years to come.
+I've left four jobs in the first decade of my career. Each time was more difficult than the last, because with each job I honed in on what I really wanted to be doing with my time. Every job was better than the previous in _some_ way. But I still maintain relationships from each one of my previous jobs. Many of those relationships have presented new opportunities along the way, and I suspect they will continue to do so for years to come.
 
 From this experience, I can tell you what I find most important when leaving a job, _why_ I think those things should matter to you, and what to do when things go awry.
 
 ## How to Leave a Job the Right Way
 
-After a bit of practice, here’s what I’ve found to be the right concoction of attitude and action to exhibit when leaving a job:
+After a bit of practice, here's what I've found to be the right concoction of attitude and action to exhibit when leaving a job:
 
 ### 1. Give a reasonable amount of notice.
 
-This is the obvious one. Most people put in their resignation two weeks before their last day. As you move throughout your career, it may make sense to give more time — you’ll have more loose ends to tie up or delegate.
+This is the obvious one. Most people put in their resignation two weeks before their last day. As you move throughout your career, it may make sense to give more time — you'll have more loose ends to tie up or delegate.
 
 In my most recent move, I only gave nine days notice because of a weird timing issue. I combatted that by making myself available following the departure to fill in anything (within reason) I may have missed.
 
 ### 2. Be honest, vulnerable, and productive.
 
-This is a tough one. It’s important that your colleagues know why you’re leaving. But if you give critical feedback for the first time ever during your departure, people are going to be upset. You can only be truly honest in a well-received way if you’ve already worked to establish trust.
+This is a tough one. It's important that your colleagues know why you're leaving. But if you give critical feedback for the first time ever during your departure, people are going to be upset. You can only be truly honest in a well-received way if you've already worked to establish trust.
 
 I try to be both honest and helpful by saying things like:
 
-- "I’m excited for this next opportunity because ..."
+- "I'm excited for this next opportunity because ..."
 - "I'm sad to leave because ..."
 - "I may have stayed longer if ..."
 - "I've been frustrated by ..."

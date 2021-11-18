@@ -50,7 +50,7 @@ _Articles and news I read last month that I found interesting, with some comment
 
 It was fun to play a role in Dom's piece on [11 Considerations for the Future of Jamstack Web Development](https://www.cmswire.com/information-management/11-considerations-for-the-future-of-jamstack-web-development/). It helped me think about where we've come from and where we're going with web development. It's likely to spark several related articles from me in the coming months. Rest assured, 2022 is going to be a fascinating year in the evolution of web dev. Of course, I couldn't have responded to all these questions without mentioning [Astro](https://astro.build/) or [Slinkity](https://slinkity.dev/), and I'm glad [Bryan picked up on it](https://twitter.com/brob/status/1451589089837424667)!
 
-(Speaking of Slinkity) [Building The SSG I’ve Always Wanted: An 11ty, Vite And JAM Sandwich](https://www.smashingmagazine.com/2021/10/building-ssg-11ty-vite-jam-sandwich/) was probably the best thing I read this month. It's essentially the birth story of Slinkity. But it does such a great job walking through that journey that it brings to life not just the case for Slinkity, but why we're seeing this trend of component-based SSGs that ship less JS to the client (like Astro). It's long, but it is absolutely worth a read. This stuff is going to be the talk of the town for the near future.
+(Speaking of Slinkity) [Building The SSG I've Always Wanted: An 11ty, Vite And JAM Sandwich](https://www.smashingmagazine.com/2021/10/building-ssg-11ty-vite-jam-sandwich/) was probably the best thing I read this month. It's essentially the birth story of Slinkity. But it does such a great job walking through that journey that it brings to life not just the case for Slinkity, but why we're seeing this trend of component-based SSGs that ship less JS to the client (like Astro). It's long, but it is absolutely worth a read. This stuff is going to be the talk of the town for the near future.
 
 [Tweets like this one from Jaon Lengstorf](https://twitter.com/jlengstorf/status/1442707241627385860) are showing a compelling reason to look more seriously into low-JS tools. Many folks are playing around with these solutions that ship less JS to the clients and seeing major performance benefits. It doesn't mean it's a silver bullet, but it's shifting the conversation, and that's important.
 
@@ -58,7 +58,7 @@ It was fun to play a role in Dom's piece on [11 Considerations for the Future of
 
 ### News
 
-[What’s New in Gatsby 4](https://www.gatsbyjs.com/blog/whats-new-in-gatsby-4/) marks the official public release of Gatsby 4! We saw Gatsby lose a large market share to Next.js throughout 2020. I can't wait to see if this release is what they needed to pull some developers who left for Next.js (like me) back into the mix.
+[What's New in Gatsby 4](https://www.gatsbyjs.com/blog/whats-new-in-gatsby-4/) marks the official public release of Gatsby 4! We saw Gatsby lose a large market share to Next.js throughout 2020. I can't wait to see if this release is what they needed to pull some developers who left for Next.js (like me) back into the mix.
 
 [Remix announced a $3 million seed round](https://remix.run/blog/seed-funding-for-remix), which also seems promising in building the competition with Next and Gatsby in this space — React-based front-end frameworks. I don't know much about Remix, but this news has been hyped quite a bit, so I'm interested to see where it goes.
 
@@ -127,7 +127,7 @@ I came across a handful of developers talking about their favorite component UI 
 
 [React Bricks](https://reactbricks.com/) is a site builder for React-based projects. We looked at this a bit at Stackbit and think it's missing some of the key ingredients that make Stackbit so powerful, but this definitely has a nice feel to it.
 
-[The CSS-Tricks newsletter #273](https://css-tricks.com/newsletter/273-weird-browsers/) focused on weird browsers. Chris Coyier said, "Perhaps for what we’re losing in browser engine diversity, we’ll gain in browser UI/UX diversity." Then I went down a rabbit hole and found several browsers gaining some traction today, each focused on a slightly different case:
+[The CSS-Tricks newsletter #273](https://css-tricks.com/newsletter/273-weird-browsers/) focused on weird browsers. Chris Coyier said, "Perhaps for what we're losing in browser engine diversity, we'll gain in browser UI/UX diversity." Then I went down a rabbit hole and found several browsers gaining some traction today, each focused on a slightly different case:
 
 - [bonsai](https://bonsaibrowser.com/)
 - [Opera GX](https://www.opera.com/gx)

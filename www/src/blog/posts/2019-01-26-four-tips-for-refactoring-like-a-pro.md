@@ -40,7 +40,7 @@ I spent years developing before I had the appreciation to write solid tests. And
 
 So, first thing is first: Write a really solid test suite. I don't mean 100% coverage. [DHH](https://en.wikipedia.org/wiki/David_Heinemeier_Hansson) (creator of the [Ruby on Rails](https://rubyonrails.org/) framework) [says it well](https://signalvnoise.com/posts/3159-testing-like-the-tsa):
 
-> I get paid for code that works, not for tests, so my philosophy is to test as little as possible to reach a given level of confidence (I suspect this level of confidence is high compared to industry standards, but that could just be hubris). If I don’t typically make a kind of mistake (like setting the wrong variables in a constructor), I don’t test for it.
+> I get paid for code that works, not for tests, so my philosophy is to test as little as possible to reach a given level of confidence (I suspect this level of confidence is high compared to industry standards, but that could just be hubris). If I don't typically make a kind of mistake (like setting the wrong variables in a constructor), I don't test for it.
 
 In other words, be smart about the time you spend on testing and the tests you write. And once you have a solid test suite, you can refactor with confidence, because all you have to do is run the tests to see if the code you've changed is going to break a part of the system.
 

@@ -33,6 +33,9 @@
                 {{ description }}
               </p>
             {% endif %}
+            {% if canonical_url %}
+              {% repost_note url=canonical_url  %}
+            {% endif %}
           </div>
 
           <div class="my-12 h-1 bg-gray-200 w-24 mx-auto"></div>

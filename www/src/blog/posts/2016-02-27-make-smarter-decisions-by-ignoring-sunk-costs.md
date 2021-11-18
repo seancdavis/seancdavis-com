@@ -37,9 +37,9 @@ We do this all the time. I came across [an article by Michael Davidson](http://w
 Let's look at Davidson's four examples:
 
 > 1. "I might as well keep eating because I already bought the food."
-> 2. "I might as well keep watching this terrible movie because I’ve watched an hour of it already."
+> 2. "I might as well keep watching this terrible movie because I've watched an hour of it already."
 > 3. "I might as well keep going to a bad/useless class that I paid for."
-> 4. "I might as well continue dating someone bad for me because I’ve already invested so much in them."
+> 4. "I might as well continue dating someone bad for me because I've already invested so much in them."
 
 I believe that we make these decisions not be they're illogical (that would be illogical!), but because we (maybe subconsciously) find them to be emotionally logical. We'd _feel_ bad if we didn't do something. Or we'd believe we didn't get our money's worth.
 

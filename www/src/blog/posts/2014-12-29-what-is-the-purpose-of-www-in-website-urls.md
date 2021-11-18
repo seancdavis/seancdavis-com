@@ -86,4 +86,4 @@ _Note: If you're using Nginx as your web server, I wrote a quick post on [how to
 
 - [Why Use www?](http://www.yes-www.org/why-use-www/)
 - [Why do some Web sites include www in the URL while others don't?](http://computer.howstuffworks.com/internet/basics/question180.htm)
-- [What’s the point in having “www” in a URL?](http://serverfault.com/questions/145777/what-s-the-point-in-having-www-in-a-url)
+- [What's the point in having "www" in a URL?](http://serverfault.com/questions/145777/what-s-the-point-in-having-www-in-a-url)
