@@ -14,7 +14,7 @@
     "@netlify/plugin-sitemap": "^0.8.1",
     "@seancdavis/netlify-plugin-jest": "^0.1.0",
     "algoliasearch": "^4.11.0",
-    "analytics": "^0.7.15",
+    "analytics": "^0.7.18",
     "autoprefixer": "^10.3.7",
     "aws-sdk": "^2.1019.0",
     "chalk": "^4.1.1",
