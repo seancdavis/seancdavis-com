@@ -75,4 +75,4 @@ SQLite is weird and wonderful. It's lightweight, probably available whenever you
 
 I hope you learned something about SQLite here and are ready to give it a try!
 
-If you want to talk about it, [hit us up](/chat). We're a small group of nerds who love chatting about databases.
+If you want to talk about it, [hit us up](https://www.grouparoo.com/chat). We're a small group of nerds who love chatting about databases.

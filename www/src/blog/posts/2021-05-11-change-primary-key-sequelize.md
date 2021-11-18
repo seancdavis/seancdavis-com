@@ -10,7 +10,7 @@ tags:
 canonical_url: https://www.grouparoo.com/blog/change-primary-key-sequelize
 ---
 
-We recently adjusted how we handle primary keys. Previously they were [UUIDs](https://en.wikipedia.org/wiki/Universally_unique_identifier) with a max length of `40` characters. With our [Declarative Sync](/blog/declarative-data-sync) feature, we allow developers to set primary key values from their configuration files. Thus, we needed to lengthen the maximum number of characters allowed on primary keys in our database.
+We recently adjusted how we handle primary keys. Previously they were [UUIDs](https://en.wikipedia.org/wiki/Universally_unique_identifier) with a max length of `40` characters. With our [Declarative Sync](https://www.grouparoo.com/blog/declarative-data-sync) feature, we allow developers to set primary key values from their configuration files. Thus, we needed to lengthen the maximum number of characters allowed on primary keys in our database.
 
 Seems simple, right?
 
