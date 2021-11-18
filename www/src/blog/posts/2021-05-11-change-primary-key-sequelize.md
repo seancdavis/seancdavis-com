@@ -4,6 +4,7 @@ date: 2021-05-11
 description: It seems like it's going to be super easy. And it is! And then it's not.
 image: /blog/210511/210511-change-primary-key.png
 tags:
+  - repost-grouparoo
   - postgresql
   - sqlite
 canonical_url: https://www.grouparoo.com/blog/change-primary-key-sequelize

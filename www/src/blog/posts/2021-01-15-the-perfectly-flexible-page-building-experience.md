@@ -2,6 +2,7 @@
 title: The perfectly flexible page-building experience
 description: We use a Flexible Page Model to find the sweet spot between flexibility and productivity for our content editors.
 tags:
+  - repost-ample
   - cms
 image: /blog/210115/210115--flexible-page-building.png
 canonical_url: https://www.ample.co/blog/the-perfectly-flexible-page-building-experience

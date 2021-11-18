@@ -4,6 +4,7 @@ date: 2021-02-17
 description: How to find the previous page a user visited before landing on the current page.
 image: /blog/210217/210217--next-prev-path.png
 tags:
+  - repost-grouparoo
   - nextjs
 canonical_url: https://www.grouparoo.com/blog/getting-previous-path-nextjs
 ---

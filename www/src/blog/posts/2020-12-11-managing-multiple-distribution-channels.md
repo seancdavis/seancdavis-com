@@ -2,6 +2,7 @@
 title: Managing multiple distribution channels from a single CMS
 description: When managing multiple marketing channels, you don't need to spread the content. Here's one method for keeping it all together in a single source of truth.
 tags:
+  - repost-ample
   - cms
 image: /blog/201211/201211--multichannel-cms.png
 canonical_url: https://www.ample.co/blog/managing-multiple-distribution-channels-from-a-single-cms

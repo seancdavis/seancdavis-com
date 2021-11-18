@@ -4,6 +4,7 @@ date: 2021-02-18
 description: How to test for key-value pairs in sessionStorage and localStorage using Selenium Node.
 image: /blog/210208/210208--error-graphic.png
 tags:
+  - repost-grouparoo
   - node
   - testing
 canonical_url: https://www.grouparoo.com/blog/testing-session-storage-selenium-node

@@ -2,6 +2,7 @@
 title: API-driven or Git-based? Figuring out the right CMS for you.
 description: It's hard to choose the right headless CMS when there are so many options. There's one decision you can make before comparing CMS products.
 tags:
+  - repost-ample
   - cms
   - jamstack
 image: /blog/201102/201102--api-vs-git-cms.png

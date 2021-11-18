@@ -4,6 +4,7 @@ date: 2021-04-22
 description: SQLite is simple but very cool and powerful. Yet, it's a little quirky when it comes to handling types. Let's explore that goofiness together, and see how we can protect against it when using Node.
 image: /blog/210422/210422-sqlite-types.png
 tags:
+  - repost-grouparoo
   - node
   - sqlite
 canonical_url: https://www.grouparoo.com/blog/understanding-types-sqlite-node

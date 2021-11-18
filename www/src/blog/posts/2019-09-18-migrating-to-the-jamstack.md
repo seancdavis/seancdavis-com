@@ -2,6 +2,7 @@
 title: Migrating to the Jamstack
 description: Migrating to the Jamstack is easier than you would think. Ample's Sean C. Davis outlines how to do it one page at a time.
 tags:
+  - repost-ample
   - jamstack
 image: /blog/190918/190918--migrating-to-jamstack.png
 canonical_url: https://www.ample.co/blog/migrating-to-the-jamstack

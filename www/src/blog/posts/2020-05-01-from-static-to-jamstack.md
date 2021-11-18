@@ -2,6 +2,7 @@
 title: From static to Jamstack
 description: The Jamstack combines the best parts of Web 1.0 and Web 2.0, resulting in secure sites that are easily scalable, well-performing, and lower cost.
 tags:
+  - repost-ample
   - jamstack
 image: /blog/200501/200501--static-to-jamstack.png
 canonical_url: https://www.ample.co/blog/from-static-to-jamstack

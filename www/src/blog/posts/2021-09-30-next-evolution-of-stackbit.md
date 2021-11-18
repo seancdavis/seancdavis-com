@@ -4,7 +4,7 @@ description: This next version of Stackbit is going to be incredible! And we're 
 image: /blog/210930/210930--next-evolution-stackbit.png
 canonical_url: https://www.stackbit.com/blog/next-evolution-of-stackbit/
 tags:
-  - stackbit
+  - repost-stackbit
 ---
 
 It was early 2019. The year where everything was normal and perfectly fine.

@@ -2,6 +2,7 @@
 title: Design your stack for the new developer
 description: The Jamstack approach will help you onboard developers more quickly, and increase your overall efficiency. Ample's Sean Davis will tell you how.
 tags:
+  - repost-ample
   - jamstack
 image: /blog/190621/190621--new-dev-stack.png
 canonical_url: https://www.ample.co/blog/design-your-stack-for-the-new-developer-and-increase-your-onboarding-speed

@@ -4,8 +4,8 @@ description: The Jamstack may have been born out of pain, but it couldn't have e
 image: /blog/211007/211007-essence-of-jamstack.png
 canonical_url: https://www.stackbit.com/blog/what-made-the-essence-of-jamstack-possible/
 tags:
+  - repost-stackbit
   - jamstack
-  - stackbit
 ---
 
 Let's begin with an infinite loop:

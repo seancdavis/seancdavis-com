@@ -2,6 +2,7 @@
 title: 3 things that make developers happy
 description: While technical tools make developers' lives easier, we can't forget that non-technical things can have a big impact on devs' productivity and satisfaction.
 tags:
+  - repost-ample
   - inspiration
 image: /blog/200814/200814--make-devs-happy.png
 canonical_url: https://www.ample.co/blog/3-things-that-make-developers-happy

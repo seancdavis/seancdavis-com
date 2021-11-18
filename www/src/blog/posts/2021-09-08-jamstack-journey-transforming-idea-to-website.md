@@ -4,10 +4,10 @@ description: It takes a lot to bring an idea to life on the web, even for the si
 image: /blog/210908/210908--idea-to-website.png
 canonical_url: https://www.stackbit.com/blog/jamstack-journey-transforming-idea-to-website/
 tags:
+  - repost-stackbit
   - eleventy
   - html
   - jamstack
-  - stackbit
 ---
 
 At its core, Jamstack was a revolution. It took the best part of the first 25+ years of website development and combined them into a powerful pattern that is used widely today. It has created an explosion of ideas and innovations that have helped developers across the world build websites that are more performant, more secure, less expensive, easier to scale, and (most importantly) fun to build!

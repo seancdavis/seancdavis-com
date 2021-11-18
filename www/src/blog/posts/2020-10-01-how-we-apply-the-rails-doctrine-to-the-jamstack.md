@@ -2,6 +2,7 @@
 title: How we apply the Rails Doctrine to the Jamstack
 description: Just like omakase sushi is solely the chef's choice, the biggest benefit to any framework is when it makes (good) decisions for you.
 tags:
+  - repost-ample
   - jamstack
   - ruby-on-rails
 image: /blog/201001/201001--jamstack-rails-doctrine.png

@@ -4,6 +4,7 @@ date: 2021-06-10
 description: Two methods for generating JSON pages with Next.js. One that updates on every request, the other on every build.
 image: /blog/210610/210610-next-json.png
 tags:
+  - repost-grouparoo
   - nextjs
 canonical_url: https://www.grouparoo.com/blog/dynamic-json-pages-with-nextjs
 ---

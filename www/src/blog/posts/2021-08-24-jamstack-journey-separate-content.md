@@ -4,8 +4,8 @@ description: It's much easier to maintain a site over time when the content is s
 image: /blog/210824/210824--code-v-content.jpeg
 canonical_url: https://www.stackbit.com/blog/jamstack-journey-separate-content/
 tags:
+  - repost-stackbit
   - eleventy
-  - stackbit
 ---
 
 We covered the process of moving from static HTML files to a [static site generator](https://www.seancdavis.com/blog/wtf-is-ssg/) (SSG) [in the precursor to this article](/blog/jamstack-journey-templatize-static-html/). Here we're going to look at taking your SSG game to the next level by transforming it into content-driven engine. Together, these two steps make up a few parts of _The Jamstack Journey_.

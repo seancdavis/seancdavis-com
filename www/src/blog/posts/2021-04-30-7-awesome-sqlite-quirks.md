@@ -4,6 +4,7 @@ date: 2021-04-30
 description: SQLite is not like the others. But what makes it different also makes it a pretty cool database engine.
 image: /blog/210430/210430-sqlite-quirks.png
 tags:
+  - repost-grouparoo
   - sqlite
 canonical_url: https://www.grouparoo.com/blog/7-awesome-sqlite-quirks
 ---

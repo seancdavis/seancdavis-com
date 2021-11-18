@@ -4,6 +4,7 @@ date: 2021-03-25
 description: Learn how to convert old Node.js callback-based function to new and shiny promised-based functions.
 image: /blog/210325/210325-callback-hell.png
 tags:
+  - repost-grouparoo
   - node
 canonical_url: https://www.grouparoo.com/blog/promisifying-node-functions
 ---

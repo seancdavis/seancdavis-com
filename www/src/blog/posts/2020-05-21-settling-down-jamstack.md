@@ -2,6 +2,7 @@
 title: Settling Down in a Jamstack World
 description: Jamstack's community sharing helps developers find the best tools. But changing tools too often will leave clients and other team members frustrated.
 tags:
+  - repost-ample
   - jamstack
 image: /blog/200521/200521--settling-down-with-jamstack.png
 canonical_url: https://www.ample.co/blog/settling-down-in-a-jamstack-world

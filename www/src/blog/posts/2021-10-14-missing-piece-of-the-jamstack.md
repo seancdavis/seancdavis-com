@@ -4,8 +4,8 @@ description: At Stackbit, we're working to fill in this missing piece in the Jam
 image: /blog/211014/211014-jamstack-missing-piece.png
 canonical_url: https://www.stackbit.com/blog/the-missing-piece-of-the-jamstack/
 tags:
+  - repost-stackbit
   - jamstack
-  - stackbit
 ---
 
 The way developers prefer to build websites has changed _dramatically_ in the last five years. Thanks, in large part, to the Jamstack.

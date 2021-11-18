@@ -4,9 +4,9 @@ description: Learn how to take a handful of static HTML files and convert them i
 image: /blog/210810/210810--static-html-to-templates.jpeg
 canonical_url: https://www.stackbit.com/blog/jamstack-journey-templatize-static-html/
 tags:
+  - repost-stackbit
   - eleventy
   - html
-  - stackbit
 ---
 
 You've gone through the design process in building a website, but now you're left with a handful of HTML files, along with some images and one or more CSS and JavaScript files, and you want to know what to do with them? Great! Let's talk about it.
