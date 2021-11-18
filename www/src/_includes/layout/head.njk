@@ -19,6 +19,13 @@
         description=description,
         overrides=seo %}
 
+    {# --- Canonical URL --- #}
+
+    {% if canonical_url %}
+      <link rel="canonical" href="{{ canonical_url }}" />
+    {% endif %}
+
+
     {# --- Imgix --- #}
 
     <meta property="ix:autoInit" content="false">
