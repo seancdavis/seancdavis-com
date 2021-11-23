@@ -1,6 +1,26 @@
 ---
 layout: about
 title: "Hi, I'm Sean."
+hero:
+  headings:
+    - Hi,
+    - I'm Sean.
+  subheadings:
+    - Afraid of Bees and Bears.
+    - Baker. (Kind of.)
+    - Developer.
+    - Family Man.
+    - Gardener. (Plant Killer.)
+    - Has no idea what he's doing.
+    - Nerd.
+    - Podcaster. (That One Time.)
+    - Reader. (A Slow Reader.)
+    - Sandwich Enthusiast.
+    - Shaved his head.
+    - Speaker.
+    - Tinkerer. Teacher.
+    - Weirdo. (Definitely.)
+    - Writer.
 timeline:
   heading: My Journey
   points:

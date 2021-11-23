@@ -1,11 +1,33 @@
 {% include "layout/head.njk" %}
 {% include "layout/header.njk" %}
 
+{# --- Hero --- #}
 
-<div class="mb-8 pt-24">
-  <h1 class="text-4xl">{{ title }}</h1>
-  <p>The is an about page ...</p>
+<div class="layout--about--hero">
+  {% if particles.images.length > 0 %}
+    {% particles images=particles.images, count=15 %}
+  {% endif %}
+
+  <div class="container max-w-5xl">
+    <div class="flex items-center relative justify-between max-w-5xl">
+      <div class="max-w-lg">
+        <h1 class="layout--about--hero-heading">
+          {% for heading in hero.headings %}
+            <span class="sm:block">{{ heading }}</span>
+          {% endfor %}
+        </h1>
+        <p class="text-2xl sm:text-3xl md:text-4xl">
+          {% typewriter texts=hero.subheadings %}
+        </p>
+      </div>
+      <div class="layout--about--hero-image">
+        {% image path="seancdavis-2020-bg-transparent.png", sm="224px", md="320px", max="320px" %}
+      </div>
+    </div>
+  </div>
 </div>
+
+{# --- Timeline --- #}
 
 <div class="container mb-4">
   <h2 class="text-center text-5xl mb-8">{{ timeline.heading }}</h2>
@@ -45,6 +67,8 @@
     <div></div>
   </div>
 </div>
+
+{# --- Map --- #}
 
 <div class="layout--about--map">
   {% svg "world-map" %}
