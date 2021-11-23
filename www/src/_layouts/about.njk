@@ -29,7 +29,7 @@
 
 {# --- Timeline --- #}
 
-<div class="container mb-4">
+<div class="container mb-4 pt-16">
   <h2 class="text-center text-5xl mb-8">{{ timeline.heading }}</h2>
 
   {% set cls = cycler("left", "right") %}
@@ -42,16 +42,16 @@
 
   <div class="layout--about--timeline">
     {% for point in timeline.points %}
-      <div class="text-right pb-4 max-w-xl">
+      <div class="sm:text-right sm:pb-4 sm:max-w-xl mb-8 sm:mb-0">
         {% if cls.next() === 'left' %}
           {{ timelineItem(point) }}
         {% endif %}
       </div>
-      <div>
+      <div class="hidden sm:block">
         <div class="rounded-full border-4 border-green bg-white w-6 h-6 mx-auto"></div>
         <div class="w-1 h-full bg-green mx-auto"></div>
       </div>
-      <div class="pb-4 max-w-xl">
+      <div class="sm:text-left sm:pb-4 sm:max-w-xl mb-8 sm:mb-0">
         {% if cls.current === 'right' %}
           {{ timelineItem(point) }}
         {% endif %}
@@ -59,7 +59,7 @@
     {% endfor %}
 
     <div></div>
-    <div class="mt-2">
+    <div class="mt-2 hidden sm:block">
       <div class="rounded-full w-1 h-1 bg-green mx-auto my-2"></div>
       <div class="rounded-full w-1 h-1 bg-green mx-auto mb-2"></div>
       <div class="rounded-full w-1 h-1 bg-green mx-auto"></div>

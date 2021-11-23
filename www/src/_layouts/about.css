@@ -94,10 +94,16 @@
 /* --- Timeline --- */
 
 .layout--about--timeline {
-  @apply grid
-    gap-4;
+  @apply text-center;
+}
 
-  grid-template-columns: 1fr 2rem 1fr;
+@screen sm {
+  .layout--about--timeline {
+    @apply grid
+      gap-4;
+
+    grid-template-columns: 1fr 2rem 1fr;
+  }
 }
 
 /* --- Map --- */
