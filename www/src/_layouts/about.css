@@ -1,3 +1,13 @@
+.layout--about--map {
+  @apply relative;
+
+  svg {
+    @apply w-full;
+
+    min-width: 72rem;
+  }
+}
+
 .layout--about--timeline {
   @apply grid
     gap-4;

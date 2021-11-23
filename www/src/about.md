@@ -50,4 +50,7 @@ timeline:
       - Joined Grouparoo
       - Second kid
       - Joined Stackbit
+map:
+  subheading: Creating in
+  heading: Cincinnati, Ohio (US)
 ---

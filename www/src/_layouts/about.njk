@@ -1,41 +1,63 @@
 {% include "layout/head.njk" %}
 {% include "layout/header.njk" %}
 
-<div class="container py-24">
-  <div class="mb-8">
-    <h1 class="text-4xl">{{ title }}</h1>
-    <p>The is an about page ...</p>
+
+<div class="mb-8 pt-24">
+  <h1 class="text-4xl">{{ title }}</h1>
+  <p>The is an about page ...</p>
+</div>
+
+<div class="mb-4">
+  <h2>Timeline</h2>
+  <p>Here is the timeline ...</p>
+
+  {% set cls = cycler("left", "right") %}
+  {% macro timelineItem(point) %}
+    <h3 class="text-3xl mb-3 leading-none">{{ point.year }}</h3>
+    {% for item in point.items %}
+      <p class="mb-2">{% markdown %}{{ item }}{% endmarkdown %}</p>
+    {% endfor %}
+  {% endmacro %}
+
+  <div class="layout--about--timeline">
+    {% for point in timeline %}
+      <div class="text-right pb-4 max-w-xl">
+        {% if cls.next() === 'left' %}
+          {{ timelineItem(point) }}
+        {% endif %}
+      </div>
+      <div>
+        <div class="rounded-full border-4 border-green bg-white w-6 h-6 mx-auto"></div>
+        <div class="w-1 h-full bg-green mx-auto"></div>
+      </div>
+      <div class="pb-4 max-w-xl">
+        {% if cls.current === 'right' %}
+          {{ timelineItem(point) }}
+        {% endif %}
+      </div>
+    {% endfor %}
+
+    <div></div>
+    <div class="mt-2">
+      <div class="rounded-full w-1 h-1 bg-green mx-auto my-2"></div>
+      <div class="rounded-full w-1 h-1 bg-green mx-auto mb-2"></div>
+      <div class="rounded-full w-1 h-1 bg-green mx-auto"></div>
+    </div>
+    <div></div>
   </div>
+</div>
 
-  <div>
-    <h2>Timeline</h2>
-    <p>Here is the timeline ...</p>
+<div class="layout--about--map">
+  {% svg "world-map" %}
 
-    {% set cls = cycler("left", "right") %}
-    {% macro timelineItem(point) %}
-      <h3 class="text-3xl mb-3 leading-none">{{ point.year }}</h3>
-      {% for item in point.items %}
-        <p class="mb-2">{% markdown %}{{ item }}{% endmarkdown %}</p>
-      {% endfor %}
-    {% endmacro %}
-
-    <div class="layout--about--timeline">
-      {% for point in timeline %}
-        <div class="text-right pb-4 max-w-xl">
-          {% if cls.next() === 'left' %}
-            {{ timelineItem(point) }}
-          {% endif %}
-        </div>
-        <div>
-          <div class="rounded-full border-4 border-green bg-white w-6 h-6 mx-auto"></div>
-          <div class="w-1 h-full bg-green mx-auto"></div>
-        </div>
-        <div class="pb-4 max-w-xl">
-          {% if cls.current === 'right' %}
-            {{ timelineItem(point) }}
-          {% endif %}
-        </div>
-      {% endfor %}
+  <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+    <div class="text-gray-600 uppercase text-center">
+      <p class="text-lg sm:text-xl md:text-2xl leading-normal mb-1 md:mb-4">
+        {{ map.subheading }}
+      </p>
+      <p class="text-4xl sm:text-5xl md:text-6xl leading-normal">
+        {{ map.heading }}
+      </p>
     </div>
   </div>
 </div>
