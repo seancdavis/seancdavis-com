@@ -21,6 +21,16 @@ hero:
     - Tinkerer. Teacher.
     - Weirdo. (Definitely.)
     - Writer.
+connect:
+  heading: Laboris commodo anim fugiat do.
+  subheading: Proident velit fugiat irure sit enim labore qui cillum culpa.
+  links:
+    - icon: twitter
+      url: https://twitter.com/seancdavis29
+    - icon: linkedin
+      url: https://www.linkedin.com/in/sean-c-davis-a143822a/
+    - icon: email
+      url: mailto:hello@seancdavis.com
 timeline:
   heading: My Journey
   points:

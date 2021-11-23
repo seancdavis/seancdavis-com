@@ -27,6 +27,24 @@
   </div>
 </div>
 
+{# --- Connect --- #}
+
+<div class="bg-gray-800 text-white">
+  <div class="container py-6 max-w-4xl text-center md:text-left">
+    <div class="md:flex justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <h3 class="text-2xl md:text-3xl">{{ connect.heading }}</h3>
+        <p class="md:text-xl max-w-md mx-auto">{{ connect.subheading }}</p>
+      </div>
+      <div>
+        {% for link in connect.links %}
+          {% social_link link=link, theme="lime", classes="mr-4" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
 {# --- Timeline --- #}
 
 <div class="container mb-4 pt-16">

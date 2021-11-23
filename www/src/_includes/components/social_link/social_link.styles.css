@@ -33,4 +33,17 @@
       transform: scale(1.25);
     }
   }
+
+  &.theme-lime {
+    @apply bg-lime
+      text-gray-800;
+
+    &:before {
+      @apply border-transparent;
+    }
+
+    &:hover:before {
+      @apply border-lime;
+    }
+  }
 }
