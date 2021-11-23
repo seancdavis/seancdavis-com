@@ -8,8 +8,7 @@
 </div>
 
 <div class="container mb-4">
-  <h2>Timeline</h2>
-  <p>Here is the timeline ...</p>
+  <h2 class="text-center text-5xl mb-8">{{ timeline.heading }}</h2>
 
   {% set cls = cycler("left", "right") %}
   {% macro timelineItem(point) %}
@@ -20,7 +19,7 @@
   {% endmacro %}
 
   <div class="layout--about--timeline">
-    {% for point in timeline %}
+    {% for point in timeline.points %}
       <div class="text-right pb-4 max-w-xl">
         {% if cls.next() === 'left' %}
           {{ timelineItem(point) }}
