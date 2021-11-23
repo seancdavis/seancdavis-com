@@ -86,7 +86,10 @@
   }
 
   .layout--header--mobile-link {
-    @apply p-2
+    @apply flex
+      items-center
+      justify-center
+      p-2
       text-2xl
       text-white;
 

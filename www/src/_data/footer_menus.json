@@ -1,11 +1,20 @@
 [
   {
-    "heading": "Social Links",
+    "heading": "Read & Learn",
     "links": [
       {
         "label": "Blog",
         "url": "/blog"
       },
+      {
+        "label": "About",
+        "url": "/about"
+      }
+    ]
+  },
+  {
+    "heading": "Connect with Me",
+    "links": [
       {
         "label": "Twitter",
         "url": "https://twitter.com/seancdavis29"
@@ -19,6 +28,10 @@
   {
     "heading": "Site References",
     "links": [
+      {
+        "label": "Search",
+        "url": "/search"
+      },
       {
         "label": "License",
         "url": "/license"
