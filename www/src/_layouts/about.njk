@@ -27,6 +27,23 @@
   </div>
 </div>
 
+{# --- Bio --- #}
+
+<div class="relative">
+  <div class="layout--about--bio-bg-laptop"></div>
+  <div class="layout--about--bio-bg-lines"></div>
+  <div class="container py-24 max-w-4xl relative">
+    <div class="max-w-md md:max-w-lg lg:max-w-xl">
+      <strong class="subheading">{{ bio.subheading }}</strong>
+      <h2 class="section-heading">{{ bio.heading }}</h2>
+      <div class="text-lg md:text-xl">
+        {% markdown %}{{ bio.body }}{% endmarkdown %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
 {# --- Connect --- #}
 
 <div class="bg-gray-800 text-white">

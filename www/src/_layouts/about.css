@@ -91,6 +91,49 @@
   }
 }
 
+/* --- Bio --- */
+
+.layout--about--bio-bg-laptop {
+  @apply absolute
+    bg-left
+    bg-no-repeat
+    hidden
+    h-full
+    left-0
+    top-0
+    w-full;
+
+  background-image: url("/images/laptop-graphic.svg");
+  background-size: auto calc(100% - 8rem);
+  max-height: 36rem;
+
+  @media (min-width: 720px) {
+    display: block;
+
+    transform: scaleX(-1);
+    filter: FlipH;
+  }
+
+  @media (min-width: 1400px) {
+    transform: scaleX(1);
+  }
+}
+
+.layout--about--bio-bg-lines {
+  @apply absolute
+    bg-center
+    bg-repeat-x
+    h-full
+    left-0
+    top-0
+    w-full;
+
+  background-image: url("/images/laptop-lines.svg");
+  background-size: auto calc(100% - 8rem);
+  max-height: 36rem;
+  z-index: -1;
+}
+
 /* --- Timeline --- */
 
 .layout--about--timeline {

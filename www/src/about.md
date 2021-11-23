@@ -21,6 +21,13 @@ hero:
     - Tinkerer. Teacher.
     - Weirdo. (Definitely.)
     - Writer.
+bio:
+  subheading: About Me
+  heading: Hello ...
+  body: |-
+    Quis tempor labore nisi qui est qui ea exercitation est esse Lorem adipisicing elit ad. Lorem magna elit qui voluptate. In consectetur dolore qui pariatur exercitation cillum. Irure nulla cupidatat irure id laborum adipisicing adipisicing ipsum ex ex pariatur aute. Consectetur cupidatat est aliqua sint aute consectetur et do et et consequat. Veniam eu cupidatat Lorem ea consequat cillum minim aliqua ullamco Lorem sunt commodo dolore. Nisi sunt ea nostrud officia ea pariatur minim tempor adipisicing cillum ex.
+
+    Proident quis laboris ut ullamco mollit do dolore aliqua enim quis. Est excepteur deserunt nulla non nulla qui ad ullamco ipsum veniam. Sunt in esse commodo incididunt. Quis quis Lorem aliquip magna. Proident elit fugiat et et nostrud labore in cillum dolore ad sunt aliquip. Eu eiusmod sunt enim quis officia qui ipsum nisi in do cillum exercitation. Minim adipisicing magna cillum cupidatat enim ut labore.
 connect:
   heading: Laboris commodo anim fugiat do.
   subheading: Proident velit fugiat irure sit enim labore qui cillum culpa.
