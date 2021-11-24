@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      ALGOLIA_API_KEY: JSON.stringify(process.env.ALGOLIA_API_KEY),
+      ALGOLIA_SEARCH_KEY: JSON.stringify(process.env.ALGOLIA_SEARCH_KEY),
       ALGOLIA_APP_ID: JSON.stringify(process.env.ALGOLIA_APP_ID),
       ALGOLIA_INDEX_NAME: JSON.stringify(process.env.ALGOLIA_INDEX_NAME),
       ENV: JSON.stringify(env),
