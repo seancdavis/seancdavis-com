@@ -1,0 +1,124 @@
+{% include "layout/head.njk" %}
+{% include "layout/header.njk" %}
+
+{# --- Hero --- #}
+
+<div class="layout--about--hero">
+  {% if particles.images.length > 0 %}
+    {% particles images=particles.images, count=15 %}
+  {% endif %}
+
+  <div class="container max-w-5xl">
+    <div class="flex items-center relative justify-between max-w-5xl">
+      <div class="max-w-lg">
+        <h1 class="layout--about--hero-heading">
+          {% for heading in hero.headings %}
+            <span class="sm:block">{{ heading }}</span>
+          {% endfor %}
+        </h1>
+        <p class="text-2xl sm:text-3xl md:text-4xl">
+          {% typewriter texts=hero.subheadings %}
+        </p>
+      </div>
+      <div class="layout--about--hero-image">
+        {% image path="seancdavis-2020-bg-transparent.png", sm="224px", md="320px", max="320px" %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{# --- Bio --- #}
+
+<div class="relative">
+  <div class="layout--about--bio-bg-laptop"></div>
+  <div class="layout--about--bio-bg-lines"></div>
+  <div class="container py-24 max-w-4xl relative">
+    <div class="max-w-md md:max-w-lg lg:max-w-xl">
+      <strong class="subheading">{{ bio.subheading }}</strong>
+      <h2 class="section-heading">{{ bio.heading }}</h2>
+      <div class="text-lg md:text-xl">
+        {% markdown %}{{ bio.body }}{% endmarkdown %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{# --- Connect --- #}
+
+<div class="bg-gray-800 text-white">
+  <div class="container py-6 max-w-4xl text-center md:text-left">
+    <div class="md:flex justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <h3 class="text-2xl md:text-3xl">{{ connect.heading }}</h3>
+        <p class="md:text-xl max-w-md mx-auto">{{ connect.subheading }}</p>
+      </div>
+      <div>
+        {% for link in connect.links %}
+          {% social_link link=link, theme="lime", classes="mr-4" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{# --- Timeline --- #}
+
+<div class="container mb-4 pt-16">
+  <h2 class="text-center text-5xl mb-8">{{ timeline.heading }}</h2>
+
+  {% set cls = cycler("left", "right") %}
+  {% macro timelineItem(point) %}
+    <h3 class="text-3xl mb-3 leading-none">{{ point.year }}</h3>
+    {% for item in point.items %}
+      {% markdown %}{{ item }}{% endmarkdown %}
+    {% endfor %}
+  {% endmacro %}
+
+  <div class="layout--about--timeline">
+    {% for point in timeline.points %}
+      <div class="sm:text-right sm:max-w-sm ml-auto mb-8 sm:mb-4">
+        {% if cls.next() === 'left' %}
+          {{ timelineItem(point) }}
+        {% endif %}
+      </div>
+      <div class="hidden sm:block">
+        <div class="rounded-full border-4 border-green bg-white w-6 h-6 mx-auto"></div>
+        <div class="w-1 h-full bg-green mx-auto"></div>
+      </div>
+      <div class="sm:text-left sm:max-w-sm mb-8 sm:mb-4">
+        {% if cls.current === 'right' %}
+          {{ timelineItem(point) }}
+        {% endif %}
+      </div>
+    {% endfor %}
+
+    <div></div>
+    <div class="mt-2 hidden sm:block">
+      <div class="rounded-full w-1 h-1 bg-green mx-auto my-2"></div>
+      <div class="rounded-full w-1 h-1 bg-green mx-auto mb-2"></div>
+      <div class="rounded-full w-1 h-1 bg-green mx-auto"></div>
+    </div>
+    <div></div>
+  </div>
+</div>
+
+{# --- Map --- #}
+
+<div class="layout--about--map">
+  {% svg "world-map" %}
+
+  <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+    <div class="text-gray-600 uppercase text-center">
+      <p class="text-lg sm:text-xl md:text-2xl leading-normal mb-1 md:mb-4">
+        {{ map.subheading }}
+      </p>
+      <p class="text-4xl sm:text-5xl md:text-6xl leading-normal">
+        {{ map.heading }}
+      </p>
+    </div>
+  </div>
+</div>
+
+{% include "layout/footer.njk" %}
+{% include "layout/foot.njk" %}

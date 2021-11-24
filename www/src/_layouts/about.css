@@ -1,0 +1,162 @@
+/* --- Hero --- */
+
+.layout--about--hero {
+  @apply pb-32
+    relative;
+
+  margin-top: -5rem;
+  padding-top: 13rem;
+
+  &:before {
+    @apply absolute block left-0 top-0 w-full;
+
+    background: linear-gradient(90deg, rgba(165, 183, 211, 0.5), #ffffff);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 35%);
+    content: " ";
+    height: 60%;
+    z-index: -1;
+  }
+
+  &::after {
+    @apply absolute block left-0 bottom-0 w-full;
+
+    background: var(--color-gray-200);
+    clip-path: polygon(0 0, 100% 80%, 100% 100%, 0 100%);
+    content: " ";
+    height: 90%;
+    z-index: -2;
+  }
+}
+
+.layout--about--hero-heading {
+  @apply mb-4;
+
+  background: linear-gradient(153deg, #01a791, #1d5fc1);
+  font-size: 4rem;
+  line-height: 1;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@screen sm {
+  .layout--about--hero-heading {
+    font-size: 5rem;
+    margin-top: 3rem;
+    max-width: 22rem;
+  }
+}
+
+@screen md {
+  .layout--about--hero-heading {
+    font-size: 6rem;
+    margin-top: 6rem;
+    max-width: 26rem;
+  }
+}
+
+@screen lg {
+  .layout--about--hero-heading {
+    margin-top: 0;
+  }
+}
+
+.layout--about--hero-image {
+  display: none;
+}
+
+@screen sm {
+  .layout--about--hero-image {
+    @apply absolute
+    h-full
+    right-0;
+
+    bottom: 1.2rem;
+    display: block;
+    top: -3rem;
+    width: 14rem;
+  }
+}
+
+@screen md {
+  .layout--about--hero-image {
+    bottom: 4rem;
+    top: -6rem;
+    width: 20rem;
+  }
+}
+
+@screen lg {
+  .layout--about--hero-image {
+    top: auto;
+  }
+}
+
+/* --- Bio --- */
+
+.layout--about--bio-bg-laptop {
+  @apply absolute
+    bg-left
+    bg-no-repeat
+    hidden
+    h-full
+    left-0
+    top-0
+    w-full;
+
+  background-image: url("/images/laptop-graphic.svg");
+  background-size: auto calc(100% - 8rem);
+  max-height: 36rem;
+
+  @media (min-width: 720px) {
+    display: block;
+
+    transform: scaleX(-1);
+    filter: FlipH;
+  }
+
+  @media (min-width: 1400px) {
+    transform: scaleX(1);
+  }
+}
+
+.layout--about--bio-bg-lines {
+  @apply absolute
+    bg-center
+    bg-repeat-x
+    h-full
+    left-0
+    top-0
+    w-full;
+
+  background-image: url("/images/laptop-lines.svg");
+  background-size: auto calc(100% - 8rem);
+  max-height: 36rem;
+  z-index: -1;
+}
+
+/* --- Timeline --- */
+
+.layout--about--timeline {
+  @apply text-center;
+}
+
+@screen sm {
+  .layout--about--timeline {
+    @apply grid
+      gap-4;
+
+    grid-template-columns: 1fr 2rem 1fr;
+  }
+}
+
+/* --- Map --- */
+
+.layout--about--map {
+  @apply relative;
+
+  svg {
+    @apply w-full;
+
+    min-width: 72rem;
+  }
+}
