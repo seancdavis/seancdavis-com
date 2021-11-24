@@ -71,13 +71,13 @@
   {% macro timelineItem(point) %}
     <h3 class="text-3xl mb-3 leading-none">{{ point.year }}</h3>
     {% for item in point.items %}
-      <p class="mb-2">{% markdown %}{{ item }}{% endmarkdown %}</p>
+      {% markdown %}{{ item }}{% endmarkdown %}
     {% endfor %}
   {% endmacro %}
 
   <div class="layout--about--timeline">
     {% for point in timeline.points %}
-      <div class="sm:text-right sm:pb-4 sm:max-w-xl mb-8 sm:mb-0">
+      <div class="sm:text-right sm:max-w-sm ml-auto mb-8 sm:mb-4">
         {% if cls.next() === 'left' %}
           {{ timelineItem(point) }}
         {% endif %}
@@ -86,7 +86,7 @@
         <div class="rounded-full border-4 border-green bg-white w-6 h-6 mx-auto"></div>
         <div class="w-1 h-full bg-green mx-auto"></div>
       </div>
-      <div class="sm:text-left sm:pb-4 sm:max-w-xl mb-8 sm:mb-0">
+      <div class="sm:text-left sm:max-w-sm mb-8 sm:mb-4">
         {% if cls.current === 'right' %}
           {{ timelineItem(point) }}
         {% endif %}
