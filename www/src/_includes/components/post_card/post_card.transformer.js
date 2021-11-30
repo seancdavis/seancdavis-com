@@ -1,8 +1,7 @@
-const lodash = require("lodash");
 const { Component } = require("../../../../utils/shortcodes/component");
 
 module.exports = ({ post, classes = "mb-6" }) => {
-  const tagData = lodash.get(post, "data.hashtags") || [];
+  const tagData = post?.data?.hashtags || [];
 
   const tags = tagData
     .map((tag) => {
