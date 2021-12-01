@@ -1,8 +1,9 @@
 # Build files
 dist
 
-# Temp CSS directory
+# Temp asset directories
 src/css
+src/js
 
 # Netlify CLI Config
 .netlify/state.json
