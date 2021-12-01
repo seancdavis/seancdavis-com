@@ -43,7 +43,7 @@ exports.default = (eleventyConfig) => {
    *  - This will run for any .js file that was changed, even if not meant to be
    *    part of the build.
    */
-  eleventyConfig.on("beforeWatch", async (filesChanged) => {
+  eleventyConfig.on("beforeWatch", (filesChanged) => {
     const jsFiles = filesChanged.filter((f) => f.endsWith(".js"));
     skipJsProcessing = jsFiles.length === 0;
   });

@@ -30,7 +30,7 @@ exports.default = (eleventyConfig) => {
    *
    * Note: This works because beforeWatch() runs before beforeBuild()
    */
-  eleventyConfig.on("beforeWatch", async (filesChanged) => {
+  eleventyConfig.on("beforeWatch", (filesChanged) => {
     const cssFiles = filesChanged.filter((f) => f.endsWith(".css"));
     skipCssProcessing = cssFiles.length === 0;
   });
