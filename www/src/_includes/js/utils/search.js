@@ -6,7 +6,7 @@ onInit(() => {
   const el = document.getElementById("search-page-content");
   if (!el) return;
 
-  const searchClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_API_KEY);
+  const searchClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_SEARCH_KEY);
 
   const search = instantsearch({
     indexName: ALGOLIA_INDEX_NAME,
