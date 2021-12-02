@@ -1,9 +1,9 @@
 # Build files
 dist
 
-# Temp asset directories
-src/css
-src/js
+# Generated asset files
+src/assets/css/styles.css
+src/assets/js/bundle.js
 
 # Netlify CLI Config
 .netlify/state.json

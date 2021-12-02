@@ -11,7 +11,7 @@ const webpackConfig = {
   entry: path.join(__dirname, "../.././src/_includes/js/index.js"),
   output: {
     filename: "bundle.js",
-    path: path.join(__dirname, "../.././src/js"),
+    path: path.join(__dirname, "../.././src/assets/js"),
     libraryTarget: "var",
     library: "App",
   },

@@ -11,9 +11,11 @@ const plugins = [
   ...(process.env.ELEVENTY_ENV === "production" ? [require("cssnano")] : []),
 ];
 
+const outputDir = path.join(__dirname, "../../src/assets/css");
+
 const processOptions = {
   from: path.join(__dirname, "../../src/_includes/css/index.css"),
-  to: path.join(__dirname, "../../src/css/styles.css"),
+  to: path.join(outputDir, "styles.css"),
 };
 
 /**
@@ -23,6 +25,10 @@ const processOptions = {
  */
 exports.default = (eleventyConfig) => {
   let skipCssProcessing = false;
+
+  // Create the output directory if it doesn't exist. PostCSS does not do this
+  // by default, like Webpack.
+  if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
   /**
    * When running the dev server, if no CSS files were changed, tell the build

@@ -46,7 +46,7 @@
   },
   "scripts": {
     "build": "eleventy --quiet",
-    "clean": "rm -rf dist && rm src/css/styles.css && rm src/js/bundle.js",
+    "clean": "rm -rf dist && rm -f src/assets/css/styles.css && rm -f src/assets/js/bundle.js",
     "dev": "eleventy --serve --port 8000",
     "pretest:visual": "DISABLE_PARTICLES=true DISABLE_TYPEWRITER=true npm run build",
     "test": "ELEVENTY_ENV=test jest",
