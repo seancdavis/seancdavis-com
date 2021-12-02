@@ -1,5 +1,5 @@
 [build]
-  command = "NETLIFY_USE_YARN=true npm run build"
+  command = "npm run build"
   publish = "dist"
 
 [[plugins]]
