@@ -54,10 +54,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addPassthroughCopy("./src/css");
-  eleventyConfig.addPassthroughCopy("./src/images");
-  eleventyConfig.addPassthroughCopy("./src/fonts");
-  eleventyConfig.addPassthroughCopy({ static: "/" });
+  eleventyConfig.addPassthroughCopy({ "src/assets": "/", static: "/" });
 
   // Markdown parser
   const MarkdownLib = MarkdownIt({ html: true })
@@ -66,11 +63,6 @@ module.exports = function (eleventyConfig) {
       slugify: (s) => slugify(s, { lower: true, strict: true }),
     });
   eleventyConfig.setLibrary("md", MarkdownLib);
-
-  // Merge the cascade of properties rather than overwriting. This is how we're
-  // able to set tags for an entire directory, while then adding to those tags
-  // for the individual items in the directory.
-  eleventyConfig.setDataDeepMerge(true);
 
   // Import utilities from src/utils. See getUtilFiles() above.
   getUtilFiles().map((util) => util.default(eleventyConfig));

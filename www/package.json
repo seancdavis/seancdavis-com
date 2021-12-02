@@ -4,7 +4,7 @@
   "author": "Sean C Davis <scdavis41@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.0-beta.8",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
     "@analytics/google-analytics": "^0.5.3",
@@ -34,7 +34,6 @@
     "netlify-plugin-a11y": "^0.0.12",
     "netlify-plugin-checklinks": "^4.1.1",
     "netlify-plugin-inline-critical-css": "^1.2.0",
-    "npm-run-all": "^4.1.5",
     "postcss": "^8.3.2",
     "postcss-cli": "^9.0.2",
     "postcss-custom-properties": "^12.0.0",
@@ -46,18 +45,10 @@
     "webpack-cli": "^4.9.1"
   },
   "scripts": {
-    "build": "npm-run-all clean build:css build:html build:js",
-    "build:css": "postcss src/_includes/css/index.css -o src/css/styles.css",
-    "build:html": "eleventy --quiet",
-    "build:js": "webpack",
-    "clean": "rm -rf dist",
-    "dev": "npm-run-all --parallel develop:css develop:html develop:js",
-    "develop": "dev",
-    "develop:css": "postcss src/_includes/css/index.css -o src/css/styles.css --watch",
-    "develop:html": "eleventy --serve --port 8000",
-    "develop:js": "webpack",
+    "build": "eleventy --quiet",
+    "clean": "rm -rf dist && rm -f src/assets/css/styles.css && rm -f src/assets/js/bundle.js",
+    "dev": "eleventy --serve --port 8000",
     "pretest:visual": "DISABLE_PARTICLES=true DISABLE_TYPEWRITER=true npm run build",
-    "start": "develop",
     "test": "ELEVENTY_ENV=test jest",
     "test:visual": "JEST_CONFIG=visual npm run test"
   }
