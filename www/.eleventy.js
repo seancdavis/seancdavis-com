@@ -28,6 +28,9 @@ const getUtilFiles = () => {
   // Ensure that they are configured correctly. Remove and log a message for
   // those that are not configured properly.
   files = files.map((file) => {
+    // Delete the imported file from the require cache. This brings in updates
+    // if the dev server is already running.
+    delete require.cache[require.resolve(file)];
     // Import the file.
     const module = require(file);
     // If everything looks good, return the module.

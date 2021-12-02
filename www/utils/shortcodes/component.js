@@ -1,10 +1,10 @@
-const fs = require("fs")
-const glob = require("glob")
-const nunjucks = require("nunjucks")
-const path = require("path")
+const fs = require("fs");
+const glob = require("glob");
+const nunjucks = require("nunjucks");
+const path = require("path");
 
-const { getComponentsDir } = require("../_helpers/get-components-dir")
-const config = require("../../eleventy.config")
+const { getComponentsDir } = require("../_helpers/get-components-dir");
+const config = require("../../eleventy.config");
 
 exports.Component = class Component {
   /**
@@ -17,9 +17,9 @@ exports.Component = class Component {
    * config)
    */
   constructor(name, props = {}, cfg = config) {
-    this.load(name, cfg)
-    if (!this.template) throw `Template file does not exist: ${name}`
-    this.props = props
+    this.load(name, cfg);
+    if (!this.template) throw `Template file does not exist: ${name}`;
+    this.props = props;
   }
 
   /**
@@ -30,16 +30,19 @@ exports.Component = class Component {
    * @param {object} config Eleventy config object.
    */
   load(name, config) {
-    const dir = getComponentsDir(config)
+    const dir = getComponentsDir(config);
     // Load transformer as the default export.
-    const transformer = glob.sync(path.join(dir, name, "*.transformer.js"))[0]
+    const transformer = glob.sync(path.join(dir, name, "*.transformer.js"))[0];
     if (transformer) {
-      const module = require(transformer)
-      if (typeof module === "function") this.transformer = module
+      // Delete the imported file from the require cache. This brings in
+      // updates if the dev server is already running.
+      delete require.cache[require.resolve(transformer)];
+      const module = require(transformer);
+      if (typeof module === "function") this.transformer = module;
     }
     // Load the template content.
-    const template = glob.sync(path.join(dir, name, "*.template.njk"))[0]
-    if (template) this.template = fs.readFileSync(template).toString()
+    const template = glob.sync(path.join(dir, name, "*.template.njk"))[0];
+    if (template) this.template = fs.readFileSync(template).toString();
   }
 
   /**
@@ -47,25 +50,25 @@ exports.Component = class Component {
    * only be called from the render() function.)
    */
   transform() {
-    if (!this.transformer) return this.props
-    this.props = this.transformer(this.props)
+    if (!this.transformer) return this.props;
+    this.props = this.transformer(this.props);
   }
 
   /**
    * Render the component, returning the HTML string.
    */
   render() {
-    this.transform()
-    return nunjucks.renderString(this.template, this.props)
+    this.transform();
+    return nunjucks.renderString(this.template, this.props);
   }
 
   /**
    * Whether or not the component should have paired tags or a single tag.
    */
   isPaired() {
-    return this.template.includes("{{ children")
+    return this.template.includes("{{ children");
   }
-}
+};
 
 /**
  * Sets the props for a component and then renders the component.
@@ -75,42 +78,47 @@ exports.Component = class Component {
  */
 const renderComponent = (component, props) => {
   try {
-    component.props = props
-    return component.render()
+    component.props = props;
+    return component.render();
   } catch (error) {
-    throw console.error(`ERROR: `, error)
+    throw console.error(`ERROR: `, error);
   }
-}
+};
 
 /**
  * Provides a method for adding NJK components.
  *
  * @param {object} eleventyConfig Eleventy's configuration object
  */
-exports.default = eleventyConfig => {
+exports.default = (eleventyConfig) => {
   // Grab all the directories in the components dir. Note that this only grabs
   // top-level comps at this time.
-  let components = glob.sync(path.join(getComponentsDir(config), "*"), { ignore: ["**/*.css"] })
+  let components = glob.sync(path.join(getComponentsDir(config), "*"), {
+    ignore: ["**/*.css"],
+  });
   // Loop through each ...
-  components = components.map(compDir => {
+  components = components.map((compDir) => {
     // Extract the name of the directory, which is expected to match the name of
     // the component and its interior files.
-    const name = path.basename(compDir)
+    const name = path.basename(compDir);
     // Instantiate the component object.
-    const component = new this.Component(name, {})
+    const component = new this.Component(name, {});
     // Swap hyphens for underscores in shortcode name.
-    const shortcodeName = name.replace(/\-/gi, "_")
+    const shortcodeName = name.replace(/\-/gi, "_");
     // If the component is paired ...
     if (component.isPaired()) {
       // ... Render the component, setting the children prop appropriately.
-      eleventyConfig.addPairedNunjucksShortcode(shortcodeName, (children, props) => {
-        return renderComponent(component, { ...props, children: children })
-      })
+      eleventyConfig.addPairedNunjucksShortcode(
+        shortcodeName,
+        (children, props) => {
+          return renderComponent(component, { ...props, children: children });
+        }
+      );
     } else {
       // Otherwise, render an unpaired component and pass the props directly.
-      eleventyConfig.addNunjucksShortcode(shortcodeName, props => {
-        return renderComponent(component, props)
-      })
+      eleventyConfig.addNunjucksShortcode(shortcodeName, (props) => {
+        return renderComponent(component, props);
+      });
     }
-  })
-}
+  });
+};
