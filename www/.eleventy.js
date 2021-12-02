@@ -54,10 +54,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addPassthroughCopy("./src/images");
-  eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy({ "src/assets": "/", static: "/" });
-  // eleventyConfig.addPassthroughCopy({ static: "/" });
 
   // Markdown parser
   const MarkdownLib = MarkdownIt({ html: true })
