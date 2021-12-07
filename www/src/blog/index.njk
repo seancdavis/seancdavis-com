@@ -1,6 +1,8 @@
 ---
 layout: blank
 title: The Blog
+eleventyComputed:
+  title: "The Blog{% if pagination.pageNumber > 0 %} (Page {{ pagination.pageNumber + 1 }}){% endif %}"
 description: Thoughts, ideas, and tutorials on web development, the Jamstack, working efficiently, staying organized, and having a little fun along the way.
 permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
 pagination:
