@@ -1,0 +1,53 @@
+---
+pagination:
+  data: collections.Tag
+  size: 1
+  alias: tag
+permalink: "/blog/tag/{{ tag.fileSlug }}/feed.xml"
+eleventyComputed:
+  metadata:
+    title: "{{ tag.data.title }} | {{ seo_defaults.title }}"
+    subtitle: "Posts tagged with {{ tag.data.title }} on Sean C Davis's blog."
+    url: "{{ seo_defaults.base_url }}/blog/tag/{{ tag.fileSlug }}"
+    feedUrl: "{{ seo_defaults.base_url }}/blog/tag/{{ tag.fileSlug }}/feed.xml"
+    updated: "{{ tag.data.posts | rssLastUpdatedDate }}"
+    author:
+      name: Sean C Davis
+      email: hello@seancdavis.com
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <link href="{{ metadata.feedUrl }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ metadata.updated }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for post in tag.data.posts %}
+  {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(seo_defaults.base_url + "/") }}{% endset %}
+  {%- if post.data.rich_author.data.title %}
+    {%- set authorName = post.data.rich_author.data.title %}
+  {%- else %}
+    {%- set authorName = "Sean C Davis" %}
+  {%- endif %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | rssDate }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <author>
+      <name>{{ authorName }}</name>
+    </author>
+    <content type="html">
+      {%- if post.data.image %}
+        &lt;p&gt;&lt;img src=&quot;{{ post.data.image | imgix_url({ w: 1400 }) }}&quot;&gt;&lt;/p&gt;
+      {%- endif %}
+      {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+    </content>
+  </entry>
+  {%- endfor %}
+</feed>
