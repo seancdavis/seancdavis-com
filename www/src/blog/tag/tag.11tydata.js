@@ -8,5 +8,10 @@ module.exports = {
       return data.sort((a, b) => b.date - a.date)
     }
   },
-  eleventyComputed: {}
+  eleventyComputed: {
+    title: data => {
+      if ((data?.pagination?.pageNumber || 0) === 0) return data.title
+      return `${data.title} (Page ${data.pagination.pageNumber + 1})`
+    }
+  }
 }
