@@ -1,14 +1,19 @@
 ---
-permalink: feed.xml
-eleventyExcludeFromCollections: true
-metadata:
-  title: Sean C Davis Blog
-  subtitle: Thoughts, ideas, and tutorials on web development.
-  url: https://www.seancdavis.com/
-  feedUrl: https://www.seancdavis.com/feed.xml
-  author:
-    name: Sean C Davis
-    email: hello@seancdavis.com
+pagination:
+  data: collections.Tag
+  size: 1
+  alias: tag
+permalink: "/blog/tag/{{ tag.fileSlug }}/feed.xml"
+eleventyComputed:
+  metadata:
+    title: "{{ tag.data.title }} | {{ seo_defaults.title }}"
+    subtitle: "Posts tagged with {{ tag.data.title }} on Sean C Davis's blog."
+    url: "{{ seo_defaults.base_url }}/blog/tag/{{ tag.fileSlug }}"
+    feedUrl: "{{ seo_defaults.base_url }}/blog/tag/{{ tag.fileSlug }}/feed.xml"
+    updated: "{{ tag.data.posts | rssLastUpdatedDate }}"
+    author:
+      name: Sean C Davis
+      email: hello@seancdavis.com
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -16,14 +21,14 @@ metadata:
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ metadata.feedUrl }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+  <updated>{{ metadata.updated }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
   </author>
-  {%- for post in collections.posts.slice(0, 20) %}
-  {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  {%- for post in tag.data.posts %}
+  {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(seo_defaults.base_url + "/") }}{% endset %}
   {%- if post.data.rich_author.data.title %}
     {%- set authorName = post.data.rich_author.data.title %}
   {%- else %}
