@@ -24,11 +24,19 @@ metadata:
   </author>
   {%- for post in collections.posts %}
   {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  {%- if post.data.rich_author.data.title %}
+    {%- set authorName = post.data.rich_author.data.title %}
+  {%- else %}
+    {%- set authorName = "Sean C Davis" %}
+  {%- endif %}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
     <updated>{{ post.date | rssDate }}</updated>
     <id>{{ absolutePostUrl }}</id>
+    <author>
+      <name>{{ authorName }}</name>
+    </author>
     <content type="html">
       {%- if post.data.image %}
         &lt;p&gt;&lt;img src=&quot;{{ post.data.image | imgix_url({ w: 1400 }) }}&quot;&gt;&lt;/p&gt;
