@@ -13,13 +13,13 @@ module.exports = ({ post, classes = "mb-6" }) => {
     })
     .join("");
 
-  let author;
-  if (post.data.rich_author) {
-    const component = new Component("author", {
-      author: post.data.rich_author,
+  let contributor;
+  if (post.data.contributor) {
+    const component = new Component("contributor", {
+      contributor: post.data.contributor,
       classes: "mb-2",
     });
-    author = component.render();
+    contributor = component.render();
   }
 
   let image;
@@ -34,7 +34,7 @@ module.exports = ({ post, classes = "mb-6" }) => {
   return {
     ...post,
     classes,
-    author,
+    contributor,
     image,
     topics,
   };

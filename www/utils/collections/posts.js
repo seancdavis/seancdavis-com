@@ -10,8 +10,8 @@ exports.default = (eleventyConfig) => {
    */
   eleventyConfig.addCollection("posts", (collectionApi) => {
     // Get raw collection data.
-    const authors = collectionApi
-      .getFilteredByTag("Author")
+    const contributors = collectionApi
+      .getFilteredByTag("Contributor")
       .sort((a, b) => a.data.title - b.data.title);
     const topics = collectionApi
       .getFilteredByTag("Topic")
@@ -26,12 +26,12 @@ exports.default = (eleventyConfig) => {
       // slugs).
       let postTags = (post.data.tags || []).map((tag) => findTagObj(tag));
       post.data.topics = postTags.filter((x) => !!x);
-      // Add "rich_author" attribute with rich author object.
+      // Add "contributor" rich object from the "author" string.
       if (post.data.author) {
-        let postAuthor = authors.find(
-          (author) => author.fileSlug === post.data.author
+        let postContributor = contributors.find(
+          (contributor) => contributor.fileSlug === post.data.author
         );
-        post.data.rich_author = postAuthor;
+        post.data.contributor = postContributor;
       }
     });
     // Return the posts collection.

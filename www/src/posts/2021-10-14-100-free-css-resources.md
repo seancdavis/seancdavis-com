@@ -4,7 +4,7 @@ description: There are countless ways to learn CSS. Here are 100 resources in va
 image: /blog/211014/100-free-css-resources.png
 tags:
   - css
-  - author:pratham
+  - contributor:pratham
 author: pratham
 ---
 

@@ -7,7 +7,7 @@ seo:
   image: /blog/210818/pink--css-position--meta.png
 tags:
   - css
-  - author:pratham
+  - contributor:pratham
 ---
 
 There are five values that you can pass into the [CSS](/blog/wtf-is-css/) `position` property:

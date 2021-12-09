@@ -7,7 +7,7 @@ seo:
   image: /blog/210624/meta--css-animations.png
 tags:
   - css
-  - author:pratham
+  - contributor:pratham
 ---
 
 Animations on your website can help catch the attention of visitors landing on your web pages.

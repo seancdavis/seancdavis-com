@@ -7,7 +7,7 @@ seo:
   image: /blog/210604/z-index--meta.png
 tags:
   - css
-  - author:pratham
+  - contributor:pratham
 ---
 
 `z-index` is a [CSS](/blog/wtf-is-css/) property that controls stacking order of elements along a z-axis. Let's first take a look at what the z-axis is, and then get you started with a few tips to help you solve situations that tend to trip up developers.

@@ -24,8 +24,8 @@ metadata:
   </author>
   {%- for post in collections.posts.slice(0, 20) %}
   {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
-  {%- if post.data.rich_author.data.title %}
-    {%- set authorName = post.data.rich_author.data.title %}
+  {%- if post.data.contributor.data.title %}
+    {%- set authorName = post.data.contributor.data.title %}
   {%- else %}
     {%- set authorName = "Sean C Davis" %}
   {%- endif %}

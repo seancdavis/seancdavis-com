@@ -29,8 +29,8 @@ eleventyComputed:
   </author>
   {%- for post in topic.data.posts %}
   {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(seo_defaults.base_url + "/") }}{% endset %}
-  {%- if post.data.rich_author.data.title %}
-    {%- set authorName = post.data.rich_author.data.title %}
+  {%- if post.data.contributor.data.title %}
+    {%- set authorName = post.data.contributor.data.title %}
   {%- else %}
     {%- set authorName = "Sean C Davis" %}
   {%- endif %}

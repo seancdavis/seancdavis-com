@@ -6,7 +6,7 @@ seo:
   image: /blog/211209/211209--8-best-animation-tools-2021.png
 tags:
   - design
-  - author:evelina-brown
+  - contributor:evelina-brown
 author: evelina-brown
 ---
 

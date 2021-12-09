@@ -25,8 +25,8 @@
             <h1 class="text-4xl leading-snug mb-4 max-w-lg mx-auto">
               {{ title }}
             </h1>
-            {% if rich_author %}
-              {% author author=rich_author, classes="mb-4 justify-center" %}
+            {% if contributor %}
+              {% contributor contributor=contributor, classes="mb-4 justify-center" %}
             {% endif %}
             {% if description %}
               <p class="text-xl mb-0 text-gray-700 max-w-2xl mx-auto">
