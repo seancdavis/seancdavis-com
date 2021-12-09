@@ -1,3 +1,7 @@
+/**
+ * Writes a list of pages from the `dist` directory to a file in the tmp
+ * directory.
+ */
 const fs = require("fs");
 const glob = require("fast-glob");
 const path = require("path");
