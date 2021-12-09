@@ -1,11 +1,14 @@
 const { Component } = require("../../../../utils/shortcodes/component");
 
 module.exports = ({ post, classes = "mb-6" }) => {
-  const tagData = post?.data?.hashtags || [];
+  const topicData = post?.data?.topics || [];
 
-  const tags = tagData
-    .map((tag) => {
-      const component = new Component("tag", { tag, classes: "mr-1" });
+  const topics = topicData
+    .map((topic) => {
+      const component = new Component("topic_badge", {
+        topic,
+        classes: "mr-1",
+      });
       return component.render();
     })
     .join("");
@@ -33,6 +36,6 @@ module.exports = ({ post, classes = "mb-6" }) => {
     classes,
     author,
     image,
-    tags,
+    topics,
   };
 };

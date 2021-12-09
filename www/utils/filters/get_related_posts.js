@@ -17,7 +17,8 @@ const { shuffle } = require("../_helpers/shuffle");
  * utils/collections/posts.js).
  * @param {array} relatedPosts Array of strings for explicitly specifying
  * related posts using the fileSlug property.
- * @param {array} tags Array of tags coming from the current post.
+ * @param {array} tags Array of tag strings (not topics) coming from the current
+ * post.
  * @param {string} currentSlug fileSlug of the current post.
  * @param {string} content HTML content of the current post.
  *

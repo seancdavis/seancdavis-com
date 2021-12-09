@@ -9,8 +9,8 @@ const testPaths = [
   "/blog/page-2/",
   "/404.html",
   "/license/",
-  "/blog/tag/javascript/",
-  "/blog/tag/javascript/page-2/",
+  "/topics/javascript/",
+  "/topics/javascript/page-2/",
   // twitter embed, youtube embed, code block filename, code blocks, image (GIF)
   "/blog/three-ways-to-add-image-to-github-readme/",
   // back-to-back code blocks with filenames, youtube embed, note callout

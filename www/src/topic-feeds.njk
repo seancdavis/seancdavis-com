@@ -1,16 +1,16 @@
 ---
 pagination:
-  data: collections.Tag
+  data: collections.Topic
   size: 1
-  alias: tag
-permalink: "/blog/tag/{{ tag.fileSlug }}/feed.xml"
+  alias: topic
+permalink: "topic/{{ topic.fileSlug }}/feed.xml"
 eleventyComputed:
   metadata:
-    title: "{{ tag.data.title }} | {{ seo_defaults.title }}"
-    subtitle: "Posts tagged with {{ tag.data.title }} on Sean C Davis's blog."
-    url: "{{ seo_defaults.base_url }}/blog/tag/{{ tag.fileSlug }}"
-    feedUrl: "{{ seo_defaults.base_url }}/blog/tag/{{ tag.fileSlug }}/feed.xml"
-    updated: "{{ tag.data.posts | rssLastUpdatedDate }}"
+    title: "{{ topic.data.title }} | {{ seo_defaults.title }}"
+    subtitle: "Posts topicged with {{ topic.data.title }} on Sean C Davis's blog."
+    url: "{{ seo_defaults.base_url }}/blog/topic/{{ topic.fileSlug }}"
+    feedUrl: "{{ seo_defaults.base_url }}/blog/topic/{{ topic.fileSlug }}/feed.xml"
+    updated: "{{ topic.data.posts | rssLastUpdatedDate }}"
     author:
       name: Sean C Davis
       email: hello@seancdavis.com
@@ -27,7 +27,7 @@ eleventyComputed:
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
   </author>
-  {%- for post in tag.data.posts %}
+  {%- for post in topic.data.posts %}
   {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(seo_defaults.base_url + "/") }}{% endset %}
   {%- if post.data.rich_author.data.title %}
     {%- set authorName = post.data.rich_author.data.title %}
