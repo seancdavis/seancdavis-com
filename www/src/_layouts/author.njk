@@ -17,7 +17,11 @@ permalink: "blog/author/{{ page.fileSlug }}/{% if pagination.pageNumber > 0 %}pa
             {% image path=image %}
           </span>
         {% endif %}
-        <a href="https://twitter.com/{{ twitter }}">@{{ twitter }}</a>
+        {% if twitter %}
+          <a href="https://twitter.com/{{ twitter }}">@{{ twitter }}</a>
+        {% else %}
+          <span>{{ title }}</span>
+        {% endif %}
       </div>
     {% endif %}
     {% if content %}
