@@ -1,0 +1,47 @@
+---
+layout: blank
+title: Contributors
+description: Meet the folks who have contributed content to help developers build better websites.
+seo:
+  image: pages/seancdavis--meta--blank.png
+---
+
+<div class="container max-w-4xl">
+
+  {# --- Header --- #}
+
+  <div class="pt-24 mb-24">
+    <h1 class="text-4xl">{{ title }}</h1>
+    {% if description %}
+      <p class="text-2xl">
+        Meet the folks who have contributed content to help developers build
+        better websites. To learn more about Sean, see <a href="/about">the
+        about page</a>.
+      </p>
+    {% endif %}
+  </div>
+
+  {# --- Contributors --- #}
+
+  <div class="mb-24 gap-4 grid grid-cols-1 md:grid-cols-2">
+    {% for contributor in collections.Contributor %}
+      <div class="bg-white shadow-sm p-4 text-center">
+        <div class="inline-block h-24 w-24 rounded-full overflow-hidden mb-2">
+          {% image path=contributor.data.image, xs="200px" %}
+        </div>
+        <h2 class="mb-2 text-2xl">
+          <a href="{{ contributor.url }}">{{ contributor.data.title }}</a>
+        </h2>
+        <p>
+          {{ contributor.data.description }}
+        </p>
+        {% if contributor.data.twitter %}
+          <div class="mb-2">
+            {% social_link link={ icon: "twitter", url: "https://twitter.com/" + contributor.data.twitter } %}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
