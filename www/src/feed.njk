@@ -16,13 +16,13 @@ metadata:
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ metadata.feedUrl }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.blog | rssLastUpdatedDate }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
   </author>
-  {%- for post in collections.posts.slice(0, 20) %}
+  {%- for post in collections.blog.slice(0, 20) %}
   {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
   {%- if post.data.contributor.data.title %}
     {%- set authorName = post.data.contributor.data.title %}

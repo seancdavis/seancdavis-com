@@ -1,6 +1,5 @@
 ---
 title: The Difference Between =, == and === in JavaScript
-permalink: blog/difference-between-equal-signs-javascript/
 description: They may look similar, but they each do something very different
   from the next, and it's important to understand the differences.
 tags:
@@ -19,9 +18,9 @@ The equality symbol (`=`) is used for [variable assignment](https://developer.mo
 Typically this includes a keyword like `var`, `let`, or `const` to kick things off. It looks like this:
 
 ```js
-var a = 1
+var a = 1;
 
-console.log(a) // => 1
+console.log(a); // => 1
 ```
 
 ## Comparison Operators in JavaScript
@@ -31,13 +30,13 @@ While a single equal sign is used for variable assignment, using two or three co
 Take a look at this example:
 
 ```js
-var a = 1
+var a = 1;
 
-console.log(a == 1) // => true
-console.log(a == 2) // => false
+console.log(a == 1); // => true
+console.log(a == 2); // => false
 
-console.log(a === 1) // => true
-console.log(a === 2) // => false
+console.log(a === 1); // => true
+console.log(a === 2); // => false
 ```
 
 If you try to use one of the comparison operators when attempting to assign a variable, you'll run into a syntax error:
@@ -49,15 +48,15 @@ var a == 1 // => SyntaxError: Unexpected token
 On the other hand, if you use variable assignment when you should be looking for a comparison, you get an unexpected result:
 
 ```js
-var a = 1
+var a = 1;
 
 if ((a = 2)) {
-  a = 3
+  a = 3;
 } else {
-  a = 4
+  a = 4;
 }
 
-console.log(a) // => 3
+console.log(a); // => 3
 ```
 
 Weird, right?
@@ -65,7 +64,7 @@ Weird, right?
 What happened was that the resolution of `a = 2` returns `2`:
 
 ```js
-a = 2 // => 2
+a = 2; // => 2
 ```
 
 `2` is a _truthy_ value, which means that the if statement is resolved. So we then set `a` to `3` and jump down the script to the log statement.
@@ -75,16 +74,16 @@ a = 2 // => 2
 Okay, so let's fix that comparison statement from above.
 
 ```js
-var a = 1
+var a = 1;
 
 // Using == for comparison
 if (a == 2) {
-  a = 3
+  a = 3;
 } else {
-  a = 4
+  a = 4;
 }
 
-console.log(a) // => 4
+console.log(a); // => 4
 ```
 
 That's better. Now `a == 2` returns false and `a` gets set to `4`.
@@ -92,16 +91,16 @@ That's better. Now `a == 2` returns false and `a` gets set to `4`.
 But what if we use `===` instead?
 
 ```js
-var a = 1
+var a = 1;
 
 // Using === for comparison
 if (a === 2) {
-  a = 3
+  a = 3;
 } else {
-  a = 4
+  a = 4;
 }
 
-console.log(a) // => 4
+console.log(a); // => 4
 ```
 
 Same thing. That's peculiar.
@@ -113,14 +112,14 @@ But what's the difference?
 While both are equality operators, `===` looks for _strict_ equality. `==` is a little looser and will change the _type_ of the two objects in question to match before looking for equality.
 
 ```js
-var a = 1
-var b = "1"
+var a = 1;
+var b = "1";
 
-console.log(typeof a) // => number
-console.log(typeof b) // => string
+console.log(typeof a); // => number
+console.log(typeof b); // => string
 
-console.log(a == b) // => true
-console.log(a === b) // => false
+console.log(a == b); // => true
+console.log(a === b); // => false
 ```
 
 ## When to Use `==` or `===`
