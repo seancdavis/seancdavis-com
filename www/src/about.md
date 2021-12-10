@@ -2,7 +2,7 @@
 layout: about
 title: "Hi, I'm Sean."
 seo:
-  image: /meta/seancdavis--meta--home.png
+  image: /pages/seancdavis--meta--home.png
   description: "Hi, I'm Sean. I'm a tinkerer and a teacher. Helping developers build better websites and have fun along the way."
 hero:
   headings:
