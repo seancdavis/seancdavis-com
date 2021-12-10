@@ -2,7 +2,7 @@
 title: Promisifying Your Node Callback Functions
 date: 2021-03-25
 description: Learn how to convert old Node.js callback-based function to new and shiny promised-based functions.
-image: /blog/210325/210325-callback-hell.png
+image: /posts/210325/210325-callback-hell.png
 tags:
   - repost-grouparoo
   - node
@@ -64,7 +64,7 @@ doThingAsync(param1) {
 Now you can run the original example like so:
 
 ```js
-const result = await doThingAsync("theThing")
+const result = await doThingAsync("theThing");
 ```
 
 This is a great method when you only need to wrap a few functions or when you want fine-grained control on the output of specific functions. For example, if you want more control over the error messages returned.
@@ -78,10 +78,10 @@ Node has [a built-in promisify utility](https://nodejs.org/dist/latest/docs/api/
 Using this approach, we can rewrite our original example like so:
 
 ```js
-import { promisify } from "util"
+import { promisify } from "util";
 
-const doThingAsync = promisify(doThing)
-const result = await doThingAsync("theThing")
+const doThingAsync = promisify(doThing);
+const result = await doThingAsync("theThing");
 ```
 
 That's super simple! And that's why this is my preferred approach when it can be implemented cleanly.
@@ -99,7 +99,7 @@ This is the structure I've shown in the examples here. But if the library you're
 When we're dealing with an instance of a class or object, we have to bind that object to `promisify`. Here's an example:
 
 ```js
-const instance = new Thing()
-const doThingAsync = promisify(instance.doThing).bind(instance)
-const result = await doThingAsync("theThing")
+const instance = new Thing();
+const doThingAsync = promisify(instance.doThing).bind(instance);
+const result = await doThingAsync("theThing");
 ```

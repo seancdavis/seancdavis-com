@@ -9,16 +9,16 @@ tags:
   - gatsby
   - jamstack
   - netlify
-image: /blog/default/default-yellow-03.png
+image: /posts/default/default-yellow-03.png
 ---
 
-I've (somewhat unexpectedly) become a serious fanboy of both [Netlify](/blog/wtf-is-netlify/) and [GatsbyJS](https://www.gatsbyjs.org/). For the first time since I was discovering [Rails](https://rubyonrails.org/) I have felt like a tool (library, framework, etc.) had an answer to every question I was seeking.
+I've (somewhat unexpectedly) become a serious fanboy of both [Netlify](/posts/wtf-is-netlify/) and [GatsbyJS](https://www.gatsbyjs.org/). For the first time since I was discovering [Rails](https://rubyonrails.org/) I have felt like a tool (library, framework, etc.) had an answer to every question I was seeking.
 
 Nearly every time I reached a challenging hurdle without a clear solution, I would do a bit of googling and, sure enough, Netlify or Gatsby (depending on the challenge) would have the answer ready and waiting. That's a seriously uplifting way to work and that's going to keep me coming back to these two products.
 
 That being said, one area in which I've struggled to find easy answers is when [building form handlers using Netlify](https://www.netlify.com/docs/form-handling/). I did a lot of reading, along with a fair amount of trial and error, before I really found a solution that worked well.
 
-And while I came up with [seven points I think you should know before working with Netlify forms](/blog/what-you-need-to-know-about-netlify-forms/), I wanted to take some time to share how these points translate to a Gatsby project. If you have not read the article, I'd suggest at least skimming it — it'll help add some context as we pass through the following scenarios.
+And while I came up with [seven points I think you should know before working with Netlify forms](/posts/what-you-need-to-know-about-netlify-forms/), I wanted to take some time to share how these points translate to a Gatsby project. If you have not read the article, I'd suggest at least skimming it — it'll help add some context as we pass through the following scenarios.
 
 For the rest of this article, we're going to dive into some specific examples. Since there are many different means of approaching how you work with forms in Gatsby, I've provided multiple ways in which you can approach Netlify's form handling, such that you can choose the best path forward for your project.
 
@@ -37,16 +37,16 @@ The first step is to create the page and add some boilerplate code:
 `src/pages/contact.js` {.filename}
 
 ```jsx
-import React from "react"
-import Layout from "../components/layout"
+import React from "react";
+import Layout from "../components/layout";
 
 const ContactFormPage = () => (
   <Layout>
     <h1>Contact</h1>
   </Layout>
-)
+);
 
-export default ContactFormPage
+export default ContactFormPage;
 ```
 
 Note that the location and behavior of the `Layout` is based on what you get from Gatsby out of the box. If you've changed this behavior, you'll want to adjust that component accordingly.
@@ -73,7 +73,7 @@ const ContactFormPage = () => (
       <button type="submit">Send</button>
     </form>
   </Layout>
-)
+);
 ```
 
 I want to call your attention to four key points within this markup (these shouldn't be a surprise if you've read the _must know_ article referenced above):
@@ -94,7 +94,7 @@ You may notice a bit of an undesirable effect with this out-of-the-box behavior:
 1. It likely doesn't match your site's design.
 2. You have to click a link to go back to the page the form was on.
 
-{% post_image src="/blog/190504/form-success-page.png" %}
+{% post_image src="/posts/190504/form-success-page.png" %}
 
 Fortunately, you can specify the path to which you want users redirected after a successful form submission so you have more control over the message, behavior, and aesthetic.
 
@@ -114,17 +114,17 @@ Notice here that I've added a value of `/thank-you` as the `action` on the form.
 `src/pages/thank-you.js` {.filename}
 
 ```jsx
-import React from "react"
-import Layout from "../components/layout"
+import React from "react";
+import Layout from "../components/layout";
 
 const ThankYouPage = () => (
   <Layout>
     <h1>Contact</h1>
     <p>Thank you for your submission!</p>
   </Layout>
-)
+);
 
-export default ThankYouPage
+export default ThankYouPage;
 ```
 
 Notice this is just a basic page, but it gives some feedback to the user within the context of your site (and its design) so they feel more continuity after completing the form.
@@ -133,7 +133,7 @@ Notice this is just a basic page, but it gives some feedback to the user within 
 
 One great feature of Netlify's form handling is that it has a built-in filter to catch spammy submissions and prevent them from counting toward your monthly allotment. It won't be perfect, but it's one more step that a form submission has to get through before being considered valid.
 
-Still, you may want to add additional spam measures, such as [reCAPTCHA](https://en.wikipedia.org/wiki/ReCAPTCHA). If you've read through Netlify's docs or through my [must-know Netlify form tips](/blog/what-you-need-to-know-about-netlify-forms/), you've probably seen that Netlify also offers reCAPTCHA support out of the box. And you may also already know, if you've tried to implement this within a Gatsby site, that Netlify's reCAPTCHA support doesn't extend to forms rendered by JavaScript (as Gatsby's pages are/).
+Still, you may want to add additional spam measures, such as [reCAPTCHA](https://en.wikipedia.org/wiki/ReCAPTCHA). If you've read through Netlify's docs or through my [must-know Netlify form tips](/posts/what-you-need-to-know-about-netlify-forms/), you've probably seen that Netlify also offers reCAPTCHA support out of the box. And you may also already know, if you've tried to implement this within a Gatsby site, that Netlify's reCAPTCHA support doesn't extend to forms rendered by JavaScript (as Gatsby's pages are/).
 
 Therefore, if we want a [reCAPTCHA](https://www.google.com/recaptcha) field within our Gatsby site, we must implement it ourselves.
 
@@ -146,7 +146,7 @@ Next, import the package to the top of your page:
 `src/pages/contact.js` {.filename}
 
 ```jsx
-import ReCAPTCHA from "react-google-recaptcha"
+import ReCAPTCHA from "react-google-recaptcha";
 ```
 
 Following Netlify's docs, you do still need to add `data-netlify-recaptcha="true"` as an attribute on your form. And then you can add the `ReCAPTCHA` component with a `sitekey` prop.

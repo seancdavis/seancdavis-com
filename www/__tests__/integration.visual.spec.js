@@ -12,19 +12,19 @@ const testPaths = [
   "/topics/javascript/",
   "/topics/javascript/page-2/",
   // twitter embed, youtube embed, code block filename, code blocks, image (GIF)
-  "/blog/three-ways-to-add-image-to-github-readme/",
+  "/posts/three-ways-to-add-image-to-github-readme/",
   // back-to-back code blocks with filenames, youtube embed, note callout
-  "/blog/build-static-api-gatsby/",
+  "/posts/build-static-api-gatsby/",
   // code blocsk with filenames, warning callout
-  "/blog/getting-started-with-postcss/",
+  "/posts/getting-started-with-postcss/",
   // blockquote, images
-  "/blog/git-safe-force-push/",
+  "/posts/git-safe-force-push/",
   // top 5 posts
-  "/blog/git-accept-merge-all-changes/",
-  "/blog/wait-until-all-images-loaded/",
-  "/blog/4-ways-to-pass-arguments-to-a-rake-task/",
-  "/blog/change-css-iframe/",
-  "/blog/fix-yarn-integrity-check-failed/",
+  "/posts/git-accept-merge-all-changes/",
+  "/posts/wait-until-all-images-loaded/",
+  "/posts/4-ways-to-pass-arguments-to-a-rake-task/",
+  "/posts/change-css-iframe/",
+  "/posts/fix-yarn-integrity-check-failed/",
 ];
 
 const buildUrl = (path) => {

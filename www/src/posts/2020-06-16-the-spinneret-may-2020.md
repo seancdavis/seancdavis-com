@@ -4,7 +4,7 @@ description: The first issue of my monthly collection of web development topics,
   ideas, tools, and references, along with some commentary.
 tags:
   - spinneret
-image: /blog/default/default-blue-03.png
+image: /posts/default/default-blue-03.png
 ---
 
 Welcome to the very first issue of _The Spinneret_! This is an idea I've had for awhile. It's taken different forms over the last few months, but has led to this — a blog article and email newsletter that consolidates what's happening in my sphere of web development.
@@ -18,14 +18,14 @@ Okay. Here we go!
 ## In My Words
 
 {% post_image
-    src="/blog/200616/spinneret-may-2020--in-my-words.png",
+    src="/posts/200616/spinneret-may-2020--in-my-words.png",
     alt="The Spinneret, May 2020 - In My Words" %}
 
 I took more than a week off in May to unplug in a cabin in the woods with my family. It was a much needed break! But it meant I didn't publish as much as I normally would in a month. However, there were still a few articles I enjoyed writing:
 
 ### Static APIs
 
-I've been exploring the idea of [_Static APIs_](/blog/lets-talk-about-static-apis) over the last few months, trying to add a new tutorial here and there. Last month I added a quick tutorial on [Building a Static API with Eleventy](/blog/building-static-api-eleventy). I also got some love from [@chriscoyier](https://twitter.com/chriscoyier) on [CSS Tricks](https://css-tricks.com/wtf-is-a-static-api/)!
+I've been exploring the idea of [_Static APIs_](/posts/lets-talk-about-static-apis) over the last few months, trying to add a new tutorial here and there. Last month I added a quick tutorial on [Building a Static API with Eleventy](/posts/building-static-api-eleventy). I also got some love from [@chriscoyier](https://twitter.com/chriscoyier) on [CSS Tricks](https://css-tricks.com/wtf-is-a-static-api/)!
 
 ### Jamstack Exploration
 
@@ -41,7 +41,7 @@ I'll be slow to get back into writing upon my return from the woods, but I expec
 ## Shop Talk
 
 {% post_image
-    src="/blog/200616/spinneret-may-2020--shop-talk.svg",
+    src="/posts/200616/spinneret-may-2020--shop-talk.svg",
     alt="The Spinneret, May 2020 - Shop Talk",
     classes="mb-8 mt-4 w-56 mx-auto",
     flatten=true %}
@@ -67,18 +67,18 @@ There will be much that comes out of this, including blog posts and tutorials. [
 I introduced my team to a wonderfully weird JavaScript problem:
 
 ```js
-;["1", "7", "11"].map(parseInt)
+["1", "7", "11"].map(parseInt);
 // => [1, NaN, 3]
 ```
 
 WTF?
 
-I love it. It's so weird. That led me to write an introductory article on [passing a function as an argument to a JavaScript function](/blog/pass-func-as-arg-javascript). But [here's the explanation for this specific problem](https://medium.com/dailyjs/parseint-mystery-7c4368ef7b21).
+I love it. It's so weird. That led me to write an introductory article on [passing a function as an argument to a JavaScript function](/posts/pass-func-as-arg-javascript). But [here's the explanation for this specific problem](https://medium.com/dailyjs/parseint-mystery-7c4368ef7b21).
 
 ## Resources & References
 
 {% post_image
-    src="/blog/200616/spinneret-may-2020--resources.png",
+    src="/posts/200616/spinneret-may-2020--resources.png",
     alt="The Spinneret, May 2020 - Resources & References" %}
 
 These are the two that caught my attention:
@@ -97,7 +97,7 @@ I'm very excited about [this](https://www.netlify.com/blog/2020/04/23/enable-gat
 ## What The Buzz!
 
 {% post_image
-    src="/blog/200616/spinneret-may-2020--buzz.jpg",
+    src="/posts/200616/spinneret-may-2020--buzz.jpg",
     alt="The Spinneret, May 2020 - What the Buzz?",
     caption="Photo Credit: [Forbes](https://www.forbes.com/sites/davidjeans/2020/05/27/gatsby-website-building-startup-backed-by-index-ventures-raises-28-million/)" %}
 
@@ -116,25 +116,25 @@ _Note: While I was unable to attend Jamstack Conf, I plan to include a separate 
 <div class="flex items-center justify-center mt-4 my-6">
 
 {% post_image
-    src="/blog/200616/spinneret-may-2020--tools-01.png",
+    src="/posts/200616/spinneret-may-2020--tools-01.png",
     alt="The Spinneret, May 2020 - Tools",
     classes="inline-block w-24 mx-2",
     flatten=true %}
 
 {% post_image
-    src="/blog/200616/spinneret-may-2020--tools-02.png",
+    src="/posts/200616/spinneret-may-2020--tools-02.png",
     alt="The Spinneret, May 2020 - Tools",
     classes="inline-block w-24 mx-2",
     flatten=true %}
 
 {% post_image
-    src="/blog/200616/spinneret-may-2020--tools-03.png",
+    src="/posts/200616/spinneret-may-2020--tools-03.png",
     alt="The Spinneret, May 2020 - Tools",
     classes="inline-block w-24 mx-2",
     flatten=true %}
 
 {% post_image
-    src="/blog/200616/spinneret-may-2020--tools-04.svg",
+    src="/posts/200616/spinneret-may-2020--tools-04.svg",
     alt="The Spinneret, May 2020 - Tools",
     classes="inline-block w-24 mx-2",
     flatten=true %}

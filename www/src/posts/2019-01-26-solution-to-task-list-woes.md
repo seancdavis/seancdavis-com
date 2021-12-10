@@ -3,7 +3,7 @@ title: The Solution to Task List Woes
 tags:
   - productivity
 description: "I've never been able to get task lists to work for me, regardless of what app I used. So I threw all my lists and apps out and tried something entirely new."
-image: /blog/190126/photo-1484480974693-6ca0a78fb36b.jpg
+image: /posts/190126/photo-1484480974693-6ca0a78fb36b.jpg
 attribution:
   - name: Glenn Carstens-Peters
     url: https://unsplash.com/@glenncarstenspeters

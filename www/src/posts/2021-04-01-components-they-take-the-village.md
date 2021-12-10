@@ -1,12 +1,12 @@
 ---
 title: "Components: They Take a Village"
 description: "It takes a lot to build a rock-solid, performant, beautiful, well-organized, component-driven site. But there's one thing that matters more than the rest."
-image: /blog/210401/lime--components-village.png
+image: /posts/210401/lime--components-village.png
 tags:
   - components
 ---
 
-When it comes to building a component-driven website well — i.e. _efficient to develop, easy to maintain_ — there's a lot to do to get it right. System-first thinking. Consistency in code. Knowing [how to work with supporting files](/blog/organize-components-by-keeping-related-files-close/).
+When it comes to building a component-driven website well — i.e. _efficient to develop, easy to maintain_ — there's a lot to do to get it right. System-first thinking. Consistency in code. Knowing [how to work with supporting files](/posts/organize-components-by-keeping-related-files-close/).
 
 But among the challenges in building a super cool and effective website with components, there's one thing that looms above all else: _The People_.
 

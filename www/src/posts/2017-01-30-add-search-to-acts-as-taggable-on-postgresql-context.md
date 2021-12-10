@@ -5,7 +5,7 @@ description: ActsAsTaggableOn is a great gem for working with tags in your
 tags:
   - postgresql
   - ruby
-image: /blog/default/default-lime-03.png
+image: /posts/default/default-lime-03.png
 ---
 
 I have always been one to build my own system when it comes to adding a tagging

@@ -1,7 +1,7 @@
 ---
 title: Remember These 4 Things When You Perform In Front Of People
 description: "Until you've had enough practice, it's terrifying to perform in front of a room full of people."
-image: /blog/170419/mic.png
+image: /posts/170419/mic.png
 attribution:
   - name: Claus Grünstäudl
     url: https://unsplash.com/@w18

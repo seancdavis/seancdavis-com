@@ -3,7 +3,7 @@ title: "Remote Work: You're Already Doing It"
 tags:
   - communication
 description: "Recruiters these days seem hell-bent on knowing whether or not you've worked a remote job in the past. The truth is it doesn't matter. The truth is we're all already doing it."
-image: /blog/160223/photo-1526215863741-4e223bc0c5a2.jpg
+image: /posts/160223/photo-1526215863741-4e223bc0c5a2.jpg
 attribution:
   - name: Antoine Fabre
     url: https://unsplash.com/@antoinefbr

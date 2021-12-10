@@ -3,7 +3,7 @@ title: Being "Busy" Isn't An Excuse
 tags:
   - communication
 description: "We're all busy. All the time. You aren't busier than anyone else. You just need to learn how to communicate why you can't (or couldn't) do something."
-image: /blog/160321/7729815614_bcaa6ff581_b.jpg
+image: /posts/160321/7729815614_bcaa6ff581_b.jpg
 attribution:
   - name: Chris Goldberg
     url: https://www.flickr.com/photos/chrisgold/

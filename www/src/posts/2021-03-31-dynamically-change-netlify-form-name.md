@@ -1,7 +1,7 @@
 ---
 title: "Dynamically Changing a Netlify Form Name"
 description: "Netlify forms are easy to use because they are simple in scope. Add a little power with this cool trick."
-image: /blog/210331/green--netlify-form-name.png
+image: /posts/210331/green--netlify-form-name.png
 tags:
   - jamstack
   - javascript
@@ -12,11 +12,11 @@ tags:
 
 What if (for whatever reason) you wanted the data from the form to be saved as two separate forms, depending on some input by the user?
 
-Well, I've found that you can do that on the fly with just a little [JavaScript](/blog/wtf-is-javascript/).
+Well, I've found that you can do that on the fly with just a little [JavaScript](/posts/wtf-is-javascript/).
 
 ## Understanding the `form-name` Attribute
 
-In my [Netlify Forms Intro Guide](/blog/what-you-need-to-know-about-netlify-forms/), I mentioned that **the `form-name` attribute that comes along with the data submitted to Netlify is extremely important**. It's what tells Netlify where to put your submission, which can determine additional behavior, such as email notifications.
+In my [Netlify Forms Intro Guide](/posts/what-you-need-to-know-about-netlify-forms/), I mentioned that **the `form-name` attribute that comes along with the data submitted to Netlify is extremely important**. It's what tells Netlify where to put your submission, which can determine additional behavior, such as email notifications.
 
 You'll notice that if you're working with a truly static site — whether plain HTML, or using a static site generator like [Eleventy](https://www.11ty.dev/) that outputs static HTML — Netlify performs some magic for you.
 
@@ -104,17 +104,17 @@ Then we could write a function (`changeFormName`) that fires when the subject fi
 ```js
 function changeFormName(event) {
   // Get the value of the subject field.
-  var value = event.target.value
+  var value = event.target.value;
   // Build the name we're to use for form-name field.
-  var name = `Contact-${value}`
+  var name = `Contact-${value}`;
   // Find the form object.
-  var form = document.querySelector("#conditional-form")
+  var form = document.querySelector("#conditional-form");
   // Set the name attribute on it (just to be safe).
-  form.setAttribute("name", name)
+  form.setAttribute("name", name);
   // Then find the form-name field and set its value.
   document
     .querySelector('#conditional-form [name="form-name"]')
-    .setAttribute("value", name)
+    .setAttribute("value", name);
 }
 ```
 

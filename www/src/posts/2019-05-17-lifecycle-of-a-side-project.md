@@ -3,14 +3,14 @@ title: The Lifecycle of a Side Project
 tags:
   - productivity
 decription: "Every side project undergoes the same four stages within an iteration of its lifecycle. Read a high-level overview of each stage before diving in deeper for more information."
-image: /blog/190517/photo-1527117499127-8169c886e66e.jpg
+image: /posts/190517/photo-1527117499127-8169c886e66e.jpg
 attribution:
   - name: Joel Fulgencio
     url: https://unsplash.com/@joelft
     license: Unsplash
 ---
 
-I enjoy working on side projects because they bring a variability and freshness to life. Most side hustles provide at least one of [four potential benefits](/blog/4-reasons-to-work-on-side-projects) — benefits that can help justify getting a little less sleep and doing a little more "work."
+I enjoy working on side projects because they bring a variability and freshness to life. Most side hustles provide at least one of [four potential benefits](/posts/4-reasons-to-work-on-side-projects) — benefits that can help justify getting a little less sleep and doing a little more "work."
 
 While these side gigs can _provide_ variability, they can also _be_ variable. Projects can differ in discipline, scope, industry, team, etc. But there's one thing all side projects have in common:
 

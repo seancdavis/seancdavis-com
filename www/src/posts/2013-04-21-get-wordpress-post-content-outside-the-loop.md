@@ -4,7 +4,7 @@ tags:
   - wordpress
 description: Some WordPress functions only work when you're inside The Loop. But
   you can still get to the post content when you're outside The Loop.
-image: /blog/default/default-blue-02.png
+image: /posts/default/default-blue-02.png
 ---
 
 When developing for WordPress, you have to be cognizant as to whether you're inside or outside of [The Loop](https://codex.wordpress.org/The_Loop) when performing tasks. Several WordPress functions will work only within The Loop. I've had issues getting content and other post data when working outside The Loop.

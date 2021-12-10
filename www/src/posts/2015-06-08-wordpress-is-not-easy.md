@@ -2,7 +2,7 @@
 title: WordPress Is Not Easy
 tags:
   - inspiration
-image: /blog/150608/15260782219_3862cc1c50_h.jpg
+image: /posts/150608/15260782219_3862cc1c50_h.jpg
 attribution:
   - name: Caspar Hübinger
     url: https://www.flickr.com/photos/casparhuebinger/

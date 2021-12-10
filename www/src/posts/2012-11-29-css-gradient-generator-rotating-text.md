@@ -3,7 +3,7 @@ title: CSS Gradient Generator & Rotating Text
 tags:
   - css
 description: Here are a couple tools to help you add gradients to your site.
-image: /blog/default/default-orange-01.png
+image: /posts/default/default-orange-01.png
 ---
 
 Would you like to add a nice gradient to an element on your site? Fortunately, there are some awesome tools to make such an endeavor fairly straightforward, especially if you've used gradients in other programs. [Here's](http://www.colorzilla.com/gradient-editor/) a pretty cool one with cross-browser support (including Internet Exploder).

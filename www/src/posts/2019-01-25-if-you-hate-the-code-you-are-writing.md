@@ -2,7 +2,7 @@
 title: If You Hate the Code You're Writing...
 description: Here are four ways in which I remedy hating the code I'm writing,
   and what you should do if you hate the code you're writing.
-image: /blog/default/default-blue-03.png
+image: /posts/default/default-blue-03.png
 ---
 
 **STOP IT!** {.text-center .text-xl}
@@ -15,7 +15,7 @@ If you hate the code you are writing, why are you writing it?
 
 I've experienced four scenarios in my career in which I've hated the code I've written:
 
-1. I worked for an agency that pushed speed over quality. I didn't have time to get much better writing code because [everything was an emergency all the time](/blog/emergencies-are-usually-self-inflicted). I pleaded and was constantly denied the time to write tests. I shipped shitty code to every single client.
+1. I worked for an agency that pushed speed over quality. I didn't have time to get much better writing code because [everything was an emergency all the time](/posts/emergencies-are-usually-self-inflicted). I pleaded and was constantly denied the time to write tests. I shipped shitty code to every single client.
 2. I was learning a new language or framework.
 3. I was writing in a language/framework that isn't fun for anyone, like [Angular](https://angular.io/).
 4. It was self-inflicted—for one reason or another the code I was writing was bad even though I knew the language and had time to write it better.

@@ -5,7 +5,7 @@ description: GitHub gists are designed to be user-specific and not for team
 tags:
   - git
   - github
-image: /blog/default/default-yellow-02.png
+image: /posts/default/default-yellow-02.png
 ---
 
 GitHub gists are typically used to share a snippet or series of snippets with

@@ -1,7 +1,7 @@
 ---
 title: "VS Code Spell Checker Not Working"
 description: "Did your squigglies disappear?? Here's the most likely culprit."
-image: /blog/210302/orange--code-spell-check-x.png
+image: /posts/210302/orange--code-spell-check-x.png
 tags:
   - vscode
 ---
@@ -10,7 +10,7 @@ tags:
     id="Trhj3d9TK5k",
     title="Quick Tip: Use a Code Spell Checker" %}
 
-[I ❤️ Code Spell Checker](/blog/use-code-spell-checker) plugin for [VS Code](https://code.visualstudio.com/). It has led to fewer stupid mistakes in my code.
+[I ❤️ Code Spell Checker](/posts/use-code-spell-checker) plugin for [VS Code](https://code.visualstudio.com/). It has led to fewer stupid mistakes in my code.
 
 I've been working a lot with [MDX](https://mdxjs.com/) and I realized that the spell checker wasn't working. I wasn't sure if I disabled it globally. I re-enabled it, but that didn't seem to fix the trick.
 
@@ -24,13 +24,13 @@ You can find this in your user or workspace settings as _C Spell: Enabled Langua
 
 {% post_image
     alt="VS Code Spell Checker - Language IDs",
-    src="/blog/210302/cspell--language-ids.png" %}
+    src="/posts/210302/cspell--language-ids.png" %}
 
 Scroll to the bottom of the list and add `mdx` (or the language that isn't working for you).
 
 {% post_image
     alt="VS Code Spell Checker - New Language",
-    src="/blog/210302/cspell--new-lang.png" %}
+    src="/posts/210302/cspell--new-lang.png" %}
 
 ## Option #2: The JSON Way
 

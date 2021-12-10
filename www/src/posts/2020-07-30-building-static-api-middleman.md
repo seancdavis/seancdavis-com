@@ -7,12 +7,12 @@ tags:
   - middleman
   - ruby
   - video-tutorial
-image: /blog/200730/earworms-with-data.png
+image: /posts/200730/earworms-with-data.png
 ---
 
-This article is part of a series of tutorials on building a _static API_. You can view the full list of available static API tutorials in [the introductory article](/blog/how-to-build-static-api/), which also provides some background on the examples we're using here.
+This article is part of a series of tutorials on building a _static API_. You can view the full list of available static API tutorials in [the introductory article](/posts/how-to-build-static-api/), which also provides some background on the examples we're using here.
 
-If you'd like additional information on what a static API is, check out [_WTF is a Static API?_](/blog/lets-talk-about-static-apis/)
+If you'd like additional information on what a static API is, check out [_WTF is a Static API?_](/posts/lets-talk-about-static-apis/)
 
 ---
 
@@ -42,7 +42,7 @@ That command cloned the default starter template and installed the bundle (ruby 
 
 ## Step 2: Add Data Files
 
-We're going to use the data examples from [the intro article](/blog/how-to-build-static-api/). Middleman's convention is to put [data files in a `data` directory](https://middlemanapp.com/advanced/data-files/). While it's not the only option, using the `data` directory means they will get picked up automatically and be available in your front-end templates.
+We're going to use the data examples from [the intro article](/posts/how-to-build-static-api/). Middleman's convention is to put [data files in a `data` directory](https://middlemanapp.com/advanced/data-files/). While it's not the only option, using the `data` directory means they will get picked up automatically and be available in your front-end templates.
 
 Grouping the files within a subdirectory in the `data` directory means they will be available through a variable matching that name. For example, if we put all our data files in `data/earworms/...` they would all be available via `data.earworms` in the `config.rb` file and in our templates (more on this later).
 
@@ -114,7 +114,7 @@ Now is the time to make sure you have everything installed as expected and can g
 And then visit [localhost:4567/earworms.json](http://localhost:4567/earworms.json) to see the result. You should see an empty object.
 
 {% post_image
-    src="/blog/200730/earworms-empty-object.png",
+    src="/posts/200730/earworms-empty-object.png",
     alt="Earworms - Empty Object" %}
 
 ### Add Meta Data
@@ -132,14 +132,14 @@ For now, all we want to do is return the count, or the number of earworms that w
 Now, refreshing the page, you should see the count of `3` nested within a `meta` object.
 
 {% post_image
-    src="/blog/200730/earworms-meta-count.png",
+    src="/posts/200730/earworms-meta-count.png",
     alt="Earworms - Meta Count" %}
 
 {% callout type="note" %}
 I like using a Chrome extension to format JSON for me. It's called [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en). It cleans up the output to look like this:
 
 {% post_image
-    src="/blog/200730/earworms-meta-count-formatted.png",
+    src="/posts/200730/earworms-meta-count-formatted.png",
     alt="Earworms - Meta Count, Formatted Code" %}
 {% endcallout %}
 
@@ -159,7 +159,7 @@ Now that we've gotten our feet wet, let's add the earworms data within a `result
 Refresh the browser and you should see all the data.
 
 {% post_image
-    src="/blog/200730/earworms-with-data.png",
+    src="/posts/200730/earworms-with-data.png",
     alt="Earworms Data" %}
 
 Let's go back to how we got all that data from `data.earworms.values`.
@@ -216,7 +216,7 @@ The template itself is super simple.
 Restart your server and then try it out in the browser at [localhost:4567/earworms/1.json](http://localhost:4567/earworms/1.json) and you should see the data for _Perfect Illusion_, which was the data file with the `id` value of `1`.
 
 {% post_image
-    src="/blog/200730/earworm-detail.png",
+    src="/posts/200730/earworm-detail.png",
     alt="Earworms - Detail View" %}
 
 You can try the same thing with `2.json` and `3.json`, but notice that any others should throw a 404 error.

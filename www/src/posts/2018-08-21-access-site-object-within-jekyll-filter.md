@@ -5,7 +5,7 @@ description: Filters are the way to make liquid work for you, but sometimes we
 tags:
   - jekyll
   - ruby
-image: /blog/default/default-green-02.png
+image: /posts/default/default-green-02.png
 ---
 
 Jekyll was made to be flexible through the use of [plugins](https://jekyllrb.com/docs/plugins/). One such type of plugin is [a custom Liquid filter](https://jekyllrb.com/docs/plugins/#liquid-filters). Because the [Liquid templating language](https://shopify.github.io/liquid/) is limiting and because Jekyll pushes Liquid as the only templating option for sites built with its framework, it will eventually become necessary to write your own Liquid filter.

@@ -1,7 +1,7 @@
 ---
 title: The 2 Paychecks Per Month Automatic Savings Plan
 description: "If you are paid bi-weekly this is a great way to put some extra cash in your pocket without doing much."
-image: /blog/151209/6793826885_d3b6befb99_b.jpg
+image: /posts/151209/6793826885_d3b6befb99_b.jpg
 attribution:
   - name: 401(K) 2012
     url: https://www.flickr.com/photos/68751915@N05/

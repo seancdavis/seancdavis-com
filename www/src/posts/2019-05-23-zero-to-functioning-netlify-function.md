@@ -6,12 +6,12 @@ description: A services-oriented architecture is a key component of the
 tags:
   - jamstack
   - netlify
-image: /blog/default/default-yellow-02.png
+image: /posts/default/default-yellow-02.png
 ---
 
 [Microservices](https://en.wikipedia.org/wiki/Microservices) are a key part of what makes [Jamstack](https://jamstack.org/) sites different from static sites. In a [service-oriented architecture](https://en.wikipedia.org/wiki/Service-oriented_architecture), microservices provide a means for your static site to interact with back-end systems. And typically they follow the [single-responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), meaning each _service_ is responsible for doing one thing.
 
-Often these services come in the form of [serverless functions](https://en.wikipedia.org/wiki/Serverless_computing). Before we had amazing tools like [Netlify](/blog/wtf-is-netlify/) at our disposal, we had to manage these services individually, or perhaps use a build framework like [Serverless](https://serverless.com/) to help us.
+Often these services come in the form of [serverless functions](https://en.wikipedia.org/wiki/Serverless_computing). Before we had amazing tools like [Netlify](/posts/wtf-is-netlify/) at our disposal, we had to manage these services individually, or perhaps use a build framework like [Serverless](https://serverless.com/) to help us.
 
 But now, we _do_ have Netlify! Netlify comes packed with an array of features to enable static sites to appear as though they are dynamic applications. One such feature is [Netlify Functions](https://www.netlify.com/docs/functions/). These are functions we can add to our sites that are deployed with Netlify. (Netlify uses [AWS Lambda](https://aws.amazon.com/lambda/) to serve these functions.)
 
@@ -62,9 +62,9 @@ Next, let's add a basic function. I like keeping the functions all together, so 
 exports.handler = function (event, context, callback) {
   callback(null, {
     statusCode: 200,
-    body: "Hello, World"
-  })
-}
+    body: "Hello, World",
+  });
+};
 ```
 
 ### Add a Script to Serve Function
@@ -102,7 +102,7 @@ Therefore, I suggest that you test locally using a REST client. My favorite (for
 
 Within your REST client, you can send a POST request to `http://localhost:9000/hello` and you should receive "Hello World" as the response.
 
-{% post_image src="/blog/190522/insomnia-request-01.png" %}
+{% post_image src="/posts/190522/insomnia-request-01.png" %}
 
 That's it for now — we're ready to deploy!
 
@@ -112,7 +112,7 @@ Deploying to Netlify is the easy part. Assuming you've already created your Netl
 
 After you deploy, you should see your function get picked up by Netlify, even though you haven't run it yet. You can check this through the Netlify UI.
 
-{% post_image src="/blog/190522/netlify-ui-functions.png" %}
+{% post_image src="/posts/190522/netlify-ui-functions.png" %}
 
 Your function is now available at `/.netlify/functions/hello` within your site. That means you can POST directly to that URL.
 

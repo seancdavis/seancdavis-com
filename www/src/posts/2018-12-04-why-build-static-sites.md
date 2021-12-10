@@ -4,7 +4,7 @@ description: With all the tools at our disposal today, why would we waste our
   time building static sites? I'll give you four reasons.
 tags:
   - jamstack
-image: /blog/default/default-pink-03.png
+image: /posts/default/default-pink-03.png
 ---
 
 There are so many tools at web developers' disposal today. There are [single-page app](https://en.wikipedia.org/wiki/Single-page_application) frameworks like [React](https://reactjs.org/), [Vue.js](https://vuejs.org/), and [Angular](https://angular.io/). There are full-stack frameworks like [Ruby on Rails](https://rubyonrails.org/) (Ruby), [Django](https://www.djangoproject.com/) (Python), and [Laravel](https://laravel.com/) (PHP). And those projects can be easily hosted with services [Heroku](https://www.heroku.com/) and [Digital Ocean](https://www.digitalocean.com/).
@@ -15,7 +15,7 @@ But, why? Why build static sites when they can be dynamic? Why not just grab the
 
 There are four reasons for why static sites are relevant and super powerful in this ever-evolving landscape. But, before I get to those, I want to mention three points I find important to keep in mind when talking about website development with static site generators:
 
-01: **_Static_ sites aren't really static.** When we use the term _static site_, all we're really saying is that what is served to the user is a set of static [HTML](/blog/wtf-is-html/), [CSS](/blog/wtf-is-css/), and JavaScript files (plus other media files/). They can be hosted on a CDN and delivered directly to the user without a database in between.
+01: **_Static_ sites aren't really static.** When we use the term _static site_, all we're really saying is that what is served to the user is a set of static [HTML](/posts/wtf-is-html/), [CSS](/posts/wtf-is-css/), and JavaScript files (plus other media files/). They can be hosted on a CDN and delivered directly to the user without a database in between.
 
 That doesn't mean the content was _created_ statically. What makes a static site a static site is a build process that can take any data set and transform it into a collection of files that can then be uploaded to a CDN. What happens before and during that build process is entirely up to the developers' imagination.
 
@@ -52,7 +52,7 @@ When you have a monolothic application with its own CMS back end and correspondi
 
 With static sites, building out the front can happen modularly, which means it can be built in chunks rather than as one big project. It also means all your developers don't have to understand the ins and outs of your complex back end, they just need to know how to obtain data from it and use that to mark up the front end using their desired language(s) and framework(s).
 
-As a bonus, with the back and front ends being separated, the door opens for using third-party headless CMS providers like [Contentful](https://www.contentful.com/) or [Dato](https://www.datocms.com/), [leaving the inherent complexity of managing a CMS to external experts](/blog/four-key-factors-build-v-buy-software/).
+As a bonus, with the back and front ends being separated, the door opens for using third-party headless CMS providers like [Contentful](https://www.contentful.com/) or [Dato](https://www.datocms.com/), [leaving the inherent complexity of managing a CMS to external experts](/posts/four-key-factors-build-v-buy-software/).
 
 ---
 

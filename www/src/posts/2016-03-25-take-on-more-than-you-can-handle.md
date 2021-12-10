@@ -3,7 +3,7 @@ title: Take On More Than You Can Handle
 tags:
   - productivity
 description: "You need to know what you limit is. But you won't find it unless you push toward the boundaries."
-image: /blog/160325/8251561969_f2c6c75265_b.jpg
+image: /posts/160325/8251561969_f2c6c75265_b.jpg
 attribution:
   - name: theilr
     url: https://www.flickr.com/photos/theilr/

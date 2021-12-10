@@ -1,7 +1,7 @@
 ---
 title: "WTF is a Monorepo?"
 description: "Have you heard this term thrown around but not really sure what it means. Well, let's take a quick introductory look at it."
-image: /blog/210309/wtf--monorepo.png
+image: /posts/210309/wtf--monorepo.png
 tags:
   - wtf
 ---
@@ -22,7 +22,7 @@ And for a bigger example, here's a great article on [_Why Google Stores Billions
 
 It might seem silly, but a monorepo can have several benefits, including:
 
-- Dependencies are easier to manage. That becomes even more so the case with tools like [PNPM](/blog/wtf-is-pnpm) or [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/), which are built to support monorepos. Using the right tools means you can have the same versions of dependencies across all your projects.
+- Dependencies are easier to manage. That becomes even more so the case with tools like [PNPM](/posts/wtf-is-pnpm) or [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/), which are built to support monorepos. Using the right tools means you can have the same versions of dependencies across all your projects.
 - Confidence that _all_ the code is working. When everything is in one place, if you've written solid test, you can have the confidence that even a large-scale refactor won't result in bugs you've already covered in tests.
 - Sharing code is easier because all the code is in the same place. So you don't have to install dependencies or link local packages. It's all right there!
 - When using an issue tracker like GitHub issues, it can be easier to have everything in one place. When there are multiple repos, one change could mean PRs and closing issues in several different places.

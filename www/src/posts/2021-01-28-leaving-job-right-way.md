@@ -1,7 +1,7 @@
 ---
 title: "Leaving a Job the Right Way"
 description: "Leaving a job can be a sweaty, anxiety-inducing, stressball of an experience. Here are a few thoughts to make that process easier. Future You will thank you."
-image: /blog/210128/210128-leaving-job-right-way.png
+image: /posts/210128/210128-leaving-job-right-way.png
 tags:
   - communication
 ---

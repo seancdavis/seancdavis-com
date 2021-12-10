@@ -3,14 +3,14 @@ title: Maintain Balance by Checking In
 tags:
   - productivity
 description: "Balance is the key to doing anything well for a long period of time. But balance can fade slowly over time. We must check in to ensure we are maintaining balance in our lives."
-image: /blog/190116/photo-1422061289586-1060c743ec13.jpg
+image: /posts/190116/photo-1422061289586-1060c743ec13.jpg
 attribution:
   - name: Jonathan Pendleton
     url: https://unsplash.com/@jonathanpendleton
     license: Unsplash
 ---
 
-I believe that [_balance_ is the key to doing anything well](/blog/balance-belongs-in-everything-you-do). A successful task, job, career; a happy pet, spouse, child; a healthy mind, body, soul. To achieve these things, our lives and the components that make up our lives and our selfs \[sic\] must be balanced.
+I believe that [_balance_ is the key to doing anything well](/posts/balance-belongs-in-everything-you-do). A successful task, job, career; a happy pet, spouse, child; a healthy mind, body, soul. To achieve these things, our lives and the components that make up our lives and our selfs \[sic\] must be balanced.
 
 But there's a human problem that comes along with balance -- that it can be difficult to detect a gradual shift in balance.
 

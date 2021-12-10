@@ -4,7 +4,7 @@ description: It's 2018. CSS is pretty powerful on its own. Do you really need to
   implement a framework?
 tags:
   - css
-image: /blog/default/default-pink-03.png
+image: /posts/default/default-pink-03.png
 ---
 
 There are [a lot of CSS frameworks out there](https://github.com/troxler/awesome-css-frameworks). A lot. And many of them are well-maintained and supported by the community.
@@ -15,7 +15,7 @@ There are [a lot of CSS frameworks out there](https://github.com/troxler/awesome
 
 Bootstrap was originally released in August 2011. [Do you know what the web looked like back then](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers)? Internet Explorer had about half of all traffic (it has less than 5% in 2018), Firefox had about 25% (5% in 2018) and Chrome had about 15% (more than 60% in 2018). In other words, in 2011, there were several browsers to choose from, IE was the favorite, but others were making headway. Vendor prefixes were necessary to support multiple browsers, and most new projects made use of [Modernizr](https://modernizr.com/), a library you may not have heard of if you're new to development.
 
-In other words, [CSS](/blog/wtf-is-css/) frameworks were absolutely a necessity. Well, no they weren't. They were brand new. They were more of a game-changer and only soon after _became_ a necessity. Feature detection and cross-browser support was a nightmare without the help of tools like Bootstrap and Modernizr.
+In other words, [CSS](/posts/wtf-is-css/) frameworks were absolutely a necessity. Well, no they weren't. They were brand new. They were more of a game-changer and only soon after _became_ a necessity. Feature detection and cross-browser support was a nightmare without the help of tools like Bootstrap and Modernizr.
 
 [Foundation](https://foundation.zurb.com/) was released one month after Bootstrap, and the other million (including the one I tried to write) soon followed.
 

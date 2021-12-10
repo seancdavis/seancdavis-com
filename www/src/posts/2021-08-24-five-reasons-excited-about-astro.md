@@ -1,7 +1,7 @@
 ---
 title: 5 Reasons I'm Excited about Astro
 description: "Astro is the new static site generator on the scene. This is why I'm so excited about it."
-image: /blog/210824/yellow--astro.png
+image: /posts/210824/yellow--astro.png
 tags:
   - jamstack
   - javascript

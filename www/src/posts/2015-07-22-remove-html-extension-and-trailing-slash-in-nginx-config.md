@@ -4,7 +4,7 @@ description: When you have a static site, sometimes you want to get rid of the
   HTML extensions and those pesky trailing slashes. Here's how I've done it.
 tags:
   - nginx
-image: /blog/default/default-green-02.png
+image: /posts/default/default-green-02.png
 ---
 
 Static websites are back in gaining popularity, even in these days where everything can be driven by a database. With tools like [Middleman](https://middlemanapp.com/) and [Jekyll](http://jekyllrb.com/), web developers have the ability to build fairly complex sites and render them as individual, static files.
@@ -13,7 +13,7 @@ I've jumped aboard that train. And while the question as to _why_ I did it deser
 
 I've been transferring a few of my sites to static files using Middleman. To maintain consistency, I wanted to remove all `.html` extensions and trailing slashes. And while that's a functional benefit, I also like it better cosmetically.
 
-## Remove [HTML](/blog/wtf-is-html/) Extension
+## Remove [HTML](/posts/wtf-is-html/) Extension
 
 There are a few different ways to go about removing the `.html` extension. I've found the following to work just fine:
 

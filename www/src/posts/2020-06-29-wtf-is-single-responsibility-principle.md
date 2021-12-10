@@ -5,7 +5,7 @@ description: "I often talk about the single-responsibility principle in the
   what you think.)"
 tags:
   - wtf
-image: /blog/default/default-pink-03.png
+image: /posts/default/default-pink-03.png
 ---
 
 The single-responsibility principle is somewhat self-explanatory. It means that, in programming, everything — e.g. a class, function, module, plugin — should do one thing.

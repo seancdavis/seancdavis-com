@@ -3,7 +3,7 @@ title: Find the Source of a Ruby Method's "Super"
 description: It can be helpful when debugging to know what "super" is actually calling.
 tags:
   - ruby
-image: /blog/default/default-green-03.png
+image: /posts/default/default-green-03.png
 ---
 
 I've spent part of the last couple days debugging the bowels of a pesky Rails project. The issue was the infamous _Stack Level Too Deep_ error.

@@ -3,7 +3,7 @@ title: What is the Purpose of "www" in Website URLs?
 tags: []
 description: "Some websites use www in their domain name, and others don't. What
   the heck? Find out why and what you should do here ... "
-image: /blog/default/default-yellow-01.png
+image: /posts/default/default-yellow-01.png
 ---
 
 _Note: This article is written with the assumption you know very little about the technical, inner-workings of DNS. If you are looking for a more technical answer, I like [this answer](http://serverfault.com/a/145781/257018) (and its comments) a lot._
@@ -20,7 +20,7 @@ _What the heck?_
 
 First, what are we really talking about?
 
-You may have heard the term _domain_ before. We refer to _facebook.com_ and _twitter.com_ as _domains_. I've discussed this when I wrote a basic article on [how the web works](/blog/how-the-web-works#the-://). The TL;DR version of that post is essentially this:
+You may have heard the term _domain_ before. We refer to _facebook.com_ and _twitter.com_ as _domains_. I've discussed this when I wrote a basic article on [how the web works](/posts/how-the-web-works#the-://). The TL;DR version of that post is essentially this:
 
 > When you type in a URL in your browser, the browser (if it doesn't have the domain name stored in memory) will contact a **domain name server** to ask which **IP address** the domain names points to. It then sends you to the correct IP address and renders the html (or other data) sent to it.
 >
@@ -78,7 +78,7 @@ Whether or not you use or don't use _www_, one thing will always be true -- you 
 
 But, for purposes of SEO (search engine optimization), you should **keep your main domain, and redirect the other to that domain.** This is better for search engines and for accurate analytics.
 
-_Note: If you're using Nginx as your web server, I wrote a quick post on [how to redirect www](/blog/remove-the-www-from-a-url-with-nginx)._
+_Note: If you're using Nginx as your web server, I wrote a quick post on [how to redirect www](/posts/remove-the-www-from-a-url-with-nginx)._
 
 ---
 

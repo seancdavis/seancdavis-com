@@ -2,7 +2,7 @@
 title: Testing storage with Selenium (Node)
 date: 2021-02-18
 description: How to test for key-value pairs in sessionStorage and localStorage using Selenium Node.
-image: /blog/210208/210208--error-graphic.png
+image: /posts/210208/210208--error-graphic.png
 tags:
   - repost-grouparoo
   - node
@@ -10,7 +10,7 @@ tags:
 canonical_url: https://www.grouparoo.com/blog/testing-session-storage-selenium-node
 ---
 
-We have [a feature on this site that is using `sessionStorage`](/blog/getting-previous-path-nextjs) to send analytics data we want to capture. Being that it's an important feature, we _should_ write test(s) to cover the use case(s), right?
+We have [a feature on this site that is using `sessionStorage`](/posts/getting-previous-path-nextjs) to send analytics data we want to capture. Being that it's an important feature, we _should_ write test(s) to cover the use case(s), right?
 
 Okay, fine. Let's do it!
 
@@ -21,22 +21,22 @@ What I wanted to do with Jest and Selenium was to read from `sessionStorage` aft
 We can use the `executeScript` method to run a JavaScript expression and capture the result. [Our test looks like this](https://github.com/grouparoo/www.grouparoo.com/blob/main/__tests__/integration/sessionStorage.ts):
 
 ```ts
-declare var browser: any
+declare var browser: any;
 
 async function getSessionItem(key) {
   return await browser.executeScript(
     `return window.sessionStorage.getItem("${key}");`
-  )
+  );
 }
 
 test("stores page history in the session data", async () => {
-  await browser.get(url + `/docs/config`)
-  expect(await getSessionItem("prevPath")).toBe("null")
-  expect(await getSessionItem("currentPath")).toBe("/docs/config")
-  await browser.get(url + `/meet`)
-  expect(await getSessionItem("prevPath")).toBe("/docs/config")
-  expect(await getSessionItem("currentPath")).toBe("/meet")
-})
+  await browser.get(url + `/docs/config`);
+  expect(await getSessionItem("prevPath")).toBe("null");
+  expect(await getSessionItem("currentPath")).toBe("/docs/config");
+  await browser.get(url + `/meet`);
+  expect(await getSessionItem("prevPath")).toBe("/docs/config");
+  expect(await getSessionItem("currentPath")).toBe("/meet");
+});
 ```
 
 Here are a few of the key items to note:

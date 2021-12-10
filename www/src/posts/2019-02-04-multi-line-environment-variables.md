@@ -4,10 +4,10 @@ description: Storing multi-line strings in an environment variable is nice and
   easy to do, but the process is slightly different than a single line value.
   Here I present two approaches that achieve the same result.
 tags: []
-image: /blog/default/default-yellow-01.png
+image: /posts/default/default-yellow-01.png
 ---
 
-I've previously talked about [when to use environment variables](/blog/when-to-use-environment-variables/), along with [my favorite tool for managing project-specific values](/blog/when-to-use-environment-variables/). But neither of these solve a problem I run into occasionally—how to store multi-line values in an environment variable.
+I've previously talked about [when to use environment variables](/posts/when-to-use-environment-variables/), along with [my favorite tool for managing project-specific values](/posts/when-to-use-environment-variables/). But neither of these solve a problem I run into occasionally—how to store multi-line values in an environment variable.
 
 Setting a single line environment variable is simple enough:
 

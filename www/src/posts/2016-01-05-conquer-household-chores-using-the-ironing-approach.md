@@ -3,7 +3,7 @@ title: Conquer Household Chores using The Ironing Approach
 tags:
   - productivity
 description: Small batches work really well in manufacturing and product development. Let's try them out around the house.
-image: /blog/160105/6803357765_6a17c9848a_b.jpg
+image: /posts/160105/6803357765_6a17c9848a_b.jpg
 attribution:
   - name: Phil Gradwell
     url: https://www.flickr.com/photos/philgradwell/

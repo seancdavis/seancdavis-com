@@ -3,7 +3,7 @@ title: Be A Pro Googler
 tags:
   - productivity
 description: Google's search engine is the most powerful tool for solving problems (and looking smart). Learn how to be a pro at ... googling!
-image: /blog/130421/1185217331_9f20801150_b.jpg
+image: /posts/130421/1185217331_9f20801150_b.jpg
 attribution:
   - name: Kit
     url: https://www.flickr.com/photos/practicalowl/

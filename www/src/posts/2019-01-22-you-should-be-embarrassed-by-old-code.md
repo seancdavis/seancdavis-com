@@ -2,7 +2,7 @@
 title: You Should be Embarrassed by Old Code
 description: Looking at old code can be an uncomfortable, embarrassing, or
   infuriating experience. And that's a good thing.
-image: /blog/default/default-yellow-03.png
+image: /posts/default/default-yellow-03.png
 ---
 
 If you've been writing code long enough, you know the feeling of looking at old code. It's embarrassing.

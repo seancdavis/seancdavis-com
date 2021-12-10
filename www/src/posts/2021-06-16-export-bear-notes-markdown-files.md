@@ -1,7 +1,7 @@
 ---
 title: Export Bear Notes to Markdown Files
 description: Bear is one of the best editors out there, but lacks workflows for your content. Here's how to programmatically write Bear notes to local markdown files.
-image: /blog/210616/orange--bear-to-markdown.png
+image: /posts/210616/orange--bear-to-markdown.png
 tags:
   - javascript
   - node
@@ -15,7 +15,7 @@ Here's a guide to get you started in building a workflow around your Bear notes 
 
 ## The Example
 
-We're going to write a single [Node.js](/blog/wtf-is-node) script that will export notes from Bear into markdown files with frontmatter metadata elsewhere on your machine.
+We're going to write a single [Node.js](/posts/wtf-is-node) script that will export notes from Bear into markdown files with frontmatter metadata elsewhere on your machine.
 
 In this specific example, we're going to target active notes (i.e. _not trashed_). And in the frontmatter, we'll add five key-value pairs:
 
@@ -61,7 +61,7 @@ Hopefully not, because we haven't even written any code yet. If you are, take a 
 
 ## Step 2: Setup
 
-Let's begin by creating a new directory for your project and setting it up. [Here are the steps I take when adding a new JavaScript project](/blog/new-javascript-project-setup/).
+Let's begin by creating a new directory for your project and setting it up. [Here are the steps I take when adding a new JavaScript project](/posts/new-javascript-project-setup/).
 
 Follow steps 1-3. In Step 3, add the following to your `.gitignore` file, in addition to `node_modules`:
 
@@ -91,23 +91,23 @@ First thing we're going to do is add a script to copy the database. Put this in 
 `utils/copyDatabase.js` {.filename}
 
 ```js
-const fs = require("fs")
-const path = require("path")
-const HOME = require("os").homedir()
+const fs = require("fs");
+const path = require("path");
+const HOME = require("os").homedir();
 
 const srcPath = path.join(
   HOME,
   "/Library/Group Containers/9K33E3U3T4.net.shinyfrog.bear/Application Data/database.sqlite"
-)
-const destPath = path.join(__dirname, "../database.sqlite")
+);
+const destPath = path.join(__dirname, "../database.sqlite");
 
 if (!fs.existsSync(srcPath)) {
-  console.error(`Could not find Bear database: ${srcPath}`)
-  process.exit(1)
+  console.error(`Could not find Bear database: ${srcPath}`);
+  process.exit(1);
 }
 
-fs.copyFileSync(srcPath, destPath)
-console.log(`Copied Bear database: ${destPath}`)
+fs.copyFileSync(srcPath, destPath);
+console.log(`Copied Bear database: ${destPath}`);
 ```
 
 This will copy the database to the root of your project, or it will let you know that it couldn't find the database.
@@ -117,11 +117,11 @@ Then let's add our main script at `index.js`:
 `index.js` {.filename}
 
 ```js
-const sqlite3 = require("sqlite3").verbose()
-const db = new sqlite3.Database("./database.sqlite")
-const { promisify } = require("util")
+const sqlite3 = require("sqlite3").verbose();
+const db = new sqlite3.Database("./database.sqlite");
+const { promisify } = require("util");
 
-const query = promisify(db.all).bind(db)
+const query = promisify(db.all).bind(db);
 
 const getNotesQuery = `
   SELECT
@@ -132,20 +132,20 @@ const getNotesQuery = `
     ZTRASHED as deleted,
     ZMODIFICATIONDATE as updatedAt
       FROM ZSFNOTE
-      WHERE deleted = 0;`
+      WHERE deleted = 0;`;
 
 const main = async () => {
-  const notes = await query(getNotesQuery)
-  console.log(notes)
-}
+  const notes = await query(getNotesQuery);
+  console.log(notes);
+};
 
 main()
   .finally(() => {
-    console.log("Done.")
+    console.log("Done.");
   })
-  .catch(err => {
-    throw new Error(err.message)
-  })
+  .catch((err) => {
+    throw new Error(err.message);
+  });
 ```
 
 There's not much going on here. We connect to a database then run the SQL query shown to grab all the active notes and log them to the console.
@@ -153,7 +153,7 @@ There's not much going on here. We connect to a database then run the SQL query 
 {% callout type="info" %}
 There's some fanciness in here that protects us from madness later on. The SQLite library uses callbacks by default, which means it will run a function we give it after the query is complete.
 
-A more modern [JavaScript](/blog/wtf-is-javascript/) pattern is to use promises through `async` and `await`. That's what's going on here. We promisify the SQLite query and then run the main part of our code within an async function so that we can be sure each line is resolved before moving on to the next.
+A more modern [JavaScript](/posts/wtf-is-javascript/) pattern is to use promises through `async` and `await`. That's what's going on here. We promisify the SQLite query and then run the main part of our code within an async function so that we can be sure each line is resolved before moving on to the next.
 {% endcallout %}
 
 Next, now we can add the scripts to `package.json` so we can run these two commands:
@@ -212,37 +212,37 @@ Our `main()` function gets updated to this, with some comments for context:
 ```js
 const main = async () => {
   // Reference to store note data.
-  let notes = []
+  let notes = [];
   // Query the database for notes and their tag. There will be a row returned
   // for each tag that a note contains.
-  const queryResult = await query(getNotesQuery)
+  const queryResult = await query(getNotesQuery);
   // Get a unique set of IDs for the notes returned, as more than one row may
   // contain the same note.
-  const noteIds = new Set(queryResult.map(res => res.id))
+  const noteIds = new Set(queryResult.map((res) => res.id));
   // Collects all notes matching the passed ID and builds an object to represent
   // that note.
-  const buildNoteObject = noteId => {
+  const buildNoteObject = (noteId) => {
     // Find all rows from the query result matching the passed ID.
-    const rows = queryResult.filter(row => row.id === noteId)
+    const rows = queryResult.filter((row) => row.id === noteId);
     // Return a null object if we were given a bad ID.
-    if (rows.length === 0) return null
+    if (rows.length === 0) return null;
     // Extract relevant attributes out of the first row. Each of these is
     // assumed to be the same value in any row. We're picking the first one
     // because we know there will always be a first one.
-    const { id, title, body, deleted, updatedAt } = rows[0]
+    const { id, title, body, deleted, updatedAt } = rows[0];
     // Collect the tag names. Each row in the query result has its own unique
     // tag name, assuming the tag was only used once in the document.
-    const tags = rows.map(row => row["Tags.title"])
+    const tags = rows.map((row) => row["Tags.title"]);
     // Build the object and return it.
-    return { id, title, body, deleted, updatedAt, tags }
-  }
+    return { id, title, body, deleted, updatedAt, tags };
+  };
   // Loop through the notes and store the result in the notes object.
-  noteIds.forEach(id => {
-    notes.push(buildNoteObject(id))
-  })
+  noteIds.forEach((id) => {
+    notes.push(buildNoteObject(id));
+  });
   // Log our result.
-  console.log(notes)
-}
+  console.log(notes);
+};
 ```
 
 [Here is the file in its entirety at this point](https://github.com/seancdavis/seancdavis-com/blob/81ae1f1001afdad298c870fb300fe925ee1ea3da/examples/bear-to-markdown/index.js).
@@ -262,14 +262,14 @@ First, add the js-yaml dependency to the top of your file:
 `index.js` {.filename}
 
 ```js
-const yaml = require("js-yaml")
+const yaml = require("js-yaml");
 ```
 
 Then add a few lines to create the export directory if it doesn't exist:
 
 ```js
-const outputDir = path.join(__dirname, "./tmp/export")
-if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true })
+const outputDir = path.join(__dirname, "./tmp/export");
+if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 ```
 
 Note that we're going to write these files to a `tmp/export` directory within your current project.
@@ -280,21 +280,21 @@ And add some new lines to the `main()` function:
 const main = async () => {
   // ...
   // Builds frontmatter and then writes the note to file.
-  const exportNote = note => {
-    const filePath = path.join(outputDir, `${note.slug}.md`)
-    const { id, title, slug, body, tags } = note
-    const frontmatter = yaml.dump({ id, title, slug, tags })
-    const content = `---\n${frontmatter}---\n\n${body}`
-    fs.writeFileSync(filePath, content)
-    return { filePath, content }
-  }
+  const exportNote = (note) => {
+    const filePath = path.join(outputDir, `${note.slug}.md`);
+    const { id, title, slug, body, tags } = note;
+    const frontmatter = yaml.dump({ id, title, slug, tags });
+    const content = `---\n${frontmatter}---\n\n${body}`;
+    fs.writeFileSync(filePath, content);
+    return { filePath, content };
+  };
   // Loop through the notes and store the result in the notes object.
-  noteIds.forEach(id => {
-    const note = buildNoteObject(id)
-    const { filePath } = exportNote(note)
-    console.log(`Wrote note to file: ${filePath}`)
-  })
-}
+  noteIds.forEach((id) => {
+    const note = buildNoteObject(id);
+    const { filePath } = exportNote(note);
+    console.log(`Wrote note to file: ${filePath}`);
+  });
+};
 ```
 
 Altogether, the file should now look [like this](https://github.com/seancdavis/seancdavis-com/blob/d279f54/examples/bear-to-markdown/index.js).

@@ -5,7 +5,7 @@ tags:
   - ruby
 description: Always googling and forgetting how to pass arguments to rake tasks?
   Here's a up list of the various methods.
-image: /blog/default/default-blue-01.png
+image: /posts/default/default-blue-01.png
 ---
 
 [Rake tasks](http://guides.rubyonrails.org/command_line.html#rake) are a great way to enhance (or even automate) your workflow with a ruby project. When I was first learning Ruby, a developer said to me:

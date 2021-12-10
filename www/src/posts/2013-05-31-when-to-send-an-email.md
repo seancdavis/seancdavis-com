@@ -2,7 +2,7 @@
 title: When To Send An Email
 tags: Communication
 description: "Sometimes email is a good form of communication, and sometimes it's not."
-image: /blog/130531/photo-1501504905252-473c47e087f8.jpeg
+image: /posts/130531/photo-1501504905252-473c47e087f8.jpeg
 attribution:
   - name: Nick Morrison
     url: https://unsplash.com/@nickmorrison

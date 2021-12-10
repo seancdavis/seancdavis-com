@@ -1,7 +1,7 @@
 ---
 title: Run Loop n Times in JavaScript
 description: Quick snippet to run some function n times using JavaScript.
-image: /blog/211005/yellow--js-loop.png
+image: /posts/211005/yellow--js-loop.png
 tags:
   - javascript
 ---
@@ -14,7 +14,7 @@ I run into the situation frequently in which I want to iterate `n` number of tim
 end
 ```
 
-Using classic [JavaScript](/blog/wtf-is-javascript/) patterns, you could do something like this:
+Using classic [JavaScript](/posts/wtf-is-javascript/) patterns, you could do something like this:
 
 ```js
 for (i = 1; i <= 10; i++) {
@@ -31,7 +31,7 @@ Array(10)
   .fill()
   .map(() => {
     // runs 10 times
-  })
+  });
 ```
 
 There are several quirks that makes this work the way it does. If you're curious and want to go deep, [here is a great in-depth look at creating arrays in JavaScript](https://dmitripavlutin.com/power-up-the-array-creation-in-javascript/).

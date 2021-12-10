@@ -60,7 +60,7 @@ timeline:
     - year: 2012
       items:
         - Began freelancing (on the side) using WordPress.
-        - Launched The Polymath Lab, a blog with tutorials on a number of different topics. (Some early posts are still on the blog today, like [this one](/blog/absolute-vs-relative-positioning/).)
+        - Launched The Polymath Lab, a blog with tutorials on a number of different topics. (Some early posts are still on the blog today, like [this one](/posts/absolute-vs-relative-positioning/).)
         - Adopted [Stella](https://www.instagram.com/p/jsedKih0OS/). She has since perfected the art of [balancing objects on her nose/head](https://www.instagram.com/p/nK7QHtB0Co/).
     - year: 2013
       items:
@@ -92,7 +92,7 @@ timeline:
         - Promoted to manage all developers at Ample and be the technical lead on all short-term web projects. _Director of Technology_ was the fancy title I gave myself.
     - year: 2020
       items:
-        - Launched [new, consolidated blog site](https://www.seancdavis.com/blog/) on my personal domain (this one)! Sunset The Polymath Lab and Cobwwweb, although remnants of the Cobwwweb brand still live on in [The Spinneret](/topics/spinneret/).
+        - Launched [new, consolidated blog site](/blog/) on my personal domain (this one)! Sunset The Polymath Lab and Cobwwweb, although remnants of the Cobwwweb brand still live on in [The Spinneret](/topics/spinneret/).
         - Gave my first tech conference talk at Next.js Conf 2020. It was called [Everything is a CMS!](https://youtu.be/9j9bxDf428o)
     - year: 2021
       items:

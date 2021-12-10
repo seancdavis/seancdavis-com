@@ -4,7 +4,7 @@ description: Ruby is fun to write, and it's pretty easy to use Ruby to perform
   ad hoc services for you. Here are a few approaches.
 tags:
   - ruby
-image: /blog/default/default-orange-01.png
+image: /posts/default/default-orange-01.png
 ---
 
 One-off ruby scripts run the gamut on the services they can provide you. From little helpers to full-on command-line utilities, the possibilities are endless.
@@ -118,4 +118,4 @@ The answer, of course, is _it depends_. It depends mostly on what you're doing, 
 - If it's quick, simple, and a one-time thing, I use IRB
 - If it's repeatable and consistent, I use rake
 - If it's complicated, I also use rake, but I may not save the file
-- If it's repeatable but varying, I use the file approach (#2 or #4, the difference being only preference), because it's not as easy to [manage arguments with rake](/blog/4-ways-to-pass-arguments-to-a-rake-task/)
+- If it's repeatable but varying, I use the file approach (#2 or #4, the difference being only preference), because it's not as easy to [manage arguments with rake](/posts/4-ways-to-pass-arguments-to-a-rake-task/)

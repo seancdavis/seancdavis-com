@@ -1,7 +1,7 @@
 ---
 title: What Made the Essence of Jamstack Possible
 description: The Jamstack may have been born out of pain, but it couldn't have existed without the convergence of a few key factors.
-image: /blog/211007/211007-essence-of-jamstack.png
+image: /posts/211007/211007-essence-of-jamstack.png
 canonical_url: https://www.stackbit.com/blog/what-made-the-essence-of-jamstack-possible/
 tags:
   - repost-stackbit
@@ -97,4 +97,4 @@ This post was motivated by a conversation I had with our CEO, [Ohad Eder-Pressma
 {% youtube_embed
     id="FepIBME2BpA",
     title="What Made Jamstack Possible",
-    image="/blog/211007/211007-essence-of-jamstack.png" %}
+    image="/posts/211007/211007-essence-of-jamstack.png" %}

@@ -3,7 +3,7 @@ title: Use Your Calendar as your To-Do List
 tags:
   - productivity
 description: It can be difficult to find time to get stuff done when you use a to-do list separate from your calendar. Combine the two and get stuff done.
-image: /blog/121217/4942006709_af46788013_b.jpg
+image: /posts/121217/4942006709_af46788013_b.jpg
 attribution:
   - name: Kerry Lannert
     url: https://www.flickr.com/photos/stirwise/

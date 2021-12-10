@@ -3,7 +3,7 @@ title: Labels in Gmail
 tags:
   - organization
 description: Labels act like tags in Gmail. Use them to keep your messages organized.
-image: /blog/130227/7123952917_fcf359d842_h.jpg
+image: /posts/130227/7123952917_fcf359d842_h.jpg
 attribution:
   - name: Sheep"R"Us
     url: https://www.flickr.com/photos/sheeprus
@@ -18,7 +18,7 @@ Okay, on to the article ...
 
 ---
 
-[Gmail](http://gmail.com) works with labels instead of folders for organizing your email messages. If it's easier for you, you can think of *labels* as *folders, where a message can live in more than one folder*. If you think back to the post about [categories and tags](/blog/categories-and-tags-explained), labels would be like tags.
+[Gmail](http://gmail.com) works with labels instead of folders for organizing your email messages. If it's easier for you, you can think of *labels* as *folders, where a message can live in more than one folder*. If you think back to the post about [categories and tags](/posts/categories-and-tags-explained), labels would be like tags.
 
 ## How to use labels
 
@@ -26,7 +26,7 @@ Learning what labels are is easy. The more important question is *how should I 
 
 When it comes to storing, or organizing some item, I tend to say, _organize it based on how you will find it_. Let's think about that in terms of Gmail labels. The question I always ask myself when organizing labels or similar data is, _how are you going to look for these items in the future?_
 
-Let's step back for a second. Remember the post on [archiving Gmail messages](/blog/when-should-i-archive-my-gmail-messages)? Good. So, assuming you are following those general guidelines on archiving, you'd be archiving **anything with a chance of being referenced again.**
+Let's step back for a second. Remember the post on [archiving Gmail messages](/posts/when-should-i-archive-my-gmail-messages)? Good. So, assuming you are following those general guidelines on archiving, you'd be archiving **anything with a chance of being referenced again.**
 
 Okay, so you have a bunch of archived email messages. You need to go retrieve one. How are you going to do it? Will typing a few keywords into the search bar do the trick? Or do you have dozens of messages so similar to one another that you need some other means of separating them? Use how you will retrieve messages to help you shape you labels today.
 

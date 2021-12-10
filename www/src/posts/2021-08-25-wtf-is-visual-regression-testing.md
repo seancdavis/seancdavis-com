@@ -1,7 +1,7 @@
 ---
 title: WTF is Visual Regression Testing?
 description: Learn the basics of visual regression testing, along with resources for implementing the practice in your projects.
-image: /blog/210825/wtf--visual-regression.png
+image: /posts/210825/wtf--visual-regression.png
 tags:
   - testing
   - wtf
@@ -11,7 +11,7 @@ _Visual regression testing_ is ... a lot of funny words. Let's break it out and 
 
 ## What is a Regression?
 
-A [regression](/blog/wtf-is-regression/) is a specific type of bug that worked in the past, but no longer works as expected.
+A [regression](/posts/wtf-is-regression/) is a specific type of bug that worked in the past, but no longer works as expected.
 
 ## Adding the "Visual" to Visual Regression
 
@@ -30,7 +30,7 @@ It is super valuable to automate visual regressions testing because it can captu
 Here's an example that shows how visual regression testing can come in handy even in the most nuanced situations. This shows how a small change shifted just a few elements on the page. The left image was the original page in production, and the right is the new. The middle shows the difference.
 
 {% post_image
-    src="/blog/210825/visual-regression-example.png",
+    src="/posts/210825/visual-regression-example.png",
     alt="Visual Regression Example" %}
 
 ## Making Smart Decisions
@@ -41,4 +41,4 @@ In fact, I tend to ignore the majority of the visual regressions I introduce bec
 
 ## Visual Regression Software
 
-There are a lot of options out there today. One of the more popular choices is [Percy](https://www.browserstack.com/percy). I didn't have the budget for this on this blog, so I've crafted my own together with [Jest](/blog/wtf-is-jest/) and [Jest-Image-Snapshot](https://github.com/americanexpress/jest-image-snapshot).
+There are a lot of options out there today. One of the more popular choices is [Percy](https://www.browserstack.com/percy). I didn't have the budget for this on this blog, so I've crafted my own together with [Jest](/posts/wtf-is-jest/) and [Jest-Image-Snapshot](https://github.com/americanexpress/jest-image-snapshot).

@@ -4,7 +4,7 @@ tags: []
 description: Development projects are expensive. But when opportunities are
   exciting and the budget is small, we tend to give a lot away for free. Here's
   one way to meet closer to the middle.
-image: /blog/default/default-pink-02.png
+image: /posts/default/default-pink-02.png
 ---
 
 I had been a few months into freelancing full-time when the executive director of a local non-profit approached me about building them an application. It was a new and exciting opportunity for me from a technology standpoint. And as a bonus, it would benefit our local community with historical information at no cost to the user.

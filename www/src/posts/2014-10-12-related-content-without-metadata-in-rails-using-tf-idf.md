@@ -5,7 +5,7 @@ tags:
 description: Sometimes metadata isn't available. Other times you don't want to
   rely on it. Here's a method for finding related content using term frequency /
   inverse document frequency.
-image: /blog/default/default-green-01.png
+image: /posts/default/default-green-01.png
 ---
 
 _Note: I'm using Ruby 2.1 and Rails 4.1 here -- other versions *may* not be compatible._
@@ -42,7 +42,7 @@ Let's take a look at the [_tf-idf_](http://en.wikipedia.org/wiki/Tf%E2%80%93idf)
 
 Here's how were going to relate this theory to posts.
 
-1. Strip down each post so we have only the content -- no [HTML](/blog/wtf-is-html/) markup, no code, etc.
+1. Strip down each post so we have only the content -- no [HTML](/posts/wtf-is-html/) markup, no code, etc.
 2. For each post in _the collection_, find the words that intersect with the post at hand. Multiple each of those words by its `idf` and sum to get a related score for each post.
 3. Sort and cache a list of the top five.
 

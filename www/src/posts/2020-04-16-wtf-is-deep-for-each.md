@@ -5,7 +5,7 @@ description: Explore an introduction to the super cool, single-function
 tags:
   - javascript
   - wtf
-image: /blog/default/default-lime-02.png
+image: /posts/default/default-lime-02.png
 ---
 
 [deep-for-each](https://github.com/moxystudio/js-deep-for-each) is a JavaScript package that ships a single function used for recursively iterating over an object. It is most useful when wanting to manipulate or extract from an object with an unpredictable structure.
@@ -15,11 +15,11 @@ image: /blog/default/default-lime-02.png
 If we were to import the deep-for-each function as `deepForEach`, the usage would look like this:
 
 ```js
-import deepForEach from "deep-for-each"
+import deepForEach from "deep-for-each";
 
 deepForEach(movie, (value, key, subject, path) => {
   // do something ...
-})
+});
 ```
 
 The function accepts two arguments — the object and the callback. The callback is fired for every property within the object, providing access to the following for that property:
@@ -42,35 +42,35 @@ const movie = {
   cast: [
     {
       actor: {
-        name: "Dwayne Johnson"
+        name: "Dwayne Johnson",
       },
       character: {
-        name: "Bravestone"
-      }
+        name: "Bravestone",
+      },
     },
     {
       actor: {
-        name: "Karen Gillan"
+        name: "Karen Gillan",
       },
       character: {
-        name: "Ruby"
-      }
-    }
-  ]
-}
+        name: "Ruby",
+      },
+    },
+  ],
+};
 ```
 
 If I were to run the deep-for-each function over that object, displaying the output in each available callback, the code to execute it would be something like this:
 
 ```js
-import deepForEach from "deep-for-each"
+import deepForEach from "deep-for-each";
 
 deepForEach(movie, (value, key, subject, path) => {
-  console.log("KEY:", key)
-  console.log("VALUE:", value)
-  console.log("SUBJ:", subject)
-  console.log("PATH:", path)
-})
+  console.log("KEY:", key);
+  console.log("VALUE:", value);
+  console.log("SUBJ:", subject);
+  console.log("PATH:", path);
+});
 ```
 
 For the first key-value pair — the top-level `name` — that would log the following:
@@ -101,8 +101,8 @@ Now, suppose I couldn't predict the structure of this object, but I wanted to pr
 
 ```js
 deepForEach(movie, (value, key, subject, path) => {
-  if (key === "name" && !subject.title) subject.title = value
-})
+  if (key === "name" && !subject.title) subject.title = value;
+});
 ```
 
 That says if we run into a `name` property where there is not a sibling `title` property, then we duplicate the `name` property as `title`. If we were to check the value of `movie` after running this recursive function, we'd see this:

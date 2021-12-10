@@ -4,7 +4,7 @@ tags:
   - ruby-on-rails
 description: Rails 4.1 introduced the ability to preview email messages from
   your mailers without sending an email. Learn how ...
-image: /blog/default/default-green-01.png
+image: /posts/default/default-green-01.png
 ---
 
 As of Rails 4.1, you can now preview emails while developing (without sending an

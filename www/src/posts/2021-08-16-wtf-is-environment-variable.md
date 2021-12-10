@@ -1,7 +1,7 @@
 ---
 title: WTF is an Environment Variable?
 description: "Introductory information on environment variables and how to set them."
-image: "/blog/210816/wtf--env-var.png"
+image: "/posts/210816/wtf--env-var.png"
 tags:
   - wtf
 ---
@@ -10,14 +10,14 @@ In software development, an "environment" is the context in which a program or p
 
 An environment variable is a value that adjusts the environment (the _process_) in some way.
 
-For example, consider some variable whose value you want to be different when developing locally versus running in production. Although you could achieve that by writing a conditional in your code, it's much easier (and a better practice) to use an environment variable. Here's and example in a [Node.js](/blog/wtf-is-node/) application:
+For example, consider some variable whose value you want to be different when developing locally versus running in production. Although you could achieve that by writing a conditional in your code, it's much easier (and a better practice) to use an environment variable. Here's and example in a [Node.js](/posts/wtf-is-node/) application:
 
 ```js
 // bad
-const myVar = isProduction ? "thisValue" : "thatValue"
+const myVar = isProduction ? "thisValue" : "thatValue";
 
 // good
-const myVar = process.env.MY_VAR
+const myVar = process.env.MY_VAR;
 ```
 
 ## Setting Environment Variables
@@ -32,4 +32,4 @@ Because environment variables are specific to the environment and not the code, 
 
 To dig into more technical details and theory, read [the Wikipedia entry](https://en.wikipedia.org/wiki/Environment_variable).
 
-Otherwise, move on to [_When to Use Environment Variables_](/blog/when-to-use-environment-variables/) and then do a bit of research into how to set environment variables in the language you're using.
+Otherwise, move on to [_When to Use Environment Variables_](/posts/when-to-use-environment-variables/) and then do a bit of research into how to set environment variables in the language you're using.

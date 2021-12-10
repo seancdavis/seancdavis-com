@@ -1,13 +1,13 @@
 ---
 title: "3 Rules for Keeping Components Organized"
 description: "Components may reduce the total volume of code you have to write, but keeping them organized can be a nightmare. Here are three simple rules to keep you organized, consistent, and productive."
-image: /blog/210203/component-organization--meta.png
+image: /posts/210203/component-organization--meta.png
 tags:
   - components
   - organization
 ---
 
-Building out a front-end website or application using [a component-driven approach](/blog/wtf-is-component-driven-development) can do wonders for long-term productivity, but only if you have a consistent approach that keeps you organized.
+Building out a front-end website or application using [a component-driven approach](/posts/wtf-is-component-driven-development) can do wonders for long-term productivity, but only if you have a consistent approach that keeps you organized.
 
 I keep myself organized by following these three rules:
 
@@ -27,7 +27,7 @@ That approach gets unwieldy almost immediately. Instead, I prefer to separate co
 For example, let's say that I've built my pages such that layout elements wrap template-level customizations, which then include various other components that we call _blocks_.
 
 {% post_image
-    src="/blog/210203/component-organization--comp-types.png",
+    src="/posts/210203/component-organization--comp-types.png",
     alt="Component Organization by Type",
     flatten=true %}
 
@@ -56,7 +56,7 @@ It's worth noting that some frameworks — [Jekyll](https://jekyllrb.com/) is on
 
 ## Rule #2: The Top Level is for Shared Components Only
 
-Even given the structure of the first rule, there's still a very good likelihood that a directory like `src/blocks` will get messy quickly. Even small- and medium-sized sites tend to have a fairly large number of components, especially if they are making those components [small enough to do one thing and do that thing well](/blog/wtf-is-single-responsibility-principle).
+Even given the structure of the first rule, there's still a very good likelihood that a directory like `src/blocks` will get messy quickly. Even small- and medium-sized sites tend to have a fairly large number of components, especially if they are making those components [small enough to do one thing and do that thing well](/posts/wtf-is-single-responsibility-principle).
 
 Therefore, I use some additional logic to decide how to further structure a potentially gigantic directory of components.
 
@@ -69,7 +69,7 @@ Consider a case where we have a card component of type _block_. Let's say the ca
 Visually that comes together like this:
 
 {% post_image
-    src="/blog/210203/component-organization--shared-comps.png",
+    src="/posts/210203/component-organization--shared-comps.png",
     alt="Sharing Components",
     flatten=true %}
 
@@ -95,7 +95,7 @@ This may or may not be a good idea, depending on how the rest of your project is
 
 I've found that when a framework can easily support this approach, it's been a huge time-saver. Knowing that all supporting files are in a directory along with a component saves me a lot of digging around.
 
-Supporting files include stylesheets, client-side scripts (for server-side components), or utility files (like [adapters](/blog/simplify-components-by-separating-logic-from-presentation-using-adapters) and transformers).
+Supporting files include stylesheets, client-side scripts (for server-side components), or utility files (like [adapters](/posts/simplify-components-by-separating-logic-from-presentation-using-adapters) and transformers).
 
 I have found it much more efficient to group a component with all its supporting files rather than grouping _types of files_ together. You often see scripts and styles all shoved in the same place. While that makes sense in many cases (especially for global styles and scripts), I've found it easier to locate pesky issues by keeping styles and scripts decentralized and closer to the thing they are affecting.
 

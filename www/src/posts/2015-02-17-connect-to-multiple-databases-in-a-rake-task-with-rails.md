@@ -5,7 +5,7 @@ tags:
   - ruby-on-rails
 description: Sometimes you need access to multiple database within a single rake
   task, for whatever reason. Here's how you do it.
-image: /blog/default/default-lime-03.png
+image: /posts/default/default-lime-03.png
 ---
 
 I've run into a few scenarios in which I need to get data from some other space into my rails app. When the data has been in a different structure, I tend to export it to CSV using some [GUI](http://en.wikipedia.org/wiki/Graphical_user_interface), and then parse the CSV and bring it into my current app.

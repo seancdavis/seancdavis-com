@@ -3,7 +3,7 @@ title: Face Assumptions Directly
 tags:
   - communication
 description: "I really hate assumptions. It's essential to lessen or remove assumptions from a situation. And when you can't, you can at least face them directly and honestly."
-image: /blog/150511/1640190990_a165ab097a_b.jpg
+image: /posts/150511/1640190990_a165ab097a_b.jpg
 attribution:
   - name: Debbie R
     url: https://www.flickr.com/photos/freakgirl/

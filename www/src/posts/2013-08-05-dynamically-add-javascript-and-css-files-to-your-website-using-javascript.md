@@ -5,10 +5,10 @@ tags:
   - javascript
 description: When you can't use a JavaScript or CSS concatenater, this method
   can be useful for adding scripts and styles to your site on the fly.
-image: /blog/default/default-lime-02.png
+image: /posts/default/default-lime-02.png
 ---
 
-This is how we typically add JavaScript and [CSS](/blog/wtf-is-css/) files to websites:
+This is how we typically add JavaScript and [CSS](/posts/wtf-is-css/) files to websites:
 
 ```html
 <script type="text/javascript" src="path/to/script.js"></script>
@@ -17,7 +17,7 @@ This is how we typically add JavaScript and [CSS](/blog/wtf-is-css/) files to we
 
 ## The Ideal Scenario
 
-But, as your site gets super awesome, it can also get super cluttered. For example, with stylesheets, you're either going to have a giant, messy stylesheet, or (preferably) you're going to have a handful of (let's hope) nicely-organized stylesheets. The downside to that is the `<head>` section of your [HTML](/blog/wtf-is-html/) markup is going to get messy. That's not to mention that every request for a file, like a stylesheet, takes time and resources, and will slow your site down.
+But, as your site gets super awesome, it can also get super cluttered. For example, with stylesheets, you're either going to have a giant, messy stylesheet, or (preferably) you're going to have a handful of (let's hope) nicely-organized stylesheets. The downside to that is the `<head>` section of your [HTML](/posts/wtf-is-html/) markup is going to get messy. That's not to mention that every request for a file, like a stylesheet, takes time and resources, and will slow your site down.
 
 Ideally, you should compile these files into a single, manifest file. There are plenty of tools out there to help you with this. [Compass](http://compass-style.org/) and [Gulp](http://gulpjs.com/) are a couple examples.
 
@@ -44,16 +44,16 @@ Now, in your `controller.js` file, add this function:
 ```js
 function loadFile(path, type) {
   if (type == "js") {
-    var fileref = document.createElement("script")
-    fileref.setAttribute("type", "text/javascript")
-    fileref.setAttribute("src", path)
+    var fileref = document.createElement("script");
+    fileref.setAttribute("type", "text/javascript");
+    fileref.setAttribute("src", path);
   } else if (type == "css") {
-    var fileref = document.createElement("link")
-    fileref.setAttribute("rel", "stylesheet")
-    fileref.setAttribute("type", "text/css")
-    fileref.setAttribute("href", path)
+    var fileref = document.createElement("link");
+    fileref.setAttribute("rel", "stylesheet");
+    fileref.setAttribute("type", "text/css");
+    fileref.setAttribute("href", path);
   }
-  document.getElementsByTagName("head")[0].appendChild(fileref)
+  document.getElementsByTagName("head")[0].appendChild(fileref);
 }
 ```
 
@@ -63,10 +63,10 @@ Below that function (in controller.js) you can call all your JS and CSS files, l
 
 ```js
 // Stylesheets
-loadFile("path/to/file.css", "css")
+loadFile("path/to/file.css", "css");
 
 // Scripts
-loadFile("path/to/file.js", "js")
+loadFile("path/to/file.js", "js");
 ```
 
 Now your files should load no problem!
@@ -91,11 +91,11 @@ function loadFile(path, type) {
   if (type == "js") {
     $("head").append(
       '<script type="text/javascript" src="' + path + '"></script>'
-    )
+    );
   } else if (type == "css") {
     $("head").append(
       '<link href="' + path + '" rel="stylesheet" type="text/css">'
-    )
+    );
   }
 }
 ```
@@ -106,10 +106,10 @@ And you would add your files in the same manner as before.
 
 ```js
 // Stylesheets
-loadFile("path/to/file.css", "css")
+loadFile("path/to/file.css", "css");
 
 // Scripts
-loadFile("path/to/file.js", "js")
+loadFile("path/to/file.js", "js");
 ```
 
 As you can see, this is much cleaner, but unless you're planning to use the jQuery library throughout your JS code, it's not worth loading the entire library for this one function.

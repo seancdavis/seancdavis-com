@@ -5,7 +5,7 @@ description: You got yourself into that pickle where you created a migration,
   around it!
 tags:
   - ruby-on-rails
-image: /blog/default/default-blue-03.png
+image: /posts/default/default-blue-03.png
 ---
 
 I've run into this pickle a few times. Here's how the story goes:

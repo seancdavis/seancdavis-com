@@ -3,7 +3,7 @@ title: Make Smarter Decisions by Ignoring Sunk Costs
 tags:
   - inspiration
 description: "Making decisions about money or time you've already spent is illogical. Learn how to make smarter, more logical decisions."
-image: /blog/160227/8156466167_05990bf268_h.jpg
+image: /posts/160227/8156466167_05990bf268_h.jpg
 attribution:
   - name: ·júbilo·haku·
     url: https://www.flickr.com/photos/jubilo/

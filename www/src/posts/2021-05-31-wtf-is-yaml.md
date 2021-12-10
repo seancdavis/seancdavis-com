@@ -1,7 +1,7 @@
 ---
 title: "WTF is YAML?"
 description: "YAML says that YAML is a human friendly data serialization standard for all programming languages. But WTF does that mean?"
-image: /blog/210531/wtf--yaml.png
+image: /posts/210531/wtf--yaml.png
 tags:
   - wtf
 ---

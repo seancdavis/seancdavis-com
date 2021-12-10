@@ -85,37 +85,37 @@ describe("getPostsByTags()", () => {
 
 describe("getReferencedPosts()", () => {
   it("resolves reference links to posts", () => {
-    const content = `<p>Lorem ipsum ...</p><a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>`;
+    const content = `<p>Lorem ipsum ...</p><a href="/posts/${postsFixture[0].fileSlug}/">Post #1</a>`;
     const result = getReferencedPosts(postsFixture, content);
     expect(result).toEqual([postsFixture[0]]);
   });
   it("doesn't require trailing slashes", () => {
-    const content = `<p>Lorem ipsum ...</p><a href="/blog/${postsFixture[0].fileSlug}">Post #1</a>`;
+    const content = `<p>Lorem ipsum ...</p><a href="/posts/${postsFixture[0].fileSlug}">Post #1</a>`;
     const result = getReferencedPosts(postsFixture, content);
     expect(result).toEqual([postsFixture[0]]);
   });
   it("picks up index.html references", () => {
-    const content = `<p>Lorem ipsum ...</p><a href="/blog/${postsFixture[0].fileSlug}/index.html">Post #1</a>`;
+    const content = `<p>Lorem ipsum ...</p><a href="/posts/${postsFixture[0].fileSlug}/index.html">Post #1</a>`;
     const result = getReferencedPosts(postsFixture, content);
     expect(result).toEqual([postsFixture[0]]);
   });
   it("ignores bad links", () => {
-    const content = `<p>Lorem ipsum ...</p><a href="/blog/blog-post-xx/">Post #1</a>`;
+    const content = `<p>Lorem ipsum ...</p><a href="/posts/blog-post-xx/">Post #1</a>`;
     const result = getReferencedPosts(postsFixture, content);
     expect(result).toEqual([]);
   });
   it("ignores image links", () => {
-    const content = `<p>Lorem ipsum ...</p><img src="/blog/blog-post-xx.png">`;
+    const content = `<p>Lorem ipsum ...</p><img src="/posts/blog-post-xx.png">`;
     const result = getReferencedPosts(postsFixture, content);
     expect(result).toEqual([]);
   });
   it("returns a max of 3 posts", () => {
     const content = `
       <p>Lorem ipsum ...</p>
-      <a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[1].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[2].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[3].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[0].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[1].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[2].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[3].fileSlug}/">Post #1</a>
     `;
     const result = getReferencedPosts(postsFixture, content);
     expect(result.length).toEqual(3);
@@ -123,10 +123,10 @@ describe("getReferencedPosts()", () => {
   it("shuffles the results", () => {
     const content = `
       <p>Lorem ipsum ...</p>
-      <a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[1].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[2].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[3].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[0].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[1].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[2].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[3].fileSlug}/">Post #1</a>
     `;
     const firstResults = Array.from({ length: 100 }, () => {
       const result = getReferencedPosts(postsFixture, content);
@@ -140,9 +140,9 @@ describe("getReferencedPosts()", () => {
   it("does not duplicate posts", () => {
     const content = `
       <p>Lorem ipsum ...</p>
-      <a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[1].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[0].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[0].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[1].fileSlug}/">Post #1</a>
     `;
     const result = getReferencedPosts(postsFixture, content);
     expect(result.length).toEqual(2);
@@ -166,9 +166,9 @@ describe("getRelatedPosts()", () => {
   it("first retrieves references", () => {
     const content = `
       <p>Lorem ipsum ...</p>
-      <a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[1].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[2].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[0].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[1].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[2].fileSlug}/">Post #1</a>
     `;
     let result = getRelatedPosts(
       postsFixture,
@@ -198,8 +198,8 @@ describe("getRelatedPosts()", () => {
   it("adds tags on top of references", () => {
     const content = `
       <p>Lorem ipsum ...</p>
-      <a href="/blog/${postsFixture[1].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[2].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[1].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[2].fileSlug}/">Post #1</a>
     `;
     Array.from({ length: 100 }, () => {
       let result = getRelatedPosts(
@@ -225,8 +225,8 @@ describe("getRelatedPosts()", () => {
     // wants to fill up a series of 3 posts.
     const content = `
       <p>Lorem ipsum ...</p>
-      <a href="/blog/${postsFixture[1].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[2].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[1].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[2].fileSlug}/">Post #1</a>
     `;
     Array.from({ length: 100 }, () => {
       let result = getRelatedPosts(
@@ -251,9 +251,9 @@ describe("getRelatedPosts()", () => {
     // against duplicates.
     const content = `
       <p>Lorem ipsum ...</p>
-      <a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[0].fileSlug}/">Post #1</a>
-      <a href="/blog/${postsFixture[1].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[0].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[0].fileSlug}/">Post #1</a>
+      <a href="/posts/${postsFixture[1].fileSlug}/">Post #1</a>
     `;
     Array.from({ length: 100 }, () => {
       let result = getRelatedPosts(

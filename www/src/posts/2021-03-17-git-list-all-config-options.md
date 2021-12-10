@@ -1,12 +1,12 @@
 ---
 title: "Git: List All Config Options"
 description: "See all the options available to you, and also learn how to filter them."
-image: /blog/210317/pink--git-generic.png
+image: /posts/210317/pink--git-generic.png
 tags:
   - git
 ---
 
-Git has a plethora of configuration options. Most of the time you only need a few, typically when [first setting up git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) on a new machine. (Related: [New Mac Setup Guide](/blog/new-mac-dev-guide))
+Git has a plethora of configuration options. Most of the time you only need a few, typically when [first setting up git](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) on a new machine. (Related: [New Mac Setup Guide](/posts/new-mac-dev-guide))
 
 To see all the configuration options available to you, you can [use the reference manual on the website](https://git-scm.com/docs/git-config). Or, if you have an updated version of Git running locally, you can use the following command:
 

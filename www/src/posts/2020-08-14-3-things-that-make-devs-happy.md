@@ -4,7 +4,7 @@ description: While technical tools make developers' lives easier, we can't forge
 tags:
   - repost-ample
   - inspiration
-image: /blog/200814/200814--make-devs-happy.png
+image: /posts/200814/200814--make-devs-happy.png
 canonical_url: https://www.ample.co/blog/3-things-that-make-developers-happy
 ---
 
@@ -32,7 +32,7 @@ Our devs keep themselves organized in many different ways, including:
 - Working with personal kanban boards, like [Trello](https://trello.com/).
 
 {% post_image
-    src="/blog/200814/5f36ac580c5d7cf4f654a891_ample-blog-development-3-things-that-make-developers-happy-7.jpg",
+    src="/posts/200814/5f36ac580c5d7cf4f654a891_ample-blog-development-3-things-that-make-developers-happy-7.jpg",
     alt="A flowchart sketch",
     flatten="true" %}
 
@@ -45,7 +45,7 @@ A comfy chair, large and clear monitor(s), a killer keyboard-mouse combo, and no
 It's worth noting that all developers don't have access to perfecting this piece of the puzzle. We may not have a spare room for a home office, or we may be sharing it with someone we live with. With a toddler running around my house, I can't make my setup exactly what I want it to be, but I can afford noise-canceling headphones, which helps for the times I'm not responsible for looking after the little one. What's important is doing the research to optimize your immediate environment, knowing the constraints in which you are bound. (But don't forget that _you_ can break those bounds!)
 
 {% post_image
-    src="/blog/200814/5f36a9b666b19114d5adb976_ample-blog-development-3-things-that-make-developers-happy-3.jpg",
+    src="/posts/200814/5f36a9b666b19114d5adb976_ample-blog-development-3-things-that-make-developers-happy-3.jpg",
     alt="An Ample developer's home workstation" %}
 
 ## 3\. Spending time away from the keyboard
@@ -57,7 +57,7 @@ Most of our devs are the only one in their house or apartment during the day. Bu
 But it's not just about taking breaks during the workdays. Multiple developers mentioned that a game-changing decision in their lives was finding a hobby that simply wasn't writing code. No matter how much we love code (I admit I still write it in my free time), all of our brains need a break from tech. Work can wait. Somewhere there's a new book to be read, a new path to be trekked, a new body of water to splash into.
 
 {% post_image
-    src="/blog/200814/5f36ab5bb6a6c149c9a68d9b_ample-blog-development-3-things-that-make-developers-happy-6.jpg",
+    src="/posts/200814/5f36ab5bb6a6c149c9a68d9b_ample-blog-development-3-things-that-make-developers-happy-6.jpg",
     alt="A camera, video game controller, Airpods and other hobby related objects" %}
 
 The language we write with, the code editor in which we author that code, the architecture that powers our products...those things don't really matter. They've changed over time and will continue to evolve. In another decade there will be something else to adopt. And that new thing may make writing code easier, but it probably won't _really_ make us happier.

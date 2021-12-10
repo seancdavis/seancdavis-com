@@ -3,7 +3,7 @@ title: "Time and Balance: How We Manage Our Most Valuable Asset"
 tags:
   - productivity
 description: "Time is a force within which we all live, and the decisions we make with that time are what make us who we are. So how do we ensure we're making the right decisions? Balance."
-image: /blog/190430/photo-1524678714210-9917a6c619c2.jpg
+image: /posts/190430/photo-1524678714210-9917a6c619c2.jpg
 attribution:
   - name: Icons8 team
     url: https://unsplash.com/@icons8
@@ -30,7 +30,7 @@ But, if making decisions on how we spend our time is the most important thing we
 
 _Balance_.
 
-Like time, balance is everywhere. It's part of [everything we do](/blog/balance-belongs-in-everything-you-do). The ubiquitous example is _riding a bicycle_, which requires balance. Without it, the cyclist falls to the ground and the task does not successfully continue until the cyclist can get back up and find their balance once again.
+Like time, balance is everywhere. It's part of [everything we do](/posts/balance-belongs-in-everything-you-do). The ubiquitous example is _riding a bicycle_, which requires balance. Without it, the cyclist falls to the ground and the task does not successfully continue until the cyclist can get back up and find their balance once again.
 
 I have a one-year-old daughter who is learning how to walk. It's taking awhile, not because she's not strong enough — she is, she can rip beard hairs out of my face at the root — but because she's learning how to balance her entire body, which includes her massive baby belly.
 

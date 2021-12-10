@@ -1,7 +1,7 @@
 ---
 title: "3 Ways to Add an Image to GitHub README"
 description: "Images often come in handy alongside documentation. Here are a few methods for adding them to your README and other markdown files."
-image: "/blog/210130/orange--github-image.png"
+image: "/posts/210130/orange--github-image.png"
 tags:
   - github
   - quick-tip
@@ -18,7 +18,7 @@ Images can be a great way to enhance your documentation in README files or other
 The [original documentation](https://daringfireball.net/projects/markdown/syntax#img) specifies that images should be written like so:
 
 ```md
-![Alt text](/blog/path/to/img.jpg "Optional title")
+![Alt text](/posts/path/to/img.jpg "Optional title")
 ```
 
 HTML code is also valid within most markdown renderers, including [GitHub's flavor](https://github.github.com/gfm/#raw-html). That means you could also render an the image above like this:
@@ -85,7 +85,7 @@ The trick is to add them to some comment — an issue, pull request or discussio
 
 {% post_image
     alt="Upload Image to GitHub Issue",
-    src="/blog/210130/upload-github-image.gif" %}
+    src="/posts/210130/upload-github-image.gif" %}
 
 You can drag and drop the image from your computer to a comment field in GitHub. Wait for the file to upload and then the URL to the image is right there! You don't even have to submit the issue if you don't want to (although that may limit the image's lifespan).
 

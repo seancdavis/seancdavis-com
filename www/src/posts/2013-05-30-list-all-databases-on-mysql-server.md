@@ -3,7 +3,7 @@ title: List All Databases on MySQL Server
 tags:
   - mysql
 description: It's not that hard, but I keep forgetting how to do it, so I wrote it down.
-image: /blog/default/default-lime-02.png
+image: /posts/default/default-lime-02.png
 ---
 
 It's pretty simple, but something I've found myself looking for this a few times recently. Log into mysql as you normally would.

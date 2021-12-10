@@ -5,18 +5,18 @@ description: What are components? What makes them different from (or similar to)
 tags:
   - components
   - wtf
-image: /blog/default/default-blue-02.png
+image: /posts/default/default-blue-02.png
 ---
 
 We throw the term _component_ around a lot these days, but what does it really mean?
 
 If we go by the textbook definition, a component is one piece of a larger system.
 
-When it comes to [HTML](/blog/wtf-is-html/) pages, we call its pieces _elements_. They are represented by tags that make up the page, like a paragraph (`<p>`), bulleted list (`<ul>`), or quote (`<blockquote>`). HTML elements can also be made up of other elements. For example, a footer (`<footer>`) would likely have a collection of elements inside it.
+When it comes to [HTML](/posts/wtf-is-html/) pages, we call its pieces _elements_. They are represented by tags that make up the page, like a paragraph (`<p>`), bulleted list (`<ul>`), or quote (`<blockquote>`). HTML elements can also be made up of other elements. For example, a footer (`<footer>`) would likely have a collection of elements inside it.
 
 While outside the context of web development, the terms `element` and `component` can be used interchangeably, within the web dev world, they tend to have exclusive meanings. An _element_, as mentioned above, is a basic building block with a goal of being supported by all browsers. It could be considered _native_ to or a first-class citizens of the HTML language.
 
-But these basic building blocks tend to not do much on their own. They're just building blocks, after all. Putting a useful and visually-appealing web page together means adding some customization through [CSS](/blog/wtf-is-css/) and [JavaScript](/blog/wtf-is-javascript/).
+But these basic building blocks tend to not do much on their own. They're just building blocks, after all. Putting a useful and visually-appealing web page together means adding some customization through [CSS](/posts/wtf-is-css/) and [JavaScript](/posts/wtf-is-javascript/).
 
 Those customizations are often meant to be reused. Consider a card. There is no `<card>` element in HTML, but many web projects these days have cards littered throughout. Or even consider something that is already an HTML element, like a `<button>`, but within your project, you want to add styling with CSS and interactivity with JavaScript, and you want that behavior to persist throughout the site.
 
@@ -26,7 +26,7 @@ Perhaps the biggest benefit of a web component is that it is encapsulated in its
 
 One of the biggest struggles with web components is that it's been a long road to get all browsers to agree on a standard approach. The reason the term _component_ is thrown around so much is because most of the time we're not actually talking about official _web components_.
 
-Developers didn't want to wait for web browsers to adopt a standard approach to web components, so they built a workaround. Frameworks like [React](/blog/wtf-is-react/) and [Vue](https://vuejs.org/) use the concept of _components_ to make it _feel_ like we're working with components without actually using web components. And that makes sense, as we want the code we write to work in as many browsers as possible. But, there are also libraries like [Stencil](https://stenciljs.com/), which do render actual HTML components in the browsers that support it, while relying on a polyfill for those that don't.
+Developers didn't want to wait for web browsers to adopt a standard approach to web components, so they built a workaround. Frameworks like [React](/posts/wtf-is-react/) and [Vue](https://vuejs.org/) use the concept of _components_ to make it _feel_ like we're working with components without actually using web components. And that makes sense, as we want the code we write to work in as many browsers as possible. But, there are also libraries like [Stencil](https://stenciljs.com/), which do render actual HTML components in the browsers that support it, while relying on a polyfill for those that don't.
 
 With most front-end frameworks moving more in the direction of components, it seems as though they are going to be around for awhile. So, while it's important to understand the basics of HTML and CSS, most front-end developers are likely to end up working with the concept of components in some capacity.
 

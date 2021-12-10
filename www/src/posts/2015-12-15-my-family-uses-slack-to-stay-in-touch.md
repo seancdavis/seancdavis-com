@@ -1,7 +1,7 @@
 ---
 title: My Family Uses Slack To Stay In Touch
 description: "Slack is built for work teams. My family has adopted it to communicate when we're not all together."
-image: /blog/151215/6182682185_7d67bf1603_b.jpg
+image: /posts/151215/6182682185_7d67bf1603_b.jpg
 attribution:
   - name: Jeff Stvan
     url: https://www.flickr.com/photos/diorama_sky/

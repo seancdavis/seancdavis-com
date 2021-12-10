@@ -1,7 +1,7 @@
 ---
 title: "The Spinneret: Issue #5"
 description: "I'm back! It's been a few months since the last newsletter. And guess what? I got a new job! Some other stuff happened, too. Check it out."
-image: /blog/210210/the-spinneret--february-2021.png
+image: /posts/210210/the-spinneret--february-2021.png
 tags:
   - spinneret
 ---
@@ -15,7 +15,7 @@ As always, if you have ideas, questions, criticisms, please [open a GitHub issue
 ## What the Buzz!?
 
 {% post_image
-    src="/blog/210210/grouparoo-logo.png",
+    src="/posts/210210/grouparoo-logo.png",
     alt="Grouparoo Logo",
     maxWidth="sm",
     flatten=true %}
@@ -31,7 +31,7 @@ In other news, ES12 (or ES2021) has been announced and [has several new features
 ## In My Words
 
 {% post_image
-    src="/blog/210128/210128-leaving-job-right-way.png",
+    src="/posts/210128/210128-leaving-job-right-way.png",
     alt="Leaving a Job the Right Way" %}
 
 I was pretty quiet on my blog in the autumn. Much of that was to prepare for [my Next.js Conf talk](https://youtu.be/9j9bxDf428o). I also spent some time working through what is to be a rather large series of posts all around components.
@@ -39,11 +39,11 @@ I was pretty quiet on my blog in the autumn. Much of that was to prepare for [my
 Nevertheless, I got back to writing in January, and here's what I put out in the last month:
 
 - [Components: Server-Side vs. Client-Side](https://css-tricks.com/components-server-side-vs-client-side/) <small class="text-gray-800">(CSS-Tricks)</small>
-- [3 Ways to Render Server-Side Components with Eleventy](/blog/eleventy-server-components/)
-- [How I Add Sketches to Blog Posts](/blog/how-i-add-sketches-to-blog-posts/)
-- [Use Cmd+K Terminal Trick to Stay Organized](/blog/cmd-k-terminal-shortcut/)
-- [Leaving a Job the Right Way](/blog/leaving-job-right-way/)
-- [3 Ways to Add an Image to GitHub README](/blog/three-ways-to-add-image-to-github-readme/)
+- [3 Ways to Render Server-Side Components with Eleventy](/posts/eleventy-server-components/)
+- [How I Add Sketches to Blog Posts](/posts/how-i-add-sketches-to-blog-posts/)
+- [Use Cmd+K Terminal Trick to Stay Organized](/posts/cmd-k-terminal-shortcut/)
+- [Leaving a Job the Right Way](/posts/leaving-job-right-way/)
+- [3 Ways to Add an Image to GitHub README](/posts/three-ways-to-add-image-to-github-readme/)
 
 ## Resources & References
 
@@ -52,14 +52,14 @@ I didn't come across many great references over the last month. The coolest thin
 ## New (to me) Tools
 
 {% post_image
-    src="/blog/210210/tuple-logo.png",
+    src="/posts/210210/tuple-logo.png",
     alt="Tuple Logo",
     maxWidth="sm",
     flatten=true  %}
 
 In starting a new job, I came across several new tools that I hadn't before heard about.
 
-- [Excalidraw](https://excalidraw.com/): After posting about [how I add sketches to blog posts](/blog/how-i-add-sketches-to-blog-posts/), I was pointed toward this tool, and I'm hooked. It has the perfect number of options. It's super fast and simple and has had everything I've needed it for so far. I see myself using this regularly over the coming months.
+- [Excalidraw](https://excalidraw.com/): After posting about [how I add sketches to blog posts](/posts/how-i-add-sketches-to-blog-posts/), I was pointed toward this tool, and I'm hooked. It has the perfect number of options. It's super fast and simple and has had everything I've needed it for so far. I see myself using this regularly over the coming months.
 - [Jamboard](https://workspace.google.com/products/jamboard/): A Google sticky note board tool. It's simple, but it gets the job done.
 - [Riverside](https://riverside.fm/): Recording platform for remote interviews. I haven't used it yet, but I'm planning to start it for a new show I'm working on!
 - [Tuple](https://tuple.app/): They call it "The best remote pair programming app on macOS." I have to say I haven't tried many others out, but this thing is amazing. The video is super clear, flexible, and the pairing controls are easy to use. 100% worth the cost.

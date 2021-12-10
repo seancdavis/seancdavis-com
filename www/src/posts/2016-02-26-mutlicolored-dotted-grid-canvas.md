@@ -6,7 +6,7 @@ tags:
   - html
   - javascript
   - jquery
-image: /blog/default/default-orange-03.png
+image: /posts/default/default-orange-03.png
 ---
 
 [HTML5 Canvas](https://en.wikipedia.org/wiki/Canvas_element) is a great way to build, animate, and interact with shapes in your website or web application.
@@ -48,21 +48,21 @@ To do that, we'll need to use some JavaScript. I'm going also use jQuery so the 
 ```js
 $(document).ready(function () {
   // Store a reference to canvas.
-  var canvas = $("canvas.dots")
+  var canvas = $("canvas.dots");
 
   // Set the width and height attributes on the canvas element based on its
   // current size.
-  canvas.attr({ height: canvas.height(), width: canvas.width() })
+  canvas.attr({ height: canvas.height(), width: canvas.width() });
 
   // The context is what we use to draw shapes.
-  var context = canvas[0].getContext("2d")
+  var context = canvas[0].getContext("2d");
 
   // Draw a circle.
-  context.beginPath() // begin drawing
-  context.arc(50, 50, 25, 0, 2 * Math.PI, false) // specify that it's an arc
-  context.fillStyle = "#F03C69" // add a fill color
-  context.fill() // fill it in
-})
+  context.beginPath(); // begin drawing
+  context.arc(50, 50, 25, 0, 2 * Math.PI, false); // specify that it's an arc
+  context.fillStyle = "#F03C69"; // add a fill color
+  context.fill(); // fill it in
+});
 ```
 
 This is annotated to make it easier to understand, but there are a few items I'd like to discuss:
@@ -89,39 +89,39 @@ _Note: I'm going to get rid of the `$(document).ready ...` function for future e
 
 ```js
 // Setup (explained earlier)
-var canvas = $("canvas.dots")
-var context = canvas[0].getContext("2d")
-canvas.attr({ height: canvas.height(), width: canvas.width() })
+var canvas = $("canvas.dots");
+var context = canvas[0].getContext("2d");
+canvas.attr({ height: canvas.height(), width: canvas.width() });
 
 // We need a reference to the canvas width to calculate dot sizes and positions.
-var canvasWidth = canvas.width()
+var canvasWidth = canvas.width();
 
 // We're setting the margin between dots (and the edge of the container), and
 // then we'll set the size of the dots automatically.
-var dotMargin = 25
+var dotMargin = 25;
 
 // We'll set the number of dots dynamically, too, so we can adjust and see how
 // it changes.
-var numDots = 5
+var numDots = 5;
 
 // Let's figure out the radius of each dot.
-var dotDiameter = (canvasWidth - (2 + numDots) * dotMargin) / numDots
-var dotRadius = dotDiameter * 0.5
+var dotDiameter = (canvasWidth - (2 + numDots) * dotMargin) / numDots;
+var dotRadius = dotDiameter * 0.5;
 
 // Using the number of dots specified, find the center of each dot, and then
 // draw it.
 for (var i = 0; i < numDots; i++) {
-  var x = i * (dotDiameter + dotMargin) + dotMargin + dotRadius
-  var y = dotMargin + dotRadius
-  drawDot(x, y, dotRadius)
+  var x = i * (dotDiameter + dotMargin) + dotMargin + dotRadius;
+  var y = dotMargin + dotRadius;
+  drawDot(x, y, dotRadius);
 }
 
 // This is just as we had done before, but making values dynamic.
 function drawDot(x, y, radius) {
-  context.beginPath()
-  context.arc(x, y, radius, 0, 2 * Math.PI, false)
-  context.fillStyle = "#F03C69"
-  context.fill()
+  context.beginPath();
+  context.arc(x, y, radius, 0, 2 * Math.PI, false);
+  context.fillStyle = "#F03C69";
+  context.fill();
 }
 ```
 
@@ -147,37 +147,37 @@ This gets a little trickier. Here's some code:
 
 ```js
 // Setup the parameters for our grid. These are the values you can change.
-var dotMargin = 25
-var numRows = 5
-var numCols = 10
+var dotMargin = 25;
+var numRows = 5;
+var numCols = 10;
 
 // Setup (explained earlier)
-var canvas = $("canvas.dots")
-var context = canvas[0].getContext("2d")
-var canvasWidth = canvas.width()
-var canvasHeight = canvas.height() // this one is new
-canvas.attr({ height: canvasHeight, width: canvasWidth })
+var canvas = $("canvas.dots");
+var context = canvas[0].getContext("2d");
+var canvasWidth = canvas.width();
+var canvasHeight = canvas.height(); // this one is new
+canvas.attr({ height: canvasHeight, width: canvasWidth });
 
 // Because we don't know which direction (x vs. y) is the limiting sizing
 // factor, we'll calculate both first.
-var dotWidth = (canvasWidth - 2 * dotMargin) / numCols - dotMargin
-var dotHeight = (canvasHeight - 2 * dotMargin) / numRows - dotMargin
+var dotWidth = (canvasWidth - 2 * dotMargin) / numCols - dotMargin;
+var dotHeight = (canvasHeight - 2 * dotMargin) / numRows - dotMargin;
 
 // Now, we use the limiting dimension to set the diameter.
 if (dotWidth > dotHeight) {
-  var dotDiameter = dotHeight
+  var dotDiameter = dotHeight;
   var xMargin =
-    (canvasWidth - (2 * dotMargin + numCols * dotDiameter)) / numCols
-  var yMargin = dotMargin
+    (canvasWidth - (2 * dotMargin + numCols * dotDiameter)) / numCols;
+  var yMargin = dotMargin;
 } else {
-  var dotDiameter = dotWidth
-  var xMargin = dotMargin
+  var dotDiameter = dotWidth;
+  var xMargin = dotMargin;
   var yMargin =
-    (canvasHeight - (2 * dotMargin + numRows * dotDiameter)) / numRows
+    (canvasHeight - (2 * dotMargin + numRows * dotDiameter)) / numRows;
 }
 
 // Radius is still half of the diameter, because ... math.
-var dotRadius = dotDiameter * 0.5
+var dotRadius = dotDiameter * 0.5;
 
 // Now, we have to iterate in both directions, so we need a loop within a loop.
 // This loop is a little more complicated because the margin in the direction
@@ -186,17 +186,17 @@ for (var i = 0; i < numRows; i++) {
   // i is the row iterator
   for (var j = 0; j < numCols; j++) {
     // j is the column iterator
-    var x = j * (dotDiameter + xMargin) + dotMargin + xMargin / 2 + dotRadius
-    var y = i * (dotDiameter + yMargin) + dotMargin + yMargin / 2 + dotRadius
-    drawDot(x, y, dotRadius)
+    var x = j * (dotDiameter + xMargin) + dotMargin + xMargin / 2 + dotRadius;
+    var y = i * (dotDiameter + yMargin) + dotMargin + yMargin / 2 + dotRadius;
+    drawDot(x, y, dotRadius);
   }
 }
 
 function drawDot(x, y, radius) {
-  context.beginPath()
-  context.arc(x, y, radius, 0, 2 * Math.PI, false)
-  context.fillStyle = "#F03C69"
-  context.fill()
+  context.beginPath();
+  context.arc(x, y, radius, 0, 2 * Math.PI, false);
+  context.fillStyle = "#F03C69";
+  context.fill();
 }
 ```
 
@@ -218,50 +218,50 @@ How about, just for fun, we make it multi-colored? We'll just set an array of co
 I've cleaned up the comments so you can see the two lines that are new:
 
 ```js
-var dotMargin = 25
-var numRows = 5
-var numCols = 10
+var dotMargin = 25;
+var numRows = 5;
+var numCols = 10;
 // Set the colors you want to support in this array
-var colors = ["#F03C69", "#FFCD32", "#2BAD5D", "#2ABABF", "#CDDC28", "#B91E8C"]
+var colors = ["#F03C69", "#FFCD32", "#2BAD5D", "#2ABABF", "#CDDC28", "#B91E8C"];
 
-var canvas = $("canvas.dots")
-var context = canvas[0].getContext("2d")
-var canvasWidth = canvas.width()
-var canvasHeight = canvas.height() // this one is new
-canvas.attr({ height: canvasHeight, width: canvasWidth })
+var canvas = $("canvas.dots");
+var context = canvas[0].getContext("2d");
+var canvasWidth = canvas.width();
+var canvasHeight = canvas.height(); // this one is new
+canvas.attr({ height: canvasHeight, width: canvasWidth });
 
-var dotWidth = (canvasWidth - 2 * dotMargin) / numCols - dotMargin
-var dotHeight = (canvasHeight - 2 * dotMargin) / numRows - dotMargin
+var dotWidth = (canvasWidth - 2 * dotMargin) / numCols - dotMargin;
+var dotHeight = (canvasHeight - 2 * dotMargin) / numRows - dotMargin;
 
 if (dotWidth > dotHeight) {
-  var dotDiameter = dotHeight
+  var dotDiameter = dotHeight;
   var xMargin =
-    (canvasWidth - (2 * dotMargin + numCols * dotDiameter)) / numCols
-  var yMargin = dotMargin
+    (canvasWidth - (2 * dotMargin + numCols * dotDiameter)) / numCols;
+  var yMargin = dotMargin;
 } else {
-  var dotDiameter = dotWidth
-  var xMargin = dotMargin
+  var dotDiameter = dotWidth;
+  var xMargin = dotMargin;
   var yMargin =
-    (canvasHeight - (2 * dotMargin + numRows * dotDiameter)) / numRows
+    (canvasHeight - (2 * dotMargin + numRows * dotDiameter)) / numRows;
 }
 
-var dotRadius = dotDiameter * 0.5
+var dotRadius = dotDiameter * 0.5;
 
 for (var i = 0; i < numRows; i++) {
   for (var j = 0; j < numCols; j++) {
-    var x = j * (dotDiameter + xMargin) + dotMargin + xMargin / 2 + dotRadius
-    var y = i * (dotDiameter + yMargin) + dotMargin + yMargin / 2 + dotRadius
+    var x = j * (dotDiameter + xMargin) + dotMargin + xMargin / 2 + dotRadius;
+    var y = i * (dotDiameter + yMargin) + dotMargin + yMargin / 2 + dotRadius;
     // Grab a random color from the array.
-    var color = colors[Math.floor(Math.random() * colors.length)]
-    drawDot(x, y, dotRadius, color)
+    var color = colors[Math.floor(Math.random() * colors.length)];
+    drawDot(x, y, dotRadius, color);
   }
 }
 
 function drawDot(x, y, radius, color) {
-  context.beginPath()
-  context.arc(x, y, radius, 0, 2 * Math.PI, false)
-  context.fillStyle = color
-  context.fill()
+  context.beginPath();
+  context.arc(x, y, radius, 0, 2 * Math.PI, false);
+  context.fillStyle = color;
+  context.fill();
 }
 ```
 

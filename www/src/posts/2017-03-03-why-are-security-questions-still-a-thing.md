@@ -1,7 +1,7 @@
 ---
 title: "Why are security questions still a thing?"
 description: "The motivation to provide an additional layer of security beyond an email-password combination is a noble one, but ..."
-image: /blog/170303/security-questions.png
+image: /posts/170303/security-questions.png
 attribution:
   - name: Matthew Henry
     url: https://unsplash.com/@matthewhenry

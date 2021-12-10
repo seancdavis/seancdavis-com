@@ -1,7 +1,7 @@
 ---
 title: 'The "Use With Love" Public License'
 description: "Inspired by other public code licenses, this helped me better define exactly how I want to share my content and code."
-image: "/blog/210618/green--heart-unlock.png"
+image: "/posts/210618/green--heart-unlock.png"
 tags: []
 ---
 

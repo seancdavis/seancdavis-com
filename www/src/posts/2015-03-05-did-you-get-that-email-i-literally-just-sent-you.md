@@ -3,7 +3,7 @@ title: Did you get that email I literally just sent you?
 tags:
   - communication
 description: Productivity decreases significantly when we use email and impromptu chatting when email alone or a meeting could have sufficed.
-image: /blog/150305/8237730753_e5295bf1e3_h.jpg
+image: /posts/150305/8237730753_e5295bf1e3_h.jpg
 attribution:
   - name: David Blackwell.
     url: https://www.flickr.com/photos/mobilestreetlife/

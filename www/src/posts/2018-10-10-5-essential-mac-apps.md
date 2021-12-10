@@ -1,7 +1,7 @@
 ---
 title: 5 Essential Mac Apps
 description: "These are the five apps that have transformed the way I use the Mac every day."
-image: /blog/181010/mac.jpeg
+image: /posts/181010/mac.jpeg
 attribution:
   - name: Alexandre Godreau
     url: https://unsplash.com/@alexandre_godreau
@@ -14,7 +14,7 @@ I recently handed down a [MacBook Pro](https://www.apple.com/macbook-pro/) to my
 So here it is: a quick list of five Mac apps I use to make my experience more efficient and enjoyable.
 
 {% post_image
-    src="/blog/181010/alfred.png",
+    src="/posts/181010/alfred.png",
     alt="Alfred",
     maxWidth="sm",
     flatten=true %}
@@ -35,7 +35,7 @@ But there are two changes I've made to Alfred:
 2.  I changed the system commands to begin with an underscore. For example, "Shut Down" will shut down the machine. And Alfred learns what you do most frequently and pushes those commands to the top. Too many times I'd try to switch to _Shift_ (spoiler alert!) and would shut down my machine ("Sh" would show _Shut Down_ first). I simply changed those commands to begin with and underscore so now if I want to shut down the machine via Alfred, I start typing "\_Shu ..." otherwise I won't see it in the results.
 
 {% post_image
-    src="/blog/181010/spectacle.png",
+    src="/posts/181010/spectacle.png",
     alt="Spectacle",
     maxWidth="sm",
     flatten=true %}
@@ -53,7 +53,7 @@ And if you don't like Spectacle, [there are several apps in this category](https
 Like Alfred, Spectacle is also configurable, which came in handy when one of its shortcuts conflicted with another application's built-in shortcut.
 
 {% post_image
-    src="/blog/181010/copyclip2.png",
+    src="/posts/181010/copyclip2.png",
     alt="CopyClip 2",
     maxWidth="sm",
     flatten=true %}
@@ -71,7 +71,7 @@ Yeah, I do that all the time. I literally just did it while writing the _Spectac
 I've only picked this up within the last year, but it's something I wished I now wish I always had.
 
 {% post_image
-    src="/blog/181010/shift.png",
+    src="/posts/181010/shift.png",
     alt="Shift",
     maxWidth="md",
     flatten=true %}
@@ -96,7 +96,7 @@ Shift is great because:
 2.  It also wraps other Google apps, which means that I can get to the Calendar and Drive apps for both my Google accounts without opening a browser tab.
 
 {% post_image
-    src="/blog/181010/recordit.gif",
+    src="/posts/181010/recordit.gif",
     alt="Recordit" %}
 
 ### 5\. Screen Recorder: [Recordit](http://recordit.co/)

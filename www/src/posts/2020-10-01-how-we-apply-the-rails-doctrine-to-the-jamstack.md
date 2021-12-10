@@ -5,7 +5,7 @@ tags:
   - repost-ample
   - jamstack
   - ruby-on-rails
-image: /blog/201001/201001--jamstack-rails-doctrine.png
+image: /posts/201001/201001--jamstack-rails-doctrine.png
 canonical_url: https://www.ample.co/blog/how-we-apply-the-rails-doctrine-to-the-jamstack
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "The Good and the Bad of Component-Driven Development"
 description: "Why would you build a website with components? Because it can be great! But you should know what you're getting yourself into first."
-image: /blog/210311/lime--component-bricks.png
+image: /posts/210311/lime--component-bricks.png
 tags:
   - components
 ---
@@ -43,7 +43,7 @@ When building a new website for someone else, this can be challenging for the cu
 
 It's still totally worth it, but it takes some convincing for folks who are used to seeing results faster.
 
-Second, _component_ is a generic term. Even frameworks like [React](/blog/wtf-is-react/) and [Vue](https://vuejs.org/) that exist to help you build components tend to leave a number of important decisions up to the developer. That's totally okay, but it means you're going to spend more time making low-level decisions (like how to name and organize files).
+Second, _component_ is a generic term. Even frameworks like [React](/posts/wtf-is-react/) and [Vue](https://vuejs.org/) that exist to help you build components tend to leave a number of important decisions up to the developer. That's totally okay, but it means you're going to spend more time making low-level decisions (like how to name and organize files).
 
 It also means it's up to you to design a component. Knowing the right time to break up a component into smaller components will help you stay organized, but there's no perfect formula for it.
 

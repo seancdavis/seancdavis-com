@@ -3,7 +3,7 @@ title: Your Team Affects The Perception Of You
 tags:
   - inspiration
 description: How people perceive your work is greatly influenced by your team's performance. It's time for you to evaluate and improve your team.
-image: /blog/130327/team-meeting-cover.jpg
+image: /posts/130327/team-meeting-cover.jpg
 photographer:
   - name: Startup Stock Photos
     url: https://stocksnap.io/author/1949

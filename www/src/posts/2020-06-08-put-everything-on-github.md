@@ -4,7 +4,7 @@ description: Some of the most valuable advice I've received is to put my code
   out their for the world to read, no matter how embarrassing it may be.
 tags:
   - developer-advice
-image: /blog/default/default-green-01.png
+image: /posts/default/default-green-01.png
 ---
 
 When I was near landing my first job in the web development industry, I met with the agency's senior-most developer. He was kicking me off on a freelance project that the agency was going to use to assess my viability as an employee.

@@ -3,7 +3,7 @@ title: Unwritten Rules are The Worst
 tags:
   - communication
 description: It's really frustrating when you break a rule you didn't know existed in the first place. Let's examine how to fix those scenarios.
-image: /blog/150409/5767892362_dff1d1c16c_b.jpg
+image: /posts/150409/5767892362_dff1d1c16c_b.jpg
 attribution:
   - name: Thomas Galvez
     url: https://www.flickr.com/photos/togawanderings/

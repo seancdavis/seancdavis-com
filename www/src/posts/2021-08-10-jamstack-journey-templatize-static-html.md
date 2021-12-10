@@ -1,7 +1,7 @@
 ---
 title: How to Convert Static HTML into Powerful Templates
 description: Learn how to take a handful of static HTML files and convert them into templated files that will help you minimize errors and work more efficiently.
-image: /blog/210810/210810--static-html-to-templates.jpeg
+image: /posts/210810/210810--static-html-to-templates.jpeg
 canonical_url: https://www.stackbit.com/blog/jamstack-journey-templatize-static-html/
 tags:
   - repost-stackbit
@@ -30,7 +30,7 @@ Following a software development principle called [_don't repeat yourself_](http
 When you have no templates and only HTML, the code on each page is unique and lives within its own file. Take a super simple site that has a home page (`index.html`), along with Terms (`terms.html`) and Privacy (`privacy.html`) pages. Your files look like this, where the dark blue boxes represent the code unique to each page:
 
 {% post_image
-    src="/blog/210810/210720--templatizing-before.png",
+    src="/posts/210810/210720--templatizing-before.png",
     alt="Before templatizing, each page is unique",
     flatten="true",
     classes="px-8 my-6" %}
@@ -38,7 +38,7 @@ When you have no templates and only HTML, the code on each page is unique and li
 Now let's say the header on the home page is unique, but the header on the Terms and Privacy (i.e. _interior_) pages could be shared. And maybe the footer is the same on every page. Then we could make the header and footer into their own files and share them among multiple pages. Like this:
 
 {% post_image
-    src="/blog/210810/210720--templatizing-after.png",
+    src="/posts/210810/210720--templatizing-after.png",
     alt="After templatizing, the header and footer can be shared where appropriate",
     flatten="true",
     classes="px-8 my-6" %}
@@ -53,7 +53,7 @@ But how do we actually do this?
 
 Unfortunately, the web isn't built to work with templates. We can't actually just add a `footer.html` file and then tell every page to include it and have the browser work. In the end, the browser expects a _single_ HTML file. In other words, the browser actually _wants_ the non-templatized version of the two scenarios above.
 
-But that's not how we want to work. It's tedious and prone to errors. If you want the footer to look the same everywhere, it should _be_ the same everywhere. Otherwise, you risk making inadvertent changes on random pages. To help with this process we can use a tool called a [static site generator](https://www.seancdavis.com/blog/wtf-is-ssg/).
+But that's not how we want to work. It's tedious and prone to errors. If you want the footer to look the same everywhere, it should _be_ the same everywhere. Otherwise, you risk making inadvertent changes on random pages. To help with this process we can use a tool called a [static site generator](/posts/wtf-is-ssg/).
 
 [There are many to choose from](https://jamstack.org/generators/), perhaps including some popular ones you may have heard of, such as [Jekyll](https://jekyllrb.com/), [Gatsby](https://www.gatsbyjs.com/), [Next.js](https://nextjs.org/), or [Hugo](https://gohugo.io/). Here we're going to use one called [Eleventy](https://www.11ty.dev/).
 
@@ -61,7 +61,7 @@ But that's not how we want to work. It's tedious and prone to errors. If you wan
 
 Eleventy isn't as popular as some of its competition, but it is supreme in its approach, which is simplicity. It is modeled after Jekyll, which provides a super low barrier to getting started when compared with the rest of the field. But unlike Jekyll, it is written entirely in JavaScript, which makes it a great fit for folks getting started with building websites.
 
-Eleventy can also be super powerful. It takes more customization as your site grows in complexity, but it can grow with you. [My site](https://www.seancdavis.com/) has several hundred pages and, at the time of writing this, is built entirely through Eleventy.
+Eleventy can also be super powerful. It takes more customization as your site grows in complexity, but it can grow with you. [My site](/) has several hundred pages and, at the time of writing this, is built entirely through Eleventy.
 
 Okay, _now_ are you convinced you should templatize those HTML files?
 
@@ -88,7 +88,7 @@ Take note that we're making a big assumption here. We're assuming that you won't
 
 In the real world, it can be a tricky process to take big, bulky, obfuscated CSS and JS files and create a method for adding to them. And it gets even more complicated if you ever have to go back to the developer for changes _after_ you've customized one of these.
 
-As a result, we're considering that process outside the scope of this guide. However, if this need arises, I've written a couple relatively simple guides on how to achieve this for both [CSS](https://www.seancdavis.com/blog/getting-started-with-postcss/) and [JavaScript](https://www.seancdavis.com/blog/javascript-webpack-build-pipeline/).
+As a result, we're considering that process outside the scope of this guide. However, if this need arises, I've written a couple relatively simple guides on how to achieve this for both [CSS](/posts/getting-started-with-postcss/) and [JavaScript](/posts/javascript-webpack-build-pipeline/).
 
 ## Step 2: Create a New Project
 
@@ -96,7 +96,7 @@ Add the contents of the example static project to some directory on your machine
 
 ## Step 3: Setup Eleventy
 
-We're going to assume you have a computer that is setup for web development. (If not, [here's a guide](https://www.seancdavis.com/blog/new-mac-dev-guide/) I wrote on setting up a new Mac for development.)
+We're going to assume you have a computer that is setup for web development. (If not, [here's a guide](/posts/new-mac-dev-guide/) I wrote on setting up a new Mac for development.)
 
 Once you're ready to go, open up your command line or terminal application, change into the project directory and install Eleventy:
 
@@ -136,7 +136,7 @@ You should now have a dev server running at localhost:8000. And you'll notice yo
 You can open your browser and visit localhost:8000 to see your site, and ... _something doesn't look right._
 
 {% post_image
-    src="/blog/210810/210720--unmute-unstyled.png",
+    src="/posts/210810/210720--unmute-unstyled.png",
     alt="Where the heck are our styles??",
     flatten="true",
     classes="px-4 my-6" %}
@@ -146,18 +146,18 @@ That's because we didn't tell Eleventy where our assets are. To do this, we must
 ```js
 module.exports = function (eleventyConfig) {
   // Copy static assets over to _site directory.
-  eleventyConfig.addPassthroughCopy("css")
-  eleventyConfig.addPassthroughCopy("images")
-  eleventyConfig.addPassthroughCopy("js")
+  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("js");
   // Return configuration object.
-  return {}
-}
+  return {};
+};
 ```
 
 Give the browser a refresh and everything should look good again!
 
 {% post_image
-    src="/blog/210810/210720--unmute-styled.png",
+    src="/posts/210810/210720--unmute-styled.png",
     alt="Phew! That's better.",
     flatten="true",
     classes="px-4 my-6" %}
@@ -205,8 +205,8 @@ In looking at `index.html` and `content-page.html`, the code that is consistent 
     <link rel="stylesheet" href="/css/styles.css" />
     <script>
       function onInit(callback) {
-        if (typeof App !== "undefined") return callback()
-        setTimeout(onInit, 250, callback)
+        if (typeof App !== "undefined") return callback();
+        setTimeout(onInit, 250, callback);
       }
     </script>
   </head>
@@ -248,7 +248,7 @@ layout: default
 
 Now refresh the browser and you should see your styles come back!
 
-This style code — three hyphens, then some code, then three more hyphens — is called [_frontmatter_](https://www.seancdavis.com/blog/wtf-is-frontmatter/). It's like _code before the code_. It provides us a space to place meta information about that file that won't ultimately be written to your browser screen.
+This style code — three hyphens, then some code, then three more hyphens — is called [_frontmatter_](/posts/wtf-is-frontmatter/). It's like _code before the code_. It provides us a space to place meta information about that file that won't ultimately be written to your browser screen.
 
 The last thing to note here is that you will want to either remove or change the comments in your code. Nunjucks comments look a little different than HTML comments (although they will ultimately still be treated as comments, so you can ignore this if you'd like).
 
@@ -277,7 +277,7 @@ layout: "content-page"
 Now you can go to localhost:8000/terms and localhost:8000/privacy and you should see your nicely-formatted content.
 
 {% post_image
-    src="/blog/210810/210720--terms-page.png",
+    src="/posts/210810/210720--terms-page.png",
     alt="Terms Page",
     flatten="true",
     classes="px-4 my-6" %}
@@ -367,6 +367,6 @@ Where do we go from here?
 
 I'm glad you let me ask that question on your behalf, because we have a great next step! Instead of using `.html` or `.njk` files for our content, you can double-down on frontmatter and markdown to create a truly powerful editing experience that gets all the code out of your way and keeps you focused on only the content.
 
-And, lucky for you, [we have a guide](/blog/jamstack-journey-separate-content) to keep this thing going and to walk you through that process.
+And, lucky for you, [we have a guide](/posts/jamstack-journey-separate-content) to keep this thing going and to walk you through that process.
 
 But first, go get that ice cream.

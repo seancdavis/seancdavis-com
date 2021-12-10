@@ -6,14 +6,14 @@ description: If the web is organized by pages, shouldn't we build it that way?
 tags:
   - components
   - wtf
-image: /blog/default/default-green-02.png
+image: /posts/default/default-green-02.png
 ---
 
 The web is organized by pages.
 
 When you open a browser and ask Jeeves some life advice, and Jeeves gives you a website to visit, you ultimately land on a web _page_, right?
 
-Right. It makes sense, then, that when we think about _building_ a website we think of organizing it by pages, because that's how the web works. So that's what we (_we_ being the generic developer) did in the early days. Every web page was an [HTML](/blog/wtf-is-html/) file, and most were built manually, one at a time.
+Right. It makes sense, then, that when we think about _building_ a website we think of organizing it by pages, because that's how the web works. So that's what we (_we_ being the generic developer) did in the early days. Every web page was an [HTML](/posts/wtf-is-html/) file, and most were built manually, one at a time.
 
 Efficient?
 
@@ -29,7 +29,7 @@ _We're getting there._
 
 Even in building a website template-by-template, there may be elements that could be shared across templates. Consider something as simple as a button. They are all over the place on most websites, often appearing on different types of pages, perhaps with a slight variation in size or color here or there.
 
-Welcome _components_ to our lives. We began creating reusable bits of code, often called _partials_ or _includes_, which we could stick into templates as needed. Those partials typically used [CSS](/blog/wtf-is-css/) selectors that would give them a specific style, and maybe even some interactivity with [JavaScript](/blog/wtf-is-javascript/).
+Welcome _components_ to our lives. We began creating reusable bits of code, often called _partials_ or _includes_, which we could stick into templates as needed. Those partials typically used [CSS](/posts/wtf-is-css/) selectors that would give them a specific style, and maybe even some interactivity with [JavaScript](/posts/wtf-is-javascript/).
 
 This idea was followed in short succession by CSS frameworks, like [Bootstrap](https://getbootstrap.com/). CSS frameworks provided the means to enforce consistency of styling and functionality for commonly-used components like buttons, navigation, or alerts.
 

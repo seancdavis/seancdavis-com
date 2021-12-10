@@ -5,7 +5,7 @@ tags:
 description: It can be a process to move away from CarrierWave once you're
   already using it. Here's a step-by-step process to make it easy to transition
   to Dragonfly.
-image: /blog/default/default-orange-03.png
+image: /posts/default/default-orange-03.png
 ---
 
 Since I started developing with Rails, I've always used [CarrierWave](https://github.com/carrierwaveuploader/carrierwave) for my file uploading. It was recommended to me right away, and I've loved it.

@@ -4,7 +4,7 @@ description: The difference between Ruby's class and class instance variables,
   and how you can use them to abstract functionality from inherited classes.
 tags:
   - ruby
-image: /blog/default/default-green-02.png
+image: /posts/default/default-green-02.png
 ---
 
 ## The Problem

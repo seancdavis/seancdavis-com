@@ -5,7 +5,7 @@ tags:
   - repost-ample
   - cms
   - jamstack
-image: /blog/201102/201102--api-vs-git-cms.png
+image: /posts/201102/201102--api-vs-git-cms.png
 canonical_url: https://www.ample.co/blog/api-driven-or-git-based-figuring-out-the-right-cms-for-you
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: 8 Best Animation Tools for Beginners in 2021
 description: Animation software is useful not only for professional designers but also for ordinary users. It is impossible to doubt their relevance. Only one question remains open – which application to choose?
-image: /blog/211209/211209--8-best-animation-tools--hero.png
+image: /posts/211209/211209--8-best-animation-tools--hero.png
 seo:
-  image: /blog/211209/211209--8-best-animation-tools-2021.png
+  image: /posts/211209/211209--8-best-animation-tools-2021.png
 tags:
   - design
   - contributor:evelina-brown
@@ -15,7 +15,7 @@ Animated pictures make it possible to revive not just a hand-drawn picture, but 
 There's no need to give up everything. Those who have been in the art of animation for a long time know for sure that to assemble an inexpensive short video, animate a banner or a button, it is not necessary to devote years of your life to mastering animation. It is enough to choose the right software. Which one? Here's a list of eight, separated into two categories, one for beginners and one for more advanced usage.
 
 {% post_image
-    src="/blog/211209/adobe-animate-screenshot.png",
+    src="/posts/211209/adobe-animate-screenshot.png",
     alt="Adobe Animate Screenshot" %}
 
 ## Best Animation Software for Beginners
@@ -42,10 +42,10 @@ The program works on the principle of a constructor. Select an object from the l
 
 A program for creating simple 2D animation, the name of which fully justifies itself. Even a beginner can handle animation here.
 
-The program will help in drawing new pictures and processing animation frames – they can be deleted, edited, duplicated and replaced. And the software also supports optimization of the size of videos, saving the result as SWF Flash, AVI or [GIF](/blog/when-to-use-jpgs-pngs-and-gifs-on-the-web/).
+The program will help in drawing new pictures and processing animation frames – they can be deleted, edited, duplicated and replaced. And the software also supports optimization of the size of videos, saving the result as SWF Flash, AVI or [GIF](/posts/when-to-use-jpgs-pngs-and-gifs-on-the-web/).
 
 {% post_image
-    src="/blog/211209/drawing-on-tablet.png",
+    src="/posts/211209/drawing-on-tablet.png",
     alt="Drawing on Tablet" %}
 
 ## Best Programs Worth Learning for Further Extension
@@ -54,7 +54,7 @@ The program will help in drawing new pictures and processing animation frames �
 
 Among the free animation software, Blender rates at the top positions. This utility is quite complex at first. But believe me, if you want to connect your life with animation or plan to use it often, learning Blender is a must.
 
-The program allows you to create not only two-dimensional but also three-dimensional graphics. It even contains many tutorials to make it easy to get started with Blender's features. By the way, today, it is one of the most downloaded [Mac apps](/blog/5-essential-mac-apps/).
+The program allows you to create not only two-dimensional but also three-dimensional graphics. It even contains many tutorials to make it easy to get started with Blender's features. By the way, today, it is one of the most downloaded [Mac apps](/posts/5-essential-mac-apps/).
 
 ### 7. [Moho](https://moho.lostmarble.com/)
 
@@ -65,7 +65,7 @@ One of the best profile [animation tools](https://www.creativebloq.com/features/
 A powerful web design program from the Adobe suite that allows you to create vector graphics and animations. Animate makes it easy to process a finished image and allows drawing from scratch. The app supports overdubbing, 3D models, and of course integration with other Adobe products. Once exported, the content can be used on websites, online videos, or games.
 
 {% post_image
-    src="/blog/211209/person-drawing.png",
+    src="/posts/211209/person-drawing.png",
     alt="Person sketching" %}
 
 ## Where Can You Use Animation?
@@ -74,7 +74,7 @@ Animations and short videos present information more vividly than static publica
 
 Here are four ways to use animation:
 
-- **Social media and advertising.** [Animating](/blog/animated-dot-background-canvas/) ads and posts get more attention and are more informative. Relatively speaking, here instead of one frozen slide, you get several linked frames – a long story packed in a couple of seconds.
+- **Social media and advertising.** [Animating](/posts/animated-dot-background-canvas/) ads and posts get more attention and are more informative. Relatively speaking, here instead of one frozen slide, you get several linked frames – a long story packed in a couple of seconds.
 - **Educational videos.** The use of flash animations while [editing video](https://www.movavi.com/videoeditor/) increases interest in the topic being studied, improves the quality of the educational process and contributes to the development of research skills. A static image becomes much clearer if we see a tutorial animation instead.
 - **Websites.** On a website, animations can solve a number of specific problems. One of them is filling in the time that the user has to wait for the page to load. Looking at a static page is not as interesting as looking at a beautiful animation. As a result, those users who could leave the website remain on it – and as a result, the conversion grows.
 - **Short-series cartoons.** Remember the success of Rick and Morty? Well, there is no need for further explanation.

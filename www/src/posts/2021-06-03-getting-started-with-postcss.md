@@ -1,14 +1,14 @@
 ---
 title: A Simple CSS Build Pipeline Using PostCSS
 description: "PostCSS is a super powerful tool that can help you craft your own CSS build pipeline. But it can be a lot to take in all at once. Here are a few quick steps to getting started with PostCSS."
-image: /blog/210603/pink--postcss-pipeline.png
+image: /posts/210603/pink--postcss-pipeline.png
 tags:
   - css
 ---
 
 ## Departing from the Beloved Sass
 
-For years and years and years I used [Sass](https://sass-lang.com/). I began almost immediately after learning [CSS](/blog/wtf-is-css/). It was a phenomenal extension to CSS.
+For years and years and years I used [Sass](https://sass-lang.com/). I began almost immediately after learning [CSS](/posts/wtf-is-css/). It was a phenomenal extension to CSS.
 
 CSS has evolved significantly, even in the recent years. Enough to the point that some of the core offerings of Sass (like variables) are now available in regular old CSS. It started to feel like I wasn't getting as much out of Sass as I had, at least beyond the ability to nest selectors and import files (both of which are super valuable).
 
@@ -31,13 +31,13 @@ I don't want to overwhelm you right out of the gate. We'll begin with just a few
 
 ## Step 0: The Example
 
-With that, let's get started. We're going to only build a simple PostCSS pipeline. We're not going to worry about [HTML](/blog/wtf-is-html/) or [JavaScript](/blog/wtf-is-javascript/). We won't end up with something that's ready for production. But you'll have a core set of code that you'll be able to take into your project.
+With that, let's get started. We're going to only build a simple PostCSS pipeline. We're not going to worry about [HTML](/posts/wtf-is-html/) or [JavaScript](/posts/wtf-is-javascript/). We won't end up with something that's ready for production. But you'll have a core set of code that you'll be able to take into your project.
 
 Follow along, and feel free to reference [the example code](https://github.com/seancdavis/seancdavis-com/tree/cba7d25/examples/simple-postcss-pipeline) at any point.
 
 ## Step 1: Setup
 
-If you have a project ready to go, great! If not, feel free to [follow my steps to get started](/blog/new-javascript-project-setup/), with the following notes:
+If you have a project ready to go, great! If not, feel free to [follow my steps to get started](/posts/new-javascript-project-setup/), with the following notes:
 
 For Step 3, your `.gitignore` should have _at least_ the following:
 
@@ -83,9 +83,9 @@ module.exports = {
     require("postcss-import"),
     require("postcss-nested"),
     require("postcss-cssnext"),
-    ...(process.env.NODE_ENV === "production" ? [require("cssnano")] : [])
-  ]
-}
+    ...(process.env.NODE_ENV === "production" ? [require("cssnano")] : []),
+  ],
+};
 ```
 
 {% callout type="warning" %}

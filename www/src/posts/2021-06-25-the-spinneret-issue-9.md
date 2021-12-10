@@ -1,7 +1,7 @@
 ---
 title: "The Spinneret: Issue #9"
 description: "The evolution and redefinition of the Jamstack."
-image: /blog/210625/the-spinneret--09.png
+image: /posts/210625/the-spinneret--09.png
 tags:
   - spinneret
 ---
@@ -11,7 +11,7 @@ tags:
 _Notable changes in my life, [on my website](https://github.com/seancdavis/seancdavis-com), and in other projects._ {.text-sm}
 
 {% post_image
-    src="/blog/210426/the-spinneret--my-code.png",
+    src="/posts/210426/the-spinneret--my-code.png",
     alt="The Spinneret - My Code" %}
 
 You're going to see lots of changes over the coming months. I'm a tinkerer at heart and it's time to do some tinkering. I'm putting into question everything I do with the goal of coming out more focused. Ultimately I'd like for you to have a better understanding of what you're getting if you follow me, which includes subscribing to this newsletter.
@@ -25,34 +25,34 @@ As always, keep the suggestions coming. You are my early subscribers and what yo
 _New blog posts and videos I published last month._ {.text-sm}
 
 {% post_image
-    src="/blog/210426/the-spinneret--my-words.png",
+    src="/posts/210426/the-spinneret--my-words.png",
     alt="The Spinneret - My Words" %}
 
-As I'd hoped, I got back into publishing regularly in May. The article that got the most attention was [_The Evolution and Redefinition of The Jamstack_](/blog/jamstack-evolution-and-redefinition/). This was my commentary on how the Jamstack has evolved and the words we should be using to describe it today. It received a lot of criticism and led to many great discussions.
+As I'd hoped, I got back into publishing regularly in May. The article that got the most attention was [_The Evolution and Redefinition of The Jamstack_](/posts/jamstack-evolution-and-redefinition/). This was my commentary on how the Jamstack has evolved and the words we should be using to describe it today. It received a lot of criticism and led to many great discussions.
 
 ### Tutorials
 
 Also, a handful of tutorials:
 
-- [How I Begin New JavaScript Projects](/blog/new-javascript-project-setup/)
-- [Simple JavaScript Pipeline with webpack](/blog/javascript-webpack-build-pipeline/)
-- [Use Netlify Functions to Send Email Notifications](/blog/netlify-functions-email-notifications/)
-- [Use git-lfs on File Already Committed](/blog/git-lfs-track-files-alread-committed/)
+- [How I Begin New JavaScript Projects](/posts/new-javascript-project-setup/)
+- [Simple JavaScript Pipeline with webpack](/posts/javascript-webpack-build-pipeline/)
+- [Use Netlify Functions to Send Email Notifications](/posts/netlify-functions-email-notifications/)
+- [Use git-lfs on File Already Committed](/posts/git-lfs-track-files-alread-committed/)
 
 ### New Definitions
 
 And a few new definition type posts:
 
-- [WTF is Netlify?](/blog/wtf-is-netlify/)
-- [WTF is webpack?](/blog/wtf-is-webpack/)
-- [WTF is YAML?](/blog/wtf-is-yaml/)
+- [WTF is Netlify?](/posts/wtf-is-netlify/)
+- [WTF is webpack?](/posts/wtf-is-webpack/)
+- [WTF is YAML?](/posts/wtf-is-yaml/)
 
 ## My Reads
 
 _Articles and news I read last month that I found interesting, with some commentary._ {.text-sm}
 
 {% post_image
-    src="/blog/210426/the-spinneret--my-reads.png",
+    src="/posts/210426/the-spinneret--my-reads.png",
     alt="The Spinneret - My Reads" %}
 
 Here are my favorites from last month, in case you missed them:
@@ -80,7 +80,7 @@ Here are my favorites from last month, in case you missed them:
 _New tools that I've recently discovered. They aren't necessarily new._ {.text-sm}
 
 {% post_image
-    src="/blog/210426/the-spinneret--my-finds.png",
+    src="/posts/210426/the-spinneret--my-finds.png",
     alt="The Spinneret - My Finds" %}
 
 I really didn't do much poking around last month. The only new thing I came across was [Podium](https://podium-lib.io/), which promises an easy experience composing microfrontends. I haven't really dug in, so I can't perfectly articulate its value, but if you have several distributed front ends, I'd suggest at least poking around a bit. And [here's an article](https://javascript.plainenglish.io/micro-frontends-with-podium-e772abda9fe) that looks to be a nice intro guide.

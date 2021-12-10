@@ -3,7 +3,7 @@ title: Would You Be Friends With Your Company?
 tags:
   - inspiration
 description: Personifying your company. It's a little goofy. But it can help you determine if you are in the right place.
-image: /blog/130327/9271376961_9a62162e7a_h.jpg
+image: /posts/130327/9271376961_9a62162e7a_h.jpg
 attribution:
   - name: Brian Y.
     url: https://www.flickr.com/photos/94083657@N04/

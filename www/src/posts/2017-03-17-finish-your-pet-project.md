@@ -1,7 +1,7 @@
 ---
 title: Finish Your Pet Project
 description: "Finishing projects is hard. Finishing pet projects is even harder."
-image: /blog/170317/pet-project.png
+image: /posts/170317/pet-project.png
 attribution:
   - name: Alice Achterhof
     url: https://unsplash.com/@alicegrace

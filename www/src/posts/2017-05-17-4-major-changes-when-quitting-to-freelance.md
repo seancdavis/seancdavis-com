@@ -1,7 +1,7 @@
 ---
 title: 4 Major Changes When You Quit To Freelance Full-Time
 description: "You can do it. You really can."
-image: /blog/170517/computer-hands.png
+image: /posts/170517/computer-hands.png
 attribution:
   - name: Corinne Kutz
     url: https://unsplash.com/@corinnekutz
@@ -12,7 +12,7 @@ tags:
 
 You can do it. You really can.
 
-If you have a desire to be a full-time freelancer (or _self-employed_, or a _solopreneur_, if you don't like the connotation of _freelancer_), you can have the power to make it a reality. All it requires is a [leap of faith](/blog/my-leap-of-faith/).
+If you have a desire to be a full-time freelancer (or _self-employed_, or a _solopreneur_, if you don't like the connotation of _freelancer_), you can have the power to make it a reality. All it requires is a [leap of faith](/posts/my-leap-of-faith/).
 
 A common phrase in support of jumping is, _Leap and the net will appear_. While that's a great motivator, it's wise to spend time seeking a sign that the net _will probably_ appear.
 
@@ -24,7 +24,7 @@ When in business by and for yourself, you are responsible for the cash flow from
 
 Something to do before leaping is to design a money management system—figure out how you're going to handle cash flow.
 
-It is not wise to let income earned while freelancing go directly into a personal checking account. One big reason many fail to succeed freelancing is mismanaging income. But it's not that difficult to [design a system](/blog/managing-money-as-a-freelancer/) and [run the financial part](/blog/how-to-organize-freelance-bank-account/) of a business cautiously (at least at first).
+It is not wise to let income earned while freelancing go directly into a personal checking account. One big reason many fail to succeed freelancing is mismanaging income. But it's not that difficult to [design a system](/posts/managing-money-as-a-freelancer/) and [run the financial part](/posts/how-to-organize-freelance-bank-account/) of a business cautiously (at least at first).
 
 And while it's a good idea to determine how much to stow away before jumping, it's also necessary to continue managing cash flow after the jump. You will want a snapshot of how much you have available to pay your-personal-self—i.e. how much longer you can stay in business without earning another check. It's important to always have an eye on this—to know when it's time to make an adjustment to earn more income, or when you have more than necessary and should invest the spoils.
 

@@ -6,10 +6,10 @@ tags:
   - css
   - html
   - javascript
-image: /blog/default/default-blue-03.png
+image: /posts/default/default-blue-03.png
 ---
 
-With some [CSS](/blog/wtf-is-css/) and a little JavaScript, we can easily provide a crossfade animation to a simple slideshow.
+With some [CSS](/posts/wtf-is-css/) and a little JavaScript, we can easily provide a crossfade animation to a simple slideshow.
 
 Here's what we're going to be creating:
 
@@ -116,14 +116,14 @@ First, the class, its constructor and then a plain old script to instantiate the
 ```js
 class Slideshow {
   constructor() {
-    this.initSlides()
-    this.initSlideshow()
+    this.initSlides();
+    this.initSlideshow();
   }
 }
 
 $(document).ready(function () {
-  new Slideshow()
-})
+  new Slideshow();
+});
 ```
 
 If you run that now, you'll see an error because neither `initSlides()` or `initSlideshow()` are functions within the `Slideshow` class.

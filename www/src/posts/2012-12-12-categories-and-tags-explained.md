@@ -3,7 +3,7 @@ title: "Categories And Tags, Demystified"
 tags:
   - organization
 description: Categories and tags are used a lot on the web these days. Are you using them well?
-image: /blog/121212/10218392744_254d9d7d27_h.jpg
+image: /posts/121212/10218392744_254d9d7d27_h.jpg
 attribution:
   - name: blake.thornberry
     url: https://www.flickr.com/photos/91657289@N02/

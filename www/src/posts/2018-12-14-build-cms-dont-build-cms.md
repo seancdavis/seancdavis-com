@@ -4,7 +4,7 @@ description: 3 reasons you should never build a CMS, along with 3 reasons you
   should. So which is it?
 tags:
   - cms
-image: /blog/default/default-yellow-02.png
+image: /posts/default/default-yellow-02.png
 ---
 
 I built my first CMS six years ago after becoming frustrated with [WordPress](https://wordpress.org/) and learning [Ruby on Rails](https://rubyonrails.org/).
@@ -83,6 +83,6 @@ I think building a CMS is a great exercise for a developer. I firmly believe eve
 
 Yet it's equally important to understand how to work with modern CMS products. Practicing with a few different systems will arm you with the ability to choose the right tool for the job when a new job comes along.
 
-So, when you're in the real world solving real problems for real people who are paying you, you should use a third-party CMS and focus on solving the client's problems. [Buying is often going to be cheaper and better for the end goal compared to building](/blog/four-key-factors-build-v-buy-software/). Similarly, if you think you're going to disrupt the market with the next great CMS, know you're in for a long, difficult, and expensive battle in a saturated market.
+So, when you're in the real world solving real problems for real people who are paying you, you should use a third-party CMS and focus on solving the client's problems. [Buying is often going to be cheaper and better for the end goal compared to building](/posts/four-key-factors-build-v-buy-software/). Similarly, if you think you're going to disrupt the market with the next great CMS, know you're in for a long, difficult, and expensive battle in a saturated market.
 
 In other words, build your own CMS. Absolutely. Do it! But also, don't ever do that.

@@ -3,7 +3,7 @@ title: '"Good Enough" Is A Milestone, Not A Result'
 tags:
   - inspiration
 description: To be good enough is to say you have a stable place to break. It is not the full solution.
-image: /blog/160215/photo-1531913223931-b0d3198229ee.jpg
+image: /posts/160215/photo-1531913223931-b0d3198229ee.jpg
 attribution:
   - name: Hello I'm Nik
     url: https://unsplash.com/@helloimnik

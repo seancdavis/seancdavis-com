@@ -3,7 +3,7 @@ title: "Don't Let Time Control You"
 tags:
   - inspiration
 description: "Time has the illusion of controlling us. But it doesn't have to. We can be in charge of time."
-image: /blog/160208/5261957053_487d03a995_b.jpg
+image: /posts/160208/5261957053_487d03a995_b.jpg
 attribution:
   - name: Ian Sane
     url: https://www.flickr.com/photos/31246066@N04

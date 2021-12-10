@@ -7,14 +7,14 @@ tags:
   - api
   - jamstack
   - netlify
-image: /blog/default/default-lime-03.png
+image: /posts/default/default-lime-03.png
 ---
 
-This is a quick look at how to build, deploy, and query a [static API](/blog/lets-talk-about-static-apis/). We're going to assume that you are manually writing each JSON file for your output. In other words, there is no [static site generator](https://www.staticgen.com/) or build process involved in creating the files that will be deployed. (I know, I know, how _archaic_.)
+This is a quick look at how to build, deploy, and query a [static API](/posts/lets-talk-about-static-apis/). We're going to assume that you are manually writing each JSON file for your output. In other words, there is no [static site generator](https://www.staticgen.com/) or build process involved in creating the files that will be deployed. (I know, I know, how _archaic_.)
 
 When we have those files, we'll upload them to a [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) using [Netlify](https://netlify.com/).
 
-The examples here come from commentary in my article on [how to build static APIs](/blog/how-to-build-static-api/). It's worth a skim if you want a bit of background, but all the relevant code is included in this tutorial. And if you would like further explanation on what static APIs are, you can reference [the introductory article](/blog/lets-talk-about-static-apis/).
+The examples here come from commentary in my article on [how to build static APIs](/posts/how-to-build-static-api/). It's worth a skim if you want a bit of background, but all the relevant code is included in this tutorial. And if you would like further explanation on what static APIs are, you can reference [the introductory article](/posts/lets-talk-about-static-apis/).
 
 _Before we begin, note that I am not going to cover the basics of [Git](https://git-scm.com/) in this tutorial. But a basic knowledge of Git is required for working with Netlify._
 
@@ -33,7 +33,7 @@ And now we're good to go. We don't need a `package.json` or any similar sort of 
 
 ## Step 2: Add API Files
 
-Now it's time to add those files. We'll continue [the example from the introduction](/blog/how-to-build-static-api/), which means there are four files to create following this structure:
+Now it's time to add those files. We'll continue [the example from the introduction](/posts/how-to-build-static-api/), which means there are four files to create following this structure:
 
 ```
 public/
@@ -135,13 +135,13 @@ If you aren't familiar with Netlify already and don't have an account, the first
 Next, in the appropriate workspace (probably your personal one), click _New site from Git_.
 
 {% post_image
-    src="/blog/200410/netlify-new-site-from-git.png",
+    src="/posts/200410/netlify-new-site-from-git.png",
     alt="" %}
 
 Choose your Git provider in the Continuous Deployment section and then find your repo.
 
 {% post_image
-    src="/blog/200410/netlify-git-provider.png",
+    src="/posts/200410/netlify-git-provider.png",
     alt="" %}
 
 When filling out the options, leave the build command blank, but set the publish directory to `public`, because that's where we stuffed the files we want deployed.
@@ -151,13 +151,13 @@ That's it! By the time you've looked around your project, Netlify has likely alr
 But, before we take a look, note that Netlify automatically names your project something silly by default. You can change it by going to _Settings_ > _General_ > _Change site name_.
 
 {% post_image
-    src="/blog/200410/netlify-change-site-name.png",
+    src="/posts/200410/netlify-change-site-name.png",
     alt="" %}
 
 When you're ready to take a look at your deployed API, click the URL under the title on the _Overview_ screen.
 
 {% post_image
-    src="/blog/200410/netlify-site-url.png",
+    src="/posts/200410/netlify-site-url.png",
     alt="" %}
 
 If everything went according to plan, you should see a _Page not found_ error.
@@ -184,7 +184,7 @@ There are countless ways in which we could consume the API. But when just testin
 Using Postman, I created a new request, put in the URL to the `/earworms.json` path, and then sent it.
 
 {% post_image
-    src="/blog/200410/netlify-api-request.png",
+    src="/posts/200410/netlify-api-request.png",
     alt="" %}
 
 _That did the trick — hooray!_
@@ -193,7 +193,7 @@ _That did the trick — hooray!_
 
 The last step is purely optional. I don't have any problem with the home page throwing a 404 error because there is no page there. But in this case our API is so simple that we might as well redirect the home page to the `/earworms.json` page.
 
-Typically I'd add a `_redirects` file to the `public` directory, because I find that easier to work with. But I was using this repo for [my Vercel tutorial](/blog/deploy-static-api-vercel/) as well, and so I didn't want to clutter the output.
+Typically I'd add a `_redirects` file to the `public` directory, because I find that easier to work with. But I was using this repo for [my Vercel tutorial](/posts/deploy-static-api-vercel/) as well, and so I didn't want to clutter the output.
 
 Therefore, I'm going to put the redirect in a `netlify.toml` file, which produces the same result, just not as cleanly.
 
@@ -215,4 +215,4 @@ Once that change is deployed, go back to your home page and you should be redire
 
 ---
 
-This was a super simple example on how to deploy a static JSON API with Netlify. You can head back to [the intro](/blog/how-to-build-static-api#tutorials) to check out specific tutorials on building static APIs from data files using various static site generators.
+This was a super simple example on how to deploy a static JSON API with Netlify. You can head back to [the intro](/posts/how-to-build-static-api#tutorials) to check out specific tutorials on building static APIs from data files using various static site generators.

@@ -7,7 +7,7 @@ tags:
   - gitlab
 description: GitHub is super awesome, until you have to start paying for it.
   Check out two feature-full and FREE alternatives.
-image: /blog/default/default-pink-01.png
+image: /posts/default/default-pink-01.png
 ---
 
 I really don't think there's any doubt that [GitHub](https://github.com/) is the absolute best application for git hosting. I personally love everything about it.

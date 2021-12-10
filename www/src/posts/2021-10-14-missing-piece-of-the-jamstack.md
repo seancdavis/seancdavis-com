@@ -1,7 +1,7 @@
 ---
 title: The Missing Piece of the Jamstack
 description: At Stackbit, we're working to fill in this missing piece in the Jamstack. We believe we can build a healthy contract between developers and content creators.
-image: /blog/211014/211014-jamstack-missing-piece.png
+image: /posts/211014/211014-jamstack-missing-piece.png
 canonical_url: https://www.stackbit.com/blog/the-missing-piece-of-the-jamstack/
 tags:
   - repost-stackbit
@@ -55,4 +55,4 @@ To find some inspiration for this piece, I had a chat with our CEO, [Ohad Eder-P
 {% youtube_embed
     id="fSuYUTGaruk",
     title="The Missing Piece of the Jamstack",
-    image="/blog/211014/211014-jamstack-missing-piece.png" %}
+    image="/posts/211014/211014-jamstack-missing-piece.png" %}

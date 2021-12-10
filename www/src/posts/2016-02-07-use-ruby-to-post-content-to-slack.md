@@ -5,7 +5,7 @@ description: Once you learn how to use Slack's incoming webhooks, the
 tags:
   - ruby
   - slack
-image: /blog/default/default-orange-01.png
+image: /posts/default/default-orange-01.png
 ---
 
 Slack has a really nice feature called [Incoming Webhooks](https://api.slack.com/incoming-webhooks). It enables you to post messages with dynamic content, using a dynamic username and avatar.

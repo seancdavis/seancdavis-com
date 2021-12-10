@@ -5,10 +5,10 @@ description: webpack creates its own scope for your bundle, but you can make it
 tags:
   - javascript
   - webpack
-image: /blog/default/default-green-01.png
+image: /posts/default/default-green-01.png
 ---
 
-In [a previous article on distributing JavaScript libraries](/blog/use-netlify-host-js-libraries/) I used [an example](https://github.com/seancdavis/hello-world-js/) that uses [webpack](/blog/wtf-is-webpack/) to build (and Babel to transpile/) an ES6 class and expose it as a global variable.
+In [a previous article on distributing JavaScript libraries](/posts/use-netlify-host-js-libraries/) I used [an example](https://github.com/seancdavis/hello-world-js/) that uses [webpack](/posts/wtf-is-webpack/) to build (and Babel to transpile/) an ES6 class and expose it as a global variable.
 
 Most of this process came from [an article on this very subject](http://siawyoung.com/coding/javascript/exporting-es6-modules-as-single-scripts-with-webpack).
 
@@ -21,8 +21,8 @@ Let's say my main file is `src/index.js`, which looks like this:
 `src/index.js` {.filename}
 
 ```js
-import { HelloWorld } from "./components/hello-world"
-module.exports = HelloWorld
+import { HelloWorld } from "./components/hello-world";
+module.exports = HelloWorld;
 ```
 
 And my component looks like this:
@@ -32,11 +32,11 @@ And my component looks like this:
 ```js
 export class HelloWorld {
   static log() {
-    console.log("Hello world!")
+    console.log("Hello world!");
   }
 
   static write() {
-    document.body.append("Hello World!")
+    document.body.append("Hello World!");
   }
 }
 ```
@@ -46,7 +46,7 @@ To make this class globally available I have to adjust my webpack config slightl
 `webpack.config.js` {.filename}
 
 ```js
-const path = require("path")
+const path = require("path");
 
 module.exports = {
   entry: "./src/index.js",
@@ -54,9 +54,9 @@ module.exports = {
     filename: "hello-world.js",
     path: path.resolve(__dirname, "dist"),
     libraryTarget: "var",
-    library: "HelloWorld"
-  }
-}
+    library: "HelloWorld",
+  },
+};
 ```
 
 I add two extra lines:
@@ -81,8 +81,8 @@ So, `index.js` changes to:
 `src/index.js` {.filename}
 
 ```js
-const HelloWorld = require("./components/hello-world").default
-module.exports = HelloWorld
+const HelloWorld = require("./components/hello-world").default;
+module.exports = HelloWorld;
 ```
 
 And the component's class name isn't necessary, so we can do this:
@@ -100,6 +100,6 @@ Now you can build and see the bundle available globally as `HelloWorld`, effecti
 In other words, if you were to load the resulting bundle on a website, you'd have access to run both static methods like so:
 
 ```js
-HelloWorld.log() // Logs "Hello World!" to the console.
-HelloWorld.write() // Appends "Hello World!" to the DOM's body.
+HelloWorld.log(); // Logs "Hello World!" to the console.
+HelloWorld.write(); // Appends "Hello World!" to the DOM's body.
 ```

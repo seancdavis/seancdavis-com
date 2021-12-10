@@ -3,14 +3,14 @@ title: Don't Do Stupid Shit with JavaScript
 description: The JavaScript community is large. Use it to make your code better.
 tags:
   - javascript
-image: /blog/default/default-pink-01.png
+image: /posts/default/default-pink-01.png
 ---
 
 The other day I found myself writing a snippet of code that looked _something_ like this:
 
 ```js
-const newKey = keyPath.slice(0, keyPath.length - 4)
-eval(`myObj.${newKey} = newValue`)
+const newKey = keyPath.slice(0, keyPath.length - 4);
+eval(`myObj.${newKey} = newValue`);
 ```
 
 You don't have to know the context around what this code is doing to know that it's pretty dumb.
@@ -22,8 +22,8 @@ In addition, the first line — which removes the last four characters from anot
 Instead, in both cases, I could use a library like [Lodash](https://lodash.com) to write this code. Lodash has been around for years and is well-tested. If I were to import the main Lodash object as `_`, the code snippet from above could become:
 
 ```js
-const newKey = _.trimEnd(keyPath, suffix)
-_.set(myObj, newKey, newValue)
+const newKey = _.trimEnd(keyPath, suffix);
+_.set(myObj, newKey, newValue);
 ```
 
 Look at that! It's clean, the underlying code is well-tested, and it's using variables defined elsewhere.

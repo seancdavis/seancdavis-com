@@ -6,7 +6,7 @@ tags:
 description: Using a remote database with rails is useful for collaborating on
   projects or for keeping all your data in one place. Here's how to get it set
   up from scratch.
-image: /blog/default/default-green-03.png
+image: /posts/default/default-green-03.png
 ---
 
 Whether it's to share a development database among team members, or to keep a production database on a server separate from the application, or for any other reason, it can be useful to run a rails app by connecting to a remote database.

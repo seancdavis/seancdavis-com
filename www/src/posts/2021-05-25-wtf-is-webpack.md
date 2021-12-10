@@ -1,7 +1,7 @@
 ---
 title: WTF is webpack?
 description: "webpack has been helping us write modular front-end JavaScript for many years. Learn the basics of module bundling and why webpack is so powerful."
-image: /blog/210525/wtf--webpack.png
+image: /posts/210525/wtf--webpack.png
 tags:
   - webpack
   - wtf
@@ -11,15 +11,15 @@ tags:
 
 _Cool, but WTF is a module bundler?_
 
-[JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) have been around for a long time. They provide a nice clean way to break up code into individual pieces (modules), so each file can focus on doing one thing and doing that thing effectively (i.e. the [single responsibility principle](/blog/wtf-is-single-responsibility-principle)).
+[JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) have been around for a long time. They provide a nice clean way to break up code into individual pieces (modules), so each file can focus on doing one thing and doing that thing effectively (i.e. the [single responsibility principle](/posts/wtf-is-single-responsibility-principle)).
 
-This ability has been around in [Node.js](/blog/wtf-is-node) for many years. You probably recognize this pattern if you've written any Node code:
+This ability has been around in [Node.js](/posts/wtf-is-node) for many years. You probably recognize this pattern if you've written any Node code:
 
 ```js
-const lodash = require("lodash")
+const lodash = require("lodash");
 ```
 
-For client-side [JavaScript](/blog/wtf-is-javascript), we've needed frameworks to help us achieve similar functionality because browsers did support module loading. That has changed and [browser support is improving](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#browser_support), but there is often still a need to do some work on your own.
+For client-side [JavaScript](/posts/wtf-is-javascript), we've needed frameworks to help us achieve similar functionality because browsers did support module loading. That has changed and [browser support is improving](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#browser_support), but there is often still a need to do some work on your own.
 
 webpack is one of those tools that helps in this regard. It allows you to write your code in _modules_ and then provides a mechanism to _bundle_ that code together.
 
@@ -28,9 +28,9 @@ The example [on their homepage](https://webpack.js.org/) is a nice simple one. Y
 `src/index.js` {.filename}
 
 ```js
-import bar from "./bar.js"
+import bar from "./bar.js";
 
-bar()
+bar();
 ```
 
 And `src/bar.js` that looks like this:
@@ -48,15 +48,15 @@ Using [webpack's CLI](https://webpack.js.org/api/cli/), you can add a little con
 `webpack.config.js` {.filename}
 
 ```js
-const path = require("path")
+const path = require("path");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js"
-  }
-}
+    filename: "bundle.js",
+  },
+};
 ```
 
 And then bundle by running the following command on the command line:

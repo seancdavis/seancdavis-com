@@ -3,7 +3,7 @@ title: When to Use Environment Variables
 description: Environment variables can seem like overkill to new developers, but
   there are two scenarios in which they are extremely beneficial to efficiency
   and security.
-image: /blog/default/default-yellow-03.png
+image: /posts/default/default-yellow-03.png
 ---
 
 As a new developer, it can be difficult to understand the value of environment variables and when they make sense to use.
@@ -23,9 +23,9 @@ The novice route when changing values between environments usually looks somethi
 
 ```js
 if (isProduction) {
-  var my_var = "This Value"
+  var my_var = "This Value";
 } else {
-  var my_var = "That Value"
+  var my_var = "That Value";
 }
 ```
 
@@ -34,7 +34,7 @@ That's gross. It's repetitive (not [DRY](https://en.wikipedia.org/wiki/Don%27t_r
 If you're using environment variables, you can reduce those five lines to a single line:
 
 ```js
-var my_var = MY_VALUE
+var my_var = MY_VALUE;
 ```
 
 _(Note: The code is just a demonstration—it doesn't do anything on its own.)_
@@ -51,4 +51,4 @@ And when you have a solid system for storing sensitive data, you don't have to w
 
 ---
 
-So, don't be afraid! Once you get your head wrapped around how to manage environment variables, they will become one of your closest friends. And, if you want a little help working with and managing environment variables, check out [the tool I like to use](/blog/favorite-tool-managing-project-specific-environment-variables/).
+So, don't be afraid! Once you get your head wrapped around how to manage environment variables, they will become one of your closest friends. And, if you want a little help working with and managing environment variables, check out [the tool I like to use](/posts/favorite-tool-managing-project-specific-environment-variables/).

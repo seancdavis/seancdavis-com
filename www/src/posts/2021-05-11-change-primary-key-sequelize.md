@@ -2,7 +2,7 @@
 title: Change the Primary Key Type with Sequelize
 date: 2021-05-11
 description: It seems like it's going to be super easy. And it is! And then it's not.
-image: /blog/210511/210511-change-primary-key.png
+image: /posts/210511/210511-change-primary-key.png
 tags:
   - repost-grouparoo
   - postgresql
@@ -20,8 +20,8 @@ So that's what I did. It looked like this:
 
 ```js
 await migration.changeColumn(tableName, columnName, {
-  type: DataTypes.STRING(191)
-})
+  type: DataTypes.STRING(191),
+});
 ```
 
 <Alert variant="primary">
@@ -46,8 +46,8 @@ I thought: _Yes, true. That is correct. And ... ?_
 It turns out Sequelize doesn't handle this action well with Postgres. After going down a rabbit hole in [playing around with constraints](https://www.postgresql.org/docs/13/ddl-constraints.html), I ended up just writing the SQL statement directly. It looked something like this:
 
 ```js
-const query = `ALTER TABLE "${tableName}" ALTER COLUMN "${columnName}" SET DATA TYPE varchar(${maxIdLength}); `
-await migration.sequelize.query(query)
+const query = `ALTER TABLE "${tableName}" ALTER COLUMN "${columnName}" SET DATA TYPE varchar(${maxIdLength}); `;
+await migration.sequelize.query(query);
 ```
 
 That worked!
@@ -58,21 +58,21 @@ It made sense to me to try to use the same approach with both databases. So I tr
 
 It didn't work. (Sensing a theme yet?)
 
-That seemed odd. But, of course, we already know that [SQLite is weird](/blog/7-awesome-sqlite-quirks). And it turns out [SQLite's `ALTER TABLE` methods](https://sqlite.org/lang_altertable.html) are extremely (and intentionally) limited.
+That seemed odd. But, of course, we already know that [SQLite is weird](/posts/7-awesome-sqlite-quirks). And it turns out [SQLite's `ALTER TABLE` methods](https://sqlite.org/lang_altertable.html) are extremely (and intentionally) limited.
 
 Which meant I was stuck with two solutions. And when that happens, we tend to look at the current dialect and execute the appropriate code. And that's why this is the weird function that alters the primary key column in both Postgres and SQLite:
 
 ```js
 const changeColumn = async (tableName, columnName) => {
   if (config.sequelize.dialect === "postgres") {
-    const query = `ALTER TABLE "${tableName}" ALTER COLUMN "${columnName}" SET DATA TYPE varchar(${maxIdLength}); `
-    await migration.sequelize.query(query)
+    const query = `ALTER TABLE "${tableName}" ALTER COLUMN "${columnName}" SET DATA TYPE varchar(${maxIdLength}); `;
+    await migration.sequelize.query(query);
   } else {
     await migration.changeColumn(tableName, columnName, {
-      type: DataTypes.STRING(191)
-    })
+      type: DataTypes.STRING(191),
+    });
   }
-}
+};
 ```
 
 You can see the complete set of changes that came along with this code in [this pull request](https://github.com/grouparoo/grouparoo/pull/1764).

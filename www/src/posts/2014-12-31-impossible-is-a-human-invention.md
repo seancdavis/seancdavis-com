@@ -3,7 +3,7 @@ title: Impossible is a Human Invention
 tags:
   - inspiration
 description: We can use Philippe Petit's sentence, "Impossible is a human invention," to prove that nothing is impossible.
-image: /blog/141231/5892802537_1cc5d7d827_b.jpg
+image: /posts/141231/5892802537_1cc5d7d827_b.jpg
 attribution:
   - name: Tom A La Rue
     url: https://www.flickr.com/photos/t2thestreet

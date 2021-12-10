@@ -7,7 +7,7 @@ tags:
   - api
   - jamstack
   - wtf
-image: /blog/default/default-green-02.png
+image: /posts/default/default-green-02.png
 ---
 
 [_API_](https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/) is a term we constantly throwing around in the software industry. APIs have become so fundamental to writing code that it's easier to be upset when a product doesn't offer an API, compared to being excited when it does.

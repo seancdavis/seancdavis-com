@@ -1,7 +1,7 @@
 ---
 title: "10 Unspoken Truths on Being a Developer"
 description: From a series of tweets by @laurieontech, here are 10 unspoken truths on life as a developer.
-image: /blog/210429/yellow--unspoken-truths.png
+image: /posts/210429/yellow--unspoken-truths.png
 tags:
   - developer-advice
 ---
@@ -78,7 +78,7 @@ Learn how to fix bugs. Learn how to read other people's code. But, more importan
 
 You will introduce bugs. That's totally fine. Dust yourself off when it happens and fix the problem. Then spend a few minutes thinking _why_ it happened and make yourself a little better.
 
-And, seriously, everyone makes mistakes. The worst ones turn into the best stories, like [this one](/blog/big-oops-few-old-notifications/) or [this](/blog/big-oops-need-more-time/).
+And, seriously, everyone makes mistakes. The worst ones turn into the best stories, like [this one](/posts/big-oops-few-old-notifications/) or [this](/posts/big-oops-need-more-time/).
 
 ## #5: School is for theory and interview questions
 

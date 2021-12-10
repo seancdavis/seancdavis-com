@@ -5,10 +5,10 @@ description: No need to mess with Apache or Nginx to run a web server on your
 tags:
   - javascript
   - node
-image: /blog/default/default-green-03.png
+image: /posts/default/default-green-03.png
 ---
 
-This is a separate approach to [this article](/blog/run-local-web-server-ruby/), which shows how to run a local web server with a _ruby_ command.
+This is a separate approach to [this article](/posts/run-local-web-server-ruby/), which shows how to run a local web server with a _ruby_ command.
 
 First, install the command-line utility:
 

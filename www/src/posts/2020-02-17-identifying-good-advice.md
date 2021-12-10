@@ -3,7 +3,7 @@ title: Identifying Good Advice
 tags:
   - communication
 description: "Good advice can be life-changing."
-image: /blog/200217/photo-1517816428104-797678c7cf0c.jpg
+image: /posts/200217/photo-1517816428104-797678c7cf0c.jpg
 attribution:
   - name: Oleg Laptev
     url: https://unsplash.com/@snowshade

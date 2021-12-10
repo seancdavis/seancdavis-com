@@ -5,7 +5,7 @@ tags:
   - html
 description: Learning to jump into web development can be overwhelming. Let's
   look at a couple ways in which you can get started.
-image: /blog/default/default-pink-02.png
+image: /posts/default/default-pink-02.png
 ---
 
 > **Update: w3schools was a good reference for me when it got started. The community at large, however, much prefers [Mozilla Development Network](https://developer.mozilla.org), and I highly recommend it as a starting point in today's web.**

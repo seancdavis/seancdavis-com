@@ -3,7 +3,7 @@ title: Timeless Qualities, Like Being on Time
 tags:
   - inspiration
 description: Being on time is a quality that might just never go out of style. Avoid that nasty label of being the late person.
-image: /blog/141117/watch-on-table-cover.jpg
+image: /posts/141117/watch-on-table-cover.jpg
 attribution:
   - name: Ryan McGuire
     url: https://stocksnap.io/author/399

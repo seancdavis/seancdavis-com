@@ -4,7 +4,7 @@ tags:
   - coffeescript
 description: There are lots of different ways to move "if" statements in
   CoffeeScript into multiple lines. Pick the one you like the best!
-image: /blog/default/default-green-01.png
+image: /posts/default/default-green-01.png
 ---
 
 Creating if statements that span multiple lines in CoffeeScript can be hard to remember, but it's quite easy. The trick is to make sure you

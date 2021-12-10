@@ -7,10 +7,10 @@ tags:
   - api
   - jamstack
   - vercel
-image: /blog/default/default-pink-03.png
+image: /posts/default/default-pink-03.png
 ---
 
-This is a quick look at how to deploy and query a [static API](/blog/lets-talk-about-static-apis/) using [Vercel](https://vercel.com/) as the deploy and hosting service. The examples here come from the commentary in my introduction on [how to build static APIs](/blog/how-to-build-static-api/) and from [a similar tutorial](/blog/deploy-static-api-netlify/) which uses [Netlify](/blog/wtf-is-netlify/) instead of Vercel.
+This is a quick look at how to deploy and query a [static API](/posts/lets-talk-about-static-apis/) using [Vercel](https://vercel.com/) as the deploy and hosting service. The examples here come from the commentary in my introduction on [how to build static APIs](/posts/how-to-build-static-api/) and from [a similar tutorial](/posts/deploy-static-api-netlify/) which uses [Netlify](/posts/wtf-is-netlify/) instead of Vercel.
 
 In this tutorial, I am assuming you are manually writing each of the API's JSON files — i.e. there is no [static site generator](https://www.staticgen.com/) or build process involved in creating the files that will be deployed.
 
@@ -29,7 +29,7 @@ And that's enough to get us started!
 
 ## Step 2: Add API Files
 
-Next, let's add our JSON files. These files pull from [the example in the introduction](/blog/how-to-build-static-api/). The structure will look like this:
+Next, let's add our JSON files. These files pull from [the example in the introduction](/posts/how-to-build-static-api/). The structure will look like this:
 
 ```
 public/
@@ -131,31 +131,31 @@ If you aren't familiar with Vercel already and don't have an account, the first 
 Once you have an account, you should see an empty dashboard when you sign in. Begin by choosing to import a project:
 
 {% post_image
-    src="/blog/200417/zeit-import-project.png",
+    src="/posts/200417/zeit-import-project.png",
     alt="zeit-import-project" %}
 
 You already have what you need in your GitHub repo, so choose "From Git Repository" as your import source:
 
 {% post_image
-    src="/blog/200417/zeit-git-provider.png",
+    src="/posts/200417/zeit-git-provider.png",
     alt="zeit-git-provider" %}
 
 If you don't have Vercel installed on your GitHub (or other Git Provider) account, you'll be prompted to do so:
 
 {% post_image
-    src="/blog/200417/zeit-github-install-01.png",
+    src="/posts/200417/zeit-github-install-01.png",
     alt="zeit-github-install-01" %}
 
 Choose the organization for which you'd like to install it. (I used my personal one because it was a little easier to configure on GitHub.)
 
 {% post_image
-    src="/blog/200417/zeit-github-install-02.png",
+    src="/posts/200417/zeit-github-install-02.png",
     alt="zeit-github-install-02" %}
 
 When you come back to Vercel, you'll be prompted to pick a repo and then give the project a name:
 
 {% post_image
-    src="/blog/200417/zeit-project-name.png",
+    src="/posts/200417/zeit-project-name.png",
     alt="zeit-project-name" %}
 
 And that's it! Now your project will build and you'll have a static API deployed to Vercel!
@@ -173,7 +173,7 @@ Next, we're going to preview one means of consuming that API content, just to ma
 I created a new request, put in the URL to the `earworms.json` path (for me this was [https://json-static-api.now.sh/earworms.json](https://json-static-api.now.sh/earworms.json)), and then sent it. That did the trick and gave me the following result:
 
 {% post_image
-    src="/blog/200417/zeit-api-request.png",
+    src="/posts/200417/zeit-api-request.png",
     alt="zeit-api-request" %}
 
 ## Step 5: Redirect Index Pages
@@ -201,4 +201,4 @@ Commit and push that change to GitHub (or your Git provider). Vercel will automa
 
 There you go!
 
-This was only a very basic look at static APIs for the purposes of the deploy step. You can head back to [the intro to check out other tutorials on building static APIs](/blog/how-to-build-static-api#tutorials).
+This was only a very basic look at static APIs for the purposes of the deploy step. You can head back to [the intro to check out other tutorials on building static APIs](/posts/how-to-build-static-api#tutorials).

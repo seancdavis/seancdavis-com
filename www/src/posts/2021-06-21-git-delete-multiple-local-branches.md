@@ -1,7 +1,7 @@
 ---
 title: "Delete Multiple Local Git Branches"
 description: Learn how to use a single command to delete multiple git branches.
-image: /blog/210621/lime--git-branch-delete.png
+image: /posts/210621/lime--git-branch-delete.png
 tags:
   - git
 ---

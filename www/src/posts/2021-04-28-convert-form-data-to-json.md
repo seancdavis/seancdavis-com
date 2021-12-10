@@ -1,7 +1,7 @@
 ---
 title: "Converting FormData to JSON in JavaScript"
 description: "FormData is a useful interface for collecting data from a form. But it can be tricky to convert to JSON."
-image: /blog/210428/green--json-form.png
+image: /posts/210428/green--json-form.png
 tags:
   - javascript
 ---
@@ -27,7 +27,7 @@ Let's say we have a super simple form, with one field to collect a name:
 ```
 
 {% callout type="note" %}
-Don't actually use `onsubmit` to call a global function in production. [Here are a couple alternate patterns worth considering](/blog/two-ways-to-keep-javascript-local/).
+Don't actually use `onsubmit` to call a global function in production. [Here are a couple alternate patterns worth considering](/posts/two-ways-to-keep-javascript-local/).
 {% endcallout %}
 
 We could then submit the data through some JavaScript function:
@@ -35,14 +35,14 @@ We could then submit the data through some JavaScript function:
 ```js
 function submitForm(event) {
   // Prevent the form from submitting.
-  event.preventDefault()
+  event.preventDefault();
   // Set url for submission and collect data.
-  const url = "https://example.com/..."
-  const formData = new FormData(event.target)
+  const url = "https://example.com/...";
+  const formData = new FormData(event.target);
   // Submit the data.
-  const request = new XMLHttpRequest()
-  request.open("POST", url)
-  request.send(formData)
+  const request = new XMLHttpRequest();
+  request.open("POST", url);
+  request.send(formData);
 }
 ```
 
@@ -57,12 +57,12 @@ Let's adjust our function:
 ```js
 function submitForm(event) {
   // Prevent the form from submitting.
-  event.preventDefault()
+  event.preventDefault();
   // Set url for submission and collect data.
-  const url = "https://example.com/..."
-  const formData = new FormData(event.target)
+  const url = "https://example.com/...";
+  const formData = new FormData(event.target);
   // Log the data.
-  console.log(formData)
+  console.log(formData);
 }
 ```
 
@@ -79,15 +79,15 @@ Instead, we actually have to iterate over the field individually and build an ob
 ```js
 function submitForm(event) {
   // Prevent the form from submitting.
-  event.preventDefault()
+  event.preventDefault();
   // Set url for submission and collect data.
-  const url = "https://example.com/..."
-  const formData = new FormData(event.target)
+  const url = "https://example.com/...";
+  const formData = new FormData(event.target);
   // Build the data object.
-  const data = {}
-  formData.forEach((value, key) => (data[key] = value))
+  const data = {};
+  formData.forEach((value, key) => (data[key] = value));
   // Log the data.
-  console.log(data)
+  console.log(data);
 }
 ```
 
@@ -95,7 +95,7 @@ Now fill in the field with something like "My Name" and submit the form. You'll 
 
 ```js
 {
-  name: "My Name"
+  name: "My Name";
 }
 ```
 

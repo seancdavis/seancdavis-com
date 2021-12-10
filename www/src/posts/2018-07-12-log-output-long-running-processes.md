@@ -3,7 +3,7 @@ title: Log Output During Long-Running Processes
 description: Long-running processes can appear to hang when you aren't given
   feedback. So let's give some feedback.
 tags: []
-image: /blog/default/default-pink-02.png
+image: /posts/default/default-pink-02.png
 ---
 
 Often as a programmer I'm tasked with (or task myself with) writing ad hoc scripts or small projects for a one-time need. My most recent example was moving thousands of records from an old CMS to a new CMS, while maintaining associations and transforming the data in the process.

@@ -5,12 +5,12 @@ description: Turbolinks is a great idea in theory, but it comes with enough
 tags:
   - javascript
   - ruby-on-rails
-image: /blog/default/default-pink-01.png
+image: /posts/default/default-pink-01.png
 ---
 
 I would assume, if you're reading this, that you're familiar with [Turbolinks](https://github.com/turbolinks/turbolinks-classic). If not, it's README explains it well:
 
-> Turbolinks makes following links in your web application faster. Instead of letting the browser recompile the JavaScript and [CSS](/blog/wtf-is-css/) between each page change, it keeps the current page instance alive and replaces only the body (or parts of/) and the title in the head.
+> Turbolinks makes following links in your web application faster. Instead of letting the browser recompile the JavaScript and [CSS](/posts/wtf-is-css/) between each page change, it keeps the current page instance alive and replaces only the body (or parts of/) and the title in the head.
 
 It's a great idea. You get to build your application using Rails, and Turbolinks works on its own to speed it up for you. It speeds things up because it doesn't need to load your stylesheets and javascripts on every page load.
 
@@ -20,7 +20,7 @@ Unfortunately, while good in theory, it's caused me several problems.
 
 You have to pay very close attention to scoping because the JavaScript is not reloaded. This is explained well in [this article](https://plus.google.com/+YehudaKatz/posts/A65agXRynUn), specifically this section:
 
-> ... a lot of existing JavaScript operates under the assumption of a clean scope, and a single `DOMContentLoaded` event. In a perfect world, popular JavaScript plugins would be architected to work well with a solution like Turbolinks, but the assumption of a clean global scope per server-rendered [HTML](/blog/wtf-is-html/) page is baked into a lot of the JavaScript and jQuery libraries that people tend to use.
+> ... a lot of existing JavaScript operates under the assumption of a clean scope, and a single `DOMContentLoaded` event. In a perfect world, popular JavaScript plugins would be architected to work well with a solution like Turbolinks, but the assumption of a clean global scope per server-rendered [HTML](/posts/wtf-is-html/) page is baked into a lot of the JavaScript and jQuery libraries that people tend to use.
 
 Many libraries that we use won't consider compatibility with Turbolinks. In an ideal world, every library and plugin we use would consider scoping more carefully. But, frankly, it's not the responsibility of these various authors to consider compatibility with Turbolinks.
 

@@ -1,7 +1,7 @@
 ---
 title: "I've Never Met Two People Who've Changed my Life"
 description: Throughout 2016 I worked closely with two people I've never met, and it's been highly effective.
-image: /blog/170207/old-phones.png
+image: /posts/170207/old-phones.png
 tags:
   - inspiration
 ---

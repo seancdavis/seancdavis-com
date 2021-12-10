@@ -4,7 +4,7 @@ tags:
   - ruby
 description: When you attempt to write several predictable comparisons in one
   statement, it gets ugly fast. Here are some methods for cleaning it up.
-image: /blog/default/default-orange-03.png
+image: /posts/default/default-orange-03.png
 ---
 
 You know the typical `if`/`else` statement in Ruby, right?

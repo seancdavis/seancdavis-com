@@ -2,7 +2,7 @@
 title: Walk. Discover.
 tags:
   - inspiration
-image: /blog/150518/12087829163_611e205a7b_h.jpg
+image: /posts/150518/12087829163_611e205a7b_h.jpg
 description: I walked. The long way.
 attribution:
   - name: Thomas Leuthard

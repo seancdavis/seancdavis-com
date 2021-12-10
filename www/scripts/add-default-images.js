@@ -14,28 +14,28 @@ const matter = require("gray-matter");
 const glob = require("fast-glob");
 const yaml = require("yaml");
 
-const postsDir = path.join(__dirname, "../src/blog/posts");
+const postsDir = path.join(__dirname, "../src/posts");
 const postFiles = glob.sync(path.join(postsDir, "**/*.md"));
 
 const defaultImages = [
-  "/blog/default/default-blue-01.png",
-  "/blog/default/default-blue-02.png",
-  "/blog/default/default-blue-03.png",
-  "/blog/default/default-green-01.png",
-  "/blog/default/default-green-02.png",
-  "/blog/default/default-green-03.png",
-  "/blog/default/default-lime-01.png",
-  "/blog/default/default-lime-02.png",
-  "/blog/default/default-lime-03.png",
-  "/blog/default/default-orange-01.png",
-  "/blog/default/default-orange-02.png",
-  "/blog/default/default-orange-03.png",
-  "/blog/default/default-pink-01.png",
-  "/blog/default/default-pink-02.png",
-  "/blog/default/default-pink-03.png",
-  "/blog/default/default-yellow-01.png",
-  "/blog/default/default-yellow-02.png",
-  "/blog/default/default-yellow-03.png",
+  "/posts/default/default-blue-01.png",
+  "/posts/default/default-blue-02.png",
+  "/posts/default/default-blue-03.png",
+  "/posts/default/default-green-01.png",
+  "/posts/default/default-green-02.png",
+  "/posts/default/default-green-03.png",
+  "/posts/default/default-lime-01.png",
+  "/posts/default/default-lime-02.png",
+  "/posts/default/default-lime-03.png",
+  "/posts/default/default-orange-01.png",
+  "/posts/default/default-orange-02.png",
+  "/posts/default/default-orange-03.png",
+  "/posts/default/default-pink-01.png",
+  "/posts/default/default-pink-02.png",
+  "/posts/default/default-pink-03.png",
+  "/posts/default/default-yellow-01.png",
+  "/posts/default/default-yellow-02.png",
+  "/posts/default/default-yellow-03.png",
 ];
 
 const getRandomImage = () => {

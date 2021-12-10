@@ -4,7 +4,7 @@ tags:
   - git
 description: Although I'm no expert, I've outlined the things I think you need
   to know to get started using Git.
-image: /blog/default/default-pink-03.png
+image: /posts/default/default-pink-03.png
 ---
 
 I'd say you know what you're getting into here, right? About an hour of learning for a lifetime of happiness? Well, allow me to preface this article with two thoughts.
@@ -15,7 +15,7 @@ Second, I don't actually know how long this is going to take you. But it's not s
 
 ## What is Git?
 
-You're here because you've heard people talking about Git. They've probably said something like, "You need to learn git." Even with their generalities, these people are right. Whether you're a web designer, pumping out [CSS](/blog/wtf-is-css/) from Dreamweaver or Muse or whatever the heck Adobe's thought up recently; or whether you're a web developer; or, hey, even a writer (I haven't written this article yet, but it's my evil plan/); if you use some sort of [plain text](http://en.wikipedia.org/wiki/Plain_text "Plain Text") in what you do, and you care about version control (and you should/), you need to know Git.
+You're here because you've heard people talking about Git. They've probably said something like, "You need to learn git." Even with their generalities, these people are right. Whether you're a web designer, pumping out [CSS](/posts/wtf-is-css/) from Dreamweaver or Muse or whatever the heck Adobe's thought up recently; or whether you're a web developer; or, hey, even a writer (I haven't written this article yet, but it's my evil plan/); if you use some sort of [plain text](http://en.wikipedia.org/wiki/Plain_text "Plain Text") in what you do, and you care about version control (and you should/), you need to know Git.
 
 So what is it? Git is another version control tool. But it's a clever one, and because it's so clever (among other reasons) it's become the standard among web designers and developers. To make a long story short, Git is unique in that when you *check out a file*, you check out the entire project (or *repository*). In other words, every "check out" is a *backup* of the entire repository. If that's confusing, don't worry, we'll demonstrate here shortly.
 
@@ -142,7 +142,7 @@ Okay. Now you're ready. Create your new repository on GitHub ( **do not initial
 
 {% post_image
     alt="create github repo",
-    src="/blog/130704/Screen-Shot-2013-07-04-at-3.28.33-PM-1024x625.png" %}
+    src="/posts/130704/Screen-Shot-2013-07-04-at-3.28.33-PM-1024x625.png" %}
 
 ### Push Changes
 

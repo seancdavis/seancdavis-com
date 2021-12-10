@@ -3,7 +3,7 @@ title: Learn by Solving Solved Problems
 tags:
   - inspiration
 description: "It's important to revisit the learning process every once in awhile. It strengthens the core of your abilities and can help prevent you from getting stuck going through the motions."
-image: /blog/160317/14585204516_482b22f801_b.jpg
+image: /posts/160317/14585204516_482b22f801_b.jpg
 attribution:
   - name: keith ellwood
     url: https://www.flickr.com/photos/76377775@N05/

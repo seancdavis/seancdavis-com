@@ -1,7 +1,7 @@
 ---
 title: "Your Audience Doesn't Care About You, And That's Awesome"
 description: "It can be nerve-wracking to perform in front of people. But your audience doesn't notice or care how nervous you are, so why worry about it?"
-image: /blog/150821/10504646224_cff293e030_h.jpg
+image: /posts/150821/10504646224_cff293e030_h.jpg
 attribution:
   - name: Thomas Hawk
     url: https://www.flickr.com/photos/thomashawk/

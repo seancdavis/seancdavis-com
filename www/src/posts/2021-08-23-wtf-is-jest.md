@@ -1,14 +1,14 @@
 ---
 title: WTF is Jest?
 description: Learn the basics of the JavaScript testing framework, Jest.
-image: /blog/210823/wtf--jest.png
+image: /posts/210823/wtf--jest.png
 tags:
   - javascript
   - jest
   - wtf
 ---
 
-[Jest](https://jestjs.io/) is a [JavaScript](/blog/wtf-is-javascript/) testing framework.
+[Jest](https://jestjs.io/) is a [JavaScript](/posts/wtf-is-javascript/) testing framework.
 
 It's JavaScript, so yeah, there are a whole heck of a lot of frameworks to choose from when it comes to writing tests. Many feel passionate about one over another. But Jest seems to be the more popular choice today.
 
@@ -20,8 +20,8 @@ Let's say you have a function called `add` that is exported from a `utils.js` fi
 
 ```js
 exports.add = function (num1, num2) {
-  return num1 + num2
-}
+  return num1 + num2;
+};
 ```
 
 You may have a Jest file right alongside it that loads the function and writes tests for it. A simple test would be to ensure that `1 + 1 = 2`. That Jest file might look like this:
@@ -29,11 +29,11 @@ You may have a Jest file right alongside it that loads the function and writes t
 `__tests__/utils.js` {.filename}
 
 ```js
-const { add } = require("../utils")
+const { add } = require("../utils");
 
 test("1 + 1 = 2", () => {
-  expect(add(1, 1)).toEqual(2)
-})
+  expect(add(1, 1)).toEqual(2);
+});
 ```
 
 {% callout type="note" %}

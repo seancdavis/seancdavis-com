@@ -4,7 +4,7 @@ description: When changing and adding to your current website gets to be a hassl
 tags:
   - repost-ample
   - jamstack
-image: /blog/200709/200709--time-for-new-site.png
+image: /posts/200709/200709--time-for-new-site.png
 canonical_url: https://www.ample.co/blog/is-it-time-for-a-new-website
 ---
 

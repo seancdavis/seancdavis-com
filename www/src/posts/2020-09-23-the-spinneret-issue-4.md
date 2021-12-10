@@ -3,13 +3,13 @@ title: "The Spinneret: Issue #4"
 description: "I've launched my new personal website with a perfect 💯💯💯💯 performance score!! Take a look inside to see what else happened in my web development sphere throughout August 2020."
 tags:
   - spinneret
-image: /blog/200923/spinneret-issue-4--buzz.png
+image: /posts/200923/spinneret-issue-4--buzz.png
 ---
 
 ## What The Buzz!
 
 {% post_image
-    src="/blog/200923/spinneret-issue-4--buzz.png",
+    src="/posts/200923/spinneret-issue-4--buzz.png",
     alt="The Spinneret Issue #4: What The Buzz!" %}
 
 Big news! I launched [my new website](/)!
@@ -19,7 +19,7 @@ It was a long time coming, and this site is really just one page today. But it's
 The stack for this site is:
 
 - [Eleventy](https://www.11ty.dev/)
-- [Netlify](/blog/wtf-is-netlify/)
+- [Netlify](/posts/wtf-is-netlify/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
 When I build out a blog for it, I may end up using a CMS, but have omitted one while it's only a single page site.
@@ -33,31 +33,31 @@ Elsewhere in the industry, [Gatsby announced their Recipes Alpha 2](https://www.
 ## In My Words
 
 {% post_image
-    src="/blog/200923/spinneret-issue-4--my-words.jpg",
+    src="/posts/200923/spinneret-issue-4--my-words.jpg",
     alt="The Spinneret Issue #4: In My Words" %}
 
-It's been an interesting start to supplementing tutorial articles with screencast videos. It's a long process, but I've enjoyed it so far and look forward to adding more over the coming months. I added a couple last month in an article on [programmatically creating JSON pages with GatsbyJS](/blog/programmatically-create-json-pages-gatsby).
+It's been an interesting start to supplementing tutorial articles with screencast videos. It's a long process, but I've enjoyed it so far and look forward to adding more over the coming months. I added a couple last month in an article on [programmatically creating JSON pages with GatsbyJS](/posts/programmatically-create-json-pages-gatsby).
 
 I also added a few foundational articles to the [WTF collection](/topics/wtf):
 
-- [WTF is Hoisting?](/blog/wtf-is-hoisting)
-- [WTF is a Closure?](/blog/wtf-is-a-closure)
+- [WTF is Hoisting?](/posts/wtf-is-hoisting)
+- [WTF is a Closure?](/posts/wtf-is-a-closure)
 
-I enjoyed exploring work I've been doing recently on [building websites faster by creating conventional tooling](/blog/build-jamstack-sites-faster-with-conventional-tooling).
+I enjoyed exploring work I've been doing recently on [building websites faster by creating conventional tooling](/posts/build-jamstack-sites-faster-with-conventional-tooling).
 
-A colleague asked me how to get started writing JavaScript, so I wrote him [a guide](/blog/right-way-to-learn-javascript-2020).
+A colleague asked me how to get started writing JavaScript, so I wrote him [a guide](/posts/right-way-to-learn-javascript-2020).
 
 And last, I added a handful of random articles, including one for [Ample](https://www.ample.co/) (the agency I work for):
 
 - [What makes developers happy?](https://www.ample.co/blog/3-things-that-make-developers-happy)
-- [Run JavaScript when Variable Exists](/blog/run-javascript-when-variable-exists)
-- [Add a Static Directory to an Eleventy Project](/blog/add-static-directory-to-eleventy)
-- [How to Fix "Integrity check failed ..." Yarn Error](/blog/fix-yarn-integrity-check-failed)
+- [Run JavaScript when Variable Exists](/posts/run-javascript-when-variable-exists)
+- [Add a Static Directory to an Eleventy Project](/posts/add-static-directory-to-eleventy)
+- [How to Fix "Integrity check failed ..." Yarn Error](/posts/fix-yarn-integrity-check-failed)
 
 ## Shop Talk
 
 {% post_image
-    src="/blog/200923/spinneret-issue-4--shop-talk.png",
+    src="/posts/200923/spinneret-issue-4--shop-talk.png",
     alt="The Spinneret Issue #4: Shop Talk",
     classes="mb-6 w-48 mx-auto",
     flatten=true %}
@@ -69,7 +69,7 @@ One developer on my team is going to join me on this performance journey, as he 
 ## New (to me) Tools
 
 {% post_image
-    src="/blog/200923/spinneret-issue-4--tools.png",
+    src="/posts/200923/spinneret-issue-4--tools.png",
     alt="The Spinneret Issue #4: New (to me) Tools",
     classes="my-8 w-56 mx-auto",
     flatten=true %}

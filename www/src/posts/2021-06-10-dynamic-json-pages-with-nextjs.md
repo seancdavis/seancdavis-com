@@ -2,7 +2,7 @@
 title: Generate Dynamic JSON Pages with Next.js
 date: 2021-06-10
 description: Two methods for generating JSON pages with Next.js. One that updates on every request, the other on every build.
-image: /blog/210610/210610-next-json.png
+image: /posts/210610/210610-next-json.png
 tags:
   - repost-grouparoo
   - nextjs
@@ -57,8 +57,8 @@ As a quick introduction to API routes, let's first create a page at `pages/api/j
 // pages/api/joke.js
 
 export default (req, res) => {
-  res.status(200).json({ hello: "World" })
-}
+  res.status(200).json({ hello: "World" });
+};
 ```
 
 Now visit http://localhost:3000/api/joke in your browser, or make a GET request to that same URL through an API client. You'll see on screen (or in your client) the object we sent:
@@ -76,15 +76,15 @@ Now let's make it dynamic by adding axios and querying [the icanhazdadjoke.com A
 ```js
 // pages/api/joke.js
 
-import axios from "axios"
+import axios from "axios";
 
 export default async (req, res) => {
   const { data } = await axios.get("https://icanhazdadjoke.com/", {
-    headers: { Accept: "application/json" }
-  })
+    headers: { Accept: "application/json" },
+  });
 
-  res.status(200).json(data)
-}
+  res.status(200).json(data);
+};
 ```
 
 There's not much to that, really. We're asking the icanhazdadjoke.com API for a response and passing that response on to the user.
@@ -105,7 +105,7 @@ _Note that if you were going to take this into production, you'd want to put som
 
 The first method is powerful and all, but it's also forcing you into a solution in which you have to run that method (i.e. do some work, like hit another API) every time you want the data in this file.
 
-Recall in the intro that I mentioned a nuance of not needing the file to change in between builds. Thus, the JSON file itself should be _generated dynamically_, but could be _delivered statically_. (This has all the makings of a [static API](https://www.seancdavis.com/blog/lets-talk-about-static-apis/).)
+Recall in the intro that I mentioned a nuance of not needing the file to change in between builds. Thus, the JSON file itself should be _generated dynamically_, but could be _delivered statically_. (This has all the makings of a [static API](/posts/lets-talk-about-static-apis/).)
 
 While we know we can't make pages as static JSON files, we could _generate_ a static JSON file prior to building the site and serve it [as a static asset](https://nextjs.org/docs/basic-features/static-file-serving).
 
@@ -118,21 +118,21 @@ _Note: We're putting it in the `public` directory because these files get copied
 ```js
 // scripts/getJoke.js
 
-const path = require("path")
-const fs = require("fs")
-const axios = require("axios")
+const path = require("path");
+const fs = require("fs");
+const axios = require("axios");
 
-const filePath = path.join(__dirname, "../public/joke.json")
+const filePath = path.join(__dirname, "../public/joke.json");
 
 const main = async () => {
   const { data } = await axios.get("https://icanhazdadjoke.com/", {
-    headers: { Accept: "application/json" }
-  })
+    headers: { Accept: "application/json" },
+  });
 
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2))
-}
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+};
 
-main().then(() => console.log("Done."))
+main().then(() => console.log("Done."));
 ```
 
 Notice this is very similar to our API function. But instead of returning the response, we write it to file.

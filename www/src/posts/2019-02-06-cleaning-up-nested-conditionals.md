@@ -2,7 +2,7 @@
 title: Cleaning Up Nested Conditionals
 description: Flattening the logic of if/else conditionals can go a long way
   toward cleaning up your code.
-image: /blog/default/default-blue-01.png
+image: /posts/default/default-blue-01.png
 ---
 
 (The examples in this article are written in JavaScript, but the principles can be applied to any language.)
@@ -16,27 +16,27 @@ var myFunction = function (a, b, c) {
   if (a > 0) {
     if (b > 0) {
       if (c > 0) {
-        return true
+        return true;
       } else {
-        return false
+        return false;
       }
     } else {
-      return false
+      return false;
     }
   } else if (a == 0) {
     if (b == 0) {
       if (c == 0) {
-        return 0
+        return 0;
       } else {
-        return false
+        return false;
       }
     } else {
-      return false
+      return false;
     }
   } else {
-    return false
+    return false;
   }
-}
+};
 ```
 
 Just _look_ at that 25-line mess!
@@ -52,13 +52,13 @@ That natural next step one may take when refactoring this code is to combine con
 ```js
 var myFunction = function (a, b, c) {
   if (a > 0 && b > 0 && c > 0) {
-    return true
+    return true;
   } else if (a == 0 && b == 0 && c == 0) {
-    return 0
+    return 0;
   } else {
-    return false
+    return false;
   }
-}
+};
 ```
 
 Phew! From 25 to 9 lines. This at least reads a bit more semantically.
@@ -71,10 +71,10 @@ Taking this approach, the function can be adjusted like so:
 
 ```js
 var myFunction = function (a, b, c) {
-  if (a > 0 && b > 0 && c > 0) return true
-  if (a == 0 && b == 0 && c == 0) return 0
-  return false
-}
+  if (a > 0 && b > 0 && c > 0) return true;
+  if (a == 0 && b == 0 && c == 0) return 0;
+  return false;
+};
 ```
 
 By using exit conditions, we've effectively _flattened_ the logic within this function. That may not seem like much in this scenario, but if you needed to add some additional behavior after checking whether all the values were positive or zero, this would really come in handy.

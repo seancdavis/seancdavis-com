@@ -4,10 +4,10 @@ description: Should you be using a CSS Framework to build your grid or should
   you use the native CSS Grid Layout?
 tags:
   - css
-image: /blog/default/default-green-01.png
+image: /posts/default/default-green-01.png
 ---
 
-[CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) are a set of [CSS](/blog/wtf-is-css/) rules that can enable you to build out a grid in your site without the need for a framework. From MDN:
+[CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) are a set of [CSS](/posts/wtf-is-css/) rules that can enable you to build out a grid in your site without the need for a framework. From MDN:
 
 > Like tables, grid layout enables an author to align elements into columns and rows. However, many more layouts are either possible or easier with CSS grid than they were with tables. For example, a grid container's child elements could position themselves so they actually overlap and layer, similar to CSS positioned elements.
 
@@ -21,7 +21,7 @@ Let's first look at the differences between grid layout and a framework and then
 
 Let's take a quick look at the actual difference in code to create a simple layout like this:
 
-{% post_image alt="Grid Layout", src="/blog/181115/grid-layout.png" %}
+{% post_image alt="Grid Layout", src="/posts/181115/grid-layout.png" %}
 
 ### CSS Frameworks (e.g. Bootstrap)
 
@@ -98,9 +98,9 @@ To me, the answer is clear. The CSS Grid Layout has a bit of a learning curve to
 
 But, like I mentioned, the real answer is: _It depends_. I would use a CSS framework for my grid when:
 
-- I'm already using a framework on my site. (Although, [should you be using a CSS framework in the first place?](/blog/do-you-need-css-framework/).)
+- I'm already using a framework on my site. (Although, [should you be using a CSS framework in the first place?](/posts/do-you-need-css-framework/).)
 - I need browser support across the globe in less developed areas. ([See this article on browser support](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/).)
-- The content structure of the site is dynamic. In other words, if your content editors are writing [HTML](/blog/wtf-is-html/), it's easier to use a framework because the the grid is (likely/) already fleshed out and documented and can supported a wide array of layouts.
+- The content structure of the site is dynamic. In other words, if your content editors are writing [HTML](/posts/wtf-is-html/), it's easier to use a framework because the the grid is (likely/) already fleshed out and documented and can supported a wide array of layouts.
 
 In all other cases, I'm going with the native CSS grid layout.
 

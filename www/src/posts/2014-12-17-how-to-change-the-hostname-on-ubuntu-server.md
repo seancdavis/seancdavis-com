@@ -2,7 +2,7 @@
 title: How to Change the Hostname on Ubuntu Server
 tags: []
 description: Got an ugly command prompt? Learn how to change the name of your computer.
-image: /blog/default/default-green-01.png
+image: /posts/default/default-green-01.png
 ---
 
 To change the hostname on an Ubuntu server, you need to edit two files:

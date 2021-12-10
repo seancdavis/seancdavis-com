@@ -3,7 +3,7 @@ title: Shove A Big Mac In Your Face!
 tags:
   - inspiration
 description: "Life as a human is hard."
-image: /blog/170310/photo-1533182390818-fb24be7ca4e7.jpg
+image: /posts/170310/photo-1533182390818-fb24be7ca4e7.jpg
 attribution:
   - name: Joiarib Morales Uc
     url: https://unsplash.com/@joia15

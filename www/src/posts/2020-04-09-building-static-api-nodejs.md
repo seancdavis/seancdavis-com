@@ -8,12 +8,12 @@ tags:
   - jamstack
   - javascript
   - node
-image: /blog/default/default-blue-03.png
+image: /posts/default/default-blue-03.png
 ---
 
-This is one of several tutorials on how to build a static API. For links to the other tutorials, and for some background on this tutorial, see [the introduction article](/blog/how-to-build-static-api/).
+This is one of several tutorials on how to build a static API. For links to the other tutorials, and for some background on this tutorial, see [the introduction article](/posts/how-to-build-static-api/).
 
-If you'd like further background on what a static API is and why we're going through this exercise, check out [_Let's Talk about Static APIs_](/blog/lets-talk-about-static-apis/).
+If you'd like further background on what a static API is and why we're going through this exercise, check out [_Let's Talk about Static APIs_](/posts/lets-talk-about-static-apis/).
 
 ---
 
@@ -62,7 +62,7 @@ build/
 
 ## Step 2: Data Files
 
-It's time to add our source data. These files come from [the introductory article](/blog/how-to-build-static-api/).
+It's time to add our source data. These files come from [the introductory article](/posts/how-to-build-static-api/).
 
 `data/earworms/2020-03-29.yml` {.filename}
 
@@ -126,55 +126,55 @@ I like to put scripts in a `bin` directory so they are tucked away from the rest
 `bin/build.js` {.filename}
 
 ```js
-const fs = require("fs")
-const glob = require("glob")
-const path = require("path")
-const yaml = require("js-yaml")
+const fs = require("fs");
+const glob = require("glob");
+const path = require("path");
+const yaml = require("js-yaml");
 
 // ---------------------------------------- | Parse Data
 
 // Object to store parsed data.
-const data = []
+const data = [];
 // Get filenames of all the YAML files in the data/earworms directory.
-const dataFiles = glob.sync(path.join(__dirname, "../data/earworms/*.yml"))
+const dataFiles = glob.sync(path.join(__dirname, "../data/earworms/*.yml"));
 // Loop through the files, read each one, parse it, and store it in the data
 // object.
 for (const file of dataFiles) {
-  const content = fs.readFileSync(file, { encoding: "utf-8" })
-  data.push(yaml.load(content))
+  const content = fs.readFileSync(file, { encoding: "utf-8" });
+  data.push(yaml.load(content));
 }
 
 // ---------------------------------------- | Build Directories
 
 // Create main build directory if it doesn't exist.
-const buildDir = path.join(__dirname, "../build")
-if (!fs.existsSync(buildDir)) fs.mkdirSync(buildDir)
+const buildDir = path.join(__dirname, "../build");
+if (!fs.existsSync(buildDir)) fs.mkdirSync(buildDir);
 // Create the directory to house the individual records, if it doesn't exist.
-const indivDir = path.join(__dirname, "../build/earworms")
-if (!fs.existsSync(indivDir)) fs.mkdirSync(indivDir)
+const indivDir = path.join(__dirname, "../build/earworms");
+if (!fs.existsSync(indivDir)) fs.mkdirSync(indivDir);
 
 // ---------------------------------------- | Index Page
 
 // Path to the index page in the build dir.
-const indexPath = path.join(buildDir, "earworms.json")
+const indexPath = path.join(buildDir, "earworms.json");
 // Data for the index page.
 const indexData = JSON.stringify({
   results: data,
-  meta: { count: data.length }
-})
+  meta: { count: data.length },
+});
 // Write the file.
-fs.writeFileSync(indexPath, indexData)
+fs.writeFileSync(indexPath, indexData);
 
 // ---------------------------------------- | Individual Pages
 
 // Loop through the individual data records.
 for (const result of data) {
   // Path to the individual file.
-  const indivPath = path.join(indivDir, `${result.id}.json`)
+  const indivPath = path.join(indivDir, `${result.id}.json`);
   // Data for the individual file.
-  const indivData = JSON.stringify({ result: data, meta: {} })
+  const indivData = JSON.stringify({ result: data, meta: {} });
   // Write the individual file.
-  fs.writeFileSync(indivPath, indivData)
+  fs.writeFileSync(indivPath, indivData);
 }
 ```
 
@@ -228,7 +228,7 @@ If this was something I would eventually take into production, I'd likely do a b
 2. **Account for errors:** You should account for errors in the build script. One option for this is to wait until you run into an error before catching it. Another is to proactively research the commands we've used and ensure you're catching errors. Being proactive will help your future self know what went wrong without as much digging.
 3. **Print output:** As you make progress throughout the build step, it's nice to log some output. This doesn't mean printing every data file you process — that would really slow you down. Maybe you just have a before and after message, like `Processing ## ear worms ...` and then `Done.`.
 
-Following those steps, I'd feel comfortable enough to use the script to build and deploy the API, via a service like [Netlify](/blog/wtf-is-netlify/) or [Vercel](https://vercel.com/).
+Following those steps, I'd feel comfortable enough to use the script to build and deploy the API, via a service like [Netlify](/posts/wtf-is-netlify/) or [Vercel](https://vercel.com/).
 
 But if you wanted to take it a step further, here are a couple other ideas for adjustments you could make to the code:
 

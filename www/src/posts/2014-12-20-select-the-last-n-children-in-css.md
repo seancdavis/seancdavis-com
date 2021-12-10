@@ -5,7 +5,7 @@ tags:
 description: Sometimes you need to target more than just the last child in a
   series of HTML elements. Learn how to target the last n number of elements
   here.
-image: /blog/default/default-orange-01.png
+image: /posts/default/default-orange-01.png
 ---
 
 In CSS, [`:nth-child`](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child) refers to the child referenced from the beginning of the parent. Take an example:

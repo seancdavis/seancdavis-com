@@ -7,14 +7,14 @@ tags:
   - css
   - jekyll
   - optimization
-image: /blog/default/default-green-02.png
+image: /posts/default/default-green-02.png
 ---
 
 Stylesheets are notorious for quickly getting out of hand. Even if you stay super organized, you're going to end up with several rules that your site doesn't need.
 
-And if you use a [CSS](/blog/wtf-is-css/) framework, like [Bootstrap](http://getbootstrap.com/) or [Foundation](https://foundation.zurb.com/), there are likely _tons_ of unused styles (because there are so many setting the boilerplate for you/).
+And if you use a [CSS](/posts/wtf-is-css/) framework, like [Bootstrap](http://getbootstrap.com/) or [Foundation](https://foundation.zurb.com/), there are likely _tons_ of unused styles (because there are so many setting the boilerplate for you/).
 
-Tools like [PurgeCSS](https://www.purgecss.com/) can be really helpful for cleaning up unused CSS rules. The problem is, in today's world, many of our projects are built either as single page apps (SPAs), using JavaScript to generate the content, or as dynamic, database-driven web applications, where the content can't be predicted. But when you're working with a static site generator (like [Jekyll](https://jekyllrb.com/)) solving this problem is much more obtainable because know all (or at least _most of_) the content after we build our site to flat [HTML](/blog/wtf-is-html/) files.
+Tools like [PurgeCSS](https://www.purgecss.com/) can be really helpful for cleaning up unused CSS rules. The problem is, in today's world, many of our projects are built either as single page apps (SPAs), using JavaScript to generate the content, or as dynamic, database-driven web applications, where the content can't be predicted. But when you're working with a static site generator (like [Jekyll](https://jekyllrb.com/)) solving this problem is much more obtainable because know all (or at least _most of_) the content after we build our site to flat [HTML](/posts/wtf-is-html/) files.
 
 So, assuming we're using Jekyll, let's take a look at how we can incorporate PurgeCSS to clean up our stylesheet after we build.
 
@@ -119,7 +119,7 @@ That's it! Build your site and you should see a stylesheet that is similar in si
 
 ## Identifying Your Whitelist
 
-When you test your build (whether on a server or by [running a local server](/blog/run-local-web-server-ruby/) in your build directory/) you naymay likely have some selectors that didn't come through.
+When you test your build (whether on a server or by [running a local server](/posts/run-local-web-server-ruby/) in your build directory/) you naymay likely have some selectors that didn't come through.
 
 If any of your selectors are added to the DOM with JavaScript, PurgeCSS is not going to catch them. For me those selectors were fairly predictable, so I manually added them to the whitelist config. In my example the whitelist adds `.wl-class-1` and `.wl-class-2` to PurgeCSS so it automatically adds rules for those selectors, even if it doesn't find the appropriate elements in thte HTML files.
 
@@ -129,7 +129,7 @@ Notice that the whitelist is an array of strings without the leading `.` for the
 
 When you're ready to go to production, there are two items we have to address.
 
-First, make sure installing `purgecss` is part of the build process if your site is being built on an external server. For example, I'm using [Netlify](/blog/wtf-is-netlify/), so I have prepended my build task with `npm i -g purgecss` so the build process has the `purgecss` command available to it.
+First, make sure installing `purgecss` is part of the build process if your site is being built on an external server. For example, I'm using [Netlify](/posts/wtf-is-netlify/), so I have prepended my build task with `npm i -g purgecss` so the build process has the `purgecss` command available to it.
 
 And lastly, you're going to see an error with the integrity of the manifest stylesheet in production. Why? Because we changed the file after it was generated, which is what the [integrity attribute](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) is built to catch.
 

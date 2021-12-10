@@ -3,7 +3,7 @@ title: 5 Essential Mac Apps for Developers
 description: These are five of the most useful applications for developers
   working with Mac OS X.
 tags: []
-image: /blog/default/default-blue-02.png
+image: /posts/default/default-blue-02.png
 ---
 
 I should start with a caveat: I've already written an article called [_5 Essential Mac Apps_](https://medium.com/@seancdavis/5-essential-mac-apps-9538946a3606). These apps in this article are those which I feel could benefit any Mac user, regardless of what they use their Mac for:
@@ -22,7 +22,7 @@ But, we're here to talk about the applications most valuable specifically for th
 
 **Cost:** Free
 
-{% post_image alt="Visual Studio Code", src="/blog/181212/vs-code.png" %}
+{% post_image alt="Visual Studio Code", src="/posts/181212/vs-code.png" %}
 
 I know, it's a little ridiculous, but the first application I list is a Microsoft application. WTF?
 
@@ -38,7 +38,7 @@ When it comes down to it, all four of these code editors I've mentioned (VS Code
 
 **Cost:** Free
 
-{% post_image alt="Insomnia", src="/blog/181212/insomnia.png" %}
+{% post_image alt="Insomnia", src="/posts/181212/insomnia.png" %}
 
 If you want to make calls to an API without wiring up and running application code or a script, Insomnia will be your best friend. I use it mostly for debugging responses from APIs when my scripts and applications aren't behaving the way I'd expect. This is a huge time-saver when compared to writing and rewriting code until you get the expected API response.
 
@@ -48,7 +48,7 @@ A popular alternative is [Postman](https://www.getpostman.com/). Postman was tra
 
 **Cost:** \$45
 
-{% post_image alt="Transmit 5", src="/blog/181212/transmit.png" %}
+{% post_image alt="Transmit 5", src="/posts/181212/transmit.png" %}
 
 Transmit is one of the pricier apps I've purchased, but it is 100% worth every single penny.
 
@@ -66,7 +66,7 @@ Most of us are hosting assets somewhere in the cloud, and while we can see and w
 
 {% post_image
     alt="Ulysses",
-    src="/blog/181212/ulysses.png",
+    src="/posts/181212/ulysses.png",
     maxWidth="xs",
     flatten=true  %}
 
@@ -84,7 +84,7 @@ And I mean there really are others if you do a bit of Googling. The two that hav
 
 {% post_image
     alt="Little Ipsum",
-    src="/blog/181212/little-ipsum.png",
+    src="/posts/181212/little-ipsum.png",
     maxWidth="xs",
     flatten=true  %}
 

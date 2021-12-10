@@ -5,7 +5,7 @@ description: How to use a "www" subdomain as your primary domain on a Rails app
 tags:
   - heroku
   - ruby-on-rails
-image: /blog/default/default-pink-02.png
+image: /posts/default/default-pink-02.png
 ---
 
 I deployed a [Ruby on Rails](https://rubyonrails.org/) application to [Heroku](https://www.heroku.com/home) that was being served via [a custom domain](https://devcenter.heroku.com/articles/custom-domains), using the `www` subdomain of a domain that I owned (e.g. www.example.com).

@@ -1,13 +1,13 @@
 ---
 title: WTF is Netlify?
 description: What the what is Netlify and why am I always talking about it?
-image: /blog/210504/wtf--netlify.png
+image: /posts/210504/wtf--netlify.png
 tags:
   - netlify
   - wtf
 ---
 
-Above all else, [Netlify](https://www.netlify.com/about/) is a tool used to deliver [Jamstack](/blog/wtf-is-jamstack) websites.
+Above all else, [Netlify](https://www.netlify.com/about/) is a tool used to deliver [Jamstack](/posts/wtf-is-jamstack) websites.
 
 A Jamstack site typically has three primary pieces:
 

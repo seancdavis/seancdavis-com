@@ -6,14 +6,14 @@ tags:
   - api
   - jamstack
   - netlify
-image: /blog/default/default-blue-02.png
+image: /posts/default/default-blue-02.png
 ---
 
 Most [APIs](https://en.wikipedia.org/wiki/Application_programming_interface) out in the wild are _dynamic_ APIs. (We just call them _APIs_.) When a user asks for data from a dynamic API, it communicates with a database in real-time, providing the relevant information back to the requester. Many times APIs have some sort of authentication system, as they want to track or limit who is using the system and how much they are using.
 
-While authentication and real-time data offer a lot of power and flexibility, they may be more complex than necessary. In some cases a [_static_ API](/blog/lets-talk-about-static-apis/) may be a better choice.
+While authentication and real-time data offer a lot of power and flexibility, they may be more complex than necessary. In some cases a [_static_ API](/posts/lets-talk-about-static-apis/) may be a better choice.
 
-A static API uses the [Jamstack's](/blog/wtf-is-jamstack/) methodology to take dynamic data and present it statically to the user. In the right scenario, this can offer benefits like cost, scale, performance, and security. ([Learn more about static APIs here](/blog/lets-talk-about-static-apis/).)
+A static API uses the [Jamstack's](/posts/wtf-is-jamstack/) methodology to take dynamic data and present it statically to the user. In the right scenario, this can offer benefits like cost, scale, performance, and security. ([Learn more about static APIs here](/posts/lets-talk-about-static-apis/).)
 
 This article is going to talk about how we would approach building a static API. It closes with a list of specific tutorials on how to implement that approach. While you'll likely require this article for some background on those tutorials, you're welcome to [jump right to them](#tutorials).
 
@@ -118,7 +118,7 @@ Ultimately, the way in which we want to host these static JSON files is on a [CD
 
 But you'll also need to build the project first, so you have that set of JSON files to upload. Again, you _could_ do this all manually — build locally and upload to CDN. But then you have all sorts of other challenges to overcome, like setting up DNS for your CDN, or invalidating caches when you want to make an update.
 
-The alternative is to look at a tool like [Netlify](/blog/wtf-is-netlify/) or [Vercel](https://vercel.com/). These tools will run a build process and upload to a CDN that is already configured on your behalf. And they can do that automatically using [webhooks](https://en.wikipedia.org/wiki/Webhook)! (Netlify calls them [_build hooks_](https://docs.netlify.com/configure-builds/build-hooks/) and Vercel calls them [_deploy hooks_](https://vercel.com/docs/concepts/git/deploy-hooks).)
+The alternative is to look at a tool like [Netlify](/posts/wtf-is-netlify/) or [Vercel](https://vercel.com/). These tools will run a build process and upload to a CDN that is already configured on your behalf. And they can do that automatically using [webhooks](https://en.wikipedia.org/wiki/Webhook)! (Netlify calls them [_build hooks_](https://docs.netlify.com/configure-builds/build-hooks/) and Vercel calls them [_deploy hooks_](https://vercel.com/docs/concepts/git/deploy-hooks).)
 
 Each of these tools are low-cost options for building, deploying, and hosting your static API automatically.
 
@@ -136,7 +136,7 @@ Access-Control-Allow-Origin: https://www.mysite.com
 
 Now that we have a handle on the process for building and delivering a static API, here are some specific examples you can jump to next:
 
-- [Deploying a Static API to Netlify](/blog/deploy-static-api-netlify/)
-- [Deploying a Static API to Vercel](/blog/deploy-static-api-vercel/)
-- [Building a Static API with Node.js](/blog/building-static-api-nodejs/)
-- [Building a Static API with Eleventy](/blog/building-static-api-eleventy/)
+- [Deploying a Static API to Netlify](/posts/deploy-static-api-netlify/)
+- [Deploying a Static API to Vercel](/posts/deploy-static-api-vercel/)
+- [Building a Static API with Node.js](/posts/building-static-api-nodejs/)
+- [Building a Static API with Eleventy](/posts/building-static-api-eleventy/)

@@ -3,10 +3,10 @@ title: My Favorite Tool for Managing Project-Specific Environment Variables
 description: With many local projects, environment variables often conflict with
   one another. I tried several tools before landing on my favorite for managing
   project-specific values.
-image: /blog/default/default-lime-01.png
+image: /posts/default/default-lime-01.png
 ---
 
-How many code-based projects do you have on your machine? I have more than 30 that I've touched within the last month. More than half [use environment variables to manage sensitive and environment-specific data](/blog/when-to-use-environment-variables/).
+How many code-based projects do you have on your machine? I have more than 30 that I've touched within the last month. More than half [use environment variables to manage sensitive and environment-specific data](/posts/when-to-use-environment-variables/).
 
 If it hasn't happened yet, at some point you are going to run into a situation where two environment variables of the same name require different values for different projects. This usually happens with generically-named variables, like `GOOGLE_API_KEY` or `AWS_SECRET_ACCESS_KEY`.
 

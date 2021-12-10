@@ -1,20 +1,20 @@
 ---
 title: How to Set Environment Variables in JavaScript Projects
 description: "Environment variables are a great way to store values that will change based on your program's context."
-image: "/blog/210819/blue--js-env-var.png"
+image: "/posts/210819/blue--js-env-var.png"
 tags:
   - javascript
 ---
 
-[Environment variables](/blog/wtf-is-environment-variable/) are a great way to store values that will change based on your program's context (local vs production), or values that are sensitive and shouldn't be coupled with the code. (See here for more info on [when to use environment variables](/blog/when-to-use-environment-variables/).)
+[Environment variables](/posts/wtf-is-environment-variable/) are a great way to store values that will change based on your program's context (local vs production), or values that are sensitive and shouldn't be coupled with the code. (See here for more info on [when to use environment variables](/posts/when-to-use-environment-variables/).)
 
 ## Front- vs Back-End Environment Variables in JavaScript
 
 To know how to set environment variables, you first have to understand whether you are setting the variable for the front or the back end.
 
-In some cases this is quite obvious. If you're developing a [Node.js](/blog/wtf-is-node/) application, you're working on the back end. But if you're using a program that builds code to be run on the front end, then that differentiation gets a little muddy.
+In some cases this is quite obvious. If you're developing a [Node.js](/posts/wtf-is-node/) application, you're working on the back end. But if you're using a program that builds code to be run on the front end, then that differentiation gets a little muddy.
 
-Consider a [static site generator](/blog/wtf-is-ssg/) like [Gatsby](https://www.gatsbyjs.com/). Part of the code you'll write gets run on the server, at build time. This is Node.js code that has access to anything Node can access. But the components that make up the front end are to be consumed in a browser and can't inherently read from the system in which the code was built.
+Consider a [static site generator](/posts/wtf-is-ssg/) like [Gatsby](https://www.gatsbyjs.com/). Part of the code you'll write gets run on the server, at build time. This is Node.js code that has access to anything Node can access. But the components that make up the front end are to be consumed in a browser and can't inherently read from the system in which the code was built.
 
 ## Front-End Environment Variables in JavaScript
 

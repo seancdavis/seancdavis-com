@@ -1,7 +1,7 @@
 ---
 title: 100 Free CSS Resources
 description: There are countless ways to learn CSS. Here are 100 resources in various categories to get you started.
-image: /blog/211014/100-free-css-resources.png
+image: /posts/211014/100-free-css-resources.png
 tags:
   - css
   - contributor:pratham
@@ -93,7 +93,7 @@ This is a long list! Things are always changing on the web. As resources become 
 54. [Grid Cheatsheet](https://yoksel.github.io/grid-cheatsheet/)
 55. [Flex Cheatsheet](https://yoksel.github.io/flex-cheatsheet/)
 56. [FLEX: A simple visual cheatsheet for flexbox](https://flexbox.malven.co/)
-57. [Everything You Need to Know about CSS Position](/blog/css-position-guide/)
+57. [Everything You Need to Know about CSS Position](/posts/css-position-guide/)
 
 ## Validators
 

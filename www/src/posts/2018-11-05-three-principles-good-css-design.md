@@ -4,14 +4,14 @@ description: CSS is hard, but we make it that way. Keep to the basics and you'll
   be empower yourself to build and scale products quickly.
 tags:
   - css
-image: /blog/default/default-blue-03.png
+image: /posts/default/default-blue-03.png
 ---
 
 I hear this classic phrase regularly:
 
 > CSS is hard.
 
-[CSS](/blog/wtf-is-css/) itself, though, is super simple at its core. It applies a given set of styles to a given set of elements following [a few simple rules of specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity/). Take the following example:
+[CSS](/posts/wtf-is-css/) itself, though, is super simple at its core. It applies a given set of styles to a given set of elements following [a few simple rules of specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity/). Take the following example:
 
 ```css
 .element {

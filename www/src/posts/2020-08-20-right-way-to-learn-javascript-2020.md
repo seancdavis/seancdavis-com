@@ -4,10 +4,10 @@ description: At first glance, the JavaScript ecosystem is overwhelming. Here are
   thoughts on how to slow down, center yourself, and find a place to begin.
 tags:
   - javascript
-image: /blog/default/default-blue-01.png
+image: /posts/default/default-blue-01.png
 ---
 
-It's 2020, the world is losing its mind, and you want to learn [JavaScript](/blog/wtf-is-javascript/)?
+It's 2020, the world is losing its mind, and you want to learn [JavaScript](/posts/wtf-is-javascript/)?
 
 That's great! Welcome — it's going to be one crazy adventure! But, now that you've made the decision to learn JavaScript, what's next? How do you get started?
 
@@ -93,7 +93,7 @@ On the other hand, if you like to know _why_, or if you prefer to be precise in 
 
 ### 2. Are you a beginner or an experienced developer?
 
-If you feel proficient in another logic-based language (i.e. not [HTML](/blog/wtf-is-html/) or [CSS](/blog/wtf-is-css/)), you're likely in good enough shape to jump right into a framework. You should understand some of the inner workings of JS at runtime, as well as the syntax of the language itself, but you can pick those up along the way.
+If you feel proficient in another logic-based language (i.e. not [HTML](/posts/wtf-is-html/) or [CSS](/posts/wtf-is-css/)), you're likely in good enough shape to jump right into a framework. You should understand some of the inner workings of JS at runtime, as well as the syntax of the language itself, but you can pick those up along the way.
 
 If you're a beginner and you have the tolerance to start with the basics, then I'd say we're still on the basics train at this point.
 

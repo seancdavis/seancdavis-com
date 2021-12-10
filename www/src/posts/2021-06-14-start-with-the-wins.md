@@ -1,7 +1,7 @@
 ---
 title: "Start with the Wins"
 description: "The last thing I do. Every day."
-image: /blog/210614/lime--start-with-wins.png
+image: /posts/210614/lime--start-with-wins.png
 tags:
   - inspiration
 ---

@@ -3,7 +3,7 @@ title: How to Fix "Integrity check failed ..." Yarn Error
 description: What to do when running into integrity check errors with Yarn.
 tags:
   - yarn
-image: /blog/default/default-lime-03.png
+image: /posts/default/default-lime-03.png
 ---
 
 Seeing an error like this?

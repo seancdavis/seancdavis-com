@@ -6,7 +6,7 @@ tags:
   - ruby
   - ruby-on-rails
   - slack
-image: /blog/default/default-pink-01.png
+image: /posts/default/default-pink-01.png
 ---
 
 You want to know when your production app encounters an error, right?
@@ -61,31 +61,31 @@ If you haven't heard of [IFTTT](https://ifttt.com/wtf), it's a nice service that
 Sign up for the service and then let's create a new recipe. Go to _My Recipes_ and click _Create Recipe_.
 
 {% post_image
-    src="/blog/151222/ifttt-recipe-01.png",
+    src="/posts/151222/ifttt-recipe-01.png",
     alt="Use Slack for Rails Error Notification" %}
 
 Your _this_ is going to be _Email_. So click _this_ and then type in and select _Email_.
 
 {% post_image
-    src="/blog/151222/ifttt-recipe-02.png",
+    src="/posts/151222/ifttt-recipe-02.png",
     alt="Use Slack for Rails Error Notification" %}
 
 Next, choose to _Send IFTTT an email tagged_. The tag can be anything you want. I just use `#error`.
 
 {% post_image
-    src="/blog/151222/ifttt-recipe-03.png",
+    src="/posts/151222/ifttt-recipe-03.png",
     alt="Use Slack for Rails Error Notification" %}
 
 Your _that_ is _Slack_, and you want to _Post To Channel_.
 
 {% post_image
-    src="/blog/151222/ifttt-recipe-04.png",
+    src="/posts/151222/ifttt-recipe-04.png",
     alt="Use Slack for Rails Error Notification" %}
 
 You'll have to authenticate your Slack app first. Then, choose the channel and configure the message however you would like it formatted. Remember you really just have a `Subject` and `Body` to work with.
 
 {% post_image
-    src="/blog/151222/ifttt-recipe-05.png",
+    src="/posts/151222/ifttt-recipe-05.png",
     alt="Use Slack for Rails Error Notification" %}
 
 And last, create the recipe.

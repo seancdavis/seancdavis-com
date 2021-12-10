@@ -3,7 +3,7 @@ title: You Can Solve Every Problem
 tags:
   - inspiration
 description: "You are a human, and therefore, you are capable of solving every problem."
-image: /blog/190202/photo-1492546662075-aabebf46dee2.jpg
+image: /posts/190202/photo-1492546662075-aabebf46dee2.jpg
 attribution:
   - name: Steve Halama
     url: https://unsplash.com/@steve3p_0
@@ -34,6 +34,6 @@ For thousands and thousands and thousands of years humans have been identifying 
 
 You are human just like everyone else who has contributed to progress over so many years. **You can solve any problem** you face. Your only limitation is time.
 
-And when a problem seems particularly difficult to solve, remember the magnitude and scale at which humans -- people just like you -- have been solving problems. You just may [need a little help](/blog/we-cant-do-it-all-on-our-own) from another person -- someone who can offer a different way of approaching the problem.
+And when a problem seems particularly difficult to solve, remember the magnitude and scale at which humans -- people just like you -- have been solving problems. You just may [need a little help](/posts/we-cant-do-it-all-on-our-own) from another person -- someone who can offer a different way of approaching the problem.
 
 **_You_ can solve every problem.**

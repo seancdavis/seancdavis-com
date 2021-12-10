@@ -5,7 +5,7 @@ description: It can take some tricky logic to transform unpredictable characters
 tags:
   - ruby
   - ruby on rails
-image: /blog/default/default-orange-03.png
+image: /posts/default/default-orange-03.png
 ---
 
 I've spent far too much time over the years figuring out how to turn strings into friendly URLs, (often referred to as [_slugs_](<https://en.wikipedia.org/wiki/Slug_(publishing)>)). In my early days as a programmer, I wrote methods directly in models to transform titles after save. Later, I learned about [concerns](http://api.rubyonrails.org/v5.2/classes/ActiveSupport/Concern) and started writing better, shared code. Then I learned how to write my own gem, and ended up [contributing heavily to a gem](https://github.com/hungrymedia/superslug) that generate slugs via a super simple DSL.

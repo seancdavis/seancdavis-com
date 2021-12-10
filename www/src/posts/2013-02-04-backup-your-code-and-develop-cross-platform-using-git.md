@@ -3,7 +3,7 @@ title: Backup Your Code and Develop Cross-Platform Using Git
 tags:
   - git
 description: I recently discovered Git and it changed everything.
-image: /blog/default/default-lime-01.png
+image: /posts/default/default-lime-01.png
 ---
 
 I've recently been introduced to Git, the new most amazing thing in my development life. Git is a version control application for managing source code. Git can be used either on the command line or on a [Git GUI client](http://git-scm.com/downloads/guis).
@@ -18,7 +18,7 @@ GitHub is a great community for open source projects, but it can get pricey if y
 
 ## Free Alternatives
 
-If your code needs to be private, there are plenty of free alternatives to GitHub. I mentioned a couple in [this article](/blog/free-alternatives-to-github-for-private-git-hosting/).
+If your code needs to be private, there are plenty of free alternatives to GitHub. I mentioned a couple in [this article](/posts/free-alternatives-to-github-for-private-git-hosting/).
 
 ## Backup Your Code and Work Cross-Platform
 

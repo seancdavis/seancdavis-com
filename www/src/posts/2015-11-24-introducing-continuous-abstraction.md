@@ -1,7 +1,7 @@
 ---
 title: Introducing Continuous Abstraction
 description: Abstract core components of related challenges to make solving future challenges easier and faster.
-image: /blog/151124/13519151904_dc4672d377_h.jpg
+image: /posts/151124/13519151904_dc4672d377_h.jpg
 attribution:
   - name: Patrick Metzdorf
     url: https://www.flickr.com/photos/batjko/
@@ -28,7 +28,7 @@ But, repurposing isn't good enough. It's a lazy way to make yourself (or your te
 
 ### Why It Doesn't Work
 
-When we speak about efficiency, we're often attempting to identify tasks or components within a system that create waste. It's easy to spot some inefficiencies. For example, [writing an email and then talking to someone about that email without adding new information](/blog/did-you-get-that-email-i-literally-just-sent-you) creates waste (doing the same thing in two different ways is a form of duplication). It's an obvious inefficiency.
+When we speak about efficiency, we're often attempting to identify tasks or components within a system that create waste. It's easy to spot some inefficiencies. For example, [writing an email and then talking to someone about that email without adding new information](/posts/did-you-get-that-email-i-literally-just-sent-you) creates waste (doing the same thing in two different ways is a form of duplication). It's an obvious inefficiency.
 
 What can be more difficult to identify are those items that mask their inefficiencies, or items that are harmful to the system while concurrently providing the illusion of being a benefit. Said another way, it can be difficult to identify issues with the global system when they tend to benefit a local component within the system.
 

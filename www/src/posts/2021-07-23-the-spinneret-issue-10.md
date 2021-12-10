@@ -1,7 +1,7 @@
 ---
 title: "The Spinneret: Issue #10"
 description: "Holy smokes! So many things are changing!"
-image: /blog/210723/the-spinneret--10.png
+image: /posts/210723/the-spinneret--10.png
 tags:
   - spinneret
 ---
@@ -11,7 +11,7 @@ tags:
 _Notable changes in my life, [on my website](https://github.com/seancdavis/seancdavis-com), and in other projects._ {.text-sm}
 
 {% post_image
-    src="/blog/210426/the-spinneret--my-code.png",
+    src="/posts/210426/the-spinneret--my-code.png",
     alt="The Spinneret - My Code" %}
 
 There are so many things in motion right now, I don't even know where to start, so I've broken up all the updates into their own sections below.
@@ -34,7 +34,7 @@ I don't have an "official" guest authorship program. If you're interested in wri
 
 ### Evolution of "Jamstack"
 
-I mentioned this last month. The conversation around the definition of "Jamstack" has been hot in the last couple months. For me, it started with [being interviewed by JavaScript Jabber](https://devchat.tv/js-jabber/changes-in-the-jamstack-landscape-with-sean-c-davis-jsj-482/). Then I [wrote an opinionated article on the subject](/blog/jamstack-evolution-and-redefinition/), which led to [sitting on a panel for the JavaScript podcast](https://www.javascriptjam.com/episode/episode-5-panel-debate-what-is-jamstack). I'm interested to keep a pulse on this conversation, especially as the company I've joined is so heavily invested in the term _Jamstack_.
+I mentioned this last month. The conversation around the definition of "Jamstack" has been hot in the last couple months. For me, it started with [being interviewed by JavaScript Jabber](https://devchat.tv/js-jabber/changes-in-the-jamstack-landscape-with-sean-c-davis-jsj-482/). Then I [wrote an opinionated article on the subject](/posts/jamstack-evolution-and-redefinition/), which led to [sitting on a panel for the JavaScript podcast](https://www.javascriptjam.com/episode/episode-5-panel-debate-what-is-jamstack). I'm interested to keep a pulse on this conversation, especially as the company I've joined is so heavily invested in the term _Jamstack_.
 
 ### Good Websites Club
 
@@ -47,38 +47,38 @@ Okay, now on to the good stuff!
 _New blog posts and videos I published last month._ {.text-sm}
 
 {% post_image
-    src="/blog/210426/the-spinneret--my-words.png",
+    src="/posts/210426/the-spinneret--my-words.png",
     alt="The Spinneret - My Words" %}
 
-I wrote _a lot_ in June, but not much in July. (And I expect the lull to continue through September.) Aside from introducing a new guest author, I had a couple pieces I was really excited about. [_Exporting Bear Notes as Markdown Files_](/blog/export-bear-notes-markdown-files/) was a fun tutorial that I will eventually spin off into exploring Bear as a CMS (wild idea, I know!). And I also [introduced a new license](/blog/use-with-love-public-license/) for my open source projects. It felt a little tacky at first, but I'm happy with where it landed.
+I wrote _a lot_ in June, but not much in July. (And I expect the lull to continue through September.) Aside from introducing a new guest author, I had a couple pieces I was really excited about. [_Exporting Bear Notes as Markdown Files_](/posts/export-bear-notes-markdown-files/) was a fun tutorial that I will eventually spin off into exploring Bear as a CMS (wild idea, I know!). And I also [introduced a new license](/posts/use-with-love-public-license/) for my open source projects. It felt a little tacky at first, but I'm happy with where it landed.
 
 ### Guest Articles
 
-- [A Beginner's Guide to Z-Index](/blog/beginners-guide-z-index/) by Pratham
-- [CSS Animations Quick Start Guide](/blog/css-animations-quick-start-guide/) by Pratham
+- [A Beginner's Guide to Z-Index](/posts/beginners-guide-z-index/) by Pratham
+- [CSS Animations Quick Start Guide](/posts/css-animations-quick-start-guide/) by Pratham
 
 ### New Definitions
 
-- [WTF is Frontmatter?](/blog/wtf-is-frontmatter/)
-- [WTF is a Static Site Generator?](/blog/wtf-is-ssg/)
-- [WTF is Continuous Integration?](/blog/wtf-is-continuous-integration/)
-- [WTF is Markdown?](/blog/wtf-is-markdown/)
+- [WTF is Frontmatter?](/posts/wtf-is-frontmatter/)
+- [WTF is a Static Site Generator?](/posts/wtf-is-ssg/)
+- [WTF is Continuous Integration?](/posts/wtf-is-continuous-integration/)
+- [WTF is Markdown?](/posts/wtf-is-markdown/)
 
 ### And the Rest
 
-- [A Simple CSS Build Pipeline Using PostCSS](/blog/getting-started-with-postcss/)
-- [Start with the Wins](/blog/start-with-the-wins/)
-- [Export Bear Notes to Markdown Files](/blog/export-bear-notes-markdown-files/)
-- [Commit Code Changes Using GitHub Actions](/blog/commit-github-actions-code-changes/)
-- [The Use With Love Public License](/blog/use-with-love-public-license/)
-- [Delete Multiple Local Git Branches](/blog/git-delete-multiple-local-branches/)
+- [A Simple CSS Build Pipeline Using PostCSS](/posts/getting-started-with-postcss/)
+- [Start with the Wins](/posts/start-with-the-wins/)
+- [Export Bear Notes to Markdown Files](/posts/export-bear-notes-markdown-files/)
+- [Commit Code Changes Using GitHub Actions](/posts/commit-github-actions-code-changes/)
+- [The Use With Love Public License](/posts/use-with-love-public-license/)
+- [Delete Multiple Local Git Branches](/posts/git-delete-multiple-local-branches/)
 
 ## My Reads
 
 _Articles and news I read last month that I found interesting, with some commentary._ {.text-sm}
 
 {% post_image
-    src="/blog/210426/the-spinneret--my-reads.png",
+    src="/posts/210426/the-spinneret--my-reads.png",
     alt="The Spinneret - My Reads" %}
 
 I've already taken up a ton of space and your time, so let's shorten the end of this. Here are some quick-hitters from happenings in our community:
@@ -93,7 +93,7 @@ I've already taken up a ton of space and your time, so let's shorten the end of 
 _New tools that I've recently discovered. They aren't necessarily new._ {.text-sm}
 
 {% post_image
-    src="/blog/210426/the-spinneret--my-finds.png",
+    src="/posts/210426/the-spinneret--my-finds.png",
     alt="The Spinneret - My Finds" %}
 
 I came across some tools and sites I think are _super_ interesting. Check them out:

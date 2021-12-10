@@ -1,7 +1,7 @@
 ---
 title: "How I Organize My Brain"
 description: "There are so many tools claiming to be the next best thing for staying organized and productive. I've formed a cocktail from my favorite tools to keep my brain (my life) organized."
-image: /blog/210213/yellow--brain-map.png
+image: /posts/210213/yellow--brain-map.png
 tags:
   - organization
   - productivity

@@ -1,7 +1,7 @@
 ---
 title: How the Web Works
 description: Learn how the web works.
-image: /blog/default/default-yellow-01.png
+image: /posts/default/default-yellow-01.png
 ---
 
 I've tried (unsuccessfully), on several occasions, to explain *how the web works*. To the few people that gazed hopelessly at me (while silently wishing I'd stop talking), I said, "I'll write a blog post on it, and *then* you'll understand." So, here we go -- I hope it works.
@@ -106,6 +106,6 @@ That *file* the web server returns exists in what we like to call the *root d
 
 {% post_image
     alt="how the web works",
-    src="/blog/130603/how-the-web-works.png" %}
+    src="/posts/130603/how-the-web-works.png" %}
 
 URLs, and the web in general can get a lot more complicated. That's a simple first look, and I hope your head is spinning too hard at this point. I'm sure I've left some things you're curious about out of this post. Ask away if you have questions. Thanks for reading.

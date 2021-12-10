@@ -1,7 +1,7 @@
 ---
 title: Take A(n Unconventional) Break!
 description: I took half a Tuesday and half a Wednesday to spend time with my family. Breaks from work don't always have to be conventional.
-image: /blog/170204/looking-at-mountains.png
+image: /posts/170204/looking-at-mountains.png
 tags:
   - inspiration
 ---

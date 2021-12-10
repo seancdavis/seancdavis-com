@@ -3,7 +3,7 @@ title: Find the Root Cause by Asking Why
 tags:
   - inspiration
 description: "Using the practice of 5 Whys can help you create more effective solutions to problems, including where you should go on your next vacation."
-image: /blog/190412/photo-1550228948-40fbe6e98a08.jpg
+image: /posts/190412/photo-1550228948-40fbe6e98a08.jpg
 attribution:
   - name: Annie Spratt
     url: https://unsplash.com/@anniespratt

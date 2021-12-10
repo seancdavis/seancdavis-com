@@ -2,10 +2,10 @@
 title: Create Automatic Backup by Installing WAMP Server in the Cloud
 tags: []
 description: Learn how to create backups for your code using a WAMP server.
-image: /blog/default/default-yellow-01.png
+image: /posts/default/default-yellow-01.png
 ---
 
-**UPDATE: I've had trouble getting this solution to work exactly how I had envisioned. I've moved to the solution found [here](/blog/backup-your-code-and-develop-cross-platform-using-git/).**
+**UPDATE: I've had trouble getting this solution to work exactly how I had envisioned. I've moved to the solution found [here](/posts/backup-your-code-and-develop-cross-platform-using-git/).**
 
 What do you use your WAMP server for? I'm guessing whatever it is you're using it for, you don't want to lose your files should something happen to your computer. But you've already thought of that, right? So you're backing up your files somewhere.
 

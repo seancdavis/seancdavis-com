@@ -5,7 +5,7 @@ description: It's easy to let Liquid templates get away and bog down build
 tags:
   - jekyll
   - ruby
-image: /blog/default/default-lime-01.png
+image: /posts/default/default-lime-01.png
 ---
 
 The [Liquid templating language](https://shopify.github.io/liquid/) is made to be flexible through the use of filters, includes, and assigns. When working with a Jekyll project, especially one using dynamic data, that flexibility becomes the key factor in being able to scale the site while keep code [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).

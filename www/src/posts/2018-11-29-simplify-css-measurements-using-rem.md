@@ -4,7 +4,7 @@ description: Using REMs exclusively for measurements in CSS is a handy tool for
   enforcing a stronger design system.
 tags:
   - css
-image: /blog/default/default-pink-03.png
+image: /posts/default/default-pink-03.png
 ---
 
 Design systems are inherently difficult to manage as projects grow. The higher the number of scenarios, the more complex the nuance of maintaining consistent components across the ecosystem becomes. In other words, as projects grow, it can quickly become a challenge to maintain a consistent sizing approach throughout the system.
@@ -17,7 +17,7 @@ Take [Bootstrap 4.1's sizing utilties](https://getbootstrap.com/docs/4.1/utiliti
 
 ## A Built-in Solution
 
-What we often overlook when solving these system-wide challenges is that **we have the tooling for it right out of the box with [CSS](/blog/wtf-is-css/).** CSS has a unit of measure, [`em`](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units/) and another related unit, `rem`. `em` [is defined by MDN as follows](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units/):
+What we often overlook when solving these system-wide challenges is that **we have the tooling for it right out of the box with [CSS](/posts/wtf-is-css/).** CSS has a unit of measure, [`em`](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units/) and another related unit, `rem`. `em` [is defined by MDN as follows](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units/):
 
 > 1em is the same as the font-size of the current element (more specifically, the width of a capital letter M.)
 

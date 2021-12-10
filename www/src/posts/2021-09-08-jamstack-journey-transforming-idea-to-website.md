@@ -1,7 +1,7 @@
 ---
 title: "The Jamstack Journey: A Guide on Transforming an Idea into a Website"
 description: It takes a lot to bring an idea to life on the web, even for the simplest of sites. Follow this guide for a detailed look at moving from concept to a website deployed to your domain.
-image: /blog/210908/210908--idea-to-website.png
+image: /posts/210908/210908--idea-to-website.png
 canonical_url: https://www.stackbit.com/blog/jamstack-journey-transforming-idea-to-website/
 tags:
   - repost-stackbit
@@ -73,7 +73,7 @@ After going through the design phase, you're left with the _deliverables_ — ar
 And this is an example of what a style tiles spec might look like:
 
 {% post_image
-    src="/blog/210908/unmute--style-tiles.png",
+    src="/posts/210908/unmute--style-tiles.png",
     alt="An example of style tiles — styles that apply to all (or most) pages on the site" %}
 
 _(This example is from [Unmute](https://www.unmutedstories.com/), a side project I'm involved with.)_

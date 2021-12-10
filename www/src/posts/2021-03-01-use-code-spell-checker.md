@@ -1,7 +1,7 @@
 ---
 title: "Use a Code Spell Checker"
 description: "Spell-checking isn't just for documentation."
-image: /blog/210301/orange--code-spell-check.png
+image: /posts/210301/orange--code-spell-check.png
 tags:
   - quick-tip
   - vscode
@@ -16,7 +16,7 @@ We move fast as developers. It's one thing to make a spelling mistake in documen
 One of my favorite VS Code plugins is [Code Spell Checker](https://github.com/streetsidesoftware/vscode-spell-checker). It's been a total game-changer for me. It catches spelling mistakes by putting that blue little squiggly line underneath misspelled words.
 
 {% post_image
-    src="/blog/210301/spell-checker.png",
+    src="/posts/210301/spell-checker.png",
     alt="Spell Checker - Incorrect Word",
     maxWidth="lg"  %}
 

@@ -3,7 +3,7 @@ title: Rethinking Email as a To-Do List
 tags:
   - productivity
 description: Email revolutionized the way in which we communicate. But it's become annoying. Here is a new way of thinking about managing your inbox.
-image: /blog/141113/mac-paper-pen-iphone-cover.jpg
+image: /posts/141113/mac-paper-pen-iphone-cover.jpg
 attribution:
   - name: Startup Stock Photos
     url: https://stocksnap.io/author/1949

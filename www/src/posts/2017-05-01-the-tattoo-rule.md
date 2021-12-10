@@ -3,14 +3,14 @@ title: The Tattoo Rule
 tags:
   - inspiration
 description: "The Tattoo Rule encourages us to consider the risk involved in any situation before diving in."
-image: /blog/170501/photo-1534367507873-d2d7e24c797f.jpg
+image: /posts/170501/photo-1534367507873-d2d7e24c797f.jpg
 attribution:
   - name: Alora Griffiths
     url: https://unsplash.com/@aloragriffiths
     license: Unsplash
 ---
 
-I spend a lot of time talking about jumping right into an idea (e.g. [this article](/blog/act-on-inspiration-before-it-runs-away)), exploring the possibilities without thinking too much-simple going for it.
+I spend a lot of time talking about jumping right into an idea (e.g. [this article](/posts/act-on-inspiration-before-it-runs-away)), exploring the possibilities without thinking too much-simple going for it.
 
 In many cases, this approach works wonders. The sooner we act, the sooner we are able to learn more about the thing we're doing. That learning creates the information needed to do better work in the future.
 

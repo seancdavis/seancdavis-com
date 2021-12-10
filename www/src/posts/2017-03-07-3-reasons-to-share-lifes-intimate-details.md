@@ -3,7 +3,7 @@ title: 3 Reasons to Share Life's Intimate Details
 tags:
   - inspiration
 description: "We often bottle up life's intimate details. I think you ought to share them."
-image: /blog/170307/photo-1461354464878-ad92f492a5a0.jpg
+image: /posts/170307/photo-1461354464878-ad92f492a5a0.jpg
 attribution:
   - name: Elaine Casap
     url: https://unsplash.com/@ecasap

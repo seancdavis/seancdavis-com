@@ -4,7 +4,7 @@ tags:
   - nginx
 description: For SEO purposes, it's best to choose between www and no www. See
   how to do it with Nginx.
-image: /blog/default/default-lime-01.png
+image: /posts/default/default-lime-01.png
 ---
 
 If you don't want to include _www_ as your primary domain, it's nice to still allow traffic with and without the _www_ in the domain name. For example, if your primary domain is [example.com](http://example.com), you'd also want to allow traffic to [www.example.com](http://www.example.com).

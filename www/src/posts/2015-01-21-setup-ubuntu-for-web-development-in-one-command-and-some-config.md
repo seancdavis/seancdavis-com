@@ -5,7 +5,7 @@ tags:
 description: If you repeat tasks over and over to setup new Ubuntu web
   development machines, perhaps you'll find some use in a script I wrote to
   solve this issue.
-image: /blog/default/default-yellow-03.png
+image: /posts/default/default-yellow-03.png
 ---
 
 I don't manage a ton of servers, but I've set up enough to get tired of going through the long process over and over. I wanted a better solution.

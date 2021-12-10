@@ -3,7 +3,7 @@ title: New Developers Shouldn't Focus on Writing Tests
 description: You wouldn't open an insurance plan on your dog house, would you?
 tags:
   - testing
-image: /blog/default/default-blue-03.png
+image: /posts/default/default-blue-03.png
 ---
 
 Being a new developer is wild and crazy.

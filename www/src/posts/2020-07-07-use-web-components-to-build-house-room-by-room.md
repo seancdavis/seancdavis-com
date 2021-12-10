@@ -5,10 +5,10 @@ description: You could build a house one brick at a time. Every room could be
   usually do. But what if you could build a house room-by-room?
 tags:
   - components
-image: /blog/default/default-yellow-02.png
+image: /posts/default/default-yellow-02.png
 ---
 
-Web pages, in their simplest form, are just bunches of [HTML](/blog/wtf-is-html/) code — element tags that determine content and structure. We don't really _need_ anything else to build a web page. But we add [CSS](/blog/wtf-is-css/) to make pages look nice and [JavaScript](/blog/wtf-is-javascript/) to add interactivity.
+Web pages, in their simplest form, are just bunches of [HTML](/posts/wtf-is-html/) code — element tags that determine content and structure. We don't really _need_ anything else to build a web page. But we add [CSS](/posts/wtf-is-css/) to make pages look nice and [JavaScript](/posts/wtf-is-javascript/) to add interactivity.
 
 On their own, these languages — HTML, CSS, and JavaScript – are _tools_. What you have in front of you is a blank canvas, or an empty web page. To bring that page to life, you have to put those tools to use.
 
@@ -38,10 +38,10 @@ In order to realize the potential for success of the project, you'll have to set
 
 If you're able to build a house room-by-room and you want to realize the cost and time savings from that approach, then you'll want to design your house with that in mind. The house must be treated as though it's a system of reusable pieces.
 
-Websites work in much the same way. We could build a website one page at a time, adding unique elements to each page. That would take a long time. And it's not easily maintainable. Or we could build it one section at a time by developing reusable pieces of code that we can plug in at the page level. These are the things we call [_components_](/blog/wtf-is-a-web-component/).
+Websites work in much the same way. We could build a website one page at a time, adding unique elements to each page. That would take a long time. And it's not easily maintainable. Or we could build it one section at a time by developing reusable pieces of code that we can plug in at the page level. These are the things we call [_components_](/posts/wtf-is-a-web-component/).
 
 Building a website component-first means that each piece of the site comes from a single source of truth. We build it once and it works everywhere!
 
-But to realize the benefits of [component-driven development](/blog/wtf-is-component-driven-development/), the site must also be _designed_ in the same manner. Otherwise you'll end up trying to build a house room-by-room, only to find out that the small differences in each space make it more frustrating and time-consuming than it would have been if you'd just built every space from scratch.
+But to realize the benefits of [component-driven development](/posts/wtf-is-component-driven-development/), the site must also be _designed_ in the same manner. Otherwise you'll end up trying to build a house room-by-room, only to find out that the small differences in each space make it more frustrating and time-consuming than it would have been if you'd just built every space from scratch.
 
 So when it comes time to bring your next web project to life, build it like a house. Not one brick at a time, but one room at a time.

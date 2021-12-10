@@ -5,16 +5,16 @@ tags:
   - ruby-on-rails
 description: Rake provides a great way to automate repetitive or complex tasks.
   Here's a look at creating a simple and a more complex task.
-image: /blog/default/default-orange-01.png
+image: /posts/default/default-orange-01.png
 ---
 
 [Rake](https://github.com/ruby/rake) is a nice, powerful tool for automating tasks in a ruby project.
 
-We've chatted here about [how to accept arguments within a rake task](/blog/4-ways-to-pass-arguments-to-a-rake-task/), and I suspect that will be of use coming out of this discussion. However, for the purposes of getting started with rake, let's consider some simple examples.
+We've chatted here about [how to accept arguments within a rake task](/posts/4-ways-to-pass-arguments-to-a-rake-task/), and I suspect that will be of use coming out of this discussion. However, for the purposes of getting started with rake, let's consider some simple examples.
 
 ## Setup
 
-First, you need to get setup. If your project doesn't already have rake installed, then you'll need to add it to your project. I wrote [an article on just that topic](/blog/add-rake-to-any-project/).
+First, you need to get setup. If your project doesn't already have rake installed, then you'll need to add it to your project. I wrote [an article on just that topic](/posts/add-rake-to-any-project/).
 
 ## Rake Syntax
 

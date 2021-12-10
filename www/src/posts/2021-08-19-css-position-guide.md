@@ -1,16 +1,16 @@
 ---
 title: Everything You Need to Know about CSS Position Property
 description: "Dive deep into CSS position with real examples."
-image: /blog/210818/pink--css-position.png
+image: /posts/210818/pink--css-position.png
 author: pratham
 seo:
-  image: /blog/210818/pink--css-position--meta.png
+  image: /posts/210818/pink--css-position--meta.png
 tags:
   - css
   - contributor:pratham
 ---
 
-There are five values that you can pass into the [CSS](/blog/wtf-is-css/) `position` property:
+There are five values that you can pass into the [CSS](/posts/wtf-is-css/) `position` property:
 
 - `static`
 - `relative`
@@ -41,7 +41,7 @@ Consider the following piece of code:
 `<h1>`, `<p>`, `<h3>`, and `<div>` are displayed on the screen in exact order as they written in the HTML file.
 
 {% post_image
-    src="/blog/210818/css-position--01--document-flow.png",
+    src="/posts/210818/css-position--01--document-flow.png",
     alt="CSS Document Flow" %}
 
 Now we can move on to looking at each of the five options for the `position` property. We'll begin with `static`.
@@ -81,7 +81,7 @@ And they each have the following rule:
 With some color added in, and within a centered container, that would give you something like this:
 
 {% post_image
-    src="/blog/210818/css-position--02--relative.png",
+    src="/posts/210818/css-position--02--relative.png",
     alt="CSS Document Flow" %}
 
 Now, let's offset the blue box:
@@ -95,7 +95,7 @@ Now, let's offset the blue box:
 As you can see blue box is shifted `150px` from left because I applied left offset after giving it relative positioning.
 
 {% post_image
-    src="/blog/210818/css-position--03--relative-offset.png",
+    src="/posts/210818/css-position--03--relative-offset.png",
     alt="CSS Document Flow" %}
 
 We can shift the bottom box (orange) to the left by setting its `right` property:
@@ -110,7 +110,7 @@ We can shift the bottom box (orange) to the left by setting its `right` property
 Notice here that document flow is as it is. So the relative position does not affect the document flow.
 
 {% post_image
-    src="/blog/210818/css-position--04-relative-offset-02.png",
+    src="/posts/210818/css-position--04-relative-offset-02.png",
     alt="CSS Document Flow" %}
 
 ## CSS Position: Absolute
@@ -122,7 +122,7 @@ For example, if I apply absolute positioning to the blue box (after removing the
 See the image below. The blue box is out of flow, and you now can't see the pink box because it is sitting behind the blue box.
 
 {% post_image
-    src="/blog/210818/css-position--05--absolute.png",
+    src="/posts/210818/css-position--05--absolute.png",
     alt="CSS Document Flow" %}
 
 The absolute position of an element is relative to its closest ancestor, which has some position property.
@@ -158,7 +158,7 @@ With some styling applied:
 That looks like this:
 
 {% post_image
-    src="/blog/210818/css-position--06-absolute-child.png",
+    src="/posts/210818/css-position--06-absolute-child.png",
     alt="CSS Document Flow" %}
 
 Notice that I applied relative positioning to the parent (blue) and absolute positioning to the child (pink). Absolute position is relative to the closest ancestor's position. Because the child's parent (blue) has position set, the child (pink) is offset according to its parent's position.
@@ -204,7 +204,7 @@ If we set the grandparent's (blue) position to `absolute`, leave the parent's (o
 And because I set the `bottom` and `right` properties of the child, it is going to appear in the bottom right corner of the grandparent, _not the parent_.
 
 {% post_image
-    src="/blog/210818/css-position--07-absolute-grandchild.png",
+    src="/posts/210818/css-position--07-absolute-grandchild.png",
     alt="CSS Document Flow" %}
 
 ## CSS Position: Fixed & Sticky
@@ -216,7 +216,7 @@ On the other hand, elements with sticky positions are a mixture of the relative 
 This can be seen in action in [this CodePen example](https://codepen.io/prathkum/pen/bGgWJoN).
 
 {% post_image
-    src="/blog/210818/css-position-08-fixed-v-sticky.gif",
+    src="/posts/210818/css-position-08-fixed-v-sticky.gif",
     alt="CSS Document Flow" %}
 
 Notice that the yellow element stays within the normal flow of the document until it hits the top of the viewport. Then it _sticks_ to the top.

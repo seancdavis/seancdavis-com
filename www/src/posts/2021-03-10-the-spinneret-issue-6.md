@@ -1,7 +1,7 @@
 ---
 title: "The Spinneret: Issue #6"
 description: "Quick tips, more video content, website updates, and a myriad of new tools I've discovered. Come see what happened in my Jamstack world in February 2021."
-image: /blog/210310/the-spinneret--06.png
+image: /posts/210310/the-spinneret--06.png
 tags:
   - spinneret
 ---
@@ -23,7 +23,7 @@ A lot happened in February and the format of this newsletter has changed slightl
 _New blog posts and videos I published last month_ {.text-sm}
 
 {% post_image
-    src="/blog/210310/the-spinneret--my-words.png",
+    src="/posts/210310/the-spinneret--my-words.png",
     alt="The Spinneret - My Words" %}
 
 Here are links to the majority of pieces I published this month. I've continued to write about component organization as I work toward a big piece that pulls them all together. I also introduced the concept of _Quick Tips_. I'm not sure if these will end up being exclusively videos or articles, but for now there's a little of each.
@@ -39,11 +39,11 @@ Here are links to the majority of pieces I published this month. I've continued 
 
 ### Blog Posts
 
-- [A Guide to Setting up a New Mac Developer Machine](/blog/new-mac-dev-guide/)
-- [How I Organize My Brain](/blog/organizing-my-brain/)
-- [Delete Entire Word in Terminal and iTerm2](/blog/delete-full-words-terminal/)
-- [Balancing Flexibility and Productivity in Your CMS](/blog/balancing-cms-productivity-flexibility/)
-- [3 Rules for Keeping Components Organized](/blog/three-rules-keep-components-organized/)
+- [A Guide to Setting up a New Mac Developer Machine](/posts/new-mac-dev-guide/)
+- [How I Organize My Brain](/posts/organizing-my-brain/)
+- [Delete Entire Word in Terminal and iTerm2](/posts/delete-full-words-terminal/)
+- [Balancing Flexibility and Productivity in Your CMS](/posts/balancing-cms-productivity-flexibility/)
+- [3 Rules for Keeping Components Organized](/posts/three-rules-keep-components-organized/)
 - [Reconciling Editor Experience and Developer Experience in the CMS](https://css-tricks.com/reconciling-editor-experience-and-developer-experience-in-the-cms/) <small>(CSS-Tricks)</small>
 
 ## Website Updates
@@ -51,7 +51,7 @@ Here are links to the majority of pieces I published this month. I've continued 
 _Notable changes made [to my website codebase](https://github.com/seancdavis/seancdavis-com) and other projects._ {.text-sm}
 
 {% post_image
-    src="/blog/210310/the-spinneret--my-code.png",
+    src="/posts/210310/the-spinneret--my-code.png",
     alt="The Spinneret - My Code" %}
 
 - I'm slowly importing posts from other mediums I've used in the past. I used to have a blog called _The Polymath Lab_, which was about organization, productivity, communication, and inspiration. I sunset that site and brought all the relevant content into [the blog](/blog).
@@ -63,7 +63,7 @@ _Notable changes made [to my website codebase](https://github.com/seancdavis/sea
 _Articles and news I read last month that I found interesting, with some commentary._ {.text-sm}
 
 {% post_image
-    src="/blog/210310/the-spinneret--my-reads.png",
+    src="/posts/210310/the-spinneret--my-reads.png",
     alt="The Spinneret - My Reads" %}
 
 [**Gatsby announced v3.0 at its conference**](https://www.gatsbyjs.com/blog/gatsbyconf-product-announcements/). I didn't attend the conference, but spent some time with the recap. I used to be an avid user of Gatsby and worked in it almost daily. Today I prefer Next.js for more complex projects.
@@ -106,14 +106,14 @@ And here are some other quick-hitters.
 - I love Bejamas. I think they are doing great stuff in the Jamstack space. Their [free Jamstack resources](https://bejamas.io/resources/) page is a thing of beauty.
 - This piece — [The Dark Side of Becoming a Self-Taught Developer](https://medium.com/swlh/the-dark-side-of-becoming-a-self-taught-developer-8e38814a2f83) — seems like it's going to be dark, but it's not. I found it quite inspirational. A great message for aspiring developers.
 - [Getting Started With useQuery (React Query)](https://medium.com/swlh/getting-started-with-usequery-react-query-9ea181c3dd47) seems super useful. I haven't had the need to use it yet, but am looking forward to exploring it in the future.
-- I came across [_A Better Way to Structure React Projects_](https://www.freecodecamp.org/news/a-better-way-to-structure-react-projects/). I nerd-out over this kind of stuff, but didn't really like the approach here. I feel strongly that components exist to build a reusable system. Grouping by page they are used on defeats that purpose. I have a much larger picture I'm piecing together with several articles, but for now, you can start to see what I'm going toward with this take: [Organize Components by Keeping Related Files Close](/blog/organize-components-by-keeping-related-files-close/).
+- I came across [_A Better Way to Structure React Projects_](https://www.freecodecamp.org/news/a-better-way-to-structure-react-projects/). I nerd-out over this kind of stuff, but didn't really like the approach here. I feel strongly that components exist to build a reusable system. Grouping by page they are used on defeats that purpose. I have a much larger picture I'm piecing together with several articles, but for now, you can start to see what I'm going toward with this take: [Organize Components by Keeping Related Files Close](/posts/organize-components-by-keeping-related-files-close/).
 
 ## My Finds
 
 _New tools that I've recently discovered. They aren't necessarily new._ {.text-sm}
 
 {% post_image
-    src="/blog/210310/the-spinneret--my-finds.png",
+    src="/posts/210310/the-spinneret--my-finds.png",
     alt="The Spinneret - My Finds" %}
 
 I came across _a ton_ of new tools this last month. I think that is, in large part, a result of starting this new job and working with new people every day. So it may slow down in months to come. But maybe not.

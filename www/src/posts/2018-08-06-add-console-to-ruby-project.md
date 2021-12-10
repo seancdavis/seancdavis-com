@@ -5,7 +5,7 @@ description: A powerful way to debug Rails applications is in using the Rails
   still have a console.
 tags:
   - ruby
-image: /blog/default/default-green-03.png
+image: /posts/default/default-green-03.png
 ---
 
 The [Rails console](https://guides.rubyonrails.org/command_line.html#rails-console) is a really powerful way to interact with your Rails applications via the command line. And when I started writing Ruby applications (without Rails) it was something I immediately missed dearly. But, as it turns out, those feelings I had were unfounded, as it's quite easy to add a console to your project.
@@ -63,7 +63,7 @@ And within IRB, let's create a new calculator:
 
 Hmmm ... IRB doesn't know what `Calculator` is. Why not? When we open an IRB instance on our machine, it's thinking globally. We haven't provided any context in which to open the session. We can change that by loading our files first.
 
-Let's create a [ruby command-line script](/blog/command-line-scripts-using-ruby/) to open a console session. We're going to put this file in the `bin` directory.
+Let's create a [ruby command-line script](/posts/command-line-scripts-using-ruby/) to open a console session. We're going to put this file in the `bin` directory.
 
 In its simplest form, this file will look like this:
 
@@ -123,4 +123,4 @@ As your project gets larger, as long as you require your main file in your conso
 
 ---
 
-_**Bonus!** I have a [follow-up article](/blog/add-reload-method-to-ruby-console/) in which you can add a `reload!` method to your console so you don't have to restart the console session every time you make a change in your project._
+_**Bonus!** I have a [follow-up article](/posts/add-reload-method-to-ruby-console/) in which you can add a `reload!` method to your console so you don't have to restart the console session every time you make a change in your project._

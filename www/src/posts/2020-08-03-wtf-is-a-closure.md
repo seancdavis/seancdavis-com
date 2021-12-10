@@ -5,30 +5,30 @@ description: A brief explanation of JavaScript closures, along with a few
 tags:
   - javascript
   - wtf
-image: /blog/default/default-orange-01.png
+image: /posts/default/default-orange-01.png
 ---
 
 There are tons and tons of articles out there on closures. This is a brief explanation that ends with references to more in-depth explorations of the topic.
 
-At its core, a closure is a [JavaScript](/blog/wtf-is-javascript/) feature in which **a function accesses variables outside its interior scope**.
+At its core, a closure is a [JavaScript](/posts/wtf-is-javascript/) feature in which **a function accesses variables outside its interior scope**.
 
 Consider the following:
 
 ```js
-var a = 1
+var a = 1;
 
 function foo() {
-  var b = 2
+  var b = 2;
 
   function bar() {
-    var c = 3
-    return a + b + c
+    var c = 3;
+    return a + b + c;
   }
 
-  return bar()
+  return bar();
 }
 
-console.log(foo()) // => 6
+console.log(foo()); // => 6
 ```
 
 In this case, the function `bar()` has access to three variables, `a`, `b`, and `c`, even though `c` is the only variable it defines.
@@ -37,10 +37,10 @@ In JavaScript, functions have access to their surrounding scope, which can be pr
 
 ```js
 function double(num) {
-  return num * 2
+  return num * 2;
 }
 
-console.log([1, 2, 3].map(double)) // => [2, 4, 6]
+console.log([1, 2, 3].map(double)); // => [2, 4, 6]
 ```
 
 In this case, the argument passed to `map` is a function with access to each node in the array. But it's still a function with its own scope. And it's accessing another function outside its scope.
@@ -60,7 +60,7 @@ This gives us more freedom to be semantic with naming, as we know the scope we'r
 
 ### Closures Help Keep Code Clean
 
-And that also means it's easier to keep our code clean. Breaking up programs into smaller, right-sized chunks can make it easier to understand, test, and refactor. When each part of the program [has one job and does that job well](/blog/wtf-is-single-responsibility-principle/), the whole system benefits.
+And that also means it's easier to keep our code clean. Breaking up programs into smaller, right-sized chunks can make it easier to understand, test, and refactor. When each part of the program [has one job and does that job well](/posts/wtf-is-single-responsibility-principle/), the whole system benefits.
 
 ## Other Closure References
 

@@ -2,7 +2,7 @@
 title: 7 Things that Make SQLite Unique and Awesome
 date: 2021-04-30
 description: SQLite is not like the others. But what makes it different also makes it a pretty cool database engine.
-image: /blog/210430/210430-sqlite-quirks.png
+image: /posts/210430/210430-sqlite-quirks.png
 tags:
   - repost-grouparoo
   - sqlite
@@ -61,7 +61,7 @@ In other words, if your column is of a certain series of types, SQLite will atte
 
 This can lead to chaos — like having the multiple data types in for the same column. But if you're using an [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping), those conversions will likely be handled for you and you won't have to worry about SQLite types.
 
-I went through a few examples to demonstrate this quirk with Node.js [in this post](/blog/understanding-types-sqlite-node).
+I went through a few examples to demonstrate this quirk with Node.js [in this post](/posts/understanding-types-sqlite-node).
 
 ## 7. Quotes are also flexible
 

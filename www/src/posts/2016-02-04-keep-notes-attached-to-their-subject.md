@@ -3,7 +3,7 @@ title: Keep Notes Attached To Their Subject
 tags:
   - organization
 description: It takes much more than a good app to keep your notes organized. Here's how I've been doing it lately.
-image: /blog/160204/149754989_e7f517336c_b.jpg
+image: /posts/160204/149754989_e7f517336c_b.jpg
 attribution:
   - name: Alexandre Dulaunoy
     url: https://www.flickr.com/photos/adulau/

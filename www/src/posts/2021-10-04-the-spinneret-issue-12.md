@@ -1,7 +1,7 @@
 ---
 title: "The Spinneret: Issue #12"
 description: And so begins the process of transforming the website from a traditional blog to a more focused learning and resource center.
-image: /blog/211004/the-spinneret--12.png
+image: /posts/211004/the-spinneret--12.png
 tags:
   - spinneret
 ---
@@ -11,10 +11,10 @@ tags:
 _Notable changes in my life, [on my website](https://github.com/seancdavis/seancdavis-com), and in other projects._ {.text-sm}
 
 {% post_image
-    src="/blog/211004/the-spinneret--my-code.png",
+    src="/posts/211004/the-spinneret--my-code.png",
     alt="The Spinneret - My Code" %}
 
-The big news this month is that I finally got back into writing [some code](https://github.com/seancdavis/seancdavis-com) for [my site](https://www.seancdavis.com/). This month and next are mostly behind-the-scenes features, but there are exciting things to come.
+The big news this month is that I finally got back into writing [some code](https://github.com/seancdavis/seancdavis-com) for [my site](/). This month and next are mostly behind-the-scenes features, but there are exciting things to come.
 
 Work is planned for about the next year and will result in an entirely new experience, one that I hope is better for you. It will no longer be just a blog, but will act as a more cohesive learning and resource center for developers (mostly front-end devs).
 
@@ -23,27 +23,27 @@ Work is planned for about the next year and will result in an entirely new exper
 _New blog posts and videos I published last month._ {.text-sm}
 
 {% post_image
-    src="/blog/211004/the-spinneret--my-words.png",
+    src="/posts/211004/the-spinneret--my-words.png",
     alt="The Spinneret - My Words" %}
 
 [The Jamstack Journey: A Guide on Transforming an Idea into a Website](https://www.stackbit.com/blog/jamstack-journey-transforming-idea-to-website/) was a culmination of several posts and a lot of work. It's the first significant milestone for me at Stackbit. But I'm mostly excited because now I can move on and pump out other posts on website-building best practices.
 
 [Astro: Build faster apps with less JavaScript](https://blog.logrocket.com/astro-build-faster-apps-less-javascript/) is a piece I wrote for LogRocket. (LogRocket's blog practice is _impressive_.) This was my chance to really dig into Astro, and I'm in love!
 
-[5 Reasons I'm Excited about Astro](/blog/five-reasons-excited-about-astro/) was a precursor article I wrote when working on the Astro tutorial. It's my argument for 1) why I think Astro is great, and 2) why you may not need to immediately jump from 11ty if that's your current SSG of choice.
+[5 Reasons I'm Excited about Astro](/posts/five-reasons-excited-about-astro/) was a precursor article I wrote when working on the Astro tutorial. It's my argument for 1) why I think Astro is great, and 2) why you may not need to immediately jump from 11ty if that's your current SSG of choice.
 
 And a few others:
 
 - [How to Separate Content from Website Code](https://www.stackbit.com/blog/jamstack-journey-separate-content/) <small>(Stackbit)</small>
-- [WTF is Visual Regression Testing?](/blog/wtf-is-visual-regression-testing/)
-- [WTF is Jest?](/blog/wtf-is-jest/)
+- [WTF is Visual Regression Testing?](/posts/wtf-is-visual-regression-testing/)
+- [WTF is Jest?](/posts/wtf-is-jest/)
 
 ## My Reads
 
 _Articles and news I read last month that I found interesting, with some commentary._ {.text-sm}
 
 {% post_image
-    src="/blog/211004/the-spinneret--my-reads.png",
+    src="/posts/211004/the-spinneret--my-reads.png",
     alt="The Spinneret - My Reads" %}
 
 [Nuxt v3 is being released in mid-October](https://nuxtjs.org/v3) and [Gatsby 4 is now in public beta](https://www.gatsbyjs.com/gatsby-4/)! This is significant because both tools are following in the footsteps of Next.js and introducing a hybrid model, where you can choose whether a page should be server-side or statically rendered. We're a long way from where the Jamstack began, but these evolutions mean more power in the hands of developers (especially _front-end_ developers), and I think that's a good thing.
@@ -69,7 +69,7 @@ And a handful more:
 _New tools that I've recently discovered. They aren't necessarily new._ {.text-sm}
 
 {% post_image
-    src="/blog/211004/the-spinneret--my-finds.png",
+    src="/posts/211004/the-spinneret--my-finds.png",
     alt="The Spinneret - My Finds" %}
 
 [Descript](https://www.descript.com/) is an all-in-one audio & video editing, as easy as a doc. I've been playing around with this and I really like it. It's not necessarily great for every type of video, but it's a handy tool. It's also the lowest cost transcription service I've found, although you'll absolutely have to edit the results.

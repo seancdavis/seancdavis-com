@@ -4,7 +4,7 @@ description: Jamstack's community sharing helps developers find the best tools. 
 tags:
   - repost-ample
   - jamstack
-image: /blog/200521/200521--settling-down-with-jamstack.png
+image: /posts/200521/200521--settling-down-with-jamstack.png
 canonical_url: https://www.ample.co/blog/settling-down-in-a-jamstack-world
 ---
 

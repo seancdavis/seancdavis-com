@@ -2,7 +2,7 @@
 title: Get user's Previous Path with NextJS Router
 date: 2021-02-17
 description: How to find the previous page a user visited before landing on the current page.
-image: /blog/210217/210217--next-prev-path.png
+image: /posts/210217/210217--next-prev-path.png
 tags:
   - repost-grouparoo
   - nextjs
@@ -37,22 +37,22 @@ To accomplish this, we used a React's `useEffect` to adjust these values [in our
 ```tsx
 // File: pages/_app.tsx
 
-import { useRouter } from "next/router"
-import { useEffect } from "react"
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function GrouparooWWW(props) {
-  const router = useRouter()
+  const router = useRouter();
 
-  useEffect(() => storePathValues, [router.asPath])
+  useEffect(() => storePathValues, [router.asPath]);
 
   function storePathValues() {
-    const storage = globalThis?.sessionStorage
-    if (!storage) return
+    const storage = globalThis?.sessionStorage;
+    if (!storage) return;
     // Set the previous path as the value of the current path.
-    const prevPath = storage.getItem("currentPath")
-    storage.setItem("prevPath", prevPath)
+    const prevPath = storage.getItem("currentPath");
+    storage.setItem("prevPath", prevPath);
     // Set the current path value by looking at the browser's location object.
-    storage.setItem("currentPath", globalThis.location.pathname)
+    storage.setItem("currentPath", globalThis.location.pathname);
   }
 
   // ...

@@ -7,9 +7,9 @@ permalink: "topic/{{ topic.fileSlug }}/feed.xml"
 eleventyComputed:
   metadata:
     title: "{{ topic.data.title }} | {{ seo_defaults.title }}"
-    subtitle: "Posts topicged with {{ topic.data.title }} on Sean C Davis's blog."
-    url: "{{ seo_defaults.base_url }}/blog/topic/{{ topic.fileSlug }}"
-    feedUrl: "{{ seo_defaults.base_url }}/blog/topic/{{ topic.fileSlug }}/feed.xml"
+    subtitle: "Posts tagged with {{ topic.data.title }} on Sean C Davis's blog."
+    url: "{{ seo_defaults.base_url }}/topics/{{ topic.fileSlug }}"
+    feedUrl: "{{ seo_defaults.base_url }}/topics/{{ topic.fileSlug }}/feed.xml"
     updated: "{{ topic.data.posts | rssLastUpdatedDate }}"
     author:
       name: Sean C Davis

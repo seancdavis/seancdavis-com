@@ -5,10 +5,10 @@ description: When you have access to the code inside an iFrame, you can
 tags:
   - html
   - javascript
-image: /blog/default/default-lime-02.png
+image: /posts/default/default-lime-02.png
 ---
 
-This is a more specific (and perhaps more useful) case built from [my base article on communicating with an iFrame](/blog/manipulate-iframe-content/). (That article has some base content, but it's not required to understand this article.)
+This is a more specific (and perhaps more useful) case built from [my base article on communicating with an iFrame](/posts/manipulate-iframe-content/). (That article has some base content, but it's not required to understand this article.)
 
 To quickly recap, as long as you have access to the source of the iframe (the code and domain on which the iframe is hosted), then you can communicate with it and, therefore, adjust its content (i.e. manipulate its DOM).
 
@@ -89,7 +89,7 @@ _Note: Using the anonymous function approach (`(function() {})()`) avoids placin
 
 The site with the iFrame will be _receiving_ your posted message.
 
-For toggling the theme, we may choose to place a class on the body and adjust the theme that way. A very basic example may have [CSS](/blog/wtf-is-css/) that looks like this:
+For toggling the theme, we may choose to place a class on the body and adjust the theme that way. A very basic example may have [CSS](/posts/wtf-is-css/) that looks like this:
 
 ```css
 body,

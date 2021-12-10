@@ -6,10 +6,10 @@ description: Yes, it's yet another CSS methodology. CDCSS combines inspiration
 tags:
   - components
   - css
-image: /blog/default/default-pink-03.png
+image: /posts/default/default-pink-03.png
 ---
 
-Writing clean [CSS](/blog/wtf-is-css/) code that is easy to maintain over the life of a growing and changing project is a challenging task. The only way to overcome such a challenge is to have a solid and consistent system that all developers understand and follow closely.
+Writing clean [CSS](/posts/wtf-is-css/) code that is easy to maintain over the life of a growing and changing project is a challenging task. The only way to overcome such a challenge is to have a solid and consistent system that all developers understand and follow closely.
 
 And there are plenty of systems out there that aim to solve just that challenge, such as:
 
@@ -20,7 +20,7 @@ And there are plenty of systems out there that aim to solve just that challenge,
 
 Each of these approaches has value in its own way, but I've never been able to keep to one of these over the life of project. They were either too broad (OOCSS, ACSS) in that they require some other set of rules in order to be implemented consistently, or they were too constraining (BEM, SMACSS) and thus, too complicated.
 
-So, using the [three principles of good CSS design](/blog/three-principles-good-css-design/) -- consistency, succinctness, and separation -- I used inspiration from each of these approaches to create a unified component-Driven CSS methodology.
+So, using the [three principles of good CSS design](/posts/three-principles-good-css-design/) -- consistency, succinctness, and separation -- I used inspiration from each of these approaches to create a unified component-Driven CSS methodology.
 
 ## Component-Driven CSS
 

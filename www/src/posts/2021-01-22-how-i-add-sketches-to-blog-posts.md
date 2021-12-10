@@ -1,7 +1,7 @@
 ---
 title: "How I Add Sketches to Blog Posts"
 description: "Visual support is a great to add context and meaning to abstract or theoretical text. This is how I sketch for blog posts today."
-image: /blog/210122/post-sketch-step-01.png
+image: /posts/210122/post-sketch-step-01.png
 tags: []
 ---
 
@@ -9,7 +9,7 @@ Adding visual references to blog posts is a great way to help a reader understan
 
 But when it comes to making the graphics, I've always struggled. I like good design, I appreciate good design, I'm a bit of a perfectionist, and I'm also not very good at designing things.
 
-In my early blogging days, I made used an art program like [Adobe Illustrator](https://www.adobe.com/products/illustrator) or [Sketch](https://www.sketch.com/). [This article](/blog/how-the-web-works/) has an early version of my approach (branded for the blog on which it was first published). But getting those right was time-consuming. I wanted the graphics to remain refined, but I didn't work in those art programs for hours trying to get it right. I knew I wasn't going to be efficient with my approach, given the low frequency at which I had to create art files.
+In my early blogging days, I made used an art program like [Adobe Illustrator](https://www.adobe.com/products/illustrator) or [Sketch](https://www.sketch.com/). [This article](/posts/how-the-web-works/) has an early version of my approach (branded for the blog on which it was first published). But getting those right was time-consuming. I wanted the graphics to remain refined, but I didn't work in those art programs for hours trying to get it right. I knew I wasn't going to be efficient with my approach, given the low frequency at which I had to create art files.
 
 Within the last year, my writing has transitioned more conceptual and theoretical — a healthy balance of _how-tos_ and _what-ifs_. That has pushed me to figure out how to get back into adding visuals to posts. I didn't want to go down that same road of tedium and frustration.
 
@@ -32,25 +32,25 @@ This is my process today:
 {% post_image
     tag="span",
     alt="Blog Posts Sketch - Step 1",
-    src="/blog/210122/post-sketch-step-01.png" %}
+    src="/posts/210122/post-sketch-step-01.png" %}
 
 **Step 2:** Open the note in Notability on the Mac laptop.
 
 {% post_image tag="span",
     alt="Blog Posts Sketch - Step 2",
-    src="/blog/210122/post-sketch-step-02.png" %}
+    src="/posts/210122/post-sketch-step-02.png" %}
 
 **Step 3:** Open the PDF in Preview and export each page individually as a JPG.
 
 {% post_image tag="span",
     alt="Blog Posts Sketch - Step 3",
-    src="/blog/210122/post-sketch-step-03.png" %}
+    src="/posts/210122/post-sketch-step-03.png" %}
 
 **Step 4:** Open the JPG up in Preview. Crop it and re-save.
 
 {% post_image tag="span",
     alt="Blog Posts Sketch - Step 4",
-    src="/blog/210122/post-sketch-step-04.png" %}
+    src="/posts/210122/post-sketch-step-04.png" %}
 
 Then I have the images I need for the post. And I have the sketches stored digitally in Notability, so if I need to go back and edit at some point, it's no big deal, I just go through all these steps again.
 

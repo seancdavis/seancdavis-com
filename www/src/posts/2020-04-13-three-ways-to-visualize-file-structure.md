@@ -3,14 +3,14 @@ title: Three Ways to Visualize File Structure in Documentation
 description: There are several methods for representing file trees. Here are
   three, along with some quick pros and cons for each.
 tags: []
-image: /blog/default/default-lime-01.png
+image: /posts/default/default-lime-01.png
 ---
 
 I was writing some documentation for an [Ample](https://www.helloample.com/) internal project a few weeks ago in which I wanted to show the way a project's files and directories were organized.
 
 Many prefer to visualize this structure in a tree format. For example, here's the _List_ view in Mac's Finder application:
 
-{% post_image src="/blog/200413/mac-finder-list-view.png" %}
+{% post_image src="/posts/200413/mac-finder-list-view.png" %}
 
 As I wrote the doc, I considered the ways in which I have achieved this type of visualization in the past.
 

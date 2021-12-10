@@ -5,7 +5,7 @@ tags:
   - ruby-on-rails
 description: Sometimes you want to disable some of the default rake tasks in a
   rails project. Here's a quick way to do just that.
-image: /blog/default/default-blue-02.png
+image: /posts/default/default-blue-02.png
 ---
 
 I had a project where I wanted to limit the use of `db` rake tasks to keep anyone from accidentally deleting the database.

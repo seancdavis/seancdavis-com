@@ -3,7 +3,7 @@ title: 4 Reasons to Work on Side Projects
 tags:
   - inspiration
 description: "To get the most out of the side projects you work on, every project should provide you with at least one of four key benefits."
-image: /blog/190504/photo-1530229540764-5f6ab595fdbe.jpg
+image: /posts/190504/photo-1530229540764-5f6ab595fdbe.jpg
 attribution:
   - name: Jason Leung
     url: https://unsplash.com/@ninjason

@@ -3,7 +3,7 @@ title: Use Personal Goals to Shape Everything You Do
 tags:
   - productivity
 description: "Many jobs have formal goal-setting and goal-measuring programs. You should be doing the same for yourself and your personal life."
-image: /blog/190128/photo-1519009843775-0105e5e6d92c.jpg
+image: /posts/190128/photo-1519009843775-0105e5e6d92c.jpg
 attribution:
   - name: Patrick Fore
     url: https://unsplash.com/@patrickian4
@@ -57,7 +57,7 @@ You may have guessed it, but the _most_ important aspect of one-year goals is th
 
 ## Working & Checking In
 
-It's important that the one-year goals are extensive enough that you can look at anything you do as contributing to achieving one of those goals. When [building your daily, weekly, or monthly task lists](/blog/solution-to-task-list-woes), each item in the list should support and move closer to achieving a one-year goal.
+It's important that the one-year goals are extensive enough that you can look at anything you do as contributing to achieving one of those goals. When [building your daily, weekly, or monthly task lists](/posts/solution-to-task-list-woes), each item in the list should support and move closer to achieving a one-year goal.
 
 And it's important that you check in with your list of goals regularly to ensure you are making proper progress. I look at my list of measurable goals at the beginning of every month. That's when I update the numbers, checking to see if I am on track to hit those goals.
 

@@ -4,7 +4,7 @@ description: A quick introduction what fixtures are in software, along with
   other purposes they can serve.
 tags:
   - wtf
-image: /blog/default/default-lime-01.png
+image: /posts/default/default-lime-01.png
 ---
 
 In software engineering, a _test fixture_, often shortened to _fixture_, is a mechanism for putting code in a _fixed_ state so it can be more easily tested. Fixtures enable tests to focus on the specific thing being tested, rather that needing to worry about setting up and tearing down before and after the test is run.

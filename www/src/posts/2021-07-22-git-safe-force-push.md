@@ -1,7 +1,7 @@
 ---
 title: Safely Force Pushing in Git
 description: "If force-pushing is part of your git workflow, here's a tip that can help you avoid disaster."
-image: /blog/210722/green--git-push.png
+image: /posts/210722/green--git-push.png
 tags:
   - git
 ---
@@ -19,7 +19,7 @@ If you use [the `--force-with-lease` option](https://git-scm.com/docs/git-push#D
 Let's say that code was merged into the main branch, resulting in a commit that we don't have in our feature branch. It looks like this:
 
 {% post_image
-    src="/blog/210722/210621--git-feature-branch.png",
+    src="/posts/210722/210621--git-feature-branch.png",
     alt="git feature branch",
     flatten=true %}
 
@@ -39,7 +39,7 @@ To bring our feature branch up to date, we use rebase after updating our local c
 That results in a landscape that looks like this:
 
 {% post_image
-    src="/blog/210722/210621--git-remote-rebase.png",
+    src="/posts/210722/210621--git-remote-rebase.png",
     alt="git remote rebase",
     flatten=true %}
 
@@ -48,7 +48,7 @@ Now we have commit `B` on our _local_ feature branch, but it's still not in the 
 That means we have a different history. So if we tried to push, the remote repository won't let us do it.
 
 {% post_image
-    src="/blog/210722/210621--git-remote-rebase-fail.png",
+    src="/posts/210722/210621--git-remote-rebase-fail.png",
     alt="git remote rebase fail",
     flatten=true %}
 
@@ -81,7 +81,7 @@ Imagine a scenario in which you've gone through the process of rebasing against 
 In this case, if you ran `git push --force` you would lose commit `D`. But if you use `--force-with-lease` instead, you'll get a failure and know that you have to pull before pushing again with `--force-with-lease`.
 
 {% post_image
-    src="/blog/210722/210621--git-remote-force-lease-fail.png",
+    src="/posts/210722/210621--git-remote-force-lease-fail.png",
     alt="git remote force lease fail",
     flatten=true %}
 

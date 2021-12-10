@@ -1,7 +1,7 @@
 ---
 title: The Biggest Bug
 description: "Programmers spend so much time architecting the perfect codebase, when the code itself relies on a system that is inherently flawed."
-image: /blog/170313/the-biggest-bug.png
+image: /posts/170313/the-biggest-bug.png
 attribution:
   - name: Markus Spiske
     url: https://unsplash.com/@markusspiske

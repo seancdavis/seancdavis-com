@@ -3,7 +3,7 @@ title: A Puzzle Without a Box
 tags:
   - inspiration
 description: "Just as a jigsaw puzzle needs a box, a solution needs the thing that will focus and guide it to success."
-image: /blog/190415/photo-1494059980473-813e73ee784b.jpg
+image: /posts/190415/photo-1494059980473-813e73ee784b.jpg
 attribution:
   - name: Hans-Peter Gauster
     url: https://unsplash.com/@sloppyperfectionist

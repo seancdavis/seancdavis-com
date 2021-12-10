@@ -1,14 +1,14 @@
 ---
 title: How to Separate Content from Website Code
 description: It's much easier to maintain a site over time when the content is separate from the code. Walk through that process using a real example with Eleventy.
-image: /blog/210824/210824--code-v-content.jpeg
+image: /posts/210824/210824--code-v-content.jpeg
 canonical_url: https://www.stackbit.com/blog/jamstack-journey-separate-content/
 tags:
   - repost-stackbit
   - eleventy
 ---
 
-We covered the process of moving from static HTML files to a [static site generator](https://www.seancdavis.com/blog/wtf-is-ssg/) (SSG) [in the precursor to this article](/blog/jamstack-journey-templatize-static-html/). Here we're going to look at taking your SSG game to the next level by transforming it into content-driven engine. Together, these two steps make up a few parts of _The Jamstack Journey_.
+We covered the process of moving from static HTML files to a [static site generator](/posts/wtf-is-ssg/) (SSG) [in the precursor to this article](/posts/jamstack-journey-templatize-static-html/). Here we're going to look at taking your SSG game to the next level by transforming it into content-driven engine. Together, these two steps make up a few parts of _The Jamstack Journey_.
 
 Let's dive in!
 
@@ -26,7 +26,7 @@ The first step in the process is to separate content from presentation. Your tem
 For example, you might have a blog post represented as `my-first-post.html` that looks something like this:
 
 {% post_image
-    src="/blog/210824/210824--post-after-templatizing.png",
+    src="/posts/210824/210824--post-after-templatizing.png",
     alt="Blog post after templatizing",
     flatten="true",
     maxWidth="xs" %}
@@ -36,7 +36,7 @@ It doesn't have any layout elements because those have all been abstracted away 
 Converting this to a content driven approach means we can convert the HTML file into a content-based file, like markdown (e.g. `my-first-post.md`). And then that content can be fed into the main post layout. Like this:
 
 {% post_image
-    src="/blog/210824/210824--after-transformation.png",
+    src="/posts/210824/210824--after-transformation.png",
     alt="Blog post after transformation",
     flatten="true",
     classes="px-8 my-6" %}
@@ -158,7 +158,7 @@ Then we can move through the file meticulously and extract elements one at a tim
 For example, say we wanted to adjust the copy under "Unmute yours" in the jumbotron.
 
 {% post_image
-    src="/blog/210824/210824--unmute-jumbotron.png",
+    src="/posts/210824/210824--unmute-jumbotron.png",
     alt="Unmute website jumbotron" %}
 
 Maybe we make a new object for `jumbotron` and then add a `body` section to it. Your `index.md` file would look like this:

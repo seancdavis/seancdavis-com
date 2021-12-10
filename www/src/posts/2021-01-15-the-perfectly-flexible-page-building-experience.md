@@ -4,7 +4,7 @@ description: We use a Flexible Page Model to find the sweet spot between flexibi
 tags:
   - repost-ample
   - cms
-image: /blog/210115/210115--flexible-page-building.png
+image: /posts/210115/210115--flexible-page-building.png
 canonical_url: https://www.ample.co/blog/the-perfectly-flexible-page-building-experience
 ---
 
@@ -17,7 +17,7 @@ Consider this...
 At one end of the spectrum we have the super experienced content editor (i.e. a developer dressed in a content editor costume). We could give them a title field, the ability to set SEO meta values, and then a blank body field in which they could add HTML and CSS.
 
 {% post_image
-    src="/blog/210115/6001fd502d90f370db5d6da6_flexible-page-model--flexible.jpg",
+    src="/posts/210115/6001fd502d90f370db5d6da6_flexible-page-model--flexible.jpg",
     alt="Diagram: Website and CMS",
     flatten="true" %}
 
@@ -26,7 +26,7 @@ That's the ultimate flexibility for a CMS. But it also only works for those who 
 On the other end of the spectrum we have the marketing newbie who has never used a content management system before, but has been tasked with managing the content of a site. In that case, the page fields should be specific. They should be more structured fields whose values map to specific areas on the screen.
 
 {% post_image
-    src="/blog/210115/6001fdd3b8cd6a304727c44d_flexible-page-model--structured.jpg",
+    src="/posts/210115/6001fdd3b8cd6a304727c44d_flexible-page-model--structured.jpg",
     alt="Diagram: CMS content presented in a website",
     flatten="true" %}
 
@@ -43,14 +43,14 @@ We've found that it works better if we provide _some_ foundation (i.e. _structur
 Take a look at this section of a page:
 
 {% post_image
-    src="/blog/210115/5ffe10758056a67d955cb590_flexible-page-01a@2x.png",
+    src="/posts/210115/5ffe10758056a67d955cb590_flexible-page-01a@2x.png",
     alt="A simple graphic of a webpage",
     flatten="true" %}
 
 This page could be broken down into components, into _reusable pieces_. There's no right answer for how to do this, but here's one approach:
 
 {% post_image
-    src="/blog/210115/6001fe859fae4cf2d9b1a0e5_flexible-page-02b@2x.png",
+    src="/posts/210115/6001fe859fae4cf2d9b1a0e5_flexible-page-02b@2x.png",
     alt="Flexible Page",
     flatten="true" %}
 
@@ -67,14 +67,14 @@ Every CMS is different when it comes to implementing the Flexible Page Model. In
 Here's an example within [Contentful](https://www.contentful.com/):
 
 {% post_image
-    src="/blog/210115/6001fed7393730031c5c0745_flexible-page-model--contentful.png",
+    src="/posts/210115/6001fed7393730031c5c0745_flexible-page-model--contentful.png",
     alt="Screenshot from Contentful component blocks",
     flatten="true" %}
 
 A similar approach in [Forestry](https://www.forestry.io/) ends looks similar, but behaves quite differently:
 
 {% post_image
-    src="/blog/210115/6001ff250501ba723bdf9371_flexible-page-model--forestry.png",
+    src="/posts/210115/6001ff250501ba723bdf9371_flexible-page-model--forestry.png",
     alt="Screenshot from Forestry showing component blocks",
     flatten="true" %}
 

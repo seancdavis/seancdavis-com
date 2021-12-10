@@ -1,7 +1,7 @@
 ---
 title: Your Employees Aren't Working 40 Hours Per Week
 description: "The traditional work week is highly inefficient. If we really want 40 hours, let's get 40 hours of actual work done."
-image: /blog/150804/4686810899_6fe5962d2f_b.jpg
+image: /posts/150804/4686810899_6fe5962d2f_b.jpg
 attribution:
   - name: Kamil Porembiński
     url: https://www.flickr.com/photos/paszczak000/

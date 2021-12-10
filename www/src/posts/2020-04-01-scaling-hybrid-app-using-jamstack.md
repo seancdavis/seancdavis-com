@@ -10,12 +10,12 @@ tags:
   - jamstack
   - middleman
   - netlify
-image: /blog/default/default-orange-01.png
+image: /posts/default/default-orange-01.png
 ---
 
-A few years into my development career, a local non-profit approached me about building them a mobile application. I took the project on ([with an unconventional approach to pricing](/blog/alternative-approach-to-limited-budget-projects/)), and spent the next few months building a [hybrid applications](https://getgist.com/difference-between-native-vs-web-vs-hybrid-apps/). I chose to use the first version of [Ionic](https://ionicframework.com/), which was built exclusively on [AngularJS](https://angularjs.org/).
+A few years into my development career, a local non-profit approached me about building them a mobile application. I took the project on ([with an unconventional approach to pricing](/posts/alternative-approach-to-limited-budget-projects/)), and spent the next few months building a [hybrid applications](https://getgist.com/difference-between-native-vs-web-vs-hybrid-apps/). I chose to use the first version of [Ionic](https://ionicframework.com/), which was built exclusively on [AngularJS](https://angularjs.org/).
 
-The application used data retrieved from an open-source [headless CMS](/blog/wtf-is-headless-cms/) that I created. It was my fourth version of my homegrown CMS, and I was excited to introduce a client to the product. (Some free sidebar advice: [_Build your own CMS. But also, don't._](/blog/build-cms-dont-build-cms/).) The app took the data from the CMS, via its API, transformed it, then rendered it in the app so local community members could consume.
+The application used data retrieved from an open-source [headless CMS](/posts/wtf-is-headless-cms/) that I created. It was my fourth version of my homegrown CMS, and I was excited to introduce a client to the product. (Some free sidebar advice: [_Build your own CMS. But also, don't._](/posts/build-cms-dont-build-cms/).) The app took the data from the CMS, via its API, transformed it, then rendered it in the app so local community members could consume.
 
 That project had gone so well that it led to another, similar project for that same client. The second project was in support of a biennial event the organization planned to hold. It was to be a single-day event in which volunteers would check-in registered attendees at multiple sites. The attendees would explore these sites, using the app along the way. Therefore, the app needed to include registration, check-in (with auth for volunteers), along with a handful of similar features from the original application.
 
@@ -25,7 +25,7 @@ Well, the event happened. It was a huge success in terms of the number of attend
 
 Two years later that event was to take place once again. Needless to say, the primary concern was addressing the performance issues of the first event. And this time, the org was expecting additional scale, up to 1,000% of the first year.
 
-By the time planning for the second event commenced, I had been working with the headless CMS approach for years, and I was building most of my front-end sites and applications using [the Jamstack](/blog/wtf-is-jamstack/).
+By the time planning for the second event commenced, I had been working with the headless CMS approach for years, and I was building most of my front-end sites and applications using [the Jamstack](/posts/wtf-is-jamstack/).
 
 Knowing I needed to deliver the same features from the first version (registration, check-in, content), while being sensitive to performance at scale, I worked with the client to make three major changes. Together, these changes _drastically_ improved the performance of the application, and scaling wasn't an issue.
 
@@ -43,7 +43,7 @@ Unfortunately, while Eventbrite supports a check-in process, it only does so for
 
 So the next thing I did was to extract the check-in process from the app and move it to its own (web) application. Once again, it felt like we were breaking out a crucial element of the application. We were. But the attendees never saw it, only the volunteers. And the volunteers didn't care where the check-in process lived, they just had to be able to access it with their mobile device.
 
-I built that feature using [GatsbyJS](https://www.gatsbyjs.org/), which pulled data from Eventbrite and provided a means for volunteers to check attendees in. We deployed that site to [Netlify](/blog/wtf-is-netlify/). (I realize plain old [React](https://reactjs.org/), or even [Next.js](https://nextjs.org/), would have been a more appropriate choice, but it was crunch-time and I was already familiar with Gatsby.)
+I built that feature using [GatsbyJS](https://www.gatsbyjs.org/), which pulled data from Eventbrite and provided a means for volunteers to check attendees in. We deployed that site to [Netlify](/posts/wtf-is-netlify/). (I realize plain old [React](https://reactjs.org/), or even [Next.js](https://nextjs.org/), would have been a more appropriate choice, but it was crunch-time and I was already familiar with Gatsby.)
 
 That being said, it wasn't the front-end that was the problem. It was that we were posting registrations to the CMS, and they were getting in the way of attendees retrieving content from that same CMS during the event.
 
@@ -63,7 +63,7 @@ Instead, I came up with a different idea: I could build an API in between the cu
 
 This was beneficial because it effectively future-proofed the application. It changed the data source URL to one that we owned that was specific to the application. Therefore, _if_ we did want to swap out the underlying data layer in the future, we could, and we wouldn't have to push an update to the application.
 
-The trick was that the data layer would have to be suuuuper speedy because it was going to get absolutely pounded for a few hours. After a lot of research on hosted GraphQL solutions and caching mechanisms, I had a thought — _what if I hosted a [**static API**](/blog/lets-talk-about-static-apis/) on Netlify?_
+The trick was that the data layer would have to be suuuuper speedy because it was going to get absolutely pounded for a few hours. After a lot of research on hosted GraphQL solutions and caching mechanisms, I had a thought — _what if I hosted a [**static API**](/posts/lets-talk-about-static-apis/) on Netlify?_
 
 So that's exactly what I did. I spun up a Middleman site (literally, using the [_Middleman_ framework](https://middlemanapp.com/)). I know, Middleman isn't the cool kid in town, and I was already using Gatsby, but a) I was familiar with Middleman, b) Middleman makes it easy to build simple JSON pages, and c) so does [Jekyll](https://jekyllrb.com/), but I was having a power struggle with Jekyll in those days.
 

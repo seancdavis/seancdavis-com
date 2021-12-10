@@ -4,12 +4,12 @@ description: No need to mess with Apache or Nginx to run a web server on your
   local machine. Just use this ruby command.
 tags:
   - ruby
-image: /blog/default/default-green-03.png
+image: /posts/default/default-green-03.png
 ---
 
 Running a web server on your local machine doesn't have to be complicated. If you already have ruby installed on your machine, you can use a simple command to run a web server from any directory on any port.
 
-_If you don't want to use ruby, you can use [this node command](/blog/run-local-web-server-node/) instead._
+_If you don't want to use ruby, you can use [this node command](/posts/run-local-web-server-node/) instead._
 
 First, change to your project's root directory:
 

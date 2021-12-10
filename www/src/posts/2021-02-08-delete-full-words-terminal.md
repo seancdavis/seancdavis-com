@@ -1,7 +1,7 @@
 ---
 title: "Delete Entire Word in Terminal and iTerm2"
 description: Ever find yourself holding down the Delete key on the command line? Here's a way to work faster.
-image: /blog/210208/git-push-graphic.png
+image: /posts/210208/git-push-graphic.png
 tags:
   - productivity
   - quick-tip
@@ -20,7 +20,7 @@ But often it would be better to delete one word at a time, as you can in most te
 3. Check _Use Option as Meta key_.
 
 {% post_image
-    src="/blog/210208/option-delete-terminal.png",
+    src="/posts/210208/option-delete-terminal.png",
     alt="Option+Delete in Terminal",
     flatten=true %}
 
@@ -31,6 +31,6 @@ But often it would be better to delete one word at a time, as you can in most te
 3. Choose _Esc+_ for one or both option keys.
 
 {% post_image
-    src="/blog/210208/option-delete-iterm2.png",
+    src="/posts/210208/option-delete-iterm2.png",
     alt="Option+Delete in iTerm2",
     flatten=true %}

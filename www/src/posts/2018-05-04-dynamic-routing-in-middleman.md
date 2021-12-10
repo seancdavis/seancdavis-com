@@ -5,7 +5,7 @@ description: Take Middleman's dynamic pages feature, combine it with data
 tags:
   - middleman
   - ruby
-image: /blog/default/default-green-01.png
+image: /posts/default/default-green-01.png
 ---
 
 One of Middleman's most powerful features is [dynamic pages](https://middlemanapp.com/advanced/dynamic-pages/). While it can be cumbersome, it's so much more flexible than [Jekyll's collections feature](https://jekyllrb.com/docs/collections/) that it's one of the main reasons I use Middleman over Jekyll.

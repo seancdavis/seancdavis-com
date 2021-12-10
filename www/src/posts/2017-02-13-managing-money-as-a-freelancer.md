@@ -3,7 +3,7 @@ title: Managing Money as a Freelancer
 tags:
   - organization
 description: "When you approach money management as a freelancer, especially a new freelancer, be scientific, conservative, and strict."
-image: /blog/170213/photo-1526304640581-d334cdbbf45e.jpg
+image: /posts/170213/photo-1526304640581-d334cdbbf45e.jpg
 attribution:
   - name: Sharon McCutcheon
     url: https://unsplash.com/@sharonmccutcheon

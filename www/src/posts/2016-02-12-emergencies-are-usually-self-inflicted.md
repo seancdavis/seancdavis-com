@@ -3,7 +3,7 @@ title: Emergencies Are Usually Self-Inflicted
 tags:
   - productivity
 description: "An emergency in the business world is stressful. Many times we bring those emergencies on ourselves. It's time to put a stop to it!"
-image: /blog/160212/3276031564_d7e131189a_b.jpg
+image: /posts/160212/3276031564_d7e131189a_b.jpg
 attribution:
   - name: Matthew Rogers
     url: https://www.flickr.com/photos/rogersmj/

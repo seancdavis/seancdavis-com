@@ -5,7 +5,7 @@ description: When you write an article or create any new webpage that is going
   that new property is going to be displayed.
 tags:
   - seo
-image: /blog/default/default-green-01.png
+image: /posts/default/default-green-01.png
 ---
 
 When a webpage gets shared -- on [Facebook](https://www.facebook.com/), [Twitter](https://twitter.com/), [Slack](https://slack.com/), [Medium](https://medium.com/), etc. -- there is often some sort of preview of that page which shows (if available) a title, text snippet, and image. When you are the author of such content it's important that you have control over the information that gets displayed when others share links to your content.

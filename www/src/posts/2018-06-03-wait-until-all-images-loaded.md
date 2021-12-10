@@ -5,14 +5,14 @@ description: When you don't want to perform an action until the browser has
 tags:
   - html
   - javascript
-image: /blog/default/default-lime-02.png
+image: /posts/default/default-lime-02.png
 ---
 
 Not know the state of images being loaded can have several side effects.
 
 At the very least, you can run into the (classic) jagged and unpredictable loading behavior:
 
-{% post_image alt="Jagged Image Loading", src="/blog/180603/jagged-image-loading.gif" %}
+{% post_image alt="Jagged Image Loading", src="/posts/180603/jagged-image-loading.gif" %}
 
 But it can lead to more serious problems, too. One I've run into in the past is looking for an images dimensions and getting `0` as the result because my function fires before the image is on the page and has physical dimensions.
 
@@ -25,23 +25,23 @@ In the simplest scenario, you can do something like this (assuming the use of jQ
 ```js
 $(document).ready(function () {
   // When we begin, assume no images are loaded.
-  var imagesLoaded = 0
+  var imagesLoaded = 0;
   // Count the total number of images on the page when the page has loaded.
-  var totalImages = $("img").length
+  var totalImages = $("img").length;
 
   // After an image is loaded, add to the count, and if that count equals the
   // total number of images, fire the allImagesLoaded() function.
   $("img").on("load", function (event) {
-    imagesLoaded++
+    imagesLoaded++;
     if (imagesLoaded == totalImages) {
-      allImagesLoaded()
+      allImagesLoaded();
     }
-  })
+  });
 
   function allImagesLoaded() {
-    console.log("ALL IMAGES LOADED")
+    console.log("ALL IMAGES LOADED");
   }
-})
+});
 ```
 
 All this does is look at _all_ the images on the page and once they are all loaded, it fires the `allImagesLoaded()` function which simply prints a message to the console.
@@ -61,51 +61,51 @@ To do so, we're going to clone every image behind the scenes (i.e. without rende
 ```js
 $(document).ready(function () {
   // Images loaded is zero because we're going to process a new set of images.
-  var imagesLoaded = 0
+  var imagesLoaded = 0;
   // Total images is still the total number of <img> elements on the page.
-  var totalImages = $("img").length
+  var totalImages = $("img").length;
 
   // Step through each image in the DOM, clone it, attach an onload event
   // listener, then set its source to the source of the original image. When
   // that new image has loaded, fire the imageLoaded() callback.
   $("img").each(function (idx, img) {
-    $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"))
-  })
+    $("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
+  });
 
   // Do exactly as we had before -- increment the loaded count and if all are
   // loaded, call the allImagesLoaded() function.
   function imageLoaded() {
-    imagesLoaded++
+    imagesLoaded++;
     if (imagesLoaded == totalImages) {
-      allImagesLoaded()
+      allImagesLoaded();
     }
   }
 
   function allImagesLoaded() {
-    console.log("ALL IMAGES LOADED")
+    console.log("ALL IMAGES LOADED");
   }
-})
+});
 ```
 
 The trick is all in this line:
 
 ```js
-$("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"))
+$("<img>").on("load", imageLoaded).attr("src", $(img).attr("src"));
 ```
 
 There's a lot going on in this line, so let's break it down. We _could_ also write this one-liner like this:
 
 ```js
 // img is a generic <img> element that is not rendered to the DOM.
-var newImg = $("<img>")
+var newImg = $("<img>");
 
 // When the image is loaded, call imageLoaded() function.
-newImg.on("load", imageLoaded)
+newImg.on("load", imageLoaded);
 
 // Set the source of the new image to match that of the <img> element that has
 // been rendered to the DOM.
-var src = $(img).attr("src")
-newImg.attr("src", src)
+var src = $(img).attr("src");
+newImg.attr("src", src);
 ```
 
 We add an event listener to this generic image element _before_ adding its source. That way we can be certain the load event listener will capture the load event.

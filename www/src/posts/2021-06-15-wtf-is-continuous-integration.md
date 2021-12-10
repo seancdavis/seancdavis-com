@@ -1,7 +1,7 @@
 ---
 title: "WTF is Continuous Integration?"
 description: "Continuous integration was coined as an extreme programming practice, but is used more loosely today."
-image: /blog/210615/wtf--continuous-integration.png
+image: /posts/210615/wtf--continuous-integration.png
 tags:
   - testing
 ---

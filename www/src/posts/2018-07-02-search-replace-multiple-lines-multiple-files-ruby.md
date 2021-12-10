@@ -4,7 +4,7 @@ description: There are many tools for searching and replacing, but most don't
   support changing multiple lines in one process.
 tags:
   - ruby
-image: /blog/default/default-lime-01.png
+image: /posts/default/default-lime-01.png
 ---
 
 There are a lot of tools out there for searching and replacing across multiple files. Heck, even the code editor I'm using now -- [VS Code](https://code.visualstudio.com/) -- supports search and replace (and it's pretty quick about it).

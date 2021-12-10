@@ -7,14 +7,14 @@ description: Netlify forms are an incredibly powerful feature. They enable you
 tags:
   - jamstack
   - netlify
-image: /blog/default/default-yellow-02.png
+image: /posts/default/default-yellow-02.png
 ---
 
-Form Handling is an extremely powerful component within [Netlify's](/blog/wtf-is-netlify/) product, as it provides a way to accept dynamic data from users on a static site.
+Form Handling is an extremely powerful component within [Netlify's](/posts/wtf-is-netlify/) product, as it provides a way to accept dynamic data from users on a static site.
 
 It's like [Formspree](https://formspree.io/) or [FormKeep](https://formkeep.com/), but I prefer Netlify's forms feature because it _just works_. There's no signing up for a third-party service. You just add a little markup to your site and — _Voila!_ — you have a form that sends its submissions to Netlify, which then stores the form data on your behalf. An added benefit is that Netlify currently offers 100 submissions per month, sourced from an unlimited number of forms, free of charge. That's a better free tier than either Formspree or FormKeep.
 
-If you are building a truly static site — where all the [HTML](/blog/wtf-is-html/) markup is contained within HTML files, rather than being generated dynamically by JavaScript (JS/) — it really is _that easy_ to work with Netlify forms.
+If you are building a truly static site — where all the [HTML](/posts/wtf-is-html/) markup is contained within HTML files, rather than being generated dynamically by JavaScript (JS/) — it really is _that easy_ to work with Netlify forms.
 
 I recently went through the process of adding Netlify's form handling to a [Gatsby](https://www.gatsbyjs.org/) site, why was not _that easy_. Gatsby is a [static site generator](https://www.staticgen.com/) built on top of React. Thus, it's essentially a React app that has pre-cached the data it renders. In other words, Gatsby renders its HTML using JavaScript and, because it's not just a bunch of static HTML files, working with Netlify forms was a bit more complicated.
 
@@ -80,8 +80,8 @@ When submitting forms asynchronously via JavaScript, you are in control of the d
 The [query-string](https://github.com/sindresorhus/query-string) JS library has a handy `stringify` method that handles this transformation for you. Suppose you imported that library as a variable, `qs`. Then your data would look something like this:
 
 ```js
-let formData = { "form-name": "My Form", first_name: "Sean" }
-const dataToSend = qs.stringify(formData)
+let formData = { "form-name": "My Form", first_name: "Sean" };
+const dataToSend = qs.stringify(formData);
 ```
 
 I should also mention that you should specify the content type in the headers you send. In other words, the `Content-Type` header should have a value of `application/x-www-form-urlencoded`.

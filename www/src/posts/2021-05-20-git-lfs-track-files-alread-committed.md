@@ -1,7 +1,7 @@
 ---
 title: Use git-lfs on File Already Committed
 description: Using Git LFS on a file that is already being track without it requires an extra step.
-image: /blog/210520/pink--git-lfs-help.png
+image: /posts/210520/pink--git-lfs-help.png
 tags:
   - git
 ---

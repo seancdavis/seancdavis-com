@@ -3,7 +3,7 @@ title: "Never Half-Ass Two Things, Whole-Ass One Thing"
 tags:
   - inspiration
 description: "It's important to give everything in your life the effort it requires to succeed, but that doesn't mean you're limited to one thing."
-image: /blog/160210/16358796104_9bc0fe1597_h.jpg
+image: /posts/160210/16358796104_9bc0fe1597_h.jpg
 attribution:
   - name: The Huntington
     url: https://www.flickr.com/photos/huntingtontheatreco/

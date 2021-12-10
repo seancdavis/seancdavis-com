@@ -3,7 +3,7 @@ title: "We Can't Do It All On Our Own"
 tags:
   - inspiration
 description: "Using research on trees to learn to ask for help and appreciate those who have helped you."
-image: /blog/170212/photo-1446488402115-23476addcdf5.jpg
+image: /posts/170212/photo-1446488402115-23476addcdf5.jpg
 attribution:
   - name: Keghan Crossland
     url: https://unsplash.com/@keghancphoto

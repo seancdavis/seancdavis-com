@@ -1,7 +1,7 @@
 ---
 title: When to Use JPGs, PNGs and GIFs on the Web
 description: Each filetype has its own place on the web. See where they fit in.
-image: /blog/default/default-green-01.png
+image: /posts/default/default-green-01.png
 ---
 
 The other day my boss asked me to send a graphic. I sent a PNG, but was informed it needed to be a JPG. That seemed an appropriate opportunity to utter my generation's mantra -- _Why?_ Like many conversations that begin with, _I need this filetype instead of that_, I found it wasn't really a need.
@@ -36,7 +36,7 @@ If you're storing and using locally or using in other artwork programs, you shou
 
 ### Web Icons
 
-I'd use PNG only to create complex artwork files you couldn't have otherwise created with CSS. Today, [CSS](/blog/wtf-is-css/) is capable of enabling you to create many web elements. And you can't beat CSS for crisp, clear images. Therefore, things like buttons and gradient backgrounds should never be created with an artwork program, but should be created using CSS.
+I'd use PNG only to create complex artwork files you couldn't have otherwise created with CSS. Today, [CSS](/posts/wtf-is-css/) is capable of enabling you to create many web elements. And you can't beat CSS for crisp, clear images. Therefore, things like buttons and gradient backgrounds should never be created with an artwork program, but should be created using CSS.
 
 An even better alternative to this is to consider SVG files, which will maintain their vector form even on the web, although their support is more limited.
 

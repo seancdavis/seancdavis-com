@@ -1,7 +1,7 @@
 ---
 title: Sometimes I Break My Rules
 description: To maintain a consistent state of efficiency, I have rules. They aren't strict. But they help guide me.
-image: /blog/170130/one-way.png
+image: /posts/170130/one-way.png
 tags:
   - productivity
 ---

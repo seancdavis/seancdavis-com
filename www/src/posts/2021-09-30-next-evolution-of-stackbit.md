@@ -1,7 +1,7 @@
 ---
 title: The Next Evolution of Stackbit
 description: This next version of Stackbit is going to be incredible! And we're offering sneak peeks through our Early Access Program.
-image: /blog/210930/210930--next-evolution-stackbit.png
+image: /posts/210930/210930--next-evolution-stackbit.png
 canonical_url: https://www.stackbit.com/blog/next-evolution-of-stackbit/
 tags:
   - repost-stackbit
@@ -21,7 +21,7 @@ And then it hit me.
 
 The Jamstack is _all about_ decoupling services. At first, I'd thought about that as a good thing. Developers get to decide what the best tool is for each job and bring those tools to each project.
 
-But the reality is that not everyone _wants_ to go through the process of making so many choices. After all, that's why [Ruby on Rails](https://rubyonrails.org/) was so great. [_Convention over configuration_](https://www.seancdavis.com/blog/increase-developer-efficiency-by-establishing-conventions/). It pushed devs to focus on solving business problems and removed trivial decisions like establishing a file-naming convention.
+But the reality is that not everyone _wants_ to go through the process of making so many choices. After all, that's why [Ruby on Rails](https://rubyonrails.org/) was so great. [_Convention over configuration_](/posts/increase-developer-efficiency-by-establishing-conventions/). It pushed devs to focus on solving business problems and removed trivial decisions like establishing a file-naming convention.
 
 I needed to invent a service that connected all these services. To _couple the decoupled_.
 

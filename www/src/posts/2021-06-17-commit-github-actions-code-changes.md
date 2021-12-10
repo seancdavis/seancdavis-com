@@ -1,13 +1,13 @@
 ---
 title: Commit Code Changes Using GitHub Actions
 description: Commit file changes created during a GitHub automated workflow run.
-image: /blog/210617/pink--github-actions.png
+image: /posts/210617/pink--github-actions.png
 tags:
   - github
   - testing
 ---
 
-[Actions](https://github.com/features/actions) is a super powerful GitHub feature that enables you to execute automated code based on some trigger. It is most often used as a [continuous integration](/blog/wtf-is-continuous-integration/) tool — to run your test suite when pushing or creating a pull request. I like to think of them as _workflows_ (partially because you put your configuration code in a `.github/workflows` directory).
+[Actions](https://github.com/features/actions) is a super powerful GitHub feature that enables you to execute automated code based on some trigger. It is most often used as a [continuous integration](/posts/wtf-is-continuous-integration/) tool — to run your test suite when pushing or creating a pull request. I like to think of them as _workflows_ (partially because you put your configuration code in a `.github/workflows` directory).
 
 Sometimes you may perform some action that changes code and you want that code to be committed back to your repository.
 

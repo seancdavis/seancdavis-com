@@ -3,7 +3,7 @@ title: What Success Really Means
 tags:
   - inspiration
 description: "Is it money, fame, awards, rewards, a nice haircut, a well-behaved dog? What is it that we're all going after?"
-image: /blog/190606/photo-1491555103944-7c647fd857e6.jpg
+image: /posts/190606/photo-1491555103944-7c647fd857e6.jpg
 attribution:
   - name: Joshua Earle
     url: https://unsplash.com/@joshuaearle

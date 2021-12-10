@@ -3,7 +3,7 @@ title: 4 Tips for Refactoring Like a Pro
 description: Refactoring should be part of the code writing process, including
   the best developers. Here are four tips for working refactoring into your
   process effectively and efficiently.
-image: /blog/default/default-pink-02.png
+image: /posts/default/default-pink-02.png
 ---
 
 Refactoring code is an essential part of the development process. While you're likely to get better at writing good code on the first pass as you _develop_ your development skills, refactoring should always be part of the writing process.

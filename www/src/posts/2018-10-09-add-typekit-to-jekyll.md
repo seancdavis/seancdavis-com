@@ -4,10 +4,10 @@ description: Add Typekit fonts to your website built with Jekyll without making
   an additional request and slowing down performance.
 tags:
   - jekyll
-image: /blog/default/default-orange-02.png
+image: /posts/default/default-orange-02.png
 ---
 
-Typekit is a powerful way to add custom fonts to your project. There are three methods Typekit offers for adding its fonts to your site and making them available to use within your [CSS](/blog/wtf-is-css/) files. And there is a(t least one/) problem with each method. First, let's look at the options:
+Typekit is a powerful way to add custom fonts to your project. There are three methods Typekit offers for adding its fonts to your site and making them available to use within your [CSS](/posts/wtf-is-css/) files. And there is a(t least one/) problem with each method. First, let's look at the options:
 
 The first way is to link to an external stylesheet:
 

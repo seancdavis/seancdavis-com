@@ -1,7 +1,7 @@
 ---
 title: "Incrementing Variables in JavaScript"
 description: "JavaScript has three different types of incrementers: i++ ++i and i+=1. Let's look at how they differ from one another."
-image: /blog/210406/pink--js-incrementers.png
+image: /posts/210406/pink--js-incrementers.png
 tags:
   - javascript
 ---
@@ -11,10 +11,10 @@ Like many things with JavaScript, incrementing and decrementing variables is ...
 The classic example is using `i` as an index-based iterator when looping through an array. Like this:
 
 ```js
-const sandwiches = ["Club", "Reuben", "Grilled Cheese"]
+const sandwiches = ["Club", "Reuben", "Grilled Cheese"];
 
 for (let i = 0; i < sandwiches.length; i++) {
-  console.log(i, sandwiches[i])
+  console.log(i, sandwiches[i]);
 }
 
 // => 0 'Club'
@@ -40,14 +40,14 @@ But they are different! The difference is baked into how `i` is _returned_ from 
 Consider this:
 
 ```js
-let i = 0
-console.log(i) // => 0
+let i = 0;
+console.log(i); // => 0
 
-console.log(i++) // => 0
-console.log(i) // => 1
+console.log(i++); // => 0
+console.log(i); // => 1
 
-console.log(++i) // => 2
-console.log(i) // => 2
+console.log(++i); // => 2
+console.log(i); // => 2
 ```
 
 Notice that when we log `i++` we're logging the `return` value of running `i++`, which is `1`, since `i` was returned before incrementing.
@@ -61,36 +61,36 @@ The `+=` operator is called [the addition assignment](https://developer.mozilla.
 This works _similarly_ to `++i` in that the return value of the function call is the value of `i` **after** the addition was applied.
 
 ```js
-let i = 0
-console.log(i) // => 0
+let i = 0;
+console.log(i); // => 0
 
-console.log(i++) // => 0
-console.log(i) // => 1
+console.log(i++); // => 0
+console.log(i); // => 1
 
-console.log(++i) // => 2
-console.log(i) // => 2
+console.log(++i); // => 2
+console.log(i); // => 2
 
-console.log((i += 1)) // => 3
-console.log(i) // => 3
+console.log((i += 1)); // => 3
+console.log(i); // => 3
 ```
 
 And you don't have to use `1` either. You could use any value and it will be applied to `i`.
 
 ```js
-let i = 0
-console.log(i) // => 0
+let i = 0;
+console.log(i); // => 0
 
-console.log(i++) // => 0
-console.log(i) // => 1
+console.log(i++); // => 0
+console.log(i); // => 1
 
-console.log(++i) // => 2
-console.log(i) // => 2
+console.log(++i); // => 2
+console.log(i); // => 2
 
-console.log((i += 1)) // => 3
-console.log(i) // => 3
+console.log((i += 1)); // => 3
+console.log(i); // => 3
 
-console.log((i += 2)) // => 5
-console.log(i) // => 5
+console.log((i += 2)); // => 5
+console.log(i); // => 5
 ```
 
 And now you have the knowledge to go impress your coworkers by incrementing all the variables!

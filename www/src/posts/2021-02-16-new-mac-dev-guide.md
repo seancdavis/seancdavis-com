@@ -1,7 +1,7 @@
 ---
 title: "A Guide to Setting up a New Mac Developer Machine"
 description: "It's time to tear into that shiny new Mac and write some code! Here's how I spend my first couple hours with a new machine."
-image: /blog/210216/blue--laptop.png
+image: /posts/210216/blue--laptop.png
 tags:
   - productivity
 ---
@@ -56,13 +56,13 @@ That's the purpose of this guide. This is a reference largely to serve future me
    - Find My Mac
 
 {% post_image
-    src="/blog/210216/sysprefs--apple-id-01.png",
+    src="/posts/210216/sysprefs--apple-id-01.png",
     alt="System Preferences - Apple ID #1",
     classes="my-0",
     flatten=true %}
 
 {% post_image
-    src="/blog/210216/sysprefs--apple-id-02.png",
+    src="/posts/210216/sysprefs--apple-id-02.png",
     alt="System Preferences - Apple ID #2",
     classes="my-0",
     flatten=true %}
@@ -70,7 +70,7 @@ That's the purpose of this guide. This is a reference largely to serve future me
 3. **Remove all applications from dock.** I like a clean dock. Plus, I don't use the majority of those applications. You can remove them by dragging the icon from the dock to the main desktop background. A little _Remove_ tooltip should appear. Let go of the mouse and _Poof!_ it's gone.
 
 {% post_image
-    src="/blog/210216/remove-dock-item.gif",
+    src="/posts/210216/remove-dock-item.gif",
     alt="Remove Application from Dock" %}
 
 4. **Delete unwanted Apple apps.** At the time of writing this, the only ones I've been able to delete are Garage Band and iMovie.
@@ -78,7 +78,7 @@ That's the purpose of this guide. This is a reference largely to serve future me
 5. **Adjust dock settings.** I like to adjust for the dock to not be visible unless I hover over the bottom of the screen. And the magnification animation is ... well it's fun. These settings are in _System Preferences_ > _Dock & Menu Bar_.
 
 {% post_image
-    src="/blog/210216/sysprefs--dock.png",
+    src="/posts/210216/sysprefs--dock.png",
     alt="System Preferences - Dock & Menu",
     classes="my-0",
     flatten=true %}
@@ -88,7 +88,7 @@ That's the purpose of this guide. This is a reference largely to serve future me
 7. **Remove magical spelling things.** I like to know when I've spelled something wrong, but I do not like when words or characters are changed automatically. So I go to _System Preferences_ > _Keyboard_ > _Text_ tab and remove all smart options. I also do this as necessary in other text-editing apps, like Notes and Bear.
 
 {% post_image
-    src="/blog/210216/sysprefs--keyboard.png",
+    src="/posts/210216/sysprefs--keyboard.png",
     alt="System Preferences - Keyboard",
     classes="my-0",
     flatten=true %}
@@ -102,7 +102,7 @@ I also don't use Apple Contacts. I prefer to use my Google account to manage my 
 1. **Add Google account to Contacts.** Go to _System Preferences_ > _Internet Accounts_ and add the Google account. Only enable the _Contacts_ service.
 
 {% post_image
-    src="/blog/210216/sysprefs--internet-accounts.png",
+    src="/posts/210216/sysprefs--internet-accounts.png",
     alt="System Preferences - Internet Accounts",
     classes="my-0",
     flatten=true %}
@@ -110,7 +110,7 @@ I also don't use Apple Contacts. I prefer to use my Google account to manage my 
 2. **Setup messages.** Open Messages application, then go to _Preferences_ > _iMessage_ tab and check _Enable Messages in iCloud_ for my Apple ID. This syncs previous messages.
 
 {% post_image
-    src="/blog/210216/sysprefs--messages.png",
+    src="/posts/210216/sysprefs--messages.png",
     alt="iMessage - Preferences",
     classes="my-0",
     flatten=true %}
@@ -122,13 +122,13 @@ I have found that I can move faster through Finder with a few adjustments.
 1. **Change view setting to _Columns_.** It helps me getting a better sense of where I am.
 
 {% post_image
-    src="/blog/210216/finder--cols.png",
+    src="/posts/210216/finder--cols.png",
     alt="Finder Preferences - Columns View" %}
 
 2. **Start new sessions in my home directory.** Go to _Preferences_ (`cmd`+`,`) > _General_ tab and choose my home directory for the _New Finder windows show_ setting.
 
 {% post_image
-    src="/blog/210216/finder--new-window.png",
+    src="/posts/210216/finder--new-window.png",
     alt="Finder Preferences - New Window Setting",
     classes="my-0",
     flatten=true %}
@@ -136,7 +136,7 @@ I have found that I can move faster through Finder with a few adjustments.
 3. **Enable filename extensions.** Also in _Preferences_, but in the _Advanced_ tab, check _Show all filename extensions_.
 
 {% post_image
-    src="/blog/210216/finder--extensions.png",
+    src="/posts/210216/finder--extensions.png",
     alt="Finder Preferences - Enable File Extensions",
     classes="my-0",
     flatten=true %}
@@ -156,7 +156,7 @@ The command line is where the fun really begins! This is the foundation for pret
    And if Terminal was previously open, quit it before continuing.
 
 {% post_image
-    src="/blog/210216/terminal--info.png",
+    src="/posts/210216/terminal--info.png",
     alt="Terminal - Get Info",
     classes="my-0",
     flatten=true %}
@@ -321,7 +321,7 @@ Now that all these apps are installed, it's time to get them set up.
 2. I also set it to launch at startup.
 
 {% post_image
-    src="/blog/210216/spectacle--prefs.png",
+    src="/posts/210216/spectacle--prefs.png",
     alt="Spectacle Preferences",
     classes="my-0",
     flatten=true %}
@@ -331,7 +331,7 @@ Now that all these apps are installed, it's time to get them set up.
 1. Change Spotlight shortcut to `option` + `spacebar`. Do this in _System Preferences_ > _Keyboard_ > _Shortcuts_ tab. Change `cmd`+`space` shortcut to `option`+`space`.
 
 {% post_image
-    src="/blog/210216/sysprefs--keyboard-shortcuts.png",
+    src="/posts/210216/sysprefs--keyboard-shortcuts.png",
     alt="System Preferences - Keyboard Shortcuts",
     classes="my-0",
     flatten=true %}
@@ -339,7 +339,7 @@ Now that all these apps are installed, it's time to get them set up.
 2. Set Alfred hotkey shortcut to `cmd`+`spacebar`.
 
 {% post_image
-    src="/blog/210216/alfred--hotkey.png",
+    src="/posts/210216/alfred--hotkey.png",
     alt="Alfred Preferences - Hotkey",
     classes="my-0",
     flatten=true %}
@@ -347,7 +347,7 @@ Now that all these apps are installed, it's time to get them set up.
 3. Put prefixes in front of all the system commands. I've accidentally shut down my computer for the last time! (Another option is to prompt a confirmation, but I like this pattern.)
 
 {% post_image
-    src="/blog/210216/alfred--system.png",
+    src="/posts/210216/alfred--system.png",
     alt="Alfred Preferences - System",
     classes="my-0",
     flatten=true %}
@@ -355,10 +355,10 @@ Now that all these apps are installed, it's time to get them set up.
 ### iTerm2
 
 1. iTerm2 is another terminal, so I it should also be opened with Rosetta on Apple M1 machines. Do this in the same way you did for Terminal.
-2. Enable `Esc+` for left and right option keys. This is [the way to delete full words](/blog/delete-full-words-terminal/). This image shows the option enabled only for the left option key.
+2. Enable `Esc+` for left and right option keys. This is [the way to delete full words](/posts/delete-full-words-terminal/). This image shows the option enabled only for the left option key.
 
 {% post_image
-    src="/blog/210216/iterm--meta.png",
+    src="/posts/210216/iterm--meta.png",
     alt="iTerm2 Preferences - Meta Key",
     classes="my-0",
     flatten=true %}
@@ -371,7 +371,7 @@ Now that all these apps are installed, it's time to get them set up.
 1. Turn on Sync Settings by opening the Command Palette (`cmd`+`shift`+`p`), typing _sync_ and then choosing to enable Sync Setting. You'll have to sign in with either Microsoft or GitHub to enable this feature.
 
 {% post_image
-    src="/blog/210216/vscode--settings-sync.png",
+    src="/posts/210216/vscode--settings-sync.png",
     alt="VS Code Settings Sync",
     classes="my-0",
     flatten=true %}

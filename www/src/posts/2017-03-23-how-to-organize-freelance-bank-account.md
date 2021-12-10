@@ -4,17 +4,17 @@ description: Managing and organizing income is one of the most stressful and
   important tasks for a full-time freelancer.
 tags:
   - organization
-image: /blog/default/default-green-01.png
+image: /posts/default/default-green-01.png
 ---
 
 It's a great feeling to begin earning real money as a freelancer. It's liberating! _Who the heck knew you didn't need a boss to earn income?_
 
 As freeing as it is, being a freelancer—especially a full-time freelancer—comes with responsibility. Aside from earning and performing the work, one of your most important responsibilities is how you manage your money, because if you don't do it wisely, you could end up owing thousands of dollars you don't have.
 
-I've written previously about [one way to design a freelance financial ecosystem](/blog/managing-money-as-a-freelancer/), and that's what I'll use as the basis for discussion here.
+I've written previously about [one way to design a freelance financial ecosystem](/posts/managing-money-as-a-freelancer/), and that's what I'll use as the basis for discussion here.
 
 {% post_image
-    src="/blog/170323/freelance-bank.png",
+    src="/posts/170323/freelance-bank.png",
     alt="Freelance Bank Account",
     maxWidth="sm",
     flatten=true %}
@@ -33,7 +33,7 @@ This one's easy, right? The actual money in your account is your _account balanc
 
 The _minimum balance_ is the minimum amount of money you require be in your bank account. Some banks make this number easy to determine because they give you a balance under which you have to pay a monthly service charge.
 
-I recommend you shoot for **13 weeks (3 months) of paychecks** as your minimum balance. That means if you pay yourself $1,000 every two weeks, your minimum balance is $7,500\. (Paycheck distributions are discussed in [that other article](/blog/managing-money-as-a-freelancer/) I mentioned.)
+I recommend you shoot for **13 weeks (3 months) of paychecks** as your minimum balance. That means if you pay yourself $1,000 every two weeks, your minimum balance is $7,500\. (Paycheck distributions are discussed in [that other article](/posts/managing-money-as-a-freelancer/) I mentioned.)
 
 This is the container you always fill first, and it just sits there. It's what I consider to be _emergency funds_. In cases where you can't find any work for a period of time or you need to fund some life emergency, you can pull from this fund. You should avoid pulling money from this portion of the account if you can, but if you're forced to do so, **it must be the first to be refilled**.
 

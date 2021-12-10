@@ -4,11 +4,11 @@ description: Migrating to the Jamstack is easier than you would think. Ample's S
 tags:
   - repost-ample
   - jamstack
-image: /blog/190918/190918--migrating-to-jamstack.png
+image: /posts/190918/190918--migrating-to-jamstack.png
 canonical_url: https://www.ample.co/blog/migrating-to-the-jamstack
 ---
 
-I understand you've heard of [the Jamstack](/blog/wtf-is-jamstack/). You've read about [its game-changing benefits](https://www.ample.co/blog/top-4-reasons-we-use-jamstack). And now you're interested in rebuilding your company's massive website using Jamstack methodologies.
+I understand you've heard of [the Jamstack](/posts/wtf-is-jamstack/). You've read about [its game-changing benefits](https://www.ample.co/blog/top-4-reasons-we-use-jamstack). And now you're interested in rebuilding your company's massive website using Jamstack methodologies.
 
 That's awesome!
 
@@ -40,7 +40,7 @@ No, seriously. That's it.
 
 <a href="https://uploads-ssl.webflow.com/5a2e8a9f7cc425000195064c/5d7fdd7bec93d26a81de3df7_ample-blog-migrating-to-the-jamstack-page.pdf">
   {% post_image
-      src="/blog/190918/5d7fddb2a7e61893bcab60c4_ample-blog-migrating-to-the-jamstack-page.png",
+      src="/posts/190918/5d7fddb2a7e61893bcab60c4_ample-blog-migrating-to-the-jamstack-page.png",
       alt="Migrating to the JAMstack (presentation slide)" %}
 </a>
 

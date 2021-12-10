@@ -1,14 +1,14 @@
 ---
 title: "WTF is Frontmatter?"
 description: Frontmatter is a really powerful pattern in software development these days. What exactly is it and why is it so great? Let's explore that together!
-image: /blog/210601/wtf--frontmatter.png
+image: /posts/210601/wtf--frontmatter.png
 tags:
   - wtf
 ---
 
 Frontmatter is a software development pattern that I personally love and use _all the time_. I first came across it when working with [Jekyll](https://jekyllrb.com/docs/front-matter/) many years ago, though there may be earlier implementations of it.
 
-What frontmatter enables you to do is specify metadata about a file. It is most often written in [YAML](/blog/wtf-is-yaml/), while the main content of the file may be written in another language, often a content or templating language like markdown or [HTML](/blog/wtf-is-html/). YAML is a good fit for frontmatter because it is specifically designed to get out of your way — to be concise and readable.
+What frontmatter enables you to do is specify metadata about a file. It is most often written in [YAML](/posts/wtf-is-yaml/), while the main content of the file may be written in another language, often a content or templating language like markdown or [HTML](/posts/wtf-is-html/). YAML is a good fit for frontmatter because it is specifically designed to get out of your way — to be concise and readable.
 
 You'll often find frontmatter in places where the main content within a file is to be displayed, but requires additional content beyond the main portion of the file to know _how_ to display that content.
 
@@ -75,7 +75,7 @@ It's just one more thing to worry about. With frontmatter, we can keep all neces
 
 Interpreting frontmatter was kind of a DIY sort of thing for many years while it was a newer concept. Now that it's been more widely adopted there are libraries out there to help you.
 
-For example, one that I work with frequently is [gray-matter](https://github.com/jonschlinkert/gray-matter), which is a [Node.js](/blog/wtf-is-node/) library that will read text and provide the frontmatter as an object and the main content as another object.
+For example, one that I work with frequently is [gray-matter](https://github.com/jonschlinkert/gray-matter), which is a [Node.js](/posts/wtf-is-node/) library that will read text and provide the frontmatter as an object and the main content as another object.
 
 There are all kinds of libraries out there now. You will likely be able to find one in your programming language of choice.
 

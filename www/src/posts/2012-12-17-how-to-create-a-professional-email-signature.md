@@ -3,7 +3,7 @@ title: How To Create A Professional Email Signature
 tags:
   - communication
 description: If an email signature should be easy, why do so many people do it so poorly?
-image: /blog/121217/computer-gmail-dark-cover.jpg
+image: /posts/121217/computer-gmail-dark-cover.jpg
 attribution:
   - name: Jay Wennington
     url: https://stocksnap.io/author/189

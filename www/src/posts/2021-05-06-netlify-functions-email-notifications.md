@@ -1,7 +1,7 @@
 ---
 title: Use Netlify Functions to Send Email Notifications
 description: Learn the basics of sending custom email notifications using Netlify functions and your email service of choice.
-image: /blog/210506/green--netlify-notification.png
+image: /posts/210506/green--netlify-notification.png
 tags:
   - jamstack
   - javascript
@@ -9,7 +9,7 @@ tags:
   - node
 ---
 
-While [Netlify](/blog/wtf-is-netlify) supports email notifications around triggers and features within its system (e.g. [deploy events](https://docs.netlify.com/site-deploys/notifications/), [form submissions](https://docs.netlify.com/forms/notifications/)), you may want to add custom email notification triggered by actions from users on your site.
+While [Netlify](/posts/wtf-is-netlify) supports email notifications around triggers and features within its system (e.g. [deploy events](https://docs.netlify.com/site-deploys/notifications/), [form submissions](https://docs.netlify.com/forms/notifications/)), you may want to add custom email notification triggered by actions from users on your site.
 
 Notifications sound tricky, though, don't they?
 
@@ -50,18 +50,18 @@ Also note that we're having Nodemailer make use of [Ethereal](https://ethereal.e
 `netlify/functions/send-email.js` {.filename}
 
 ```js
-const nodemailer = require("nodemailer")
+const nodemailer = require("nodemailer");
 
 exports.handler = async function (event, context, callback) {
   // Parse the JSON text received.
-  const body = JSON.parse(event.body)
+  const body = JSON.parse(event.body);
 
   // Build an HTML string to represent the body of the email to be sent.
-  const html = `<div style="margin: 20px auto;">${body.body}</div>`
+  const html = `<div style="margin: 20px auto;">${body.body}</div>`;
 
   // Generate test SMTP service account from ethereal.email. Only needed if you
   // don't have a real mail account for testing
-  let testAccount = await nodemailer.createTestAccount()
+  let testAccount = await nodemailer.createTestAccount();
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
@@ -70,9 +70,9 @@ exports.handler = async function (event, context, callback) {
     secure: false, // true for 465, false for other ports
     auth: {
       user: testAccount.user, // generated ethereal user
-      pass: testAccount.pass // generated ethereal password
-    }
-  })
+      pass: testAccount.pass, // generated ethereal password
+    },
+  });
 
   try {
     // send mail with defined transport object
@@ -81,16 +81,16 @@ exports.handler = async function (event, context, callback) {
       to: body.email,
       subject: "New Form Submission",
       text: body.body,
-      html: html
-    })
+      html: html,
+    });
     // Log the result
-    console.log(info)
-    callback(null, { statusCode: 200, body: JSON.stringify(info) })
+    console.log(info);
+    callback(null, { statusCode: 200, body: JSON.stringify(info) });
   } catch (error) {
     // Catch and log error.
-    callback(error)
+    callback(error);
   }
-}
+};
 ```
 
 This will log the result to the console, regardless of whether it is successful or not (`callback(error)` will print feedback), so you can have an idea of what's going on.
@@ -132,19 +132,19 @@ Next, let's build a simple HTML page that gives you the ability to set the `emai
     <script>
       function submitForm(event) {
         // Stop the browser's default behavior.
-        event.preventDefault()
+        event.preventDefault();
         // Retrieve data from the form.
-        const formData = new FormData(event.target)
-        const request = new XMLHttpRequest()
+        const formData = new FormData(event.target);
+        const request = new XMLHttpRequest();
         // Convert data to JSON object.
-        var jsonData = {}
-        formData.forEach((value, key) => (jsonData[key] = value))
+        var jsonData = {};
+        formData.forEach((value, key) => (jsonData[key] = value));
         // Send the data to the Netlify function.
-        request.open("POST", "/.netlify/functions/send-email")
-        request.send(JSON.stringify(jsonData))
+        request.open("POST", "/.netlify/functions/send-email");
+        request.send(JSON.stringify(jsonData));
         // Clear the form.
-        alert("Email request submitted!")
-        event.target.reset()
+        alert("Email request submitted!");
+        event.target.reset();
       }
     </script>
   </body>

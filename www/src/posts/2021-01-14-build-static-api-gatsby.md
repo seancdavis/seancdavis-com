@@ -5,16 +5,16 @@ tags:
   - api
   - gatsby
   - jamstack
-image: /blog/210114/meta--gatsby-static-api.jpg
+image: /posts/210114/meta--gatsby-static-api.jpg
 ---
 
-This article is part of a series of tutorials on building a _Static API_. You can view the full list of available static API tutorials in [the introductory article](/blog/how-to-build-static-api), which also provides some background on the examples we're using here.
+This article is part of a series of tutorials on building a _Static API_. You can view the full list of available static API tutorials in [the introductory article](/posts/how-to-build-static-api), which also provides some background on the examples we're using here.
 
-If you'd like additional information on what a static API is, check out [_WTF is a Static API?_](/blog/lets-talk-about-static-apis)
+If you'd like additional information on what a static API is, check out [_WTF is a Static API?_](/posts/lets-talk-about-static-apis)
 
 ---
 
-We're going to walk through building a static API using [GatsbyJS](https://www.gatsbyjs.org/). Gatsby is a [static site generator](https://www.staticgen.com/) written in [JavaScript](/blog/wtf-is-javascript), built on top of [React](https://reactjs.org/), a JavaScript framework for building out UI components.
+We're going to walk through building a static API using [GatsbyJS](https://www.gatsbyjs.org/). Gatsby is a [static site generator](https://www.staticgen.com/) written in [JavaScript](/posts/wtf-is-javascript), built on top of [React](https://reactjs.org/), a JavaScript framework for building out UI components.
 
 If you're a visual learner and prefer the screencast approach, here is a video, which walks through _most of_ the steps in this tutorial.
 
@@ -28,7 +28,7 @@ The written tutorial follows. But if you're just looking for the code reference,
 
 It's worth mentioning before we get started that, while the best tool for the job is often the one you're familiar with, Gatsby isn't very well-suited for building out static APIs. Its power lies in providing elegance in building complex UI structures and pages with ease.
 
-If you're already working with Gatsby and simply want a way to serve JSON files, then you may only want [an intro into programmatically creating JSON pages with Gatsby](/blog/programmatically-create-json-pages-gatsby/). Note that, while this tutorial has all the code you'll need to get started building a static API with Gatsby, there is some background information in the JSON pages article that will provide further explanation as to _why_ we're taking the approach we are here.
+If you're already working with Gatsby and simply want a way to serve JSON files, then you may only want [an intro into programmatically creating JSON pages with Gatsby](/posts/programmatically-create-json-pages-gatsby/). Note that, while this tutorial has all the code you'll need to get started building a static API with Gatsby, there is some background information in the JSON pages article that will provide further explanation as to _why_ we're taking the approach we are here.
 
 ## Step 1: Project Setup
 
@@ -45,9 +45,9 @@ Once that is running, visit [http://localhost:8000/](http://localhost:8000/) and
 
 ## Step 2: Add Data Files
 
-Now that we're rolling with Gatsby, let's add our data source, which we're going to consider to be local YAML files. The data examples come from [the intro article](/blog/how-to-build-static-api).
+Now that we're rolling with Gatsby, let's add our data source, which we're going to consider to be local YAML files. The data examples come from [the intro article](/posts/how-to-build-static-api).
 
-We're using YAML in this project because that's been my approach throughout the various static API tutorials I've written. It likely makes more sense for you to use a data source familiar to your project. ([See the JSON pages article for a few examples](/blog/programmatically-create-json-pages-gatsby/).)
+We're using YAML in this project because that's been my approach throughout the various static API tutorials I've written. It likely makes more sense for you to use a data source familiar to your project. ([See the JSON pages article for a few examples](/posts/programmatically-create-json-pages-gatsby/).)
 
 Let's put these files in a `data` directory, again, for consistency among my other tutorials. But you can put them wherever you'd like, you'll just want to update configuration values accordingly.
 
@@ -107,13 +107,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `earworms`,
-        path: `${__dirname}/data/earworms`
-      }
+        path: `${__dirname}/data/earworms`,
+      },
     },
-    `gatsby-transformer-yaml`
+    `gatsby-transformer-yaml`,
     // ...
-  ]
-}
+  ],
+};
 ```
 
 In this case, we're telling Gatsby to _source_ data files in `data/earworms`. The combination of these two plugins is what will enable us to query the data files through GraphQL.
@@ -187,7 +187,7 @@ Here is the code:
 `gatsby-node.js` {.filename}
 
 ```js
-const fs = require("fs")
+const fs = require("fs");
 
 exports.onPostBuild = async ({ graphql }) => {
   graphql(`
@@ -204,25 +204,25 @@ exports.onPostBuild = async ({ graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     // A reference to where we are going to put the files.
-    const earwormsPath = "./public/earworms"
+    const earwormsPath = "./public/earworms";
 
     // Collect the data for all earworms
-    const earworms = result.data.earworms.edges.map(({ node }) => node)
+    const earworms = result.data.earworms.edges.map(({ node }) => node);
 
     // Query result for the index file.
     const allEarworms = {
       result: earworms,
       meta: {
-        count: earworms.length
-      }
-    }
+        count: earworms.length,
+      },
+    };
 
     // Write the index file.
-    fs.writeFileSync(`${earwormsPath}.json`, JSON.stringify(allEarworms))
-  })
-}
+    fs.writeFileSync(`${earwormsPath}.json`, JSON.stringify(allEarworms));
+  });
+};
 ```
 
 Here's what going on:
@@ -279,12 +279,15 @@ At the bottom of our `gatsby-node.js` file, within the `onPostBuild` process, we
 
 ```js
 // Create directory for individual files if it doesn't exist.
-if (!fs.existsSync(earwormsPath)) fs.mkdirSync(earwormsPath)
+if (!fs.existsSync(earwormsPath)) fs.mkdirSync(earwormsPath);
 
 // Write individual files.
-earworms.map(worm => {
-  fs.writeFileSync(`${earwormsPath}/${worm.song_id}.json`, JSON.stringify(worm))
-})
+earworms.map((worm) => {
+  fs.writeFileSync(
+    `${earwormsPath}/${worm.song_id}.json`,
+    JSON.stringify(worm)
+  );
+});
 ```
 
 Once that it is in place, you can rebuild, then serve, and visit `/earworms/[id].json` for any one of the data objects you have. For example, the first song is available at [http://localhost:9000/earworms/1.json](http://localhost:9000/earworms/1.json). Visit that link and you should see the following:
@@ -306,5 +309,5 @@ As we wrap, I'd like to mention again that if you're taking this approach, I'd s
 ## References
 
 - [Code on GitHub](https://github.com/seancdavis/seancdavis-com/tree/main/examples/gatsby-static-api)
-- [Programmatically Create JSON Pages with Gatsby](/blog/programmatically-create-json-pages-gatsby/)
+- [Programmatically Create JSON Pages with Gatsby](/posts/programmatically-create-json-pages-gatsby/)
 - [Video tutorial](https://youtu.be/bvLQ9nD2jLQ)

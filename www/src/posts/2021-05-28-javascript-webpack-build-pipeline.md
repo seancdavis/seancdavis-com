@@ -1,7 +1,7 @@
 ---
 title: Simple JavaScript Pipeline with webpack
 description: "webpack has a reputation for being super complex and difficult to implement. But as its most basic, it can do a lot with little development effort. Let's walk through a simple example together."
-image: /blog/210528/orange--webpack-pipeline.png
+image: /posts/210528/orange--webpack-pipeline.png
 tags:
   - javascript
   - webpack
@@ -9,7 +9,7 @@ tags:
 
 ## webpack Introduction
 
-[webpack](/blog/wtf-is-webpack) has a reputation for being pretty gnarly. If you've dug through the code of an established project using webpack, it's likely mind-boggling at best. Shoot, take a look at the source code for [Next.js](https://nextjs.org/) — they have [an entire directory to manage webpack configuration](https://github.com/vercel/next.js/tree/5f3351dbb8de71bcdbc91d869c04bc862a25da5f/packages/next/bundles/webpack).
+[webpack](/posts/wtf-is-webpack) has a reputation for being pretty gnarly. If you've dug through the code of an established project using webpack, it's likely mind-boggling at best. Shoot, take a look at the source code for [Next.js](https://nextjs.org/) — they have [an entire directory to manage webpack configuration](https://github.com/vercel/next.js/tree/5f3351dbb8de71bcdbc91d869c04bc862a25da5f/packages/next/bundles/webpack).
 
 That complexity is due, in large part, to its power. webpack can do _a lot_.
 
@@ -17,7 +17,7 @@ Fortunately, the fine folks building this free and open source tool have been wo
 
 ## What We're Going to Build
 
-Let's do that. Let's build a super simple build pipeline to bundle multiple [JavaScript](/blog/wtf-is-javascript/) modules together into a single file that we can load from any HTML page.
+Let's do that. Let's build a super simple build pipeline to bundle multiple [JavaScript](/posts/wtf-is-javascript/) modules together into a single file that we can load from any HTML page.
 
 You can take a look at [the full code example](https://github.com/seancdavis/seancdavis-com/tree/0cc19cb/examples/webpack-es6-pipeline) at any point if you get stuck.
 
@@ -33,7 +33,7 @@ Let's go!
 
 ## Step 1: Setup
 
-If you have a project ready to go, great! If not, feel free to [follow my steps to get started](/blog/new-javascript-project-setup/), with the following notes:
+If you have a project ready to go, great! If not, feel free to [follow my steps to get started](/posts/new-javascript-project-setup/), with the following notes:
 
 These are the dependencies we're going to use:
 
@@ -64,10 +64,10 @@ Now let's add a couple JavaScript files. First, our Logger at `src/modules/logge
 
 ```js
 const sayHi = () => {
-  console.log("Hi!")
-}
+  console.log("Hi!");
+};
 
-export { sayHi }
+export { sayHi };
 ```
 
 And our main file (`src/main.js`), which will be responsible for exporting the `Logger` object.
@@ -75,9 +75,9 @@ And our main file (`src/main.js`), which will be responsible for exporting the `
 `src/main.js` {.filename}
 
 ```js
-import * as Logger from "./modules/logger"
+import * as Logger from "./modules/logger";
 
-export { Logger }
+export { Logger };
 ```
 
 {% callout type="note" %}
@@ -91,9 +91,9 @@ Next, let's add our webpack config. This code example is commented so you can se
 `webpack.config.js` {.filename}
 
 ```js
-const path = require("path")
+const path = require("path");
 // Used to determine whether to watch the files or build.
-const env = process.env.WEBPACK_ENV || "development"
+const env = process.env.WEBPACK_ENV || "development";
 
 module.exports = {
   // The main file for the bundle.
@@ -106,12 +106,12 @@ module.exports = {
     path: path.resolve(__dirname, "dist/js"),
     // These two library items tells webpack to make the code exported by main.js available as a variable called `App`.
     libraryTarget: "var",
-    library: "App"
+    library: "App",
   },
   mode: env,
   // If we're in development mode, then watch for changes, otherwise just do a single build.
-  watch: env !== "production"
-}
+  watch: env !== "production",
+};
 ```
 
 {% callout type="note" %}
@@ -142,7 +142,7 @@ Now let's add a simple `index.html` file to the `dist` directory, which is where
 
     <script src="/js/bundle.js"></script>
     <script>
-      App.Logger.sayHi()
+      App.Logger.sayHi();
     </script>
   </body>
 </html>

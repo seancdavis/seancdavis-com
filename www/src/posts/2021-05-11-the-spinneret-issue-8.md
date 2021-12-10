@@ -1,7 +1,7 @@
 ---
 title: "The Spinneret: Issue #8"
 description: "I had my hands full and didn't write much, but I found a plethora of new articles and tools to help you in your web adventures."
-image: /blog/210511/the-spinneret--08.png
+image: /posts/210511/the-spinneret--08.png
 tags:
   - spinneret
 ---
@@ -11,7 +11,7 @@ tags:
 _Notable changes in my life, [on my website](https://github.com/seancdavis/seancdavis-com), and in other projects._ {.text-sm}
 
 {% post_image
-    src="/blog/210511/the-spinneret--my-code.png",
+    src="/posts/210511/the-spinneret--my-code.png",
     alt="The Spinneret - My Code" %}
 
 Last month I launched [Unmute](https://www.unmutedstories.com/) alongside [three fellow nerds I know and love](https://www.unmutedstories.com/about/), [Becky Blank](https://twitter.com/beckysblank), Brandon Blank, and [Ryan Cayabyab](https://twitter.com/rcayabyab).
@@ -25,27 +25,27 @@ This project is the culmination of two things in my life: 1) My desire to use my
 _New blog posts and videos I published last month._ {.text-sm}
 
 {% post_image
-    src="/blog/210511/the-spinneret--my-words.png",
+    src="/posts/210511/the-spinneret--my-words.png",
     alt="The Spinneret - My Words" %}
 
 As expected, April was a slow month for me. We welcomed our second child early in the month, and I didn't really find a groove to writing again until the month neared its end.
 
 Of the four articles I published, I'm really excited about two:
 
-- In [10 Unspoken Truths on Being a Developer](/blog/10-unspoken-developer-truths/), I added some commentary to a particularly valuable series of tweets from [@laurieontech](https://twitter.com/laurieontech).
-- [Components: They Take a Village](/blog/components-they-take-the-village/) is helping me get back into the habit of writing about components, as I mentioned last month.
+- In [10 Unspoken Truths on Being a Developer](/posts/10-unspoken-developer-truths/), I added some commentary to a particularly valuable series of tweets from [@laurieontech](https://twitter.com/laurieontech).
+- [Components: They Take a Village](/posts/components-they-take-the-village/) is helping me get back into the habit of writing about components, as I mentioned last month.
 
 And here are a couple other quick hits on JavaScript:
 
-- [Converting FormData to JSON in JavaScript](/blog/convert-form-data-to-json/)
-- [Incrementing Variables in JavaScript](/blog/incrementing-variables-javascript/)
+- [Converting FormData to JSON in JavaScript](/posts/convert-form-data-to-json/)
+- [Incrementing Variables in JavaScript](/posts/incrementing-variables-javascript/)
 
 ## My Reads
 
 _Articles and news I read last month that I found interesting, with some commentary._ {.text-sm}
 
 {% post_image
-    src="/blog/210511/the-spinneret--my-reads.png",
+    src="/posts/210511/the-spinneret--my-reads.png",
     alt="The Spinneret - My Reads" %}
 
 I found _so many_ great articles in April that I started wondering if I should be running a weekly newsletter. There's a lot to get through here, so I tried to bucket them for you.
@@ -113,7 +113,7 @@ I don't usually like to read case studies. They are often super self-back-pattin
 _New tools that I've recently discovered. They aren't necessarily new._ {.text-sm}
 
 {% post_image
-    src="/blog/210511/the-spinneret--my-finds.png",
+    src="/posts/210511/the-spinneret--my-finds.png",
     alt="The Spinneret - My Finds" %}
 
 I also found _a lot_ of new tools this month. These are listed in alphabetical order with a quick snippet about each.

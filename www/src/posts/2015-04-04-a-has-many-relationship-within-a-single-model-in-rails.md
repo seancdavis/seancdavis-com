@@ -4,7 +4,7 @@ tags:
   - ruby-on-rails
 description: Here are a couple methods for dealing with uni-directional
   many-to-many  associations in Rails.
-image: /blog/default/default-pink-02.png
+image: /posts/default/default-pink-02.png
 ---
 
 You're probably already familiar with Rails' [`has_many` association](http://guides.rubyonrails.org/association_basics.html#the-has-many-association), but what you want is a little different. You want to say that an object has many objects of its same class. In other words, what you're defining is a parent/child relationship within a model.

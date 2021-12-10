@@ -5,20 +5,20 @@ description: Page load times decrease as the number of images on a page
   issues caused by images without negatively impacting user experience.
 tags:
   - javascript
-image: /blog/default/default-green-02.png
+image: /posts/default/default-green-02.png
 ---
 
 Images are notorious for slowing down web pages. All too often images used are larger than they need to be. And in many cases all images are loaded when the page loads, which means a user may not even see all the images without scrolling to the bottom of the page.
 
 One approach to mitigating these increased page load times is to take what I like to call the _pixelated placeholder_ approach. Pixelated placeholders are extremely small versions of the full-size image that are present when the page loads. The small images are stretched to the dimensions of their full-sized self. Then, once the rest of the page contents have properly loaded and the page can be interacted with, we can use a bit of JavaScript to load the full-size images and fade those full-size images smoothly into view. This creates a clean fade-in loading effect similar to this feature popularized by Medium:
 
-![Medium Image Load]({{ "/blog/190109/medium-image-load.gif" | imgix_url }})
+![Medium Image Load]({{ "/posts/190109/medium-image-load.gif" | imgix_url }})
 
 Let's look at how you can build a similar type of feature on your website to help increase page performance.
 
 ## Setup
 
-For the [HTML](/blog/wtf-is-html/) markup, let's build a grid of images inside a container. For these images, the `src` attribute should be set to the pixelated placeholder and the full-size image URL will be set as the `data-src` attribute.
+For the [HTML](/posts/wtf-is-html/) markup, let's build a grid of images inside a container. For these images, the `src` attribute should be set to the pixelated placeholder and the full-size image URL will be set as the `data-src` attribute.
 
 ```html
 <div class="container">
@@ -76,37 +76,37 @@ Before you do, note that it is making use of jQuery and also uses ES2015 classes
 class PlaceholderImage {
   constructor(el) {
     // Set reference to the pixelated placeholder image.
-    this.placeholder = $(el)
+    this.placeholder = $(el);
     // Wrap the placeholder element so we can perform the transition.
-    this.wrapElement()
+    this.wrapElement();
     // Load the full-size image.
-    this.loadImage()
+    this.loadImage();
   }
 
   wrapElement() {
     // Add a "placeholder-image" class to the placeholder. This makes the
     // placeholder positioned relatively, which enables it to sit in front of
     // the absolutely-positioned full-size image during the transition.
-    this.placeholder.addClass("placeholder-image")
+    this.placeholder.addClass("placeholder-image");
     // Wrap the placeholder image in a <span> tag that is positioned relatively
     // so the full-size image can be positioned absolutely inside it.
-    this.placeholder.wrap('<span class="placeholder-wrapper"></span>')
+    this.placeholder.wrap('<span class="placeholder-wrapper"></span>');
     // Set a reference to the wrapping element.
-    this.wrapper = this.placeholder.parent()
+    this.wrapper = this.placeholder.parent();
   }
 
   loadImage() {
     // Prepend a blank image to the wrapper. The "placeholder-loading" class
     // positions it absolutely just behind the placeholder image.
-    this.wrapper.prepend('<img class="placeholder-loading">')
+    this.wrapper.prepend('<img class="placeholder-loading">');
     // Set a reference to the image.
-    this.image = this.wrapper.find(".placeholder-loading").first()
+    this.image = this.wrapper.find(".placeholder-loading").first();
     // When the image loads, run the transitionImage() function, maintaining the
     // proper scope. This is run before "src" is set so that we can be sure it
     // fires.
-    this.image.on("load", $.proxy(this.transitionImage, this))
+    this.image.on("load", $.proxy(this.transitionImage, this));
     // Set the "src" attribute to the value of the "data-src" attribute.
-    this.image.attr("src", this.placeholder.data("src"))
+    this.image.attr("src", this.placeholder.data("src"));
   }
 
   transitionImage(event) {
@@ -116,20 +116,20 @@ class PlaceholderImage {
       // image (sans "placeholder-image") to the full-size image.
       this.image
         .attr("class", this.placeholder.attr("class"))
-        .removeClass("placeholder-image")
+        .removeClass("placeholder-image");
       // Remove the placeholder image.
-      this.placeholder.remove()
+      this.placeholder.remove();
       // Unwrap the full-size image (i.e. delete the <span> element).
-      this.image.unwrap()
-    })
+      this.image.unwrap();
+    });
   }
 }
 
 $(document).ready(function () {
   // When the page loads, run the pixelated placeholder process for each image
   // on the page.
-  $("img").each((idx, img) => new PlaceholderImage(img))
-})
+  $("img").each((idx, img) => new PlaceholderImage(img));
+});
 ```
 
 When the page loads, the script loops through every image on the page and instantiates the `PlaceholderImage` class, which kicks off loading the full-size image. From there, these are the steps the script follows:
@@ -139,7 +139,7 @@ When the page loads, the script loops through every image on the page and instan
 3. Once the full-size image is loaded, fade _out_ the pixelated placeholder, giving the illusion that the full-size image is fading _in_.
 4. Remove the pixelated placeholder and the `<span>` wrapper, then apply the original classes from the placeholder image to the new full-size image.
 
-Notice that there are three different classes used throughout the script. This is to control the temporary styling with [CSS](/blog/wtf-is-css/) during the loading process. For this to look right, a bit more CSS is required:
+Notice that there are three different classes used throughout the script. This is to control the temporary styling with [CSS](/posts/wtf-is-css/) during the loading process. For this to look right, a bit more CSS is required:
 
 ```css
 .placeholder-wrapper {
@@ -185,7 +185,7 @@ For example, let's say you only wanted to perform this process for images with a
 ```js
 $("img[data-pixelated-placeholder]").each(
   (idx, img) => new PlaceholderImage(img)
-)
+);
 ```
 
 ### Support Background Images
@@ -194,7 +194,7 @@ Notice that this approach is built specifically for `<img>` elements and does no
 
 ### Lazy Loading
 
-This approach is just one step in increasing pages slowed down by image loading. It's still true you may spend resources loading images your users never see. That's where lazy loading comes into play. I [have an article on just that subject](/blog/lazy-load-images-intersection-observer-api/) that may help you get started with incorporating lazy loading into this feature.
+This approach is just one step in increasing pages slowed down by image loading. It's still true you may spend resources loading images your users never see. That's where lazy loading comes into play. I [have an article on just that subject](/posts/lazy-load-images-intersection-observer-api/) that may help you get started with incorporating lazy loading into this feature.
 
 ### Use an Image Processing Library
 
@@ -216,7 +216,7 @@ Alternatively, if using imgix, they have [an imgix.js script](https://ericportis
 
 With the use of a JavaScript class, this script will not work in older browsers. If you are required to support older browsers, consider creating a build pipeline that makes use of [Babel.js](https://babeljs.io/) to support older browsers. Or rewrite the script to be more functional.
 
-If you want to take a look at Babel, I [have a five-part series on compiling ES6 (new JS) code with Gulp and Babel](/blog/compile-es6-code-gulp-babel-part-1/).
+If you want to take a look at Babel, I [have a five-part series on compiling ES6 (new JS) code with Gulp and Babel](/posts/compile-es6-code-gulp-babel-part-1/).
 
 ---
 

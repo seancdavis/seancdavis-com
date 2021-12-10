@@ -4,7 +4,7 @@ description: Use just a little JavaScript and you'll be able to postpone loading
   images until they are available in the viewport.
 tags:
   - javascript
-image: /blog/default/default-orange-03.png
+image: /posts/default/default-orange-03.png
 ---
 
 Our goal here is simple. We want to load images only when we can see them within the [viewport](https://developer.mozilla.org/en-US/docs/Glossary/Viewport).
@@ -31,7 +31,7 @@ With the help of [Unsplash's embedding feature](https://source.unsplash.com/), I
 
 _Note: The dimensions change slightly from image to image so Unsplash delivers a different image for each `<img>` element._
 
-With a little [CSS](/blog/wtf-is-css/), the images can be displayed in a four-column grid using [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/):
+With a little [CSS](/posts/wtf-is-css/), the images can be displayed in a four-column grid using [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/):
 
 ```css
 :root {
@@ -112,15 +112,15 @@ Last, it's time for the JavaScript. Before we do that, there's one more piece to
 Now we can write the JavaScript. Here it is, commented to help you understand what's going on:
 
 ```js
-;(function () {
+(function () {
   // Initialize Intersection Observer. The argument passed here is the callback
   // function that should be run when the observer is triggered.
-  var observer = new IntersectionObserver(onIntersect)
+  var observer = new IntersectionObserver(onIntersect);
   // Observe every element with the "data-lazy-load" attribute for it to
   // intersect the screen.
   document.querySelectorAll("[data-lazy-load]").forEach(function (img) {
-    observer.observe(img)
-  })
+    observer.observe(img);
+  });
 
   // This is the callback function when the observer is triggered. entries is an
   // array of all observable elements for which the function was triggered, and
@@ -132,21 +132,21 @@ Now we can write the JavaScript. Here it is, commented to help you understand wh
       // isn't currently intersecting. The Intersection Observer also fires when
       // an element leaves the viewport, which is why we need this check.
       if (entry.target.getAttribute("data-processed") || !entry.isIntersecting)
-        return true
+        return true;
       // Set the images source to the value of the "data-source" attribute. This
       // is why we were storing the source we ultimately want to load in a data
       // attribute.
-      entry.target.setAttribute("src", entry.target.getAttribute("data-src"))
+      entry.target.setAttribute("src", entry.target.getAttribute("data-src"));
       // Add a new attribute to the image called "data-processed" and set it to
       // true. We do this so we only process each element a single time and we
       // don't try to reload an image that's already been loaded.
-      entry.target.setAttribute("data-processed", true)
-    })
+      entry.target.setAttribute("data-processed", true);
+    });
   }
-})()
+})();
 ```
 
-Hopefully the comments are enough to follow the code. The one thing missing is that that the code is wrapped in an anonymous function (`(function() {})()`) that gets run automatically when the script is loaded. This is a common method for [keeping JavaScript code local](/blog/two-ways-to-keep-javascript-local/) so the variables and functions don't bleed out into other JS code used throughout the site.
+Hopefully the comments are enough to follow the code. The one thing missing is that that the code is wrapped in an anonymous function (`(function() {})()`) that gets run automatically when the script is loaded. This is a common method for [keeping JavaScript code local](/posts/two-ways-to-keep-javascript-local/) so the variables and functions don't bleed out into other JS code used throughout the site.
 
 Note that the Intersection Observer API is not supported by Internet Explorer. If you need IE support, you'll want to load [the polyfill](https://github.com/w3c/IntersectionObserver) prior to your code.
 
@@ -160,5 +160,5 @@ That's all it takes to get started, but as you can see, it's not super polished.
 
 - Protect against elements not being images, if necessary. We used `data-lazy-load` as the specification for lazy loading an image, but we don't validate that it's an image, enabling a developer to add the attribute to any element. (Or, maybe you want to allow other types of elements for your particular scenario.)
 - Play with the options for `IntersectionObserver`. There is an optional second argument when initialize the observer which is an options object. One option is `rootMargin` which enables you to consider elements as intersecting prior to them hitting the viewport, which may be desirable if you don't want the user to see the loading process.
-- Fade in images rather than replacing them, since replacing them has a flash of no content while the browser downloads the image. I wrote [an article on the subject](/blog/better-website-performance-pixelated-placeholder-images/) that should help to get you started.
+- Fade in images rather than replacing them, since replacing them has a flash of no content while the browser downloads the image. I wrote [an article on the subject](/posts/better-website-performance-pixelated-placeholder-images/) that should help to get you started.
 - Load placeholder images that will match the dimensions of the resulting image so the page content doesn't jump as images are loaded.

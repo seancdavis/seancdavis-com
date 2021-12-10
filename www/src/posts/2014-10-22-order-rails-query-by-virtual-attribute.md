@@ -5,7 +5,7 @@ tags:
 description: Rails' scopes don't work well with virtual attributes since they
   resolve to a SQL query. Instead you can throw them in an array and then sort
   by a virtual attribute.
-image: /blog/default/default-green-02.png
+image: /posts/default/default-green-02.png
 ---
 
 Have you tried and failed to order a rails query by a virtual attribute, being told the column isn't in the database (when, in fact, you already _knew_ that)?

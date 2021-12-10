@@ -3,7 +3,7 @@ title: 2 Reasons Why I Don't Use Mint.com For Budgeting
 tags:
   - organization
 description: "I've gone back to Mint.com a few times because it's supposed to be the best of the best. But I just can't get past these two issues."
-image: /blog/160315/8449167986_b3f8907231_b.jpg
+image: /posts/160315/8449167986_b3f8907231_b.jpg
 attribution:
   - name: Chris Potter
     url: https://www.flickr.com/photos/86530412@N02/

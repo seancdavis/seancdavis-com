@@ -5,12 +5,12 @@ tags:
   - gatsby
   - jamstack
   - video-tutorial
-image: /blog/200827/meta--gatsby-dynamic-json-pages.jpg
+image: /posts/200827/meta--gatsby-dynamic-json-pages.jpg
 ---
 
-As I've been exploring [static APIs](/blog/lets-talk-about-static-apis/) over the past few months, I've been adding tutorials to [an introductory example](/blog/how-to-build-static-api/) using various tools and frameworks.
+As I've been exploring [static APIs](/posts/lets-talk-about-static-apis/) over the past few months, I've been adding tutorials to [an introductory example](/posts/how-to-build-static-api/) using various tools and frameworks.
 
-As I look to add [Gatsby](https://www.gatsbyjs.org/) to that list, I wondered ... _How could I programmatically generate JSON pages from a data source with Gatsby?_ It doesn't seem straightforward out of the box because Gatsby is essentially a React app with pre-rendering. It's built to output [HTML](/blog/wtf-is-html/), [CSS](/blog/wtf-is-css/), and [JavaScript](/blog/wtf-is-javascript/) files.
+As I look to add [Gatsby](https://www.gatsbyjs.org/) to that list, I wondered ... _How could I programmatically generate JSON pages from a data source with Gatsby?_ It doesn't seem straightforward out of the box because Gatsby is essentially a React app with pre-rendering. It's built to output [HTML](/posts/wtf-is-html/), [CSS](/posts/wtf-is-css/), and [JavaScript](/posts/wtf-is-javascript/) files.
 
 So I went looking for an answer and found [this](https://spectrum.chat/gatsby-js/general/generating-json-file-with-gatsby~c539d9a7-970c-4a52-ac79-18a51f254537) from Gatsby's creator, [Kyle Mathews](https://twitter.com/kylemathews):
 
@@ -129,13 +129,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/content/posts`
-      }
+        path: `${__dirname}/src/content/posts`,
+      },
     },
-    `gatsby-transformer-remark`
+    `gatsby-transformer-remark`,
     // ...
-  ]
-}
+  ],
+};
 ```
 
 Notice that the filesystem plugin is pointing to the directory in which we put our markdown file. This is crucial. We need the filesystem plugin to source the data so the Remark plugin can transform it into nodes we can query through GraphQL.
@@ -185,9 +185,9 @@ The file below is commented with what's going on in the appropriate lines.
 
 ```js
 // fs dependency is a Node.js library for working with the filesystem.
-const fs = require("fs")
+const fs = require("fs");
 // Path is a Node.js library with utilities for working with file paths.
-const path = require("path")
+const path = require("path");
 
 // Use the onPostBuild Node API, which runs after the build has been completed.
 // Note that we have to use an async function here because the Remark plugin
@@ -211,28 +211,28 @@ exports.onPostBuild = async ({ graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     // A reference to where we are going to put the files. Note that the public
     // directory already exists because the build has been completed (since
     // we're in the onPostBuild hook).
-    const postsPath = "./public/posts"
+    const postsPath = "./public/posts";
 
     // Collect the data for all earworms. This simply digs into the query result
     // and extracts the objects we care about.
-    const posts = result.data.posts.edges.map(({ node }) => node)
+    const posts = result.data.posts.edges.map(({ node }) => node);
 
     // If we don't already have the posts directory inside the public directory,
     // create it.
-    if (!fs.existsSync(postsPath)) fs.mkdirSync(postsPath)
+    if (!fs.existsSync(postsPath)) fs.mkdirSync(postsPath);
 
     // Loop through each (filtered) result from the query and write them to
     // file.
-    posts.map(post => {
+    posts.map((post) => {
       // The slug is pulled from the name of the markdown file.
       const slug = path.basename(
         post.fileAbsolutePath,
         path.extname(post.fileAbsolutePath)
-      )
+      );
 
       // We then combine the frontmatter object with the slug and body (the
       // converted HTML) to form our data object. This will give us the shape we
@@ -240,15 +240,15 @@ exports.onPostBuild = async ({ graphql }) => {
       const data = {
         ...post.frontmatter,
         slug: slug,
-        body: post.html
-      }
+        body: post.html,
+      };
 
       // Using the slug as the filename, write a file containing the data
       // object, after converting it to JSON format.
-      fs.writeFileSync(`${postsPath}/${slug}.json`, JSON.stringify(data))
-    })
-  })
-}
+      fs.writeFileSync(`${postsPath}/${slug}.json`, JSON.stringify(data));
+    });
+  });
+};
 ```
 
 Run a build to see this in action.
@@ -282,8 +282,8 @@ After installing the [gatsby-source-sanity](https://www.gatsbyjs.org/packages/ga
 `gatsby-node.js` {.filename}
 
 ```js
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 
 exports.onPostBuild = async ({ graphql }) => {
   await graphql(`
@@ -301,19 +301,19 @@ exports.onPostBuild = async ({ graphql }) => {
         }
       }
     }
-  `).then(result => {
-    const postsPath = "./public/posts"
+  `).then((result) => {
+    const postsPath = "./public/posts";
 
-    const posts = result.data.posts.edges.map(({ node }) => node)
+    const posts = result.data.posts.edges.map(({ node }) => node);
 
-    if (!fs.existsSync(postsPath)) fs.mkdirSync(postsPath)
+    if (!fs.existsSync(postsPath)) fs.mkdirSync(postsPath);
 
-    posts.map(post => {
-      const data = { ...post, slug: post.slug.current }
-      fs.writeFileSync(`${postsPath}/${data.slug}.json`, JSON.stringify(data))
-    })
-  })
-}
+    posts.map((post) => {
+      const data = { ...post, slug: post.slug.current };
+      fs.writeFileSync(`${postsPath}/${data.slug}.json`, JSON.stringify(data));
+    });
+  });
+};
 ```
 
 If you have external data that doesn't have a Gatsby plugin you'll have to write your own support for it. That process is outside the scope of what we're talking about here.

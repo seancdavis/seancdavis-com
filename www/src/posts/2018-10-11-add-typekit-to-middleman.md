@@ -4,10 +4,10 @@ description: Add Typekit fonts to your website built with Middleman without
   making an additional request and slowing down performance.
 tags:
   - middleman
-image: /blog/default/default-green-01.png
+image: /posts/default/default-green-01.png
 ---
 
-I wrote in [the Jekyll equivalent of this article](/blog/add-typekit-to-jekyll/) that there are three methods Typekit offers for adding its fonts to your site and making them available to use within your [CSS](/blog/wtf-is-css/) files.
+I wrote in [the Jekyll equivalent of this article](/posts/add-typekit-to-jekyll/) that there are three methods Typekit offers for adding its fonts to your site and making them available to use within your [CSS](/posts/wtf-is-css/) files.
 
 Via an external stylesheet:
 

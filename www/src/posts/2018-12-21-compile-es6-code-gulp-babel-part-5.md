@@ -7,11 +7,11 @@ tags:
   - babel
   - gulp
   - javascript
-image: /blog/default/default-yellow-03.png
+image: /posts/default/default-yellow-03.png
 related_posts: []
 ---
 
-This is the last of five parts in the series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/blog/compile-es6-code-gulp-babel-part-1/), I recommend doing so. This last piece is just some icing on the top layer of a real beefy cake.
+This is the last of five parts in the series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/posts/compile-es6-code-gulp-babel-part-1/), I recommend doing so. This last piece is just some icing on the top layer of a real beefy cake.
 
 If you've gone through all four parts already, welcome back! I'm glad you've made it this far and I hope you've been able to make use of this process.
 
@@ -35,55 +35,55 @@ This is just one new line and one edited line in an otherwise long Gulpfile. Nev
 `gulpfile.js` {.filename}
 
 ```js
-const { parallel, series, src, dest } = require("gulp")
+const { parallel, series, src, dest } = require("gulp");
 
-const babel = require("gulp-babel")
-const concat = require("gulp-concat")
-const del = require("del")
-const plumber = require("gulp-plumber")
-const uglify = require("gulp-uglify")
+const babel = require("gulp-babel");
+const concat = require("gulp-concat");
+const del = require("del");
+const plumber = require("gulp-plumber");
+const uglify = require("gulp-uglify");
 
-const jsConfig = require("./src/config")
-const srcDir = "./src"
-const tmpDir = "./tmp"
-const destDir = "./dist"
+const jsConfig = require("./src/config");
+const srcDir = "./src";
+const tmpDir = "./tmp";
+const destDir = "./dist";
 
 // The hash is the timestamp when the task runs.
-const hash = new Date().getTime()
+const hash = new Date().getTime();
 
 function jsDeps(done) {
-  const tasks = jsConfig.map(config => {
-    return done => {
-      const deps = (config.deps || []).map(f => {
+  const tasks = jsConfig.map((config) => {
+    return (done) => {
+      const deps = (config.deps || []).map((f) => {
         if (f[0] == "~") {
-          return `./node_modules/${f.slice(1, f.length)}.js`
+          return `./node_modules/${f.slice(1, f.length)}.js`;
         } else {
-          return `${srcDir}/${f}.js`
+          return `${srcDir}/${f}.js`;
         }
-      })
+      });
       if (deps.length == 0) {
-        done()
-        return
+        done();
+        return;
       }
       return src(deps)
         .pipe(concat(`${config.name}.deps.js`))
-        .pipe(dest(tmpDir))
-    }
-  })
+        .pipe(dest(tmpDir));
+    };
+  });
 
-  return parallel(...tasks, parallelDone => {
-    parallelDone()
-    done()
-  })()
+  return parallel(...tasks, (parallelDone) => {
+    parallelDone();
+    done();
+  })();
 }
 
 function jsBuild(done) {
-  const tasks = jsConfig.map(config => {
-    return done => {
-      const files = (config.files || []).map(f => `${srcDir}/${f}.js`)
+  const tasks = jsConfig.map((config) => {
+    return (done) => {
+      const files = (config.files || []).map((f) => `${srcDir}/${f}.js`);
       if (files.length == 0) {
-        done()
-        return
+        done();
+        return;
       }
       return src(files)
         .pipe(plumber())
@@ -94,64 +94,64 @@ function jsBuild(done) {
               [
                 "@babel/env",
                 {
-                  modules: false
-                }
-              ]
-            ]
+                  modules: false,
+                },
+              ],
+            ],
           })
         )
         .pipe(uglify())
-        .pipe(dest(tmpDir))
-    }
-  })
+        .pipe(dest(tmpDir));
+    };
+  });
 
-  return parallel(...tasks, parallelDone => {
-    parallelDone()
-    done()
-  })()
+  return parallel(...tasks, (parallelDone) => {
+    parallelDone();
+    done();
+  })();
 }
 
 function jsConcat(done) {
-  const tasks = jsConfig.map(config => {
-    return done => {
+  const tasks = jsConfig.map((config) => {
+    return (done) => {
       const files = [
         `${tmpDir}/${config.name}.deps.js`,
-        `${tmpDir}/${config.name}.build.js`
-      ]
+        `${tmpDir}/${config.name}.build.js`,
+      ];
       return (
         src(files, { allowEmpty: true })
           .pipe(plumber())
           // Append hash to the bundle filename.
           .pipe(concat(`${config.name}-${hash}.js`))
           .pipe(dest(destDir))
-      )
-    }
-  })
+      );
+    };
+  });
 
-  return parallel(...tasks, parallelDone => {
-    parallelDone()
-    done()
-  })()
+  return parallel(...tasks, (parallelDone) => {
+    parallelDone();
+    done();
+  })();
 }
 
 function jsClean(done) {
-  const tasks = jsConfig.map(config => {
-    return done => {
+  const tasks = jsConfig.map((config) => {
+    return (done) => {
       const files = [
         `${tmpDir}/${config.name}.deps.js`,
-        `${tmpDir}/${config.name}.build.js`
-      ]
-      return del(files)
-    }
-  })
+        `${tmpDir}/${config.name}.build.js`,
+      ];
+      return del(files);
+    };
+  });
 
-  return parallel(...tasks, parallelDone => {
-    parallelDone()
-    done()
-  })()
+  return parallel(...tasks, (parallelDone) => {
+    parallelDone();
+    done();
+  })();
 }
 
-exports.default = series(parallel(jsDeps, jsBuild), jsConcat, jsClean)
+exports.default = series(parallel(jsDeps, jsBuild), jsConcat, jsClean);
 ```
 
 Now when you run the build you will see the hash appended to the filenames:
@@ -160,7 +160,7 @@ Now when you run the build you will see the hash appended to the filenames:
 $ npm run build
 ```
 
-Notice that this is where cleaning the build directory (mentioned in [Part 4](/blog/compile-es6-code-gulp-babel-part-4/)) could come in handy. With these timestamps appended to the filename, every time you build, there will be a new set of files in your destination directory. Therefore, it would be nice to automate cleaning that directory prior to running the build, but that can lead to limitations depending on how you build that feature.
+Notice that this is where cleaning the build directory (mentioned in [Part 4](/posts/compile-es6-code-gulp-babel-part-4/)) could come in handy. With these timestamps appended to the filename, every time you build, there will be a new set of files in your destination directory. Therefore, it would be nice to automate cleaning that directory prior to running the build, but that can lead to limitations depending on how you build that feature.
 
 ---
 
@@ -174,8 +174,8 @@ If you get stuck or have questions as you go through these exercises, don't hesi
 
 For reference, here is the series in its entirety, in case you want to jump around:
 
-1. [Part 1: Setup & Simple Implementation](/blog/compile-es6-code-gulp-babel-part-1/)
-2. [Part 2: Concatenated Bundle](/blog/compile-es6-code-gulp-babel-part-2/)
-3. [Part 3: Dynamic Manifest](/blog/compile-es6-code-gulp-babel-part-3/)
-4. [Part 4: Clean Files & Minify Output](/blog/compile-es6-code-gulp-babel-part-4/)
+1. [Part 1: Setup & Simple Implementation](/posts/compile-es6-code-gulp-babel-part-1/)
+2. [Part 2: Concatenated Bundle](/posts/compile-es6-code-gulp-babel-part-2/)
+3. [Part 3: Dynamic Manifest](/posts/compile-es6-code-gulp-babel-part-3/)
+4. [Part 4: Clean Files & Minify Output](/posts/compile-es6-code-gulp-babel-part-4/)
 5. **Part 5: Asset Hashing**

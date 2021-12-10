@@ -4,23 +4,23 @@ description: "It's tough to know when it's the right time to break a component u
 tags:
   - components
   - javascript
-image: /blog/200710/card-subcomponents.jpg
+image: /posts/200710/card-subcomponents.jpg
 ---
 
-[Components](/blog/wtf-is-a-web-component/) are a total game changer ... _if_ you know how to make the most of them. Otherwise, they can become overly complex and unwieldy, and you may wonder what all the fuss was about in the first place.
+[Components](/posts/wtf-is-a-web-component/) are a total game changer ... _if_ you know how to make the most of them. Otherwise, they can become overly complex and unwieldy, and you may wonder what all the fuss was about in the first place.
 
 Often what drives that complexity has a lot to do with _when you decide to break the component into smaller components._ Do it too early and you have way too many components and all this unnecessary property drilling, which leads to a nightmarish maze when trying to find where some element lives in the codebase. On the other hand, if you do it too late you'll end up with massive, overly-complex components that are intimidating (and often risky) to refactor.
 
 Many times when we think of _simplifying_ a component, we think of breaking it up into smaller _structural_ pieces, or subcomponents. For example, a _card_ component may have an image, some text, and a button. It's a simple and static component, and it may make sense to pull out the image and button as separate components (i.e. subcomponents).
 
 {% post_image
-    src="/blog/200710/card-subcomponents.jpg",
+    src="/posts/200710/card-subcomponents.jpg",
     alt="card component with subcomponents" %}
 
 Or maybe your card has multiple `theme` properties that determine the other properties it can accept and how it is rendered on screen. In this case, it might make sense to simplify the various themes by building a component for each one and having one _controlling_ component accept a `theme` property and determine which card component to render.
 
 {% post_image
-    src="/blog/200710/card-themes.jpg",
+    src="/posts/200710/card-themes.jpg",
     alt="card subcomponents as themes" %}
 
 In both cases above, my assumption was that those components were fairly static. They accepted a series of properties and used the values to render something statically on the page. In other words, breaking them up — whether into variations or subcomponents — was entirely _structural_, or based on what we see on screen.
@@ -30,7 +30,7 @@ Now, consider a _related content_ component. It's more dynamic. It accepts the c
 That's a lot going on in one component. When it comes to breaking it up into smaller components, it's likely that the first effort is going to be _structural_ — you'd pull out the repeated card as its own component. That makes sense — it's what I would do, too.
 
 {% post_image
-    src="/blog/200710/related-content-subcomponents.jpg",
+    src="/posts/200710/related-content-subcomponents.jpg",
     alt="related content component with subcomponents" %}
 
 But then we're left with this related content component that has multiple responsibilities. It has to go fetch data, transform it (maybe), and then render the content to the screen, which also means controlling the styling.
@@ -47,20 +47,20 @@ In other words, in this example, I could see us having four levels of components
 4. An _image_ or _button_ component, which are statically rendered to the page.
 
 {% post_image
-    src="/blog/200710/related-content-with-adapter.jpg",
+    src="/posts/200710/related-content-with-adapter.jpg",
     alt="related content component with adapter and subcomponents" %}
 
 ## Introducing Component Adapters
 
 I call logical components — like the related content component — _adapters_. They don't bring any styling. Instead they _wrap_ a component that is responsible for the styling. The adapter stays focused on retrieving and normalizing data so that its subcomponents can focus only on styling.
 
-This approach separates logic from presentation. It means that the components responsible for styling don't have to know anything about the data source. So if the data source isn't ready or available, we can still see the same result on screen, simply by passing [static (or _mocked_) data](/blog/wtf-is-a-fixture/) to the top-level presentation component (card grid/), bypassing the logical wrapper (related content/).
+This approach separates logic from presentation. It means that the components responsible for styling don't have to know anything about the data source. So if the data source isn't ready or available, we can still see the same result on screen, simply by passing [static (or _mocked_) data](/posts/wtf-is-a-fixture/) to the top-level presentation component (card grid/), bypassing the logical wrapper (related content/).
 
 ## Benefits of Component Adapters
 
 I've found three primary benefits to this approach.
 
-First, it **adheres to the [single-responsibility principle](/blog/wtf-is-single-responsibility-principle/)**, in which every component does one thing and does that thing well. At first we were asking a single component to play a logical role (fetching and transforming data/) and a presentation role (styling cards on the screen/). To pull it apart means we've simplified our approach by letting each component focus on doing one thing well.
+First, it **adheres to the [single-responsibility principle](/posts/wtf-is-single-responsibility-principle/)**, in which every component does one thing and does that thing well. At first we were asking a single component to play a logical role (fetching and transforming data/) and a presentation role (styling cards on the screen/). To pull it apart means we've simplified our approach by letting each component focus on doing one thing well.
 
 Second, it's **easier to test**. The adapter would be tested for ensuring that it can properly transform data and that it leads to some content on the screen. But the card grid (and subsequent components) can be tested _visually_ in isolation, without the need for a data source.
 

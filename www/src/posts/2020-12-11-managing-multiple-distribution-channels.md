@@ -4,7 +4,7 @@ description: When managing multiple marketing channels, you don't need to spread
 tags:
   - repost-ample
   - cms
-image: /blog/201211/201211--multichannel-cms.png
+image: /posts/201211/201211--multichannel-cms.png
 canonical_url: https://www.ample.co/blog/managing-multiple-distribution-channels-from-a-single-cms
 ---
 
@@ -13,7 +13,7 @@ Using a headless CMS has many benefits, and one of the biggest stems from the ve
 _Headless_ means that there's no front-end to the CMS product. That's a little confusing, because _technically_ the CMS _does_ have a front-end, but it's only for editing the content. The lack of a _head_ (or _front-end_, in this case) means that there is no publicly-facing website delivered by the CMS product. This is in contrast to the more traditional (i.e. _monolithic_) CMS approach, used by products like [WordPress](https://wordpress.org/) and [Drupal](https://www.drupal.org/).
 
 {% post_image
-    src="/blog/201211/5fd3ec6253c1a1b120c4f14e_5tPdoDv603KzkuBD5k_PsMBMzJI5KauawKSriKqFYWJMDUdpulmX1l5pceS91Lj--KqhHgUcf8F_L9nqJFtb7lFoZiGdfCY35vD7Ia1q3BeHp4WRwQ5Q3l2hPLTBNdTXHcy6XCCn.jpeg",
+    src="/posts/201211/5fd3ec6253c1a1b120c4f14e_5tPdoDv603KzkuBD5k_PsMBMzJI5KauawKSriKqFYWJMDUdpulmX1l5pceS91Lj--KqhHgUcf8F_L9nqJFtb7lFoZiGdfCY35vD7Ia1q3BeHp4WRwQ5Q3l2hPLTBNdTXHcy6XCCn.jpeg",
     alt="Monolithic CMS approach diagram",
     flatten="true" %}
 
@@ -22,14 +22,14 @@ Being headless means the CMS doesn't really care how you used the content. Its j
 This is great for when the same type of content is to be distributed across multiple front-ends (i.e. _channels_). Consider an organization that has both a website and native applications, but wants to share content to both channels. That content can be sourced from the same (headless) CMS and consumed individually by each application.
 
 {% post_image
-    src="/blog/201211/5fd3ec6274de03693a2c18d0_qh-kg5SrxHPW0WqI3njT6cvNAnUcLPnM5YfFBhD_RIm8xjlylahpzRsEl-GcAyz6ZrMxFnjH-mWDqlgatnFgZtXft9RWXPuZ9kl8q32w8NeqSQISJFpfNucVd7AQWW0D64LiH5AO.jpeg",
+    src="/posts/201211/5fd3ec6274de03693a2c18d0_qh-kg5SrxHPW0WqI3njT6cvNAnUcLPnM5YfFBhD_RIm8xjlylahpzRsEl-GcAyz6ZrMxFnjH-mWDqlgatnFgZtXft9RWXPuZ9kl8q32w8NeqSQISJFpfNucVd7AQWW0D64LiH5AO.jpeg",
     alt="Headless CMS diagram",
     flatten="true" %}
 
 Or think about a fancy veterinarian's office that has a website and a mobile application. The website has a blog, consisting of helpful tips for pet care, often written from the perspective of the animal. The mobile application currently only allows for making and checking appointments, but they want the blog posts to be natively available to that application as well. This is a perfect use case for a headless CMS!
 
 {% post_image
-    src="/blog/201211/5fd3ec6260d65cdac707798d_1MO0fB1TaZDcbykS1L1xEiCPctRP5UKN0tg4ZaF1gxOEHiPojylDoEw_xSvM4RkGIu4Xly55XFPPJACJHiU_-POgNDWMaQ8TCl54TYOHjSUIOGVbqmWRtBsUNcNTV6WgwYPOngSi.jpeg",
+    src="/posts/201211/5fd3ec6260d65cdac707798d_1MO0fB1TaZDcbykS1L1xEiCPctRP5UKN0tg4ZaF1gxOEHiPojylDoEw_xSvM4RkGIu4Xly55XFPPJACJHiU_-POgNDWMaQ8TCl54TYOHjSUIOGVbqmWRtBsUNcNTV6WgwYPOngSi.jpeg",
     alt="Diagram of content being consumed by different applications",
     flatten="true" %}
 
@@ -48,14 +48,14 @@ It gets a little trickier when we want to be more discerning and deliberate when
 Right now, the vet has two _channels_: a website and an application. They want to send all articles to the website, but only a subset to the application.
 
 {% post_image
-    src="/blog/201211/5fd3ec63eb2fea653b7d3925_W_GKYI0AhyOuxnHel-X_EqQjkESCJL511coo-EzVmo9RSMd3BuLod0_LLAj5SoSBJplspvetFd2l37lv6Vauec7jfO7eBkVNgafix8hAGuVwS-omYvSbhLwgKcnKZ8Gk4xpggo41.jpeg",
+    src="/posts/201211/5fd3ec63eb2fea653b7d3925_W_GKYI0AhyOuxnHel-X_EqQjkESCJL511coo-EzVmo9RSMd3BuLod0_LLAj5SoSBJplspvetFd2l37lv6Vauec7jfO7eBkVNgafix8hAGuVwS-omYvSbhLwgKcnKZ8Gk4xpggo41.jpeg",
     alt="Diagram of content being pushed to two channels",
     flatten="true" %}
 
 When working with a headless CMS, one approach could be to add a field to the Post model (or content type) that would also publish the post to the application if selected.
 
 {% post_image
-    src="/blog/201211/5fd3ec6274de0357a72c18d1_rhpr0E_WTthOwCeZ-0XXy0N_gqiXtKlTJ6-qRG_oI6fyRUgkAeCmgI4zhFdpJLp_u2AsHazMW93hNnLuZlSGQJNTK7zA2vSm2Aq2yAD9j0dLeS7yAQJj5sCXgx-dBXDI2tyWaR7_.png",
+    src="/posts/201211/5fd3ec6274de0357a72c18d1_rhpr0E_WTthOwCeZ-0XXy0N_gqiXtKlTJ6-qRG_oI6fyRUgkAeCmgI4zhFdpJLp_u2AsHazMW93hNnLuZlSGQJNTK7zA2vSm2Aq2yAD9j0dLeS7yAQJj5sCXgx-dBXDI2tyWaR7_.png",
     alt="CMS options to publish posts to an app",
     flatten="true" %}
 
@@ -72,7 +72,7 @@ So they spin up a new website, but they only want it to include the fish posts. 
 A better approach would be to start using _tags_ on posts. Then they could pull the appropriate posts based on some tag association — maybe _fish_ for the campaign site and _mobile_ for the app, with all posts still being syndicated to the main website.
 
 {% post_image
-    src="/blog/201211/5fd3ec635a755058e4d477dc_T2-ryjELYD62FUw43SnzH0zys-lkAEet1xm5ZJLO4q1UeaUx2C8EfhpzZY6fr1hsvHhqq3_mwvarlTAB7q82wd2drdC6bySiPdfbo6SXrw1oKak1qxKBaldxSWJQZbxOgdnMoMWr.png",
+    src="/posts/201211/5fd3ec635a755058e4d477dc_T2-ryjELYD62FUw43SnzH0zys-lkAEet1xm5ZJLO4q1UeaUx2C8EfhpzZY6fr1hsvHhqq3_mwvarlTAB7q82wd2drdC6bySiPdfbo6SXrw1oKak1qxKBaldxSWJQZbxOgdnMoMWr.png",
     alt="CMS showing a tagging system",
     flatten="true" %}
 
@@ -93,7 +93,7 @@ To address the concerns of _too much flexibility_ on the back-end and _inconsist
 We'll create a new _channels_ field. That field could be a multi-select list of channels to which the content can be distributed.
 
 {% post_image
-    src="/blog/201211/5fd3ec6305a437781231bd72_aaNm5DuulaoirA6c7j3evAS04pWqMCMRliMlKUAIe4zdc1cJBVuwDJC7Hye0YPMD0RzXhKoSoCNl8UBRs-5saAyWjABzVVNlVMcMnGXhh2C4KW9dyKs1EnSqzipxRylyx1dMit_Q.png",
+    src="/posts/201211/5fd3ec6305a437781231bd72_aaNm5DuulaoirA6c7j3evAS04pWqMCMRliMlKUAIe4zdc1cJBVuwDJC7Hye0YPMD0RzXhKoSoCNl8UBRs-5saAyWjABzVVNlVMcMnGXhh2C4KW9dyKs1EnSqzipxRylyx1dMit_Q.png",
     alt="CMS options for distribution channels",
     flatten="true" %}
 
@@ -120,7 +120,7 @@ One thing to note when taking the _channel_ field approach is to also account fo
 It would be beneficial to have another field that sets the canonical host. For one project, we actually combined them all together into an interactive field using Contentful.
 
 {% post_image
-    src="/blog/201211/5fd3ec63c2fe792d2d1835e7_2pr_ILIRxkaMax7hX9PPJylvOa7-G_xQ3W81Jc5V1FUXF1Mdw3mQgxZ6ISQWx2-fyK7LzmgG2L7D3ohwxon_-g4VBEVqdXNHOi_xkmxSm0zUXW_OfYJ_qfD3u1C1L6l9StCU0d0y.png",
+    src="/posts/201211/5fd3ec63c2fe792d2d1835e7_2pr_ILIRxkaMax7hX9PPJylvOa7-G_xQ3W81Jc5V1FUXF1Mdw3mQgxZ6ISQWx2-fyK7LzmgG2L7D3ohwxon_-g4VBEVqdXNHOi_xkmxSm0zUXW_OfYJ_qfD3u1C1L6l9StCU0d0y.png",
     alt="CMS options to set sites as distribution channels",
     flatten="true" %}
 

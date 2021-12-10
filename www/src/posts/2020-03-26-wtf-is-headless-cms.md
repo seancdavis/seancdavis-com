@@ -7,7 +7,7 @@ tags:
   - cms
   - jamstack
   - wtf
-image: /blog/default/default-orange-02.png
+image: /posts/default/default-orange-02.png
 ---
 
 [Content management systems](https://en.wikipedia.org/wiki/Content_management_system) (CMS) have been around for awhile. Some of the biggest players in the space go back a long time (in web years):
@@ -39,7 +39,7 @@ Meanwhile, when a user visits the blog site (the front-end), that process looks 
 Here's a super simple diagram of the process:
 
 {% post_image
-    src="/blog/200326/legacy-cms.png",
+    src="/posts/200326/legacy-cms.png",
     alt="Legacy CMS Workflow",
     flatten=true %}
 
@@ -51,9 +51,9 @@ For more than a decade, most CMS products worked like WordPress.
 
 ## Rise of the Jamstack
 
-Eventually we started to see a rise in a different approach to building websites — [the Jamstack](/blog/wtf-is-jamstack/). The Jamstack's primary focus is in _decoupling_ (or _detaching_) front-ends from back-ends.
+Eventually we started to see a rise in a different approach to building websites — [the Jamstack](/posts/wtf-is-jamstack/). The Jamstack's primary focus is in _decoupling_ (or _detaching_) front-ends from back-ends.
 
-The Jamstack quickly gained popularity, as it offered an array of benefits to those building and maintaining websites, including cost, security, performance, scale, and developer experience. ([Read more on the subject here](/blog/wtf-is-jamstack/).)
+The Jamstack quickly gained popularity, as it offered an array of benefits to those building and maintaining websites, including cost, security, performance, scale, and developer experience. ([Read more on the subject here](/posts/wtf-is-jamstack/).)
 
 While not a requirement, the headless CMS is a core tenet of many Jamstack websites. Therefore, as the Jamstack methodology took hold, so too did the headless CMS approach. And that's likely why you're here.
 
@@ -72,7 +72,7 @@ There are two types of headless CMS products, the distinguishing factor being ho
 
 ### The Headless CMS Market
 
-This approach is gaining so much popularity that it seems like there is a new headless CMS to try every week. To list them would be exhausting. Fortunately, the fine folks at [Netlify](/blog/wtf-is-netlify/) (the same ones who coined the term _Jamstack_) are tireless, and have created an archive of headless content management systems at [headlesscms.org](https://headlesscms.org/).
+This approach is gaining so much popularity that it seems like there is a new headless CMS to try every week. To list them would be exhausting. Fortunately, the fine folks at [Netlify](/posts/wtf-is-netlify/) (the same ones who coined the term _Jamstack_) are tireless, and have created an archive of headless content management systems at [headlesscms.org](https://headlesscms.org/).
 
 The other reference I frequent is [this article](https://www.helloample.com/blog/comparing-headless-content-management-systems) and [its corresponding chart](https://uploads-ssl.webflow.com/5a2e8a9f7cc425000195064c/5db3471c4b211e0cec7d6356_ample-blog-tl-jamstack-headless-cms-cheatsheet.pdf) that my colleague authored. It lists a handful of the more popular headless CMS options, along with a solid feature comparison.
 
@@ -93,7 +93,7 @@ I know, I'm selling this hard. I'm totally in love with the headless CMS approac
 I find the headless CMS approach to have three challenges:
 
 - **Complexity:** As mentioned above, flexibility is powerful, but it leads to makes them more complex to work with.
-- **Code Required:** Anyone can learn how to use WordPress, Squarespace, Wix, etc. to spin up a website within a few hours for a few dollars. While a Jamstack site can be created at no cost, it requires some knowledge of code (_at least_ [HTML](/blog/wtf-is-html/) and CSS/) to create a site.
+- **Code Required:** Anyone can learn how to use WordPress, Squarespace, Wix, etc. to spin up a website within a few hours for a few dollars. While a Jamstack site can be created at no cost, it requires some knowledge of code (_at least_ [HTML](/posts/wtf-is-html/) and CSS/) to create a site.
 - **Cost:** API-driven products tend to get pricey really fast. And those pricing models tend to be more about the amount of content and not the traffic on the front-end. Because of that, it can be tough to know how much a headless CMS is going to cost until getting a feel for how the content is architected, which _could_ vary depending on the chosen product.
 
 ---

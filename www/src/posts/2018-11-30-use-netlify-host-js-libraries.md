@@ -5,10 +5,10 @@ description: Netlify is built to host websites, but it can be a handy resource
 tags:
   - javascript
   - netlify
-image: /blog/default/default-yellow-03.png
+image: /posts/default/default-yellow-03.png
 ---
 
-[Netlify's](/blog/wtf-is-netlify/) focus is in on hosting websites following the [Jamstack approach](https://jamstack.org/), and it's really good at doing that.
+[Netlify's](/posts/wtf-is-netlify/) focus is in on hosting websites following the [Jamstack approach](https://jamstack.org/), and it's really good at doing that.
 
 If you don't about Netlify, the workflow is simple on the surface. It's all built around continuous delivery. When you push a change to GitHub, here's what happens:
 
@@ -18,7 +18,7 @@ If you don't about Netlify, the workflow is simple on the surface. It's all buil
 
 Because it uses the Jamstack approach, when the build is done, all Netlify has to host are static files that can be consumed by the web. Therefore, Netlify can take advantage of distributing these files via a [content delivery network](https://en.wikipedia.org/wiki/Content_delivery_network) (CDN), which means they are readily available worldwide and (most important) cached. (Plus, one of the best features of Netlify is that they handle the cache invalidation.)
 
-Add to all this that it's basic service is free, and all this makes Netlify a perfect candidate for hosting any type of asset, not _just_ [HTML](/blog/wtf-is-html/) and [CSS](/blog/wtf-is-css/) files.
+Add to all this that it's basic service is free, and all this makes Netlify a perfect candidate for hosting any type of asset, not _just_ [HTML](/posts/wtf-is-html/) and [CSS](/posts/wtf-is-css/) files.
 
 Consider a scenario where you have a browser-based JavaScript library shared among of a few of your projects, but it's not really any benefit to maintain, support, and distribute via the open-source community. If you want that code available via a URL (i.e. CDN), Netlify is a perfect candidate for helping you distribute it because it will deploy that code automatically to a CDN with a predictable URL.
 
@@ -26,7 +26,7 @@ Let's take a look at an example.
 
 ## The JavaScript Library
 
-Let's say I have a really simple library. [Here's an example](https://github.com/seancdavis/hello-world-js) I put together that uses [webpack](/blog/wtf-is-webpack/) and [Babel](https://babeljs.io/) to take a ES6 module and make it available globally when loaded by the browser. The global class is called `HelloWorld` and it has two static methods:
+Let's say I have a really simple library. [Here's an example](https://github.com/seancdavis/hello-world-js) I put together that uses [webpack](/posts/wtf-is-webpack/) and [Babel](https://babeljs.io/) to take a ES6 module and make it available globally when loaded by the browser. The global class is called `HelloWorld` and it has two static methods:
 
 - `log()`: Logs "Hello World!" to the console.
 - `write()`: Appends "Hello World!" to the DOM's body.
@@ -34,8 +34,8 @@ Let's say I have a really simple library. [Here's an example](https://github.com
 In other words, once the script is loaded on any webpage, I can do the following:
 
 ```js
-HelloWorld.log() // Logs "Hello World!" to the console.
-HelloWorld.write() // Appends "Hello World!" to the DOM's body.
+HelloWorld.log(); // Logs "Hello World!" to the console.
+HelloWorld.write(); // Appends "Hello World!" to the DOM's body.
 ```
 
 This webpack bundle is built by running `npm run build` (specified in `package.json`) and is output to `dist/hello-world.js`.
@@ -53,8 +53,8 @@ But notice there's nothing there -- it throws a 404 (page not found) error. This
 ```html
 <script src="https://hello-world-js.netlify.com/hello-world.js"></script>
 <script>
-  HelloWorld.log() // Logs "Hello World!" to the console.
-  HelloWorld.write() // Appends "Hello World!" to the DOM's body.
+  HelloWorld.log(); // Logs "Hello World!" to the console.
+  HelloWorld.write(); // Appends "Hello World!" to the DOM's body.
 </script>
 ```
 

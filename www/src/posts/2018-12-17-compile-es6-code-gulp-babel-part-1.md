@@ -7,7 +7,7 @@ tags:
   - babel
   - gulp
   - javascript
-image: /blog/default/default-yellow-02.png
+image: /posts/default/default-yellow-02.png
 related_posts:
   - compile-es6-code-gulp-babel-part-2
   - compile-es6-code-gulp-babel-part-3
@@ -20,7 +20,7 @@ Cool? Cool. Let's dig in.
 
 ## Step 1: Create `package.json` File
 
-The [`package.json` file](https://docs.npmjs.com/files/package.json) is a configuration file used in many front-end projects. It works with JavaScript package managers — like [NPM](/blog/wtf-is-npm) and [Yarn](https://yarnpkg.com/en/) — to manage your project's dependencies, releases, scripts, and so on.
+The [`package.json` file](https://docs.npmjs.com/files/package.json) is a configuration file used in many front-end projects. It works with JavaScript package managers — like [NPM](/posts/wtf-is-npm) and [Yarn](https://yarnpkg.com/en/) — to manage your project's dependencies, releases, scripts, and so on.
 
 To prep this project, first make sure you have NPM installed. Alternatively, you can use Yarn, but the examples here will use NPM. I won't go through the installation process under the assumption that you've already used NPM and have it installed. (If you haven't, read through [this guide](https://www.npmjs.com/get-npm).)
 
@@ -65,7 +65,7 @@ Then you can initialize your repository:
 
 For our examples throughout this series, we're going to follow a couple conventions:
 
-1. [Component-Driven JavaScript](/blog/component-based-js-architecture/), which means we're going to write an individual JavaScript file for each component. The examples will show dummy code, but the structure will demonstrate a focus on components.
+1. [Component-Driven JavaScript](/posts/component-based-js-architecture/), which means we're going to write an individual JavaScript file for each component. The examples will show dummy code, but the structure will demonstrate a focus on components.
 2. All JavaScript source files are going to go into a `src` directory and build files will be placed in a `dist` directory.
 
 These are simply choices made for these examples. You're welcome to change any values you see throughout the series to suit your project.
@@ -77,7 +77,7 @@ With that said, let's create two components — `Foo` and `Bar`. We will continu
 ```js
 class Foo {
   log(msg) {
-    console.log(msg)
+    console.log(msg);
   }
 }
 ```
@@ -87,7 +87,7 @@ class Foo {
 ```js
 class Bar {
   print(msg) {
-    document.write(msg)
+    document.write(msg);
   }
 }
 ```
@@ -102,11 +102,11 @@ Next, let's create the Gulpfile (`gulpfile.js`). This is our configuration for o
 
 ```js
 // Import `src` and `dest` from gulp for use in the task.
-const { src, dest } = require("gulp")
+const { src, dest } = require("gulp");
 
 // Import Gulp plugins.
-const babel = require("gulp-babel")
-const plumber = require("gulp-plumber")
+const babel = require("gulp-babel");
+const plumber = require("gulp-plumber");
 
 // Gulp 4 uses exported objects as its tasks. Here we only have a
 // single export that represents the default gulp task.
@@ -124,16 +124,16 @@ exports.default = function (done) {
             [
               "@babel/env",
               {
-                modules: false
-              }
-            ]
-          ]
+                modules: false,
+              },
+            ],
+          ],
         })
       )
       // Save each component as a separate file in dist.
       .pipe(dest("./dist"))
-  )
-}
+  );
+};
 ```
 
 ## Step 6: Add Command-Line Script
@@ -167,7 +167,7 @@ And this will run `gulp`, but it does so within the current context (our project
 
 ## Step 7: Test It
 
-After a successful build, you will see a file in the `dist` for each component. Feel free to take these files, plug them into an [HTML](/blog/wtf-is-html/) file and then work with them.
+After a successful build, you will see a file in the `dist` for each component. Feel free to take these files, plug them into an [HTML](/posts/wtf-is-html/) file and then work with them.
 
 For example, you could drop an `index.html` file in the `dist` directory and point it to both components.
 
@@ -181,19 +181,19 @@ For example, you could drop an `index.html` file in the `dist` directory and poi
 And then you could oen the file, and the JavaScript console, and run something like this:
 
 ```js
-var foo = new Foo()
-foo.log("Hello World") // Prints "Hello World" to the console.
+var foo = new Foo();
+foo.log("Hello World"); // Prints "Hello World" to the console.
 
-var bar = new Bar()
-bar.print("Hello World") // Prints "Hello World" to the DOM.
+var bar = new Bar();
+bar.print("Hello World"); // Prints "Hello World" to the DOM.
 ```
 
-That's it for Part 1! But there's plenty more to do with Gulp and Babel, so please continue through the series. The next articles is on [concatenating your components into a single file](/blog/compile-es6-code-gulp-babel-part-2/).
+That's it for Part 1! But there's plenty more to do with Gulp and Babel, so please continue through the series. The next articles is on [concatenating your components into a single file](/posts/compile-es6-code-gulp-babel-part-2/).
 
 Or you can jump around throughout the series:
 
 1. **Part 1: Setup & Simple Implementation**
-2. [Part 2: Concatenated Bundle](/blog/compile-es6-code-gulp-babel-part-2/)
-3. [Part 3: Dynamic Manifest](/blog/compile-es6-code-gulp-babel-part-3/)
-4. [Part 4: Clean Files & Minify Output](/blog/compile-es6-code-gulp-babel-part-4/)
-5. [Part 5: Asset Hashing](/blog/compile-es6-code-gulp-babel-part-5/)
+2. [Part 2: Concatenated Bundle](/posts/compile-es6-code-gulp-babel-part-2/)
+3. [Part 3: Dynamic Manifest](/posts/compile-es6-code-gulp-babel-part-3/)
+4. [Part 4: Clean Files & Minify Output](/posts/compile-es6-code-gulp-babel-part-4/)
+5. [Part 5: Asset Hashing](/posts/compile-es6-code-gulp-babel-part-5/)

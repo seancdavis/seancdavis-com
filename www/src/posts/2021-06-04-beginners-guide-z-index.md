@@ -1,23 +1,23 @@
 ---
 title: A Beginner's Guide to Z-Index
 description: "The z-index is a powerful yet confusing concept of CSS. Let's make it easy!"
-image: /blog/210604/z-index--main.png
+image: /posts/210604/z-index--main.png
 author: pratham
 seo:
-  image: /blog/210604/z-index--meta.png
+  image: /posts/210604/z-index--meta.png
 tags:
   - css
   - contributor:pratham
 ---
 
-`z-index` is a [CSS](/blog/wtf-is-css/) property that controls stacking order of elements along a z-axis. Let's first take a look at what the z-axis is, and then get you started with a few tips to help you solve situations that tend to trip up developers.
+`z-index` is a [CSS](/posts/wtf-is-css/) property that controls stacking order of elements along a z-axis. Let's first take a look at what the z-axis is, and then get you started with a few tips to help you solve situations that tend to trip up developers.
 
 ## The Z-Axis
 
 Imagine a hypothetical line starting from your eye to screen. That is z-axis. It works like this:
 
 {% post_image
-    src="/blog/210604/z-index--sketch.jpeg",
+    src="/posts/210604/z-index--sketch.jpeg",
     alt="Z-Index: Z-Axis Sketch" %}
 
 ## ⭐ Tip #1: Position Rule Required
@@ -84,7 +84,7 @@ And the corresponding CSS:
 In this case, the child(ren) of `a` (`c`) can never be stacked above `b`. This is how it plays out on the screen:
 
 {% post_image
-    src="/blog/210604/z-index--nested.jpeg",
+    src="/posts/210604/z-index--nested.jpeg",
     alt="Z-Index: Working with Nested Elements" %}
 
 ## Test Drive

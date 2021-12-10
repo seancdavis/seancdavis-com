@@ -2,7 +2,7 @@
 title: Understanding Types with SQLite and Node.js
 date: 2021-04-22
 description: SQLite is simple but very cool and powerful. Yet, it's a little quirky when it comes to handling types. Let's explore that goofiness together, and see how we can protect against it when using Node.
-image: /blog/210422/210422-sqlite-types.png
+image: /posts/210422/210422-sqlite-types.png
 tags:
   - repost-grouparoo
   - node
@@ -61,17 +61,17 @@ Now that you have an empty directory, let's install our dependencies:
 Next, create an `index.js` file with the following code:
 
 ```js
-const sqlite3 = require("sqlite3").verbose()
-const faker = require("faker")
-const path = require("path")
-const { promisify } = require("util")
+const sqlite3 = require("sqlite3").verbose();
+const faker = require("faker");
+const path = require("path");
+const { promisify } = require("util");
 
 // Create a new database named mydb.sqlite in the root of this project.
-const dbFilePath = path.join(__dirname, "mydb.sqlite")
-const db = new sqlite3.Database(dbFilePath)
+const dbFilePath = path.join(__dirname, "mydb.sqlite");
+const db = new sqlite3.Database(dbFilePath);
 
 // Use the promise pattern for SQLite so we don't end up in callback hell.
-const query = promisify(db.all).bind(db)
+const query = promisify(db.all).bind(db);
 
 // SQL query for creating a users table if it doesn't already exist.
 const createTableQuery = `
@@ -82,35 +82,35 @@ const createTableQuery = `
     "last_name" TEXT,
     "created_at" TEXT
   )
-`
+`;
 
 // Generate user attributes using faker.
 const newUser = {
   email: faker.internet.email(),
   first_name: faker.name.firstName(),
   last_name: faker.name.lastName(),
-  created_at: Date.now()
-}
+  created_at: Date.now(),
+};
 
 /**
  * Run an INSERT query on some given table and insert the given object.
  */
 const create = async ({ table, object }) => {
-  const keys = Object.keys(object).join(",")
+  const keys = Object.keys(object).join(",");
   const values = Object.values(object)
-    .map(v => `"${v}"`)
-    .join(",")
-  const res = await query(`INSERT INTO ${table} (${keys}) VALUES (${values})`)
-  return res
-}
+    .map((v) => `"${v}"`)
+    .join(",");
+  const res = await query(`INSERT INTO ${table} (${keys}) VALUES (${values})`);
+  return res;
+};
 
 /**
  * Read all records and all their columns from some given table.
  */
 const read = async ({ table }) => {
-  const res = await query(`SELECT * FROM ${table}`)
-  return res
-}
+  const res = await query(`SELECT * FROM ${table}`);
+  return res;
+};
 
 /**
  * The main controller of this script. This is inside an async function so we
@@ -118,16 +118,16 @@ const read = async ({ table }) => {
  */
 const run = async () => {
   // Create users table if it doesn't exist.
-  await query(createTableQuery)
+  await query(createTableQuery);
   // Create a new user.
-  await create({ table: "users", object: newUser })
+  await create({ table: "users", object: newUser });
   // Read all the users.
-  const users = await read({ table: "users" })
+  const users = await read({ table: "users" });
   // Print to the console.
-  console.log(users)
-}
+  console.log(users);
+};
 
-run()
+run();
 ```
 
 Then run the script:
@@ -139,15 +139,15 @@ After you do that, two things should happen:
 1. You should see some output in the console that is an array containing a single user with the values you just randomly generated. Something like:
 
    ```js
-   ;[
+   [
      {
        id: 1,
        email: "Dawson39@yahoo.com",
        first_name: "Dorris",
        last_name: "West",
-       created_at: "1619034411275"
-     }
-   ]
+       created_at: "1619034411275",
+     },
+   ];
    ```
 
 2. You should have a new file in your project called `mydb.sqlite`. This is your database!
@@ -226,7 +226,7 @@ const createTableQuery = `
     "b" INTEGER,
     "c" CHEESE
   )
-`
+`;
 ```
 
 Here we've recreated the `users` table with three new columns:
@@ -245,29 +245,29 @@ const newUser = {
   created_at: Date.now(),
   a: faker.datatype.number(),
   b: faker.datatype.number(),
-  c: faker.datatype.number()
-}
+  c: faker.datatype.number(),
+};
 ```
 
 Before we load the content into the database, let's check the type. And when we retrieve it from the database, we'll check the types again.
 
 ```js
 const run = async () => {
-  await query(createTableQuery)
+  await query(createTableQuery);
 
-  const user = newUser()
+  const user = newUser();
   // Log the data types going into the database.
   Object.entries(user).map(([key, value]) =>
     console.log(`${key}: ${typeof value}`)
-  )
-  await create({ table: "users", object: user })
+  );
+  await create({ table: "users", object: user });
 
-  const users = await read({ table: "users" })
+  const users = await read({ table: "users" });
   // Log the types coming out of the database.
   Object.entries(users[0]).map(([key, value]) =>
     console.log(`${key}: ${value} (${typeof value})`)
-  )
-}
+  );
+};
 ```
 
 Delete the database `mydb.sqlite` and run the script:
@@ -349,9 +349,9 @@ One approach is to write your own getters and setters that typecast values more 
 For example, consider a function that takes user data retrieved from the database and parses a `created_at` field to convert it from an integer into a JavaScript date object. That might look something like this:
 
 ```js
-const normalizeUser = obj => {
-  return { ...obj, created_at: new Date(parseInt(obj.created_at)) }
-}
+const normalizeUser = (obj) => {
+  return { ...obj, created_at: new Date(parseInt(obj.created_at)) };
+};
 ```
 
 The list goes on and on, but that could be a lot to manage as your application grows.
@@ -365,21 +365,21 @@ At Grouparoo, we use [Sequelize](https://sequelize.org/) to interact with our ap
 Here's a simple example that does essentially what we were doing in the introductory example using Sequelize:
 
 ```js
-const faker = require("faker")
-const path = require("path")
+const faker = require("faker");
+const path = require("path");
 
-const { Sequelize, Model, DataTypes } = require("sequelize")
+const { Sequelize, Model, DataTypes } = require("sequelize");
 
 const sequelize = new Sequelize({
   dialect: "sqlite",
-  storage: path.join(__dirname, "mydb.sqlite")
-})
+  storage: path.join(__dirname, "mydb.sqlite"),
+});
 
 const userAttrs = {
   email: faker.internet.email(),
   firstName: faker.name.firstName(),
-  lastName: faker.name.lastName()
-}
+  lastName: faker.name.lastName(),
+};
 
 class User extends Model {}
 
@@ -387,25 +387,25 @@ User.init(
   {
     email: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING
+    lastName: DataTypes.STRING,
   },
   { sequelize, modelName: "user" }
-)
+);
 
 const run = async () => {
-  await sequelize.sync()
-  const users = await User.findAll()
-  users.map(user =>
+  await sequelize.sync();
+  const users = await User.findAll();
+  users.map((user) =>
     Object.entries(user.dataValues).map(([key, value]) =>
       console.log(`${key} (${typeof value}): ${value}`)
     )
-  )
-}
+  );
+};
 
-run()
+run();
 ```
 
 Notice here that I'm more explicit about the column types. Sequelize then handles the typecasting for me. For example, running this once, this was the object returned to me from the database:

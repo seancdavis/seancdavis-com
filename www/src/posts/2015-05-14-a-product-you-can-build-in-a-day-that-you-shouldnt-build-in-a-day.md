@@ -4,7 +4,7 @@ tags: []
 description: It's easy for time to get away from you when you're building one of
   your brilliant ideas. Here's a way to put valuable constraints on yourself and
   your team.
-image: /blog/default/default-blue-02.png
+image: /posts/default/default-blue-02.png
 ---
 
 I had an idea.

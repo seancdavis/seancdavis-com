@@ -1,7 +1,7 @@
 ---
 title: "The Spinneret: Issue #13"
 description: How much JavaScript is too much JavaScript? The landscape of web development is changing rapidly. If we don't stop to look around once in awhile, we might miss it.
-image: /blog/211029/the-spinneret--13.png
+image: /posts/211029/the-spinneret--13.png
 tags:
   - spinneret
 ---
@@ -11,7 +11,7 @@ tags:
 _Notable changes in my life, [on my website](https://github.com/seancdavis/seancdavis-com), and in other projects._ {.text-sm}
 
 {% post_image
-    src="/blog/211029/the-spinneret--my-code.png",
+    src="/posts/211029/the-spinneret--my-code.png",
     alt="The Spinneret - My Code" %}
 
 I wrapped up [the first project](https://github.com/seancdavis/seancdavis-com/projects/5) of the next iteration on the site! This was mostly behind-the-scenes changes that sets me up to be able to make changes that will be meaningful to you.
@@ -25,25 +25,25 @@ I'm anxious to share these updates with you!
 _New blog posts and videos I published last month._ {.text-sm}
 
 {% post_image
-    src="/blog/211029/the-spinneret--my-words.png",
+    src="/posts/211029/the-spinneret--my-words.png",
     alt="The Spinneret - My Words" %}
 
 [Creating and saving images with node-canvas](https://blog.logrocket.com/creating-saving-images-node-canvas/) was a really fun one to put together for LogRocket. When I write pieces like this, I work to stay focused on the goal at hand. But I always want to say more. Sometimes to add background or introductory information, and other times to explore next steps. Here I did both and published the following related articles on my blog:
 
-- [Generate Meta Images for Blog Posts with Node.js](https://www.seancdavis.com/blog/generate-meta-images-for-blog-posts-with-node/)
-- [Generate Random Markdown Files with Node](https://www.seancdavis.com/blog/generate-random-markdown-files-node/)
-- [Run Loop n Times in JavaScript](https://www.seancdavis.com/blog/run-loop-n-times-javascript/)
+- [Generate Meta Images for Blog Posts with Node.js](/posts/generate-meta-images-for-blog-posts-with-node/)
+- [Generate Random Markdown Files with Node](/posts/generate-random-markdown-files-node/)
+- [Run Loop n Times in JavaScript](/posts/run-loop-n-times-javascript/)
 
 [The Next Evolution of Stackbit](https://www.stackbit.com/blog/next-evolution-of-stackbit/) kicked off a series of posts for Stackbit in which I got introspective on what Stackbit is and where we're going. But I think my favorite piece of the month for Stackbit was [What Made the Essence of Jamstack Possible](https://www.stackbit.com/blog/what-made-the-essence-of-jamstack-possible/), which was born while exploring [The Missing Piece of the Jamstack](https://www.stackbit.com/blog/the-missing-piece-of-the-jamstack/). The types of articles get to the core of why Stackbit exists and what drew me to the product.
 
-[100 Free CSS Resources](https://www.seancdavis.com/blog/100-free-css-resources/) is the fourth of five guest articles from [Pratham](https://twitter.com/prathkum) published on the blog. The final will likely emerge in November.
+[100 Free CSS Resources](/posts/100-free-css-resources/) is the fourth of five guest articles from [Pratham](https://twitter.com/prathkum) published on the blog. The final will likely emerge in November.
 
 ## My Reads
 
 _Articles and news I read last month that I found interesting, with some commentary._ {.text-sm}
 
 {% post_image
-    src="/blog/211029/the-spinneret--my-reads.png",
+    src="/posts/211029/the-spinneret--my-reads.png",
     alt="The Spinneret - My Reads" %}
 
 ### The Future
@@ -95,7 +95,7 @@ It was fun to play a role in Dom's piece on [11 Considerations for the Future of
 _New tools that I've recently discovered. They aren't necessarily new._ {.text-sm}
 
 {% post_image
-    src="/blog/211029/the-spinneret--my-finds.png",
+    src="/posts/211029/the-spinneret--my-finds.png",
     alt="The Spinneret - My Finds" %}
 
 [Heroicons](https://heroicons.com/) are beautiful hand-crafted SVG icons,by the makers of Tailwind CSS.

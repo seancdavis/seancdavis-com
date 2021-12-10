@@ -1,7 +1,7 @@
 ---
 title: My Leap of Faith
 description: "Oct 1, 2015: Day 1 of Month 1, The 15-Month Plan."
-image: /blog/170228/leap-of-faith.png
+image: /posts/170228/leap-of-faith.png
 tags:
   - inspiration
 ---

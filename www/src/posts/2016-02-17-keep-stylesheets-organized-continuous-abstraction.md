@@ -5,10 +5,10 @@ description: Stylesheets can get out of control really quickly. Here's the
 tags:
   - css
   - sass
-image: /blog/default/default-blue-02.png
+image: /posts/default/default-blue-02.png
 ---
 
-I've been writing a lot of [CSS](/blog/wtf-is-css/) (well, [SCSS](http://sass-lang.com/)) lately. One thing I've noticed is that as you get faster at writing CSS, stylesheets actually get messier faster.
+I've been writing a lot of [CSS](/posts/wtf-is-css/) (well, [SCSS](http://sass-lang.com/)) lately. One thing I've noticed is that as you get faster at writing CSS, stylesheets actually get messier faster.
 
 It requires discipline, backed by a solid system, to keep everything organized. And organized doesn't just mean _you_ know where it is. It means any of your peers can navigate the maze of code efficiently as long as they understand your approach.
 
@@ -16,7 +16,7 @@ Sass, out of the box, provides us one giant benefit over plain CSS -- the abilit
 
 ## Continuous Abstraction
 
-[Continuous abstraction](/blog/introducing-continuous-abstraction) is a term I coined to explain how to find balance in the abstraction process -- to know _when_ and _how much to_ abstract.
+[Continuous abstraction](/posts/introducing-continuous-abstraction) is a term I coined to explain how to find balance in the abstraction process -- to know _when_ and _how much to_ abstract.
 
 The article I wrote to explain it (linked above), is ... long. So let's do this cool thing:
 

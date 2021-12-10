@@ -3,7 +3,7 @@ title: Shared Human Experience
 tags:
   - inspiration
 description: "Life is hard, but you are not alone in your troubles and struggles."
-image: /blog/170224/photo-1450609283058-0ec52fa7eac4.jpg
+image: /posts/170224/photo-1450609283058-0ec52fa7eac4.jpg
 attribution:
   - name: Mario Purisic
     url: https://unsplash.com/@mariopurisic

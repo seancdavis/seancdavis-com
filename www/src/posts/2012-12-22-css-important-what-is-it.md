@@ -3,7 +3,7 @@ title: CSS !important - What is it?
 tags:
   - css
 description: Learn what the !important flag does in CSS.
-image: /blog/default/default-orange-02.png
+image: /posts/default/default-orange-02.png
 ---
 
 There are two important points to note regarding how a CSS (Cascading Style Sheet) is read.

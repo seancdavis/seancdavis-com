@@ -6,7 +6,7 @@ description: It seems looping background videos are the new thing. But you don't
 tags:
   - html
   - css
-image: /blog/default/default-blue-03.png
+image: /posts/default/default-blue-03.png
 ---
 
 **UPDATE:** I have rewritten much of this article to incorporate the [YouTube IFrame API](https://developers.google.com/youtube/iframe_api_reference), which is now the preferred method for doing this.
@@ -25,7 +25,7 @@ First, you'll want to get the ID of the video, which is unique URL segment after
 
 ## 02: Base HTML/CSS
 
-Once you have that, we can move on to the [HTML](/blog/wtf-is-html/). Let's keep it nice and simple:
+Once you have that, we can move on to the [HTML](/posts/wtf-is-html/). Let's keep it nice and simple:
 
 `HTML` {.filename}
 
@@ -102,13 +102,13 @@ We're going to use [YouTube's IFrame API](https://developers.google.com/youtube/
 
 ```js
 // Loads the YouTube IFrame API JavaScript code.
-var tag = document.createElement("script")
-tag.src = "https://www.youtube.com/iframe_api"
+var tag = document.createElement("script");
+tag.src = "https://www.youtube.com/iframe_api";
 // Inserts YouTube JS code into the page.
-var firstScriptTag = document.getElementsByTagName("script")[0]
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var player
+var player;
 
 // onYouTubeIframeAPIReady() is called when the IFrame API is ready to go.
 function onYouTubeIframeAPIReady() {
@@ -119,9 +119,9 @@ function onYouTubeIframeAPIReady() {
       controls: 0, // don't show the controls (we can't click them anyways)
       modestbranding: 1, // show smaller logo
       loop: 1, // loop when complete
-      playlist: "kNizPk7xBbs" // required for looping, matches the video ID
-    }
-  })
+      playlist: "kNizPk7xBbs", // required for looping, matches the video ID
+    },
+  });
 }
 ```
 

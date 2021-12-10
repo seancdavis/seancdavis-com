@@ -1,14 +1,14 @@
 ---
 title: "How to Use PNPM in Netlify Build"
 description: "Tell Netlify not to use NPM and instead use PNPM to install your project's dependencies."
-image: /blog/210319/yellow--pnpm-netlify.png
+image: /posts/210319/yellow--pnpm-netlify.png
 tags:
   - jamstack
   - netlify
   - pnpm
 ---
 
-I've been using [PNPM](/blog/wtf-is-pnpm) to manage my dependencies in this project. PNPM is a great, performance-focused option for [monorepos](/blog/wtf-is-monorepo).
+I've been using [PNPM](/posts/wtf-is-pnpm) to manage my dependencies in this project. PNPM is a great, performance-focused option for [monorepos](/posts/wtf-is-monorepo).
 
 But I ran into a problem after switching to PNPM and trying to deploy this site: Netlify doesn't support PNPM by default. [It supports NPM, Yarn, and Bower](https://docs.netlify.com/configure-builds/manage-dependencies/#javascript-dependencies). And, as of writing this, [they don't plan to support additional package managers](https://github.com/netlify/build-image/pull/449#issuecomment-665674824), at least not PNPM for now.
 

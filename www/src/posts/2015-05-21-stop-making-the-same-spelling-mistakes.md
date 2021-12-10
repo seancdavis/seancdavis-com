@@ -3,7 +3,7 @@ title: Stop Making the Same Spelling Mistakes
 tags:
   - productivity
 description: Keep spelling the same word wrong? Try this little trick.
-image: /blog/150521/3991030352_e9bfc75887_b.jpg
+image: /posts/150521/3991030352_e9bfc75887_b.jpg
 attribution:
   - name: nate bolt
     url: https://www.flickr.com/photos/boltron

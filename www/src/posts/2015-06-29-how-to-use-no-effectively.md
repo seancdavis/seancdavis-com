@@ -3,7 +3,7 @@ title: How To Use "No" Effectively
 tags:
   - communication
 description: "No is powerful. It's concise, precise, and direct. Learn when it makes sense to use it, and when to stand back."
-image: /blog/150629/3827043121_4925a4c7db_b.jpg
+image: /posts/150629/3827043121_4925a4c7db_b.jpg
 attribution:
   - name: mslavick
     url: https://www.flickr.com/photos/supernintendo_chalmers/

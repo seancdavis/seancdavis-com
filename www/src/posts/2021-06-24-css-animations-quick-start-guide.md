@@ -1,10 +1,10 @@
 ---
 title: CSS Animations Quick Start Guide
 description: "Learn the basics of CSS animations to catch the attention of your website visitors."
-image: /blog/210624/yellow--css-animations.png
+image: /posts/210624/yellow--css-animations.png
 author: pratham
 seo:
-  image: /blog/210624/meta--css-animations.png
+  image: /posts/210624/meta--css-animations.png
 tags:
   - css
   - contributor:pratham
@@ -19,7 +19,7 @@ You can create some amazing animation using just CSS. In this post, we will expl
 Animation is all about changing one or more CSS rules over some interval or length of time. To understand how this works we must first take a look at the `@keyframes` rule.
 
 {% post_image
-    src="/blog/210624/keyframes-diagram.jpg",
+    src="/posts/210624/keyframes-diagram.jpg",
     alt="CSS Keyframes Diagram" %}
 
 The `@keyframes` rule has four main components:
@@ -54,7 +54,7 @@ This is specifying that elements with the class `element` should apply the keyfr
 Here's a more complex example:
 
 {% post_image
-    src="/blog/210624/animation-shorthand.jpg",
+    src="/posts/210624/animation-shorthand.jpg",
     alt="CSS Animation Shorthand Property" %}
 
 The `animation` property is nice and concise, but takes a little time to become familiar with it. It's worth the effort, though. It'll save you time in the long run.
@@ -83,7 +83,7 @@ For example, suppose I want to move my element `500px` from left to right in fou
 That results in this behavior:
 
 {% post_image
-    src="/blog/210624/simple-animation.gif",
+    src="/posts/210624/simple-animation.gif",
     alt="Simple Animation" %}
 
 ## Adding Custom Percentages
@@ -117,7 +117,7 @@ Suppose that I wanted to change the background-color of an element, and that I w
 This is the result:
 
 {% post_image
-    src="/blog/210624/custom-percentages.gif",
+    src="/posts/210624/custom-percentages.gif",
     alt="Animation with Custom Percentages" %}
 
 ## Adding a Delay
@@ -172,7 +172,7 @@ Also note that the delay only takes effect _before_ the loop begins. The delay w
 Take a look here:
 
 {% post_image
-    src="/blog/210624/repeating-animation.gif",
+    src="/posts/210624/repeating-animation.gif",
     alt="Repeating CSS Animation" %}
 
 ## Smoothing out Animations
@@ -191,7 +191,7 @@ This property specifies the speed curve of an animation. There are many function
 [Check out this code](https://t.co/K258MvOtoF?amp=1) for a better understanding. And here's a quick preview:
 
 {% post_image
-    src="/blog/210624/timing-functions.gif",
+    src="/posts/210624/timing-functions.gif",
     alt="CSS Animation Timing Function" %}
 
 ## Applying Styles Before and After Animations
@@ -207,7 +207,7 @@ It accepts following values:
 Take a look at this example:
 
 {% post_image
-    src="/blog/210624/fill-mode.gif",
+    src="/posts/210624/fill-mode.gif",
     alt="CSS Animation Fill Mode" %}
 
 As you can see, the blue box stopped at `left: 500px` because `forwards` is begin applied on it. And the orange box has a black background even when it's in a delay period of `2s`.

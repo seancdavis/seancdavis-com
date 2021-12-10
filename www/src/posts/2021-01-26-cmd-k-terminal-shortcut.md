@@ -1,7 +1,7 @@
 ---
 title: "Use Cmd+K Terminal Trick to Stay Organized"
 description: "Aside from opening new tabs, the Meta+k shortcut is the one I use most frequently when working on the command-line."
-image: /blog/210126/210126-cmd-k-terminal-shortcut.png
+image: /posts/210126/210126-cmd-k-terminal-shortcut.png
 tags:
   - command-line
   - organization

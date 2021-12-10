@@ -1,14 +1,14 @@
 ---
 title: Generate Meta Images for Blog Posts with Node.js
 description: Manually creating images for blog posts can be super time-consuming. Here's the foundation necessary for automatically generating meta images for content in markdown files.
-image: /blog/211007/blue--meta-image.png
+image: /posts/211007/blue--meta-image.png
 tags:
   - javascript
   - node
   - seo
 ---
 
-I've written two posts recently that I wanted to put together to make something that you could practically apply in the wild. The first post is an intro on how to generate images by drawing on Canvas with Node.js (not yet published). The second is a quick lesson on [generating random markdown files](/blog/generate-random-markdown-files-node/).
+I've written two posts recently that I wanted to put together to make something that you could practically apply in the wild. The first post is an intro on how to generate images by drawing on Canvas with Node.js (not yet published). The second is a quick lesson on [generating random markdown files](/posts/generate-random-markdown-files-node/).
 
 What I'd like to do here is bring these together to create a script that will do the following:
 
@@ -24,13 +24,13 @@ The code I'm working with here can all be found [in this example project](https:
 
 Usually I take these things step-by-step, building up to the final product. In this case, there's a lot going on.
 
-Instead of the typical step-by-step instructions, we'll going to walk through the finished product and look at each pieces of the puzzle. I've broken up the code to support this approach — every file has one job to do (the classic _[single responsibility principle](/blog/wtf-is-single-responsibility-principle/)_).
+Instead of the typical step-by-step instructions, we'll going to walk through the finished product and look at each pieces of the puzzle. I've broken up the code to support this approach — every file has one job to do (the classic _[single responsibility principle](/posts/wtf-is-single-responsibility-principle/)_).
 
 That said, if you like following along step-by-step, you can absolutely start from scratch.
 
 ## Starting from Scratch
 
-If you are starting from scratch, follow [my handy guide](/blog/new-javascript-project-setup/) to get setup with JavaScript projects.
+If you are starting from scratch, follow [my handy guide](/posts/new-javascript-project-setup/) to get setup with JavaScript projects.
 
 ### Dependencies
 
@@ -60,13 +60,13 @@ I also wanted to extract the configurable values into a single place. So I creat
 `config.js` {.filename}
 
 ```js
-const path = require("path")
+const path = require("path");
 
 module.exports = {
   imagesDir: path.join(__dirname, "./images"),
   postsDir: path.join(__dirname, "./content"),
-  randomPostCount: 10
-}
+  randomPostCount: 10,
+};
 ```
 
 ### Directory Placeholders
@@ -80,20 +80,20 @@ Let's get our hands dirty by starting with generating random markdown files. Let
 `scripts/generate-post-files.js` {.filename}
 
 ```js
-const { generateRandomPost, writePostToFile } = require("../utils")
-const config = require("../config")
+const { generateRandomPost, writePostToFile } = require("../utils");
+const config = require("../config");
 
 Array(config.randomPostCount)
   .fill()
   .map(() => {
-    const post = generateRandomPost()
-    writePostToFile(post)
-  })
+    const post = generateRandomPost();
+    writePostToFile(post);
+  });
 ```
 
 Doesn't look too complicated, right? Here's what's happening:
 
-1. Pull the `randomPostCount` value from `config.js` and [create an empty array with that many items which we can loop over](/blog/run-loop-n-times-javascript/).
+1. Pull the `randomPostCount` value from `config.js` and [create an empty array with that many items which we can loop over](/posts/run-loop-n-times-javascript/).
 2. For each iteration, generate the content for a random post object using a `generateRandomPost()` helper, then write the random post object to file using a `writePostToFile()` helper.
 
 Let's take a look at what those helpers are doing.
@@ -105,16 +105,16 @@ There's not a whole lot to [the `generateRandomPost()` function](https://github.
 `utils/generate-random-post.js` {.filename}
 
 ```js
-const faker = require("faker")
+const faker = require("faker");
 
 module.exports = () => {
   return {
     title: faker.lorem.words(5),
     date: faker.date.past(1),
     author: faker.name.findName(),
-    body: faker.lorem.paragraphs(3).replace(/\n/gi, "\n")
-  }
-}
+    body: faker.lorem.paragraphs(3).replace(/\n/gi, "\n"),
+  };
+};
 ```
 
 It uses [the faker.js library](https://www.npmjs.com/package/faker) to generate some random content that we then shape into the structure of a post object.
@@ -128,28 +128,28 @@ In this function, we extract the `body` from the post because it is treated as t
 `utils/write-post-to-file.js` {.filename}
 
 ```js
-const fs = require("fs")
-const path = require("path")
-const slugify = require("slugify")
-const yaml = require("yaml")
+const fs = require("fs");
+const path = require("path");
+const slugify = require("slugify");
+const yaml = require("yaml");
 
-const config = require("../config")
+const config = require("../config");
 
-module.exports = post => {
+module.exports = (post) => {
   // Format the markdown by extracting the `body` key and treating the rest of
   // the object as frontmatter.
-  const { body } = post
-  delete post.body
-  const content = `---\n${yaml.stringify(post)}---\n\n${body}\n`
+  const { body } = post;
+  delete post.body;
+  const content = `---\n${yaml.stringify(post)}---\n\n${body}\n`;
   // Resolve the path to the post file, using the value set in config.js in the
   // project root.
-  const basename = slugify(post.title, { strict: true, lower: true })
-  const filename = `${basename}.md`
-  const filePath = path.join(config.postsDir, filename)
+  const basename = slugify(post.title, { strict: true, lower: true });
+  const filename = `${basename}.md`;
+  const filePath = path.join(config.postsDir, filename);
   // Write the markdown string to file.
-  fs.writeFileSync(filePath, content)
-  return post
-}
+  fs.writeFileSync(filePath, content);
+  return post;
+};
 ```
 
 {% callout type="warning" %}
@@ -189,31 +189,31 @@ Nulla voluptatem et libero. Est consequatur tempora qui. Magnam voluptas nemo es
 `scripts/generate-images.js` {.filename}
 
 ```js
-const fs = require("fs")
-const path = require("path")
+const fs = require("fs");
+const path = require("path");
 
-const { generateImage, getPosts, writePostToFile } = require("../utils")
+const { generateImage, getPosts, writePostToFile } = require("../utils");
 
 const run = async () => {
   // Loop through the posts.
   for (let post of getPosts()) {
     // If the post already has an image reference, continue.
-    if (post.image) continue
+    if (post.image) continue;
     // Generate an image for the post.
-    const imagePath = await generateImage(post)
+    const imagePath = await generateImage(post);
     // Store a reference to the image.
-    post = { ...post, image: path.basename(imagePath) }
+    post = { ...post, image: path.basename(imagePath) };
     // Write the new post object back to file.
-    await writePostToFile(post)
+    await writePostToFile(post);
   }
-}
+};
 
 run()
   .then(() => console.log("Done"))
-  .catch(err => {
-    console.error("\n", err)
-    process.exit(1)
-  })
+  .catch((err) => {
+    console.error("\n", err);
+    process.exit(1);
+  });
 ```
 
 Here's the logic:
@@ -237,28 +237,28 @@ Here's the code:
 `utils/get-posts.js` {.filename}
 
 ```js
-const fs = require("fs")
-const glob = require("glob")
-const matter = require("gray-matter")
-const path = require("path")
+const fs = require("fs");
+const glob = require("glob");
+const matter = require("gray-matter");
+const path = require("path");
 
-const config = require("../config")
+const config = require("../config");
 
 module.exports = () => {
   // Get post file paths.
-  const postsPattern = path.join(config.postsDir, "*.md")
-  const postFiles = glob.sync(postsPattern)
+  const postsPattern = path.join(config.postsDir, "*.md");
+  const postFiles = glob.sync(postsPattern);
   // Loop through the paths to parse the posts.
-  const posts = postFiles.map(file => {
-    const fileContent = fs.readFileSync(file)
-    const { data, content } = matter(fileContent)
+  const posts = postFiles.map((file) => {
+    const fileContent = fs.readFileSync(file);
+    const { data, content } = matter(fileContent);
     // `body` is set to the content of the post, while the frontmatter object is
     // sent directly.
-    return { ...data, body: content }
-  })
+    return { ...data, body: content };
+  });
   // Return the array of objects.
-  return posts
-}
+  return posts;
+};
 ```
 
 ### Generating an Image for a Post
@@ -278,7 +278,7 @@ If you put this all together you can run it and see what happens.
 This will generate images for any post that isn't already referencing one. If I used the files generated from the `generate:files` script I shared above, I now have an image file at `images/2021-03-27-a-delectus-non-qui-quo.png`. (The date was added to the image filename to help ensure it will be unique)
 
 {% post_image
-    src="/blog/211007/2021-03-27-a-delectus-non-qui-quo.png",
+    src="/posts/211007/2021-03-27-a-delectus-non-qui-quo.png",
     alt="Automatically generated meta image from example post" %}
 
 {% callout type="note" %}

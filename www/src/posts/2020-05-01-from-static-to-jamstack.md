@@ -4,7 +4,7 @@ description: The Jamstack combines the best parts of Web 1.0 and Web 2.0, result
 tags:
   - repost-ample
   - jamstack
-image: /blog/200501/200501--static-to-jamstack.png
+image: /posts/200501/200501--static-to-jamstack.png
 canonical_url: https://www.ample.co/blog/from-static-to-jamstack
 ---
 
@@ -39,7 +39,7 @@ When [Tim Berners-Lee](https://www.w3.org/People/Berners-Lee/) invented the worl
 A visitor would dial up the internet, pull up their trusty ancient browser and put in a website address. That web server would then find the appropriate HTML file (just a file living on the server) and send it back to the browser. The browser would then parse the HTML and show that visitor the properly formatted content on the screen.
 
 {% post_image
-    src="/blog/200501/5eac49d991dd172c85e9f92c_ample-blog-tl-jamstack-from-static-to-jamstack-chart1.png",
+    src="/posts/200501/5eac49d991dd172c85e9f92c_ample-blog-tl-jamstack-from-static-to-jamstack-chart1.png",
     alt="How Web 1.0 Works",
     flatten="true" %}
 
@@ -54,7 +54,7 @@ Web 2.0 was a revolutionary enhancement to the way websites worked. While what's
 With Web 2.0, when a visitor asked their trusty browser to access a website, that site's web server would talk to an application server, which would ask a database for real-time data, and then it would translate that data into HTML, CSS, and JS files _on the fly_, and send that information back to the browser to be parsed and displayed on screen.
 
 {% post_image
-    src="/blog/200501/5eac4aecce0e4a47488ea487_ample-blog-tl-jamstack-from-static-to-jamstack-chart2.png",
+    src="/posts/200501/5eac4aecce0e4a47488ea487_ample-blog-tl-jamstack-from-static-to-jamstack-chart2.png",
     alt="How Web 2.0 Works",
     flatten="true" %}
 
@@ -85,7 +85,7 @@ The build process — the _dynamic_ or _Web 2.0_ part — is an automated system
 The static part — the Web 1.0 piece — is the result of the build process. The build process produces a collection of static HTML, CSS, JavaScript, and media files. These files then get uploaded to a [content delivery network](https://en.wikipedia.org/wiki/Content_delivery_network) (CDN). And when users visit the site, their browsers download the static files, just as they did in the 90s.
 
 {% post_image
-    src="/blog/200501/5eac4b0ac720320f99157a1c_ample-blog-tl-jamstack-from-static-to-jamstack-chart3.png",
+    src="/posts/200501/5eac4b0ac720320f99157a1c_ample-blog-tl-jamstack-from-static-to-jamstack-chart3.png",
     alt="How Jamstack Works with Web 2.0",
     flatten="true" %}
 

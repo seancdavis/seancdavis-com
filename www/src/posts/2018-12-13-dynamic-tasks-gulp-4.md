@@ -6,7 +6,7 @@ description: With earlier versions of Gulp, dynamic tasks were as simple as a
 tags:
   - Gulp
   - JavaScript
-image: /blog/default/default-yellow-03.png
+image: /posts/default/default-yellow-03.png
 ---
 
 Gulp 4 brought some big changes to the way in which tasks are built. While it's still possible to build tasks dynamically, it works differently than it used to. For reference, let's begin by looking at the old way.
@@ -23,13 +23,13 @@ For example, let's say you have a configuration array in JSON saved to a file ca
 module.exports = [
   {
     name: "my_task",
-    some_option: []
+    some_option: [],
   },
   {
     name: "another_task",
-    another_option: {}
-  }
-]
+    another_option: {},
+  },
+];
 ```
 
 It's easy enough to require that file in the Gulp config and create a task using the `name` property in each item. That may look something like this:
@@ -40,14 +40,14 @@ It's easy enough to require that file in the Gulp config and create a task using
 // [Omitted] Load gulp and other dependencies ...
 
 // Load the config array.
-const config = require(`config`)
+const config = require(`config`);
 
 // Iterate over the config array.
 for (options of config) {
   // Create a task, using the "name" property as the task name.
   gulp.task(options.name, [], function () {
     // [Omitted] Do something dynamic here with `options` ...
-  })
+  });
 }
 ```
 
@@ -73,10 +73,10 @@ The functions exported from the Gulpfile are equal to names of functions within 
 
 function build(done) {
   // [Omitted] Do stuff ...
-  done()
+  done();
 }
 
-exports.default = build
+exports.default = build;
 ```
 
 Then, on the command line, simply running `gulp` would call the `build()` function:
@@ -90,27 +90,27 @@ Another newer feature in Gulp is the way in which tasks are run in series or par
 ```js
 gulp.task("task_name", ["dependent_task_1", "dependent_task_2"], function () {
   // [Omitted] Do stuff ...
-})
+});
 ```
 
 Now there is much more control over this. Take the Gulp 4 example from above. And say you wanted to run a `clean()` function (and let it finish) prior to running the `build()` function. That could be done like so:
 
 ```js
-const { series } = require("gulp")
+const { series } = require("gulp");
 
 // [Omitted] Load other dependencies ...
 
 function clean(done) {
   // [Omitted] Do stuff ...
-  done()
+  done();
 }
 
 function build(done) {
   // [Omitted] Do stuff ...
-  done()
+  done();
 }
 
-exports.default = series(clean, build)
+exports.default = series(clean, build);
 ```
 
 Notice the exported default task calls a function named `series()` (imported from the Gulp library) and passes the `clean()` and `build()` functions to it as arguments. This ensures `clean()` will run first and will complete prior to `build()` being run.
@@ -126,27 +126,27 @@ Here's what that looks like:
 `gulpfile.js` {.filename}
 
 ```js
-const { series } = require("gulp")
+const { series } = require("gulp");
 
 // [Omitted] Load other dependencies ...
 
-const config = require(`config`)
+const config = require(`config`);
 
 function build(done) {
-  const tasks = config.map(config => {
-    return taskDone => {
+  const tasks = config.map((config) => {
+    return (taskDone) => {
       // [Omitted] Do stuff ...
-      taskDone()
-    }
-  })
+      taskDone();
+    };
+  });
 
-  return series(...tasks, seriesDone => {
-    seriesDone()
-    done()
-  })()
+  return series(...tasks, (seriesDone) => {
+    seriesDone();
+    done();
+  })();
 }
 
-exports.default = build
+exports.default = build;
 ```
 
 Let's look at how each piece of this fits together.
@@ -156,10 +156,10 @@ First off, we're calling the `config` array and [mapping it](https://developer.m
 The key here is that the value we're mapping to each item in the `tasks` array (which originally came from the `config` array) is an anonymous gulp task. See here:
 
 ```js
-return taskDone => {
+return (taskDone) => {
   // [Omitted] Do stuff ...
-  taskDone()
-}
+  taskDone();
+};
 ```
 
 This is just a function without a name, and what gets returned from this anonymous function is a function call that completes a gulp task. So we have, in essence, an anonymous gulp task for each item in the `config` array.
@@ -169,10 +169,10 @@ The `tasks` array is nothing by itself. What matters is that Gulp will do whatev
 And we don't call `done()` until inside the `series()` call _within_ the `build()` function:
 
 ```js
-return series(...tasks, seriesDone => {
-  seriesDone()
-  done()
-})()
+return series(...tasks, (seriesDone) => {
+  seriesDone();
+  done();
+})();
 ```
 
 This is a unique sort of idiom. The first line returns (from the `build()` function) a series call to gulp, passing to it each task from the `tasks` array using the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). (If you don't know about the spread operator, this means the `tasks` items are being passed as individual arguments, not as their original array.)
@@ -182,10 +182,10 @@ As the last argument in the `series()` call, we open up another anonymous task, 
 Alternatively, if you wanted to run dynamic tasks in parallel, that's just a matter of using `parallel()` instead of `series()`:
 
 ```js
-return parallel(...tasks, parallelDone => {
-  parallelDone()
-  done()
-})()
+return parallel(...tasks, (parallelDone) => {
+  parallelDone();
+  done();
+})();
 ```
 
 Note that the `seriesDone` and `parallelDone` are just names of arguments, so they can be whatever you'd like.
@@ -193,7 +193,7 @@ Note that the `seriesDone` and `parallelDone` are just names of arguments, so th
 Also note that if using `parallel()`, you'll have to import that from gulp. You can do this in conjunction with series, if necessary:
 
 ```js
-const { parallel, series } = require("gulp")
+const { parallel, series } = require("gulp");
 ```
 
 ## Gotchas!
@@ -205,7 +205,7 @@ I hope this was helpful and that you now feel comfortable running dynamic tasks 
 [`module.exports`](https://nodejs.org/api/modules.html#modules_module_exports) is not the same as [`export`](https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export), and it does not play well with combining imports. Therefore, when requiring dependencies for your gulp task, it's best if you use `require` and not `import`, like shown in these examples:
 
 ```js
-const { series } = require("gulp")
+const { series } = require("gulp");
 ```
 
 ### src/dest
@@ -213,5 +213,5 @@ const { series } = require("gulp")
 There were no actual task examples here, so you didn't see an example using `src` and `dest`, although these are still two big features of Gulp 4. The difference is they now have to be required/imported. You can do this in conjunction with `series` and/or `parallel`, if necessary.
 
 ```js
-const { dest, parallel, series, src } = require("gulp")
+const { dest, parallel, series, src } = require("gulp");
 ```

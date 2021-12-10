@@ -4,7 +4,7 @@ tags:
   - ruby
 description: It's nice and easy to reverse a ruby array. See how to easily
   convert a hash as well.
-image: /blog/default/default-blue-02.png
+image: /posts/default/default-blue-02.png
 ---
 
 It's easy to reverse a Ruby array.

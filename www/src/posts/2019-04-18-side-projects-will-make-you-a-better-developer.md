@@ -3,7 +3,7 @@ title: Side Projects Will Make You a Better Developer
 description: There is often a substantial difference between a new developer who
   works on side projects and one who doesn't. But how do you make sure you're
   working on the right side project?
-image: /blog/default/default-orange-03.png
+image: /posts/default/default-orange-03.png
 ---
 
 It is often trivial to tell the difference between a new developer (with less than three years of experience) who works on dev-based side projects and one who does not.
@@ -17,7 +17,7 @@ In general, when comparing developers who have the same experience (in years/mon
 - **They are eager to learn new things** or bring new technology or processes into the mix.
 - **They have a handle on how the industry is evolving** and tend to discover new tools more frequently.
 
-I use the word _characteristics_ here intentionally, because these things aren't always good. A new developer's energy must be focused for these changes in character to become benefits for the teams on which they work. For example, working faster can be a great benefit, but without an attention to detail or the bigger picture, it can also lead to more bugs. And as nice as it is to have an eager developer that wants to try new tech, [it's difficult to be successful when constantly reinventing yourself](/blog/what-change-means-to-a-developer/).
+I use the word _characteristics_ here intentionally, because these things aren't always good. A new developer's energy must be focused for these changes in character to become benefits for the teams on which they work. For example, working faster can be a great benefit, but without an attention to detail or the bigger picture, it can also lead to more bugs. And as nice as it is to have an eager developer that wants to try new tech, [it's difficult to be successful when constantly reinventing yourself](/posts/what-change-means-to-a-developer/).
 
 Putting these two ideas together means that a developer who explores new challenges through side projects, while also harnessing their growing capabilities, can be an extremely valuable developer to any team.
 

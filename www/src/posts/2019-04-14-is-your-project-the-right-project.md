@@ -3,7 +3,7 @@ title: Is Your Project the Right Project?
 tags:
   - inspiration
 description: "Use the 5 Whys exercise to determine if a project continues to support its root motivations."
-image: /blog/190414/photo-1503551723145-6c040742065b.jpg
+image: /posts/190414/photo-1503551723145-6c040742065b.jpg
 attribution:
   - name: Patrick Perkins
     url: https://unsplash.com/@pperkins
@@ -12,7 +12,7 @@ attribution:
 
 Every project must start from something -- an idea, a challenge, a requirement. But how do you know _that_ project is _the right project_ for your situation? How do you know that it will serve the idea, solve the challenge, or fulfill the requirement?
 
-One approach I like to take is [_using the 5 Whys method_](/blog/find-root-cause-by-asking-why) to question the purpose of a project. The goal is to determine the extent to which the project supports its root motivation. Going through this process can occur either before the project begins or after it's already underway, as it's never too late to ensure you're working on the right thing.
+One approach I like to take is [_using the 5 Whys method_](/posts/find-root-cause-by-asking-why) to question the purpose of a project. The goal is to determine the extent to which the project supports its root motivation. Going through this process can occur either before the project begins or after it's already underway, as it's never too late to ensure you're working on the right thing.
 
 I'll give you an example (as a _requirement_) that I hear constantly in my industry -- _Build me a new website_. Let's step through the five whys exercise (from the client's perspective) in response to the requirement:
 

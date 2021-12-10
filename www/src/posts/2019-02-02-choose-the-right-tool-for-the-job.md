@@ -3,7 +3,7 @@ title: Choose the Right Tool for the Job
 description: A handyman (or handywoman) has a toolbox full of tools for any job
   that comes their way. What should be in your toolbox? And when should you open
   it?
-image: /blog/default/default-green-03.png
+image: /posts/default/default-green-03.png
 ---
 
 I have a handyman that comes to my house every so often to help with some little projects around the house that I'm either too lazy or too unskilled to do myself. When the appointment arrives, the handyman knocks on my door and we do a walk-thru of everything I want accomplished. He takes notes, then departs, and calls a few days later with an estimate. If I'm comfortable with the estimate, we set up a time for him to return to do the work. And when that work day arrives, he shows up with his toolbox, any new hardware he may need, and he does the job.
@@ -20,7 +20,7 @@ I'm currently working at an agency that has previously billed itself as _a [Rail
 
 In the web development world, it's easy to suggest that every project falls into one big bucket—everything is just a website. And while that may be true to an extent, the shape, size, and overall requirements for any given site can vary greatly.
 
-We're also living in a time when it seems like [there's a new tool available every day](/blog/taking-balanced-approach-to-new-technology/). A few years ago if you wanted to build a single-page app, you were probably going to use Angular. Nowadays there is React and Vue (or a thousand others/). A few years ago services like [Firestore](https://firebase.google.com/docs/firestore/) and [DocumentDB](https://aws.amazon.com/documentdb/) weren't as prevalent as they are today—it seemed just as easy to spin up a [PostgreSQL](https://www.postgresql.org/) database on a [Digital Ocean](https://www.digitalocean.com/) box. A few years ago we didn't have [Netlify](/blog/wtf-is-netlify/).
+We're also living in a time when it seems like [there's a new tool available every day](/posts/taking-balanced-approach-to-new-technology/). A few years ago if you wanted to build a single-page app, you were probably going to use Angular. Nowadays there is React and Vue (or a thousand others/). A few years ago services like [Firestore](https://firebase.google.com/docs/firestore/) and [DocumentDB](https://aws.amazon.com/documentdb/) weren't as prevalent as they are today—it seemed just as easy to spin up a [PostgreSQL](https://www.postgresql.org/) database on a [Digital Ocean](https://www.digitalocean.com/) box. A few years ago we didn't have [Netlify](/posts/wtf-is-netlify/).
 
 The tendency for a developer to choose the tool they are going to use to build the solution before they know what the solution should be (or even what the problem is) is a comfortable one. There's a lot to know across all of web development. It seems reasonable to be really good at one thing and to be able to offer great value to your clients when you're using that one thing. I totally get that. It takes a lot of time and effort to get into a new technology, and it's a risk when you don't know if that new thing is a novelty or if it'll stick around.
 

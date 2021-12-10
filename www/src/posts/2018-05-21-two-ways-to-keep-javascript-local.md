@@ -4,7 +4,7 @@ description: It's far too easy to let your JS code pollute the global namespace.
   Here are two methods for keeping your code local.
 tags:
   - javascript
-image: /blog/default/default-green-01.png
+image: /posts/default/default-green-01.png
 ---
 
 One of the most common problems I see with novice programmers writing JavaScript is that they pollute the global namespace.
@@ -28,15 +28,15 @@ In JavaScript, the `function` keyword _can_ lock down scope. Consider the follow
 
 ```js
 function myFunc() {
-  var a = 1
-  return a
+  var a = 1;
+  return a;
 }
 
-var b = 2
+var b = 2;
 
 function myOtherFunc() {
-  b = 3
-  return b
+  b = 3;
+  return b;
 }
 ```
 
@@ -49,11 +49,11 @@ What we're after here is the first example -- where we can't get to anything ins
 Combine that idea with knowing that **JS functions can live inside functions** and we have a powerful idiom to keep code local. Consider this:
 
 ```js
-;(function () {
+(function () {
   function myFunc() {
     // Do some crazy stuff!
   }
-})()
+})();
 ```
 
 Now `myFunc` is wrapped inside an anonymous function, so we can't call it from the outside.
@@ -65,11 +65,11 @@ So, if we add some sort of [_constructor_](<https://en.wikipedia.org/wiki/Constr
 Let's say `myFunc` was the constructor, so to speak. We'd simple call it after we've defined it.
 
 ```js
-;(function () {
+(function () {
   function myFunc() {}
 
-  myFunc()
-})()
+  myFunc();
+})();
 ```
 
 Now when the page loads, `myFunc` will be executed but you still won't be able to access `myFunc` from outside this anonymous function.
@@ -86,8 +86,8 @@ Let's say you are going to place everything with the `myNamespace` object. You c
 window.myNamespace = function () {
   function myFunc() {}
 
-  myFunc()
-}
+  myFunc();
+};
 ```
 
 Now, whenever you're ready to run the code you can simply run `myNamespace()` and its function will be executed.
@@ -100,8 +100,8 @@ window.myNamespace = function (options = {}) {
     // Do something with `options` here ...
   }
 
-  myFunc()
-}
+  myFunc();
+};
 ```
 
 I tend to favor the anonymous function when I can run the code immediately after the page is loaded. If I have to wait, though, the single object approach is sufficient because the pollution is minimal.

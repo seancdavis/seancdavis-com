@@ -3,7 +3,7 @@ title: When should I archive my gmail messages?
 tags:
   - organization
 description: "Archiving Gmail messages feels like deleting them, but they'll be around if you need them in the future."
-image: /blog/121224/6393007611_88b3c470cd_b.jpg
+image: /posts/121224/6393007611_88b3c470cd_b.jpg
 attribution:
   - name: National Film and Sound Archive of Australia
     url: https://www.flickr.com/photos/nfsa

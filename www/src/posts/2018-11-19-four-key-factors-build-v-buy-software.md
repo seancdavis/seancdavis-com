@@ -3,7 +3,7 @@ title: 4 Key Factors to Determine whether to Build or Buy Software
 description: To build or to buy a software solution is a classic tech dilemma.
   It gets emotional. Remain grounded and make an informed, strategic, and
   confident decision by following four deciding factors.
-image: /blog/default/default-lime-02.png
+image: /posts/default/default-lime-02.png
 ---
 
 When faced with a problem that software will solve, the classic tech dilemma is whether to build or buy the solution. This happens to large agencies, new startups, and independent freelancers alike.

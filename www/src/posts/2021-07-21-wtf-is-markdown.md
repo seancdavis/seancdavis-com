@@ -1,12 +1,12 @@
 ---
 title: "WTF is Markdown?"
 description: "Markdown is a powerful syntax and tool that enables us to more easily write content for the web."
-image: /blog/210721/wtf--markdown.png
+image: /posts/210721/wtf--markdown.png
 tags:
   - wtf
 ---
 
-Markdown is a readability-focused way to author content for the web. You can think of it as a _language_, although it's _technically_ not. That's because browsers can't read markdown. Content on the web must ultimately be [HTML](/blog/wtf-is-html/). Therefore, markdown is really two things:
+Markdown is a readability-focused way to author content for the web. You can think of it as a _language_, although it's _technically_ not. That's because browsers can't read markdown. Content on the web must ultimately be [HTML](/posts/wtf-is-html/). Therefore, markdown is really two things:
 
 1. A _syntax_, or a specification on the behavior of specific characters.
 2. A _tool_ that converts the markdown syntax into valid HTML that web browsers can parse.

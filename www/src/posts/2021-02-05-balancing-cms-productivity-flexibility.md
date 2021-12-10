@@ -1,7 +1,7 @@
 ---
 title: "Balancing Flexibility and Productivity in Your CMS"
 description: "Help your content editors enjoy their CMS experience by designing a content schema that balances productivity and flexibility."
-image: /blog/210205/productivity-vs-flexibility--meta.png
+image: /posts/210205/productivity-vs-flexibility--meta.png
 attribution:
   - name: balance by Bieu Tuong from the Noun Project
     url: https://thenounproject.com/search/?q=balance&i=2032274
@@ -18,7 +18,7 @@ tags:
   - jamstack
 ---
 
-In the exciting world that is [_The Jamstack_](/blog/wtf-is-jamstack), even after choosing which [headless CMS](/blog/wtf-is-headless-cms) to use on a project, there's still a blank slate before you. The beauty (and curse) of _most_ headless CMS products is that they don't make assumptions about what you want to do with your content. So it's up to you to structure it. And that structure is a _big_ part of making or breaking the experience for your content editors.
+In the exciting world that is [_The Jamstack_](/posts/wtf-is-jamstack), even after choosing which [headless CMS](/posts/wtf-is-headless-cms) to use on a project, there's still a blank slate before you. The beauty (and curse) of _most_ headless CMS products is that they don't make assumptions about what you want to do with your content. So it's up to you to structure it. And that structure is a _big_ part of making or breaking the experience for your content editors.
 
 I often say that designing an optimal content management experience comes from finding a balance between flexibility and productivity. These things — flexibility and productivity — tend to act as the inverse of each other. The more flexible a CMS experience is, the longer it takes to create and edit content.
 
@@ -39,7 +39,7 @@ With most headless CMSs today, it's up to you to choose that degree of flexibili
 Generally speaking, it works like this:
 
 {% post_image
-    src="/blog/210205/flexible-vs-structured-diagram.png",
+    src="/posts/210205/flexible-vs-structured-diagram.png",
     alt="Diagram: Flexible vs Structured Page Design",
     flatten=true %}
 

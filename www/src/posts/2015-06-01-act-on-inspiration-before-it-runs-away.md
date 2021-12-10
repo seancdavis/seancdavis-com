@@ -2,7 +2,7 @@
 title: Act on Inspiration Before It Runs Away
 tags:
   - inspiration
-image: /blog/150601/2699850137_a8cf28043f_b.jpg
+image: /posts/150601/2699850137_a8cf28043f_b.jpg
 description: Inspiration is an amazing feeling. It comes in an array of forms. It arrives without warning, sometimes subtly, sometimes like a storm. And it can leave just as quickly.
 attribution:
   - name: Jason Hickey

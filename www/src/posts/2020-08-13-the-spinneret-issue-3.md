@@ -3,7 +3,7 @@ title: "The Spinneret: Issue #3"
 description: "Keeping up the pace with new blog posts, while engaging the team in some interesting discussions via Slack. July was a series of experiments and conversation-starters."
 tags:
   - spinneret
-image: /blog/200813/spinneret-issue-3--in-my-words.jpg
+image: /posts/200813/spinneret-issue-3--in-my-words.jpg
 ---
 
 Welcome to the third installment of _The Spinneret_. I suppose if it happens three times it's actually a thing, right?
@@ -13,7 +13,7 @@ While this is still very much an experiment, I appreciate that you're reading it
 ## In My Words
 
 {% post_image
-    src="/blog/200813/spinneret-issue-3--in-my-words.jpg",
+    src="/posts/200813/spinneret-issue-3--in-my-words.jpg",
     alt="The Spinneret #3 - In My Words" %}
 
 I went down a few new roads and visited a few old topics.
@@ -22,43 +22,43 @@ I went down a few new roads and visited a few old topics.
 
 I submitted a talk to a local tech conference that revolves around building websites with components. Thus, I've begun diving deep into an exploration on topics that will ultimately support that talk. I'm just brushing the surface, but here are a few to start:
 
-- [Using Web Components to Build a House, Room-by-Room](/blog/use-web-components-to-build-house-room-by-room)
-- [Simplify Components by Separating Logic from Presentation using Adapters](/blog/simplify-components-by-separating-logic-from-presentation-using-adapters)
-- [Organize Components by Keeping Related Files Close](/blog/organize-components-by-keeping-related-files-close)
-- [Introducing Component Adapters into a Gatsby Project](/blog/introducing-component-adapters-into-gatsby)
+- [Using Web Components to Build a House, Room-by-Room](/posts/use-web-components-to-build-house-room-by-room)
+- [Simplify Components by Separating Logic from Presentation using Adapters](/posts/simplify-components-by-separating-logic-from-presentation-using-adapters)
+- [Organize Components by Keeping Related Files Close](/posts/organize-components-by-keeping-related-files-close)
+- [Introducing Component Adapters into a Gatsby Project](/posts/introducing-component-adapters-into-gatsby)
 
 ### #jsQuestionOfTheDay
 
 I started another new thing. Most weekday mornings I begin by asking some technical or conceptual question to one or all the devs on my team. When relevant, I've also been sharing those questions on Twitter under #jsQuestionOfTheDay. This was an experiment that began in July and will surely evolve over the coming months, as I've had a positive response from it.
 
-I suspect some of the questions will turn into articles, like [this one](/blog/difference-between-equal-signs-javascript).
+I suspect some of the questions will turn into articles, like [this one](/posts/difference-between-equal-signs-javascript).
 
 ### Video Tutorials
 
 Finally! I've been wanting to do this for awhile. I _finally_ have an article with an accompanying video tutorial. I started with something that's unlikely to get a ton of traffic, just to get my feet wet. But, as I get more comfortable with recording on screen, I'll be adding many more of these on a regular basis.
 
-- [Building a Static API with Middleman](/blog/building-static-api-middleman)
+- [Building a Static API with Middleman](/posts/building-static-api-middleman)
 
 ### More WTFs
 
 There are a few more foundational articles:
 
-- [WTF is Component-Driven Development?](/blog/wtf-is-component-driven-development)
-- [WTF is a Fixture?](/blog/wtf-is-a-fixture)
-- [WTF is the DOM?](/blog/wtf-is-the-dom)
+- [WTF is Component-Driven Development?](/posts/wtf-is-component-driven-development)
+- [WTF is a Fixture?](/posts/wtf-is-a-fixture)
+- [WTF is the DOM?](/posts/wtf-is-the-dom)
 
 ### Odds and Ends
 
 And articles that don't fit into one of the buckets above:
 
-- [Increase Developer Efficiency by Establishing Conventions](/blog/increase-developer-efficiency-by-establishing-conventions)
+- [Increase Developer Efficiency by Establishing Conventions](/posts/increase-developer-efficiency-by-establishing-conventions)
 - [Is it time for a new website?](https://www.helloample.com/blog/is-it-time-for-a-new-website)
-- [You Will Make Mistakes](/blog/you-will-make-mistakes)
+- [You Will Make Mistakes](/posts/you-will-make-mistakes)
 
 ## Shop Talk
 
 {% post_image
-    src="/blog/200813/spinneret-issue-3--shop-talk.png",
+    src="/posts/200813/spinneret-issue-3--shop-talk.png",
     alt="The Spinneret #3 - Shop Talk" %}
 
 One morning, I asked one of [Ample's](https://www.helloample.com/) PMs to talk about _maximizing work not done_. That led to another conversation on _minimizing work in progress_. At the same time, we're talking about throwing out the rule book and completely rethinking how we do work as a growing agency. There's nothing written to reference right now, but something is cooking, and something will come from it, and I can't wait to share.
@@ -73,7 +73,7 @@ My team has also begun murmurings about two different topics I've very excited t
 ## Resources & References
 
 {% post_image
-    src="/blog/200813/spinneret-issue-3--resources.png",
+    src="/posts/200813/spinneret-issue-3--resources.png",
     alt="The Spinneret #3 - Resources & References" %}
 
 I really enjoyed [this article on slowing down the Jamstack](https://css-tricks.com/make-jamstack-slow-challenge-accepted/). It's a fun way to look at the performance of Jamstack sites.
@@ -85,7 +85,7 @@ Performance has begun to be a big topic around the water cooler, too. And [this 
 ## What The Buzz!
 
 {% post_image
-    src="/blog/200813/spinneret-issue-3--what-the-buzz.jpg",
+    src="/posts/200813/spinneret-issue-3--what-the-buzz.jpg",
     alt="The Spinneret #3 - What The Buzz!" %}
 
 We use [BrowserStack](https://www.browserstack.com/) quite a bit at Ample. (That way we don't have to actually purchase anything that runs Windows.) The news that [BrowserStack has acquired Percy](https://blog.percy.io/exciting-news-percy-is-now-part-of-browserstack-3b10e7500605) is exciting, as we've been wanting to dip our toes into Percy, but have been intimidated by the pricing model. This helps a bit.
@@ -95,7 +95,7 @@ And I received some love from Chris Coyier of CSS-Tricks on an article I wrote i
 ## New (to me) Tools
 
 {% post_image
-    src="/blog/200813/spinneret-issue-3--new-tools.png",
+    src="/posts/200813/spinneret-issue-3--new-tools.png",
     alt="The Spinneret #3 - New (to me) Tools" %}
 
 And last, a few new tools I've discovered that look intriguing, but which I haven't played with and therefore have no opinion:

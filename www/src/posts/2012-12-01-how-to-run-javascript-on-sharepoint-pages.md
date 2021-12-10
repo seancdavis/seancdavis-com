@@ -5,7 +5,7 @@ tags:
   - sharepoint
 description: Here's a cool trick to run JavaScript on SharePoint 2010 wiki pages
   without editing the master page.
-image: /blog/default/default-lime-02.png
+image: /posts/default/default-lime-02.png
 ---
 
 A great way to extend SharePoint is to create what I like to call _mini applications_ -- run JavaScript on SharePoint pages. And the best part:  **you don't need to edit the master page**. Here's how you run JavaScript on a SharePoint 2010 wiki page:
@@ -16,15 +16,15 @@ Your JavaScript has to be loaded from a Content Editor Web Part. To add, go into
 
 {% post_image
     alt="Add Web Part - How to Run JavaScript on SharePoint Pages",
-    src="/blog/121201/Capture3.png" %}
+    src="/posts/121201/Capture3.png" %}
 
-Next, open the web part tools by editing the web part. There are a few different ways to load a script on your page. One way is to add a content link in your web part tools panel (_if you do this, the file has to live in the current site collection_). To follow my best practice of [_one file, one place_](/blog/edit-files-efficiently-in-sharepoint/) I suggest you go about this a different way.
+Next, open the web part tools by editing the web part. There are a few different ways to load a script on your page. One way is to add a content link in your web part tools panel (_if you do this, the file has to live in the current site collection_). To follow my best practice of [_one file, one place_](/posts/edit-files-efficiently-in-sharepoint/) I suggest you go about this a different way.
 
 With the web part tools open, click inside the Content Editor Web Part (the first time this area will read _Click here to add new content_). With the cursor blinking inside the web part, click the Format Text Tab above the ribbon, then HTML > Edit HTML Source.
 
 {% post_image
     alt="Edit Web Part - How to Run JavaScript on SharePoint Pages",
-    src="/blog/121201/Capture4.png" %}
+    src="/posts/121201/Capture4.png" %}
 
 This should bring up a blank dialog box titled *HTML Source*.
 
@@ -32,7 +32,7 @@ This should bring up a blank dialog box titled *HTML Source*.
 
 {% post_image
     alt="HTML Source Dialog Box - How to Run JavaScript on SharePoint Pages",
-    src="/blog/121201/Capture5.png" %}
+    src="/posts/121201/Capture5.png" %}
 
 You should load your JavaScript from this dialog box. You could drop your script file text right in this box, but following the best practice, if there is a chance you may reuse this code on another page, I would suggest instead linking a file that lives in a library in the current site collection or another.
 
@@ -47,7 +47,7 @@ Chances are you don't want to see your Content Editor on your web page. You can 
 
 {% post_image
     alt="Hide Web Part - How to Run JavaScript on SharePoint Pages",
-    src="/blog/121201/Capture6.png" %}
+    src="/posts/121201/Capture6.png" %}
 
 ## 02: Setting Up Your Page
 
@@ -75,8 +75,8 @@ A better way to accomplish this is to use an alternative stylesheet (still doesn
 
 {% post_image
     alt="Alternative CSS - How to Run JavaScript on SharePoint Pages",
-    src="/blog/121201/Capture7.png" %}
+    src="/posts/121201/Capture7.png" %}
 
-> You obviously need to have a CSS file already created and saved somewhere on your SharePoint server. Again, I suggest keeping the [_one file, one place_](/blog/edit-files-efficiently-in-sharepoint/) practice in mind.
+> You obviously need to have a CSS file already created and saved somewhere on your SharePoint server. Again, I suggest keeping the [_one file, one place_](/posts/edit-files-efficiently-in-sharepoint/) practice in mind.
 
 It's important to keep in mind a couple things. First, this stylesheet is loaded after all the default SharePoint CSS files. Therefore, you are able to change the default SharePoint styles in this CSS file. Second, without editing the master page, you are only allowed one alternative CSS per site collection. If you're using this stylesheets for many purposes, ensure you're keeping it nice and organized with comments.

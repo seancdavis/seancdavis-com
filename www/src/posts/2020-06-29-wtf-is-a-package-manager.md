@@ -4,12 +4,12 @@ description: A brief description of package managers, with some examples using
   referencing JavaScript packages.
 tags:
   - wtf
-image: /blog/default/default-yellow-01.png
+image: /posts/default/default-yellow-01.png
 ---
 
 A package manager is a collection of distributed software. I like to think of it as a giant repository of plugins — code libraries that don't come native to an environment or programming language, but provide some functionality on top of it.
 
-For example, consider a [JavaScript](/blog/wtf-is-javascript/) library like [Lodash](/blog/wtf-is-lodash/). It offers a collection of utilities to the JavaScript programming language. One example is its [`last` method](https://lodash.com/docs#last/) in which it returns the last element of an array. JavaScript doesn't offer this by default. I could write my own function to handle extracting the last element of an array, or I could install the Lodash library to handle that functionality for me.
+For example, consider a [JavaScript](/posts/wtf-is-javascript/) library like [Lodash](/posts/wtf-is-lodash/). It offers a collection of utilities to the JavaScript programming language. One example is its [`last` method](https://lodash.com/docs#last/) in which it returns the last element of an array. JavaScript doesn't offer this by default. I could write my own function to handle extracting the last element of an array, or I could install the Lodash library to handle that functionality for me.
 
 But packages can be much more complex. For example, a server-side language may have packages that handle authenticating users for an application.
 

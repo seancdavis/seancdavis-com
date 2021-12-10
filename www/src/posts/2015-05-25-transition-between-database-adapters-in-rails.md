@@ -5,7 +5,7 @@ description: Transitioning from one database to another, or even to a whole new
   content.
 tags:
   - ruby-on-rails
-image: /blog/default/default-pink-01.png
+image: /posts/default/default-pink-01.png
 ---
 
 For whatever reason, you might just need to transition your Rails app's content from one database type to another (or even just to a new database with the same adapter). I've found that [yaml_db](https://github.com/yamldb/yaml_db) does a great job helping you with this task.

@@ -7,16 +7,16 @@ tags:
   - babel
   - gulp
   - javascript
-image: /blog/default/default-blue-03.png
+image: /posts/default/default-blue-03.png
 related_posts:
   - compile-es6-code-gulp-babel-part-5
 ---
 
-This is the fourth part in a five-part series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/blog/compile-es6-code-gulp-babel-part-1/), I recommend at least skimming through the first three parts. By now we've covered enough in previous steps that you'll be missing a lot of context for what's going on if you start here.
+This is the fourth part in a five-part series on compiling and concatenating ES6 code using Gulp and Babel. If you haven't [started from the beginning](/posts/compile-es6-code-gulp-babel-part-1/), I recommend at least skimming through the first three parts. By now we've covered enough in previous steps that you'll be missing a lot of context for what's going on if you start here.
 
 Otherwise, if you've been through previous parts of the series, welcome back!
 
-In this part we're going to minify the bundle and clean up the files that are created for temporary use during the build. This part relies heavily on [Part 3](/blog/compile-es6-code-gulp-babel-part-3/), and you should familiarize yourself with that approach before diving in here.
+In this part we're going to minify the bundle and clean up the files that are created for temporary use during the build. This part relies heavily on [Part 3](/posts/compile-es6-code-gulp-babel-part-3/), and you should familiarize yourself with that approach before diving in here.
 
 ## Step 1: Install Dependencies
 
@@ -45,54 +45,54 @@ Here's what the resulting file looks like now (with comments where code was adde
 `gulpfile.js` {.filename}
 
 ```js
-const { parallel, series, src, dest } = require("gulp")
+const { parallel, series, src, dest } = require("gulp");
 
-const babel = require("gulp-babel")
-const concat = require("gulp-concat")
+const babel = require("gulp-babel");
+const concat = require("gulp-concat");
 // Add del dependency.
-const del = require("del")
-const plumber = require("gulp-plumber")
+const del = require("del");
+const plumber = require("gulp-plumber");
 // Add uglify dependency.
-const uglify = require("gulp-uglify")
+const uglify = require("gulp-uglify");
 
-const jsConfig = require("./src/config")
-const srcDir = "./src"
-const tmpDir = "./tmp"
-const destDir = "./dist"
+const jsConfig = require("./src/config");
+const srcDir = "./src";
+const tmpDir = "./tmp";
+const destDir = "./dist";
 
 function jsDeps(done) {
-  const tasks = jsConfig.map(config => {
-    return done => {
-      const deps = (config.deps || []).map(f => {
+  const tasks = jsConfig.map((config) => {
+    return (done) => {
+      const deps = (config.deps || []).map((f) => {
         if (f[0] == "~") {
-          return `./node_modules/${f.slice(1, f.length)}.js`
+          return `./node_modules/${f.slice(1, f.length)}.js`;
         } else {
-          return `${srcDir}/${f}.js`
+          return `${srcDir}/${f}.js`;
         }
-      })
+      });
       if (deps.length == 0) {
-        done()
-        return
+        done();
+        return;
       }
       return src(deps)
         .pipe(concat(`${config.name}.deps.js`))
-        .pipe(dest(tmpDir))
-    }
-  })
+        .pipe(dest(tmpDir));
+    };
+  });
 
-  return parallel(...tasks, parallelDone => {
-    parallelDone()
-    done()
-  })()
+  return parallel(...tasks, (parallelDone) => {
+    parallelDone();
+    done();
+  })();
 }
 
 function jsBuild(done) {
-  const tasks = jsConfig.map(config => {
-    return done => {
-      const files = (config.files || []).map(f => `${srcDir}/${f}.js`)
+  const tasks = jsConfig.map((config) => {
+    return (done) => {
+      const files = (config.files || []).map((f) => `${srcDir}/${f}.js`);
       if (files.length == 0) {
-        done()
-        return
+        done();
+        return;
       }
       return (
         src(files)
@@ -104,66 +104,66 @@ function jsBuild(done) {
                 [
                   "@babel/env",
                   {
-                    modules: false
-                  }
-                ]
-              ]
+                    modules: false,
+                  },
+                ],
+              ],
             })
           )
           // Minify the self-authored bundle.
           .pipe(uglify())
           .pipe(dest(tmpDir))
-      )
-    }
-  })
+      );
+    };
+  });
 
-  return parallel(...tasks, parallelDone => {
-    parallelDone()
-    done()
-  })()
+  return parallel(...tasks, (parallelDone) => {
+    parallelDone();
+    done();
+  })();
 }
 
 function jsConcat(done) {
-  const tasks = jsConfig.map(config => {
-    return done => {
+  const tasks = jsConfig.map((config) => {
+    return (done) => {
       const files = [
         `${tmpDir}/${config.name}.deps.js`,
-        `${tmpDir}/${config.name}.build.js`
-      ]
+        `${tmpDir}/${config.name}.build.js`,
+      ];
       return src(files, { allowEmpty: true })
         .pipe(plumber())
         .pipe(concat(`${config.name}.js`))
-        .pipe(dest(destDir))
-    }
-  })
+        .pipe(dest(destDir));
+    };
+  });
 
-  return parallel(...tasks, parallelDone => {
-    parallelDone()
-    done()
-  })()
+  return parallel(...tasks, (parallelDone) => {
+    parallelDone();
+    done();
+  })();
 }
 
 // Add a jsClean() task to delete the temporary *.deps.js and
 // *.build.js files from the temporary directory.
 function jsClean(done) {
-  const tasks = jsConfig.map(config => {
-    return done => {
+  const tasks = jsConfig.map((config) => {
+    return (done) => {
       const files = [
         `${tmpDir}/${config.name}.deps.js`,
-        `${tmpDir}/${config.name}.build.js`
-      ]
-      return del(files)
-    }
-  })
+        `${tmpDir}/${config.name}.build.js`,
+      ];
+      return del(files);
+    };
+  });
 
-  return parallel(...tasks, parallelDone => {
-    parallelDone()
-    done()
-  })()
+  return parallel(...tasks, (parallelDone) => {
+    parallelDone();
+    done();
+  })();
 }
 
 // Add jsClean() as the last task in the series.
-exports.default = series(parallel(jsDeps, jsBuild), jsConcat, jsClean)
+exports.default = series(parallel(jsDeps, jsBuild), jsConcat, jsClean);
 ```
 
 And again, you're ready to run the build:
@@ -183,12 +183,12 @@ Note that you _could_ extend this to also clean unwanted files from the build di
 
 That's it for Part 4 -- only one more to go to complete the series!
 
-In fact, you're in really good shape right now and have a powerful asset build pipeline for your project. In [the last part](/blog/compile-es6-code-gulp-babel-part-5/), we're going to explore the idea of asset hashing, which helps with cache invalidation depending on your means of distribution. But more on that in the next part.
+In fact, you're in really good shape right now and have a powerful asset build pipeline for your project. In [the last part](/posts/compile-es6-code-gulp-babel-part-5/), we're going to explore the idea of asset hashing, which helps with cache invalidation depending on your means of distribution. But more on that in the next part.
 
 Or if you want to jump around, here are all five parts:
 
-1. [Part 1: Setup & Simple Implementation](/blog/compile-es6-code-gulp-babel-part-1/)
-2. [Part 2: Concatenated Bundle](/blog/compile-es6-code-gulp-babel-part-2/)
-3. [Part 3: Dynamic Manifest](/blog/compile-es6-code-gulp-babel-part-3/)
+1. [Part 1: Setup & Simple Implementation](/posts/compile-es6-code-gulp-babel-part-1/)
+2. [Part 2: Concatenated Bundle](/posts/compile-es6-code-gulp-babel-part-2/)
+3. [Part 3: Dynamic Manifest](/posts/compile-es6-code-gulp-babel-part-3/)
 4. **Part 4: Clean Files & Minify Output**
-5. [Part 5: Asset Hashing](/blog/compile-es6-code-gulp-babel-part-5/)
+5. [Part 5: Asset Hashing](/posts/compile-es6-code-gulp-babel-part-5/)

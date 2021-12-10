@@ -1,7 +1,7 @@
 ---
 title: WTF is a Regression?
 description: "Learn the fundamental concept of a regression, along with a couple best practices for avoiding them."
-image: "/blog/210817/wtf--regression.png"
+image: "/posts/210817/wtf--regression.png"
 tags:
   - testing
   - wtf

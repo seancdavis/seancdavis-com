@@ -7,7 +7,7 @@ tags:
   - middleman
   - netlify
   - ruby
-image: /blog/default/default-blue-02.png
+image: /posts/default/default-blue-02.png
 ---
 
 [Static site generators](https://www.staticgen.com/) are powerful tools. They enable developers to build and deploy static web pages, which are (typically) faster and more secure than their database-driven counterparts.
@@ -18,13 +18,13 @@ The problem with this approach was that there was a piece missing. Even if the h
 
 In other words, why not just build a [Rails](https://rubyonrails.org/) or [Django](https://www.djangoproject.com/) project and deploy it to [Heroku](https://http://heroku.com/)? Or hell, why not just use [WordPress](https://wordpress.com/) or [SquareSpace](https://www.squarespace.com/)?
 
-Enter, [Netlify](/blog/wtf-is-netlify). Netlify handles the entire build process for you, and it hosts the code. It listens to receive webhooks from GitHub and your headless CMS so any code or content change can trigger a new build. And it does all of this free of charge.
+Enter, [Netlify](/posts/wtf-is-netlify). Netlify handles the entire build process for you, and it hosts the code. It listens to receive webhooks from GitHub and your headless CMS so any code or content change can trigger a new build. And it does all of this free of charge.
 
 We're going to spend the next hour configuring these three tools to work together, and at the end of it you will have the beginning of your own site deployed to a server you're not managing or paying for.
 
 ---
 
-**There are two articles that set the foundation for the work we're going to do here. [This one on dynamic routing in Middleman](/blog/dynamic-routing-in-middleman/) and [this one on using Contentful to drive content in Middleman](/blog/dynamic-pages-middleman-contentful/).** I'm not going to reiterate the foundational concepts I've laid out in those articles. You'll certainly be able to fly through this and copy code if that's what you're looking for, but if you want additional explanation, I highly recommend reading those two articles first.
+**There are two articles that set the foundation for the work we're going to do here. [This one on dynamic routing in Middleman](/posts/dynamic-routing-in-middleman/) and [this one on using Contentful to drive content in Middleman](/posts/dynamic-pages-middleman-contentful/).** I'm not going to reiterate the foundational concepts I've laid out in those articles. You'll certainly be able to fly through this and copy code if that's what you're looking for, but if you want additional explanation, I highly recommend reading those two articles first.
 
 ---
 
@@ -169,7 +169,7 @@ end
 # ...
 ```
 
-What we're doing here is configuring the contentful_middleman gem with custom mappers (which we'll get to next), which will pull in all the pages and posts into their own directories at `data/site/pages` and `data/site/posts` (the `site` directory name comes from using "site" as our keye in the `f.space` configuration option). Again, this is a place where the [previous Contentful-Middleman article](/blog/dynamic-pages-middleman-contentful/) could come in handy if you want more explanation.
+What we're doing here is configuring the contentful_middleman gem with custom mappers (which we'll get to next), which will pull in all the pages and posts into their own directories at `data/site/pages` and `data/site/posts` (the `site` directory name comes from using "site" as our keye in the `f.space` configuration option). Again, this is a place where the [previous Contentful-Middleman article](/posts/dynamic-pages-middleman-contentful/) could come in handy if you want more explanation.
 
 Now let's add the mappers:
 
@@ -193,7 +193,7 @@ class PostMapper < ContentfulMiddleman::Mapper::Base
   def map(context, entry)
     super
     date = context.published_at
-    context.path = "/blog/#{date.year}-#{'%02i' % date.month}-#{'%02i' % date.day}-#{context.slug}/"
+    context.path = "/posts/#{date.year}-#{'%02i' % date.month}-#{'%02i' % date.day}-#{context.slug}/"
     context.file_path = "#{context.path}index.html"
     context.template = 'templates/post.html'
   end
@@ -312,5 +312,5 @@ _If you have issues or questions, do not hesitate to [bug me](https://twitter.co
 - [Contentful](https://www.contentful.com/)
 - [Middleman](https://middlemanapp.com/)
 - [Contentful Middleman](https://github.com/contentful/contentful_middleman)
-- [WTF is Netlify?](/blog/wtf-is-netlify)
+- [WTF is Netlify?](/posts/wtf-is-netlify)
 - [Netlify Website](https://www.netlify.com/)

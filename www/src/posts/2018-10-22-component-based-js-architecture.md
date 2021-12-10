@@ -5,7 +5,7 @@ description: Keep your JavaScript code organized by continuously abstracting it
 tags:
   - components
   - javascript
-image: /blog/default/default-pink-02.png
+image: /posts/default/default-pink-02.png
 ---
 
 It's really easy for JavaScript to get out of hand. We've all been there. The classic case is when a project loads a single JS file wrapped around a `$(document).ready()` callback. All the functions and functional JS are strung together in this file in a way that is unclear to anyone else who many dare to enter.
@@ -20,7 +20,7 @@ Let's take a fairly common scenario and look at how we can abstract messy JS cod
 
 Consider a case where there are two elements within a site that do essentially the same thing within different contexts. Let's say there is a button that triggers the showing and hiding of the main navigation menu, and there is also have a button that triggers a [modal window](https://en.wikipedia.org/wiki/Modal_window).
 
-The [HTML](/blog/wtf-is-html/) may look something like this:
+The [HTML](/posts/wtf-is-html/) may look something like this:
 
 ```html
 <a href="#" class="menu-trigger">Menu</a>
@@ -43,20 +43,20 @@ And let's say all the site's JS code is in a single file, which looks something 
 ```js
 $(document).ready(function () {
   var modal = $(".modal"),
-    menu = $(".menu")
+    menu = $(".menu");
 
   $(".modal-trigger").click(function (event) {
-    event.preventDefault()
-    modal.toggle()
-  })
+    event.preventDefault();
+    modal.toggle();
+  });
 
   // Do lots of other stuff ...
 
   $(".menu-trigger").click(function (event) {
-    event.preventDefault()
-    menu.toggle()
-  })
-})
+    event.preventDefault();
+    menu.toggle();
+  });
+});
 ```
 
 ## The Issues
@@ -71,7 +71,7 @@ There are (at least) six issues with this approach:
 
 4. **Distance between `menu` declaration and use could be large.** While `modal` is defined right above where it is used, if the code represented by the comment gets long we could be left with a vast distance between instantiating `menu` and using it. When inside the menu callback and looking at the `menu` variable, it's unclear what it is and where it was defined.
 
-5. **JavaScript is determining visibility.** This is something I always used to do. It's really tempting to use the [`show()`](http://api.jquery.com/show/), [`hide()`](http://api.jquery.com/hide/), and [`toggle()`](http://api.jquery.com/toggle/) jQuery functions. But it's not a great practice. It's best for any given project if we let [CSS](/blog/wtf-is-css/) handle the styling of elements and let JavaScript focus on the functionality of those elements.
+5. **JavaScript is determining visibility.** This is something I always used to do. It's really tempting to use the [`show()`](http://api.jquery.com/show/), [`hide()`](http://api.jquery.com/hide/), and [`toggle()`](http://api.jquery.com/toggle/) jQuery functions. But it's not a great practice. It's best for any given project if we let [CSS](/posts/wtf-is-css/) handle the styling of elements and let JavaScript focus on the functionality of those elements.
 
 6. **Classes are determining functionality.** On a similar note, I'm using classes (`.modal-trigger`, `.menu-trigger`) to determine the functionality of these elements. Classes are for CSS to use for styling. We have other ways to target these functional elements. Just because I can target classes with JS doesn't mean I should.
 
@@ -117,18 +117,18 @@ $(document).ready(function () {
   $("[data-toggle-class]").click(function (event) {
     // If it happens to be an anchor with an href, prevent the browser from
     // following the link.
-    event.preventDefault()
+    event.preventDefault();
     // Iterate over the data-toggle-class object and toggle the given class for
     // each element.
     $.each($(this).data("toggle-class"), function (selector, klass) {
       // For example, for the menu, selector would be "#my-menu" and klass would
       // be "active".
-      $(selector).toggleClass(klass)
-    })
-  })
+      $(selector).toggleClass(klass);
+    });
+  });
 
   // ...
-})
+});
 ```
 
 Okay, so how were each of the six issues addressed?

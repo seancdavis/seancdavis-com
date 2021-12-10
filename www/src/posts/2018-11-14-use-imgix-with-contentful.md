@@ -6,7 +6,7 @@ description: imgix is a powerful image delivery and processing tool that can be
 tags:
   - contentful
   - imgix
-image: /blog/default/default-orange-02.png
+image: /posts/default/default-orange-02.png
 ---
 
 [imgix](https://www.imgix.com/) is a really great image delivery and manipulation tool. It has [an extensive and powerful API](https://docs.imgix.com/apis/url) which drives processing of the image before delivery. And it caches images by delivering them through a CDN (content delivery network). imgix [does not have a free tier](https://www.imgix.com/pricing), but I find it to be absolutely worth the cost.

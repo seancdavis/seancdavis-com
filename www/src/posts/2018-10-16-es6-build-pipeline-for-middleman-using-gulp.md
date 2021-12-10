@@ -8,7 +8,7 @@ tags:
   - gulp
   - javascript
   - middleman
-image: /blog/default/default-orange-01.png
+image: /posts/default/default-orange-01.png
 ---
 
 For its first three major versions, Middleman used [Rails' asset pipeline](https://guides.rubyonrails.org/asset_pipeline) for its asset pipeline. But as of v4, [Middleman has abandoned using Rails' asset pipeline](https://middlemanapp.com/advanced/asset-pipeline/) in favor of a more customize approach -- [the external pipeline](https://middlemanapp.com/advanced/external-pipeline/).
@@ -28,7 +28,7 @@ Alrighty then, let's get to it.
 
 ## JavaScript Components
 
-We're going to use [a component-based structure](/blog/component-based-js-architecture/) to architect our site's JavaScript. That means that instead of long-form spaghetti code littered with `$(document/).ready()` wrappers and event handlers, we're breaking down the responsibilities of JavaScript into components.
+We're going to use [a component-based structure](/posts/component-based-js-architecture/) to architect our site's JavaScript. That means that instead of long-form spaghetti code littered with `$(document/).ready()` wrappers and event handlers, we're breaking down the responsibilities of JavaScript into components.
 
 For example, let's say your site has modal windows and accordions -- you'd have two separate files to handle both functions, probably a `modal.js` and an `accordion.js` or something like that.
 
@@ -39,7 +39,7 @@ For this example, though, let's be generic. We're going to have a `foo.js` compo
 ```js
 class Foo {
   doSomething() {
-    console.log("Already done.")
+    console.log("Already done.");
   }
 }
 ```
@@ -49,7 +49,7 @@ class Foo {
 ```js
 class Bar {
   doSomething() {
-    console.log("Working on it.")
+    console.log("Working on it.");
   }
 }
 ```
@@ -89,7 +89,7 @@ Previously Middleman has relied on [Rails' Sprockets](https://github.com/rails/s
 
 $().ready({
   // my custom code here
-})
+});
 ```
 
 We _could_ take that approach, but we're going to be using JS already to build our build tasks, so let's just keep it simple and use a JS object as our manifest configuration.
@@ -102,9 +102,9 @@ Let's create a `config.js` file in the `javascripts` directory. The structure wi
 module.exports = {
   "[name]": {
     dependencies: [],
-    files: []
-  }
-}
+    files: [],
+  },
+};
 ```
 
 I like this [DSL](https://en.wikipedia.org/wiki/Domain-specific_language) because it's simple. Every object within the exported object has a name that becomes the bundled JS file. And the config is simply which dependencies to prepend to that file and which custom JS files to transpile, combine, and minify into the bundle.
@@ -144,9 +144,9 @@ Now that your dependencies are installed, update your JS config file.
 module.exports = {
   main: {
     dependencies: ["~lodash/lodash.min", "vendor/jquery.min"],
-    files: ["components/foo", "components/bar"]
-  }
-}
+    files: ["components/foo", "components/bar"],
+  },
+};
 ```
 
 Notice the `~` character preceding lodash. We're going to add a fun little feature that takes a path beginning with `~` and resolves it within the `node_modules` directory. Also notice there are no `.js` extensions on these files. That's just one less thing to type and we can programmatically add it during the build.
@@ -175,36 +175,36 @@ While I say this is simple, there's a lot of code here, so this may be a bit ove
 
 ```js
 // Dependencies
-const gulp = require("gulp")
-const babel = require("gulp-babel")
-const concat = require("gulp-concat")
-const plumber = require("gulp-plumber")
-const uglify = require("gulp-uglify")
+const gulp = require("gulp");
+const babel = require("gulp-babel");
+const concat = require("gulp-concat");
+const plumber = require("gulp-plumber");
+const uglify = require("gulp-uglify");
 
 // Directory in which to find JS source files.
-const srcDir = "./source/javascripts"
+const srcDir = "./source/javascripts";
 // Directory in which to place built files.
-const destDir = "./tmp/javascripts"
+const destDir = "./tmp/javascripts";
 
 // The main config file.
-const jsConfig = require(`${srcDir}/config`)
+const jsConfig = require(`${srcDir}/config`);
 
 // The Gulp tasks are built (and named) dynamically based on the contents of the
 // config file. This object holds a reference to the main task names, such that
 // they can be used as a dependency to the main `js` task (see bottom of the
 // file) that builds all the files at once.
-let jsTasks = []
+let jsTasks = [];
 
 // Loop through the objects within the config object. This is what enables the
 // ability to build dynamically-named tasks on the fly.
 for (key in jsConfig) {
   // The config object.
-  const config = jsConfig[key]
+  const config = jsConfig[key];
   // The task name is the name of the output file with "-js" appended, just so
   // we can be sure it doesn't conflict with our other built-in tasks.
-  const taskName = `${key}-js`
+  const taskName = `${key}-js`;
   // Add the task name to the jsTasks array. (More on this below.)
-  jsTasks.push(taskName)
+  jsTasks.push(taskName);
 
   /**
    * @task ${taskName}-deps
@@ -213,15 +213,15 @@ for (key in jsConfig) {
   gulp.task(`${taskName}-deps`, [], function () {
     // We don't attempt to build a dependencies file unless dependencies were
     // specified in the config.
-    if (!config.dependencies) return true
+    if (!config.dependencies) return true;
     // Resolve the assumptions made when naming the files. This is where we
     // replace "~" with "node_modules" and append ".js" to each filename. (If
     // "~" is not in the filename we assume the file is in the source
     // directory.)
-    const files = config.dependencies.map(f => {
-      if (f[0] == "~") return `${f.replace("~", "./node_modules/")}.js`
-      return `${srcDir}/${f}.js`
-    })
+    const files = config.dependencies.map((f) => {
+      if (f[0] == "~") return `${f.replace("~", "./node_modules/")}.js`;
+      return `${srcDir}/${f}.js`;
+    });
     // Use the files array to ...
     return (
       gulp
@@ -234,8 +234,8 @@ for (key in jsConfig) {
         // (the destDir value).
         .pipe(concat(`${key}.deps.js`))
         .pipe(gulp.dest(destDir))
-    )
-  })
+    );
+  });
 
   /**
    * @task ${taskName}-files
@@ -246,7 +246,7 @@ for (key in jsConfig) {
     // Resolve the filenames. Here the assumption is that all custom JS files
     // are located in the source directory. Therefore, the path to the source
     // directory is prepended and ".js" is appended to the given path.
-    const files = config.files.map(f => `${srcDir}/${f}.js`)
+    const files = config.files.map((f) => `${srcDir}/${f}.js`);
     // Use the files array to ...
     return (
       gulp
@@ -264,17 +264,17 @@ for (key in jsConfig) {
               [
                 "@babel/env",
                 {
-                  modules: false
-                }
-              ]
-            ]
+                  modules: false,
+                },
+              ],
+            ],
           })
         )
         // Minify the bundle.
         .pipe(uglify())
         .pipe(gulp.dest(destDir))
-    )
-  })
+    );
+  });
 
   /**
    * @task ${taskName}
@@ -289,8 +289,8 @@ for (key in jsConfig) {
       .src([`${destDir}/${key}.deps.js`, `${destDir}/${key}.files.js`])
       .pipe(plumber())
       .pipe(concat(`${key}.js`))
-      .pipe(gulp.dest(destDir))
-  })
+      .pipe(gulp.dest(destDir));
+  });
 }
 
 /**
@@ -299,8 +299,8 @@ for (key in jsConfig) {
  * Runs all of the dynamically-built -- ${taskName} -- tasks.
  */
 gulp.task("js", jsTasks, function () {
-  return
-})
+  return;
+});
 
 /**
  * @task watch-js
@@ -310,9 +310,9 @@ gulp.task("js", jsTasks, function () {
  */
 gulp.task("watch-js", function () {
   gulp.watch(`${srcDir}/**/*.js`, ["js"], () => {
-    return
-  })
-})
+    return;
+  });
+});
 ```
 
 While it looks complicated, there's not much going on here. Essentially we read through the JS config file you created at `source/javascripts/config.js`, loop through it (i.e. this supports multiple bundles), and create the appropriate bundle.

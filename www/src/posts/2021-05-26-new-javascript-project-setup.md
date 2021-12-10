@@ -1,14 +1,14 @@
 ---
 title: How I Begin New JavaScript Projects
 description: These are the first steps I take when I start a new JavaScript project.
-image: /blog/210526/blue--javascript-new.png
+image: /posts/210526/blue--javascript-new.png
 tags:
   - javascript
 ---
 
 I found myself writing and rewriting this process on so many blog posts that it felt like it deserved a post of its own.
 
-These are the steps I take when I am starting a new JavaScript project, whether as a client-side script or a server-side project with [Node.js](/blog/wtf-is-node).
+These are the steps I take when I am starting a new JavaScript project, whether as a client-side script or a server-side project with [Node.js](/posts/wtf-is-node).
 
 ## Step 1: Create the Project Directory
 
@@ -29,7 +29,7 @@ The first thing I do when starting a new project is create a directory for the c
 {% callout type="note" %}
 If the code is just a quick proof of concept I'll throw it in the `/tmp` directory, which gets automatically cleaned out. Otherwise, it goes in `~/workspace`.
 
-_What if you don't plan to put the code on GitHub?_ [Put everything on GitHub that isn't a throwaway proof-of-concept on GitHub](/blog/put-everything-on-github)! You won't regret it.
+_What if you don't plan to put the code on GitHub?_ [Put everything on GitHub that isn't a throwaway proof-of-concept on GitHub](/posts/put-everything-on-github)! You won't regret it.
 {% endcallout %}
 
 ## Step 2: Add `package.json`

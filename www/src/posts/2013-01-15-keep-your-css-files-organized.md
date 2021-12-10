@@ -5,7 +5,7 @@ tags:
   - organization
 description: CSS files are notorious for very quickly growing long, jumbled and
   confusing. Here's how I stay organized
-image: /blog/default/default-blue-01.png
+image: /posts/default/default-blue-01.png
 ---
 
 CSS files are notorious for very quickly growing long, jumbled and confusing. I'm not formally trained in design/development, so I don't know of the accepted way to keep a CSS file organized, but I know how I do it, and it works for me. So it just may help you, too.
@@ -15,14 +15,16 @@ CSS files are notorious for very quickly growing long, jumbled and confusing. I'
 You need to adopt a *style* for your CSS syntax, and then you need to stick to it. As long as the syntax is correct, your pages are going to render to what you've designed, but you are the one who needs to navigate them, so make it easy to do so. Check out these examples:
 
 ```css
-body{color:#fff;}
-
-body{
-  color:#fff;
+body {
+  color: #fff;
 }
 
-body{
-color: #fff;
+body {
+  color: #fff;
+}
+
+body {
+  color: #fff;
 }
 
 body {
@@ -53,13 +55,11 @@ Table of Contents
 =Footer
 */
 
-
 /* =Globals
 ---------------------------- */
 html {
   margin: 0;
 }
-
 
 /* =Header
 ---------------------------- */

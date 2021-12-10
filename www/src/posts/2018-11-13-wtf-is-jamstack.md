@@ -5,7 +5,7 @@ description: This term "Jamstack" is becoming a buzzword among development
 tags:
   - jamstack
   - wtf
-image: /blog/default/default-yellow-03.png
+image: /posts/default/default-yellow-03.png
 ---
 
 [Jamstack](https://jamstack.org/) is this new(ish) term gaining popularity among web development communities. In fact, the premier [Jamstack Conference](https://jamstackconf.com/) was held just last month (October 2018).
@@ -20,7 +20,7 @@ The community website provides a one-sentence overview of Jamstack:
 
 Right, so the "JAM" in Jamstack stands for **Javascript, APIs, and Markup.** WTF?
 
-Yeah, well, the term is a little goofy. [Netlify](/blog/wtf-is-netlify/) co-founder [Matt Biilman](https://twitter.com/biilmann) has joked that he and a friend coined the acronym prior to knowing what it stood for. The part that tripped me up when I first learned about it was that **you don't actually need Javascript to follow the Jamstack approach.** _Yeah, so ..._ The first letter in the acronym is one of the least important parts of the entire philosophy.
+Yeah, well, the term is a little goofy. [Netlify](/posts/wtf-is-netlify/) co-founder [Matt Biilman](https://twitter.com/biilmann) has joked that he and a friend coined the acronym prior to knowing what it stood for. The part that tripped me up when I first learned about it was that **you don't actually need Javascript to follow the Jamstack approach.** _Yeah, so ..._ The first letter in the acronym is one of the least important parts of the entire philosophy.
 
 Instead, I like to think about the Jamstack as being a philosophy that guides the production and distribution of dynamically-built static sites.
 
@@ -33,7 +33,7 @@ Using the community's best practices, this is the process for deploying a site u
 3. GitHub webhook notifies a server to build the project.
 4. Server pulls down the changes from GitHub.
 5. Server builds the project.
-6. Server uploads the [HTML](/blog/wtf-is-html/) files from the built project (along with any necessary assets/) to a CDN.
+6. Server uploads the [HTML](/posts/wtf-is-html/) files from the built project (along with any necessary assets/) to a CDN.
 7. Server informs CDN to invalidate its cache.
 8. Site is live.
 

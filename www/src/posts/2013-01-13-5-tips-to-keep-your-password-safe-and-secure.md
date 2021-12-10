@@ -3,7 +3,7 @@ title: 5 Tips to Keep Your Password Safe and Secure
 tags:
   - organization
 description: Stop repeating simple passwords!
-image: /blog/130113/12923102755_3852b4649e_o.jpg
+image: /posts/130113/12923102755_3852b4649e_o.jpg
 attribution:
   - name: Markus Stöber
     url: https://www.flickr.com/photos/mcmac_70

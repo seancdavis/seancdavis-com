@@ -5,7 +5,7 @@ tags:
   - components
   - eleventy
   - javascript
-image: /blog/210110/meta--eleventy-server-components.jpg
+image: /posts/210110/meta--eleventy-server-components.jpg
 ---
 
 {% youtube_embed
@@ -14,7 +14,7 @@ image: /blog/210110/meta--eleventy-server-components.jpg
 
 I love [Eleventy](https://www.11ty.dev/) as a static site generator! It makes no assumptions about what you what to do with it. Instead, it focuses on being a speedy build platform that outputs static files.
 
-The downside to this approach is it's not super conducive to this component-driven world we live in. If we want to use a [JavaScript](/blog/wtf-is-javascript) framework like [React](https://reactjs.org/) or [Vue](https://vuejs.org/), we then lose Eleventy's primary benefit — HTML that is immediately available when the browser loads the page. It also makes SEO inherently more difficult to solve.
+The downside to this approach is it's not super conducive to this component-driven world we live in. If we want to use a [JavaScript](/posts/wtf-is-javascript) framework like [React](https://reactjs.org/) or [Vue](https://vuejs.org/), we then lose Eleventy's primary benefit — HTML that is immediately available when the browser loads the page. It also makes SEO inherently more difficult to solve.
 
 What would be great is if we could have the best of both worlds — a component-driven system that renders the output of the components to static HTML during the build process.
 
@@ -126,26 +126,26 @@ Then, in our [Eleventy config file](https://www.11ty.dev/docs/config/), add the 
 `.eleventy.js` {.filename}
 
 ```js
-const fs = require("fs")
-const path = require("path")
-const nunjucks = require("nunjucks")
+const fs = require("fs");
+const path = require("path");
+const nunjucks = require("nunjucks");
 
 module.exports = function (eleventyConfig) {
   // Add "button" shortcode.
-  eleventyConfig.addNunjucksShortcode("button", props => {
+  eleventyConfig.addNunjucksShortcode("button", (props) => {
     // Path to the button component file.
-    const filePath = path.join(__dirname, "_includes/button.njk")
+    const filePath = path.join(__dirname, "_includes/button.njk");
     // If the file doesn't exist, render nothing.
     if (!fs.existsSync) {
-      return ""
+      return "";
     }
     // If the file does exist, read it.
-    const content = fs.readFileSync(filePath).toString()
+    const content = fs.readFileSync(filePath).toString();
     // Tell nunjucks to render the file's content, passing the
     // arguments to it as the "component" object.
-    return nunjucks.renderString(content, { component: props })
-  })
-}
+    return nunjucks.renderString(content, { component: props });
+  });
+};
 ```
 
 Note that we're wrapping up all our arguments — in our example that's `label` and `url` — as an object with a single key, `component`. We're then passing that `component` object on to the template. This is what enables `component.url` and `component.label` to work in the component.
@@ -180,7 +180,7 @@ The way I've solved this is by having separate files that control the client-sid
 
 ## CSS
 
-I take the same approach with CSS. I like having a single CSS file for each component. So I manually scope the selector using [component-driven CSS](/blog/component-driven-css-cdcss/), and piece them together with [postcss-import](https://github.com/postcss/postcss-import), along with [a few other plugins](https://github.com/seancdavis/seancdavis-com/blob/main/postcss.config.js).
+I take the same approach with CSS. I like having a single CSS file for each component. So I manually scope the selector using [component-driven CSS](/posts/component-driven-css-cdcss/), and piece them together with [postcss-import](https://github.com/postcss/postcss-import), along with [a few other plugins](https://github.com/seancdavis/seancdavis-com/blob/main/postcss.config.js).
 
 ---
 

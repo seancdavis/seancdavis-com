@@ -3,7 +3,7 @@ title: Upgrading Homebrew for Mac OS X Yosemite
 tags: []
 description: A new operating system means taking a few minutes to upgrade
   Homebrew. Here is how I went through the process.
-image: /blog/default/default-pink-01.png
+image: /posts/default/default-pink-01.png
 ---
 
 You've installed Mac OS X Yosemite, and now it's time for that feared task -- upgrading Homebrew.

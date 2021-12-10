@@ -1,14 +1,14 @@
 ---
 title: Generate Random Markdown Files with Node
 description: When writing some script or program that works with markdown files, it's nice to not have to generate them manually. Here's a script to get the job done for you.
-image: /blog/211006/orange--random-markdown.png
+image: /posts/211006/orange--random-markdown.png
 tags:
   - javascript
   - markdown
   - node
 ---
 
-Let's write a little [Node.js](/blog/wtf-is-node/) script that generates a series of 10 random markdown files in a `content` directory. We'll consider these to be blog posts, where each post has a `title`, `date`, and `author` displayed as frontmatter, and a `body` that gets rendered as the main content area of the file.
+Let's write a little [Node.js](/posts/wtf-is-node/) script that generates a series of 10 random markdown files in a `content` directory. We'll consider these to be blog posts, where each post has a `title`, `date`, and `author` displayed as frontmatter, and a `body` that gets rendered as the main content area of the file.
 
 Here's an example of the structure of a post object:
 
@@ -39,7 +39,7 @@ Quae molestiae earum et ipsum est ea nisi et. Perspiciatis reiciendis minus eos 
 
 ## Step 1: Setup
 
-First, let's start with a fresh project. I have [a handy guide](/blog/new-javascript-project-setup/) that walks through the process of setting up [JavaScript](/blog/wtf-is-javascript/) projects, if that's not super familiar to you.
+First, let's start with a fresh project. I have [a handy guide](/posts/new-javascript-project-setup/) that walks through the process of setting up [JavaScript](/posts/wtf-is-javascript/) projects, if that's not super familiar to you.
 
 For Step 4 in the setup, we're going to install the following dependencies:
 
@@ -64,18 +64,18 @@ We'll use the [faker](https://www.npmjs.com/package/faker) JS library that is re
 `scripts/generate.js` {.filename}
 
 ```js
-const faker = require("faker")
+const faker = require("faker");
 
 function generateRandomPost() {
   return {
     title: faker.lorem.words(5),
     date: faker.date.past(1),
     author: faker.name.findName(),
-    body: faker.lorem.paragraphs(3).replace(/\n/gi, "\n\n")
-  }
+    body: faker.lorem.paragraphs(3).replace(/\n/gi, "\n\n"),
+  };
 }
 
-console.log(generateRandomPost())
+console.log(generateRandomPost());
 ```
 
 And now run the script

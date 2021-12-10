@@ -3,17 +3,17 @@ title: Organize Components by Keeping Related Files Close
 description: We've traditionally organized files by type. But that can make specific files difficult to track down, especially in an era dominated by component-driven development.
 tags:
   - components
-image: /blog/200714/component-based-organization.jpg
+image: /posts/200714/component-based-organization.jpg
 ---
 
-Web projects have traditionally been organized by page or template. But with the emergence of [component-driven development](/blog/wtf-is-component-driven-development/), we can now build sites with reusable and composable bits of code, or _components_.
+Web projects have traditionally been organized by page or template. But with the emergence of [component-driven development](/posts/wtf-is-component-driven-development/), we can now build sites with reusable and composable bits of code, or _components_.
 
 ## Template-Based File Structure
 
 When web projects were organized by template, we tended to stay organized by keeping similar _types_ of files together.
 
 {% post_image
-    src="/blog/200714/template-based-organization.jpg",
+    src="/posts/200714/template-based-organization.jpg",
     alt="Template-Based Organization" %}
 
 The output of a project (i.e. a sitemap) might look something like this:
@@ -54,10 +54,10 @@ Sure, that's organized. The problem is that whenever you have to edit a feature,
 
 ## Component-Based File Structure
 
-When we build websites with components, we have an opportunity to rethink how we're organizing the code within our site. Since a site is essentially made up of components, why not have components represent the file structure? You could bring all the necessary files related to a component together in one directory. That could include [HTML](/blog/wtf-is-html/), [CSS](/blog/wtf-is-css/), [JavaScript](/blog/wtf-is-javascript/), test files, mocked data, and documentation (and probably more/).
+When we build websites with components, we have an opportunity to rethink how we're organizing the code within our site. Since a site is essentially made up of components, why not have components represent the file structure? You could bring all the necessary files related to a component together in one directory. That could include [HTML](/posts/wtf-is-html/), [CSS](/posts/wtf-is-css/), [JavaScript](/posts/wtf-is-javascript/), test files, mocked data, and documentation (and probably more/).
 
 {% post_image
-    src="/blog/200714/component-based-organization.jpg",
+    src="/posts/200714/component-based-organization.jpg",
     alt="Component-Based Organization" %}
 
 In using a button and timer (like in the example above), a component-based file tree would look more like this:
@@ -98,7 +98,7 @@ That said, this also assumes the application code itself is well-organized. If y
 
 ### The Downside
 
-One of the biggest drawback I've found with organizing a project by components is that there tends to be extra work when it comes to excluding files from the build output. We don't want test files or READMEs in the build. But if you solve it once and [build a convention](/blog/increase-developer-efficiency-by-establishing-conventions/), you can be consistent across projects and not worry about it once the process is in place.
+One of the biggest drawback I've found with organizing a project by components is that there tends to be extra work when it comes to excluding files from the build output. We don't want test files or READMEs in the build. But if you solve it once and [build a convention](/posts/increase-developer-efficiency-by-establishing-conventions/), you can be consistent across projects and not worry about it once the process is in place.
 
 ---
 

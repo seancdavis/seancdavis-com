@@ -2,7 +2,7 @@
 title: Node.js Memory Error on Mac Using M1
 date: 2021-02-08
 description: How to fix Node.js memory error on Mac OS X using Apple M1 chip.
-image: /blog/210217/210217--next-prev-path.png
+image: /posts/210217/210217--next-prev-path.png
 tags:
   - repost-grouparoo
   - node

@@ -3,7 +3,7 @@ title: Balance Belongs in Everything You Do
 tags:
   - inspiration
 description: "If you want to do something well in life, you must do it with balance."
-image: /blog/190115/photo-1539477192933-1a7dde04aa77.jpg
+image: /posts/190115/photo-1539477192933-1a7dde04aa77.jpg
 attribution:
   - name: Nathan Dumlao
     url: https://unsplash.com/@nate_dumlao
