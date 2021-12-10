@@ -10,6 +10,10 @@ https://seancdavis.me/*  https://www.seancdavis.com/:splat  302!
 # --- Content types move (Dec 2021) ---
 #
 
+# Feed pages without content
+
+/posts  /blog   302
+
 # Posts
 
 /blog/10-unspoken-developer-truths/   /posts/10-unspoken-developer-truths/    301
