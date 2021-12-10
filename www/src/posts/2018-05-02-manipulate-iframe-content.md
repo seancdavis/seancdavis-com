@@ -22,9 +22,11 @@ But, when you have access to the content within an iFrame, you can use the [`pos
 
 Here's the demo. The grey background is the iFrame and the input field is what would be on your site. Type a message in the input field on your site and see it appear within the iFrame.
 
-_Note: If you're inspecting the page or viewing its source, this may feel a little strange. I use iFrames to render demos in the site. So, the entire example is in an iFrame, and then there's another iFrame inside of that._
+<iframe src="/demos/manipulate-iframe-content/index.html" frameborder="0" height="248" class="shadow-md"></iframe>
 
-<iframe src="/blog/manipulate-iframe-content/demo/index.html" frameborder="0" height="248" class="shadow-md"></iframe>
+{% callout type="note" %}
+_If you're inspecting the page or viewing its source, this may feel a little strange. I use iFrames to render demos in the site. So, the entire example is in an iFrame, and then there's another iFrame inside of that._
+{% endcallout %}
 
 ## Your Site's Code
 
@@ -46,9 +48,9 @@ And the associated script that will post the message:
 
 ```js
 function sendToFrame(event) {
-  var iframe = document.getElementById("my-iframe")
+  var iframe = document.getElementById("my-iframe");
   if (iframe && iframe.contentWindow) {
-    iframe.contentWindow.postMessage(event.target.value, "*")
+    iframe.contentWindow.postMessage(event.target.value, "*");
   }
 }
 ```
@@ -75,11 +77,11 @@ window.addEventListener(
   "message",
   function (event) {
     if (event.origin === window.location.origin) {
-      $("#my-message").text(event.data)
+      $("#my-message").text(event.data);
     }
   },
   false
-)
+);
 ```
 
 Two important points to note here:

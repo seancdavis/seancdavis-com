@@ -18,7 +18,7 @@ The case we're going to create is that we need to adjust the theme of what is in
 
 We'll have two buttons, one to activate the light (default) theme and the other to activate the dark theme.
 
-<iframe src="/blog/change-css-iframe/demo" frameborder="0" height="300" class="shadow-md"></iframe>
+<iframe src="/demos/change-css-iframe" frameborder="0" height="300" class="shadow-md"></iframe>
 
 ## Your Site's Code
 
@@ -38,9 +38,9 @@ Our main focus in the script will be to toggle the theme within the iframe. To d
 ```js
 // Send message to the iFrame with the theme we want to activate.
 function activateTheme(theme) {
-  var iframe = document.getElementById("my-iframe")
+  var iframe = document.getElementById("my-iframe");
   if (iframe && iframe.contentWindow) {
-    iframe.contentWindow.postMessage(theme, "*")
+    iframe.contentWindow.postMessage(theme, "*");
   }
 }
 ```
@@ -52,35 +52,35 @@ You'll want an event listener to the button clicks and also activate the default
 ```js
 // Load the light them when the iFrame is ready.
 $("#my-iframe").on("load", function () {
-  activateTheme("light")
-})
+  activateTheme("light");
+});
 
 // Listen for clicks on buttons with a "data-theme" attribute, and activate that
 // theme on click.
 $("button[data-theme]").on("click", function (event) {
-  activateTheme($(this).data("theme"))
-})
+  activateTheme($(this).data("theme"));
+});
 ```
 
 Altogether, we have:
 
 ```js
-;(function () {
+(function () {
   $("#my-iframe").on("load", function () {
-    activateTheme("light")
-  })
+    activateTheme("light");
+  });
 
   $("button[data-theme]").on("click", function (event) {
-    activateTheme($(this).data("theme"))
-  })
+    activateTheme($(this).data("theme"));
+  });
 
   function activateTheme(theme) {
-    var iframe = document.getElementById("my-iframe")
+    var iframe = document.getElementById("my-iframe");
     if (iframe && iframe.contentWindow) {
-      iframe.contentWindow.postMessage(theme, "*")
+      iframe.contentWindow.postMessage(theme, "*");
     }
   }
-})()
+})();
 ```
 
 _Note: Using the anonymous function approach (`(function() {})()`) avoids placing `activateTheme` into the global namespace, which we do not want._
@@ -111,11 +111,11 @@ window.addEventListener(
   "message",
   function (event) {
     if (event.origin === window.location.origin) {
-      $("body").attr("class", "theme-" + event.data)
+      $("body").attr("class", "theme-" + event.data);
     }
   },
   false
-)
+);
 ```
 
 _Note: We checking that the origin of the message is on the same domain as this iframe so we don't accept messages from other domains._
