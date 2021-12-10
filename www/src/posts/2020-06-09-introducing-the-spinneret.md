@@ -21,7 +21,7 @@ A spinneret is the organ within spiders that produces the silk used in the creat
 
 ## Issues
 
-The first issue will be released tomorrow, covering May 2020. The easiest way to see an updated list of issues is to look on [the tag page for _The Spinneret_](/blog/tag/spinneret/).
+The first issue will be released tomorrow, covering May 2020. The easiest way to see an updated list of issues is to look on [the tag page for _The Spinneret_](/topics/spinneret/).
 
 ## Submitting Content
 

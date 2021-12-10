@@ -40,7 +40,7 @@ As I look to figure out how to publish more content (that is meaningful), I've s
 
 Plus a new Quick Tip: [Use a Code Spell Checker](/blog/use-code-spell-checker/)
 
-A couple new [WTF articles](/blog/tag/wtf/):
+A couple new [WTF articles](/topics/wtf/):
 
 - [WTF is PNPM?](/blog/wtf-is-pnpm/)
 - [WTF is a Monorepo?](/blog/wtf-is-monorepo/)

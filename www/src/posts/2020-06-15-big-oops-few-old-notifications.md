@@ -8,7 +8,7 @@ tags:
 image: /blog/default/default-pink-03.png
 ---
 
-In this very first [#BigOops](/blog/tag/big-oops/) story, I figured I'd tell one of my own stories. During the time I spent working on my podcast, [Squirrel Stories](https://www.squirrelstories.fm/), I found it best to embarrass myself before embarrassing others. While this isn't the same format or audience, it seems appropriate to do the same.
+In this very first [#BigOops](/topics/big-oops/) story, I figured I'd tell one of my own stories. During the time I spent working on my podcast, [Squirrel Stories](https://www.squirrelstories.fm/), I found it best to embarrass myself before embarrassing others. While this isn't the same format or audience, it seems appropriate to do the same.
 
 Here we go ...
 

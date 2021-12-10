@@ -23,4 +23,4 @@ But Netlify isn't just another player in the Jamstack ecosystem. In fact, Netlif
 
 That's what I love most about the Jamstack community and Netlify. As the founders, Netlify welcomes competition. And yet, at the same time, they are dedicated to maintaining the core benefits of what makes the Jamstack so great within their primary service offerings.
 
-As an introduction to Netlify, this only brushes the surface. I write quite a bit [about Netlify](/blog/tag/netlify/) and also [the Jamstack](/blog/tag/jamstack/). Check out some of those articles or [give Netlify a whirl](https://app.netlify.com/) to see for yourself what it's all about.
+As an introduction to Netlify, this only brushes the surface. I write quite a bit [about Netlify](/topics/netlify/) and also [the Jamstack](/topics/jamstack/). Check out some of those articles or [give Netlify a whirl](https://app.netlify.com/) to see for yourself what it's all about.
