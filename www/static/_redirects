@@ -477,5 +477,7 @@ https://seancdavis.me/*  https://www.seancdavis.com/:splat  302!
 
 # Demos
 
+/blog/change-css-iframe/demo             /demos/change-css-iframe                  301
 /blog/change-css-iframe/demo/*           /demos/change-css-iframe/:splat           301
+/blog/manipulate-iframe-content/demo     /demos/manipulate-iframe-content          301
 /blog/manipulate-iframe-content/demo/*   /demos/manipulate-iframe-content/:splat   301
