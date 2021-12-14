@@ -1,0 +1,38 @@
+---
+layout: blank
+title: Topics
+description: Content organized by topics, including JavaScript, Jamstack, and so much more.
+seo:
+  image: pages/seancdavis--meta--blank.png
+---
+
+<div class="container max-w-4xl">
+
+  {# --- Header --- #}
+
+  <div class="pt-24 mb-24">
+    <h1 class="text-4xl">{{ title }}</h1>
+    {% if description %}
+      <p class="text-2xl">
+        A list of topics mentioned in content throughout the site. Each
+        topic will take you to a landing page with relevant content.
+      </p>
+    {% endif %}
+  </div>
+
+  {# --- Contributors --- #}
+
+  <div class="mb-24 gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+    {% for topic in collections.topics %}
+      <div class="bg-white shadow-sm p-4 text-center">
+        <h2 class="mb-2 text-2xl">
+          <a href="{{ topic.url }}">{{ topic.data.title }}</a>
+        </h2>
+        {# <p> #}
+          {# {{ topic.data.description }} #}
+        {# </p> #}
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
