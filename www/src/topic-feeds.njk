@@ -3,7 +3,7 @@ pagination:
   data: collections.Topic
   size: 1
   alias: topic
-permalink: "topic/{{ topic.fileSlug }}/feed.xml"
+permalink: "topics/{{ topic.fileSlug }}/feed.xml"
 eleventyComputed:
   metadata:
     title: "{{ topic.data.title }} | {{ seo_defaults.title }}"
