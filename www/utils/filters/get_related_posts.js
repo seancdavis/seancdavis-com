@@ -77,7 +77,7 @@ exports.getPostsBySlugs = (posts, slugs) => {
  * @returns array of post collection items
  */
 exports.getReferencedPosts = (posts, content) => {
-  const linkPattern = /"\/blog\/([A-Za-z0-9\-\_]+)(\/?)(index.html)?"/g;
+  const linkPattern = /"\/posts\/([A-Za-z0-9\-\_]+)(\/?)(index.html)?"/g;
   const links = [...content.matchAll(linkPattern)];
   // link[0] would be the full matching URL, but we just want the basename
   // segment (slug).
