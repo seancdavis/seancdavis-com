@@ -1,7 +1,7 @@
 {
   "base_url": "https://www.seancdavis.com",
   "description": "Hi, I'm Sean. I'm a tinkerer and a teacher.",
-  "image": "/pages/seancdavis--meta--home.png",
+  "image": "/pages/seancdavis--meta--blank.png",
   "og": {
     "type": "website"
   },
