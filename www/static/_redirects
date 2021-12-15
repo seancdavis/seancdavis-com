@@ -71,8 +71,6 @@ https://seancdavis.me/*  https://www.seancdavis.com/:splat  302!
 /blog/bulk-resize-images-rake-imagemagick/    /posts/bulk-resize-images-rake-imagemagick/   301
 /blog/caml-query-builder-for-sharepoint-2010/   /posts/caml-query-builder-for-sharepoint-2010/    301
 /blog/categories-and-tags-explained/    /posts/categories-and-tags-explained/   301
-/blog/change-css-iframe/demo/   /posts/change-css-iframe/demo/    301
-/blog/change-css-iframe/demo/   /posts/change-css-iframe/demo/    301
 /blog/change-css-iframe/    /posts/change-css-iframe/   301
 /blog/change-primary-key-sequelize/   /posts/change-primary-key-sequelize/    301
 /blog/change-resolution-on-parallels-desktop-windows-7-for-retina-display/    /posts/change-resolution-on-parallels-desktop-windows-7-for-retina-display/   301
@@ -220,8 +218,6 @@ https://seancdavis.me/*  https://www.seancdavis.com/:splat  302!
 /blog/make-smarter-decisions-by-ignoring-sunk-costs/    /posts/make-smarter-decisions-by-ignoring-sunk-costs/   301
 /blog/managing-money-as-a-freelancer/   /posts/managing-money-as-a-freelancer/    301
 /blog/managing-multiple-distribution-channels/    /posts/managing-multiple-distribution-channels/   301
-/blog/manipulate-iframe-content/demo/   /posts/manipulate-iframe-content/demo/    301
-/blog/manipulate-iframe-content/demo/   /posts/manipulate-iframe-content/demo/    301
 /blog/manipulate-iframe-content/    /posts/manipulate-iframe-content/   301
 /blog/migrating-to-the-jamstack/    /posts/migrating-to-the-jamstack/   301
 /blog/missing-piece-of-the-jamstack/    /posts/missing-piece-of-the-jamstack/   301
@@ -477,7 +473,5 @@ https://seancdavis.me/*  https://www.seancdavis.com/:splat  302!
 
 # Demos
 
-/blog/change-css-iframe/demo             /demos/change-css-iframe                  301
 /blog/change-css-iframe/demo/*           /demos/change-css-iframe/:splat           301
-/blog/manipulate-iframe-content/demo     /demos/manipulate-iframe-content          301
 /blog/manipulate-iframe-content/demo/*   /demos/manipulate-iframe-content/:splat   301
