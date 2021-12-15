@@ -1,22 +1,25 @@
 const { Component } = require("../../../../utils/shortcodes/component");
 
 module.exports = ({ post, classes = "mb-6" }) => {
-  const tagData = post?.data?.hashtags || [];
+  const topicData = post?.data?.topics || [];
 
-  const tags = tagData
-    .map((tag) => {
-      const component = new Component("tag", { tag, classes: "mr-1" });
+  const topics = topicData
+    .map((topic) => {
+      const component = new Component("topic_badge", {
+        topic,
+        classes: "mr-1",
+      });
       return component.render();
     })
     .join("");
 
-  let author;
-  if (post.data.rich_author) {
-    const component = new Component("author", {
-      author: post.data.rich_author,
+  let contributor;
+  if (post.data.contributor) {
+    const component = new Component("contributor", {
+      contributor: post.data.contributor,
       classes: "mb-2",
     });
-    author = component.render();
+    contributor = component.render();
   }
 
   let image;
@@ -31,8 +34,8 @@ module.exports = ({ post, classes = "mb-6" }) => {
   return {
     ...post,
     classes,
-    author,
+    contributor,
     image,
-    tags,
+    topics,
   };
 };

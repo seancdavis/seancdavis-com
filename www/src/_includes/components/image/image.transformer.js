@@ -137,7 +137,7 @@ module.exports = ({
     return output;
   };
 
-  // Process the sizes arry to generate the sources array.
+  // Process the sizes array to generate the sources array.
   let sources = [...sizes].map(generateSource).filter((x) => !!x);
 
   return {

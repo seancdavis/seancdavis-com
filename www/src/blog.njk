@@ -1,0 +1,49 @@
+---
+layout: blank
+title: The Blog
+eleventyComputed:
+  title: "The Blog{% if pagination.pageNumber > 0 %} (Page {{ pagination.pageNumber + 1 }}){% endif %}"
+description: Thoughts, ideas, and tutorials to help developers build better websites, without forgetting to have a little fun along the way.
+permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
+pagination:
+  data: collections.blog
+  size: 10
+seo:
+  image: pages/seancdavis--meta--blog.png
+---
+
+
+<div class="container max-w-4xl">
+
+  {# --- Header --- #}
+
+  <div class="pt-24 mb-24">
+    <h1 class="text-4xl">{{ title }}</h1>
+    {% if description %}
+      <p class="text-2xl">{{ description }}</p>
+    {% endif %}
+  </div>
+
+  {# --- Posts --- #}
+
+  <div class="mb-24">
+    {% for post in pagination.items %}
+      {% post_card post=post %}
+    {% endfor %}
+
+    {% if pagination.href.next or pagination.href.previous %}
+      <div class="flex justify-between max-w-xl">
+        <span class="block">
+          {% if pagination.href.previous %}
+            <a href="{{ pagination.href.previous }}">&lt; Newer</a>
+          {% endif %}
+        </span>
+        <span class="block">
+          {% if pagination.href.next %}
+            <a href="{{ pagination.href.next }}">Older &gt;</a>
+          {% endif %}
+        </span>
+      </div>
+    {% endif %}
+  </div>
+</div>

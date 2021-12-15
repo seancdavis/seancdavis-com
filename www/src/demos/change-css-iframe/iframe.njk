@@ -1,0 +1,43 @@
+---
+permalink: "/demos/change-css-iframe/iframe.html"
+---
+
+{% include "layout/head-blank.njk" %}
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+
+<p>
+  The current theme is <strong id="theme-name"></strong>.
+</p>
+
+<p>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus deserunt
+  similique obcaecati porro numquam veniam!
+</p>
+
+<script>
+  window.addEventListener('message', function(event) {
+    if (event.origin === window.location.origin) {
+      $('#theme-name').text(event.data);
+      $('body').attr('class', 'theme-' + event.data);
+    }
+  }, false);
+</script>
+
+<style>
+  body {
+    background-color: #ededed;
+    padding: 1rem;
+  }
+
+  body.theme-dark {
+    background-color: #444;
+    color: #fff;
+  }
+</style>
+
+
+{% include "layout/foot-blank.njk" %}

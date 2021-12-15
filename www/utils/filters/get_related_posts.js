@@ -17,7 +17,8 @@ const { shuffle } = require("../_helpers/shuffle");
  * utils/collections/posts.js).
  * @param {array} relatedPosts Array of strings for explicitly specifying
  * related posts using the fileSlug property.
- * @param {array} tags Array of tags coming from the current post.
+ * @param {array} tags Array of tag strings (not topics) coming from the current
+ * post.
  * @param {string} currentSlug fileSlug of the current post.
  * @param {string} content HTML content of the current post.
  *
@@ -76,7 +77,7 @@ exports.getPostsBySlugs = (posts, slugs) => {
  * @returns array of post collection items
  */
 exports.getReferencedPosts = (posts, content) => {
-  const linkPattern = /"\/blog\/([A-Za-z0-9\-\_]+)(\/?)(index.html)?"/g;
+  const linkPattern = /"\/posts\/([A-Za-z0-9\-\_]+)(\/?)(index.html)?"/g;
   const links = [...content.matchAll(linkPattern)];
   // link[0] would be the full matching URL, but we just want the basename
   // segment (slug).

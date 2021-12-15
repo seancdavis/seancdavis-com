@@ -15,18 +15,18 @@
 
         <div class="p-8">
           <div class="text-center">
-            {% if tags.length > 0 %}
+            {% if topics.length > 0 %}
               <div class="mb-4 text-sm">
-                {% for tag in hashtags %}
-                  {% tag tag=tag, classes="mr-1" %}
+                {% for topic in topics %}
+                  {% topic_badge topic=topic, classes="mr-1" %}
                 {% endfor %}
               </div>
             {% endif %}
             <h1 class="text-4xl leading-snug mb-4 max-w-lg mx-auto">
               {{ title }}
             </h1>
-            {% if rich_author %}
-              {% author author=rich_author, classes="mb-4 justify-center" %}
+            {% if contributor %}
+              {% contributor contributor=contributor, classes="mb-4 justify-center" %}
             {% endif %}
             {% if description %}
               <p class="text-xl mb-0 text-gray-700 max-w-2xl mx-auto">

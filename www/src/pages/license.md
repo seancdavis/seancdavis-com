@@ -5,7 +5,7 @@ path: /license
 subheading: This license governs all content and code found within this site.
 seo:
   title: A License (Sort of)
-  image: meta/seancdavis--meta--license.png
+  image: pages/seancdavis--meta--license.png
   description: This license governs all content and code found within this site.
 ---
 
@@ -13,7 +13,7 @@ This site exists to inspire and help those working with the web. I don't want so
 
 I want you to take what you find on this site and use it in your own projects. Have fun with it, make some money, and share the love! Just don't straight up take credit for something you didn't create.
 
-You can find an updated version of the license [in the code repository](https://github.com/seancdavis/seancdavis-com/blob/main/LICENSE). And [here's some background on why I felt the need to create a new license](/blog/use-with-love-public-license/).
+You can find an updated version of the license [in the code repository](https://github.com/seancdavis/seancdavis-com/blob/main/LICENSE). And [here's some background on why I felt the need to create a new license](/posts/use-with-love-public-license/).
 
 The license text is as follows:
 
