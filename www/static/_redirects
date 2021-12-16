@@ -459,7 +459,6 @@ https://seancdavis.me/*  https://www.seancdavis.com/:splat  302!
 /blog/tag/testing/*           /topics/testing/:splat            301
 /blog/tag/ubuntu/*            /topics/ubuntu/:splat             301
 /blog/tag/vercel/*            /topics/vercel/:splat             301
-/blog/tag/video-tutorial/*    /topics/video-tutorial/:splat     301
 /blog/tag/vscode/*            /topics/vscode/:splat             301
 /blog/tag/webpack/*           /topics/webpack/:splat            301
 /blog/tag/wordpress/*         /topics/wordpress/:splat          301
