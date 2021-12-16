@@ -28,10 +28,7 @@ pagination:
 
   <div class="mb-24">
     {% for video in pagination.items %}
-      {# {% post_card post=post %} #}
-      <a href="{{ video.url }}">{{ video.data.title }}</a>
-      <br>
-
+      {% video_card video=video %}
     {% endfor %}
 
     {% if pagination.href.next or pagination.href.previous %}
