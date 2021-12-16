@@ -6,7 +6,6 @@ tags:
   - jamstack
   - middleman
   - ruby
-  - video-tutorial
 image: /posts/200730/earworms-with-data.png
 ---
 
