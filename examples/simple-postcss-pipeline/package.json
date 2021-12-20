@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "Sean C Davis",
   "dependencies": {
-    "cssnano": "^5.0.12",
+    "cssnano": "^5.0.14",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.0.2",
     "postcss-cssnext": "^3.1.0",
