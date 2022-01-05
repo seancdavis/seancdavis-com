@@ -32,7 +32,9 @@ const webpackConfig = {
  * @param {object} eleventyConfig Eleventy's configuration object
  */
 exports.default = (eleventyConfig) => {
-  let skipJsProcessing = false;
+  // Setting env var SKIP_JS_PROCESSING to "true" will skip asset building,
+  // which can be helpful when debugging another part of the build process.
+  let skipJsProcessing = process.env.SKIP_JS_PROCESSING === "true" || false;
 
   /**
    * When running the dev server, if no JS files were changed, tell the build to

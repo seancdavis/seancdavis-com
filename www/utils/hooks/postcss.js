@@ -24,7 +24,9 @@ const processOptions = {
  * @param {object} eleventyConfig Eleventy's configuration object
  */
 exports.default = (eleventyConfig) => {
-  let skipCssProcessing = false;
+  // Setting env var SKIP_CSS_PROCESSING to "true" will skip asset building,
+  // which can be helpful when debugging another part of the build process.
+  let skipCssProcessing = process.env.SKIP_CSS_PROCESSING === "true" || false;
 
   // Create the output directory if it doesn't exist. PostCSS does not do this
   // by default, like Webpack.
