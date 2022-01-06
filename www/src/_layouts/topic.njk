@@ -18,8 +18,8 @@ permalink: "topics/{{ page.fileSlug }}/{% if pagination.pageNumber > 0 %}page-{{
   {# --- Posts --- #}
 
   <div class="mb-24">
-    {% for post in posts %}
-      {% post_card post=post %}
+    {% for item in items %}
+      {% content_card item=item %}
     {% endfor %}
 
     {% if pagination.href.next or pagination.href.previous %}
