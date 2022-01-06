@@ -2,6 +2,18 @@ const { Component } = require("../../../../utils/shortcodes/component");
 const { readSvg } = require("../../../../utils/shortcodes/svg");
 
 module.exports = ({ video, classes = "mb-6" }) => {
+  const topicData = video?.data?.topics || [];
+
+  const topics = topicData
+    .map((topic) => {
+      const component = new Component("topic_badge", {
+        topic,
+        classes: "mr-1",
+      });
+      return component.render();
+    })
+    .join("");
+
   const playIcon = readSvg("play");
 
   let image;
@@ -18,5 +30,6 @@ module.exports = ({ video, classes = "mb-6" }) => {
     classes,
     image,
     playIcon,
+    topics,
   };
 };
