@@ -22,10 +22,10 @@ First, we (soft) launched [Stackbit v2 public beta](https://www.stackbit.com/blo
 
 And second, I've put the figurative pencil down to focus on website improvements. These changes are in preparation for the next generation of seancdavis.com, and I'm very excited for what's to come. Here are some of the changes introduced since the last newsletter:
 
-- [A new about page](https://www.seancdavis.com/about/) that looks eerily similar to the home page. That's intentional. By the time the next newsletter comes around, the home page is going to look very different.
-- [A new post layout](https://www.seancdavis.com/posts/8-best-animation-software-2021/) that includes easier sharing, consistent options to connect with me, and smart related articles.
-- [Search](https://www.seancdavis.com/search/)! I've been itching to get this in there since I launch the site more than a year ago.
-- Several other small improvements, including [upgrading 11ty to 1.0](https://github.com/seancdavis/seancdavis-com/pull/319), [removing Lodash](https://github.com/seancdavis/seancdavis-com/pull/318), [adding feeds for each topic](https://github.com/seancdavis/seancdavis-com/pull/331), [new routes and names for content types](https://github.com/seancdavis/seancdavis-com/pull/339), and reposts from places I've been employed — [Stackbit](https://www.seancdavis.com/topics/repost-stackbit/), [Grouparoo](https://www.seancdavis.com/topics/repost-grouparoo/), and [Ample](https://www.seancdavis.com/topics/repost-ample/).
+- [A new about page](/about/) that looks eerily similar to the home page. That's intentional. By the time the next newsletter comes around, the home page is going to look very different.
+- [A new post layout](/posts/8-best-animation-software-2021/) that includes easier sharing, consistent options to connect with me, and smart related articles.
+- [Search](/search/)! I've been itching to get this in there since I launch the site more than a year ago.
+- Several other small improvements, including [upgrading 11ty to 1.0](https://github.com/seancdavis/seancdavis-com/pull/319), [removing Lodash](https://github.com/seancdavis/seancdavis-com/pull/318), [adding feeds for each topic](https://github.com/seancdavis/seancdavis-com/pull/331), [new routes and names for content types](https://github.com/seancdavis/seancdavis-com/pull/339), and reposts from places I've been employed — [Stackbit](/topics/repost-stackbit/), [Grouparoo](/topics/repost-grouparoo/), and [Ample](/topics/repost-ample/).
 
 There's a long way to go, but this is a great start in getting there.
 

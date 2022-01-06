@@ -4,7 +4,6 @@ description: "Learn how to generate static JSON pages from markdown files and ex
 tags:
   - gatsby
   - jamstack
-  - video-tutorial
 image: /posts/200827/meta--gatsby-dynamic-json-pages.jpg
 ---
 

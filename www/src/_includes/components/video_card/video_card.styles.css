@@ -1,0 +1,7 @@
+.video-card--image-wrapper img {
+  @apply h-full
+    object-center
+    object-cover;
+
+  max-height: 18.875rem;
+}

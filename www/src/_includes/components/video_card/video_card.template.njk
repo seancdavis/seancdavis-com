@@ -1,0 +1,32 @@
+<div class="max-w-xl bg-white shadow-sm {{ classes }}">
+  {% if image %}
+    <a href="{{ url }}" class="relative block">
+      <div class="video-card--image-wrapper">
+        {{ image | safe }}
+      </div>
+      <div class="absolute h-full w-full top-0 left-0 flex items-center justify-center">
+        <div class="bg-white rounded-full h-24 w-24 p-5 text-gray-400 border-gray-200 border-4 opacity-95">
+          {{ playIcon | safe }}
+        </div>
+      </div>
+    </a>
+  {% endif %}
+  <div class="p-4">
+    {% if topics.length > 0 %}
+      <div class="mb-4 text-sm">
+        {{ topics | safe }}
+      </div>
+    {% endif %}
+    <h2 class="text-2xl mb-1">
+      <a href="{{ url }}" class="link-transition">
+        {{ data.title }}
+      </a>
+    </h2>
+    {% if data.description %}
+      <p class="mb-6">{{ data.description }}</p>
+    {% endif %}
+    <span class="block text-gray-blue font-sans text-sm">
+      {{ date.toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" }) }}
+    </span>
+  </div>
+</div>

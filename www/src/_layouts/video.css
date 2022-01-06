@@ -1,0 +1,77 @@
+.layout--video--content {
+  *:first-child {
+    @apply mt-0;
+  }
+
+  *:last-child {
+    @apply mb-0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mb-1;
+
+    code {
+      font-size: 80%;
+    }
+
+    + .component--post-image,
+    + .component--video-tutorial {
+      @apply mt-0;
+    }
+  }
+
+  h2 {
+    @apply mt-10
+      text-2xl;
+  }
+
+  h3 {
+    @apply mt-6
+      text-xl;
+  }
+
+  h4 {
+    @apply mt-4
+      text-lg;
+  }
+
+  h5 {
+    @apply mt-2;
+  }
+
+  a {
+    border-bottom: 1px dotted var(--color-green);
+
+    &:hover {
+      @apply border-solid;
+    }
+  }
+
+  /* --- Lists --- */
+
+  ul,
+  ol {
+    @apply mb-6;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  li {
+    @apply mb-2;
+
+    ul {
+      @apply mt-2;
+
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+  }
+}

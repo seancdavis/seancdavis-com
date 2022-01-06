@@ -1,15 +1,15 @@
 ---
 layout: blank
-title: The Blog
+title: Videos
 eleventyComputed:
-  title: "The Blog{% if pagination.pageNumber > 0 %} (Page {{ pagination.pageNumber + 1 }}){% endif %}"
-description: Thoughts, ideas, and tutorials to help developers build better websites, without forgetting to have a little fun along the way.
-permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
+  title: "Videos{% if pagination.pageNumber > 0 %} (Page {{ pagination.pageNumber + 1 }}){% endif %}"
+description: Quick tips and guided tutorials to help you on your coding journey, without forgetting to have some fun along the way.
+permalink: "videos/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
 pagination:
-  data: collections.blog
+  data: collections.videos
   size: 10
-seo:
-  image: pages/seancdavis--meta--blog.png
+# seo:
+#   image: pages/seancdavis--meta--blog.png
 ---
 
 
@@ -27,8 +27,8 @@ seo:
   {# --- Posts --- #}
 
   <div class="mb-24">
-    {% for item in pagination.items %}
-      {% content_card item=item %}
+    {% for video in pagination.items %}
+      {% video_card video=video %}
     {% endfor %}
 
     {% if pagination.href.next or pagination.href.previous %}

@@ -10,7 +10,7 @@ eleventyComputed:
     subtitle: "Posts tagged with {{ topic.data.title }} on Sean C Davis's blog."
     url: "{{ seo_defaults.base_url }}/topics/{{ topic.fileSlug }}"
     feedUrl: "{{ seo_defaults.base_url }}/topics/{{ topic.fileSlug }}/feed.xml"
-    updated: "{{ topic.data.posts | rssLastUpdatedDate }}"
+    updated: "{{ topic.data.items | rssLastUpdatedDate }}"
     author:
       name: Sean C Davis
       email: hello@seancdavis.com
@@ -27,7 +27,7 @@ eleventyComputed:
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
   </author>
-  {%- for post in topic.data.posts %}
+  {%- for post in topic.data.items %}
   {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(seo_defaults.base_url + "/") }}{% endset %}
   {%- if post.data.contributor.data.title %}
     {%- set authorName = post.data.contributor.data.title %}

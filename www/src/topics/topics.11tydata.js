@@ -3,7 +3,7 @@ module.exports = {
   tags: ["Topic"],
   pagination: {
     size: 10,
-    alias: "posts",
+    alias: "items",
     before: (data) => {
       return data.sort((a, b) => b.date - a.date);
     },
