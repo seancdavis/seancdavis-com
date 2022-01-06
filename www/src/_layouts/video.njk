@@ -1,1 +1,24 @@
-Hello, I am the video layout.
+{% include "layout/head.njk" %}
+{% include "layout/header.njk" %}
+
+{# <div class="py-24"> #}
+  {# <div class="container max-w-4xl"> #}
+    {# <h1 class="text-4xl">{{title}}</h1> #}
+    {# {% if subheading %} #}
+      {# <p class="text-2xl">{{subheading}}</p> #}
+    {# {% endif %} #}
+  {# </div> #}
+{# </div> #}
+
+<div class="py-24 mb-0">
+  <div class="container max-w-3xl mb-8">
+    {% youtube_embed id=youtube_id, title=title %}
+  </div>
+  <div class="container max-w-xl text-lg">
+    <h1 class="text-2xl mb-3">{{ title }}</h1>
+    {{ content | safe }}
+  </div>
+</div>
+
+{% include "layout/footer.njk" %}
+{% include "layout/foot.njk" %}
