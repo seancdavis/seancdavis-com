@@ -1,4 +1,6 @@
 const { getPostsCollection } = require("./posts");
+const { getVideosCollection } = require("./videos");
+
 /**
  * Extends Eleventy's configuration.
  *
@@ -11,6 +13,11 @@ exports.default = (eleventyConfig) => {
    */
   eleventyConfig.addCollection("blog", (collectionApi) => {
     let posts = getPostsCollection(collectionApi);
-    return posts;
+    let videos = getVideosCollection(collectionApi);
+
+    // Concatenate all collections and sort in reverse chronological order.
+    const blog = [...posts, ...videos].sort((a, b) => b.date - a.date);
+
+    return blog;
   });
 };

@@ -27,8 +27,8 @@ seo:
   {# --- Posts --- #}
 
   <div class="mb-24">
-    {% for post in pagination.items %}
-      {% post_card post=post %}
+    {% for item in pagination.items %}
+      {% content_card item=item %}
     {% endfor %}
 
     {% if pagination.href.next or pagination.href.previous %}
