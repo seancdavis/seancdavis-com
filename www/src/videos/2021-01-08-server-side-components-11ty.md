@@ -14,8 +14,8 @@ Link to the code in [the written tutorial](/posts/eleventy-server-components).
 
 ## Timestamps
 
-0:00 Introduction
-1:45 Project Setup
-4:08 Method #1: Template Includes
-9:24 Method #2: Custom Shortcodes
-21:10 Method #3: Component Libraries
+- 0:00 Introduction
+- 1:45 Project Setup
+- 4:08 Method #1: Template Includes
+- 9:24 Method #2: Custom Shortcodes
+- 21:10 Method #3: Component Libraries

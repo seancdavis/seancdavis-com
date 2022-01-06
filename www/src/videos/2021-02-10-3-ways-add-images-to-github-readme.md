@@ -11,7 +11,7 @@ Images can be a super useful way to supplement your documentation in markdown fi
 
 ## Timestamps
 
-1:19 - Method #1: Local Image
-3:04 - A note on relative images
-4:22 - Method #2: Remote Image
-5:38 - Method #3: GitHub Issue
+- 1:19 - Method #1: Local Image
+- 3:04 - A note on relative images
+- 4:22 - Method #2: Remote Image
+- 5:38 - Method #3: GitHub Issue

@@ -13,4 +13,5 @@ tags:
 Learn to build a static API using the Middleman static site generator.
 
 [Read the tutorial](/posts/building-static-api-middleman)
+
 [View Code](https://github.com/seancdavis/middleman-static-api)
