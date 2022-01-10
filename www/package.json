@@ -22,7 +22,7 @@
     "cssnano": "^5.0.14",
     "glob": "^7.1.7",
     "html-minifier": "^4.0.0",
-    "http-server": "^13.0.0",
+    "http-server": "^14.1.0",
     "instantsearch.css": "^7.4.5",
     "instantsearch.js": "^4.33.1",
     "jest": "^27.4.5",
