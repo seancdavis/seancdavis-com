@@ -1,6 +1,6 @@
 [
   {
-    "heading": "Read & Learn",
+    "heading": "Read, Write, Learn",
     "links": [
       {
         "label": "Blog",
@@ -9,6 +9,10 @@
       {
         "label": "About",
         "url": "/about"
+      },
+      {
+        "label": "Guest Writing",
+        "url": "/guest-writing"
       }
     ]
   },
