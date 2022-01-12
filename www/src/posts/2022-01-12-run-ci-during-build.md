@@ -7,7 +7,7 @@ tags:
   - testing
 ---
 
-When your website's front end is decoupled from its back end or data source(s), updates to the site are often made by _rebuilding_ the website, or _compiling_ the front end code. This is a common practice of site generators like [Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/), or [Next.js](https://nextjs.org/), and was popularized by the emergence of [Jamstack](/blog/wtf-is-jamstack/).
+When your website's front end is decoupled from its back end or data source(s), updates to the site are often made by _rebuilding_ the website, or _compiling_ the front end code. This is a common practice of site generators like [Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/), or [Next.js](https://nextjs.org/), and was popularized by the emergence of [Jamstack](/posts/wtf-is-jamstack/).
 
 ## Customizing the Build Process
 
@@ -19,7 +19,7 @@ Typically a site generator has built-in commands to handle the build process. Bu
 
 You can do pretty much anything you want during the build process. This is a common place to generate a sitemap, check for bad links, and compress HTML, alongside many other options.
 
-One such option is to run CI, or [continuous integration](/blog/wtf-is-continuous-integration/), which means to programmatically and automatically run your test suite.
+One such option is to run CI, or [continuous integration](/posts/wtf-is-continuous-integration/), which means to programmatically and automatically run your test suite.
 
 This is often done using a CI-specific service, like [CircleCI](https://circleci.com/), [Travis CI](https://travis-ci.org/), or [GitHub Actions](https://github.com/features/actions), among many more. Let's explore why you might or might not want to run your test suite during your build process by exploring four potential effects from that decision.
 
