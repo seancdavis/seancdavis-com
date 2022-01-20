@@ -121,7 +121,9 @@ footer:
 <div>
   Guest goes here ...
 
-  <p>Don't have a collection for this yet ...</p>
+  {% for post in collections.guest_posts | limit(3) %}
+    {% post_card post=post %}
+  {% endfor %}
 </div>
 
 {# --- Contribute --- #}
@@ -157,5 +159,7 @@ footer:
 <div>
   Reposts goes here ...
 
-  <p>Don't have a collection for this yet ...</p>
+  {% for post in collections.reposts | limit(3) %}
+    {% post_card post=post %}
+  {% endfor %}
 </div>
