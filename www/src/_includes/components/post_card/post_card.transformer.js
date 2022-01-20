@@ -1,6 +1,12 @@
 const { Component } = require("../../../../utils/shortcodes/component");
 
-module.exports = ({ post, classes = "mb-6" }) => {
+module.exports = ({
+  post,
+  classes = "mb-6",
+  maxWidth = "xl",
+  flat = false,
+  compact = false,
+}) => {
   const topicData = post?.data?.topics || [];
 
   const topics = topicData
@@ -23,7 +29,7 @@ module.exports = ({ post, classes = "mb-6" }) => {
   }
 
   let image;
-  if (post.data.image) {
+  if (post.data.image && !compact) {
     const component = new Component("image", {
       path: post.data.image,
       sm: "576px",
@@ -31,9 +37,18 @@ module.exports = ({ post, classes = "mb-6" }) => {
     image = component.render();
   }
 
+  // Add classes to apply to wrapping element.
+  classes += " component--post-card bg-white";
+  if (!flat) classes += " shadow-sm";
+  if (maxWidth) classes += ` max-w-${maxWidth}`;
+
+  // Add classes to the content (not image) wrapper.
+  let contentClasses = flat ? "py-4" : "p-4";
+
   return {
     ...post,
     classes,
+    contentClasses,
     contributor,
     image,
     topics,

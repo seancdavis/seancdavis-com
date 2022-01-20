@@ -1,10 +1,10 @@
-<div class="component--post-card max-w-xl bg-white shadow-sm {{ classes }}">
+<div class="{{ classes }}">
   {% if image %}
     <div class="post-card--image-wrapper">
       {{ image | safe }}
     </div>
   {% endif %}
-  <div class="p-4">
+  <div class="{{ contentClasses }}">
     {% if topics.length > 0 %}
       <div class="mb-4 text-sm">
         {{ topics | safe }}

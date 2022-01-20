@@ -16,22 +16,60 @@ footer:
 
 {# --- Recent --- #}
 
-<div>
-  Recent goes here ...
+<div class="container py-12">
+  <div class="flex justify-between mb-8">
+    <div>
+      <h2 class="text-3xl mb-1">Recent Posts</h2>
+      <p class="italic">Veniam ullamco in deserunt pariatur fugiat.</p>
+    </div>
+    <div>
+      <a href="/posts" class="flex items-center">
+        <span class="inline-block mr-1">All posts</span>
+        <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
+      </a>
+    </div>
+  </div>
 
-  {% for post in collections.posts | limit(3) %}
-    {% post_card post=post %}
-  {% endfor %}
+  <div class="grid grid-cols-2 gap-8">
+    <div>
+      {% post_card post=collections.posts[0], flat=true, maxWidth=false %}
+    </div>
+    <div>
+      {% for post in collections.posts | limit(2, 1) %}
+        {% post_card post=post, flat=true, maxWidth=false, compact=true %}
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 {# --- JavaScript --- #}
 
-<div>
-  JavaScript goes here ...
+<div class="container py-12">
+  <div class="flex justify-between mb-8">
+    <div>
+      <h2 class="text-3xl mb-1">JavaScript</h2>
+      <p class="italic">Veniam ullamco in deserunt pariatur fugiat.</p>
+    </div>
+    <div>
+      <a href="/topics/javascript" class="flex items-center">
+        <span class="inline-block mr-1">All JavaScript</span>
+        <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
+      </a>
+    </div>
+  </div>
 
-  {% for post in collections.javascript | sort_by('date', true) | limit(3) %}
-    {% post_card post=post %}
-  {% endfor %}
+  <div class="grid grid-cols-2 gap-8">
+    <div>
+      {% for post in collections.javascript | sort_by('date', true) | limit(1) %}
+        {% post_card post=post, flat=true, maxWidth=false %}
+      {% endfor %}
+    </div>
+    <div>
+      {% for post in collections.javascript | sort_by('date', true) | limit(2, 1) %}
+        {% post_card post=post, flat=true, maxWidth=false, compact=true %}
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 {# --- Spinneret CTA --- #}
