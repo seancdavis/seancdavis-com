@@ -4,7 +4,7 @@
  * @param {object} eleventyConfig Eleventy's configuration object
  */
 exports.default = (eleventyConfig) => {
-  eleventyConfig.addFilter("limit", (input, count) => {
-    return input.slice(0, count);
+  eleventyConfig.addFilter("limit", (input, count, start = 0) => {
+    return input.slice(start, count + start);
   });
 };
