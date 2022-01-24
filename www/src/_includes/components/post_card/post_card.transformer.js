@@ -7,7 +7,10 @@ module.exports = ({
   flat = false,
   compact = false,
 }) => {
-  const topicData = post?.data?.topics || [];
+  let topicData = post?.data?.topics ?? [];
+  // Compact cards behave as if there are no topics, which prevents the
+  // unnecessary topic_badge rendering below.
+  if (compact) topicData = [];
 
   const topics = topicData
     .map((topic) => {
@@ -23,7 +26,6 @@ module.exports = ({
   if (post.data.contributor) {
     const component = new Component("contributor", {
       contributor: post.data.contributor,
-      classes: "mb-2",
     });
     contributor = component.render();
   }
@@ -43,7 +45,11 @@ module.exports = ({
   if (maxWidth) classes += ` max-w-${maxWidth}`;
 
   // Add classes to the content (not image) wrapper.
-  let contentClasses = flat ? "py-4" : "p-4";
+  let contentClasses = "p-4";
+  // No padding on the content for compact cards.
+  if (compact) contentClasses = null;
+  // Flat, expanded cards get vertical padding.
+  if (flat && !compact) contentClasses = "py-4";
 
   return {
     ...post,

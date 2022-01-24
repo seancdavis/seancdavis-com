@@ -18,11 +18,14 @@
     {% if data.description %}
       <p class="mb-6 post-card--description">{{ data.description }}</p>
     {% endif %}
-    {% if contributor %}
-      {{ contributor | safe }}
-    {% endif %}
-    <span class="block text-gray-blue font-sans text-sm">
-      {{ date.toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" }) }}
-    </span>
+    <div class="flex items-center">
+      {% if contributor %}
+        {{ contributor | safe }}
+        <div class="mx-2 text-gray-200">&bull;</div>
+      {% endif %}
+      <span class="block text-gray-blue text-sm">
+        {{ date.toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" }) }}
+      </span>
+    </div>
   </div>
 </div>
