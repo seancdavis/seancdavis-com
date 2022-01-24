@@ -15,5 +15,8 @@
   },
   "[nunjucks]": {
     "editor.formatOnSave": false
-  }
+  },
+  "cSpell.words": [
+    "slinkity"
+  ]
 }

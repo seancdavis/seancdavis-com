@@ -39,15 +39,16 @@
     "postcss-custom-properties": "^12.0.1",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.5",
+    "slinkity": "^0.5.0",
     "slugify": "^1.6.3",
     "tailwindcss": "^2.2.19",
     "webpack": "^5.60.0",
     "webpack-cli": "^4.9.1"
   },
   "scripts": {
-    "build": "eleventy --quiet",
+    "build": "slinkity --quiet",
     "clean": "rm -rf dist && rm -f src/assets/css/styles.css && rm -f src/assets/js/bundle.js",
-    "dev": "eleventy --serve --port 8000",
+    "dev": "slinkity --serve --incremental --port 8000",
     "pretest:visual": "DISABLE_PARTICLES=true DISABLE_TYPEWRITER=true npm run build",
     "test": "ELEVENTY_ENV=test jest",
     "test:visual": "JEST_CONFIG=visual npm run test"

@@ -14,6 +14,13 @@ footer:
   Featured stuff goes here
 </div>
 
+<div>
+  HELLO THERE
+
+  {% react "slinkity/MyFirstComponent", render="static" %}
+</div>
+
+
 {# --- Recent --- #}
 
 <div class="container py-12">
@@ -76,6 +83,8 @@ footer:
 
 {# --- Spinneret CTA --- #}
 
+{# NOTE: This is throwing errors with Slinkity. Will probably want to make it a component. #}
+
 <div class="layout--home--newsletter text-white py-12 shadow-md rounded-sm bg-green-light relative z-10">
   <div class="container max-w-2xl text-center">
     <h2 class="text-3xl uppercase mb-2">The Spinneret</h2>
@@ -90,7 +99,7 @@ footer:
       onsubmit="window.open('https://buttondown.email/seancdavis29', 'popupwindow')"
       class="embeddable-buttondown-form mb-4"
     >
-      <input type="hidden" value="1" name="embed"></input>
+      <input type="hidden" value="1" name="embed">
 
       <span class="sm:flex justify-center">
         <input
@@ -133,7 +142,7 @@ footer:
             transition-all
             uppercase
             hover:bg-gray-800"
-          ></input>
+          >
       </span>
     </form>
 
