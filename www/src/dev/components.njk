@@ -1,0 +1,74 @@
+---
+title: Components Playground
+---
+
+<div class="container py-12">
+
+  {# --- Expanded Post Card --- #}
+
+  <div class="mb-12">
+    <h2 class="text-2xl mb-1">Expanded Post Card (Default)</h2>
+    <p>The default card is expanded (contains everything).</p>
+
+    <div class="max-w-lg mx-auto">
+      {# Using guest posts here so that we can show the contributor. #}
+      {% for post in collections.guest_posts | limit(1) %}
+        {% post_card post=post %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {# --- Horizontal Post Card --- #}
+
+  <div class="mb-12">
+    <h2 class="text-2xl mb-1">Horizontal Post Card</h2>
+    <p>...</p>
+
+    <div class="max-w-lg mx-auto">
+      {# Using guest posts here so that we can show the contributor. #}
+      {% for post in collections.guest_posts | limit(1) %}
+        {% post_card post=post, layout="horizontal" %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {# --- Flat Post Card --- #}
+
+  <div class="mb-12">
+    <h2 class="text-2xl mb-1">Flat Post Card</h2>
+    <p>Flat cards are typically used on a white background. They remove the shadow and background colors.</p>
+
+    <div class="max-w-lg mx-auto">
+      {% for post in collections.posts | limit(1) %}
+        {% post_card post=post, layout="flat" %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {# --- Compact Post Card --- #}
+
+  <div class="mb-12">
+    <h2 class="text-2xl mb-1">Compact Post Card</h2>
+    <p>...</p>
+
+    <div class="max-w-lg mx-auto">
+      {% for post in collections.posts | limit(1) %}
+        {% post_card post=post, layout="compact" %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {# --- Dynamic Post Card Grid --- #}
+
+  <div class="mb-12">
+    <h2 class="text-2xl mb-1">Dynamic Post Card Grid</h2>
+    <p>This uses classes to adjust the layout of the card based on the screen size.</p>
+
+    <div class="grid gap-4 grid-cols-1 lg:grid-cols-3">
+      {% for post in collections.posts | limit(3) %}
+        {% post_card post=post, classes="mb-0 md:layout-horizontal lg:layout-expanded" %}
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
