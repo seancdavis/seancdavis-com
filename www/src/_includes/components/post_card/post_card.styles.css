@@ -16,7 +16,7 @@
 }
 
 @screen md {
-  .component--post-card.md\:layout-vertical {
+  .component--post-card.md\:layout-expanded {
     @apply block;
   }
 
@@ -28,7 +28,7 @@
 }
 
 @screen lg {
-  .component--post-card.lg\:layout-vertical {
+  .component--post-card.lg\:layout-expanded {
     @apply block;
   }
 

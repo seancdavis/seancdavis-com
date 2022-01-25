@@ -1,16 +1,10 @@
 const { Component } = require("../../../../utils/shortcodes/component");
 
-module.exports = ({
-  post,
-  classes = "mb-6",
-  maxWidth = "xl",
-  flat = false,
-  compact = false,
-}) => {
+module.exports = ({ post, classes = "mb-6", layout = "expanded" }) => {
   let topicData = post?.data?.topics ?? [];
   // Compact cards behave as if there are no topics, which prevents the
   // unnecessary topic_badge rendering below.
-  if (compact) topicData = [];
+  if (layout === "compact") topicData = [];
 
   const topics = topicData
     .map((topic) => {
@@ -31,7 +25,7 @@ module.exports = ({
   }
 
   let image;
-  if (post.data.image && !compact) {
+  if (post.data.image && layout !== "compact") {
     const component = new Component("image", {
       path: post.data.image,
       sm: "576px",
@@ -41,15 +35,14 @@ module.exports = ({
 
   // Add classes to apply to wrapping element.
   classes += " component--post-card bg-white";
-  if (!flat) classes += " shadow-sm";
-  if (maxWidth) classes += ` max-w-${maxWidth}`;
+  if (layout === "expanded") classes += " shadow-sm";
 
   // Add classes to the content (not image) wrapper.
   let contentClasses = "p-4";
   // No padding on the content for compact cards.
-  if (compact) contentClasses = null;
+  if (layout === "compact") contentClasses = null;
   // Flat, expanded cards get vertical padding.
-  if (flat && !compact) contentClasses = "py-4";
+  if (layout === "flat") contentClasses = "py-4";
 
   return {
     ...post,
