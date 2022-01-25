@@ -7838,10 +7838,10 @@ gatsby-cli@^4.2.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.2.0, gatsby-core-utils@^3.3.0, gatsby-core-utils@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.4.0.tgz#6d5658dc045dcf60a314d4f2d0bc85e260659837"
-  integrity sha512-dYQpyo1BLGJzxQOXgGs1Fbj7jzGj5cKAIPYz2hz2l4Aus6skwjjaUlOjZlrWIahNHoLkx3mH0f5y6E8205T/aQ==
+gatsby-core-utils@^3.2.0, gatsby-core-utils@^3.3.0, gatsby-core-utils@^3.4.0, gatsby-core-utils@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.5.2.tgz#f95e1d9034811029a1db85479a1a2bfd456818db"
+  integrity sha512-sY7BD6VlbWwrV892x9/yJPtXYaGC/GLyhabd9j2xP6zsIOW0XBHXZ4jJ+xEPaRn3CJxYgBd8KdCyoc4h1ZEFzg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     ci-info "2.0.0"
@@ -7849,6 +7849,7 @@ gatsby-core-utils@^3.2.0, gatsby-core-utils@^3.3.0, gatsby-core-utils@^3.4.0:
     file-type "^16.5.3"
     fs-extra "^10.0.0"
     got "^11.8.3"
+    lock "^1.1.0"
     node-object-hash "^2.3.10"
     proper-lockfile "^4.1.2"
     tmp "^0.2.1"
@@ -7912,14 +7913,14 @@ gatsby-plugin-manifest@^4.4.0:
     semver "^7.3.5"
     sharp "^0.29.3"
 
-gatsby-plugin-offline@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-5.2.0.tgz#2ef32b7e0bc97bc4400e38708addf38ed0f187ef"
-  integrity sha512-CAFVrv/V8V5m4DQ8oJVaoorxRcSzdeak0tEKy02geY6ZkPKVFpozf3TqWSoXeFsBWCZhpNOjOM+jLo236Pj4Bw==
+gatsby-plugin-offline@^5.5.2:
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-5.5.2.tgz#0430d72d981f8b1487965886b45c0ce06aabc586"
+  integrity sha512-Z2NTRTOxo02SXMKhJt6YgFZ0gtIUfpBk5aaXn4/vTcL+RqUsj1QtSlWYOPYJJ4Lauj1bMkN1tFwfGelZVAdtdQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
-    gatsby-core-utils "^3.2.0"
+    gatsby-core-utils "^3.5.2"
     glob "^7.2.0"
     idb-keyval "^3.2.0"
     lodash "^4.17.21"
@@ -11419,7 +11420,7 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
-lock@^1.0.0:
+lock@^1.0.0, lock@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/lock/-/lock-1.1.0.tgz#53157499d1653b136ca66451071fca615703fa55"
   integrity sha1-UxV0mdFlOxNspmRRBx/KYVcD+lU=
