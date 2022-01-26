@@ -8,7 +8,7 @@ title: Components Playground
 
   <div class="mb-12">
     <h2 class="text-2xl mb-1">Expanded Post Card (Default)</h2>
-    <p>The default card is expanded (contains everything).</p>
+    <p class="max-w-xl">The default card is expanded (contains everything).</p>
 
     <div class="max-w-lg mx-auto">
       {# Using guest posts here so that we can show the contributor. #}
@@ -22,9 +22,9 @@ title: Components Playground
 
   <div class="mb-12">
     <h2 class="text-2xl mb-1">Horizontal Post Card</h2>
-    <p>...</p>
+    <p class="max-w-xl">Puts the image to the left of the content and removes max height constraint.</p>
 
-    <div class="max-w-lg mx-auto">
+    <div class="max-w-2xl mx-auto">
       {# Using guest posts here so that we can show the contributor. #}
       {% for post in collections.guest_posts | limit(1) %}
         {% post_card post=post, layout="horizontal" %}
@@ -36,7 +36,9 @@ title: Components Playground
 
   <div class="mb-12">
     <h2 class="text-2xl mb-1">Flat Post Card</h2>
-    <p>Flat cards are typically used on a white background. They remove the shadow and background colors.</p>
+    <p class="max-w-xl">
+      Shadow, background color, and horizontal padding are removed from the expanded card. Flat cards are typically used on a white background.
+    </p>
 
     <div class="max-w-lg mx-auto">
       {% for post in collections.posts | limit(1) %}
@@ -49,7 +51,7 @@ title: Components Playground
 
   <div class="mb-12">
     <h2 class="text-2xl mb-1">Compact Post Card</h2>
-    <p>...</p>
+    <p class="max-w-xl">Applies flat styling and only shows the title, description, and date.</p>
 
     <div class="max-w-lg mx-auto">
       {% for post in collections.posts | limit(1) %}
@@ -62,7 +64,7 @@ title: Components Playground
 
   <div class="mb-12">
     <h2 class="text-2xl mb-1">Dynamic Post Card Grid</h2>
-    <p>This uses classes to adjust the layout of the card based on the screen size.</p>
+    <p class="max-w-xl">This uses classes to adjust the layout of the card based on the screen size.</p>
 
     <div class="grid gap-4 grid-cols-1 lg:grid-cols-3">
       {% for post in collections.posts | limit(3) %}

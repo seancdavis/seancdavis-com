@@ -1,12 +1,4 @@
-.component--post-card.layout-horizontal {
-  @apply max-w-lg;
-}
-
 @screen sm {
-  .component--post-card.layout {
-    @apply max-w-xl;
-  }
-
   .component--post-card.layout-horizontal,
   .component--post-card.sm\:layout-horizontal {
     @apply grid;
@@ -41,8 +33,11 @@
 
 .post-card--image-wrapper img {
   @apply h-full
-    object-center
-    object-cover;
+  object-center
+  object-cover;
+}
 
+/* Images get capped at a specific height, unless horizontal layout. */
+.component--post-card:not(.layout-horizontal) .post-card--image-wrapper img {
   max-height: 18.875rem;
 }
