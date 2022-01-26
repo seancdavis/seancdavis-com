@@ -33,11 +33,11 @@ footer:
 
   <div class="grid grid-cols-2 gap-8">
     <div>
-      {% post_card post=collections.posts[0], flat=true, maxWidth=false %}
+      {% content_card item=collections.posts[0], layout="flat" %}
     </div>
     <div>
       {% for post in collections.posts | limit(2, 1) %}
-        {% post_card post=post, flat=true, maxWidth=false, compact=true %}
+        {% content_card item=post, flat=true, layout="compact" %}
       {% endfor %}
     </div>
   </div>

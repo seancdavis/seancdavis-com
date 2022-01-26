@@ -33,8 +33,8 @@
 
 .post-card--image-wrapper img {
   @apply h-full
-  object-center
-  object-cover;
+    object-center
+    object-cover;
 }
 
 /* Images get capped at a specific height, unless horizontal layout. */

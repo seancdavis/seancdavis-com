@@ -1,13 +1,18 @@
 ---
-title: Components Playground
+title: Post Cards Playground
 ---
 
 <div class="container py-12">
 
-  {# --- Expanded Post Card --- #}
+  <div class="mb-12">
+    <h1 class="text-4xl mb-2">{{ title }}</h1>
+    <p class="mb-0">Post cards render individual post objects in a number of different layouts.</p>
+  </div>
+
+  {# --- Expanded --- #}
 
   <div class="mb-12">
-    <h2 class="text-2xl mb-1">Expanded Post Card (Default)</h2>
+    <h2 class="text-2xl mb-1">Expanded (Default)</h2>
     <p class="max-w-xl">The default card is expanded (contains everything).</p>
 
     <div class="max-w-lg mx-auto">
@@ -18,10 +23,10 @@ title: Components Playground
     </div>
   </div>
 
-  {# --- Horizontal Post Card --- #}
+  {# --- Horizontal --- #}
 
   <div class="mb-12">
-    <h2 class="text-2xl mb-1">Horizontal Post Card</h2>
+    <h2 class="text-2xl mb-1">Horizontal</h2>
     <p class="max-w-xl">Puts the image to the left of the content and removes max height constraint.</p>
 
     <div class="max-w-2xl mx-auto">
@@ -32,10 +37,10 @@ title: Components Playground
     </div>
   </div>
 
-  {# --- Flat Post Card --- #}
+  {# --- Flat --- #}
 
   <div class="mb-12">
-    <h2 class="text-2xl mb-1">Flat Post Card</h2>
+    <h2 class="text-2xl mb-1">Flat</h2>
     <p class="max-w-xl">
       Shadow, background color, and horizontal padding are removed from the expanded card. Flat cards are typically used on a white background.
     </p>
@@ -47,10 +52,10 @@ title: Components Playground
     </div>
   </div>
 
-  {# --- Compact Post Card --- #}
+  {# --- Compact --- #}
 
   <div class="mb-12">
-    <h2 class="text-2xl mb-1">Compact Post Card</h2>
+    <h2 class="text-2xl mb-1">Compact</h2>
     <p class="max-w-xl">Applies flat styling and only shows the title, description, and date.</p>
 
     <div class="max-w-lg mx-auto">
@@ -60,10 +65,10 @@ title: Components Playground
     </div>
   </div>
 
-  {# --- Dynamic Post Card Grid --- #}
+  {# --- Dynamic Card Grid --- #}
 
   <div class="mb-12">
-    <h2 class="text-2xl mb-1">Dynamic Post Card Grid</h2>
+    <h2 class="text-2xl mb-1">Dynamic Card Grid</h2>
     <p class="max-w-xl">This uses classes to adjust the layout of the card based on the screen size.</p>
 
     <div class="grid gap-4 grid-cols-1 lg:grid-cols-3">
