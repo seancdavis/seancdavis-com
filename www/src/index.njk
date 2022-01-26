@@ -36,11 +36,11 @@ footer:
       {% content_card item=collections.posts[0], layout="flat" %}
     </div>
     <div>
-      {% for post in collections.posts | limit(3, 1) %}
-        <div class="{% if loop.last %}{% else %}mb-8{% endif %}">
+      <div class="grid gap-8 grid-cols-1">
+        {% for post in collections.posts | limit(3, 1) %}
           {% content_card item=post, layout="compact" %}
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
@@ -69,11 +69,11 @@ footer:
       {% endfor %}
     </div>
     <div>
-      {% for post in collections.javascript | sort_by('date', true) | limit(3, 1) %}
-        <div class="{% if loop.last %}{% else %}mb-8{% endif %}">
+      <div class="grid gap-8 grid-cols-1">
+        {% for post in collections.javascript | sort_by('date', true) | limit(3, 1) %}
           {% content_card item=post, layout="compact" %}
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
@@ -152,23 +152,61 @@ footer:
 
 {# --- Videos --- #}
 
-<div>
-  Videos goes here ...
+<div class="container py-12">
+  <div class="flex justify-between mb-8">
+    <div>
+      <div class="h-1 bg-blue w-12 mb-2"></div>
+      <h2 class="text-4xl mb-1">Videos</h2>
+      <p class="italic">Veniam ullamco in deserunt pariatur fugiat.</p>
+    </div>
+    <div>
+      <a href="/videos" class="flex items-center">
+        <span class="inline-block mr-1">All Videos</span>
+        <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
+      </a>
+    </div>
+  </div>
 
-  {% for video in collections.videos | limit(3) %}
-    {% video_card video=video %}
-  {% endfor %}
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-4 md:gap-6">
+    {% for video in collections.videos | limit(4) %}
+      {% content_card item=video, layout="compact" %}
+    {% endfor %}
+  </div>
 </div>
 
 {# --- Guest Posts --- #}
 
-<div>
-  Guest goes here ...
+<div class="container py-12">
+  <div class="flex justify-between mb-8">
+    <div>
+      <div class="h-1 bg-pink w-12 mb-2"></div>
+      <h2 class="text-4xl mb-1">Guest Posts</h2>
+      <p class="italic">Veniam ullamco in deserunt pariatur fugiat.</p>
+    </div>
+    <div>
+      <a href="/contributors" class="flex items-center">
+        <span class="inline-block mr-1">All Contributors</span>
+        <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
+      </a>
+    </div>
+  </div>
 
-  {% for post in collections.guest_posts | limit(3) %}
-    {% post_card post=post %}
-  {% endfor %}
+  <div class="grid grid-cols-2 gap-10">
+    <div>
+      {% for post in collections.guest_posts | limit(1) %}
+        {% content_card item=post, layout="flat" %}
+      {% endfor %}
+    </div>
+    <div>
+      <div class="grid gap-8 grid-cols-1">
+        {% for post in collections.guest_posts | limit(3, 1) %}
+          {% content_card item=post, layout="compact" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
+
 
 {# --- Contribute --- #}
 
@@ -190,20 +228,66 @@ footer:
 
 {# --- Jamstack --- #}
 
-<div>
-  Jamstack goes here ...
+<div class="container py-12">
+  <div class="flex justify-between mb-8">
+    <div>
+      <div class="h-1 bg-lime w-12 mb-2"></div>
+      <h2 class="text-4xl mb-1">Jamstack</h2>
+      <p class="italic">Veniam ullamco in deserunt pariatur fugiat.</p>
+    </div>
+    <div>
+      <a href="/topics/jamstack" class="flex items-center">
+        <span class="inline-block mr-1">All Jamstack</span>
+        <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
+      </a>
+    </div>
+  </div>
 
-  {% for post in collections.jamstack | sort_by('date', true) | limit(3) %}
-    {% post_card post=post %}
-  {% endfor %}
+  <div class="grid grid-cols-2 gap-10">
+    <div>
+      {% for post in collections.javascript | sort_by('date', true) | limit(1) %}
+        {% content_card item=post, layout="flat" %}
+      {% endfor %}
+    </div>
+    <div>
+      <div class="grid gap-8 grid-cols-1">
+        {% for post in collections.javascript | sort_by('date', true) | limit(3, 1) %}
+          {% content_card item=post, layout="compact" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 
 {# --- Reposts --- #}
 
-<div>
-  Reposts goes here ...
+<div class="container py-12">
+  <div class="flex justify-between mb-8">
+    <div>
+      <div class="h-1 bg-yellow w-12 mb-2"></div>
+      <h2 class="text-4xl mb-1">Reposts</h2>
+      <p class="italic">Veniam ullamco in deserunt pariatur fugiat.</p>
+    </div>
+    <div>
+      <a href="/topics/jamstack" class="flex items-center">
+        <span class="inline-block mr-1">TODO</span>
+        <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
+      </a>
+    </div>
+  </div>
 
-  {% for post in collections.reposts | limit(3) %}
-    {% post_card post=post %}
-  {% endfor %}
+  <div class="grid grid-cols-2 gap-10">
+    <div>
+      {% for post in collections.reposts | limit(1) %}
+        {% content_card item=post, layout="flat" %}
+      {% endfor %}
+    </div>
+    <div>
+      <div class="grid gap-8 grid-cols-1">
+        {% for post in collections.reposts | limit(3, 1) %}
+          {% content_card item=post, layout="compact" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
