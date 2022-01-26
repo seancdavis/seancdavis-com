@@ -1,6 +1,6 @@
 const { Component } = require("../../../../utils/shortcodes/component");
 
-module.exports = ({ post, layout = "expanded" }) => {
+module.exports = ({ post, layout = "expanded", wrapperClasses = "" }) => {
   let topicData = post?.data?.topics ?? [];
   // Compact cards behave as if there are no topics, which prevents the
   // unnecessary topic_badge rendering below.
@@ -33,11 +33,11 @@ module.exports = ({ post, layout = "expanded" }) => {
     image = component.render();
   }
 
-  let wrapperClasses,
-    contentClasses = "";
+  let contentClasses = "";
 
   if (["expanded", "horizontal"].includes(layout)) {
-    wrapperClasses = "bg-white shadow-sm";
+    // If wrapper classes were set, don't mess with them.
+    if (!wrapperClasses) wrapperClasses = "bg-white shadow-sm";
     contentClasses = "p-4";
   }
   // Flat cards get vertical padding in the content area.

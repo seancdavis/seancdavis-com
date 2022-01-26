@@ -73,7 +73,7 @@ title: Post Cards Playground
 
     <div class="grid gap-4 grid-cols-1 lg:grid-cols-3">
       {% for post in collections.posts | limit(3) %}
-        {% post_card post=post, classes="mb-0 md:layout-horizontal lg:layout-expanded" %}
+        {% post_card post=post, classes="md:layout-horizontal lg:layout-expanded" %}
       {% endfor %}
     </div>
   </div>
