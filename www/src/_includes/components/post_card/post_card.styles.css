@@ -37,6 +37,20 @@
     object-cover;
 }
 
+.post-card--description {
+  @apply mb-6;
+}
+
+/* Flat cards pull meta closer to description. */
+.component--post-card.layout-flat .post-card--description {
+  @apply mb-4;
+}
+
+/* Compact cards pull meta even closer to description. */
+.component--post-card.layout-compact .post-card--description {
+  @apply mb-2;
+}
+
 /* Images get capped at a specific height, unless horizontal layout. */
 .component--post-card:not(.layout-horizontal) .post-card--image-wrapper img {
   max-height: 18.875rem;
