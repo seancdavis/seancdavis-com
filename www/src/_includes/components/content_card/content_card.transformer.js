@@ -20,6 +20,12 @@ module.exports = ({ item, ...props }) => {
   const contentType = getContentType(item);
   const contentCard = contentCardMap[contentType];
 
+  if (!contentCard) {
+    throw new Error(
+      "[Content Card] Item not found. Make sure you are passing the content object to an `item` prop."
+    );
+  }
+
   const componentProps = { [contentCard.prop]: item, ...props };
   const component = new Component(contentCard.component, componentProps);
   const card = component.render();
