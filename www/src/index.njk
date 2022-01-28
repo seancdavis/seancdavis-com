@@ -33,11 +33,11 @@ footer:
 
   <div class="grid md:grid-cols-2 gap-4 md:gap-10">
     <div>
-      {% content_card item=collections.home.recent_posts[0], layout="flat" %}
+      {% content_card item=collections.home.recent[0], layout="flat" %}
     </div>
     <div>
       <div class="grid gap-8 grid-cols-1">
-        {% for post in collections.home.recent_posts | limit(3, 1) %}
+        {% for post in collections.home.recent | limit(3, 1) %}
           {% content_card item=post, layout="compact" %}
         {% endfor %}
       </div>
@@ -166,7 +166,7 @@ footer:
   </div>
 
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-4 md:gap-6">
-    {% for video in collections.home.recent_videos | limit(4) %}
+    {% for video in collections.home.videos | limit(4) %}
       {% content_card item=video, layout="compact" %}
     {% endfor %}
   </div>

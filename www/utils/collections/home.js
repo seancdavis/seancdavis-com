@@ -18,22 +18,43 @@ exports.default = (eleventyConfig) => {
    * sections where there shouldn't be mixed content types.
    */
   eleventyConfig.addCollection("home", (collectionApi) => {
-    const posts = getPostsCollection(collectionApi);
-    const videos = getVideosCollection(collectionApi);
-    const guestPosts = getGuestPostsCollection(collectionApi);
-    const reposts = getRepostsCollection(collectionApi);
+    const allPosts = getPostsCollection(collectionApi);
+    const allVideos = getVideosCollection(collectionApi);
+    const allGuestPosts = getGuestPostsCollection(collectionApi);
+    const allReposts = getRepostsCollection(collectionApi);
 
     const postsWithTag = (tagName) => {
-      return posts.filter((post) => post.data.tags.includes(tagName));
+      return allPosts.filter((post) => post.data.tags.includes(tagName));
     };
 
+    let allContentItems = [];
+
+    const getContentItems = (collection, limit = 4) => {
+      const removeDuplicates = (item) => !allContentItems.includes(item);
+      // Filter the collection to remove content used higher on the page, and
+      // extract the proper number of items for the section.
+      const newContentItems = collection
+        .filter(removeDuplicates)
+        .slice(0, limit);
+      // Add new items to the cache and return the new items.
+      allContentItems.push(...newContentItems);
+      return newContentItems;
+    };
+
+    const recent = getContentItems(allPosts);
+    const javascript = getContentItems(postsWithTag("javascript"));
+    const videos = getContentItems(allVideos);
+    const guest_posts = getContentItems(allGuestPosts);
+    const jamstack = getContentItems(postsWithTag("jamstack"));
+    const reposts = getContentItems(allReposts);
+
     return {
-      recent_posts: posts.slice(0, 4),
-      javascript: postsWithTag("javascript").slice(0, 4),
-      recent_videos: videos.slice(0, 4),
-      guest_posts: guestPosts.slice(0, 4),
-      jamstack: postsWithTag("jamstack").slice(0, 4),
-      reposts: reposts.slice(0, 4),
+      recent,
+      javascript,
+      videos,
+      guest_posts,
+      jamstack,
+      reposts,
     };
   });
 };
