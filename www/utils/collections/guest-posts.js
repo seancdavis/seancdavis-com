@@ -1,5 +1,11 @@
 const { getPostsCollection } = require("./posts");
 
+exports.getGuestPostsCollection = (collectionApi) => {
+  return getPostsCollection(collectionApi).filter(
+    (post) => !!post.data.contributor
+  );
+};
+
 /**
  * Extends Eleventy's configuration.
  *
@@ -11,8 +17,6 @@ exports.default = (eleventyConfig) => {
    * containing contributor data.
    */
   eleventyConfig.addCollection("guest_posts", (collectionApi) => {
-    return getPostsCollection(collectionApi).filter(
-      (post) => !!post.data.contributor
-    );
+    return this.getGuestPostsCollection(collectionApi);
   });
 };

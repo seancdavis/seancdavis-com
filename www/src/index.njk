@@ -33,11 +33,11 @@ footer:
 
   <div class="grid md:grid-cols-2 gap-4 md:gap-10">
     <div>
-      {% content_card item=collections.posts[0], layout="flat" %}
+      {% content_card item=collections.home.recent_posts[0], layout="flat" %}
     </div>
     <div>
       <div class="grid gap-8 grid-cols-1">
-        {% for post in collections.posts | limit(3, 1) %}
+        {% for post in collections.home.recent_posts | limit(3, 1) %}
           {% content_card item=post, layout="compact" %}
         {% endfor %}
       </div>
@@ -64,13 +64,11 @@ footer:
 
   <div class="grid md:grid-cols-2 gap-4 md:gap-10">
     <div>
-      {% for post in collections.javascript | sort_by('date', true) | limit(1) %}
-        {% content_card item=post, layout="flat" %}
-      {% endfor %}
+      {% content_card item=collections.home.javascript[0], layout="flat" %}
     </div>
     <div>
       <div class="grid gap-8 grid-cols-1">
-        {% for post in collections.javascript | sort_by('date', true) | limit(3, 1) %}
+        {% for post in collections.home.javascript | limit(3, 1) %}
           {% content_card item=post, layout="compact" %}
         {% endfor %}
       </div>
@@ -168,7 +166,7 @@ footer:
   </div>
 
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-4 md:gap-6">
-    {% for video in collections.videos | limit(4) %}
+    {% for video in collections.home.recent_videos | limit(4) %}
       {% content_card item=video, layout="compact" %}
     {% endfor %}
   </div>
@@ -193,13 +191,11 @@ footer:
 
   <div class="grid md:grid-cols-2 gap-4 md:gap-10">
     <div>
-      {% for post in collections.guest_posts | limit(1) %}
-        {% content_card item=post, layout="flat" %}
-      {% endfor %}
+      {% content_card item=collections.home.guest_posts[0], layout="flat" %}
     </div>
     <div>
       <div class="grid gap-8 grid-cols-1">
-        {% for post in collections.guest_posts | limit(3, 1) %}
+        {% for post in collections.home.guest_posts | limit(3, 1) %}
           {% content_card item=post, layout="compact" %}
         {% endfor %}
       </div>
@@ -245,13 +241,11 @@ footer:
 
   <div class="grid md:grid-cols-2 gap-4 md:gap-10">
     <div>
-      {% for post in collections.javascript | sort_by('date', true) | limit(1) %}
-        {% content_card item=post, layout="flat" %}
-      {% endfor %}
+      {% content_card item=collections.home.javascript[0], layout="flat" %}
     </div>
     <div>
       <div class="grid gap-8 grid-cols-1">
-        {% for post in collections.javascript | sort_by('date', true) | limit(3, 1) %}
+        {% for post in collections.home.javascript | limit(3, 1) %}
           {% content_card item=post, layout="compact" %}
         {% endfor %}
       </div>
@@ -278,13 +272,11 @@ footer:
 
   <div class="grid md:grid-cols-2 gap-4 md:gap-10">
     <div>
-      {% for post in collections.reposts | limit(1) %}
-        {% content_card item=post, layout="flat" %}
-      {% endfor %}
+      {% content_card item=collections.home.reposts[0], layout="flat" %}
     </div>
     <div>
       <div class="grid gap-8 grid-cols-1">
-        {% for post in collections.reposts | limit(3, 1) %}
+        {% for post in collections.home.reposts | limit(3, 1) %}
           {% content_card item=post, layout="compact" %}
         {% endfor %}
       </div>
