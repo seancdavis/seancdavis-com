@@ -23,6 +23,9 @@ exports.default = (eleventyConfig) => {
     const allGuestPosts = getGuestPostsCollection(collectionApi);
     const allReposts = getRepostsCollection(collectionApi);
 
+    // Note that because this is using the posts collection itself (vs using
+    // blog or the tag itself) that it is excluding videos (and any other
+    // content types).
     const postsWithTag = (tagName) => {
       return allPosts.filter((post) => post.data.tags.includes(tagName));
     };
