@@ -241,11 +241,11 @@ footer:
 
   <div class="grid md:grid-cols-2 gap-4 md:gap-10">
     <div>
-      {% content_card item=collections.home.javascript[0], layout="flat" %}
+      {% content_card item=collections.home.jamstack[0], layout="flat" %}
     </div>
     <div>
       <div class="grid gap-8 grid-cols-1">
-        {% for post in collections.home.javascript | limit(3, 1) %}
+        {% for post in collections.home.jamstack | limit(3, 1) %}
           {% content_card item=post, layout="compact" %}
         {% endfor %}
       </div>
