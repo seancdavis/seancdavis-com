@@ -16,65 +16,19 @@ footer:
 
 {# --- Recent --- #}
 
-<div class="container py-12">
-  <div class="flex justify-between mb-8">
-    <div>
-      <div class="h-1 bg-green w-12 mb-2"></div>
-      <h2 class="text-4xl mb-1">Recent Posts</h2>
-      <p class="italic">Veniam ullamco in deserunt pariatur fugiat.</p>
-    </div>
-    <div>
-      <a href="/posts" class="flex items-center">
-        <span class="inline-block mr-1">All posts</span>
-        <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="grid md:grid-cols-2 gap-4 md:gap-10">
-    <div>
-      {% content_card item=collections.home.recent[0], layout="flat" %}
-    </div>
-    <div>
-      <div class="grid gap-8 grid-cols-1">
-        {% for post in collections.home.recent | limit(3, 1) %}
-          {% content_card item=post, layout="compact" %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
+{% home_post_grid
+    heading="Recent Posts",
+    subheading="Veniam ullamco in deserunt pariatur fugiat.",
+    link={ label: "All Posts", url: "/posts" },
+    collection=collections.home.recent %}
 
 {# --- JavaScript --- #}
 
-<div class="container py-12">
-  <div class="flex justify-between mb-8">
-    <div>
-      <div class="h-1 bg-orange w-12 mb-2"></div>
-      <h2 class="text-4xl mb-1">JavaScript</h2>
-      <p class="italic">Veniam ullamco in deserunt pariatur fugiat.</p>
-    </div>
-    <div>
-      <a href="/topics/javascript" class="flex items-center">
-        <span class="inline-block mr-1">All JavaScript</span>
-        <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="grid md:grid-cols-2 gap-4 md:gap-10">
-    <div>
-      {% content_card item=collections.home.javascript[0], layout="flat" %}
-    </div>
-    <div>
-      <div class="grid gap-8 grid-cols-1">
-        {% for post in collections.home.javascript | limit(3, 1) %}
-          {% content_card item=post, layout="compact" %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
+{% home_post_grid
+    heading="JavaScript",
+    subheading="Veniam ullamco in deserunt pariatur fugiat.",
+    link={ label: "All JavaScript", url: "/topics/javascript" },
+    collection=collections.home.javascript %}
 
 {# --- Spinneret CTA --- #}
 
@@ -174,34 +128,11 @@ footer:
 
 {# --- Guest Posts --- #}
 
-<div class="container py-12">
-  <div class="flex justify-between mb-8">
-    <div>
-      <div class="h-1 bg-pink w-12 mb-2"></div>
-      <h2 class="text-4xl mb-1">Guest Posts</h2>
-      <p class="italic">Veniam ullamco in deserunt pariatur fugiat.</p>
-    </div>
-    <div>
-      <a href="/contributors" class="flex items-center">
-        <span class="inline-block mr-1">All Contributors</span>
-        <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="grid md:grid-cols-2 gap-4 md:gap-10">
-    <div>
-      {% content_card item=collections.home.guest_posts[0], layout="flat" %}
-    </div>
-    <div>
-      <div class="grid gap-8 grid-cols-1">
-        {% for post in collections.home.guest_posts | limit(3, 1) %}
-          {% content_card item=post, layout="compact" %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
+{% home_post_grid
+    heading="Guest Posts",
+    subheading="Veniam ullamco in deserunt pariatur fugiat.",
+    link={ label: "All Contributors", url: "/contributors" },
+    collection=collections.home.guest_posts %}
 
 
 {# --- Contribute --- #}
@@ -224,62 +155,16 @@ footer:
 
 {# --- Jamstack --- #}
 
-<div class="container py-12">
-  <div class="flex justify-between mb-8">
-    <div>
-      <div class="h-1 bg-lime w-12 mb-2"></div>
-      <h2 class="text-4xl mb-1">Jamstack</h2>
-      <p class="italic">Veniam ullamco in deserunt pariatur fugiat.</p>
-    </div>
-    <div>
-      <a href="/topics/jamstack" class="flex items-center">
-        <span class="inline-block mr-1">All Jamstack</span>
-        <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="grid md:grid-cols-2 gap-4 md:gap-10">
-    <div>
-      {% content_card item=collections.home.jamstack[0], layout="flat" %}
-    </div>
-    <div>
-      <div class="grid gap-8 grid-cols-1">
-        {% for post in collections.home.jamstack | limit(3, 1) %}
-          {% content_card item=post, layout="compact" %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
+{% home_post_grid
+    heading="Jamstack",
+    subheading="Veniam ullamco in deserunt pariatur fugiat.",
+    link={ label: "All Jamstack", url: "/topics/jamstack" },
+    collection=collections.home.jamstack %}
 
 {# --- Reposts --- #}
 
-<div class="container py-12">
-  <div class="flex justify-between mb-8">
-    <div>
-      <div class="h-1 bg-yellow w-12 mb-2"></div>
-      <h2 class="text-4xl mb-1">Reposts</h2>
-      <p class="italic">Veniam ullamco in deserunt pariatur fugiat.</p>
-    </div>
-    <div>
-      <a href="/topics/jamstack" class="flex items-center">
-        <span class="inline-block mr-1">TODO</span>
-        <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="grid md:grid-cols-2 gap-4 md:gap-10">
-    <div>
-      {% content_card item=collections.home.reposts[0], layout="flat" %}
-    </div>
-    <div>
-      <div class="grid gap-8 grid-cols-1">
-        {% for post in collections.home.reposts | limit(3, 1) %}
-          {% content_card item=post, layout="compact" %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
+{% home_post_grid
+    heading="Reposts",
+    subheading="Veniam ullamco in deserunt pariatur fugiat.",
+    link={ label: "TODO", url: "/" },
+    collection=collections.home.reposts %}
