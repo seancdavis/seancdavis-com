@@ -22,6 +22,15 @@ exports.default = (eleventyConfig) => {
     const allVideos = getVideosCollection(collectionApi);
     const allGuestPosts = getGuestPostsCollection(collectionApi);
     const allReposts = getRepostsCollection(collectionApi);
+    const allContent = collectionApi.getAll();
+
+    // Find the featured item first.
+    const homePage = allContent.find((page) => page.filePathStem === "/index");
+    // Currently only supporting posts. This way we can be more confident that
+    // the topic and contributor references have been populated.
+    const featured = allPosts.find(
+      (item) => item.filePathStem === homePage.data.featured_item
+    );
 
     // Note that because this is using the posts collection itself (vs using
     // blog or the tag itself) that it is excluding videos (and any other
@@ -30,7 +39,7 @@ exports.default = (eleventyConfig) => {
       return allPosts.filter((post) => post.data.tags.includes(tagName));
     };
 
-    let allContentItems = [];
+    let allContentItems = [featured];
 
     const getContentItems = (collection, limit = 4) => {
       const removeDuplicates = (item) => !allContentItems.includes(item);
@@ -52,6 +61,7 @@ exports.default = (eleventyConfig) => {
     const reposts = getContentItems(allReposts);
 
     return {
+      featured,
       recent,
       javascript,
       videos,

@@ -6,12 +6,47 @@ seo:
   description: "Hi, I'm Sean. I'm a tinkerer and a teacher. A developer. A sandwich lover. Most of the time I'm only pretending to know what I'm doing."
 footer:
   hide_newsletter: true
+featured_item: /posts/what-made-the-essence-of-jamstack-possible
 ---
 
 {# --- Hero --- #}
 
+{% set featured = collections.home.featured %}
+
 <div class="layout--home--hero">
-  Featured stuff goes here
+  <div class="container">
+    <div class="grid md:grid-cols-2 gap-4 md:gap-8">
+      <div>
+        {% image path=featured.data.image, sm="576px" %}
+      </div>
+      <div>
+        {% if featured.data.topics.length > 0 %}
+          <div class="mb-4 text-sm">
+            {% for topic in featured.data.topics %}
+              {% topic_badge topic=topic, classes="mr-1" %}
+            {% endfor %}
+          </div>
+        {% endif %}
+        <h2 class="text-3xl mb-1">
+          <a href="{{ featured.url }}" class="link-transition">
+            {{ featured.data.title }}
+          </a>
+        </h2>
+        {% if featured.data.description %}
+          <p class="mb-6 text-lg">{{ featured.data.description }}</p>
+        {% endif %}
+        <div class="flex items-center">
+        {% if featured.data.contributor %}
+          {% contributor contributor=featured.data.contributor %}
+          <div class="mx-2 text-gray-200">&bull;</div>
+        {% endif %}
+        <span class="block text-gray-blue text-sm">
+          {{ featured.date.toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" }) }}
+        </span>
+      </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 {# --- Recent --- #}
