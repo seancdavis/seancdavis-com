@@ -101,5 +101,3 @@ This list goes on and on, but these are the areas in which I've seen organizatio
 One of the biggest challenges when it comes to implementing a headless CMS is that content editors tend to lose the context in which they are editing. It's difficult to implement previewing and in-context editing in this decoupled (i.e. _headless_) world.
 
 But that's exactly what we're working on at Stackbit! Our product can integrate with CMSs like Contentful and Sanity to provide a visual interface for making changes to each individual site. This way, all your data can still live in the CMS, but Stackbit provides an interactive means for editing that data — to know exactly what you're affecting on the front end(s).
-
-[Say hello](https://www.stackbit.com/contact/) and we'll help you get started with a multi-channel CMS integration.

@@ -74,5 +74,3 @@ A good website considers the content editing experience as important as the deve
 ## Starting with the Goals in Mind
 
 At Stackbit, we operate with an opinionated version of these principles in mind. When you start from a Stackbit theme to build your website, we believe we're giving you a _really_ good one. One that you will be able to keep for years. That is ready to achieve your goals. That will serve you today, when you have only a handful of visitors, and it will scale with you tomorrow, when you have _thousands_.
-
-Curious? [Give it a whirl!](https://app.stackbit.com/create)
