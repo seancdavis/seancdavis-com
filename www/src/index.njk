@@ -9,7 +9,7 @@ footer:
 featured_item: /posts/what-made-the-essence-of-jamstack-possible
 ---
 
-{# --- Hero --- #}
+{# --- Featured --- #}
 
 {% set featured = collections.home.featured %}
 
@@ -99,7 +99,7 @@ featured_item: /posts/what-made-the-essence-of-jamstack-possible
 {% home_post_grid
     heading="Guest Posts",
     subheading="Veniam ullamco in deserunt pariatur fugiat.",
-    link={ label: "All Contributors", url: "/contributors" },
+    link={ label: "All Guest Posts", url: "/guest-posts" },
     collection=collections.home.guest_posts %}
 
 
@@ -134,5 +134,5 @@ featured_item: /posts/what-made-the-essence-of-jamstack-possible
 {% home_post_grid
     heading="Reposts",
     subheading="Veniam ullamco in deserunt pariatur fugiat.",
-    link={ label: "TODO", url: "/" },
+    link={ label: "All Reposts", url: "/reposts" },
     collection=collections.home.reposts %}

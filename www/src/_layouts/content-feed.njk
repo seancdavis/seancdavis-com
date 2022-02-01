@@ -1,17 +1,7 @@
----
-layout: blank
-title: Videos
-eleventyComputed:
-  title: "Videos{% if pagination.pageNumber > 0 %} (Page {{ pagination.pageNumber + 1 }}){% endif %}"
-description: Quick tips and guided tutorials to help you on your coding journey, without forgetting to have some fun along the way.
-permalink: "videos/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
-pagination:
-  data: collections.videos
-  size: 10
-# seo:
-#   image: pages/seancdavis--meta--blog.png
----
+{% set body_classes = "bg-gray-100" %}
 
+{% include "layout/head.njk" %}
+{% include "layout/header.njk" %}
 
 <div class="container max-w-4xl">
 
@@ -20,16 +10,18 @@ pagination:
   <div class="pt-24 mb-24">
     <h1 class="text-4xl">{{ title }}</h1>
     {% if description %}
-      <p class="text-2xl">{{ description }}</p>
+      <div class="text-2xl">{% markdown %}{{ description }}{% endmarkdown %}</div>
     {% endif %}
   </div>
 
-  {# --- Posts --- #}
+  {# --- Feed --- #}
 
   <div class="mb-24">
-    {% for video in pagination.items %}
-      {% video_card video=video %}
-    {% endfor %}
+    <div class="grid gap-6 grid-cols-1 max-w-xl mb-8">
+      {% for item in pagination.items %}
+        {% content_card item=item %}
+      {% endfor %}
+    </div>
 
     {% if pagination.href.next or pagination.href.previous %}
       <div class="flex justify-between max-w-xl">
@@ -47,3 +39,6 @@ pagination:
     {% endif %}
   </div>
 </div>
+
+{% include "layout/footer.njk" %}
+{% include "layout/foot.njk" %}
