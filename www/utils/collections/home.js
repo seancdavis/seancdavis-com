@@ -29,7 +29,7 @@ exports.default = (eleventyConfig) => {
     // Currently only supporting posts. This way we can be more confident that
     // the topic and contributor references have been populated.
     const featured = allPosts.find(
-      (item) => item.filePathStem === homePage.data.featured_item
+      (item) => item.filePathStem === homePage.data.sections.featured.item
     );
 
     // Note that because this is using the posts collection itself (vs using
