@@ -5,6 +5,7 @@ tags:
   - repost-stackbit
   - cms
 image: /posts/220124/220124-headless-cms-multichannel.png
+canonical_url: https://www.stackbit.com/blog/headless-cms-multi-channel-source/
 ---
 
 One of the biggest benefits of using a headless CMS as the data source for your website is that the headless CMS is ... well, _headless_. The headless variety of CMS differs from the more traditional CMS (WordPress, Drupal, Squarespace, etc) in that it doesn't care _at all_ what you do with the content. The front end is entirely up to you.

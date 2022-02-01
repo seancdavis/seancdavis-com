@@ -4,6 +4,7 @@ description: A "good website" is one that achieves its goals. Read these six tra
 tags:
   - repost-stackbit
 image: /posts/220128/220128-website-goals.png
+canonical_url: https://www.stackbit.com/blog/six-traits-website-achieving-goals/
 ---
 
 What makes a website _good?_
