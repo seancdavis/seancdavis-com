@@ -102,4 +102,4 @@ One of the biggest challenges when it comes to implementing a headless CMS is th
 
 But that's exactly what we're working on at Stackbit! Our product can integrate with CMSs like Contentful and Sanity to provide a visual interface for making changes to each individual site. This way, all your data can still live in the CMS, but Stackbit provides an interactive means for editing that data — to know exactly what you're affecting on the front end(s).
 
-Say hello to <hello@stackbit.com> and we'll help you get started with a multi-channel CMS integration.
+[Say hello](https://www.stackbit.com/contact/) and we'll help you get started with a multi-channel CMS integration.
