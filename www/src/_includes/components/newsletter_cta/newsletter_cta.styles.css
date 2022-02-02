@@ -1,7 +1,13 @@
-.footer--newsletter {
+.component--newsletter-cta {
   background-image: url("/images/the-spinneret-logo.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 35rem;
-  margin-bottom: -3rem;
+
+  &.layout-footer {
+    @apply max-w-5xl
+      mx-auto;
+
+    margin-bottom: -3rem;
+  }
 }

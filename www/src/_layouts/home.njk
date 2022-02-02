@@ -2,7 +2,130 @@
 {% include "layout/header.njk" %}
 
 <div class="layout--home">
-  {{ content | safe }}
+  {# --- Featured --- #}
+
+  {% set featured = collections.home.featured %}
+
+  <div class="layout--home--hero">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-4 md:gap-8">
+        <div>
+          {% image path=featured.data.image, sm="576px" %}
+        </div>
+        <div>
+          {% if featured.data.topics.length > 0 %}
+            <div class="mb-4 text-sm home--hero--topics">
+              {% for topic in featured.data.topics %}
+                {% topic_badge topic=topic, classes="mr-1" %}
+              {% endfor %}
+            </div>
+          {% endif %}
+          <h2 class="text-3xl mb-1">
+            <a href="{{ featured.url }}" class="link-transition">
+              {{ featured.data.title }}
+            </a>
+          </h2>
+          {% if featured.data.description %}
+            <p class="mb-6 text-lg">{{ featured.data.description }}</p>
+          {% endif %}
+          {% if featured.data.contributor %}
+            {% contributor contributor=featured.data.contributor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# --- Recent --- #}
+
+  {% home_post_grid
+      heading=sections.recent.heading,
+      subheading=sections.recent.body,
+      link=sections.recent.action,
+      collection=collections.home.recent %}
+
+  {# --- JavaScript --- #}
+
+  {% home_post_grid
+      heading=sections.javascript.heading,
+      subheading=sections.javascript.body,
+      link=sections.javascript.action,
+      collection=collections.home.javascript %}
+
+  {# --- Spinneret CTA --- #}
+
+  {% newsletter_cta %}
+
+
+  {# --- Videos --- #}
+
+  <div class="container py-12">
+    <div class="flex justify-between mb-8">
+      <div>
+        <div class="h-1 bg-blue w-12 mb-2"></div>
+        <h2 class="text-4xl mb-1">{{ sections.videos.heading }}</h2>
+        <p class="italic">{{ sections.javascript.body }}</p>
+      </div>
+      <div>
+        <a href="{{ sections.videos.action.url }}" class="flex items-center">
+          <span class="inline-block mr-1">{{ sections.videos.action.label }}</span>
+          <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-4 md:gap-6">
+      {% for video in collections.home.videos | limit(4) %}
+        {% content_card item=video, layout="compact" %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {# --- Guest Posts --- #}
+
+  {% home_post_grid
+      heading=sections.guest_posts.heading,
+      subheading=sections.guest_posts.body,
+      link=sections.guest_posts.action,
+      collection=collections.home.guest_posts %}
+
+
+  {# --- Contribute --- #}
+
+  <div class="bg-gray-800 text-white">
+    <div class="container py-6 max-w-4xl text-center md:text-left">
+      <div class="md:flex justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <h3 class="text-2xl md:text-3xl">{{ sections.contribute_cta.heading }}</h3>
+          <p class="md:text-xl max-w-md mx-auto">
+            {{ sections.contribute_cta.body }}
+          </p>
+        </div>
+        <div>
+          {% button
+              url=sections.contribute_cta.action.url,
+              label=sections.contribute_cta.action.label,
+              theme="lime" %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# --- Jamstack --- #}
+
+  {% home_post_grid
+      heading=sections.jamstack.heading,
+      subheading=sections.jamstack.body,
+      link=sections.jamstack.action,
+      collection=collections.home.jamstack %}
+
+  {# --- Reposts --- #}
+
+  {% home_post_grid
+      heading=sections.reposts.heading,
+      subheading=sections.reposts.body,
+      link=sections.reposts.action,
+      collection=collections.home.reposts %}
 </div>
 
 {% include "layout/footer.njk" %}

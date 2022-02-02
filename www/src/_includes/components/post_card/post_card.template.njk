@@ -1,10 +1,10 @@
-<div class="component--post-card max-w-xl bg-white shadow-sm {{ classes }}">
+<div class="component--post-card layout-{{ layout }} {{ wrapperClasses }}">
   {% if image %}
     <div class="post-card--image-wrapper">
       {{ image | safe }}
     </div>
   {% endif %}
-  <div class="p-4">
+  <div class="{{ contentClasses }}">
     {% if topics.length > 0 %}
       <div class="mb-4 text-sm">
         {{ topics | safe }}
@@ -16,13 +16,16 @@
       </a>
     </h2>
     {% if data.description %}
-      <p class="mb-6 post-card--description">{{ data.description }}</p>
+      <p class="post-card--description">{{ data.description }}</p>
     {% endif %}
-    {% if contributor %}
-      {{ contributor | safe }}
-    {% endif %}
-    <span class="block text-gray-blue font-sans text-sm">
-      {{ date.toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" }) }}
-    </span>
+    <div class="flex items-center">
+      {% if contributor %}
+        {{ contributor | safe }}
+        <div class="mx-2 text-gray-200">&bull;</div>
+      {% endif %}
+      <span class="block text-gray-blue text-sm">
+        {{ date.toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" }) }}
+      </span>
+    </div>
   </div>
 </div>

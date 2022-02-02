@@ -82,7 +82,7 @@
 
       <div class="grid gap-4 grid-cols-1 lg:grid-cols-3">
         {% for post in collections.posts | get_related_posts(related_posts, tags, page.fileSlug, content) %}
-          {% post_card post=post, classes="mb-0 md:layout-horizontal lg:layout-vertical" %}
+          {% post_card post=post, wrapperClasses="bg-white shadow-sm md:layout-horizontal lg:layout-expanded" %}
         {% endfor %}
       </div>
 
