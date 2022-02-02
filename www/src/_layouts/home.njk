@@ -28,15 +28,9 @@
           {% if featured.data.description %}
             <p class="mb-6 text-lg">{{ featured.data.description }}</p>
           {% endif %}
-          <div class="flex items-center">
           {% if featured.data.contributor %}
             {% contributor contributor=featured.data.contributor %}
-            <div class="mx-2 text-gray-200">&bull;</div>
           {% endif %}
-          <span class="block text-gray-blue text-sm">
-            {{ featured.date.toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" }) }}
-          </span>
-        </div>
         </div>
       </div>
     </div>
