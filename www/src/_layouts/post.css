@@ -110,6 +110,44 @@
     }
   }
 
+  /* --- Tables --- */
+
+  table {
+    @apply border
+      divide-gray-300
+      divide-y
+      mb-6
+      w-full;
+  }
+
+  thead {
+    @apply bg-gray-50;
+  }
+
+  th {
+    @apply px-6
+      py-2
+      text-gray-500
+      text-left
+      text-xs;
+  }
+
+  tbody {
+    @apply bg-white
+      divide-y
+      divide-gray-300
+      text-sm;
+
+    tr {
+      @apply whitespace-nowrap;
+    }
+  }
+
+  td {
+    @apply px-6
+      py-4;
+  }
+
   /* --- Images --- */
   .component--post-image:not([class*="mx-"]) {
     margin-left: -2rem;
