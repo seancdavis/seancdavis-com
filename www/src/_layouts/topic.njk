@@ -17,9 +17,11 @@ permalink: "topics/{{ page.fileSlug }}/{% if pagination.pageNumber > 0 %}page-{{
   {# --- Posts --- #}
 
   <div class="mb-24">
-    {% for item in items %}
-      {% content_card item=item %}
-    {% endfor %}
+    <div class="grid gap-6 grid-cols-1 max-w-xl">
+      {% for item in items %}
+        {% content_card item=item %}
+      {% endfor %}
+    </div>
 
     {% if pagination.href.next or pagination.href.previous %}
       <div class="flex justify-between max-w-xl">

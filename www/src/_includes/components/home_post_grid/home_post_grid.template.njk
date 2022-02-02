@@ -1,0 +1,30 @@
+<div class="container py-12">
+  <div class="flex justify-between mb-8">
+    <div>
+      <div class="h-1 bg-green w-12 mb-2"></div>
+      <h2 class="text-4xl mb-1">{{ heading }}</h2>
+      {% if subheading %}
+        <p class="italic">{{ subheading }}</p>
+      {% endif %}
+    </div>
+    <div>
+      {% if link %}
+        <a href="{{ link.url }}" class="flex items-center">
+          <span class="inline-block mr-1">{{ link.label }}</span>
+          <span class="h-4 w-4 inline-block">{{ link.icon | safe }}</span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-4 md:gap-10">
+    <div>
+      {{ featuredItem | safe }}
+    </div>
+    <div>
+      <div class="grid gap-8 grid-cols-1">
+        {{ compactItems | safe }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,4 @@
-.component--post-card.layout-horizontal {
-  @apply max-w-lg;
-}
-
 @screen sm {
-  .component--post-card.layout {
-    @apply max-w-xl;
-  }
-
   .component--post-card.layout-horizontal,
   .component--post-card.sm\:layout-horizontal {
     @apply grid;
@@ -16,7 +8,7 @@
 }
 
 @screen md {
-  .component--post-card.md\:layout-vertical {
+  .component--post-card.md\:layout-expanded {
     @apply block;
   }
 
@@ -28,7 +20,7 @@
 }
 
 @screen lg {
-  .component--post-card.lg\:layout-vertical {
+  .component--post-card.lg\:layout-expanded {
     @apply block;
   }
 
@@ -43,6 +35,23 @@
   @apply h-full
     object-center
     object-cover;
+}
 
+.post-card--description {
+  @apply mb-6;
+}
+
+/* Flat cards pull meta closer to description. */
+.component--post-card.layout-flat .post-card--description {
+  @apply mb-4;
+}
+
+/* Compact cards pull meta even closer to description. */
+.component--post-card.layout-compact .post-card--description {
+  @apply mb-2;
+}
+
+/* Images get capped at a specific height, unless horizontal layout. */
+.component--post-card:not(.layout-horizontal) .post-card--image-wrapper img {
   max-height: 18.875rem;
 }

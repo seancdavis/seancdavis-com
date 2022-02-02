@@ -1,72 +1,7 @@
 <footer>
-  <div class="footer--newsletter text-white py-12 max-w-5xl mx-auto shadow-md rounded-sm bg-green-light relative z-10">
-    <div class="container max-w-2xl text-center">
-      <h2 class="text-3xl uppercase mb-2">The Spinneret</h2>
-      <p class="max-w-md mx-auto">
-        Sign up to receive one email every month with new articles, tools, and
-        references I've discovered.
-      </p>
-      <form
-        action="https://buttondown.email/api/emails/embed-subscribe/seancdavis29"
-        method="post"
-        target="popupwindow"
-        onsubmit="window.open('https://buttondown.email/seancdavis29', 'popupwindow')"
-        class="embeddable-buttondown-form mb-4"
-      >
-        <input type="hidden" value="1" name="embed"></input>
-
-        <span class="sm:flex justify-center">
-          <input
-            type="email"
-            name="email"
-            id="bd-email"
-            placeholder="Enter your email"
-            aria-label="Email Address"
-            required
-            class="
-              bg-transparent
-              border-black
-              border-2
-              mb-2
-              mr-2
-              placeholder-gray-50
-              py-1
-              px-2
-              text-white
-              w-64
-              sm:mb-0
-            "
-          >
-          <input
-            type="submit"
-            value="Subscribe"
-            class="
-              bg-black
-              border-2
-              border-black
-              cursor-pointer
-              duration-300
-              font-sans
-              inline-block
-              px-6
-              py-1
-              relative
-              text-sm
-              text-white
-              transition-all
-              uppercase
-              hover:bg-gray-800"
-            ></input>
-        </span>
-      </form>
-
-      <p class="text-sm">
-        <a href="/topics/spinneret" class="underline text-black">
-          Read past issues.
-        </a>
-      </p>
-    </div>
-  </div>
+  {% if not footer.hide_newsletter %}
+    {% newsletter_cta layout="footer" %}
+  {% endif %}
 
 
   <div class="bg-black text-white pb-12 pt-24">
