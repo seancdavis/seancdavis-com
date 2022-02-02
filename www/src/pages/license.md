@@ -1,7 +1,6 @@
 ---
 title: License
 heading: A License (Sort of)
-path: /license
 subheading: This license governs all content and code found within this site.
 seo:
   title: A License (Sort of)

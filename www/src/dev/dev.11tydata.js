@@ -4,5 +4,6 @@ module.exports = {
       ? false
       : "__dev/{{ page.fileSlug }}/index.html",
   layout: "blank",
+  eleventyExcludeFromCollections: true,
   eleventyComputed: {},
 };

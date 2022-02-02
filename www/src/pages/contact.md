@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Contact
 description: "I love meeting new people! Send me a message or schedule a 15-minute virtual coffee."
 heading: Let's Chat!
