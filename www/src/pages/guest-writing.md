@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Guest Writing
 description: Improve your development and writing skills by contributing content to the site.
 heading: Guest Writing

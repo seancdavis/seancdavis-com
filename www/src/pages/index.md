@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Hi, I'm Sean.
+permalink: index.html
 seo:
   image: /pages/seancdavis--meta--home.png
   description: "Hi, I'm Sean. I'm a tinkerer and a teacher. A developer. A sandwich lover. Most of the time I'm only pretending to know what I'm doing."
