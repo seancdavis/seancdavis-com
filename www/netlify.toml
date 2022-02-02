@@ -18,7 +18,7 @@
   package = "netlify-plugin-a11y"
     [plugins.inputs]
       checkPaths = ['/', '/about']
-      # resultMode = "warn"
+      resultMode = "warn"
 
 [[plugins]]
   package = "@netlify/plugin-sitemap"
