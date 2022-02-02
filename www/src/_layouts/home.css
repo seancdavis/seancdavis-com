@@ -27,3 +27,8 @@
     z-index: -2;
   }
 }
+
+.home--hero--topics a {
+  @apply bg-gray-700
+    text-white;
+}

@@ -14,7 +14,7 @@
         </div>
         <div>
           {% if featured.data.topics.length > 0 %}
-            <div class="mb-4 text-sm">
+            <div class="mb-4 text-sm home--hero--topics">
               {% for topic in featured.data.topics %}
                 {% topic_badge topic=topic, classes="mr-1" %}
               {% endfor %}
