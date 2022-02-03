@@ -1,8 +1,8 @@
 name: Update Visual Regression Snapshots
 on:
   push:
-    branches:
-      - main
+    # branches:
+    #   - main
     paths:
       - www/**
 jobs:
@@ -18,7 +18,7 @@ jobs:
       - name: Build site
         run: |
           cd www
-          npm run pretest:visual
+          npm run build
         env:
           IMGIX_DOMAIN: ${{ secrets.IMGIX_DOMAIN }}
           IMGIX_TOKEN: ${{ secrets.IMGIX_TOKEN }}
