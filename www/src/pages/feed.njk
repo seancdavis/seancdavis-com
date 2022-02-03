@@ -1,17 +1,20 @@
 ---
+layout: false
 permalink: feed.xml
 eleventyExcludeFromCollections: true
 metadata:
   title: Sean C Davis Blog
-  subtitle: Thoughts, ideas, and tutorials on web development.
+  subtitle: Helping developers on their journey through thoughts, ideas, and tutorials. All without forgetting to have a little fun along the way.
   url: https://www.seancdavis.com/
   feedUrl: https://www.seancdavis.com/feed.xml
+  coverImage: /pages/seancdavis--meta--blank.png
+  iconUrl: https://www.seancdavis.com/images/seancdavis-logo.png
   author:
     name: Sean C Davis
     email: hello@seancdavis.com
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/"  xmlns:webfeeds="http://webfeeds.org/rss/1.0" version="2.0">
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ metadata.feedUrl }}" rel="self"/>
@@ -22,6 +25,8 @@ metadata:
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
   </author>
+  <webfeeds:cover image="{{ metadata.coverImage | imgix_url({ w: 1400 }) }}" />
+  <webfeeds:icon>{{ metadata.iconUrl }}</webfeeds:icon>
   {%- for post in collections.blog.slice(0, 20) %}
   {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
   {%- if post.data.contributor.data.title %}
@@ -45,4 +50,4 @@ metadata:
     </content>
   </entry>
   {%- endfor %}
-</feed>
+</rss>
