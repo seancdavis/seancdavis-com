@@ -1,8 +1,8 @@
 name: Update Visual Regression Snapshots
 on:
   push:
-    # branches:
-    #   - main
+    branches:
+      - main
     paths:
       - www/**
 jobs:
