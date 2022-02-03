@@ -1,4 +1,5 @@
 ---
+layout: false
 pagination:
   data: collections.Topic
   size: 1
@@ -10,13 +11,15 @@ eleventyComputed:
     subtitle: "Posts tagged with {{ topic.data.title }} on Sean C Davis's blog."
     url: "{{ seo_defaults.base_url }}/topics/{{ topic.fileSlug }}"
     feedUrl: "{{ seo_defaults.base_url }}/topics/{{ topic.fileSlug }}/feed.xml"
+    coverImage: /pages/seancdavis--meta--blank.png
+    iconUrl: https://www.seancdavis.com/images/seancdavis-logo.png
     updated: "{{ topic.data.items | rssLastUpdatedDate }}"
     author:
       name: Sean C Davis
       email: hello@seancdavis.com
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/"  xmlns:webfeeds="http://webfeeds.org/rss/1.0" version="2.0">
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ metadata.feedUrl }}" rel="self"/>
@@ -27,6 +30,8 @@ eleventyComputed:
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
   </author>
+  <webfeeds:cover image="{{ metadata.coverImage | imgix_url({ w: 1400 }) }}" />
+  <webfeeds:icon>{{ metadata.iconUrl }}</webfeeds:icon>
   {%- for post in topic.data.items %}
   {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(seo_defaults.base_url + "/") }}{% endset %}
   {%- if post.data.contributor.data.title %}
@@ -50,4 +55,4 @@ eleventyComputed:
     </content>
   </entry>
   {%- endfor %}
-</feed>
+</rss>
