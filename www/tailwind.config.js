@@ -1,5 +1,10 @@
 module.exports = {
-  purge: ["./src/**/*.html", "./src/**/*.njk", "./src/**/*.md"],
+  purge: [
+    "./src/**/*.html",
+    "./src/**/*.njk",
+    "./src/**/*.md",
+    "./src/**/*.js",
+  ],
   theme: {
     screens: {
       sm: "640px",

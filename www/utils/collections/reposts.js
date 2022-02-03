@@ -1,5 +1,11 @@
 const { getPostsCollection } = require("./posts");
 
+exports.getRepostsCollection = (collectionApi) => {
+  return getPostsCollection(collectionApi).filter(
+    (post) => !!post.data.tags.find((tag) => tag.startsWith("repost-"))
+  );
+};
+
 /**
  * Extends Eleventy's configuration.
  *
@@ -11,8 +17,6 @@ exports.default = (eleventyConfig) => {
    * containing those with tags beginning with "repost-".
    */
   eleventyConfig.addCollection("reposts", (collectionApi) => {
-    return getPostsCollection(collectionApi).filter(
-      (post) => !!post.data.tags.find((tag) => tag.startsWith("repost-"))
-    );
+    return this.getRepostsCollection(collectionApi);
   });
 };

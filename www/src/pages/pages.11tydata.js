@@ -1,5 +1,5 @@
 module.exports = {
-  permalink: "{{ path }}/index.html",
+  permalink: "{{ page.filePathStem | replace('pages/', '') }}/index.html",
   layout: "page",
-  eleventyComputed: {}
-}
+  eleventyComputed: {},
+};

@@ -31,9 +31,11 @@ permalink: "contributors/{{ page.fileSlug }}/{% if pagination.pageNumber > 0 %}p
   {# --- Posts --- #}
 
   <div class="mb-24">
-    {% for post in posts %}
-      {% post_card post=post %}
-    {% endfor %}
+    <div class="grid gap-6 grid-cols-1 max-w-xl">
+      {% for post in posts %}
+        {% post_card post=post %}
+      {% endfor %}
+    </div>
 
     {% if pagination.href.next or pagination.href.previous %}
       <div class="flex justify-between max-w-xl">

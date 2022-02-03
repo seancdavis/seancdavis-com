@@ -1,8 +1,11 @@
 const { Component } = require("../../../../utils/shortcodes/component");
 const { readSvg } = require("../../../../utils/shortcodes/svg");
 
-module.exports = ({ video, classes = "mb-6" }) => {
-  const topicData = video?.data?.topics || [];
+module.exports = ({ video, layout = "expanded" }) => {
+  let topicData = video?.data?.topics || [];
+  // Compact cards behave as if there are no topics, which prevents the
+  // unnecessary topic_badge rendering below.
+  if (layout === "compact") topicData = [];
 
   const topics = topicData
     .map((topic) => {
@@ -25,11 +28,23 @@ module.exports = ({ video, classes = "mb-6" }) => {
     image = component.render();
   }
 
+  let wrapperClasses,
+    contentClasses = "";
+
+  if (["expanded", "horizontal"].includes(layout)) {
+    wrapperClasses = "bg-white shadow-sm";
+    contentClasses = "p-4";
+  }
+  // Flat cards get vertical padding in the content area.
+  if (layout === "flat") contentClasses = "py-4";
+
   return {
     ...video,
-    classes,
+    wrapperClasses,
+    contentClasses,
     image,
     playIcon,
     topics,
+    layout,
   };
 };

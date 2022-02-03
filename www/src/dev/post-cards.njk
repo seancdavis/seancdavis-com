@@ -1,0 +1,81 @@
+---
+title: Post Cards Playground
+---
+
+<div class="container py-12">
+
+  <div class="mb-12">
+    <h1 class="text-4xl mb-2">{{ title }}</h1>
+    <p class="mb-0">Post cards render individual post objects in a number of different layouts.</p>
+  </div>
+
+  {# --- Expanded --- #}
+
+  <div class="mb-12">
+    <h2 class="text-2xl mb-1">Expanded (Default)</h2>
+    <p class="max-w-xl">The default card is expanded (contains everything).</p>
+
+    <div class="max-w-lg mx-auto">
+      {# Using guest posts here so that we can show the contributor. #}
+      {% for post in collections.guest_posts | limit(1) %}
+        {% post_card post=post %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {# --- Horizontal --- #}
+
+  <div class="mb-12">
+    <h2 class="text-2xl mb-1">Horizontal</h2>
+    <p class="max-w-xl">Puts the image to the left of the content and removes max height constraint.</p>
+
+    <div class="max-w-2xl mx-auto">
+      {# Using guest posts here so that we can show the contributor. #}
+      {% for post in collections.guest_posts | limit(1) %}
+        {% post_card post=post, layout="horizontal" %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {# --- Flat --- #}
+
+  <div class="mb-12">
+    <h2 class="text-2xl mb-1">Flat</h2>
+    <p class="max-w-xl">
+      Shadow, background color, and horizontal padding are removed from the expanded card. Flat cards are typically used on a white background.
+    </p>
+
+    <div class="max-w-lg mx-auto">
+      {% for post in collections.posts | limit(1) %}
+        {% post_card post=post, layout="flat" %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {# --- Compact --- #}
+
+  <div class="mb-12">
+    <h2 class="text-2xl mb-1">Compact</h2>
+    <p class="max-w-xl">Applies flat styling and only shows the title, description, and date.</p>
+
+    <div class="max-w-lg mx-auto">
+      {% for post in collections.posts | limit(1) %}
+        {% post_card post=post, layout="compact" %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {# --- Dynamic Card Grid --- #}
+
+  <div class="mb-12">
+    <h2 class="text-2xl mb-1">Dynamic Card Grid</h2>
+    <p class="max-w-xl">This uses classes to adjust the layout of the card based on the screen size.</p>
+
+    <div class="grid gap-4 grid-cols-1 lg:grid-cols-3">
+      {% for post in collections.posts | limit(3) %}
+        {% post_card post=post, classes="md:layout-horizontal lg:layout-expanded" %}
+      {% endfor %}
+    </div>
+  </div>
+
+</div>

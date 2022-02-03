@@ -4,9 +4,9 @@
   "author": "Sean C Davis <scdavis41@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0-beta.8",
+    "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
     "@analytics/google-analytics": "^0.5.3",
     "@hirusi/eleventy-plugin-safe-external-links": "^0.14.3",
     "@imgix/js-core": "^3.1.3",
@@ -28,7 +28,7 @@
     "jest": "^27.4.5",
     "jest-image-snapshot": "^4.5.0",
     "jest-puppeteer": "^6.0.3",
-    "markdown-it": "^12.0.6",
+    "markdown-it": "^12.3.2",
     "markdown-it-anchor": "^8.4.1",
     "markdown-it-attrs": "^4.1.0",
     "netlify-plugin-a11y": "^0.0.12",
@@ -42,14 +42,13 @@
     "slinkity": "^0.5.0",
     "slugify": "^1.6.3",
     "tailwindcss": "^2.2.19",
-    "webpack": "^5.60.0",
+    "webpack": "^5.67.0",
     "webpack-cli": "^4.9.1"
   },
   "scripts": {
     "build": "slinkity --quiet",
     "clean": "rm -rf dist && rm -f src/assets/css/styles.css && rm -f src/assets/js/bundle.js",
     "dev": "slinkity --serve --incremental --port 8000",
-    "pretest:visual": "DISABLE_PARTICLES=true DISABLE_TYPEWRITER=true npm run build",
     "test": "ELEVENTY_ENV=test jest",
     "test:visual": "JEST_CONFIG=visual npm run test"
   }

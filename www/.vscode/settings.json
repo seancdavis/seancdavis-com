@@ -16,7 +16,5 @@
   "[nunjucks]": {
     "editor.formatOnSave": false
   },
-  "cSpell.words": [
-    "slinkity"
-  ]
+  "cSpell.words": ["slinkity", "reposts"]
 }
