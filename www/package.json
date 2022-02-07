@@ -27,7 +27,7 @@
     "instantsearch.js": "^4.33.1",
     "jest": "^27.4.5",
     "jest-image-snapshot": "^4.5.0",
-    "jest-puppeteer": "^6.0.3",
+    "jest-puppeteer": "^6.1.0",
     "markdown-it": "^12.3.2",
     "markdown-it-anchor": "^8.4.1",
     "markdown-it-attrs": "^4.1.0",
