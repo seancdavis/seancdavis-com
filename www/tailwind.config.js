@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [
+  content: [
     "./src/**/*.html",
     "./src/**/*.njk",
     "./src/**/*.md",
@@ -78,6 +78,5 @@ module.exports = {
       subheadings: ["Lato", "sans-serif"],
     },
   },
-  variants: {},
   plugins: [],
 };

@@ -18,7 +18,7 @@ jobs:
       - name: Build site
         run: |
           cd www
-          npm run build
+          npm run pretest:visual
         env:
           IMGIX_DOMAIN: ${{ secrets.IMGIX_DOMAIN }}
           IMGIX_TOKEN: ${{ secrets.IMGIX_TOKEN }}
