@@ -174,7 +174,7 @@ This is a new concept — rendering client-side JS components on the server — 
 
 The biggest downside to all of these methods are that they don't also include support for client-side JavaScript. Some components may need a bit of that.
 
-For example, [my home page](/) includes a typewriter effect in the header. The typewriter is a component, but it also has client-side code that it needs to function.
+For example, [my about page](/about) includes a typewriter effect in the header. The typewriter is a component, but it also has client-side code that it needs to function.
 
 The way I've solved this is by having separate files that control the client-side functionality, and a separate build process to bring those files together into a single JavaScript bundle.
 

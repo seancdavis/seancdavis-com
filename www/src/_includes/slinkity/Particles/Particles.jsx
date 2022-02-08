@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
-import { random } from "../../../utils/_helpers/random";
-import { sample } from "../../../utils/_helpers/sample";
+import { random } from "../../../../utils/_helpers/random";
+import { sample } from "../../../../utils/_helpers/sample";
 
 export default function Particles({ count = 10, images }) {
   const canvas = useRef(null);

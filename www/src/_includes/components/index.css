@@ -6,5 +6,7 @@
 @import "./newsletter_cta/newsletter_cta.styles.css";
 @import "./post_card/post_card.styles.css";
 @import "./social_link/social_link.styles.css";
-@import "./typewriter/typewriter.styles.css";
 @import "./video_card/video_card.styles.css";
+
+/* Slinkity Components */
+@import "../slinkity/Typewriter/Typewriter.css";
