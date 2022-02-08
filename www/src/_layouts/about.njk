@@ -5,7 +5,7 @@
 
 <div class="layout--about--hero">
   {% if particles.images.length > 0 %}
-    {% particles images=particles.images, count=15 %}
+    {% react "slinkity/Particles", images=particles.images, count=15 %}
   {% endif %}
 
   <div class="container max-w-5xl">

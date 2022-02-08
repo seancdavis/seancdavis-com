@@ -5,7 +5,7 @@
  *
  * @param {array} arr The array from which to sample
  */
-exports.sample = function (arr) {
+export function sample(arr) {
   const len = arr == null ? 0 : arr.length;
   return len ? arr[Math.floor(Math.random() * len)] : undefined;
-};
+}

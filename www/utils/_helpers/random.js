@@ -12,12 +12,12 @@
  * @param {boolean} float Set to false if an integer should be returned
  * @returns number
  */
-exports.random = function (a = 1, b = 0, float = true) {
+export function random(a = 1, b = 0, float = true) {
   if (!float) return exports.randomInt(a, b);
   const lower = Math.min(a, b);
   const upper = Math.max(a, b);
   return lower + Math.random() * (upper - lower);
-};
+}
 
 /**
  * Produces a random integer between the inclusive lower and upper bounds. If
@@ -28,8 +28,8 @@ exports.random = function (a = 1, b = 0, float = true) {
  * @param {number} b
  * @returns number
  */
-exports.randomInt = function (a = 1, b = 0) {
+export function randomInt(a = 1, b = 0) {
   const lower = Math.ceil(Math.min(a, b));
   const upper = Math.floor(Math.max(a, b));
   return Math.floor(lower + Math.random() * (upper - lower + 1));
-};
+}
