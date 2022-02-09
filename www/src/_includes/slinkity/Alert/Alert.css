@@ -24,7 +24,7 @@
   }
 }
 
-#component--alert {
+.component--alert {
   @apply bottom-0
     opacity-0;
   right: 1rem;

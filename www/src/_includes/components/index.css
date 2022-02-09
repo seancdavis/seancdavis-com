@@ -1,4 +1,3 @@
-@import "./alert/alert.styles.css";
 @import "./button/button.styles.css";
 @import "./callout/callout.styles.css";
 @import "./codepen/codepen.styles.css";
@@ -8,4 +7,6 @@
 @import "./video_card/video_card.styles.css";
 
 /* Slinkity Components */
+@import "../slinkity/Alert/Alert.css";
+@import "../slinkity/Icon/Icon.css";
 @import "../slinkity/Typewriter/Typewriter.css";

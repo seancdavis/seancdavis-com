@@ -2,7 +2,11 @@ import React from "react";
 
 export default function Coffee() {
   return (
-    <svg width="256" height="256" viewBox="0 0 256 256" className="icon">
+    <svg
+      width="256"
+      height="256"
+      viewBox="0 0 256 256"
+      className="component--icon">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
