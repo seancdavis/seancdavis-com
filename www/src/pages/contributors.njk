@@ -37,7 +37,10 @@ seo:
         </p>
         {% if contributor.data.twitter %}
           <div class="mb-2">
-            {% social_link link={ icon: "twitter", url: "https://twitter.com/" + contributor.data.twitter } %}
+            {% react "slinkity/SocialIcon/SocialIcon",
+                render="static",
+                icon="twitter",
+                url=share_urls.contributor(contributor.data.twitter) %}
           </div>
         {% endif %}
       </div>

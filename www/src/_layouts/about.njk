@@ -55,7 +55,12 @@
       </div>
       <div>
         {% for link in connect.links %}
-          {% social_link link=link, theme="lime", classes="mr-4" %}
+          {% react "slinkity/SocialIcon/SocialIcon",
+              render="static",
+              url=link.url,
+              icon=link.icon,
+              theme="lime",
+              classes="mr-4" %}
         {% endfor %}
       </div>
     </div>

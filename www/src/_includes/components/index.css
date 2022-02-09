@@ -3,10 +3,10 @@
 @import "./codepen/codepen.styles.css";
 @import "./newsletter_cta/newsletter_cta.styles.css";
 @import "./post_card/post_card.styles.css";
-@import "./social_link/social_link.styles.css";
 @import "./video_card/video_card.styles.css";
 
 /* Slinkity Components */
 @import "../slinkity/Alert/Alert.css";
 @import "../slinkity/Icon/Icon.css";
+@import "../slinkity/SocialIcon/SocialIcon.css";
 @import "../slinkity/Typewriter/Typewriter.css";
