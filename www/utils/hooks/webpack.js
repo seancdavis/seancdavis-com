@@ -23,7 +23,7 @@ const webpackConfig = {
       ENV: JSON.stringify(env),
     }),
   ],
-  mode: env,
+  mode: env === "development" ? "development" : "production",
 };
 
 /**
