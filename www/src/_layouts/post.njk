@@ -76,7 +76,7 @@
 
   {# --- Related Articles --- #}
 
-  {% if related_posts.length !== 0 %}
+  {% if (related_posts.length !== 0) and (env !== "test" or related_posts.length > 0) %}
     <div class="max-w-md md:max-w-xl lg:max-w-7xl mx-auto px-4 py-12">
       <h3 class="subheading">Keep Reading</h3>
 

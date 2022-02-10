@@ -48,8 +48,8 @@
     "build": "eleventy --quiet",
     "clean": "rm -rf dist && rm -f src/assets/css/styles.css && rm -f src/assets/js/bundle.js",
     "dev": "eleventy --serve --incremental --port 8000",
-    "pretest:visual": "npm run build",
+    "pretest:visual": "ELEVENTY_ENV=test eleventy --quiet",
     "test": "ELEVENTY_ENV=test jest",
-    "test:visual": "JEST_CONFIG=visual npm run test"
+    "test:visual": "JEST_CONFIG=visual ELEVENTY_ENV=test jest"
   }
 }
