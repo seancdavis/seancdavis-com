@@ -1,0 +1,29 @@
+{% set body_classes = "bg-gray-100" %}
+
+{% include "layout/head.njk" %}
+{% include "layout/header.njk" %}
+
+<div class="py-24 bg-white mt-[-5rem] pt-[13rem]">
+  <div class="container max-w-4xl">
+    <h1 class="text-4xl">{{title}}</h1>
+    {% if description %}
+      <p class="text-2xl">{{description}}</p>
+    {% endif %}
+    {% if source_url %}
+      <div>
+        {% button url=source_url, label="Direct Link" %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="layout--page--content py-24 mb-0">
+  <div class="container max-w-4xl">
+    <div class="max-w-xl text-lg">
+      {{ content | safe }}
+    </div>
+  </div>
+</div>
+
+{% include "layout/footer.njk" %}
+{% include "layout/foot.njk" %}
