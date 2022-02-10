@@ -63,7 +63,7 @@ Here are a few posts published on the site to give you an idea of what a good pi
 - [Generate Meta Images for Blog Posts with Node.js](/posts/generate-meta-images-for-blog-posts-with-node/)
 - [What Made the Essence of Jamstack Possible](/posts/what-made-the-essence-of-jamstack-possible/)
 - [Run Loop n Times in JavaScript](/posts/run-loop-n-times-javascript/)
-- [Delete Full Words in Terminal](/videos/2021-03-03-quick-tip-terminal-option-delete/)
+- [Delete Full Words in Terminal](/videos/quick-tip-terminal-option-delete/)
 
 From this list above, notice that articles can be written in many different ways:
 
