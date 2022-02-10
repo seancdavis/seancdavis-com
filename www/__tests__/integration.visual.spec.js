@@ -4,21 +4,34 @@ let serverProcess;
 const port = "4567";
 
 const testPaths = [
+  // --- home page ---
   "/",
+  // --- blog ---
   "/blog",
   "/blog/page-2/",
+  // --- basic pages ---
   "/404.html",
   "/license/",
+  // --- topics ---
   "/topics/javascript/",
   "/topics/javascript/page-2/",
+  // --- contributors ---
+  "/contributors/",
+  "/contributors/pratham/",
+  // --- videos ---
+  "/videos/",
+  "/videos/gatsby-static-api/",
+  // --- posts ---
   // twitter embed, youtube embed, code block filename, code blocks, image (GIF)
   "/posts/three-ways-to-add-image-to-github-readme/",
   // back-to-back code blocks with filenames, youtube embed, note callout
   "/posts/build-static-api-gatsby/",
-  // code blocsk with filenames, warning callout
+  // code blocks with filenames, warning callout
   "/posts/getting-started-with-postcss/",
   // blockquote, images
   "/posts/git-safe-force-push/",
+  // will render the keep reading (related posts) section
+  "/posts/compile-es6-code-gulp-babel-part-1/",
   // top 5 posts
   "/posts/git-accept-merge-all-changes/",
   "/posts/wait-until-all-images-loaded/",
