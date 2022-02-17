@@ -37,6 +37,25 @@
     z-index: -1;
   }
 
+  &.size-sm {
+    @apply px-6
+      py-2
+      text-xs;
+  }
+
+  &.theme-green {
+    @apply border-green
+      text-green;
+
+    &:hover {
+      @apply text-white;
+    }
+
+    &:before {
+      @apply bg-green;
+    }
+  }
+
   &.theme-lime {
     @apply border-lime
       text-lime;

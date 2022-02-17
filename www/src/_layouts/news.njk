@@ -11,7 +11,12 @@
     {% endif %}
     {% if source_url %}
       <div>
-        {% button url=source_url, label="Direct Link" %}
+        {% button
+            url=source_url,
+            label="Direct Link",
+            theme="green",
+            size="sm",
+            icon={position: "right", name: "arrow-right"} %}
       </div>
     {% endif %}
   </div>

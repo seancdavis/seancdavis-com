@@ -1,3 +1,15 @@
-<a href="{{ url }}" class="component--button theme-{{ theme }}">
-  {{ label }}
+<a href="{{ url }}" class="component--button theme-{{ theme }} size-{{ size }}">
+  <span class="flex items-center">
+    {% if icon.html and icon.position == "left" %}
+      <span class="inline-block w-3 mr-2">
+        {{ icon.html | safe }}
+      </span>
+    {% endif %}
+    <span>{{ label }}</span>
+    {% if icon.html and icon.position == "right" %}
+      <span class="inline-block w-3 ml-2">
+        {{ icon.html | safe }}
+      </span>
+    {% endif %}
+  </span>
 </a>
