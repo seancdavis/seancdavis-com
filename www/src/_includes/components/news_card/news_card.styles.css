@@ -1,0 +1,19 @@
+.component--news-card.layout-horizontal {
+  @apply grid;
+
+  grid-template-columns: 12rem 1fr;
+}
+
+.news-card--image-wrapper {
+  @apply h-full;
+
+  img {
+    @apply h-full
+      object-center
+      object-cover;
+  }
+}
+
+.component--news-card:not(.layout-horizontal) .news-card--image-wrapper img {
+  max-height: 18.875rem;
+}
