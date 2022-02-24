@@ -3,30 +3,37 @@
 {% include "layout/head.njk" %}
 {% include "layout/header.njk" %}
 
-<div class="py-24 bg-white mt-[-5rem] pt-[13rem]">
+<div class="pt-36 pb-16 bg-white mt-[-5rem]">
   <div class="container max-w-4xl">
-    <h1 class="text-4xl">{{title}}</h1>
+    <h1 class="text-4xl">{{ title }}</h1>
     {% if description %}
-      <p class="text-2xl">{{description}}</p>
+      <p class="text-2xl mb-3">{{description}}</p>
     {% endif %}
-    {% if source_url %}
-      <div>
-        {% button
-            url=source_url,
-            label="Direct Link",
-            theme="green",
-            size="sm",
-            icon={position: "right", name: "arrow-right"} %}
+    {% if topics.length > 0 %}
+      <div class="text-sm">
+        {% for topic in topics %}
+          {% topic_badge topic=topic, classes="mr-1" %}
+        {% endfor %}
       </div>
     {% endif %}
   </div>
 </div>
 
-<div class="layout--page--content py-24 mb-0">
+<div class="layout--page--content pt-12 pb-24 mb-0">
   <div class="container max-w-4xl">
-    <div class="max-w-xl text-lg">
+    <div class="max-w-xl text-lg mb-6">
       {{ content | safe }}
     </div>
+    {% if source_url %}
+      <div>
+        {% button
+            url=source_url,
+            label="View Source",
+            theme="green",
+            size="sm",
+            icon={position: "right", name: "external-link"} %}
+      </div>
+    {% endif %}
   </div>
 </div>
 
