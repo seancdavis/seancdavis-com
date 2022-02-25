@@ -1,0 +1,19 @@
+.component--event-card.layout-horizontal {
+  @apply grid;
+
+  grid-template-columns: 12rem 1fr;
+}
+
+.event-card--image-wrapper {
+  @apply h-full;
+
+  img {
+    @apply h-full
+      object-center
+      object-cover;
+  }
+}
+
+.component--event-card:not(.layout-horizontal) .event-card--image-wrapper img {
+  max-height: 18.875rem;
+}
