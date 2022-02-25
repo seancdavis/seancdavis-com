@@ -11,7 +11,10 @@
           {{ topics | safe }}
         </div>
       {% endif %}
-      <h2 class="text-2xl mb-1">
+      <h2 class="text-2xl mb-1 inline-flex items-center">
+        <span class="mr-2 inline-block w-6 text-gray-blue">
+          {{ icons.title | safe }}
+        </span>
         <a href="{{ url }}" class="link-transition">
           {{ data.title }}
         </a>
@@ -19,8 +22,21 @@
       {% if data.description %}
         <p class="mb-6">{{ data.description }}</p>
       {% endif %}
-      <span class="block text-gray-blue font-sans text-sm">
-        {{ data.display_date }}
+      <span class="inline-flex items-center text-gray-blue font-sans text-sm">
+        <span class="mr-1 inline-block w-4">
+          {{ icons.display_date | safe }}
+        </span>
+        <span>{{ data.display_date }}</span>
+        <span class="mx-2 text-gray-200">&bull;</span>
+        <span class="mr-1 inline-block w-4">
+          {{ icons.location | safe }}
+        </span>
+        <span>{{ data.location }}</span>
+        <span class="mx-2 text-gray-200">&bull;</span>
+        <span class="mr-1 inline-block w-4">
+          {{ icons.cost | safe }}
+        </span>
+        <span>{{ data.cost }}</span>
       </span>
     </div>
   {% endif %}

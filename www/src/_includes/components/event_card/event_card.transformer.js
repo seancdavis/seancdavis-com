@@ -1,4 +1,5 @@
 const { Component } = require("../../../../utils/shortcodes/component");
+const { readSvg } = require("../../../../utils/shortcodes/svg");
 
 module.exports = ({ event, layout = "expanded" }) => {
   let topicData = event?.data?.topics || [];
@@ -25,6 +26,13 @@ module.exports = ({ event, layout = "expanded" }) => {
   //   image = component.render();
   // }
 
+  const icons = {
+    title: readSvg("calendar"),
+    cost: readSvg("money"),
+    location: readSvg("location"),
+    display_date: readSvg("calendar"),
+  };
+
   let wrapperClasses,
     contentClasses = "";
 
@@ -40,6 +48,7 @@ module.exports = ({ event, layout = "expanded" }) => {
     wrapperClasses,
     contentClasses,
     // image,
+    icons,
     topics,
     layout,
   };

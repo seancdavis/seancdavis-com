@@ -1,4 +1,5 @@
 const { Component } = require("../../../../utils/shortcodes/component");
+const { readSvg } = require("../../../../utils/shortcodes/svg");
 
 module.exports = ({ item, layout = "expanded" }) => {
   let topicData = item?.data?.topics || [];
@@ -25,6 +26,10 @@ module.exports = ({ item, layout = "expanded" }) => {
   //   image = component.render();
   // }
 
+  const icons = {
+    title: readSvg("megaphone"),
+  };
+
   let wrapperClasses,
     contentClasses = "";
 
@@ -40,6 +45,7 @@ module.exports = ({ item, layout = "expanded" }) => {
     wrapperClasses,
     contentClasses,
     // image,
+    icons,
     topics,
     layout,
   };
