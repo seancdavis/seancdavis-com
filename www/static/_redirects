@@ -470,3 +470,8 @@ https://seancdavis.me/*  https://www.seancdavis.com/:splat  302!
 
 /blog/change-css-iframe/demo/*           /demos/change-css-iframe/:splat           301
 /blog/manipulate-iframe-content/demo/*   /demos/manipulate-iframe-content/:splat   301
+
+# News & Events
+
+/news     /news-events  302
+/events   /news-events  302
