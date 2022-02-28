@@ -16,46 +16,54 @@ sections:
     action:
       label: All Posts
       url: /posts
+    color: blue
   javascript:
     heading: JavaScript
     body: The latest from one of the site's most popular subjects.
     action:
       label: All JavaScript
       url: /topics/javascript
+    color: green
   videos:
     heading: Videos
     body: Quick tips and guided tutorials to help you on your coding journey.
     action:
       label: All Videos
       url: /videos
+    color: lime # This is set directly by the markup
   news_events:
     heading: News & Events
     body: The latest announcements, along with upcoming conferences and meetups.
     action:
       label: Read Latest
       url: /news-events
+    color: orange # This is set directly by the markup
   guest_posts:
     heading: Guest Posts
     body: Content contributed to this blog by community members.
     action:
       label: All Guest Posts
       url: /guest-posts
+    color: yellow
   contribute_cta:
     heading: Become a Contributor
     body: Improve your development and writing skills by contributing content to the site.
     action:
       label: Start Contributing
       url: /guest-writing
+    color: pink
   jamstack:
     heading: Jamstack
     body: Fresh off the Jamstack shelf.
     action:
       label: All Jamstack
       url: /topics/jamstack
+    color: blue
   reposts:
     heading: Reposts
     body: Content contributed to other publications and reposted here.
     action:
       label: All Reposts
       url: /reposts
+    color: green
 ---

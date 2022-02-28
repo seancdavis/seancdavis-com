@@ -6,7 +6,22 @@ const renderContentCard = (item, layout) => {
   return component.render();
 };
 
-module.exports = ({ heading, subheading, link, collection }) => {
+const colorClassMap = {
+  blue: "bg-blue",
+  green: "bg-green-light",
+  lime: "bg-lime",
+  orange: "bg-orange",
+  yellow: "bg-yellow",
+  pink: "bg-pink",
+};
+
+module.exports = ({
+  heading,
+  subheading,
+  link,
+  collection,
+  color = "green",
+}) => {
   // Get featured content card markup (left side).
   const featuredItem = renderContentCard(collection[0], "flat");
   // Get compact items markup (right side). Note that this array is expected to
@@ -18,5 +33,7 @@ module.exports = ({ heading, subheading, link, collection }) => {
   // Add arrow to link object, if it exists.
   if (link) link.icon = readSvg("arrow-right");
 
-  return { heading, subheading, link, featuredItem, compactItems };
+  const colorClass = colorClassMap[color];
+
+  return { heading, subheading, link, featuredItem, compactItems, colorClass };
 };

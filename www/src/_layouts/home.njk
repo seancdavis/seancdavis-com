@@ -42,7 +42,8 @@
       heading=sections.recent.heading,
       subheading=sections.recent.body,
       link=sections.recent.action,
-      collection=collections.home.recent %}
+      collection=collections.home.recent,
+      color=sections.recent.color %}
 
   {# --- JavaScript --- #}
 
@@ -50,7 +51,8 @@
       heading=sections.javascript.heading,
       subheading=sections.javascript.body,
       link=sections.javascript.action,
-      collection=collections.home.javascript %}
+      collection=collections.home.javascript,
+      color=sections.javascript.color %}
 
   {# --- Spinneret CTA --- #}
 
@@ -62,7 +64,7 @@
   <div class="container py-12">
     <div class="flex justify-between mb-8">
       <div>
-        <div class="h-1 bg-blue w-12 mb-2"></div>
+        <div class="h-1 bg-lime w-12 mb-2"></div>
         <h2 class="text-4xl mb-1">{{ sections.videos.heading }}</h2>
         <p class="italic">{{ sections.videos.body }}</p>
       </div>
@@ -86,7 +88,7 @@
   <div class="container py-12">
     <div class="flex justify-between mb-8">
       <div>
-        <div class="h-1 bg-blue w-12 mb-2"></div>
+        <div class="h-1 bg-orange w-12 mb-2"></div>
         <h2 class="text-4xl mb-1">{{ sections.news_events.heading }}</h2>
         <p class="italic">{{ sections.news_events.body }}</p>
       </div>
@@ -113,7 +115,8 @@
       heading=sections.guest_posts.heading,
       subheading=sections.guest_posts.body,
       link=sections.guest_posts.action,
-      collection=collections.home.guest_posts %}
+      collection=collections.home.guest_posts,
+      color=sections.guest_posts.color %}
 
 
   {# --- Contribute --- #}
@@ -143,7 +146,8 @@
       heading=sections.jamstack.heading,
       subheading=sections.jamstack.body,
       link=sections.jamstack.action,
-      collection=collections.home.jamstack %}
+      collection=collections.home.jamstack,
+      color=sections.jamstack.color %}
 
   {# --- Reposts --- #}
 
@@ -151,7 +155,8 @@
       heading=sections.reposts.heading,
       subheading=sections.reposts.body,
       link=sections.reposts.action,
-      collection=collections.home.reposts %}
+      collection=collections.home.reposts,
+      color=sections.reposts.color %}
 </div>
 
 {% include "layout/footer.njk" %}
