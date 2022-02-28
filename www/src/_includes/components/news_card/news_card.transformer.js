@@ -28,6 +28,7 @@ module.exports = ({ item, layout = "expanded" }) => {
 
   const icons = {
     title: readSvg("megaphone"),
+    link: readSvg("external-link"),
   };
 
   let wrapperClasses,

@@ -22,8 +22,19 @@
       {% if data.description %}
         <p class="mb-6">{{ data.description }}</p>
       {% endif %}
-      <span class="block text-gray-blue font-sans text-sm">
-        {{ date.toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" }) }}
+      <span class="inline-flex items-center text-gray-blue font-sans text-sm">
+        <span>
+          {{ date.toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" }) }}
+        </span>
+        {% if data.source_url %}
+          <span class="mx-2 text-gray-200">&bull;</span>
+          <a href="{{ data.source_url }}" class="inline-flex items-center uppercase text-xs font-bold">
+            <span class="mr-1 inline-block w-4">
+              {{ icons.link | safe }}
+            </span>
+            <span>Link</span>
+          </a>
+        {% endif %}
       </span>
     </div>
   {% endif %}

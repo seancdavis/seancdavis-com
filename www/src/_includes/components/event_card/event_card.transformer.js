@@ -31,6 +31,7 @@ module.exports = ({ event, layout = "expanded" }) => {
     cost: readSvg("money"),
     location: readSvg("location"),
     display_date: readSvg("calendar"),
+    link: readSvg("external-link"),
   };
 
   let wrapperClasses,
