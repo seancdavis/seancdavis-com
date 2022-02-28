@@ -1,6 +1,11 @@
 const { getNewsCollection } = require("./news");
 const { getEventsCollection } = require("./events");
 
+exports.getDateToCompare = function (obj) {
+  if (!obj.data.start_date) return obj.date;
+  return Date.parse(obj.data.start_date);
+};
+
 /**
  * Extends Eleventy's configuration.
  *
@@ -15,14 +20,9 @@ exports.default = (eleventyConfig) => {
     let news = getNewsCollection(collectionApi);
     let events = getEventsCollection(collectionApi);
 
-    const getDateToCompare = (obj) => {
-      if (!obj.data.start_date) return obj.date;
-      return Date.parse(obj.data.start_date);
-    };
-
     // Concatenate all collections and sort in reverse chronological order.
     const news_events = [...news, ...events].sort((a, b) => {
-      return getDateToCompare(b) - getDateToCompare(a);
+      return this.getDateToCompare(b) - this.getDateToCompare(a);
     });
 
     return news_events;
