@@ -3,6 +3,8 @@
 @import "./button/button.styles.css";
 @import "./callout/callout.styles.css";
 @import "./codepen/codepen.styles.css";
+@import "./event_card/event_card.styles.css";
+@import "./news_card/news_card.styles.css";
 @import "./newsletter_cta/newsletter_cta.styles.css";
 @import "./post_card/post_card.styles.css";
 @import "./social_link/social_link.styles.css";
