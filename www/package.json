@@ -19,7 +19,7 @@
     "aws-sdk": "^2.1019.0",
     "chalk": "^5.0.0",
     "clipboard": "^2.0.8",
-    "cssnano": "^5.0.14",
+    "cssnano": "^5.0.17",
     "glob": "^7.1.7",
     "html-minifier": "^4.0.0",
     "http-server": "^14.1.0",
