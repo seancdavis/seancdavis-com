@@ -28,6 +28,12 @@ sections:
     action:
       label: All Videos
       url: /videos
+  news_events:
+    heading: News & Events
+    body: The latest announcements, along with upcoming conferences and meetups.
+    action:
+      label: Read Latest
+      url: /news-events
   guest_posts:
     heading: Guest Posts
     body: Content contributed to this blog by community members.

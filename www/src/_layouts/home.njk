@@ -64,7 +64,7 @@
       <div>
         <div class="h-1 bg-blue w-12 mb-2"></div>
         <h2 class="text-4xl mb-1">{{ sections.videos.heading }}</h2>
-        <p class="italic">{{ sections.javascript.body }}</p>
+        <p class="italic">{{ sections.videos.body }}</p>
       </div>
       <div>
         <a href="{{ sections.videos.action.url }}" class="flex items-center">
@@ -77,6 +77,32 @@
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-4 md:gap-6">
       {% for video in collections.home.videos | limit(4) %}
         {% content_card item=video, layout="compact" %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {# --- News & Events --- #}
+
+  <div class="container py-12">
+    <div class="flex justify-between mb-8">
+      <div>
+        <div class="h-1 bg-blue w-12 mb-2"></div>
+        <h2 class="text-4xl mb-1">{{ sections.news_events.heading }}</h2>
+        <p class="italic">{{ sections.news_events.body }}</p>
+      </div>
+      <div>
+        <a href="{{ sections.news_events.action.url }}" class="flex items-center">
+          <span class="inline-block mr-1">{{ sections.news_events.action.label }}</span>
+          <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-6 lg:gap-12">
+      {% for item in collections.home.news_events %}
+        <div class="max-w-xl">
+          {% content_card item=item, layout="compact" %}
+        </div>
       {% endfor %}
     </div>
   </div>
