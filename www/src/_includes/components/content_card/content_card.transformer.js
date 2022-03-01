@@ -1,6 +1,8 @@
 const { Component } = require("../../../../utils/shortcodes/component");
 
 const contentCardMap = {
+  Event: { component: "event_card", prop: "event" },
+  News: { component: "news_card", prop: "item" },
   Post: { component: "post_card", prop: "post" },
   Video: { component: "video_card", prop: "video" },
 };

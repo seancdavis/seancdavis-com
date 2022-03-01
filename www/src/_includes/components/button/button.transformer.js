@@ -1,10 +1,20 @@
-const defaults = {
-  theme: "blue"
-}
+const { readSvg } = require("../../../../utils/shortcodes/svg");
 
-module.exports = ({ theme, ...props }) => {
+const defaults = {
+  theme: "blue",
+  size: "md",
+};
+
+module.exports = ({ theme, icon, size, ...props }) => {
+  if (icon) {
+    icon.html = readSvg(icon.name);
+    icon.position = icon.position ?? "left";
+  }
+
   return {
     ...props,
-    theme: theme || defaults.theme
-  }
-}
+    icon,
+    size: size || defaults.size,
+    theme: theme || defaults.theme,
+  };
+};

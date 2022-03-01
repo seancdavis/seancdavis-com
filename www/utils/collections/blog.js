@@ -1,3 +1,6 @@
+const { getDateToCompare } = require("./news-events");
+const { getEventsCollection } = require("./events");
+const { getNewsCollection } = require("./news");
 const { getPostsCollection } = require("./posts");
 const { getVideosCollection } = require("./videos");
 
@@ -14,9 +17,13 @@ exports.default = (eleventyConfig) => {
   eleventyConfig.addCollection("blog", (collectionApi) => {
     let posts = getPostsCollection(collectionApi);
     let videos = getVideosCollection(collectionApi);
+    let events = getEventsCollection(collectionApi);
+    let news = getNewsCollection(collectionApi);
 
     // Concatenate all collections and sort in reverse chronological order.
-    const blog = [...posts, ...videos].sort((a, b) => b.date - a.date);
+    const blog = [...posts, ...videos, ...events, ...news].sort((a, b) => {
+      return getDateToCompare(b) - getDateToCompare(a);
+    });
 
     return blog;
   });

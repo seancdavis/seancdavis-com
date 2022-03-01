@@ -1,0 +1,45 @@
+<div class="component--event-card layout-{{ layout }} {{ wrapperClasses }}">
+  <div class="{{ contentClasses }}">
+    {% if topics.length > 0 %}
+      <div class="mb-4 text-sm">
+        {{ topics | safe }}
+      </div>
+    {% endif %}
+    <h2 class="text-2xl mb-1 inline-flex items-center">
+      <span class="mr-2 inline-block w-6 text-gray-blue">
+        {{ icons.title | safe }}
+      </span>
+      <a href="{{ url }}" class="link-transition">
+        {{ data.title }}
+      </a>
+    </h2>
+    {% if data.description %}
+      <p class="event-card--description">{{ data.description }}</p>
+    {% endif %}
+    <span class="inline-flex items-center text-gray-blue font-sans text-sm">
+      <span class="mr-1 inline-block w-4">
+        {{ icons.display_date | safe }}
+      </span>
+      <span>{{ data.display_date }}</span>
+      <span class="mx-2 text-gray-200">&bull;</span>
+      <span class="mr-1 inline-block w-4">
+        {{ icons.location | safe }}
+      </span>
+      <span>{{ data.location }}</span>
+      <span class="mx-2 text-gray-200">&bull;</span>
+      <span class="mr-1 inline-block w-4">
+        {{ icons.cost | safe }}
+      </span>
+      <span>{{ data.cost }}</span>
+      {% if data.source_url %}
+        <span class="mx-2 text-gray-200">&bull;</span>
+        <a href="{{ data.source_url }}" class="inline-flex items-center uppercase text-xs font-bold">
+          <span class="mr-1 inline-block w-4">
+            {{ icons.link | safe }}
+          </span>
+          <span>Link</span>
+        </a>
+      {% endif %}
+    </span>
+  </div>
+</div>

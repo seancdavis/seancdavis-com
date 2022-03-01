@@ -1,0 +1,8 @@
+.event-card--description {
+  @apply mb-6;
+}
+
+/* Compact cards pull meta even closer to description. */
+.component--event-card.layout-compact .event-card--description {
+  @apply mb-2;
+}

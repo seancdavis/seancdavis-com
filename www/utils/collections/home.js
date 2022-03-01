@@ -2,6 +2,7 @@ const { getPostsCollection } = require("./posts");
 const { getGuestPostsCollection } = require("./guest-posts");
 const { getRepostsCollection } = require("./reposts");
 const { getVideosCollection } = require("./videos");
+const { getNewsEventsCollection } = require("./news-events");
 
 /**
  * Extends Eleventy's configuration.
@@ -20,6 +21,7 @@ exports.default = (eleventyConfig) => {
   eleventyConfig.addCollection("home", (collectionApi) => {
     const allPosts = getPostsCollection(collectionApi);
     const allVideos = getVideosCollection(collectionApi);
+    const allNewsEvents = getNewsEventsCollection(collectionApi);
     const allGuestPosts = getGuestPostsCollection(collectionApi);
     const allReposts = getRepostsCollection(collectionApi);
     const allContent = collectionApi.getAll();
@@ -58,6 +60,7 @@ exports.default = (eleventyConfig) => {
     const recent = getContentItems(allPosts);
     const javascript = getContentItems(postsWithTag("javascript"));
     const videos = getContentItems(allVideos);
+    const news_events = getContentItems(allNewsEvents);
     const guest_posts = getContentItems(allGuestPosts);
     const jamstack = getContentItems(postsWithTag("jamstack"));
     const reposts = getContentItems(allReposts);
@@ -67,6 +70,7 @@ exports.default = (eleventyConfig) => {
       recent,
       javascript,
       videos,
+      news_events,
       guest_posts,
       jamstack,
       reposts,

@@ -1,0 +1,8 @@
+.news-card--description {
+  @apply mb-6;
+}
+
+/* Compact cards pull meta even closer to description. */
+.component--news-card.layout-compact .news-card--description {
+  @apply mb-2;
+}

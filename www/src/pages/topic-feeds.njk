@@ -52,6 +52,9 @@ eleventyComputed:
         &lt;p&gt;&lt;img src=&quot;{{ post.data.image | imgix_url({ w: 1400 }) }}&quot;&gt;&lt;/p&gt;
       {%- endif %}
       {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+      {%- if post.data.source_url %}
+        &lt;p&gt;&lt;a href=&quot;{{ post.data.source_url }}&quot;&gt;View Source&lt;/a&gt;&lt;/p&gt;
+      {%- endif %}
     </content>
   </entry>
   {%- endfor %}

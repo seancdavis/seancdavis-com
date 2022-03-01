@@ -1,0 +1,57 @@
+{% set body_classes = "bg-gray-100" %}
+
+{% include "layout/head.njk" %}
+{% include "layout/header.njk" %}
+
+<div class="pt-36 pb-16 bg-white mt-[-5rem]">
+  <div class="container max-w-4xl">
+    <h1 class="text-4xl mb-2">{{ title }}</h1>
+    <div class="mb-3 text-gray-700 inline-flex items-center">
+      <span class="mr-1 inline-block w-5">
+        {% svg "calendar" %}
+      </span>
+      <span>{{ display_date }}</span>
+      <span class="mx-2 text-gray-200">&bull;</span>
+      <span class="mr-1 inline-block w-5">
+        {% svg "location" %}
+      </span>
+      <span>{{ location }}</span>
+      <span class="mx-2 text-gray-200">&bull;</span>
+      <span class="mr-1 inline-block w-5">
+        {% svg "money" %}
+      </span>
+      <span>{{ cost }}</span>
+    </div>
+    {% if description %}
+      <p class="text-2xl mb-3">{{ description }}</p>
+    {% endif %}
+    {% if topics.length > 0 %}
+      <div class="text-sm">
+        {% for topic in topics %}
+          {% topic_badge topic=topic, classes="mr-1" %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="layout--page--content pt-12 pb-24 mb-0">
+  <div class="container max-w-4xl">
+    <div class="max-w-xl text-lg mb-6">
+      {{ content | safe }}
+    </div>
+    {% if source_url %}
+      <div>
+        {% button
+            url=source_url,
+            label="Event Source",
+            theme="green",
+            size="sm",
+            icon={position: "right", name: "external-link"} %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% include "layout/footer.njk" %}
+{% include "layout/foot.njk" %}

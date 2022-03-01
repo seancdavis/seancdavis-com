@@ -21,6 +21,10 @@ const testPaths = [
   // --- videos ---
   "/videos/",
   "/videos/gatsby-static-api/",
+  // --- news / events ---
+  "/news-events/", // Not enough data yet to test page-2 route
+  "/news/announcing-ionic-6/",
+  "/events/the-jam-2022/",
   // --- posts ---
   // twitter embed, youtube embed, code block filename, code blocks, image (GIF)
   "/posts/three-ways-to-add-image-to-github-readme/",
@@ -87,6 +91,7 @@ const startServer = async () => {
 
 describe("Visual Regression", () => {
   beforeAll(async () => {
+    jest.setTimeout(10 * 1000);
     await startServer();
   });
 
