@@ -22,8 +22,7 @@ const testPaths = [
   "/videos/",
   "/videos/gatsby-static-api/",
   // --- news / events ---
-  "/news-events/",
-  // "/news-events/page/2/", --> not enough content yet
+  "/news-events/", // Not enough data yet to test page-2 route
   "/news/announcing-ionic-6/",
   "/events/the-jam-2022/",
   // --- posts ---
