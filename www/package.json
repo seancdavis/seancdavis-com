@@ -21,6 +21,7 @@
     "clipboard": "^2.0.8",
     "cssnano": "^5.0.14",
     "glob": "^7.1.7",
+    "gray-matter": "^4.0.3",
     "html-minifier": "^4.0.0",
     "http-server": "^14.1.0",
     "instantsearch.css": "^7.4.5",
@@ -39,6 +40,7 @@
     "postcss-custom-properties": "^12.1.4",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.5",
+    "sharp": "^0.30.1",
     "slugify": "^1.6.3",
     "tailwindcss": "^3.0.23",
     "webpack": "^5.68.0",
@@ -48,6 +50,7 @@
     "build": "eleventy --quiet",
     "clean": "rm -rf dist && rm -f src/assets/css/styles.css && rm -f src/assets/js/bundle.js",
     "dev": "eleventy --serve --incremental --port 8000",
+    "generate-images": "node scripts/generate-images/index",
     "pretest:visual": "ELEVENTY_ENV=test eleventy --quiet",
     "test": "ELEVENTY_ENV=test jest",
     "test:visual": "JEST_CONFIG=visual ELEVENTY_ENV=test jest"
