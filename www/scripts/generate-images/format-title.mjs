@@ -1,6 +1,13 @@
-function getMaxNextLine(input, maxChars = 20) {
+function fontString(fontSize) {
+  return `bold ${fontSize}pt 'DM Serif Display'`;
+}
+
+function splitLines(title) {
+  // Maximum number of characters in the first line is half the total title
+  // length.
+  const maxChars = title.length / 2;
   // Split the string into an array of words.
-  const allWords = input.split(" ");
+  const allWords = title.split(" ");
   // Find the index in the words array at which we should stop or we will exceed
   // maximum characters.
   const lineIndex = allWords.reduce((prev, cur, index) => {
@@ -10,36 +17,29 @@ function getMaxNextLine(input, maxChars = 20) {
     return position >= maxChars ? { done: true, index } : { position, index };
   });
   // Using the index, build a string for this line ...
-  const line = allWords.slice(0, lineIndex.index).join(" ");
+  const line1 = allWords.slice(0, lineIndex.index).join(" ");
   // And determine what's left.
-  const remainingChars = allWords.slice(lineIndex.index).join(" ");
+  const line2 = allWords.slice(lineIndex.index).join(" ");
   // Return the result.
-  return { line, remainingChars };
+  return [line1, line2];
 }
 
-export function formatTitle(title) {
-  let output = [];
-  // If the title is 40 characters or longer, look to add ellipses at the end of
-  // the second line.
-  if (title.length >= 40) {
-    const firstLine = getMaxNextLine(title);
-    const secondLine = getMaxNextLine(firstLine.remainingChars);
-    output = [firstLine.line];
-    let fmSecondLine = secondLine.line;
-    if (secondLine.remainingChars.length > 0) fmSecondLine += " ...";
-    output.push(fmSecondLine);
-  }
-  // If 20 characters or longer, add the entire second line, using a max of half
-  // the characters, making the first line always slightly shorter than the
-  // second.
-  else if (title.length >= 20) {
-    const firstLine = getMaxNextLine(title, title.length / 2);
-    output = [firstLine.line, firstLine.remainingChars];
-  }
-  // Otherwise, return the short title.
-  else {
-    output = [title];
-  }
+export function formatTitle({ title, context, maxFontSize, maxLineWidth }) {
+  // Return references
+  let fontSize = maxFontSize;
+  let text = [title];
+  // If everything can fit on one line, that's all we need to do.
+  context.font = fontString(maxFontSize);
+  const { width } = context.measureText(title);
+  if (width <= maxLineWidth) return { fontSize, text };
 
-  return output;
+  // Otherwise, assume spanning two lines, and reduce until it fits.
+  text = splitLines(title);
+  for (const line of text) {
+    do {
+      fontSize--;
+      context.font = fontString(fontSize);
+    } while (context.measureText(line).width > maxLineWidth);
+  }
+  return { fontSize, text };
 }
