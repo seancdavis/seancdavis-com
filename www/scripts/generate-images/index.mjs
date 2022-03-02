@@ -8,6 +8,7 @@ import matter from "gray-matter";
 import nunjucks from "nunjucks";
 import path from "path";
 import canvas from "canvas";
+import AWS from "aws-sdk";
 
 import { formatTitle } from "./format-title.mjs";
 
@@ -212,6 +213,25 @@ for (const contentType of Object.keys(config)) {
     const buffer = imgCanvas.toBuffer("image/png");
     fs.writeFileSync(tmpPngFilePath, buffer);
 
-    // TODO: Upload image to S3.
+    // Upload image to S3.
+    const bucket = process.env.AWS_BUCKET;
+    const s3 = new AWS.S3({ apiVersion: "2006-03-01" });
+    const dateStr = path.basename(file).match(/^\d{4}-\d{2}-\d{2}/)[0];
+    const uploadPath = `${contentType}/${dateStr}/${tmpBasename}.png`;
+    const params = {
+      Body: fs.readFileSync(tmpPngFilePath),
+      Bucket: bucket,
+      Key: uploadPath,
+      ContentType: "image/png",
+    };
+    s3.putObject(params, (err) => {
+      if (err) {
+        console.log(err, err.stack);
+      } else {
+        console.log(
+          `Uploaded meta image to: https://${bucket}.s3.amazonaws.com/${uploadPath}`
+        );
+      }
+    });
   }
 }
