@@ -5,7 +5,7 @@
 import fs from "fs";
 import glob from "glob";
 import matter from "gray-matter";
-import nunjucks from "nunjucks";
+// import nunjucks from "nunjucks";
 import path from "path";
 import canvas from "canvas";
 import AWS from "aws-sdk";
@@ -20,10 +20,10 @@ import { formatTitle } from "./format-title.mjs";
 // TODO: Add comments and refactor
 
 const srcDir = path.join(process.cwd(), "src");
-const templatesDir = path.join(
-  process.cwd(),
-  "scripts/generate-images/templates"
-);
+// const templatesDir = path.join(
+//   process.cwd(),
+//   "scripts/generate-images/templates"
+// );
 
 const tmpDir = path.join(process.cwd(), "tmp");
 if (fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir, { recursive: true });
@@ -38,13 +38,13 @@ const config = {
 for (const contentType of Object.keys(config)) {
   const cfg = config[contentType];
   const allFilePaths = glob.sync(path.join(srcDir, cfg.filePattern));
-  const template = fs
-    .readFileSync(path.join(templatesDir, cfg.template))
-    .toString();
+  // const template = fs
+  //   .readFileSync(path.join(templatesDir, cfg.template))
+  //   .toString();
 
   for (const file of allFilePaths) {
     const rawContent = fs.readFileSync(file).toString();
-    const { data, content } = matter(rawContent);
+    const { data } = matter(rawContent);
 
     // Skip objects that already have an image.
     if (data.image) continue;
@@ -233,5 +233,13 @@ for (const contentType of Object.keys(config)) {
         );
       }
     });
+
+    // store ref on the original object.
+    const newFileContent = rawContent.replace(
+      /^---/,
+      `---\nimage: /${uploadPath}`
+    );
+    fs.writeFileSync(file, newFileContent);
+    console.log(`Stored image reference on [${contentType}] ${data.title}`);
   }
 }
