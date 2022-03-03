@@ -11,18 +11,8 @@ import AWS from "aws-sdk";
 
 import { formatTitle } from "./format-title.mjs";
 
-// console.log(canvas);
-// import sharp from "sharp";
-// import convert from "convert-svg-to-png";
-// import { convert } from "convert-svg-to-png";
-
-// TODO: Add comments and refactor
-
 const srcDir = path.join(process.cwd(), "src");
-// const templatesDir = path.join(
-//   process.cwd(),
-//   "scripts/generate-images/templates"
-// );
+const __dirname = path.join(process.cwd(), "scripts/generate-images");
 
 const tmpDir = path.join(process.cwd(), "tmp");
 if (fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir, { recursive: true });
@@ -30,7 +20,7 @@ if (fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir, { recursive: true });
 const config = {
   news: {
     filePattern: "news/*.md",
-    template: "news-template.njk",
+    bgImage: path.join(__dirname, "templates/news-background.svg"),
   },
 };
 
@@ -50,7 +40,7 @@ for (const contentType of Object.keys(config)) {
 
     // const svgCode = nunjucks.renderString(template, { title: data.title });
     const tmpBasename = path.basename(file, path.extname(file));
-    const tmpSvgFilePath = path.join(tmpDir, `${tmpBasename}.svg`);
+    // const tmpSvgFilePath = path.join(tmpDir, `${tmpBasename}.svg`);
     // fs.writeFileSync(tmpSvgFilePath, svgCode);
 
     // TODO: Use sharp to convert image to PNG
@@ -149,7 +139,7 @@ for (const contentType of Object.keys(config)) {
 
     // bg image
     // TODO: Replace this with proper background image
-    const bgImage = await canvas.loadImage(tmpSvgFilePath);
+    const bgImage = await canvas.loadImage(cfg.bgImage);
     context.drawImage(bgImage, 0, 0, canvasConfig.w, canvasConfig.h);
 
     context.textAlign = "center";
@@ -223,15 +213,17 @@ for (const contentType of Object.keys(config)) {
       Key: uploadPath,
       ContentType: "image/png",
     };
-    s3.putObject(params, (err) => {
-      if (err) {
-        console.log(err, err.stack);
-      } else {
-        console.log(
-          `Uploaded meta image to: https://${bucket}.s3.amazonaws.com/${uploadPath}`
-        );
-      }
-    });
+    if (!process.env.SKIP_S3_UPLOAD) {
+      s3.putObject(params, (err) => {
+        if (err) {
+          console.log(err, err.stack);
+        } else {
+          console.log(
+            `Uploaded meta image to: https://${bucket}.s3.amazonaws.com/${uploadPath}`
+          );
+        }
+      });
+    }
 
     // store ref on the original object.
     const newFileContent = rawContent.replace(
