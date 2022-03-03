@@ -5,7 +5,6 @@
 import fs from "fs";
 import glob from "glob";
 import matter from "gray-matter";
-// import nunjucks from "nunjucks";
 import path from "path";
 import canvas from "canvas";
 import AWS from "aws-sdk";
