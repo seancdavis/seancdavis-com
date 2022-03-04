@@ -17,15 +17,6 @@ module.exports = ({ event, layout = "expanded" }) => {
     })
     .join("");
 
-  // let image;
-  // if (event.data.image) {
-  //   const component = new Component("image", {
-  //     path: event.data.image,
-  //     sm: "576px",
-  //   });
-  //   image = component.render();
-  // }
-
   const icons = {
     title: readSvg("calendar"),
     cost: readSvg("money"),
@@ -48,7 +39,6 @@ module.exports = ({ event, layout = "expanded" }) => {
     ...event,
     wrapperClasses,
     contentClasses,
-    // image,
     icons,
     topics,
     layout,

@@ -13,6 +13,11 @@
         {{ data.title }}
       </a>
     </h2>
+    {% if data.host %}
+      <p class="italic text-blue-gray text-sm mb-2">
+        by {{ data.host }}
+      </p>
+    {% endif %}
     {% if data.description %}
       <p class="event-card--description">{{ data.description }}</p>
     {% endif %}

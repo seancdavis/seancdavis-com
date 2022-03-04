@@ -3,10 +3,16 @@
 {% include "layout/head.njk" %}
 {% include "layout/header.njk" %}
 
-<div class="pt-36 pb-16 bg-white mt-[-5rem]">
+<div class="pt-36 pb-8 bg-white mt-[-5rem]">
   <div class="container max-w-4xl">
     <h1 class="text-4xl mb-2">{{ title }}</h1>
-    <div class="mb-3 text-gray-700 inline-flex items-center">
+    {% if host %}
+      <p class="italic text-blue-gray mb-3 mt-[-.5rem]">by {{ host }}</p>
+    {% endif %}
+    {% if description %}
+      <p class="text-2xl mb-3">{{ description }}</p>
+    {% endif %}
+    <div class="text-gray-700 inline-flex items-center">
       <span class="mr-1 inline-block w-5">
         {% svg "calendar" %}
       </span>
@@ -22,9 +28,6 @@
       </span>
       <span>{{ cost }}</span>
     </div>
-    {% if description %}
-      <p class="text-2xl mb-3">{{ description }}</p>
-    {% endif %}
     {% if topics.length > 0 %}
       <div class="text-sm">
         {% for topic in topics %}
