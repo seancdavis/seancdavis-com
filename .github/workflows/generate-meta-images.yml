@@ -11,6 +11,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
       - name: Install dependencies
         run: yarn install
       - name: Run image generator
