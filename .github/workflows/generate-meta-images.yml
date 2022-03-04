@@ -1,0 +1,30 @@
+name: Generate Meta Images
+on:
+  push:
+    paths:
+      - www/**
+jobs:
+  Generate-Meta-Images:
+    name: "Generate Meta Images"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Install dependencies
+        run: yarn install
+      - name: Run image generator
+        run: |
+          cd www
+          npm run generate-images
+        env:
+          AWS_BUCKET: ${{ secrets.AWS_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[Bot] Generate meta images"
+          commit_user_name: Sean C Davis
+          commit_user_email: scdavis41@gmail.com
+          commit_author: Sean C Davis <scdavis41@gmail.com>
+          branch: ${{ github.head_ref }}
