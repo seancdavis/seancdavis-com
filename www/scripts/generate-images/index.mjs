@@ -6,12 +6,9 @@ import fs from "fs";
 import glob from "glob";
 import matter from "gray-matter";
 import path from "path";
-import canvas from "canvas";
-import AWS from "aws-sdk";
-
-import { formatTitle } from "./text-utils.mjs";
 
 import { NewsImageGenerator } from "./news-image-generator.mjs";
+import { uploadFile, storeImageRef } from "./file-utils.mjs";
 
 const config = {
   __dirname: path.join(process.cwd(), "scripts/generate-images"),
@@ -51,41 +48,13 @@ for (const contentType of Object.keys(config.generators)) {
     // Generate the image.
     const generator = new generatorConfig.generator({ ...config, item });
     const tmpFilePath = await generator.run();
-    console.log(tmpFilePath);
+    // Upload generated image.
+    const uploadPath = await uploadFile(tmpFilePath, contentType);
+    if (!uploadPath) continue;
+    // Store reference on item.
+    storeImageRef(item.filePath, uploadPath);
+    // Delete temp file.
+    fs.unlinkSync(tmpFilePath);
+    console.log(`Generated image for [${contentType}] ${item.data.title}`);
   }
-
-  // TODO: Upload the image.
-  // TODO: Separate function for this.
-  // const bucket = process.env.AWS_BUCKET;
-  //   const s3 = new AWS.S3({ apiVersion: "2006-03-01" });
-  //   const dateStr = path.basename(file).match(/^\d{4}-\d{2}-\d{2}/)[0];
-  //   const uploadPath = `${contentType}/${dateStr}/${tmpBasename}.png`;
-  //   const params = {
-  //     Body: fs.readFileSync(tmpPngFilePath),
-  //     Bucket: bucket,
-  //     Key: uploadPath,
-  //     ContentType: "image/png",
-  //   };
-  //   if (!process.env.SKIP_S3_UPLOAD) {
-  //     s3.putObject(params, (err) => {
-  //       if (err) {
-  //         console.log(err, err.stack);
-  //       } else {
-  //         console.log(
-  //           `Uploaded meta image to: https://${bucket}.s3.amazonaws.com/${uploadPath}`
-  //         );
-  //       }
-  //     });
-  //   }
-
-  // TODO: Store the image ref.
-  // TODO: Separate function for this.
-  // const newFileContent = rawContent.replace(
-  //   /^---/,
-  //   `---\nimage: /${uploadPath}`
-  // );
-  // fs.writeFileSync(file, newFileContent);
-  // console.log(`Stored image reference on [${contentType}] ${data.title}`);
-
-  // TODO: Delete temp image.
 }
