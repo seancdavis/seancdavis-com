@@ -1,6 +1,6 @@
+import AWS from "aws-sdk";
 import fs from "fs";
 import path from "path";
-import AWS from "aws-sdk";
 
 /**
  * Given the path to a content item, return a path at which to store a temporary
