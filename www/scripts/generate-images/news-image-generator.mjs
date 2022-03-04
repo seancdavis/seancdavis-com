@@ -36,6 +36,8 @@ export class NewsImageGenerator {
     this.canvas = new Canvas();
     this.setTitleConfig();
     this.setBadgeConfig();
+    // We need to know the height of all the content before we can determine the
+    // y values for each item.
     this.setYValues();
     await this.drawBgImage();
     this.drawTitle();
@@ -107,6 +109,8 @@ export class NewsImageGenerator {
   setBadgeBgConfig() {
     const paddingX = this.badgeTextConfig().fontSize * 1.167;
     const paddingY = this.badgeTextConfig().fontSize * 0.5;
+    // Because this is a rectangle, the background position is the top left of
+    // the rectangle, whereas the text position is the center of the text.
     const x =
       this.badgeTextConfig().x - this.badgeTextConfig().w / 2 - paddingX;
     const w = this.badgeTextConfig().w + paddingX * 2;
@@ -127,10 +131,17 @@ export class NewsImageGenerator {
       this.titleConfig().fontSize * (this.titleConfig().text.length + 0.5) +
       this.badgeBgConfig().h;
 
+    // Title is placed at 25% of the content's height above center. This felt
+    // more balanced than centering completely, which made the title feel like
+    // it was too close to the top.
     this.drawConfig.title.y = this.canvas.config.h / 2 - contentHeight / 4;
+    // The extra 0.5 is the margin between the title and the badge.
     this.drawConfig.badge.text.y =
       this.titleConfig().y +
       this.titleConfig().lineHeight * (this.titleConfig().text.length + 0.5);
+    // Like badge background x value, this is calculated from the badge text's
+    // position, which is the center of the text, while the background's y is
+    // the top of the rectangle.
     this.drawConfig.badge.bg.y =
       this.badgeTextConfig().y -
       this.badgeTextConfig().fontSize -
