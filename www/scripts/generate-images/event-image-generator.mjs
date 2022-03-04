@@ -70,7 +70,7 @@ export class EventImageGenerator {
   // --- Config Setters ---
 
   setLogoConfig() {
-    const x = this.canvasConfig().w / 2;
+    const x = this.canvasConfig().w / 2 - this.logoConfig().w / 2;
 
     this.drawConfig.logo = {
       ...this.drawConfig.logo,
@@ -108,26 +108,24 @@ export class EventImageGenerator {
     };
   }
 
-  /**
-   * The arrangement looks like this:
-   *
-   *    LOGO
-   *    [title line height]
-   *    TITLE
-   *    HOST
-   */
   setYValues() {
     const contentHeight =
-      this.logoConfig().h +
-      this.titleConfig().lineHeight * (this.titleConfig().text.length + 1) +
-      this.hostConfig().fontSize;
+      this.logoConfig().h + // Logo height
+      this.logoConfig().h + // space between logo and title
+      this.titleConfig().lineHeight * this.titleConfig().text.length + // title height
+      this.hostConfig().fontSize * 2 + // space between title and host
+      this.hostConfig().fontSize; // host
 
+    // This is in an attempt to balance the vertical positioning.
     this.drawConfig.logo.y = this.canvas.config.h / 2 - contentHeight / 2;
+    // Text y is measured from the bottom of the text line.
     this.drawConfig.title.y =
-      this.logoConfig().y + this.titleConfig().lineHeight;
+      this.logoConfig().y + this.logoConfig().h + this.titleConfig().lineHeight;
     this.drawConfig.host.y =
-      this.titleConfig().y +
-      this.titleConfig().lineHeight * this.titleConfig().text.length;
+      this.titleConfig().y + // Logo starting point, which is bottom of the first line
+      this.titleConfig().lineHeight * (this.titleConfig().text.length - 1) + // adding additional line height for multi-line titles
+      this.hostConfig().fontSize * 2 + // space between
+      this.hostConfig().fontSize; // distance to get down to the bottom of the host line
   }
 
   // --- Draw Utils ---
