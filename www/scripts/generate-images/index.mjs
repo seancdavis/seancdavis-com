@@ -28,7 +28,7 @@ const config = {
 };
 
 // Create tmp directory if it doesn't exist.
-console.log("DIRECTORY EXISTS?", fs.existsSync(config.tmpDir));
+console.log("DIRECTORY EXISTS?", fs.existsSync(config.tmpDir), config.tmpDir);
 if (fs.existsSync(config.tmpDir)) {
   fs.mkdirSync(config.tmpDir, { recursive: true });
   console.log("DIRECTORY EXISTS?", fs.existsSync(config.tmpDir));
