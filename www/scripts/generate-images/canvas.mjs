@@ -6,6 +6,7 @@ export class Canvas {
   constructor() {
     this.config = { w: 2400, h: 1260 };
     this.loadFont("DMSerifDisplay-Regular.ttf", "DM Serif Display");
+    this.loadFont("DMSerifDisplay-Italic.ttf", "DM Serif Display Italic");
     this.canvas = canvas.createCanvas(this.config.w, this.config.h);
     this.context = this.canvas.getContext("2d");
   }
@@ -27,20 +28,32 @@ export class Canvas {
    *
    * @param fontSize number - Font size value (put)
    */
-  setFont(fontSize) {
-    this.context.font = `bold ${fontSize}pt 'DM Serif Display'`;
+  setFont({ size, family = "DM Serif Display", weight = "bold" }) {
+    this.context.font = `${weight} ${size}pt '${family}'`;
   }
 
   /**
    * Render the background image on the canvas.
    *
    * @param context 2D context for canvas
-   * @param imgPath string - full path to background image
    * @returns result of context.drawImage()
    */
   async setBgImage(imgPath) {
     const bgImage = await canvas.loadImage(imgPath);
     return this.context.drawImage(bgImage, 0, 0, this.config.w, this.config.h);
+  }
+
+  /**
+   * Render the background image on the canvas.
+   *
+   * @param imgPath string - full path to background image
+   * @param position object - { x, y, w, h }
+   * @returns result of context.drawImage()
+   */
+  async drawImage(imgPath, position) {
+    const { x, y, w, h } = position;
+    const image = await canvas.loadImage(imgPath);
+    return this.context.drawImage(image, x, y, w, h);
   }
 
   /**

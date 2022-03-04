@@ -8,6 +8,7 @@ import matter from "gray-matter";
 import path from "path";
 
 import { NewsImageGenerator } from "./news-image-generator.mjs";
+import { EventImageGenerator } from "./event-image-generator.mjs";
 import { uploadFile, storeImageRef } from "./file-utils.mjs";
 
 const config = {
@@ -15,6 +16,10 @@ const config = {
   srcDir: path.join(process.cwd(), "src"),
   tmpDir: path.join(process.cwd(), "tmp"),
   generators: {
+    events: {
+      filePattern: "events/*.md",
+      generator: EventImageGenerator,
+    },
     news: {
       filePattern: "news/*.md",
       generator: NewsImageGenerator,

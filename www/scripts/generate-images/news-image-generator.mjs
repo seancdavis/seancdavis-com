@@ -13,7 +13,7 @@ export class NewsImageGenerator {
     this.__dirname = __dirname;
     this.imgPath = tmpImagePath(filePath, tmpDir);
     this.drawConfig = {
-      bgImgPath: path.join(__dirname, "templates/news-background.svg"),
+      bgImgPath: path.join(__dirname, "assets/news-background.svg"),
       title: {
         rawText: data.title,
         maxFontSize: 110,
@@ -92,7 +92,7 @@ export class NewsImageGenerator {
 
   setBadgeTextConfig() {
     const fontSize = this.titleConfig().fontSize * 0.55;
-    this.canvas.setFont(fontSize);
+    this.canvas.setFont({ size: fontSize });
     const w = this.canvas.context.measureText(
       this.badgeTextConfig().text
     ).width;
@@ -128,7 +128,7 @@ export class NewsImageGenerator {
 
   setYValues() {
     const contentHeight =
-      this.titleConfig().fontSize * (this.titleConfig().text.length + 0.5) +
+      this.titleConfig().lineHeight * (this.titleConfig().text.length + 0.5) +
       this.badgeBgConfig().h;
 
     // Title is placed at 25% of the content's height above center. This felt
@@ -158,7 +158,7 @@ export class NewsImageGenerator {
   drawTitle() {
     const title = this.titleConfig();
     this.canvas.context.textAlign = "center";
-    this.canvas.setFont(title.fontSize);
+    this.canvas.setFont({ size: title.fontSize });
     this.canvas.context.fillStyle = title.color;
     this.canvas.context.fillText(title.text[0], title.x, title.y);
     if (title.text[1]) {
@@ -176,7 +176,7 @@ export class NewsImageGenerator {
     this.canvas.context.fillRect(bg.x, bg.y, bg.w, bg.h);
 
     const text = this.badgeTextConfig();
-    this.canvas.setFont(text.fontSize);
+    this.canvas.setFont({ size: text.fontSize });
     this.canvas.context.fillStyle = text.color;
     this.canvas.context.fillText(text.text, text.x, text.y);
   }
