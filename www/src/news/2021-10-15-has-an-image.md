@@ -1,6 +1,6 @@
 ---
-image: /news/2021-12-15/2021-12-15-announcing-ionic-6.png
-title: Announcing Ionic 6
+title: I HAVE AN IMAGE
+image: /path/to/image.png
 description: Ionic 6 adds improved desktop support, overhauled components, iOS and Android design changes, and so much more!
 source_url: https://ionicframework.com/blog/announcing-ionic-6/
 tags:
