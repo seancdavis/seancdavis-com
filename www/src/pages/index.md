@@ -9,7 +9,7 @@ footer:
   hide_newsletter: true
 sections:
   featured:
-    item: /posts/what-made-the-essence-of-jamstack-possible
+    item: /posts/breaking-down-design-into-components
   recent:
     heading: Recent Posts
     body: The freshest written thoughts, tips, and tutorials from the site.
