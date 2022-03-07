@@ -1,0 +1,35 @@
+name: Publish Tweets
+on:
+  push:
+    paths:
+      - www/**
+jobs:
+  Publish-Tweets:
+    name: "Publish Tweets"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: Install dependencies
+        run: yarn install
+      - name: Run image generator
+        run: |
+          cd www
+          npm run publish-tweets
+        env:
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+          TWITTER_USER_ID: ${{ secrets.TWITTER_USER_ID }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[Bot] Remove pending tweets after publishing"
+          commit_user_name: Sean C Davis
+          commit_user_email: scdavis41@gmail.com
+          commit_author: Sean C Davis <scdavis41@gmail.com>
+          branch: ${{ github.head_ref }}
