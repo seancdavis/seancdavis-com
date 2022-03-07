@@ -26,10 +26,10 @@ const myTweets = myTimeline.tweets;
  * @returns {boolean}
  */
 function alreadyTweeted(text) {
-  myTweets.filter((tweet) => tweet.text === text).length > 0;
+  return myTweets.filter((tweet) => tweet.text === text).length > 0;
 }
 
-// --- Content Files Setup ---
+// --- Content Files ---
 
 const srcPath = path.join(process.cwd(), "src");
 const contentFilesPattern = path.join(srcPath, "@(news|events)", "**/*.md");
@@ -43,7 +43,10 @@ for (const file of contentFiles) {
   // If there is nothing to tweet, go to the next file.
   if (!data.tweet) continue;
   // If the tweet has been sent recently, go to the next file.
-  if (alreadyTweeted(data.tweet)) continue;
+  if (alreadyTweeted(data.tweet)) {
+    console.log("Duplicate tweet found. Skipping.");
+    continue;
+  }
   // Publish the tweet.
   await twitterClient.v2.tweet(data.tweet);
   // Remove the tweet from the frontmatter.
