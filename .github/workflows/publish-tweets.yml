@@ -1,8 +1,5 @@
 name: Publish Tweets
-on:
-  push:
-    paths:
-      - www/**
+on: [workflow_dispatch]
 jobs:
   Publish-Tweets:
     name: "Publish Tweets"
