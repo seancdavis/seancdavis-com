@@ -35,6 +35,21 @@ const srcPath = path.join(process.cwd(), "src");
 const contentFilesPattern = path.join(srcPath, "@(news|events)", "**/*.md");
 const contentFiles = glob.sync(contentFilesPattern);
 
+/**
+ * Given a path to a piece of content, build the appropriate URL to share.
+ *
+ * @param {string} filePath Full path the content file.
+ * @returns {string} Full URL to share.
+ */
+function buildShareUrl(filePath) {
+  const baseUrl = "https://seancdavis.com";
+  const prefix = filePath.replace(srcPath, "").split("/")[1]; // get prefix (e.g. "news")
+  const filename = path
+    .basename(filePath, path.extname(filePath)) // get filename without extension
+    .replace(/^\d{4}-\d{2}-\d{2}-/g, ""); // remove date
+  return `${baseUrl}/${prefix}/${filename}/`;
+}
+
 // --- The Loop ---
 
 for (const file of contentFiles) {
@@ -48,7 +63,8 @@ for (const file of contentFiles) {
     continue;
   }
   // Publish the tweet.
-  await twitterClient.v2.tweet(data.tweet);
+  const shareUrl = buildShareUrl(file);
+  await twitterClient.v2.tweet(`${data.tweet}\n\n${shareUrl}`);
   // Remove the tweet from the frontmatter.
   const newContent = rawContent.replace(/\ntweet: (.*)\n/g, "\n");
   fs.writeFileSync(file, newContent);
