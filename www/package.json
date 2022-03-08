@@ -13,7 +13,7 @@
     "@lhci/cli": "^0.9.0",
     "@netlify/plugin-sitemap": "^0.8.1",
     "@seancdavis/netlify-plugin-jest": "^0.1.0",
-    "algoliasearch": "^4.11.0",
+    "algoliasearch": "^4.12.2",
     "analytics": "^0.8.0",
     "autoprefixer": "^10.4.2",
     "aws-sdk": "^2.1083.0",
