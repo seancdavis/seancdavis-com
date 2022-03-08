@@ -1593,10 +1593,10 @@
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
-"@imgix/js-core@^3.1.3":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@imgix/js-core/-/js-core-3.4.0.tgz#0236247dc0920d8b520ba7be8b358ef021d8365d"
-  integrity sha512-cCOsmpfzG0VOlR+CHD3+1w4KjE8c0JRvQTBdqfDgKKNMY8YVOmFR+jNwkoHybHYEVg6t0/SHMAbgWYC9qD/Zmg==
+"@imgix/js-core@^3.5.1":
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/@imgix/js-core/-/js-core-3.5.1.tgz#00482a6469d55e424899101eb89ba9b0a8d49f18"
+  integrity sha512-5gfOuyC0drq9TdEVR0+fR/PRZx4MqymsiTY38ZJoTXHz5D5IpnQhreroj7F4+VBKLdv96aCU9UyPGVjzSlzYIw==
   dependencies:
     js-base64 "~3.7.0"
     md5 "^2.2.1"
@@ -7621,10 +7621,10 @@ gatsby-plugin-page-creator@^4.8.0:
     globby "^11.0.4"
     lodash "^4.17.21"
 
-gatsby-plugin-react-helmet@^5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-5.6.0.tgz#9757d9164d66fc1201f1cf9af751c63fdb740420"
-  integrity sha512-EdJv0w569Bdaxq46sFX2UExsb1COdTGCXcjg53a31nhFmWo42PBuTBUhGKcsbdmomCaipl9j39NsHjj3opioBQ==
+gatsby-plugin-react-helmet@^5.9.0:
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-5.9.0.tgz#6ac992628f99451ec72d8ceeae11f456f7409366"
+  integrity sha512-TpPxg0Cl+zH34P9rVzKW+o6ejC6fZpvZMZ4Gs/zZ4uFswSJo6hwj/teUjB1rGAytPE+d6w9cZ2IP1gEM2RR9Ig==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
@@ -7756,10 +7756,10 @@ gatsby-transformer-remark@^5.4.0:
     unist-util-select "^3.0.4"
     unist-util-visit "^2.0.3"
 
-gatsby-transformer-sharp@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.7.0.tgz#544f3fc3d1f4cc68dbb02fad59a81e713b09f677"
-  integrity sha512-5t2MIm7AY0M2hrPHhxolGQZLliasZYiG0i1vke2KcW7vSZAmgmDKZBEbAiApqk8IiKFlTtcq4mv772dBx3YQwQ==
+gatsby-transformer-sharp@^4.9.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.9.0.tgz#0f9b70716245d768532927601774bc266534ca24"
+  integrity sha512-Mclg6lf+PugFtl9XX+fZ8Wt+DTb3q4HzFkQgHjErZdK/YpUh6jeThcZGDU4tRhmFHfjx5xUQ9J926D6RFAaI8w==
   dependencies:
     "@babel/runtime" "^7.15.4"
     bluebird "^3.7.2"
@@ -7768,7 +7768,7 @@ gatsby-transformer-sharp@^4.7.0:
     potrace "^2.1.8"
     probe-image-size "^6.0.0"
     semver "^7.3.5"
-    sharp "^0.29.3"
+    sharp "^0.30.1"
 
 gatsby-worker@^1.8.0:
   version "1.8.0"
@@ -12010,10 +12010,10 @@ nan@^2.14.2, nan@^2.15.0:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.15.0.tgz#3f34a473ff18e15c1b5626b62903b5ad6e665fee"
   integrity sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==
 
-nanoid@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.2.0.tgz#62667522da6673971cca916a6d3eff3f415ff80c"
-  integrity sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==
+nanoid@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.1.tgz#6347a18cac88af88f58af0b3594b723d5e99bb35"
+  integrity sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -13951,12 +13951,12 @@ postcss@^7.0.2, postcss@^7.0.27:
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.2.15, postcss@^8.2.9, postcss@^8.3.0, postcss@^8.3.10, postcss@^8.3.11, postcss@^8.4.5, postcss@^8.4.6:
-  version "8.4.6"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.6.tgz#c5ff3c3c457a23864f32cb45ac9b741498a09ae1"
-  integrity sha512-OovjwIzs9Te46vlEx7+uXB0PLijpwjXGKXjVGGPIGubGpq7uh5Xgf6D6FiJ/SzJMBosHDp6a2hiXOS97iBXcaA==
+postcss@^8.2.15, postcss@^8.2.9, postcss@^8.3.0, postcss@^8.3.10, postcss@^8.3.11, postcss@^8.4.6, postcss@^8.4.8:
+  version "8.4.8"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.8.tgz#dad963a76e82c081a0657d3a2f3602ce10c2e032"
+  integrity sha512-2tXEqGxrjvAO6U+CJzDL2Fk2kPHTv1jQsYkSoMeOis2SsYaXRO2COxTdQp99cYvif9JTXaAk9lYGc3VhJt7JPQ==
   dependencies:
-    nanoid "^3.2.0"
+    nanoid "^3.3.1"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
