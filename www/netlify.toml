@@ -6,6 +6,9 @@
   package = "@seancdavis/netlify-plugin-jest"
 
 [[plugins]]
+  package = "@seancdavis/netlify-plugin-github-dispatch"
+
+[[plugins]]
   package = "netlify-plugin-checklinks"
 
 [[plugins]]

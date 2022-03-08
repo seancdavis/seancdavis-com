@@ -12,6 +12,7 @@
     "@imgix/js-core": "^3.5.1",
     "@lhci/cli": "^0.9.0",
     "@netlify/plugin-sitemap": "^0.8.1",
+    "@seancdavis/netlify-plugin-github-dispatch": "^0.1.0",
     "@seancdavis/netlify-plugin-jest": "^0.1.0",
     "algoliasearch": "^4.11.0",
     "analytics": "^0.8.0",
@@ -43,6 +44,7 @@
     "postcss-nested": "^5.0.5",
     "slugify": "^1.6.3",
     "tailwindcss": "^3.0.23",
+    "twitter-api-v2": "^1.11.0",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.1"
   },
@@ -51,6 +53,7 @@
     "clean": "rm -rf dist && rm -f src/assets/css/styles.css && rm -f src/assets/js/bundle.js",
     "dev": "eleventy --serve --port 8000",
     "generate-images": "node scripts/generate-images/index.mjs",
+    "publish-tweets": "node scripts/publish-tweets.mjs",
     "pretest:visual": "ELEVENTY_ENV=test eleventy --quiet",
     "test": "ELEVENTY_ENV=test jest",
     "test:visual": "JEST_CONFIG=visual ELEVENTY_ENV=test jest"
