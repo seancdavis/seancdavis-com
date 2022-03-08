@@ -12,6 +12,7 @@
     "@imgix/js-core": "^3.5.1",
     "@lhci/cli": "^0.9.0",
     "@netlify/plugin-sitemap": "^0.8.1",
+    "@seancdavis/netlify-plugin-github-dispatch": "^0.1.0",
     "@seancdavis/netlify-plugin-jest": "^0.1.0",
     "algoliasearch": "^4.13.0",
     "analytics": "^0.8.0",
