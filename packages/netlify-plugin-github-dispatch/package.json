@@ -1,0 +1,23 @@
+{
+  "name": "@seancdavis/netlify-plugin-github-dispatch",
+  "version": "0.0.1",
+  "description": "Trigger GitHub Action using manifest dispatch after successful Netlify build.",
+  "main": "index.js",
+  "scripts": {
+    "test": "DEBUG=netlify-plugin-github-dispatch BRANCH=main node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seancdavis/seancdavis-com.git"
+  },
+  "author": "Sean C Davis",
+  "license": "SEE LICENSE IN ../../LICENSE",
+  "bugs": {
+    "url": "https://github.com/seancdavis/seancdavis-com/issues"
+  },
+  "homepage": "https://github.com/seancdavis/seancdavis-com/blob/main/packages/netlify-plugin-github-dispatch#readme",
+  "dependencies": {
+    "@octokit/rest": "^18.12.0",
+    "debug": "^4.3.3"
+  }
+}
