@@ -1,5 +1,7 @@
 @layer components {
   .layout--page--content {
+    @apply bg-gray-100;
+
     h1,
     h2,
     h3,
@@ -49,6 +51,10 @@
         @apply mb-0;
       }
     }
+  }
+
+  .layout--page--content + footer {
+    @apply bg-gray-100;
   }
 
   @screen md {
