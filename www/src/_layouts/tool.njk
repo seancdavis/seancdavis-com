@@ -7,12 +7,44 @@
   <div class="container max-w-4xl">
     <h1 class="text-4xl mb-2">{{ title }}</h1>
     {% if topics.length > 0 %}
-      <div class="text-sm">
+      <div class="text-sm mb-3">
         {% for topic in topics %}
           {% topic_badge topic=topic, classes="mr-1" %}
         {% endfor %}
       </div>
     {% endif %}
+    {% if description %}
+      <p class="text-2xl mb-3">{{ description }}</p>
+    {% endif %}
+    <div class="text-gray-700 inline-flex items-center">
+      {% if sources.website %}
+        <a href="{{ sources.website }}" class="inline-flex items-center text-gray-blue">
+          <span class="mr-1 inline-block w-5">
+            {% svg "website" %}
+          </span>
+          <span>{{ sources.website | domain_name }}</span>
+        </a>
+        <span class="mx-2 text-gray-200">&bull;</span>
+      {% endif %}
+      {% if sources.github %}
+        <a href="{{ sources.github }}" class="inline-flex items-center text-gray-blue">
+          <span class="mr-1 inline-block w-5">
+            {% svg "github" %}
+          </span>
+          <span>{{ sources.github | github_repo }}</span>
+        </a>
+        <span class="mx-2 text-gray-200">&bull;</span>
+      {% endif %}
+      {% if sources.twitter %}
+        <a href="{{ sources.twitter }}" class="inline-flex items-center text-gray-blue">
+          <span class="mr-1 inline-block w-5">
+            {% svg "twitter" %}
+          </span>
+          <span>{{ sources.twitter | twitter_handle }}</span>
+        </a>
+        <span class="mx-2 text-gray-200">&bull;</span>
+      {% endif %}
+    </div>
   </div>
 </div>
 
