@@ -9,6 +9,13 @@
     {% if host %}
       <p class="italic text-blue-gray mb-3 mt-[-.5rem]">by {{ host }}</p>
     {% endif %}
+    {% if topics.length > 0 %}
+      <div class="text-sm mb-3">
+        {% for topic in topics %}
+          {% topic_badge topic=topic, classes="mr-1" %}
+        {% endfor %}
+      </div>
+    {% endif %}
     {% if description %}
       <p class="text-2xl mb-3">{{ description }}</p>
     {% endif %}
@@ -28,13 +35,6 @@
       </span>
       <span>{{ cost }}</span>
     </div>
-    {% if topics.length > 0 %}
-      <div class="text-sm">
-        {% for topic in topics %}
-          {% topic_badge topic=topic, classes="mr-1" %}
-        {% endfor %}
-      </div>
-    {% endif %}
   </div>
 </div>
 
