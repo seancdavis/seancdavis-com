@@ -163,46 +163,10 @@
   /* --- Code Blocks --- */
   pre {
     @apply my-6
-      px-8
-      py-6;
+      rounded-none;
 
     margin-left: -2rem;
     margin-right: -2rem;
-
-    &:not([class*="language-"]) {
-      background-color: var(--color-code-block-bg);
-
-      > code {
-        @apply text-white;
-      }
-    }
-
-    > code {
-      @apply bg-transparent
-        inline-block
-        p-0
-        whitespace-pre-wrap;
-
-      /* Fits 81 characters on the line at max-w-3xl */
-      font-size: 0.85rem;
-      line-height: 1.666;
-    }
-
-    mark {
-      background-color: var(--color-blue-a50);
-      color: inherit;
-      margin-left: -1.25rem;
-
-      &:before {
-        content: "+ ";
-      }
-    }
-
-    /* This is a class used by Prism and Tailwind. This overrides the Tailwind
-    defaults. */
-    .table {
-      @apply inline-block;
-    }
 
     & + .filename {
       margin-top: -1.5rem;
@@ -210,37 +174,14 @@
   }
 
   .filename {
-    @apply font-mono
-      mb-0
-      mt-6
-      px-4
-      py-2
-      text-right
-      text-sm
-      text-black;
+    @apply mt-6
+      rounded-none;
 
     margin-left: -2rem;
     margin-right: -2rem;
-
-    background-color: var(--color-code-block-bg);
-    margin-left: -2rem;
-    margin-right: -2rem;
-
-    > code {
-      @apply bg-transparent
-        block
-        opacity-50
-        p-0
-        text-sm
-        text-white;
-    }
 
     & + pre {
-      @apply mt-0
-        pt-4;
-
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+      @apply mt-0;
     }
   }
 

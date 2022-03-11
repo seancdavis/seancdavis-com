@@ -32,4 +32,10 @@ npx create-stackbit-app
 
 Lorem sit incididunt aute consectetur incididunt commodo do eu elit. Quis elit commodo incididunt ad culpa duis veniam velit aliqua adipisicing nostrud aliqua nostrud. Proident exercitation minim incididunt elit magna amet commodo exercitation tempor fugiat.
 
+`index.html` {.filename}
+
+```html
+<div class="container">Hello World</div>
+```
+
 Aliqua sint in proident amet. Velit aliqua ad nostrud occaecat sunt dolore deserunt minim sit dolor ea ea tempor cillum.
