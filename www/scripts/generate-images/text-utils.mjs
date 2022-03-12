@@ -24,6 +24,14 @@ function splitLines(title) {
   return [line1, line2];
 }
 
+export function getFontSize({ fontSize, context, text, maxLineWidth }) {
+  do {
+    fontSize--;
+    context.font = fontString(fontSize);
+  } while (context.measureText(text).width > maxLineWidth);
+  return fontSize;
+}
+
 export function formatTitle({ title, context, maxFontSize, maxLineWidth }) {
   // Return references
   let fontSize = maxFontSize;
@@ -36,10 +44,7 @@ export function formatTitle({ title, context, maxFontSize, maxLineWidth }) {
   // Otherwise, assume spanning two lines, and reduce until it fits.
   text = splitLines(title);
   for (const line of text) {
-    do {
-      fontSize--;
-      context.font = fontString(fontSize);
-    } while (context.measureText(line).width > maxLineWidth);
+    fontSize = getFontSize({ text: line, context, maxLineWidth, fontSize });
   }
   return { fontSize, text };
 }

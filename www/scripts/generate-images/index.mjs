@@ -9,6 +9,7 @@ import path from "path";
 
 import { NewsImageGenerator } from "./news-image-generator.mjs";
 import { EventImageGenerator } from "./event-image-generator.mjs";
+import { ToolImageGenerator } from "./tool-image-generator.mjs";
 import { uploadFile, storeImageRef } from "./file-utils.mjs";
 
 const config = {
@@ -23,6 +24,10 @@ const config = {
     news: {
       filePattern: "news/*.md",
       generator: NewsImageGenerator,
+    },
+    tools: {
+      filePattern: "tools/*.md",
+      generator: ToolImageGenerator,
     },
   },
 };
