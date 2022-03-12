@@ -1,4 +1,5 @@
 ---
+image: /tools/2022-03-08/2022-03-08-closed-source-project.png
 last_updated: 2022-03-08
 title: Closed Source Project
 description: Exercitation dolor nostrud ex ex deserunt qui dolore. Sunt cillum qui aliquip in sint ipsum dolore irure.
