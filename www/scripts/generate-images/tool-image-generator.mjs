@@ -1,9 +1,16 @@
+import fs from "fs";
 import path from "path";
+import ImgixClient from "@imgix/js-core";
 
 import { getFontSize } from "./text-utils.mjs";
 
-import { tmpImagePath } from "./file-utils.mjs";
+import { tmpImagePath, filenameParts, uploadFile } from "./file-utils.mjs";
 import { Canvas } from "./canvas.mjs";
+
+const imgixClient = new ImgixClient({
+  domain: process.env.IMGIX_DOMAIN,
+  secureURLToken: process.env.IMGIX_TOKEN,
+});
 
 // TODO:
 // - [ ] Add sources
@@ -21,6 +28,7 @@ export class ToolImageGenerator {
   constructor({ __dirname, tmpDir, item: { filePath, data } }) {
     this.__dirname = __dirname;
     this.imgPath = tmpImagePath(filePath, tmpDir);
+    this.filePath = filePath;
     this.drawConfig = {
       bgImgPath: path.join(__dirname, "assets/tool-background.svg"),
       title: {
@@ -28,6 +36,13 @@ export class ToolImageGenerator {
         maxFontSize: 110,
         maxContentWidth: 1000,
         color: "#051c28",
+      },
+      logo: {
+        remoteSrc: null,
+        remoteRef: data.logo,
+        localSrc: data.logo_to_upload
+          ? path.join(__dirname, "../../", data.logo_to_upload)
+          : null,
       },
       sources: {
         color: "#4B6A8A",
@@ -49,6 +64,7 @@ export class ToolImageGenerator {
 
   async run() {
     this.canvas = new Canvas();
+    await this.processLogo();
     this.setTitleConfig();
     // We need to know the height of all the content before we can determine the
     // y values for each item.
@@ -68,6 +84,14 @@ export class ToolImageGenerator {
 
   titleConfig() {
     return this.drawConfig.title;
+  }
+
+  logoConfig() {
+    return this.drawConfig.logo;
+  }
+
+  sourcesConfig() {
+    return this.drawConfig.sources;
   }
 
   // --- Config Setters ---
@@ -124,5 +148,38 @@ export class ToolImageGenerator {
     this.canvas.setFont({ size: title.fontSize });
     this.canvas.context.fillStyle = title.color;
     this.canvas.context.fillText(title.text, title.x, title.y);
+  }
+
+  // --- Logo Uploader ---
+
+  async processLogo() {
+    if (this.logoConfig().localSrc) await this.uploadLogo();
+    this.setLogoRemoteSrc();
+  }
+
+  async uploadLogo() {
+    const { slug } = filenameParts(this.filePath);
+    const uploadPath = await uploadFile(
+      this.logoConfig().localSrc,
+      `tools/${slug}`,
+      false
+    );
+    this.storeLogoRef(uploadPath);
+    fs.unlinkSync(this.logoConfig().localSrc);
+  }
+
+  storeLogoRef(s3Path) {
+    const rawContent = fs.readFileSync(this.filePath).toString();
+    const newFileContent = rawContent
+      .replace(/logo_to_upload\: (.*)\n/, "") // remove tmp ref
+      .replace(/^---/, `---\nlogo: /${s3Path}`); // add new ref
+    return fs.writeFileSync(this.filePath, newFileContent);
+  }
+
+  setLogoRemoteSrc() {
+    let params = { auto: "format,compress", w: 800, h: 800 };
+    const remoteSrc = imgixClient.buildURL(this.logoConfig().remoteRef, params);
+    console.log(remoteSrc);
+    process.exit(0);
   }
 }

@@ -28,6 +28,7 @@ const config = {
     tools: {
       filePattern: "tools/*.md",
       generator: ToolImageGenerator,
+      uploadDirType: "slug",
     },
   },
 };
@@ -59,7 +60,11 @@ for (const contentType of Object.keys(config.generators)) {
     const generator = new generatorConfig.generator({ ...config, item });
     const tmpFilePath = await generator.run();
     // Upload generated image.
-    const uploadPath = await uploadFile(tmpFilePath, contentType);
+    const uploadPath = await uploadFile(
+      tmpFilePath,
+      contentType,
+      generatorConfig.uploadDirType
+    );
     if (!uploadPath) continue;
     // Store reference on item.
     storeImageRef(item.filePath, uploadPath);

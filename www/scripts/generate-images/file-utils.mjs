@@ -16,6 +16,22 @@ export function tmpImagePath(filePath, tmpDir) {
 }
 
 /**
+ * Get the filename (with extension), basename (without extension), date, slug
+ * (basename without date) from a filename or file path.
+ *
+ * @param {string} filePath Full (or partial) path to the file
+ * @returns {object} { filename, basename, date, slug }
+ */
+export function filenameParts(filePath) {
+  const filename = path.basename(filePath);
+  const basename = path.basename(filePath, path.extname(filePath));
+  const dateMatcher = basename.match(/^\d{4}-\d{2}-\d{2}/);
+  const date = dateMatcher ? dateMatcher[0] : null;
+  const slug = basename.replace(`${date}-`, "");
+  return { filename, basename, date, slug };
+}
+
+/**
  * Upload a temporary generated file to s3. Filename of temp file must have a
  * preceding date string as YYYY-MM-DD, as upload path will follow this format:
  *
@@ -25,13 +41,15 @@ export function tmpImagePath(filePath, tmpDir) {
  * @param prefix string - directory in which to upload the file (content type)
  * @returns upload path in s3 (without preceding slash)
  */
-export async function uploadFile(filePath, prefix) {
+export async function uploadFile(filePath, prefix, uploadDirType = "date") {
   if (process.env.SKIP_S3_UPLOAD) return false;
 
   const bucket = process.env.AWS_BUCKET;
-  const basename = path.basename(filePath, path.extname(filePath));
-  const dateStr = basename.match(/^\d{4}-\d{2}-\d{2}/)[0];
-  const uploadPath = `${prefix}/${dateStr}/${basename}.png`;
+  const filename = filenameParts(filePath);
+
+  let uploadPath = `${prefix}/`;
+  if (uploadDirType) uploadPath += `${filename[uploadDirType]}/`;
+  uploadPath += filename.filename;
 
   const s3 = new AWS.S3({ apiVersion: "2006-03-01" });
   const params = {
@@ -44,7 +62,7 @@ export async function uploadFile(filePath, prefix) {
   return new Promise((resolve, reject) => {
     s3.putObject(params, (err) => {
       if (err) return reject(err, err.stack);
-      const msg = `Uploaded meta image to: https://${bucket}.s3.amazonaws.com/${uploadPath}`;
+      const msg = `Uploaded file to: https://${bucket}.s3.amazonaws.com/${uploadPath}`;
       console.log(msg);
       resolve(uploadPath);
     });
