@@ -2,6 +2,11 @@ import fs from "fs";
 import path from "path";
 
 import { getFontSize } from "./text-utils.mjs";
+import {
+  extractTwitterHandle,
+  extractDomainName,
+  extractGitHubRepoPath,
+} from "./url-utils.mjs";
 
 import {
   tmpImagePath,
@@ -10,16 +15,6 @@ import {
   downloadFile,
 } from "./file-utils.mjs";
 import { Canvas } from "./canvas.mjs";
-
-// TODO:
-// - [ ] Add sources
-// - [ ] Account for always at least one source, but not always three.
-// - [x] Add logo uploader
-// - [ ] Add logo to title after upload
-// - [ ] Should work without a logo
-// - [ ] Add icons to sources
-// - [ ] Set y values based on content height
-// - [ ] Keep the image filename specific to the date, but use the tool name as the directory
 
 /**
  * Generates a meta image file for one news item and stores locally.
@@ -53,17 +48,27 @@ export class ToolImageGenerator {
       },
       sources: {
         color: "#4B6A8A",
+        fontSize: null,
+        textX: null,
+        iconX: 150,
+        iconW: null,
         website: {
           icon: "website.svg",
-          text: data.sources?.website,
+          text: extractDomainName(data.sources?.website),
+          textY: null,
+          iconY: null,
         },
         github: {
           icon: "github.svg",
-          text: data.sources?.github,
+          text: extractGitHubRepoPath(data.sources?.github),
+          textY: null,
+          iconY: null,
         },
         twitter: {
           icon: "twitter.svg",
-          text: data.sources?.twitter,
+          text: extractTwitterHandle(data.sources?.twitter),
+          textY: null,
+          iconY: null,
         },
       },
     };
@@ -74,12 +79,14 @@ export class ToolImageGenerator {
     await this.processLogo();
     this.setTitleConfig();
     this.setLogoConfig();
+    this.setSourcesConfig();
     // We need to know the height of all the content before we can determine the
     // y values for each item.
     this.setYValues();
     await this.drawBgImage();
     await this.drawLogo();
     this.drawTitle();
+    await this.drawSources();
     this.canvas.saveImage(this.imgPath);
 
     return this.imgPath;
@@ -131,30 +138,58 @@ export class ToolImageGenerator {
     };
   }
 
-  setYValues() {
-    // const contentHeight =
-    //   this.titleConfig().lineHeight * (this.titleConfig().text.length + 0.5) +
-    //   this.badgeBgConfig().h;
+  setSourcesConfig() {
+    const fontSize = this.titleConfig().fontSize * 0.5;
+    const iconW = fontSize * 1.5;
+    const textX = this.sourcesConfig().iconX + fontSize * 2.25;
 
-    // Title is placed at 25% of the content's height above center. This felt
-    // more balanced than centering completely, which made the title feel like
-    // it was too close to the top.
-    // this.drawConfig.title.y = this.canvas.config.h / 2 - contentHeight / 4;
-    this.drawConfig.title.y = 300;
+    this.drawConfig.sources = {
+      ...this.sourcesConfig(),
+      fontSize,
+      iconW,
+      textX,
+    };
+  }
+
+  setYValues() {
+    const numSources = ["website", "twitter", "github"].filter(
+      (source) => this.sourcesConfig()[source].text
+    ).length;
+
+    let contentHeight =
+      this.titleConfig().fontSize * 2.5 + // Extra numbers here are for spacing
+      this.sourcesConfig().fontSize * 2.5 * numSources; // And here
+
+    // Title
+    this.drawConfig.title.y = this.canvasConfig().h / 2 - contentHeight / 3;
     this.drawConfig.logo.y =
       this.titleConfig().y - this.titleConfig().fontSize * 1.1;
-    // The extra 0.5 is the margin between the title and the badge.
-    // this.drawConfig.badge.text.y =
-    //   this.titleConfig().y +
-    //   this.titleConfig().lineHeight * (this.titleConfig().text.length + 0.5);
-    // Like badge background x value, this is calculated from the badge text's
-    // position, which is the center of the text, while the background's y is
-    // the top of the rectangle.
-    // this.drawConfig.badge.bg.y =
-    //   this.badgeTextConfig().y -
-    //   this.badgeTextConfig().fontSize -
-    //   this.badgeBgConfig().paddingY +
-    //   2;
+
+    let nextY = this.titleConfig().y + this.titleConfig().fontSize * 2.5;
+
+    // Website
+    if (this.sourcesConfig().website.text) {
+      this.drawConfig.sources.website.textY = nextY;
+      this.drawConfig.sources.website.iconY =
+        this.sourcesConfig().website.textY -
+        this.sourcesConfig().fontSize * 1.2;
+      nextY += this.sourcesConfig().fontSize * 2.5;
+    }
+    // Twitter
+    if (this.sourcesConfig().twitter.text) {
+      this.drawConfig.sources.twitter.textY = nextY;
+      this.drawConfig.sources.twitter.iconY =
+        this.sourcesConfig().twitter.textY -
+        this.sourcesConfig().fontSize * 1.2;
+      nextY += this.sourcesConfig().fontSize * 2.5;
+    }
+    // GitHub
+    if (this.sourcesConfig().github.text) {
+      this.drawConfig.sources.github.textY = nextY;
+      this.drawConfig.sources.github.iconY =
+        this.sourcesConfig().github.textY - this.sourcesConfig().fontSize * 1.2;
+      nextY += this.sourcesConfig().fontSize * 2.5;
+    }
   }
 
   // --- Draw Utils ---
@@ -174,6 +209,26 @@ export class ToolImageGenerator {
     this.canvas.setFont({ size: title.fontSize });
     this.canvas.context.fillStyle = title.color;
     this.canvas.context.fillText(title.text, title.x, title.y);
+  }
+
+  async drawSources() {
+    const sources = ["website", "twitter", "github"];
+    const { color, fontSize, textX, iconX, iconW } = this.sourcesConfig();
+    for (const source of sources) {
+      if (!this.sourcesConfig()[source].text) continue;
+      const { icon, text, iconY, textY } = this.sourcesConfig()[source];
+      // Draw the icon
+      await this.canvas.drawImage(path.join(this.__dirname, "assets", icon), {
+        x: iconX,
+        y: iconY,
+        w: iconW,
+        h: iconW,
+      });
+      // Draw the text.
+      this.canvas.setFont({ size: fontSize });
+      this.canvas.context.fillStyle = color;
+      this.canvas.context.fillText(text, textX, textY);
+    }
   }
 
   // --- Logo Uploader ---
