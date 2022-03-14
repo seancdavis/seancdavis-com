@@ -16,3 +16,6 @@ src/assets/js/bundle.js*
 
 # Temp files
 tmp/
+
+# GitHub
+.gh.json
