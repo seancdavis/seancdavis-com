@@ -36,6 +36,9 @@ export class ToolImageGenerator {
         maxFontSize: 110,
         maxContentWidth: 1000,
         color: "#051c28",
+        fontSize: null,
+        x: null,
+        y: null,
       },
       logo: {
         remoteSrc: data.logo,
@@ -43,6 +46,10 @@ export class ToolImageGenerator {
         uploadSrc: data.logo_to_upload
           ? path.join(__dirname, "../../", data.logo_to_upload)
           : null,
+        w: null,
+        h: null,
+        x: 150,
+        y: null,
       },
       sources: {
         color: "#4B6A8A",
@@ -66,10 +73,12 @@ export class ToolImageGenerator {
     this.canvas = new Canvas();
     await this.processLogo();
     this.setTitleConfig();
+    this.setLogoConfig();
     // We need to know the height of all the content before we can determine the
     // y values for each item.
     this.setYValues();
     await this.drawBgImage();
+    await this.drawLogo();
     this.drawTitle();
     this.canvas.saveImage(this.imgPath);
 
@@ -103,12 +112,22 @@ export class ToolImageGenerator {
       text: this.titleConfig().text,
       maxLineWidth: this.titleConfig().maxContentWidth,
     });
-    const x = 175;
+    const x = this.logoConfig().localSrc ? fontSize * 1.3 + 200 : 150;
 
     this.drawConfig.title = {
       ...this.titleConfig(),
       fontSize,
       x,
+    };
+  }
+
+  setLogoConfig() {
+    const w = this.titleConfig().fontSize * 1.3;
+
+    this.drawConfig.logo = {
+      ...this.logoConfig(),
+      w,
+      h: w, // logo must be a square
     };
   }
 
@@ -122,6 +141,8 @@ export class ToolImageGenerator {
     // it was too close to the top.
     // this.drawConfig.title.y = this.canvas.config.h / 2 - contentHeight / 4;
     this.drawConfig.title.y = 300;
+    this.drawConfig.logo.y =
+      this.titleConfig().y - this.titleConfig().fontSize * 1.1;
     // The extra 0.5 is the margin between the title and the badge.
     // this.drawConfig.badge.text.y =
     //   this.titleConfig().y +
@@ -142,9 +163,14 @@ export class ToolImageGenerator {
     await this.canvas.setBgImage(this.drawConfig.bgImgPath);
   }
 
+  async drawLogo() {
+    if (!this.logoConfig().remoteSrc) return;
+    const { x, y, w, h, localSrc } = this.logoConfig();
+    await this.canvas.drawImage(localSrc, { x, y, w, h });
+  }
+
   drawTitle() {
     const title = this.titleConfig();
-    // this.canvas.context.textAlign = "center";
     this.canvas.setFont({ size: title.fontSize });
     this.canvas.context.fillStyle = title.color;
     this.canvas.context.fillText(title.text, title.x, title.y);
@@ -154,11 +180,12 @@ export class ToolImageGenerator {
 
   async processLogo() {
     if (this.logoConfig().uploadSrc) await this.uploadLogo();
+    // If there was nothing to upload and no other log reference set, we're done
+    // working with the logo.
+    if (!this.logoConfig().remoteSrc) return;
     this.drawConfig.logo.localSrc = await downloadFile(
       this.logoConfig().remoteSrc
     );
-    console.log(this.drawConfig);
-    process.exit(0);
   }
 
   async uploadLogo() {
