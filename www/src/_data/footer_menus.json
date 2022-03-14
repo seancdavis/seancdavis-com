@@ -45,6 +45,10 @@
         "url": "/license"
       },
       {
+        "label": "Privacy Policy",
+        "url": "/privacy-policy"
+      },
+      {
         "label": "Code",
         "url": "https://github.com/seancdavis/seancdavis-com"
       }
