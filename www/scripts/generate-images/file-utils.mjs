@@ -44,9 +44,7 @@ export function filenameParts(filePath) {
 export async function uploadFile(filePath, prefix, uploadDirType = "date") {
   if (process.env.SKIP_S3_UPLOAD) return false;
 
-  const bucket = process.env.AWS_BUCKET;
   const filename = filenameParts(filePath);
-
   let uploadPath = `${prefix}/`;
   if (uploadDirType) uploadPath += `${filename[uploadDirType]}/`;
   uploadPath += filename.filename;
@@ -54,7 +52,7 @@ export async function uploadFile(filePath, prefix, uploadDirType = "date") {
   const s3 = new AWS.S3({ apiVersion: "2006-03-01" });
   const params = {
     Body: fs.readFileSync(filePath),
-    Bucket: bucket,
+    Bucket: process.env.AWS_BUCKET,
     Key: uploadPath,
     ContentType: "image/png",
   };
@@ -65,6 +63,31 @@ export async function uploadFile(filePath, prefix, uploadDirType = "date") {
       const msg = `Uploaded file to: https://${bucket}.s3.amazonaws.com/${uploadPath}`;
       console.log(msg);
       resolve(uploadPath);
+    });
+  });
+}
+
+/**
+ * Given a key (s3 file path), download a file to the tmp directory.
+ *
+ * @param {string} s3Path S3 key - path to the file
+ * @returns {Promise<string>} Full local file path
+ */
+export async function downloadFile(s3Path) {
+  const filename = path.basename(s3Path);
+  const tmpFilePath = path.join(process.cwd(), "tmp", filename);
+
+  const s3 = new AWS.S3({ apiVersion: "2006-03-01" });
+  const params = {
+    Bucket: process.env.AWS_BUCKET,
+    Key: s3Path.startsWith("/") ? s3Path.slice(1) : s3Path,
+  };
+
+  return new Promise((resolve, reject) => {
+    s3.getObject(params, (err, res) => {
+      if (err) return reject(err, err.stack);
+      fs.writeFileSync(tmpFilePath, res.Body);
+      resolve(tmpFilePath);
     });
   });
 }

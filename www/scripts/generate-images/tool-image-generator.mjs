@@ -1,22 +1,22 @@
 import fs from "fs";
 import path from "path";
-import ImgixClient from "@imgix/js-core";
 
 import { getFontSize } from "./text-utils.mjs";
 
-import { tmpImagePath, filenameParts, uploadFile } from "./file-utils.mjs";
+import {
+  tmpImagePath,
+  filenameParts,
+  uploadFile,
+  downloadFile,
+} from "./file-utils.mjs";
 import { Canvas } from "./canvas.mjs";
-
-const imgixClient = new ImgixClient({
-  domain: process.env.IMGIX_DOMAIN,
-  secureURLToken: process.env.IMGIX_TOKEN,
-});
 
 // TODO:
 // - [ ] Add sources
 // - [ ] Account for always at least one source, but not always three.
-// - [ ] Add icon uploader
-// - [ ] Add icon to title after upload
+// - [x] Add logo uploader
+// - [ ] Add logo to title after upload
+// - [ ] Should work without a logo
 // - [ ] Add icons to sources
 // - [ ] Set y values based on content height
 // - [ ] Keep the image filename specific to the date, but use the tool name as the directory
@@ -38,9 +38,9 @@ export class ToolImageGenerator {
         color: "#051c28",
       },
       logo: {
-        remoteSrc: null,
-        remoteRef: data.logo,
-        localSrc: data.logo_to_upload
+        remoteSrc: data.logo,
+        localSrc: null,
+        uploadSrc: data.logo_to_upload
           ? path.join(__dirname, "../../", data.logo_to_upload)
           : null,
       },
@@ -153,33 +153,31 @@ export class ToolImageGenerator {
   // --- Logo Uploader ---
 
   async processLogo() {
-    if (this.logoConfig().localSrc) await this.uploadLogo();
-    this.setLogoRemoteSrc();
+    if (this.logoConfig().uploadSrc) await this.uploadLogo();
+    this.drawConfig.logo.localSrc = await downloadFile(
+      this.logoConfig().remoteSrc
+    );
+    console.log(this.drawConfig);
+    process.exit(0);
   }
 
   async uploadLogo() {
     const { slug } = filenameParts(this.filePath);
     const uploadPath = await uploadFile(
-      this.logoConfig().localSrc,
+      this.logoConfig().uploadSrc,
       `tools/${slug}`,
       false
     );
     this.storeLogoRef(uploadPath);
-    fs.unlinkSync(this.logoConfig().localSrc);
+    fs.unlinkSync(this.logoConfig().uploadSrc);
   }
 
   storeLogoRef(s3Path) {
+    this.drawConfig.logo.remoteSrc = s3Path;
     const rawContent = fs.readFileSync(this.filePath).toString();
     const newFileContent = rawContent
       .replace(/logo_to_upload\: (.*)\n/, "") // remove tmp ref
       .replace(/^---/, `---\nlogo: /${s3Path}`); // add new ref
     return fs.writeFileSync(this.filePath, newFileContent);
-  }
-
-  setLogoRemoteSrc() {
-    let params = { auto: "format,compress", w: 800, h: 800 };
-    const remoteSrc = imgixClient.buildURL(this.logoConfig().remoteRef, params);
-    console.log(remoteSrc);
-    process.exit(0);
   }
 }
