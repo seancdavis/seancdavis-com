@@ -5,6 +5,8 @@ const contentCardMap = {
   News: { component: "news_card", prop: "item" },
   Post: { component: "post_card", prop: "post" },
   Tool: { component: "tool_card", prop: "tool" },
+  // TODO: Change me
+  Toolkit: { component: "post_card", prop: "post" },
   Video: { component: "video_card", prop: "video" },
 };
 
