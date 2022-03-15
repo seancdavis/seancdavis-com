@@ -13,36 +13,36 @@
     {% if data.description %}
       <p class="tool-card--description">{{ data.description }}</p>
     {% endif %}
-    <span class="inline-flex items-center text-gray-blue font-sans text-sm">
+    <span class="text-gray-blue font-sans text-sm">
       {% if sources.website %}
-        <a href="{{ sources.website.url }}" class="inline-flex items-center text-gray-blue">
-          <span class="mr-1 inline-block w-4">
-            {{ sources.website.icon | safe }}
-          </span>
-          <span>{{ sources.website.text }}</span>
-        </a>
-        {% if sources.twitter or sources.github %}
-          <span class="mx-2 text-gray-200">&bull;</span>
-        {% endif %}
+        <div>
+          <a href="{{ sources.website.url }}" class="inline-flex items-center text-gray-blue{% if sources.twitter or sources.github %} mb-1{% endif %}">
+            <span class="mr-1 inline-block w-4">
+              {{ sources.website.icon | safe }}
+            </span>
+            <span>{{ sources.website.text }}</span>
+          </a>
+        </div>
       {% endif %}
       {% if sources.twitter %}
-        <a href="{{ sources.twitter.url }}" class="inline-flex items-center text-gray-blue">
-          <span class="mr-1 inline-block w-4">
-            {{ sources.twitter.icon | safe }}
-          </span>
-          <span>{{ sources.twitter.text }}</span>
-        </a>
-        {% if sources.github %}
-          <span class="mx-2 text-gray-200">&bull;</span>
-        {% endif %}
+        <div>
+          <a href="{{ sources.twitter.url }}" class="inline-flex items-center text-gray-blue{% if sources.github %} mb-1{% endif %}">
+            <span class="mr-1 inline-block w-4">
+              {{ sources.twitter.icon | safe }}
+            </span>
+            <span>{{ sources.twitter.text }}</span>
+          </a>
+        </div>
       {% endif %}
       {% if sources.github %}
-        <a href="{{ sources.github.url }}" class="inline-flex items-center text-gray-blue">
-          <span class="mr-1 inline-block w-4">
-            {{ sources.github.icon | safe }}
-          </span>
-          <span>{{ sources.github.text }}</span>
-        </a>
+        <div>
+          <a href="{{ sources.github.url }}" class="inline-flex items-center text-gray-blue">
+            <span class="mr-1 inline-block w-4">
+              {{ sources.github.icon | safe }}
+            </span>
+            <span>{{ sources.github.text }}</span>
+          </a>
+        </div>
       {% endif %}
     </span>
   </div>
