@@ -4,8 +4,7 @@ const contentCardMap = {
   Event: { component: "event_card", prop: "event" },
   News: { component: "news_card", prop: "item" },
   Post: { component: "post_card", prop: "post" },
-  // TODO: Change this
-  Tool: { component: "post_card", prop: "post" },
+  Tool: { component: "tool_card", prop: "tool" },
   Video: { component: "video_card", prop: "video" },
 };
 

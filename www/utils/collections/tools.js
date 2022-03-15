@@ -9,7 +9,7 @@ exports.getToolsCollection = (collectionApi) => {
     .sort((a, b) => a.data.title - b.data.title);
   let tools = collectionApi
     .getFilteredByTag("Tool")
-    .sort((a, b) => b.start_date - a.start_date);
+    .sort((a, b) => b.data.title - a.data.title);
   const findTagObj = (slug) => topics.find((topic) => topic.fileSlug === slug);
   tools.map((tool) => {
     // Add "topics" attribute with rich objects from tag strings (topic slugs).

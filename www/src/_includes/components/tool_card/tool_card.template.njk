@@ -1,0 +1,49 @@
+<div class="component--tool-card layout-{{ layout }} {{ wrapperClasses }}">
+  <div class="{{ contentClasses }}">
+    {% if topics.length > 0 %}
+      <div class="mb-4 text-sm">
+        {{ topics | safe }}
+      </div>
+    {% endif %}
+    <h2 class="text-2xl mb-1">
+      <a href="{{ url }}" class="link-transition">
+        {{ data.title }}
+      </a>
+    </h2>
+    {% if data.description %}
+      <p class="tool-card--description">{{ data.description }}</p>
+    {% endif %}
+    <span class="inline-flex items-center text-gray-blue font-sans text-sm">
+      {% if sources.website %}
+        <a href="{{ sources.website.url }}" class="inline-flex items-center text-gray-blue">
+          <span class="mr-1 inline-block w-4">
+            {{ sources.website.icon | safe }}
+          </span>
+          <span>{{ sources.website.text }}</span>
+        </a>
+        {% if sources.twitter or sources.github %}
+          <span class="mx-2 text-gray-200">&bull;</span>
+        {% endif %}
+      {% endif %}
+      {% if sources.twitter %}
+        <a href="{{ sources.twitter.url }}" class="inline-flex items-center text-gray-blue">
+          <span class="mr-1 inline-block w-4">
+            {{ sources.twitter.icon | safe }}
+          </span>
+          <span>{{ sources.twitter.text }}</span>
+        </a>
+        {% if sources.github %}
+          <span class="mx-2 text-gray-200">&bull;</span>
+        {% endif %}
+      {% endif %}
+      {% if sources.github %}
+        <a href="{{ sources.github.url }}" class="inline-flex items-center text-gray-blue">
+          <span class="mr-1 inline-block w-4">
+            {{ sources.github.icon | safe }}
+          </span>
+          <span>{{ sources.github.text }}</span>
+        </a>
+      {% endif %}
+    </span>
+  </div>
+</div>
