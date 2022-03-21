@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "gatsby-transformer-remark": "^5.9.1",
-    "prettier": "2.5.1"
+    "prettier": "2.6.0"
   },
   "keywords": [
     "gatsby"
