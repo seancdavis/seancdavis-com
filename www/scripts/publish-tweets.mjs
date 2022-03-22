@@ -32,7 +32,7 @@ function alreadyTweeted(text) {
 // --- Content Files ---
 
 const srcPath = path.join(process.cwd(), "src");
-const contentFilesPattern = path.join(srcPath, "@(news|events)", "**/*.md");
+const contentFilesPattern = path.join(srcPath, "@(posts)", "**/*.md");
 const contentFiles = glob.sync(contentFilesPattern);
 
 /**
