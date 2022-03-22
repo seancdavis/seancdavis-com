@@ -1,7 +1,12 @@
 [
   {
-    "label": "Blog",
-    "url": "/blog",
+    "label": "Posts",
+    "url": "/posts",
+    "button": false
+  },
+  {
+    "label": "Videos",
+    "url": "https://www.youtube.com/channel/UCskZ3MNbeGSVyOTL0L5ooww",
     "button": false
   },
   {
@@ -12,6 +17,7 @@
   {
     "label": "Search",
     "url": "/search",
+    "icon": "search",
     "button": false
   },
   {

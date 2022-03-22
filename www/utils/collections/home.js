@@ -1,7 +1,6 @@
 const { getPostsCollection } = require("./posts");
 const { getGuestPostsCollection } = require("./guest-posts");
 const { getRepostsCollection } = require("./reposts");
-const { getVideosCollection } = require("./videos");
 
 /**
  * Extends Eleventy's configuration.
@@ -19,7 +18,6 @@ exports.default = (eleventyConfig) => {
    */
   eleventyConfig.addCollection("home", (collectionApi) => {
     const allPosts = getPostsCollection(collectionApi);
-    const allVideos = getVideosCollection(collectionApi);
     const allGuestPosts = getGuestPostsCollection(collectionApi);
     const allReposts = getRepostsCollection(collectionApi);
     const allContent = collectionApi.getAll();
@@ -34,9 +32,6 @@ exports.default = (eleventyConfig) => {
       return item.filePathStem === homePage.data.sections.featured.item;
     });
 
-    // Note that because this is using the posts collection itself (vs using
-    // blog or the tag itself) that it is excluding videos (and any other
-    // content types).
     const postsWithTag = (tagName) => {
       return allPosts.filter((post) => post.data.tags.includes(tagName));
     };
@@ -57,7 +52,6 @@ exports.default = (eleventyConfig) => {
 
     const recent = getContentItems(allPosts);
     const javascript = getContentItems(postsWithTag("javascript"));
-    const videos = getContentItems(allVideos);
     const guest_posts = getContentItems(allGuestPosts);
     const jamstack = getContentItems(postsWithTag("jamstack"));
     const reposts = getContentItems(allReposts);
@@ -66,7 +60,6 @@ exports.default = (eleventyConfig) => {
       featured,
       recent,
       javascript,
-      videos,
       guest_posts,
       jamstack,
       reposts,

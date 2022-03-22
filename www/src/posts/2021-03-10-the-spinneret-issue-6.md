@@ -54,7 +54,7 @@ _Notable changes made [to my website codebase](https://github.com/seancdavis/sea
     src="/posts/210310/the-spinneret--my-code.png",
     alt="The Spinneret - My Code" %}
 
-- I'm slowly importing posts from other mediums I've used in the past. I used to have a blog called _The Polymath Lab_, which was about organization, productivity, communication, and inspiration. I sunset that site and brought all the relevant content into [the blog](/blog).
+- I'm slowly importing posts from other mediums I've used in the past. I used to have a blog called _The Polymath Lab_, which was about organization, productivity, communication, and inspiration. I sunset that site and brought all the relevant content into [the blog](/posts/).
 - [The project I built to benchmark and compare SSG build times](https://github.com/seancdavis/ssg-build-performance-tests) is not sustainable in how it runs the specs. I'm (slowly) working on automating the process using GitHub Actions. Hoping to be in a stable spot in March.
 - And lots of other behind-the-scenes stuff, including some bug fixes and swapping out NPM for [PNPM](https://pnpm.js.org/), which has great monorepo support.
 

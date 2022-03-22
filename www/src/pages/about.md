@@ -92,7 +92,7 @@ timeline:
         - Promoted to manage all developers at Ample and be the technical lead on all short-term web projects. _Director of Technology_ was the fancy title I gave myself.
     - year: 2020
       items:
-        - Launched [new, consolidated blog site](/blog/) on my personal domain (this one)! Sunset The Polymath Lab and Cobwwweb, although remnants of the Cobwwweb brand still live on in [The Spinneret](/topics/spinneret/).
+        - Launched [new, consolidated blog site](/posts/) on my personal domain (this one)! Sunset The Polymath Lab and Cobwwweb, although remnants of the Cobwwweb brand still live on in [The Spinneret](/topics/spinneret/).
         - Gave my first tech conference talk at Next.js Conf 2020. It was called [Everything is a CMS!](https://youtu.be/9j9bxDf428o)
     - year: 2021
       items:

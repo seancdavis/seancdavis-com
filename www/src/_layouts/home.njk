@@ -75,8 +75,17 @@
     </div>
 
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-4 md:gap-6">
-      {% for video in collections.home.videos | limit(4) %}
-        {% content_card item=video, layout="compact" %}
+      {% for video in featured_videos %}
+        <a
+          href="https://www.youtube.com/watch?v={{ video.id }}"
+          class="relative block bg-cover bg-center bg-no-repeat"
+          style="padding-bottom: 56%; background-image: url('https://img.youtube.com/vi/{{ video.id }}/hqdefault.jpg');">
+          <div class="absolute h-full w-full top-0 left-0 flex items-center justify-center">
+            <div class="bg-white rounded-full h-24 w-24 p-5 text-gray-400 border-gray-200 border-4 opacity-95">
+              {% svg "play" %}
+            </div>
+          </div>
+        </a>
       {% endfor %}
     </div>
   </div>

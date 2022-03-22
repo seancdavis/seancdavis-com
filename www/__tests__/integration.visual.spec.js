@@ -6,9 +6,6 @@ const port = "4567";
 const testPaths = [
   // --- home page ---
   "/",
-  // --- blog ---
-  "/blog",
-  "/blog/page-2/",
   // --- basic pages ---
   "/404.html",
   "/license/",
@@ -18,10 +15,10 @@ const testPaths = [
   // --- contributors ---
   "/contributors/",
   "/contributors/pratham/",
-  // --- videos ---
-  "/videos/",
-  "/videos/gatsby-static-api/",
   // --- posts ---
+  // feed pages
+  "/posts",
+  "/posts/page-2/",
   // twitter embed, youtube embed, code block filename, code blocks, image (GIF)
   "/posts/three-ways-to-add-image-to-github-readme/",
   // back-to-back code blocks with filenames, youtube embed, note callout
