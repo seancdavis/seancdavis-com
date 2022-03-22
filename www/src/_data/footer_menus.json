@@ -3,8 +3,12 @@
     "heading": "Read, Write, Learn",
     "links": [
       {
-        "label": "Blog",
-        "url": "/blog"
+        "label": "Posts",
+        "url": "/posts"
+      },
+      {
+        "label": "Videos",
+        "url": "https://www.youtube.com/channel/UCskZ3MNbeGSVyOTL0L5ooww"
       },
       {
         "label": "About",
@@ -26,6 +30,10 @@
       {
         "label": "Twitter",
         "url": "https://twitter.com/seancdavis29"
+      },
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/channel/UCskZ3MNbeGSVyOTL0L5ooww"
       },
       {
         "label": "GitHub",
