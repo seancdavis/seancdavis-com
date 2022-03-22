@@ -12,6 +12,7 @@ https://seancdavis.me/*  https://www.seancdavis.com/:splat  302!
 
 # Posts
 
+/blog/    /posts/   301
 /blog/10-unspoken-developer-truths/   /posts/10-unspoken-developer-truths/    301
 /blog/100-free-css-resources/   /posts/100-free-css-resources/    301
 /blog/3-reasons-to-share-lifes-intimate-details/    /posts/3-reasons-to-share-lifes-intimate-details/   301
@@ -183,7 +184,6 @@ https://seancdavis.me/*  https://www.seancdavis.com/:splat  302!
 /blog/impossible-is-a-human-invention/    /posts/impossible-is-a-human-invention/   301
 /blog/increase-developer-efficiency-by-establishing-conventions/    /posts/increase-developer-efficiency-by-establishing-conventions/   301
 /blog/incrementing-variables-javascript/    /posts/incrementing-variables-javascript/   301
-/blog/    /posts/   301
 /blog/inherited-class-level-utilities-in-ruby/    /posts/inherited-class-level-utilities-in-ruby/   301
 /blog/inline-style-attributes-svg-elements/   /posts/inline-style-attributes-svg-elements/    301
 /blog/instantiate-a-class-from-a-string-in-rails/   /posts/instantiate-a-class-from-a-string-in-rails/    301
