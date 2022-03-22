@@ -18,9 +18,6 @@ const testPaths = [
   // --- contributors ---
   "/contributors/",
   "/contributors/pratham/",
-  // --- videos ---
-  "/videos/",
-  "/videos/gatsby-static-api/",
   // --- posts ---
   // twitter embed, youtube embed, code block filename, code blocks, image (GIF)
   "/posts/three-ways-to-add-image-to-github-readme/",

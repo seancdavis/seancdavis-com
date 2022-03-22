@@ -22,12 +22,12 @@ sections:
     action:
       label: All JavaScript
       url: /topics/javascript
-  videos:
-    heading: Videos
-    body: Quick tips and guided tutorials to help you on your coding journey.
-    action:
-      label: All Videos
-      url: /videos
+  # videos:
+  #   heading: Videos
+  #   body: Quick tips and guided tutorials to help you on your coding journey.
+  #   action:
+  #     label: All Videos
+  #     url: /videos
   guest_posts:
     heading: Guest Posts
     body: Content contributed to this blog by community members.

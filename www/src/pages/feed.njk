@@ -19,7 +19,7 @@ metadata:
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ metadata.feedUrl }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.blog | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
@@ -27,7 +27,7 @@ metadata:
   </author>
   <webfeeds:cover image="{{ metadata.coverImage | imgix_url({ w: 1400 }) }}" />
   <webfeeds:icon>{{ metadata.iconUrl }}</webfeeds:icon>
-  {%- for post in collections.blog.slice(0, 20) %}
+  {%- for post in collections.posts.slice(0, 20) %}
   {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
   {%- if post.data.contributor.data.title %}
     {%- set authorName = post.data.contributor.data.title %}

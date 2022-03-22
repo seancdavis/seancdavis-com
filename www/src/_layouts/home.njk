@@ -59,27 +59,27 @@
 
   {# --- Videos --- #}
 
-  <div class="container py-12">
-    <div class="flex justify-between mb-8">
-      <div>
-        <div class="h-1 bg-blue w-12 mb-2"></div>
-        <h2 class="text-4xl mb-1">{{ sections.videos.heading }}</h2>
-        <p class="italic">{{ sections.javascript.body }}</p>
-      </div>
-      <div>
-        <a href="{{ sections.videos.action.url }}" class="flex items-center">
-          <span class="inline-block mr-1">{{ sections.videos.action.label }}</span>
-          <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-4 md:gap-6">
-      {% for video in collections.home.videos | limit(4) %}
-        {% content_card item=video, layout="compact" %}
-      {% endfor %}
-    </div>
-  </div>
+  {# <div class="container py-12"> #}
+    {# <div class="flex justify-between mb-8"> #}
+      {# <div> #}
+        {# <div class="h-1 bg-blue w-12 mb-2"></div> #}
+        {# <h2 class="text-4xl mb-1">{{ sections.videos.heading }}</h2> #}
+        {# <p class="italic">{{ sections.javascript.body }}</p> #}
+      {# </div> #}
+      {# <div> #}
+        {# <a href="{{ sections.videos.action.url }}" class="flex items-center"> #}
+          {# <span class="inline-block mr-1">{{ sections.videos.action.label }}</span> #}
+          {# <span class="h-4 w-4 inline-block">{% svg "arrow-right" %}</span> #}
+        {# </a> #}
+      {# </div> #}
+    {# </div> #}
+{#  #}
+    {# <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-4 md:gap-6"> #}
+      {# {% for video in collections.home.videos | limit(4) %} #}
+        {# {% post_card post=video, layout="compact" %} #}
+      {# {% endfor %} #}
+    {# </div> #}
+  {# </div> #}
 
   {# --- Guest Posts --- #}
 
