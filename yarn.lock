@@ -2207,6 +2207,14 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@notionhq/client@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@notionhq/client/-/client-1.0.4.tgz#405e9468576baf81019db4d791f4b52d091f4a57"
+  integrity sha512-m7zZ5l3RUktayf1lRBV1XMb8HSKsmWTv/LZPqP7UGC1NMzOlc+bbTOPNQ4CP/c1P4cP61VWLb/zBq7a3c0nMaw==
+  dependencies:
+    "@types/node-fetch" "^2.5.10"
+    node-fetch "^2.6.1"
+
 "@octokit/auth-token@^2.4.4":
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/@octokit/auth-token/-/auth-token-2.5.0.tgz#27c37ea26c205f28443402477ffd261311f21e36"
@@ -3127,6 +3135,14 @@
   version "2.5.12"
   resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.5.12.tgz#8a6f779b1d4e60b7a57fb6fd48d84fb545b9cc66"
   integrity sha512-MKgC4dlq4kKNa/mYrwpKfzQMB5X3ee5U6fSprkKpToBqBmX4nFZL9cW5jl6sWn+xpRJ7ypWh2yyqqr8UUCstSw==
+  dependencies:
+    "@types/node" "*"
+    form-data "^3.0.0"
+
+"@types/node-fetch@^2.5.10":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-2.6.1.tgz#8f127c50481db65886800ef496f20bbf15518975"
+  integrity sha512-oMqjURCaxoSIsHSr1E47QHzbmzNR5rK8McHuNb11BOM9cHcIK3Avy0s/b2JlXHoQGTYS3NsvWzV1M0iK7l0wbA==
   dependencies:
     "@types/node" "*"
     form-data "^3.0.0"
