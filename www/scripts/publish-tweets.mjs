@@ -13,11 +13,7 @@ const twitterClient = new TwitterApi({
   accessSecret: process.env.TWITTER_ACCESS_SECRET,
 });
 
-// Get existing tweets.
-const myTimeline = await twitterClient.v2.userTimeline(
-  process.env.TWITTER_USER_ID
-);
-const myTweets = myTimeline.tweets;
+let myTweets = [];
 
 /**
  * Check whether a tweet has been published recently.
@@ -25,8 +21,15 @@ const myTweets = myTimeline.tweets;
  * @param {string} text Text to check.
  * @returns {boolean}
  */
-function alreadyTweeted(text) {
-  return myTweets.filter((tweet) => tweet.text === text).length > 0;
+async function alreadyTweeted(text) {
+  // Get existing tweets, but fetch only once.
+  if (myTweets.length === 0) {
+    const myTimeline = await twitterClient.v2.userTimeline(
+      process.env.TWITTER_USER_ID
+    );
+    myTweets = myTimeline.tweets;
+  }
+  return myTweets.filter((tweet) => tweet.text.startsWith(text)).length > 0;
 }
 
 // --- Content Files ---
@@ -52,13 +55,15 @@ function buildShareUrl(filePath) {
 
 // --- The Loop ---
 
+let publishedTweets = false;
+
 for (const file of contentFiles) {
   const rawContent = fs.readFileSync(file).toString();
   const { data } = matter(rawContent);
   // If there is nothing to tweet, go to the next file.
   if (!data.tweet) continue;
   // If the tweet has been sent recently, go to the next file.
-  if (alreadyTweeted(data.tweet)) {
+  if (await alreadyTweeted(data.tweet)) {
     console.log("Duplicate tweet found. Skipping.");
     continue;
   }
@@ -68,4 +73,10 @@ for (const file of contentFiles) {
   // Remove the tweet from the frontmatter.
   const newContent = rawContent.replace(/\ntweet: (.*)\n/g, "\n");
   fs.writeFileSync(file, newContent);
+  // Log the results.
+  console.log(`Tweet sent: ${data.tweet}`);
+  console.log(`Post updated: ${data.title}`);
+  publishedTweets = true;
 }
+
+if (!publishedTweets) console.log("No pending tweets to publish.");
