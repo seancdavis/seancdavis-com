@@ -19,7 +19,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "gatsby-transformer-remark": "^5.9.1",
+    "gatsby-transformer-remark": "^5.10.1",
     "prettier": "2.6.0"
   },
   "keywords": [
