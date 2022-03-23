@@ -11,5 +11,7 @@ import path from "path";
 
 import config from "./config.mjs";
 import { postsWithoutImage } from "./post-utils.mjs";
+import { getRandomBackground } from "./background-utils.mjs";
 
-console.log(postsWithoutImage());
+// console.log(postsWithoutImage());
+console.log(getRandomBackground());
