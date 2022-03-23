@@ -22,6 +22,7 @@
     "clipboard": "^2.0.10",
     "cssnano": "^5.1.0",
     "glob": "^7.1.7",
+    "gray-matter": "^4.0.3",
     "html-minifier": "^4.0.0",
     "http-server": "^14.1.0",
     "instantsearch.css": "^7.4.5",
