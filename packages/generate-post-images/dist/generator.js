@@ -27,6 +27,25 @@ class Generator {
         this.context = this.canvas.getContext("2d");
         this.tmpFilePaths = this.setTmpFilePaths();
     }
+    run() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const featuredImagePath = yield this.generateFeaturedImage();
+            return { featuredImagePath };
+        });
+    }
+    /* ---------- Private Methods ---------- */
+    /**
+     * Render the background image and store current state as a temp file.
+     */
+    generateFeaturedImage() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { w, h } = this.config;
+            const image = yield (0, canvas_1.loadImage)(this.background.filePath);
+            this.context.drawImage(image, 0, 0, w, h);
+            this.saveAsImage(this.tmpFilePaths.featured);
+            return this.tmpFilePaths.featured;
+        });
+    }
     /**
      * Load a font for canvas to use. This must be done before the canvas is
      * initialized.
@@ -36,28 +55,18 @@ class Generator {
         (0, canvas_1.registerFont)(fontPath, { family });
     }
     /**
-     * Render the background image and store current state as a temp file.
-     */
-    renderBackgroundImage() {
-        return __awaiter(this, void 0, void 0, function* () {
-            const { w, h } = this.config;
-            const image = yield (0, canvas_1.loadImage)(this.background.filePath);
-            this.context.drawImage(image, 0, 0, w, h);
-            this.saveAsImage(this.tmpFilePaths.post);
-        });
-    }
-    /* ---------- Private Methods ---------- */
-    /**
      * Builds a ref object for the two images to generate. Puts these in a `tmp`
      * directory where the command is run.
      */
     setTmpFilePaths() {
         const tmpDir = path_1.default.join(__dirname, "../tmp");
-        const tmpBasename = path_1.default.basename(this.post.filePath, path_1.default.extname(this.post.filePath));
+        const tmpBasename = path_1.default
+            .basename(this.post.filePath, path_1.default.extname(this.post.filePath))
+            .replace(/^\d{4}-\d{2}-\d{2}-/, "");
         if (!fs_1.default.existsSync(tmpDir))
             fs_1.default.mkdirSync(tmpDir);
         return {
-            post: path_1.default.join(tmpDir, `${tmpBasename}.png`),
+            featured: path_1.default.join(tmpDir, `${tmpBasename}.png`),
             meta: path_1.default.join(tmpDir, `${tmpBasename}--meta.png`),
         };
     }

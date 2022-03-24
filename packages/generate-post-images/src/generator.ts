@@ -15,7 +15,7 @@ export class Generator {
   canvas: Canvas;
   context: ReturnType<Canvas["getContext"]>;
   tmpFilePaths: {
-    post: string;
+    featured: string;
     meta: string;
   };
 
@@ -36,40 +36,45 @@ export class Generator {
     this.tmpFilePaths = this.setTmpFilePaths();
   }
 
-  /**
-   * Load a font for canvas to use. This must be done before the canvas is
-   * initialized.
-   */
-  loadFont(filename: string, family: string) {
-    const fontPath = path.join(__dirname, "../src/assets/fonts", filename);
-    registerFont(fontPath, { family });
-  }
-
-  /**
-   * Render the background image and store current state as a temp file.
-   */
-  async renderBackgroundImage() {
-    const { w, h } = this.config;
-    const image = await loadImage(this.background.filePath);
-    this.context.drawImage(image, 0, 0, w, h);
-    this.saveAsImage(this.tmpFilePaths.post);
+  async run() {
+    const featuredImagePath = await this.generateFeaturedImage();
+    return { featuredImagePath };
   }
 
   /* ---------- Private Methods ---------- */
 
   /**
+   * Render the background image and store current state as a temp file.
+   */
+  private async generateFeaturedImage() {
+    const { w, h } = this.config;
+    const image = await loadImage(this.background.filePath);
+    this.context.drawImage(image, 0, 0, w, h);
+    this.saveAsImage(this.tmpFilePaths.featured);
+    return this.tmpFilePaths.featured;
+  }
+
+  /**
+   * Load a font for canvas to use. This must be done before the canvas is
+   * initialized.
+   */
+  private loadFont(filename: string, family: string) {
+    const fontPath = path.join(__dirname, "../src/assets/fonts", filename);
+    registerFont(fontPath, { family });
+  }
+
+  /**
    * Builds a ref object for the two images to generate. Puts these in a `tmp`
    * directory where the command is run.
    */
-  private setTmpFilePaths(): { post: string; meta: string } {
+  private setTmpFilePaths(): { featured: string; meta: string } {
     const tmpDir = path.join(__dirname, "../tmp");
-    const tmpBasename = path.basename(
-      this.post.filePath,
-      path.extname(this.post.filePath)
-    );
+    const tmpBasename = path
+      .basename(this.post.filePath, path.extname(this.post.filePath))
+      .replace(/^\d{4}-\d{2}-\d{2}-/, "");
     if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
     return {
-      post: path.join(tmpDir, `${tmpBasename}.png`),
+      featured: path.join(tmpDir, `${tmpBasename}.png`),
       meta: path.join(tmpDir, `${tmpBasename}--meta.png`),
     };
   }
