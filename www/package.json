@@ -43,7 +43,9 @@
     "postcss-nested": "^5.0.5",
     "slugify": "^1.6.3",
     "tailwindcss": "^3.0.23",
+    "ts-node": "^10.7.0",
     "twitter-api-v2": "^1.11.0",
+    "typescript": "^4.6.2",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.1"
   },
@@ -51,7 +53,7 @@
     "build": "eleventy --quiet",
     "clean": "rm -rf dist && rm -f src/assets/css/styles.css && rm -f src/assets/js/bundle.js",
     "dev": "eleventy --serve --port 8000",
-    "generate-images": "node scripts/generate-images/index.mjs",
+    "generate-images": "ts-node scripts/generate-images/index.ts",
     "publish-tweets": "node scripts/publish-tweets.mjs",
     "pretest:visual": "ELEVENTY_ENV=test eleventy --quiet",
     "test": "ELEVENTY_ENV=test jest",

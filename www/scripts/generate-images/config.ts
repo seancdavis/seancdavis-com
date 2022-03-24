@@ -1,6 +1,16 @@
 /* --- Colors --- */
 
-const colors = {
+type ColorConfig = {
+  blue: string;
+  blueGray: string;
+  green: string;
+  lime: string;
+  orange: string;
+  pink: string;
+  yellow: string;
+};
+
+const colors: ColorConfig = {
   blue: "#2260bf",
   blueGray: "#4b6a8a",
   green: "#007785",
@@ -12,7 +22,18 @@ const colors = {
 
 /* --- Titles --- */
 
-function titleConfig(textAlign = "left", highlight = false) {
+type TitleTextAlignOptions = "left" | "center";
+
+export type TitleConfig = {
+  maxLineWidth: number;
+  textAlign: TitleTextAlignOptions;
+  highlight: boolean;
+};
+
+function titleConfig(
+  textAlign: TitleTextAlignOptions = "left",
+  highlight: boolean = false
+): TitleConfig {
   return {
     maxLineWidth: 1000,
     textAlign,
@@ -29,7 +50,17 @@ const allTitles = {
 
 /* --- Backgrounds --- */
 
-function coloredBackgroundConfigSeries(name, color) {
+export type BackgroundConfig = {
+  filePath: string;
+  highlightColor: string;
+  textColor: string;
+  titleOptionKeys: string[];
+};
+
+function coloredBackgroundConfigSeries(
+  name: string,
+  color: string
+): BackgroundConfig[] {
   return [...Array(20).keys()].map((idx) => {
     const formattedIdx = (idx + 1).toLocaleString("en-US", {
       minimumIntegerDigits: 2,
@@ -39,12 +70,16 @@ function coloredBackgroundConfigSeries(name, color) {
       filePath: `${name}/${name}-${formattedIdx}.svg`,
       highlightColor: "#ffffff",
       textColor: color,
-      titleOptions: Object.keys(allTitles),
+      titleOptionKeys: Object.keys(allTitles),
     };
   });
 }
 
-function lightBackgroundConfigSeries(name, highlightColor, nums) {
+function lightBackgroundConfigSeries(
+  name: string,
+  highlightColor: string,
+  nums: number[]
+): BackgroundConfig[] {
   return nums.map((num) => {
     const formattedIdx = num.toLocaleString("en-US", {
       minimumIntegerDigits: 2,
@@ -54,14 +89,19 @@ function lightBackgroundConfigSeries(name, highlightColor, nums) {
       filePath: `${name}/${name}-${formattedIdx}.svg`,
       highlightColor,
       textColor: "#ffffff",
-      titleOptions: ["leftHighlight", "centerHighlight"],
+      titleOptionKeys: ["leftHighlight", "centerHighlight"],
     };
   });
 }
 
 /* --- Config Object --- */
 
-const config = {
+type Config = {
+  titles: { [key: string]: TitleConfig };
+  backgrounds: BackgroundConfig[];
+};
+
+const config: Config = {
   titles: allTitles,
   backgrounds: [
     // Solid colors with consistent backgrounds.
