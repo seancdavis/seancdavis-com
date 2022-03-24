@@ -2,8 +2,8 @@ import fs from "fs";
 import path from "path";
 import { createCanvas, registerFont, loadImage, Canvas } from "canvas";
 
-import type { Post } from "./post-utils";
-import type { ResolvedBackgroundConfig } from "./background-utils";
+import type { Post } from "./utils/post-utils";
+import type { ResolvedBackgroundConfig } from "./utils/background-utils";
 
 export class Generator {
   config: {
@@ -41,7 +41,7 @@ export class Generator {
    * initialized.
    */
   loadFont(filename: string, family: string) {
-    const fontPath = path.join(process.cwd(), "src/assets/fonts", filename);
+    const fontPath = path.join(__dirname, "../src/assets/fonts", filename);
     registerFont(fontPath, { family });
   }
 
@@ -62,7 +62,7 @@ export class Generator {
    * directory where the command is run.
    */
   private setTmpFilePaths(): { post: string; meta: string } {
-    const tmpDir = path.join(process.cwd(), "tmp");
+    const tmpDir = path.join(__dirname, "../tmp");
     const tmpBasename = path.basename(
       this.post.filePath,
       path.extname(this.post.filePath)

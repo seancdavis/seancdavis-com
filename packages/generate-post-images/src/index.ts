@@ -1,5 +1,5 @@
-import { postsWithoutImage } from "./post-utils";
-import { getRandomBackground } from "./background-utils";
+import { postsWithoutImage } from "./utils/post-utils";
+import { getRandomBackground } from "./utils/background-utils";
 import { Generator } from "./generator";
 
 /**
@@ -18,8 +18,15 @@ import { Generator } from "./generator";
  * piece.
  */
 
-for (const post of postsWithoutImage()) {
-  const bgConfig = getRandomBackground();
-  const generator = new Generator({ post, bgConfig });
-  await generator.renderBackgroundImage;
+type GeneratorConfig = {
+  postsDir: string;
+};
+
+export async function generateImages(config: GeneratorConfig) {
+  for (const post of postsWithoutImage(config.postsDir)) {
+    const bgConfig = getRandomBackground();
+    const generator = new Generator({ post, bgConfig });
+    await generator.renderBackgroundImage();
+    console.log("DONEZO");
+  }
 }

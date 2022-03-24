@@ -2,10 +2,6 @@ import fs from "fs";
 import glob from "glob";
 import matter from "gray-matter";
 import path from "path";
-// import type {GrayMatterFile} from 'gray-matter'
-
-const srcDir = path.join(process.cwd(), "src");
-const postsDir = path.join(srcDir, "posts");
 
 // Note: There are many other possible properties, but this is all we're working
 // with in this script.
@@ -25,22 +21,14 @@ export type Post = {
 };
 
 /**
- * Returns an array of file paths representing every post.
- *
- * @returns {array} Absolute file paths to all posts.
- */
-function allPostFilePaths(): string[] {
-  return glob.sync(path.join(postsDir, "**/*.md"));
-}
-
-/**
  * Reads and parses frontmatter and body content for every post.
  *
  * @returns {array} Post objects parsed by gray-matter,
  * as: { data, content, filePath }
  */
-function allPosts(): Post[] {
-  return allPostFilePaths().map((filePath) => {
+function allPosts(postsDir: string): Post[] {
+  const allPostFilePaths = glob.sync(path.join(postsDir, "**/*.md"));
+  return allPostFilePaths.map((filePath) => {
     const fileContent = fs.readFileSync(filePath).toString();
     const { data, content }: { data: any; content: string } =
       matter(fileContent);
@@ -53,6 +41,6 @@ function allPosts(): Post[] {
  *
  * @returns {array} Post objects without an `image` key in frontmatter
  */
-export function postsWithoutImage(): Post[] {
-  return allPosts().filter((post) => !post.data.image);
+export function postsWithoutImage(postsDir: string): Post[] {
+  return allPosts(postsDir).filter((post) => !post.data.image);
 }

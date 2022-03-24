@@ -1,7 +1,7 @@
 import path from "path";
 
-import config from "./config";
-import type { BackgroundConfig, TitleConfig } from "./config";
+import config from "../config";
+import type { BackgroundConfig, TitleConfig } from "../config";
 
 export interface ResolvedBackgroundConfig extends BackgroundConfig {
   titleOptions: TitleConfig[];
@@ -24,7 +24,7 @@ function resolveBackgroundConfig(
     (key: string): TitleConfig => config.titles[key]!
   );
   // Resolve the path to the file.
-  const bgDir = path.join(process.cwd(), "scripts/generate-images/backgrounds");
+  const bgDir = path.join(__dirname, "../../src/assets");
   resBgConfig.filePath = path.join(bgDir, bgConfig.filePath);
   // Return the resulting object.
   return resBgConfig;
