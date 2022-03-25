@@ -2,57 +2,118 @@ import fs from "fs";
 import path from "path";
 import { createCanvas, registerFont, loadImage, Canvas } from "canvas";
 
+import { formatTitle } from "./utils/text-utils";
 import type { Post } from "./utils/post-utils";
 import type { ResolvedBackgroundConfig } from "./utils/background-utils";
 
 export class Generator {
-  config: {
-    w: number;
-    h: number;
+  readonly config: ResolvedBackgroundConfig & {
+    width: number;
+    height: number;
+    tmpFilePaths: {
+      featured: string;
+      meta: string;
+    };
   };
-  post: Post;
-  background: ResolvedBackgroundConfig;
-  canvas: Canvas;
-  context: ReturnType<Canvas["getContext"]>;
-  tmpFilePaths: {
-    featured: string;
-    meta: string;
-  };
+  readonly post: Post;
+  readonly canvas!: Canvas;
+  readonly context!: ReturnType<Canvas["getContext"]>;
 
   constructor({
     post,
-    bgConfig,
+    config,
   }: {
     post: Post;
-    bgConfig: ResolvedBackgroundConfig;
+    config: ResolvedBackgroundConfig;
   }) {
-    this.config = { w: 2400, h: 1260 };
     this.post = post;
-    this.background = bgConfig;
+    const tmpFilePaths = this.getTmpFilePaths();
+    this.config = { ...config, tmpFilePaths };
     this.loadFont("DMSerifDisplay-Regular.ttf", "DM Serif Display");
     this.loadFont("DMSerifDisplay-Italic.ttf", "DM Serif Display Italic");
-    this.canvas = createCanvas(this.config.w, this.config.h);
+    this.canvas = createCanvas(this.config.width, this.config.height);
     this.context = this.canvas.getContext("2d");
-    this.tmpFilePaths = this.setTmpFilePaths();
   }
 
   async run() {
     const featuredImagePath = await this.generateFeaturedImage();
-    return { featuredImagePath };
+    const metaImagePath = await this.generateMetaImage();
+    return { featuredImagePath, metaImagePath };
   }
 
-  /* ---------- Private Methods ---------- */
+  /* ---------- Rendering Utils ---------- */
 
   /**
    * Render the background image and store current state as a temp file.
    */
   private async generateFeaturedImage() {
-    const { w, h } = this.config;
-    const image = await loadImage(this.background.filePath);
-    this.context.drawImage(image, 0, 0, w, h);
-    this.saveAsImage(this.tmpFilePaths.featured);
-    return this.tmpFilePaths.featured;
+    const { width, height, filePath } = this.config;
+    const image = await loadImage(filePath);
+    this.context.drawImage(image, 0, 0, width, height);
+    this.saveAsImage(this.config.tmpFilePaths.featured);
+    return this.config.tmpFilePaths.featured;
   }
+
+  /**
+   * Saves the meta image after rendering the title to the canvas.
+   */
+  private async generateMetaImage() {
+    this.renderTitle();
+    this.saveAsImage(this.config.tmpFilePaths.meta);
+  }
+
+  /**
+   * Renders the title to the canvas.
+   */
+  private renderTitle() {
+    // Determine font size and number of lines.
+    const { fontSize, text } = formatTitle(this.post.data.title, this.context, {
+      maxFontSize: this.config.maxFontSize,
+      maxLineWidth: this.config.maxLineWidth,
+      minSingleLineFontSize: this.config.minSingleLineFontSize,
+    });
+    // Determine y value for the first line. The Y for text is measured as the
+    // bottom of the line.
+    //
+    // If a single line, Y is the middle of the canvas PLUS half the font size.
+    //
+    // If two lines, then it's half the canvas MINUS half the space between the
+    // lines (for which we'll use the font size).
+    const centerY = this.config.height / 2;
+    let y = text.length === 1 ? centerY + fontSize / 2 : centerY - fontSize / 2;
+    // X is the center, if center aligned, or half the difference between the
+    // maxLineWidth and canvas width (i.e. the padding).
+    const x =
+      this.config.textAlign === "center"
+        ? this.config.width / 2
+        : (this.config.width - this.config.maxLineWidth) / 2;
+    // Render the first line.
+    this.context.textAlign = this.config.textAlign;
+    this.context.font = `bold ${fontSize}pt 'DM Serif Display'`;
+    // TODO: Make this variable based on whether we're highlighting.
+    this.context.fillStyle = "black";
+    this.context.fillText(text[0], x, y);
+    // TODO: Do the highlight if necessary.
+
+    // Render the second line, if necessary.
+    if (text[1]) {
+      // 1 for the space between, 1 because y is set as the bottom of the line.
+      y += fontSize * 2;
+      this.context.fillText(text[1], x, y);
+    }
+  }
+
+  /* ---------- File Utils ---------- */
+
+  /**
+   * Store the current canvas as a file at the given file path.
+   */
+  private saveAsImage(filePath: string) {
+    const buffer = this.canvas.toBuffer("image/png");
+    return fs.writeFileSync(filePath, buffer);
+  }
+
+  /* ---------- Init Utils ---------- */
 
   /**
    * Load a font for canvas to use. This must be done before the canvas is
@@ -67,7 +128,7 @@ export class Generator {
    * Builds a ref object for the two images to generate. Puts these in a `tmp`
    * directory where the command is run.
    */
-  private setTmpFilePaths(): { featured: string; meta: string } {
+  private getTmpFilePaths(): { featured: string; meta: string } {
     const tmpDir = path.join(__dirname, "../tmp");
     const tmpBasename = path
       .basename(this.post.filePath, path.extname(this.post.filePath))
@@ -77,13 +138,5 @@ export class Generator {
       featured: path.join(tmpDir, `${tmpBasename}.png`),
       meta: path.join(tmpDir, `${tmpBasename}--meta.png`),
     };
-  }
-
-  /**
-   * Store the current canvas as a file at the given file path.
-   */
-  private saveAsImage(filePath: string) {
-    const buffer = this.canvas.toBuffer("image/png");
-    return fs.writeFileSync(filePath, buffer);
   }
 }

@@ -13,6 +13,14 @@ exports.generateImages = void 0;
 const post_utils_1 = require("./utils/post-utils");
 const background_utils_1 = require("./utils/background-utils");
 const generator_1 = require("./generator");
+// TODO:
+//
+// - [ ] Render title
+// - [ ] Add support for background colors
+// - [ ] Generate and store meta image
+// - [ ] Upload images
+// - [ ] Store references back on the post
+// - [ ] Write tests?
 /**
  * Looks for eligible posts that don't have an image and generates one for each.
  * It then generates a second image with the title to be used as the meta image.
@@ -22,8 +30,7 @@ const generator_1 = require("./generator");
 function generateImages(config) {
     return __awaiter(this, void 0, void 0, function* () {
         for (const post of (0, post_utils_1.postsWithoutImage)(config.postsDir)) {
-            const bgConfig = (0, background_utils_1.getRandomBackground)();
-            const generator = new generator_1.Generator({ post, bgConfig });
+            const generator = new generator_1.Generator({ post, config: (0, background_utils_1.getRandomBackground)() });
             const { featuredImagePath } = yield generator.run();
             console.log(featuredImagePath);
         }

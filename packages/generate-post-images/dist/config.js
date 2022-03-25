@@ -12,7 +12,9 @@ const colors = {
 };
 function titleConfig(textAlign = "left", highlight = false) {
     return {
-        maxLineWidth: 1000,
+        maxLineWidth: 1800,
+        maxFontSize: 110,
+        minSingleLineFontSize: 90,
         textAlign,
         highlight,
     };
@@ -23,18 +25,17 @@ const allTitles = {
     leftHighlight: titleConfig("left", true),
     centerHighlight: titleConfig("center", true),
 };
+const defaultBackgroundConfig = {
+    width: 2400,
+    height: 1260,
+};
 function coloredBackgroundConfigSeries(name, color) {
     return [...Array(20).keys()].map((idx) => {
         const formattedIdx = (idx + 1).toLocaleString("en-US", {
             minimumIntegerDigits: 2,
             useGrouping: false,
         });
-        return {
-            filePath: `${name}/${name}-${formattedIdx}.svg`,
-            highlightColor: "#ffffff",
-            textColor: color,
-            titleOptionKeys: Object.keys(allTitles),
-        };
+        return Object.assign(Object.assign({}, defaultBackgroundConfig), { filePath: `${name}/${name}-${formattedIdx}.svg`, highlightColor: "#ffffff", textColor: color, titleOptionKeys: Object.keys(allTitles) });
     });
 }
 function lightBackgroundConfigSeries(name, highlightColor, nums) {
@@ -43,12 +44,7 @@ function lightBackgroundConfigSeries(name, highlightColor, nums) {
             minimumIntegerDigits: 2,
             useGrouping: false,
         });
-        return {
-            filePath: `${name}/${name}-${formattedIdx}.svg`,
-            highlightColor,
-            textColor: "#ffffff",
-            titleOptionKeys: ["leftHighlight", "centerHighlight"],
-        };
+        return Object.assign(Object.assign({}, defaultBackgroundConfig), { filePath: `${name}/${name}-${formattedIdx}.svg`, highlightColor, textColor: "#ffffff", titleOptionKeys: ["leftHighlight", "centerHighlight"] });
     });
 }
 const config = {

@@ -26,6 +26,11 @@ type TitleTextAlignOptions = "left" | "center";
 
 export type TitleConfig = {
   maxLineWidth: number;
+  maxFontSize: number;
+  // If the font size for a single line is going to be larger than this number,
+  // we don't have to split the lines. (This logic is baked into
+  // utils/text-utils.)
+  minSingleLineFontSize: number;
   textAlign: TitleTextAlignOptions;
   highlight: boolean;
 };
@@ -35,7 +40,9 @@ function titleConfig(
   highlight: boolean = false
 ): TitleConfig {
   return {
-    maxLineWidth: 1000,
+    maxLineWidth: 1800,
+    maxFontSize: 110,
+    minSingleLineFontSize: 90,
     textAlign,
     highlight,
   };
@@ -55,6 +62,13 @@ export type BackgroundConfig = {
   highlightColor: string;
   textColor: string;
   titleOptionKeys: string[];
+  width: number;
+  height: number;
+};
+
+const defaultBackgroundConfig = {
+  width: 2400,
+  height: 1260,
 };
 
 function coloredBackgroundConfigSeries(
@@ -67,6 +81,7 @@ function coloredBackgroundConfigSeries(
       useGrouping: false,
     });
     return {
+      ...defaultBackgroundConfig,
       filePath: `${name}/${name}-${formattedIdx}.svg`,
       highlightColor: "#ffffff",
       textColor: color,
@@ -86,6 +101,7 @@ function lightBackgroundConfigSeries(
       useGrouping: false,
     });
     return {
+      ...defaultBackgroundConfig,
       filePath: `${name}/${name}-${formattedIdx}.svg`,
       highlightColor,
       textColor: "#ffffff",

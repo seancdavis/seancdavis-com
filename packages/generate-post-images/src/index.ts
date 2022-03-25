@@ -6,6 +6,15 @@ type GeneratorConfig = {
   postsDir: string;
 };
 
+// TODO:
+//
+// - [ ] Render title
+// - [ ] Add support for background colors
+// - [ ] Generate and store meta image
+// - [ ] Upload images
+// - [ ] Store references back on the post
+// - [ ] Write tests?
+
 /**
  * Looks for eligible posts that don't have an image and generates one for each.
  * It then generates a second image with the title to be used as the meta image.
@@ -14,8 +23,7 @@ type GeneratorConfig = {
  */
 export async function generateImages(config: GeneratorConfig) {
   for (const post of postsWithoutImage(config.postsDir)) {
-    const bgConfig = getRandomBackground();
-    const generator = new Generator({ post, bgConfig });
+    const generator = new Generator({ post, config: getRandomBackground() });
     const { featuredImagePath } = await generator.run();
     console.log(featuredImagePath);
   }
