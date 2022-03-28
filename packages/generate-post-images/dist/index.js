@@ -15,9 +15,9 @@ const background_utils_1 = require("./utils/background-utils");
 const generator_1 = require("./generator");
 // TODO:
 //
-// - [ ] Render title
-// - [ ] Add support for background colors
-// - [ ] Generate and store meta image
+// - [x] Render title
+// - [x] Add support for background colors
+// - [x] Generate and store meta image
 // - [ ] Upload images
 // - [ ] Store references back on the post
 // - [ ] Write tests?
@@ -31,7 +31,7 @@ function generateImages(config) {
     return __awaiter(this, void 0, void 0, function* () {
         for (const post of (0, post_utils_1.postsWithoutImage)(config.postsDir)) {
             const generator = new generator_1.Generator({ post, config: (0, background_utils_1.getRandomBackground)() });
-            const { featuredImagePath } = yield generator.run();
+            const { featuredImagePath, metaImagePath } = yield generator.run();
             console.log(featuredImagePath);
         }
     });

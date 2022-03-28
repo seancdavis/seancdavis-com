@@ -19,8 +19,20 @@ function allPosts(postsDir) {
     return allPostFilePaths.map((filePath) => {
         const fileContent = fs_1.default.readFileSync(filePath).toString();
         const { data, content } = (0, gray_matter_1.default)(fileContent);
-        return { data, content, filePath };
+        const __metadata = postMetadata(filePath);
+        return { __metadata, data, content, filePath };
     });
+}
+/**
+ * Build metadata object for post.
+ *
+ */
+function postMetadata(filePath) {
+    return {
+        slug: path_1.default
+            .basename(filePath, path_1.default.extname(filePath))
+            .replace(/^\d{4}-\d{2}-\d{2}-/, ""),
+    };
 }
 /**
  * Finds all posts without an image.

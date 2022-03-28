@@ -173,13 +173,10 @@ export class Generator {
    */
   private getTmpFilePaths(): { featured: string; meta: string } {
     const tmpDir = path.join(__dirname, "../tmp");
-    const tmpBasename = path
-      .basename(this.post.filePath, path.extname(this.post.filePath))
-      .replace(/^\d{4}-\d{2}-\d{2}-/, "");
     if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
     return {
-      featured: path.join(tmpDir, `${tmpBasename}.png`),
-      meta: path.join(tmpDir, `${tmpBasename}--meta.png`),
+      featured: path.join(tmpDir, `${this.post.__metadata.slug}.png`),
+      meta: path.join(tmpDir, `${this.post.__metadata.slug}--meta.png`),
     };
   }
 }

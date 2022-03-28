@@ -8,9 +8,9 @@ type GeneratorConfig = {
 
 // TODO:
 //
-// - [ ] Render title
-// - [ ] Add support for background colors
-// - [ ] Generate and store meta image
+// - [x] Render title
+// - [x] Add support for background colors
+// - [x] Generate and store meta image
 // - [ ] Upload images
 // - [ ] Store references back on the post
 // - [ ] Write tests?
@@ -24,7 +24,7 @@ type GeneratorConfig = {
 export async function generateImages(config: GeneratorConfig) {
   for (const post of postsWithoutImage(config.postsDir)) {
     const generator = new Generator({ post, config: getRandomBackground() });
-    const { featuredImagePath } = await generator.run();
+    const { featuredImagePath, metaImagePath } = await generator.run();
     console.log(featuredImagePath);
   }
 }

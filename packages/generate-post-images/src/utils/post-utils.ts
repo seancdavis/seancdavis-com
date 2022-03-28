@@ -14,7 +14,12 @@ type PostFrontmatter = {
   [key: string]: any;
 };
 
+type PostMetadata = {
+  slug: string;
+};
+
 export type Post = {
+  __metadata: PostMetadata;
   data: PostFrontmatter;
   content: string;
   filePath: string;
@@ -32,8 +37,21 @@ function allPosts(postsDir: string): Post[] {
     const fileContent = fs.readFileSync(filePath).toString();
     const { data, content }: { data: any; content: string } =
       matter(fileContent);
-    return { data, content, filePath } as Post;
+    const __metadata = postMetadata(filePath);
+    return { __metadata, data, content, filePath } as Post;
   });
+}
+
+/**
+ * Build metadata object for post.
+ *
+ */
+function postMetadata(filePath: string): PostMetadata {
+  return {
+    slug: path
+      .basename(filePath, path.extname(filePath))
+      .replace(/^\d{4}-\d{2}-\d{2}-/, ""),
+  };
 }
 
 /**
