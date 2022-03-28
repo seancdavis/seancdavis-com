@@ -80,19 +80,56 @@ class Generator {
         const x = this.config.textAlign === "center"
             ? this.config.width / 2
             : (this.config.width - this.config.maxLineWidth) / 2;
+        if (this.config.highlight) {
+            // Highlight the first line, if necessary.
+            this.renderHighlight({ x, y, fontSize, text: text[0] });
+        }
+        else {
+            // Otherwise, set a shadow for the text.
+            this.context.shadowColor = "rgba(0, 0, 0, .25)";
+            this.context.shadowBlur = 4;
+            this.context.shadowOffsetY = 4;
+        }
         // Render the first line.
         this.context.textAlign = this.config.textAlign;
         this.context.font = `bold ${fontSize}pt 'DM Serif Display'`;
-        // TODO: Make this variable based on whether we're highlighting.
-        this.context.fillStyle = "black";
+        this.context.fillStyle = this.config.highlight
+            ? this.config.highlightTextColor
+            : this.config.textColor;
         this.context.fillText(text[0], x, y);
-        // TODO: Do the highlight if necessary.
         // Render the second line, if necessary.
         if (text[1]) {
             // 1 for the space between, 1 because y is set as the bottom of the line.
             y += fontSize * 2;
+            // Highlight, if necessary.
+            if (this.config.highlight) {
+                this.renderHighlight({ x, y, fontSize, text: text[1] });
+            }
+            this.context.fillStyle = this.config.highlight
+                ? this.config.highlightTextColor
+                : this.config.textColor;
             this.context.fillText(text[1], x, y);
         }
+    }
+    /**
+     * Renders a highlight rectangle for a given line of a title.
+     */
+    renderHighlight(title) {
+        this.context.fillStyle = this.config.highlightColor;
+        const titleWidth = this.context.measureText(title.text).width;
+        const paddingX = title.fontSize / 2;
+        const paddingY = title.fontSize / 3;
+        const w = titleWidth + paddingX * 2;
+        const h = title.fontSize + paddingY * 2;
+        const x = (this.config.textAlign === "center"
+            ? title.x - titleWidth / 2
+            : title.x) - paddingX;
+        let y = title.y - title.fontSize - paddingY;
+        // This is a positioning-adjustment factor. I ran against a few different
+        // font sizes and it does a good job balancing the space above and below the
+        // text.
+        y += title.fontSize * 0.0425;
+        this.context.fillRect(x, y, w, h);
     }
     /* ---------- File Utils ---------- */
     /**

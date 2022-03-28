@@ -8,6 +8,7 @@ type ColorConfig = {
   orange: string;
   pink: string;
   yellow: string;
+  white: string;
 };
 
 const colors: ColorConfig = {
@@ -18,6 +19,7 @@ const colors: ColorConfig = {
   orange: "#ff6b00",
   pink: "#eea2bf",
   yellow: "#ffd445",
+  white: "#ffffff",
 };
 
 /* --- Titles --- */
@@ -60,6 +62,7 @@ const allTitles = {
 export type BackgroundConfig = {
   filePath: string;
   highlightColor: string;
+  highlightTextColor: string;
   textColor: string;
   titleOptionKeys: string[];
   width: number;
@@ -83,8 +86,9 @@ function coloredBackgroundConfigSeries(
     return {
       ...defaultBackgroundConfig,
       filePath: `${name}/${name}-${formattedIdx}.svg`,
-      highlightColor: "#ffffff",
-      textColor: color,
+      highlightColor: colors.white,
+      highlightTextColor: color,
+      textColor: colors.white,
       titleOptionKeys: Object.keys(allTitles),
     };
   });
@@ -104,7 +108,8 @@ function lightBackgroundConfigSeries(
       ...defaultBackgroundConfig,
       filePath: `${name}/${name}-${formattedIdx}.svg`,
       highlightColor,
-      textColor: "#ffffff",
+      highlightTextColor: colors.white,
+      textColor: colors.white,
       titleOptionKeys: ["leftHighlight", "centerHighlight"],
     };
   });

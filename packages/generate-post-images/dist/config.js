@@ -9,6 +9,7 @@ const colors = {
     orange: "#ff6b00",
     pink: "#eea2bf",
     yellow: "#ffd445",
+    white: "#ffffff",
 };
 function titleConfig(textAlign = "left", highlight = false) {
     return {
@@ -35,7 +36,7 @@ function coloredBackgroundConfigSeries(name, color) {
             minimumIntegerDigits: 2,
             useGrouping: false,
         });
-        return Object.assign(Object.assign({}, defaultBackgroundConfig), { filePath: `${name}/${name}-${formattedIdx}.svg`, highlightColor: "#ffffff", textColor: color, titleOptionKeys: Object.keys(allTitles) });
+        return Object.assign(Object.assign({}, defaultBackgroundConfig), { filePath: `${name}/${name}-${formattedIdx}.svg`, highlightColor: colors.white, highlightTextColor: color, textColor: colors.white, titleOptionKeys: Object.keys(allTitles) });
     });
 }
 function lightBackgroundConfigSeries(name, highlightColor, nums) {
@@ -44,7 +45,7 @@ function lightBackgroundConfigSeries(name, highlightColor, nums) {
             minimumIntegerDigits: 2,
             useGrouping: false,
         });
-        return Object.assign(Object.assign({}, defaultBackgroundConfig), { filePath: `${name}/${name}-${formattedIdx}.svg`, highlightColor, textColor: "#ffffff", titleOptionKeys: ["leftHighlight", "centerHighlight"] });
+        return Object.assign(Object.assign({}, defaultBackgroundConfig), { filePath: `${name}/${name}-${formattedIdx}.svg`, highlightColor, highlightTextColor: colors.white, textColor: colors.white, titleOptionKeys: ["leftHighlight", "centerHighlight"] });
     });
 }
 const config = {
