@@ -2,6 +2,8 @@ import fs from "fs";
 import glob from "glob";
 import matter from "gray-matter";
 import path from "path";
+import { format } from "date-fns";
+import yaml from "js-yaml";
 
 // Note: There are many other possible properties, but this is all we're working
 // with in this script.
@@ -16,13 +18,15 @@ type PostFrontmatter = {
 
 type PostMetadata = {
   slug: string;
+  dateStr: string;
+  filename: string;
+  filePath: string;
 };
 
 export type Post = {
   __metadata: PostMetadata;
   data: PostFrontmatter;
   content: string;
-  filePath: string;
 };
 
 /**
@@ -38,7 +42,7 @@ function allPosts(postsDir: string): Post[] {
     const { data, content }: { data: any; content: string } =
       matter(fileContent);
     const __metadata = postMetadata(filePath);
-    return { __metadata, data, content, filePath } as Post;
+    return { __metadata, data, content } as Post;
   });
 }
 
@@ -47,10 +51,15 @@ function allPosts(postsDir: string): Post[] {
  *
  */
 function postMetadata(filePath: string): PostMetadata {
+  const filename = path.basename(filePath);
+  const slug = filename.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "");
+  const dateStr = filename.match(/^\d{4}-\d{2}-\d{2}/)![0];
+
   return {
-    slug: path
-      .basename(filePath, path.extname(filePath))
-      .replace(/^\d{4}-\d{2}-\d{2}-/, ""),
+    slug,
+    dateStr,
+    filename,
+    filePath,
   };
 }
 
@@ -62,3 +71,21 @@ function postMetadata(filePath: string): PostMetadata {
 export function postsWithoutImage(postsDir: string): Post[] {
   return allPosts(postsDir).filter((post) => !post.data.image);
 }
+
+/**
+ * Given a post object and a local file path to a tmp file, return the path to
+ * be used as the key when uploading to s3.
+ *
+ */
+export function s3FilePath(tmpFilePath: string, post: Post): string {
+  const date = new Date(post.__metadata.dateStr.replace(/\-/g, "/"));
+  const dateStr = format(date, "yyMMdd");
+  return `posts/${dateStr}/${path.basename(tmpFilePath)}`;
+}
+
+// export function updatePost(post: Post) {
+//   const frontmatter = yaml.dump(post.data);
+//   const fileContent = `---\n${frontmatter}\n---\n\n${post.content}`;
+
+//   console.log(fileContent);
+// }

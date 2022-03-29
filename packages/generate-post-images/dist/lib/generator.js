@@ -16,7 +16,7 @@ exports.Generator = void 0;
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const canvas_1 = require("canvas");
-const text_utils_1 = require("./utils/text-utils");
+const text_utils_1 = require("../utils/text-utils");
 class Generator {
     constructor({ post, config, }) {
         this.post = post;

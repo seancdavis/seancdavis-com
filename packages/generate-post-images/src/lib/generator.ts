@@ -2,9 +2,9 @@ import fs from "fs";
 import path from "path";
 import { createCanvas, registerFont, loadImage, Canvas } from "canvas";
 
-import { formatTitle } from "./utils/text-utils";
-import type { Post } from "./utils/post-utils";
-import type { ResolvedBackgroundConfig } from "./utils/background-utils";
+import { formatTitle } from "../utils/text-utils";
+import type { Post } from "../utils/post-utils";
+import type { ResolvedBackgroundConfig } from "../utils/background-utils";
 
 export class Generator {
   readonly config: ResolvedBackgroundConfig & {
@@ -35,7 +35,7 @@ export class Generator {
     this.context = this.canvas.getContext("2d");
   }
 
-  async run() {
+  async run(): Promise<{ featuredImagePath: string; metaImagePath: string }> {
     const featuredImagePath = await this.generateFeaturedImage();
     const metaImagePath = await this.generateMetaImage();
     return { featuredImagePath, metaImagePath };
@@ -60,6 +60,7 @@ export class Generator {
   private async generateMetaImage() {
     this.renderTitle();
     this.saveAsImage(this.config.tmpFilePaths.meta);
+    return this.config.tmpFilePaths.meta;
   }
 
   /**

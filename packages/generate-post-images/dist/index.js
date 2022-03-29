@@ -10,15 +10,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.generateImages = void 0;
-const post_utils_1 = require("./utils/post-utils");
-const background_utils_1 = require("./utils/background-utils");
-const generator_1 = require("./generator");
+const post_1 = require("./lib/post");
 // TODO:
 //
 // - [x] Render title
 // - [x] Add support for background colors
 // - [x] Generate and store meta image
-// - [ ] Upload images
+// - [x] Upload images
 // - [ ] Store references back on the post
 // - [ ] Write tests?
 /**
@@ -29,11 +27,19 @@ const generator_1 = require("./generator");
  */
 function generateImages(config) {
     return __awaiter(this, void 0, void 0, function* () {
-        for (const post of (0, post_utils_1.postsWithoutImage)(config.postsDir)) {
-            const generator = new generator_1.Generator({ post, config: (0, background_utils_1.getRandomBackground)() });
-            const { featuredImagePath, metaImagePath } = yield generator.run();
-            console.log(featuredImagePath);
-        }
+        const postsWithoutImage = post_1.Post.findAllWithoutImage(config.postsDir);
+        console.log(postsWithoutImage);
+        // for (const post of postsWithoutImage(config.postsDir)) {
+        //   const generator = new Generator({ post, config: getRandomBackground() });
+        //   const { featuredImagePath, metaImagePath } = await generator.run();
+        //   await uploadImages({featuredImagePath, metaImagePath, post})
+        //   await uploadFile(featuredImagePath, s3FilePath(featuredImagePath, post));
+        //   await uploadFile(metaImagePath, s3FilePath(metaImagePath, post));
+        //   post.data = {
+        //     ...post.data,
+        //     image:
+        //   }
+        // }
     });
 }
 exports.generateImages = generateImages;
