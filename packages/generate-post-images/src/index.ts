@@ -1,9 +1,5 @@
-import { postsWithoutImage, s3FilePath } from "./utils/post-utils";
-import { getRandomBackground } from "./utils/background-utils";
-import { uploadFile } from "./utils/s3-utils";
-
-import { Generator } from "./lib/generator";
 import { Post } from "./lib/post";
+import { getRandomBackground } from "./utils/config-utils";
 
 type InputConfig = {
   postsDir: string;
@@ -26,17 +22,12 @@ type InputConfig = {
  */
 export async function generateImages(config: InputConfig) {
   const postsWithoutImage = Post.findAllWithoutImage(config.postsDir);
-  console.log(postsWithoutImage);
-
-  // for (const post of postsWithoutImage(config.postsDir)) {
-  //   const generator = new Generator({ post, config: getRandomBackground() });
-  //   const { featuredImagePath, metaImagePath } = await generator.run();
-  //   await uploadImages({featuredImagePath, metaImagePath, post})
-  //   await uploadFile(featuredImagePath, s3FilePath(featuredImagePath, post));
-  //   await uploadFile(metaImagePath, s3FilePath(metaImagePath, post));
-  //   post.data = {
-  //     ...post.data,
-  //     image:
-  //   }
-  // }
+  for (const post of postsWithoutImage) {
+    // Get a random background config and set it on the post.
+    post.imageConfig = getRandomBackground();
+    // Generate and upload featured and meta images.
+    await post.generateImages();
+    // Store image reference on post and write back to file.
+    // await post.update()
+  }
 }

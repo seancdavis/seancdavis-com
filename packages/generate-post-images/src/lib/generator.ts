@@ -3,8 +3,8 @@ import path from "path";
 import { createCanvas, registerFont, loadImage, Canvas } from "canvas";
 
 import { formatTitle } from "../utils/text-utils";
-import type { Post } from "../utils/post-utils";
-import type { ResolvedBackgroundConfig } from "../utils/background-utils";
+import type { Post } from "./post";
+import type { ResolvedBackgroundConfig } from "../utils/config-utils";
 
 export class Generator {
   readonly config: ResolvedBackgroundConfig & {
@@ -35,38 +35,21 @@ export class Generator {
     this.context = this.canvas.getContext("2d");
   }
 
-  async run(): Promise<{ featuredImagePath: string; metaImagePath: string }> {
-    const featuredImagePath = await this.generateFeaturedImage();
-    const metaImagePath = await this.generateMetaImage();
-    return { featuredImagePath, metaImagePath };
-  }
-
   /* ---------- Rendering Utils ---------- */
 
   /**
-   * Render the background image and store current state as a temp file.
+   * Render the background image to the canvas.
    */
-  private async generateFeaturedImage() {
+  async renderBackground() {
     const { width, height, filePath } = this.config;
     const image = await loadImage(filePath);
     this.context.drawImage(image, 0, 0, width, height);
-    this.saveAsImage(this.config.tmpFilePaths.featured);
-    return this.config.tmpFilePaths.featured;
-  }
-
-  /**
-   * Saves the meta image after rendering the title to the canvas.
-   */
-  private async generateMetaImage() {
-    this.renderTitle();
-    this.saveAsImage(this.config.tmpFilePaths.meta);
-    return this.config.tmpFilePaths.meta;
   }
 
   /**
    * Renders the title to the canvas.
    */
-  private renderTitle() {
+  async renderTitle() {
     // Determine font size and number of lines.
     const { fontSize, text } = formatTitle(this.post.data.title, this.context, {
       maxFontSize: this.config.maxFontSize,
@@ -151,10 +134,14 @@ export class Generator {
 
   /**
    * Store the current canvas as a file at the given file path.
+   *
+   * @param filePath Absolute path to where the canvas snapshot should be stored.
+   * @returns The input file path
    */
-  private saveAsImage(filePath: string) {
+  saveAsImage(filePath: string): string {
     const buffer = this.canvas.toBuffer("image/png");
-    return fs.writeFileSync(filePath, buffer);
+    fs.writeFileSync(filePath, buffer);
+    return filePath;
   }
 
   /* ---------- Init Utils ---------- */
@@ -164,7 +151,7 @@ export class Generator {
    * initialized.
    */
   private loadFont(filename: string, family: string) {
-    const fontPath = path.join(__dirname, "../src/assets/fonts", filename);
+    const fontPath = path.join(__dirname, "../../src/assets/fonts", filename);
     registerFont(fontPath, { family });
   }
 
@@ -173,7 +160,7 @@ export class Generator {
    * directory where the command is run.
    */
   private getTmpFilePaths(): { featured: string; meta: string } {
-    const tmpDir = path.join(__dirname, "../tmp");
+    const tmpDir = path.join(__dirname, "../../tmp");
     if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
     return {
       featured: path.join(tmpDir, `${this.post.__metadata.slug}.png`),

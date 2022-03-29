@@ -27,90 +27,73 @@ class Generator {
         this.canvas = (0, canvas_1.createCanvas)(this.config.width, this.config.height);
         this.context = this.canvas.getContext("2d");
     }
-    run() {
-        return __awaiter(this, void 0, void 0, function* () {
-            const featuredImagePath = yield this.generateFeaturedImage();
-            const metaImagePath = yield this.generateMetaImage();
-            return { featuredImagePath, metaImagePath };
-        });
-    }
     /* ---------- Rendering Utils ---------- */
     /**
-     * Render the background image and store current state as a temp file.
+     * Render the background image to the canvas.
      */
-    generateFeaturedImage() {
+    renderBackground() {
         return __awaiter(this, void 0, void 0, function* () {
             const { width, height, filePath } = this.config;
             const image = yield (0, canvas_1.loadImage)(filePath);
             this.context.drawImage(image, 0, 0, width, height);
-            this.saveAsImage(this.config.tmpFilePaths.featured);
-            return this.config.tmpFilePaths.featured;
-        });
-    }
-    /**
-     * Saves the meta image after rendering the title to the canvas.
-     */
-    generateMetaImage() {
-        return __awaiter(this, void 0, void 0, function* () {
-            this.renderTitle();
-            this.saveAsImage(this.config.tmpFilePaths.meta);
-            return this.config.tmpFilePaths.meta;
         });
     }
     /**
      * Renders the title to the canvas.
      */
     renderTitle() {
-        // Determine font size and number of lines.
-        const { fontSize, text } = (0, text_utils_1.formatTitle)(this.post.data.title, this.context, {
-            maxFontSize: this.config.maxFontSize,
-            maxLineWidth: this.config.maxLineWidth,
-            minSingleLineFontSize: this.config.minSingleLineFontSize,
-        });
-        // Determine y value for the first line. The Y for text is measured as the
-        // bottom of the line.
-        //
-        // If a single line, Y is the middle of the canvas PLUS half the font size.
-        //
-        // If two lines, then it's half the canvas MINUS half the space between the
-        // lines (for which we'll use the font size).
-        const centerY = this.config.height / 2;
-        let y = text.length === 1 ? centerY + fontSize / 2 : centerY - fontSize / 2;
-        // X is the center, if center aligned, or half the difference between the
-        // maxLineWidth and canvas width (i.e. the padding).
-        const x = this.config.textAlign === "center"
-            ? this.config.width / 2
-            : (this.config.width - this.config.maxLineWidth) / 2;
-        if (this.config.highlight) {
-            // Highlight the first line, if necessary.
-            this.renderHighlight({ x, y, fontSize, text: text[0] });
-        }
-        else {
-            // Otherwise, set a shadow for the text.
-            this.context.shadowColor = "rgba(0, 0, 0, .25)";
-            this.context.shadowBlur = 4;
-            this.context.shadowOffsetY = 4;
-        }
-        // Render the first line.
-        this.context.textAlign = this.config.textAlign;
-        this.context.font = `bold ${fontSize}pt 'DM Serif Display'`;
-        this.context.fillStyle = this.config.highlight
-            ? this.config.highlightTextColor
-            : this.config.textColor;
-        this.context.fillText(text[0], x, y);
-        // Render the second line, if necessary.
-        if (text[1]) {
-            // 1 for the space between, 1 because y is set as the bottom of the line.
-            y += fontSize * 2;
-            // Highlight, if necessary.
+        return __awaiter(this, void 0, void 0, function* () {
+            // Determine font size and number of lines.
+            const { fontSize, text } = (0, text_utils_1.formatTitle)(this.post.data.title, this.context, {
+                maxFontSize: this.config.maxFontSize,
+                maxLineWidth: this.config.maxLineWidth,
+                minSingleLineFontSize: this.config.minSingleLineFontSize,
+            });
+            // Determine y value for the first line. The Y for text is measured as the
+            // bottom of the line.
+            //
+            // If a single line, Y is the middle of the canvas PLUS half the font size.
+            //
+            // If two lines, then it's half the canvas MINUS half the space between the
+            // lines (for which we'll use the font size).
+            const centerY = this.config.height / 2;
+            let y = text.length === 1 ? centerY + fontSize / 2 : centerY - fontSize / 2;
+            // X is the center, if center aligned, or half the difference between the
+            // maxLineWidth and canvas width (i.e. the padding).
+            const x = this.config.textAlign === "center"
+                ? this.config.width / 2
+                : (this.config.width - this.config.maxLineWidth) / 2;
             if (this.config.highlight) {
-                this.renderHighlight({ x, y, fontSize, text: text[1] });
+                // Highlight the first line, if necessary.
+                this.renderHighlight({ x, y, fontSize, text: text[0] });
             }
+            else {
+                // Otherwise, set a shadow for the text.
+                this.context.shadowColor = "rgba(0, 0, 0, .25)";
+                this.context.shadowBlur = 4;
+                this.context.shadowOffsetY = 4;
+            }
+            // Render the first line.
+            this.context.textAlign = this.config.textAlign;
+            this.context.font = `bold ${fontSize}pt 'DM Serif Display'`;
             this.context.fillStyle = this.config.highlight
                 ? this.config.highlightTextColor
                 : this.config.textColor;
-            this.context.fillText(text[1], x, y);
-        }
+            this.context.fillText(text[0], x, y);
+            // Render the second line, if necessary.
+            if (text[1]) {
+                // 1 for the space between, 1 because y is set as the bottom of the line.
+                y += fontSize * 2;
+                // Highlight, if necessary.
+                if (this.config.highlight) {
+                    this.renderHighlight({ x, y, fontSize, text: text[1] });
+                }
+                this.context.fillStyle = this.config.highlight
+                    ? this.config.highlightTextColor
+                    : this.config.textColor;
+                this.context.fillText(text[1], x, y);
+            }
+        });
     }
     /**
      * Renders a highlight rectangle for a given line of a title.
@@ -135,10 +118,14 @@ class Generator {
     /* ---------- File Utils ---------- */
     /**
      * Store the current canvas as a file at the given file path.
+     *
+     * @param filePath Absolute path to where the canvas snapshot should be stored.
+     * @returns The input file path
      */
     saveAsImage(filePath) {
         const buffer = this.canvas.toBuffer("image/png");
-        return fs_1.default.writeFileSync(filePath, buffer);
+        fs_1.default.writeFileSync(filePath, buffer);
+        return filePath;
     }
     /* ---------- Init Utils ---------- */
     /**
@@ -146,7 +133,7 @@ class Generator {
      * initialized.
      */
     loadFont(filename, family) {
-        const fontPath = path_1.default.join(__dirname, "../src/assets/fonts", filename);
+        const fontPath = path_1.default.join(__dirname, "../../src/assets/fonts", filename);
         (0, canvas_1.registerFont)(fontPath, { family });
     }
     /**
@@ -154,7 +141,7 @@ class Generator {
      * directory where the command is run.
      */
     getTmpFilePaths() {
-        const tmpDir = path_1.default.join(__dirname, "../tmp");
+        const tmpDir = path_1.default.join(__dirname, "../../tmp");
         if (!fs_1.default.existsSync(tmpDir))
             fs_1.default.mkdirSync(tmpDir);
         return {

@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.generateImages = void 0;
 const post_1 = require("./lib/post");
+const config_utils_1 = require("./utils/config-utils");
 // TODO:
 //
 // - [x] Render title
@@ -28,18 +29,14 @@ const post_1 = require("./lib/post");
 function generateImages(config) {
     return __awaiter(this, void 0, void 0, function* () {
         const postsWithoutImage = post_1.Post.findAllWithoutImage(config.postsDir);
-        console.log(postsWithoutImage);
-        // for (const post of postsWithoutImage(config.postsDir)) {
-        //   const generator = new Generator({ post, config: getRandomBackground() });
-        //   const { featuredImagePath, metaImagePath } = await generator.run();
-        //   await uploadImages({featuredImagePath, metaImagePath, post})
-        //   await uploadFile(featuredImagePath, s3FilePath(featuredImagePath, post));
-        //   await uploadFile(metaImagePath, s3FilePath(metaImagePath, post));
-        //   post.data = {
-        //     ...post.data,
-        //     image:
-        //   }
-        // }
+        for (const post of postsWithoutImage) {
+            // Get a random background config and set it on the post.
+            post.imageConfig = (0, config_utils_1.getRandomBackground)();
+            // Generate and upload featured and meta images.
+            yield post.generateImages();
+            // Store image reference on post and write back to file.
+            // await post.update()
+        }
     });
 }
 exports.generateImages = generateImages;
