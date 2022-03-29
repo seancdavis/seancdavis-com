@@ -3,6 +3,7 @@ import glob from "glob";
 import path from "path";
 import matter from "gray-matter";
 import { format } from "date-fns";
+import yaml from "js-yaml";
 
 import { ResolvedBackgroundConfig } from "../utils/config-utils";
 import { uploadFile } from "../utils/s3-utils";
@@ -121,6 +122,26 @@ export class Post {
     const date = new Date(this.__metadata.dateStr.replace(/\-/g, "/"));
     const dateStr = format(date, "yyMMdd");
     return `posts/${dateStr}/${path.basename(tmpImagePath)}`;
+  }
+
+  /* ----- File Utils ----- */
+
+  /**
+   * Set the image references on the object and write them back to file.
+   */
+  async updateSrcFile() {
+    if (!this.imageRefs) {
+      throw new Error("imageRefs not set. Must run `generateImages` first.");
+    }
+    // Set image attributes on the object.
+    this.data.image = `/${this.imageRefs.featured.s3FilePath}`;
+    this.data.seo = {
+      ...this.data.seo,
+      image: `/${this.imageRefs.meta.s3FilePath}`,
+    };
+    // Convert data to yaml and build a string to write back to the file.
+    const fileContent = `---\n${yaml.dump(this.data)}---\n\n${this.content}`;
+    fs.writeFileSync(this.__metadata.filePath, fileContent);
   }
 
   /* ----- Init Utils ----- */

@@ -11,7 +11,7 @@ type InputConfig = {
 // - [x] Add support for background colors
 // - [x] Generate and store meta image
 // - [x] Upload images
-// - [ ] Store references back on the post
+// - [x] Store references back on the post
 // - [ ] Write tests?
 
 /**
@@ -28,6 +28,6 @@ export async function generateImages(config: InputConfig) {
     // Generate and upload featured and meta images.
     await post.generateImages();
     // Store image reference on post and write back to file.
-    // await post.update()
+    await post.updateSrcFile();
   }
 }

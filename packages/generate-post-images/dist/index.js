@@ -18,7 +18,7 @@ const config_utils_1 = require("./utils/config-utils");
 // - [x] Add support for background colors
 // - [x] Generate and store meta image
 // - [x] Upload images
-// - [ ] Store references back on the post
+// - [x] Store references back on the post
 // - [ ] Write tests?
 /**
  * Looks for eligible posts that don't have an image and generates one for each.
@@ -35,7 +35,7 @@ function generateImages(config) {
             // Generate and upload featured and meta images.
             yield post.generateImages();
             // Store image reference on post and write back to file.
-            // await post.update()
+            yield post.updateSrcFile();
         }
     });
 }

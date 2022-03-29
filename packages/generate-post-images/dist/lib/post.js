@@ -18,6 +18,7 @@ const glob_1 = __importDefault(require("glob"));
 const path_1 = __importDefault(require("path"));
 const gray_matter_1 = __importDefault(require("gray-matter"));
 const date_fns_1 = require("date-fns");
+const js_yaml_1 = __importDefault(require("js-yaml"));
 const s3_utils_1 = require("../utils/s3-utils");
 const generator_1 = require("./generator");
 class Post {
@@ -95,6 +96,23 @@ class Post {
         const date = new Date(this.__metadata.dateStr.replace(/\-/g, "/"));
         const dateStr = (0, date_fns_1.format)(date, "yyMMdd");
         return `posts/${dateStr}/${path_1.default.basename(tmpImagePath)}`;
+    }
+    /* ----- File Utils ----- */
+    /**
+     * Set the image references on the object and write them back to file.
+     */
+    updateSrcFile() {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (!this.imageRefs) {
+                throw new Error("imageRefs not set. Must run `generateImages` first.");
+            }
+            // Set image attributes on the object.
+            this.data.image = `/${this.imageRefs.featured.s3FilePath}`;
+            this.data.seo = Object.assign(Object.assign({}, this.data.seo), { image: `/${this.imageRefs.meta.s3FilePath}` });
+            // Convert data to yaml and build a string to write back to the file.
+            const fileContent = `---\n${js_yaml_1.default.dump(this.data)}---\n\n${this.content}`;
+            fs_1.default.writeFileSync(this.__metadata.filePath, fileContent);
+        });
     }
     /* ----- Init Utils ----- */
     /**
