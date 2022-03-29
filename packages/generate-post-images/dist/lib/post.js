@@ -19,6 +19,7 @@ const path_1 = __importDefault(require("path"));
 const gray_matter_1 = __importDefault(require("gray-matter"));
 const date_fns_1 = require("date-fns");
 const js_yaml_1 = __importDefault(require("js-yaml"));
+const nanoid_1 = require("nanoid");
 const s3_utils_1 = require("../utils/s3-utils");
 const generator_1 = require("./generator");
 class Post {
@@ -72,9 +73,11 @@ class Post {
     }
     /**
      * Returns an absolute URL to a temporary path at which to store the generated
-     * image. Assumes PNG image.
+     * image. The filename follows this format:
      *
-     * If meta option is true, "--meta" is appended to the filename.
+     *    [slug]-[uid][--appendix].png
+     *
+     * If meta option is true, "meta" is the appendix. Otherwise, it is omitted.
      *
      * @returns {string} Temp image path.
      */
@@ -82,7 +85,11 @@ class Post {
         const tmpDir = path_1.default.join(__dirname, "../../tmp");
         if (!fs_1.default.existsSync(tmpDir))
             fs_1.default.mkdirSync(tmpDir);
-        const filename = `${this.__metadata.slug}${meta ? "--meta" : ""}.png`;
+        const slug = this.__metadata.slug;
+        const appendix = meta ? "--meta" : "";
+        const uid = `-${(0, nanoid_1.nanoid)(8)}`;
+        const ext = ".png";
+        const filename = `${slug}${uid}${appendix}${ext}`;
         return path_1.default.join(tmpDir, filename);
     }
     /**

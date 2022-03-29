@@ -4,6 +4,7 @@ import path from "path";
 import matter from "gray-matter";
 import { format } from "date-fns";
 import yaml from "js-yaml";
+import { nanoid } from "nanoid";
 
 import { ResolvedBackgroundConfig } from "../utils/config-utils";
 import { uploadFile } from "../utils/s3-utils";
@@ -98,16 +99,22 @@ export class Post {
 
   /**
    * Returns an absolute URL to a temporary path at which to store the generated
-   * image. Assumes PNG image.
+   * image. The filename follows this format:
    *
-   * If meta option is true, "--meta" is appended to the filename.
+   *    [slug]-[uid][--appendix].png
+   *
+   * If meta option is true, "meta" is the appendix. Otherwise, it is omitted.
    *
    * @returns {string} Temp image path.
    */
   private getTmpImagePath({ meta = false }: { meta: boolean }): string {
     const tmpDir = path.join(__dirname, "../../tmp");
     if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
-    const filename = `${this.__metadata.slug}${meta ? "--meta" : ""}.png`;
+    const slug = this.__metadata.slug;
+    const appendix = meta ? "--meta" : "";
+    const uid = `-${nanoid(8)}`;
+    const ext = ".png";
+    const filename = `${slug}${uid}${appendix}${ext}`;
     return path.join(tmpDir, filename);
   }
 
