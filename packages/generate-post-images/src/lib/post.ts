@@ -144,6 +144,14 @@ export class Post {
     fs.writeFileSync(this.__metadata.filePath, fileContent);
   }
 
+  async rmTmpFiles() {
+    if (!this.imageRefs) {
+      throw new Error("imageRefs not set. Don't know what to remove.");
+    }
+    fs.unlinkSync(this.imageRefs.featured.tmpFilePath);
+    fs.unlinkSync(this.imageRefs.meta.tmpFilePath);
+  }
+
   /* ----- Init Utils ----- */
 
   /**

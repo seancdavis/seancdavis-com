@@ -114,6 +114,15 @@ class Post {
             fs_1.default.writeFileSync(this.__metadata.filePath, fileContent);
         });
     }
+    rmTmpFiles() {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (!this.imageRefs) {
+                throw new Error("imageRefs not set. Don't know what to remove.");
+            }
+            fs_1.default.unlinkSync(this.imageRefs.featured.tmpFilePath);
+            fs_1.default.unlinkSync(this.imageRefs.meta.tmpFilePath);
+        });
+    }
     /* ----- Init Utils ----- */
     /**
      * Use gray-matter to parse the post into a data object (frontmatter) and body

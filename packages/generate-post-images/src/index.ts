@@ -29,5 +29,7 @@ export async function generateImages(config: InputConfig) {
     await post.generateImages();
     // Store image reference on post and write back to file.
     await post.updateSrcFile();
+    // Clean up.
+    await post.rmTmpFiles();
   }
 }

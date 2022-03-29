@@ -36,6 +36,8 @@ function generateImages(config) {
             yield post.generateImages();
             // Store image reference on post and write back to file.
             yield post.updateSrcFile();
+            // Clean up.
+            yield post.rmTmpFiles();
         }
     });
 }
