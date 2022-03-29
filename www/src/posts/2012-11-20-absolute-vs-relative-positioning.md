@@ -3,11 +3,7 @@ title: Absolute vs. Relative Positioning
 tags:
   - css
 description: The golden rule of absolute positioning.
-image: /posts/121120/absolute-vs-relative-positioning.png
-seo:
-  image: /posts/121120/absolute-vs-relative-positioning--meta.png
 ---
-
 
 If you've ever tried to lay out an HTML page with a second column or sidebar, I'd bet you ran into an issue with the [_position property_](https://developer.mozilla.org/en-US/docs/Web/CSS/position) at one point or another.
 
