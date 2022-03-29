@@ -127,9 +127,13 @@ export class Post {
   /* ----- File Utils ----- */
 
   /**
-   * Set the image references on the object and write them back to file.
+   * Set the image references on the object and write them back to file. Does
+   * not run if SKIP_UPDATE has been set.
    */
   async updateSrcFile() {
+    // Don't run if we want to skip the update process.
+    if (process.env.SKIP_UPDATE) return;
+    // Can't run if we haven't generated the images yet.
     if (!this.imageRefs) {
       throw new Error("imageRefs not set. Must run `generateImages` first.");
     }
@@ -144,10 +148,17 @@ export class Post {
     fs.writeFileSync(this.__metadata.filePath, fileContent);
   }
 
+  /**
+   * Removes the local generated images unless SKIP_CLEANUP has been set.
+   */
   async rmTmpFiles() {
+    // If SKIP_CLEANUP is set, don't do the cleanup.
+    if (process.env.SKIP_CLEANUP) return;
+    // We can't remove anything if we don't know what to remove.
     if (!this.imageRefs) {
       throw new Error("imageRefs not set. Don't know what to remove.");
     }
+    // Remove the temp files.
     fs.unlinkSync(this.imageRefs.featured.tmpFilePath);
     fs.unlinkSync(this.imageRefs.meta.tmpFilePath);
   }
