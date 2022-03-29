@@ -115,7 +115,7 @@ class Post {
             this.data.image = `/${this.imageRefs.featured.s3FilePath}`;
             this.data.seo = Object.assign(Object.assign({}, this.data.seo), { image: `/${this.imageRefs.meta.s3FilePath}` });
             // Convert data to yaml and build a string to write back to the file.
-            const fileContent = `---\n${js_yaml_1.default.dump(this.data)}---\n\n${this.content}`;
+            const fileContent = `---\n${js_yaml_1.default.dump(this.data)}---\n${this.content}`;
             fs_1.default.writeFileSync(this.__metadata.filePath, fileContent);
         });
     }

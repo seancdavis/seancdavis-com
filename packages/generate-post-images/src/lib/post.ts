@@ -144,7 +144,7 @@ export class Post {
       image: `/${this.imageRefs.meta.s3FilePath}`,
     };
     // Convert data to yaml and build a string to write back to the file.
-    const fileContent = `---\n${yaml.dump(this.data)}---\n\n${this.content}`;
+    const fileContent = `---\n${yaml.dump(this.data)}---\n${this.content}`;
     fs.writeFileSync(this.__metadata.filePath, fileContent);
   }
 
