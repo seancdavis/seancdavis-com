@@ -34,8 +34,6 @@ export class Post {
   static async create(notionPageId: string): Promise<Post> {
     const blocks = await getAllPageBlocks(notionPageId);
     const properties = await getPageProperties(notionPageId);
-    console.log(properties);
-
     return new Post({ blocks, properties });
   }
 }
