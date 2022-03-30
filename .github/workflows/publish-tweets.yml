@@ -13,7 +13,7 @@ jobs:
           node-version: "14"
       - name: Install dependencies
         run: yarn install
-      - name: Run image generator
+      - name: Run tweet publisher
         run: |
           cd www
           npm run publish-tweets

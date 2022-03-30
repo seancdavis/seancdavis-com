@@ -8,7 +8,7 @@
     "gatsby": "^4.10.1",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-manifest": "^4.9.1",
-    "gatsby-plugin-offline": "^5.9.1",
+    "gatsby-plugin-offline": "^5.10.1",
     "gatsby-plugin-react-helmet": "^5.10.0",
     "gatsby-plugin-sharp": "^4.10.1",
     "gatsby-source-filesystem": "^4.10.0",
@@ -19,8 +19,8 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "gatsby-transformer-remark": "^5.9.1",
-    "prettier": "2.6.0"
+    "gatsby-transformer-remark": "^5.10.2",
+    "prettier": "2.6.1"
   },
   "keywords": [
     "gatsby"

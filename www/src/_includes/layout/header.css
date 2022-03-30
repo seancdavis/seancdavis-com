@@ -42,7 +42,7 @@
     overflow-y-scroll
     transition-all
     w-screen
-    z-10;
+    z-20;
 
   top: -100vh;
 
