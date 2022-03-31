@@ -42,14 +42,15 @@ exports.getPendingPageIds = getPendingPageIds;
  * only where necessary to serve basic post features.
  *
  * @param {string} pageId ID string from Notion representing the Notion page.
- * @returns {Promise<GetBlockResponse[]>}
+ * @returns {Promise<BlockObjectResponse[]>}
  */
 function getAllPageBlocks(pageId) {
     return __awaiter(this, void 0, void 0, function* () {
         const response = yield notion.blocks.children.list({
             block_id: pageId,
         });
-        return response.results;
+        const blocks = response.results;
+        return blocks;
     });
 }
 exports.getAllPageBlocks = getAllPageBlocks;

@@ -5,32 +5,26 @@ import yaml from "js-yaml";
 import { format as formatDate } from "date-fns";
 import prettier from "prettier";
 
-import type { GetBlockResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { PostProperties } from "../types/post";
 
+import { Block } from "./Block";
 import { getAllPageBlocks, getPageProperties } from "../utils/notion-utils";
-
-export type PostProperties = {
-  title: string;
-  description: string;
-  tweet?: string;
-  tags?: string[];
-};
 
 type PostConstructorInput = {
   id: string;
-  blocks: GetBlockResponse[];
+  blocks: Block[];
   properties: PostProperties;
 };
 
 export class Post {
   id: string;
-  blocks: GetBlockResponse[];
+  blocks: Block[];
   properties: PostProperties;
 
-  constructor({ id, blocks, properties }: PostConstructorInput) {
-    this.id = id;
-    this.blocks = blocks;
-    this.properties = properties;
+  constructor(params: PostConstructorInput) {
+    this.id = params.id;
+    this.blocks = params.blocks;
+    this.properties = params.properties;
     this.validate();
   }
 
@@ -52,7 +46,7 @@ export class Post {
     const filePath = path.join(postsDir, filename);
 
     const frontmatter = yaml.dump(this.properties);
-    const body = "Hello World";
+    const body = this.blocks.map((block) => block.render()).join("\n");
 
     const postContent = `---\n${frontmatter}---\n\n${body}`;
     const formattedPostContent = prettier.format(postContent, {
@@ -66,6 +60,10 @@ export class Post {
 
   /* ----- Validations ----- */
 
+  /**
+   * Validates this classes attributes, throwing errors when the conditions are
+   * not enough to be able to properly publish a post.
+   */
   private validate() {
     if (!this.properties.title) {
       throw new Error(`Notion Page ${this.id} is missing a title.`);
@@ -89,7 +87,8 @@ export class Post {
    * @returns {Promise<Post}
    */
   static async create(notionPageId: string): Promise<Post> {
-    const blocks = await getAllPageBlocks(notionPageId);
+    const notionBlocks = await getAllPageBlocks(notionPageId);
+    const blocks = notionBlocks.map((block) => new Block(block));
     const properties = await getPageProperties(notionPageId);
     return new Post({ id: notionPageId, blocks, properties });
   }

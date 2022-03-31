@@ -1,9 +1,6 @@
 import { Client } from "@notionhq/client";
-import type {
-  GetBlockResponse,
-  GetPagePropertyResponse,
-} from "@notionhq/client/build/src/api-endpoints";
-import type { PostProperties } from "../lib/Post";
+import type { BlockObjectResponse } from "../types/notion";
+import type { PostProperties } from "../types/post";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
@@ -43,15 +40,16 @@ export async function getPendingPageIds(): Promise<string[]> {
  * only where necessary to serve basic post features.
  *
  * @param {string} pageId ID string from Notion representing the Notion page.
- * @returns {Promise<GetBlockResponse[]>}
+ * @returns {Promise<BlockObjectResponse[]>}
  */
 export async function getAllPageBlocks(
   pageId: string
-): Promise<GetBlockResponse[]> {
+): Promise<BlockObjectResponse[]> {
   const response = await notion.blocks.children.list({
     block_id: pageId,
   });
-  return response.results;
+  const blocks = response.results as unknown as BlockObjectResponse[];
+  return blocks;
 }
 
 /**

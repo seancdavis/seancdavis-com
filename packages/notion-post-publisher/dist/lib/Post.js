@@ -19,12 +19,13 @@ const slugify_1 = __importDefault(require("slugify"));
 const js_yaml_1 = __importDefault(require("js-yaml"));
 const date_fns_1 = require("date-fns");
 const prettier_1 = __importDefault(require("prettier"));
+const Block_1 = require("./Block");
 const notion_utils_1 = require("../utils/notion-utils");
 class Post {
-    constructor({ id, blocks, properties }) {
-        this.id = id;
-        this.blocks = blocks;
-        this.properties = properties;
+    constructor(params) {
+        this.id = params.id;
+        this.blocks = params.blocks;
+        this.properties = params.properties;
         this.validate();
     }
     /* ----- Writing to File ----- */
@@ -43,7 +44,7 @@ class Post {
             const filename = `${dateStr}-${slug}.md`;
             const filePath = path_1.default.join(postsDir, filename);
             const frontmatter = js_yaml_1.default.dump(this.properties);
-            const body = "Hello World";
+            const body = this.blocks.map((block) => block.render()).join("\n");
             const postContent = `---\n${frontmatter}---\n\n${body}`;
             const formattedPostContent = prettier_1.default.format(postContent, {
                 parser: "markdown",
@@ -53,6 +54,10 @@ class Post {
         });
     }
     /* ----- Validations ----- */
+    /**
+     * Validates this classes attributes, throwing errors when the conditions are
+     * not enough to be able to properly publish a post.
+     */
     validate() {
         var _a;
         if (!this.properties.title) {
@@ -76,7 +81,8 @@ class Post {
      */
     static create(notionPageId) {
         return __awaiter(this, void 0, void 0, function* () {
-            const blocks = yield (0, notion_utils_1.getAllPageBlocks)(notionPageId);
+            const notionBlocks = yield (0, notion_utils_1.getAllPageBlocks)(notionPageId);
+            const blocks = notionBlocks.map((block) => new Block_1.Block(block));
             const properties = yield (0, notion_utils_1.getPageProperties)(notionPageId);
             return new Post({ id: notionPageId, blocks, properties });
         });
