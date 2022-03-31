@@ -1,10 +1,11 @@
 import type { BlockObjectResponse } from "../types/notion";
 
-import { ParagraphBlock } from "./blocks";
+import { DividerBlock, ParagraphBlock } from "./blocks";
 
 type BlockType = "paragraph";
 
 const BlockMap = {
+  divider: DividerBlock,
   paragraph: ParagraphBlock,
 };
 
@@ -25,6 +26,6 @@ export class Block {
   }
 
   render() {
-    return `Block not supported: ${this.type}\n`;
+    throw new Error(`Block not supported: ${this.type}`);
   }
 }

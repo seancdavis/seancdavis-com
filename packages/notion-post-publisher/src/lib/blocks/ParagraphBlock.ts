@@ -15,8 +15,6 @@ export class ParagraphBlock {
     this.type = "paragraph";
     this.rich_text = params.paragraph.rich_text;
     this.color = params.paragraph.color;
-    // console.log(this.rich_text);
-    // console.log(params);
   }
 
   render() {

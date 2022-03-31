@@ -4519,6 +4519,19 @@ export type ParagraphBlockResponse = {
   archived: boolean;
 };
 
+export type DividerBlockResponse = {
+  type: "divider";
+  divider: EmptyObject;
+  object: "block";
+  id: string;
+  created_time: string;
+  created_by: { id: IdRequest; object: "user" };
+  last_edited_time: string;
+  last_edited_by: { id: IdRequest; object: "user" };
+  has_children: boolean;
+  archived: boolean;
+}
+
 export type BlockObjectResponse =
   | ParagraphBlockResponse
   | {
@@ -4727,18 +4740,7 @@ export type BlockObjectResponse =
       has_children: boolean;
       archived: boolean;
     }
-  | {
-      type: "divider";
-      divider: EmptyObject;
-      object: "block";
-      id: string;
-      created_time: string;
-      created_by: { id: IdRequest; object: "user" };
-      last_edited_time: string;
-      last_edited_by: { id: IdRequest; object: "user" };
-      has_children: boolean;
-      archived: boolean;
-    }
+  | DividerBlockResponse
   | {
       type: "breadcrumb";
       breadcrumb: EmptyObject;

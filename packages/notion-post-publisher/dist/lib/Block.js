@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Block = void 0;
 const blocks_1 = require("./blocks");
 const BlockMap = {
+    divider: blocks_1.DividerBlock,
     paragraph: blocks_1.ParagraphBlock,
 };
 function mapBlock(type, params) {
@@ -17,7 +18,7 @@ class Block {
         }
     }
     render() {
-        return `Block not supported: ${this.type}\n`;
+        throw new Error(`Block not supported: ${this.type}`);
     }
 }
 exports.Block = Block;
