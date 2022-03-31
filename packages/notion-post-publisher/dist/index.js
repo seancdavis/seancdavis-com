@@ -8,35 +8,33 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.publishPosts = void 0;
 const Post_1 = require("./lib/Post");
 const notion_utils_1 = require("./utils/notion-utils");
-// TODO:
-//
-// - [x] Retrieve post and first level of blocks from database
-// - [x] Resolve post properties
-// - [ ] Add property validations in Post constructor.
-// - [ ] Create new post file
-// - [ ] Write frontmatter to file
-// - [ ] Build block mapper
-// - [ ] Update status, publish date, and link for the Notion page
-// - [ ] Account for children in blocks only where necessary (lists?)
-// - [ ] Account for pagination in blocks
-// - [ ] Account for duplicate posts (or just override?)
-// - [ ] Support guest author?
-//      - If doing this, should probably also support adding an image. Not sure
-//        this is the right more right now.
+const chalk_1 = __importDefault(require("chalk"));
 /**
  *
  */
 function publishPosts(config) {
     return __awaiter(this, void 0, void 0, function* () {
-        const pageIds = yield (0, notion_utils_1.getPendingPageIds)();
-        for (const pageId of pageIds) {
-            // const post = new Post(pageId);
-            // console.log(post);
-            const post = yield Post_1.Post.create(pageId);
+        try {
+            const pageIds = yield (0, notion_utils_1.getPendingPageIds)();
+            for (const pageId of pageIds) {
+                // const post = new Post(pageId);
+                // console.log(post);
+                const post = yield Post_1.Post.create(pageId);
+                console.log(post);
+            }
+        }
+        catch (err) {
+            if (err instanceof Error) {
+                console.error(`${chalk_1.default.red.bold("[error]")} ${err.message}`);
+            }
+            process.exit(1);
         }
     });
 }

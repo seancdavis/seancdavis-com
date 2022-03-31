@@ -2,30 +2,49 @@ import type { GetBlockResponse } from "@notionhq/client/build/src/api-endpoints"
 import { getAllPageBlocks, getPageProperties } from "../utils/notion-utils";
 
 export type PostProperties = {
-  title?: string;
+  title: string;
+  description: string;
   tweet?: string;
-  description?: string;
   tags?: string[];
 };
 
 type PostConstructorInput = {
+  id: string;
   blocks: GetBlockResponse[];
   properties: PostProperties;
 };
 
 export class Post {
+  id: string;
   blocks: GetBlockResponse[];
-  properties: {};
+  properties: PostProperties;
 
-  constructor({ blocks, properties }: PostConstructorInput) {
+  constructor({ id, blocks, properties }: PostConstructorInput) {
+    this.id = id;
     this.blocks = blocks;
     this.properties = properties;
+    this.validate();
+  }
+
+  /* ----- Validations ----- */
+
+  private validate() {
+    if (!this.properties.title) {
+      throw new Error(`Notion Page ${this.id} is missing a title.`);
+    }
+    if (!this.properties.description) {
+      throw new Error(`${this.properties.title} is missing a description.`);
+    }
+    if ((this.blocks ?? []).length === 0) {
+      throw new Error(`${this.properties.title} is missing content.`);
+    }
   }
 
   /* ----- Class Methods ----- */
 
   /**
-   * Build a new instance of a post after retrieving all the post blocks.
+   * Takes in a Notion page ID value, from which it retrieves and resolves
+   * blocks and properties.
    *
    * @param {string} notionPageId Page ID of pending post retrieved from Notion
    * database
@@ -34,6 +53,6 @@ export class Post {
   static async create(notionPageId: string): Promise<Post> {
     const blocks = await getAllPageBlocks(notionPageId);
     const properties = await getPageProperties(notionPageId);
-    return new Post({ blocks, properties });
+    return new Post({ id: notionPageId, blocks, properties });
   }
 }
