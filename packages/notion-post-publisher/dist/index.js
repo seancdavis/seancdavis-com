@@ -24,15 +24,14 @@ function publishPosts(config) {
         try {
             const pageIds = yield (0, notion_utils_1.getPendingPageIds)();
             for (const pageId of pageIds) {
-                // const post = new Post(pageId);
-                // console.log(post);
                 const post = yield Post_1.Post.create(pageId);
-                console.log(post);
+                const filename = yield post.writeToFile(config.postsDir);
+                console.log(chalk_1.default.green.bold("[success]"), `Added post: ${filename}`);
             }
         }
         catch (err) {
             if (err instanceof Error) {
-                console.error(`${chalk_1.default.red.bold("[error]")} ${err.message}`);
+                console.error(chalk_1.default.red.bold("[error]"), err.message);
             }
             process.exit(1);
         }
