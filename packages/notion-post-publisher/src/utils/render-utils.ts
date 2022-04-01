@@ -1,11 +1,11 @@
-import { RichTextItemResponse } from "../types/notion";
+import { NotionRichText } from "../types/notion";
 
 /**
  * Given a rich text object from Notion, return the resulting markdown string.
  *
  * @returns {string} Text to render to the markdown file.
  */
-export function renderRichText(richText: RichTextItemResponse): string {
+export function renderRichText(richText: NotionRichText): string {
   if (richText.type !== "text") {
     throw new Error(`Rich text type not supported: ${richText.type}`);
   }

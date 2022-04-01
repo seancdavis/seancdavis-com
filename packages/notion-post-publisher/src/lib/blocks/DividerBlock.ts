@@ -1,9 +1,9 @@
-import type { DividerBlockResponse } from "../../types/notion";
+import type { NotionDividerBlock } from "../../types/notion";
 
 export class DividerBlock {
   type: "divider";
 
-  constructor(_: DividerBlockResponse) {
+  constructor(_: NotionDividerBlock) {
     this.type = "divider";
   }
 

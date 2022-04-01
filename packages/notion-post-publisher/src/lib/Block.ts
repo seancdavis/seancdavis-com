@@ -1,4 +1,4 @@
-import type { BlockObjectResponse } from "../types/notion";
+import type { NotionBlock } from "../types/notion";
 
 import { DividerBlock, ParagraphBlock } from "./blocks";
 
@@ -9,14 +9,14 @@ const BlockMap = {
   paragraph: ParagraphBlock,
 };
 
-function mapBlock(type: BlockType, params: BlockObjectResponse) {
+function mapBlock(type: BlockType, params: NotionBlock) {
   return new BlockMap[type](params as any);
 }
 
 export class Block {
   type: string;
 
-  constructor(params: BlockObjectResponse) {
+  constructor(params: NotionBlock) {
     this.type = params.type;
 
     if (Object.keys(BlockMap).includes(params.type)) {
