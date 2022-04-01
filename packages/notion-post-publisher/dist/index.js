@@ -21,19 +21,20 @@ const chalk_1 = __importDefault(require("chalk"));
  */
 function publishPosts(config) {
     return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const pageIds = yield (0, notion_utils_1.getPendingPageIds)();
-            for (const pageId of pageIds) {
+        const pageIds = yield (0, notion_utils_1.getPendingPageIds)();
+        for (const pageId of pageIds) {
+            try {
                 const post = yield Post_1.Post.create(pageId);
                 const filename = yield post.writeToFile(config.postsDir);
                 console.log(chalk_1.default.green.bold("[success]"), `Added post: ${filename}`);
             }
-        }
-        catch (err) {
-            if (err instanceof Error) {
-                console.error(chalk_1.default.red.bold("[error]"), err.message);
+            catch (err) {
+                if (err instanceof Error) {
+                    console.error(chalk_1.default.red.bold("[error]"), err.message);
+                    console.error(`Failed on Notion page: ${pageId}`);
+                }
+                process.exit(1);
             }
-            process.exit(1);
         }
     });
 }

@@ -10,18 +10,19 @@ type InputConfig = {
  *
  */
 export async function publishPosts(config: InputConfig) {
-  try {
-    const pageIds = await getPendingPageIds();
+  const pageIds = await getPendingPageIds();
 
-    for (const pageId of pageIds) {
+  for (const pageId of pageIds) {
+    try {
       const post = await Post.create(pageId);
       const filename = await post.writeToFile(config.postsDir);
       console.log(chalk.green.bold("[success]"), `Added post: ${filename}`);
+    } catch (err) {
+      if (err instanceof Error) {
+        console.error(chalk.red.bold("[error]"), err.message);
+        console.error(`Failed on Notion page: ${pageId}`);
+      }
+      process.exit(1);
     }
-  } catch (err) {
-    if (err instanceof Error) {
-      console.error(chalk.red.bold("[error]"), err.message);
-    }
-    process.exit(1);
   }
 }

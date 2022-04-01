@@ -1,20 +1,22 @@
-import type {
-  NotionVideoBlock,
-  NotionRichText,
-  NotionColor,
-} from "../../types/notion";
+import type { NotionVideoBlock } from "../../types/notion";
 
-import { renderRichText } from "../../utils/render-utils";
+import { extractYouTubeId } from "../../utils/url-utils";
 
 export class VideoBlock {
-  // rich_text: Array<NotionRichText>;
-  // color: NotionColor;
+  youtubeId: string;
 
   constructor(params: NotionVideoBlock) {
-    console.log(params);
+    if (params.video.type === "file") {
+      throw new Error("Notion videos not supported. Upload video to YouTube.");
+    }
+    const videoParams = params.video as Extract<
+      NotionVideoBlock["video"],
+      { type: "external" }
+    >;
+    this.youtubeId = extractYouTubeId(videoParams.external.url);
   }
 
   render() {
-    return `Video goes here ...\n`;
+    return `{% youtube_embed id="${this.youtubeId}" %}\n`;
   }
 }
