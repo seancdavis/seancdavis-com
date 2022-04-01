@@ -7,6 +7,8 @@ export type NotionParagraphBlock = Extract<
   { type: "paragraph" }
 >;
 
+export type NotionVideoBlock = Extract<GetBlockResponse, { type: "video" }>;
+
 export type NotionDividerBlock = Extract<GetBlockResponse, { type: "divider" }>;
 
 /* ----- Shared Types ----- */

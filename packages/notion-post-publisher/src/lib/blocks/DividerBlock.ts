@@ -1,11 +1,7 @@
 import type { NotionDividerBlock } from "../../types/notion";
 
 export class DividerBlock {
-  type: "divider";
-
-  constructor(_: NotionDividerBlock) {
-    this.type = "divider";
-  }
+  constructor(_: NotionDividerBlock) {}
 
   render() {
     return "---\n";

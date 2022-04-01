@@ -31,25 +31,22 @@ class Post {
     /* ----- Writing to File ----- */
     writeToFile(postsDir) {
         return __awaiter(this, void 0, void 0, function* () {
-            // const
-            // console.log(postsDir);
-            // const filename = getFilename(this.properties.title)
-            // const frontmatter = get
-            // const body
-            // const content = `---\n${frontmatter}\n---\n${body}`
-            // await writePostToFile(filename, content)
             // Get File path
             const dateStr = (0, date_fns_1.format)(new Date(), "yyyy-MM-dd");
             const slug = (0, slugify_1.default)(this.properties.title, { lower: true, strict: true });
             const filename = `${dateStr}-${slug}.md`;
             const filePath = path_1.default.join(postsDir, filename);
+            // Build file content
             const frontmatter = js_yaml_1.default.dump(this.properties);
             const body = this.blocks.map((block) => block.render()).join("\n");
             const postContent = `---\n${frontmatter}---\n\n${body}`;
+            // Format file.
             const formattedPostContent = prettier_1.default.format(postContent, {
                 parser: "markdown",
             });
+            // Write content to file.
             fs_1.default.writeFileSync(filePath, formattedPostContent);
+            // Return the filename
             return filename;
         });
     }
@@ -82,7 +79,7 @@ class Post {
     static create(notionPageId) {
         return __awaiter(this, void 0, void 0, function* () {
             const notionBlocks = yield (0, notion_utils_1.getAllPageBlocks)(notionPageId);
-            const blocks = notionBlocks.map((block) => new Block_1.Block(block));
+            const blocks = notionBlocks.map((block) => Block_1.Block.create(block));
             const properties = yield (0, notion_utils_1.getPageProperties)(notionPageId);
             return new Post({ id: notionPageId, blocks, properties });
         });

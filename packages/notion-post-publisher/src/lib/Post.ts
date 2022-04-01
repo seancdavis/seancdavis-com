@@ -12,13 +12,13 @@ import { getAllPageBlocks, getPageProperties } from "../utils/notion-utils";
 
 type PostConstructorInput = {
   id: string;
-  blocks: Block[];
+  blocks: ReturnType<typeof Block.create>[];
   properties: PostProperties;
 };
 
 export class Post {
   id: string;
-  blocks: Block[];
+  blocks: ReturnType<typeof Block.create>[];
   properties: PostProperties;
 
   constructor(params: PostConstructorInput) {
@@ -31,30 +31,22 @@ export class Post {
   /* ----- Writing to File ----- */
 
   async writeToFile(postsDir: string): Promise<string> {
-    // const
-    // console.log(postsDir);
-    // const filename = getFilename(this.properties.title)
-    // const frontmatter = get
-    // const body
-    // const content = `---\n${frontmatter}\n---\n${body}`
-    // await writePostToFile(filename, content)
-
     // Get File path
     const dateStr = formatDate(new Date(), "yyyy-MM-dd");
     const slug = slugify(this.properties.title, { lower: true, strict: true });
     const filename = `${dateStr}-${slug}.md`;
     const filePath = path.join(postsDir, filename);
-
+    // Build file content
     const frontmatter = yaml.dump(this.properties);
     const body = this.blocks.map((block) => block.render()).join("\n");
-
     const postContent = `---\n${frontmatter}---\n\n${body}`;
+    // Format file.
     const formattedPostContent = prettier.format(postContent, {
       parser: "markdown",
     });
-
+    // Write content to file.
     fs.writeFileSync(filePath, formattedPostContent);
-
+    // Return the filename
     return filename;
   }
 
@@ -88,7 +80,7 @@ export class Post {
    */
   static async create(notionPageId: string): Promise<Post> {
     const notionBlocks = await getAllPageBlocks(notionPageId);
-    const blocks = notionBlocks.map((block) => new Block(block));
+    const blocks = notionBlocks.map((block) => Block.create(block));
     const properties = await getPageProperties(notionPageId);
     return new Post({ id: notionPageId, blocks, properties });
   }

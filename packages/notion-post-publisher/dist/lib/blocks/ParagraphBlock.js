@@ -4,7 +4,6 @@ exports.ParagraphBlock = void 0;
 const render_utils_1 = require("../../utils/render-utils");
 class ParagraphBlock {
     constructor(params) {
-        this.type = "paragraph";
         this.rich_text = params.paragraph.rich_text;
         this.color = params.paragraph.color;
     }
