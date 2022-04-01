@@ -3,17 +3,25 @@ import type {
   NotionDividerBlock,
   NotionParagraphBlock,
   NotionVideoBlock,
+  NotionHeading2Block,
 } from "../types/notion";
 
-import { DividerBlock, ParagraphBlock, VideoBlock } from "./blocks";
+import {
+  DividerBlock,
+  Heading2Block,
+  ParagraphBlock,
+  VideoBlock,
+} from "./blocks";
 
 type SupportedNotionBlocks =
   | NotionDividerBlock
+  | NotionHeading2Block
   | NotionParagraphBlock
   | NotionVideoBlock;
 
 const BlockMap = {
   divider: DividerBlock,
+  heading_2: Heading2Block,
   paragraph: ParagraphBlock,
   video: VideoBlock,
 };
