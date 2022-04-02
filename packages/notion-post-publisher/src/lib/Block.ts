@@ -1,5 +1,6 @@
 import type {
   NotionBlock,
+  NotionCodeBlock,
   NotionDividerBlock,
   NotionParagraphBlock,
   NotionVideoBlock,
@@ -7,6 +8,7 @@ import type {
 } from "../types/notion";
 
 import {
+  CodeBlock,
   DividerBlock,
   Heading2Block,
   ParagraphBlock,
@@ -14,12 +16,14 @@ import {
 } from "./blocks";
 
 type SupportedNotionBlocks =
+  | NotionCodeBlock
   | NotionDividerBlock
   | NotionHeading2Block
   | NotionParagraphBlock
   | NotionVideoBlock;
 
 const BlockMap = {
+  code: CodeBlock,
   divider: DividerBlock,
   heading_2: Heading2Block,
   paragraph: ParagraphBlock,

@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Block = void 0;
 const blocks_1 = require("./blocks");
 const BlockMap = {
+    code: blocks_1.CodeBlock,
     divider: blocks_1.DividerBlock,
     heading_2: blocks_1.Heading2Block,
     paragraph: blocks_1.ParagraphBlock,
