@@ -1,6 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.VideoBlock = exports.ParagraphBlock = exports.Heading2Block = exports.DividerBlock = exports.CodeBlock = void 0;
+exports.VideoBlock = exports.ParagraphBlock = exports.Heading2Block = exports.DividerBlock = exports.CodeBlock = exports.BulletedListItemBlock = void 0;
+var BulletedListItemBlock_1 = require("./BulletedListItemBlock");
+Object.defineProperty(exports, "BulletedListItemBlock", { enumerable: true, get: function () { return BulletedListItemBlock_1.BulletedListItemBlock; } });
 var CodeBlock_1 = require("./CodeBlock");
 Object.defineProperty(exports, "CodeBlock", { enumerable: true, get: function () { return CodeBlock_1.CodeBlock; } });
 var DividerBlock_1 = require("./DividerBlock");

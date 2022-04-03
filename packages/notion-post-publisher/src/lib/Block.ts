@@ -1,5 +1,6 @@
 import type {
   NotionBlock,
+  NotionBulletedListItemBlock,
   NotionCodeBlock,
   NotionDividerBlock,
   NotionParagraphBlock,
@@ -8,6 +9,7 @@ import type {
 } from "../types/notion";
 
 import {
+  BulletedListItemBlock,
   CodeBlock,
   DividerBlock,
   Heading2Block,
@@ -16,6 +18,7 @@ import {
 } from "./blocks";
 
 type SupportedNotionBlocks =
+  | NotionBulletedListItemBlock
   | NotionCodeBlock
   | NotionDividerBlock
   | NotionHeading2Block
@@ -23,6 +26,7 @@ type SupportedNotionBlocks =
   | NotionVideoBlock;
 
 const BlockMap = {
+  bulleted_list_item: BulletedListItemBlock,
   code: CodeBlock,
   divider: DividerBlock,
   heading_2: Heading2Block,

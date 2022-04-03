@@ -12,6 +12,11 @@ export type NotionParagraphBlock = Extract<
   { type: "paragraph" }
 >;
 
+export type NotionBulletedListItemBlock = Extract<
+  GetBlockResponse,
+  { type: "bulleted_list_item" }
+>;
+
 export type NotionCodeBlock = Extract<GetBlockResponse, { type: "code" }>;
 
 export type NotionVideoBlock = Extract<GetBlockResponse, { type: "video" }>;
