@@ -21,5 +21,10 @@ function renderRichTextItem(richText: NotionRichText): string {
   if (richText.text.link) {
     return `[${richText.text.content}](${richText.text.link.url})`;
   }
-  return richText.text.content;
+  let content = richText.text.content;
+  // Wrap the text in annotations, as necessary.
+  if (richText.annotations.code) content = `\`${content}\``;
+  if (richText.annotations.italic) content = `_${content}_`;
+  if (richText.annotations.bold) content = `**${content}**`;
+  return content;
 }
