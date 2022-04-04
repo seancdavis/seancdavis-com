@@ -7,6 +7,7 @@ import type {
   NotionHeading1Block,
   NotionHeading2Block,
   NotionHeading3Block,
+  NotionImageBlock,
   NotionNumberedListItemBlock,
   NotionParagraphBlock,
   NotionQuoteBlock,
@@ -21,6 +22,7 @@ import {
   Heading1Block,
   Heading2Block,
   Heading3Block,
+  ImageBlock,
   NumberedListItemBlock,
   ParagraphBlock,
   QuoteBlock,
@@ -35,6 +37,7 @@ type SupportedNotionBlocks =
   | NotionHeading1Block
   | NotionHeading2Block
   | NotionHeading3Block
+  | NotionImageBlock
   | NotionNumberedListItemBlock
   | NotionParagraphBlock
   | NotionQuoteBlock
@@ -48,6 +51,7 @@ const BlockMap = {
   heading_1: Heading1Block,
   heading_2: Heading2Block,
   heading_3: Heading3Block,
+  image: ImageBlock,
   numbered_list_item: NumberedListItemBlock,
   paragraph: ParagraphBlock,
   quote: QuoteBlock,

@@ -36,6 +36,8 @@ export type NotionNumberedListItemBlock = Extract<
 
 export type NotionCodeBlock = Extract<GetBlockResponse, { type: "code" }>;
 
+export type NotionImageBlock = Extract<GetBlockResponse, { type: "image" }>;
+
 export type NotionVideoBlock = Extract<GetBlockResponse, { type: "video" }>;
 
 export type NotionCalloutBlock = Extract<GetBlockResponse, { type: "callout" }>;

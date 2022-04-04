@@ -10,6 +10,7 @@ const BlockMap = {
     heading_1: blocks_1.Heading1Block,
     heading_2: blocks_1.Heading2Block,
     heading_3: blocks_1.Heading3Block,
+    image: blocks_1.ImageBlock,
     numbered_list_item: blocks_1.NumberedListItemBlock,
     paragraph: blocks_1.ParagraphBlock,
     quote: blocks_1.QuoteBlock,
