@@ -27,6 +27,11 @@ export type NotionBulletedListItemBlock = Extract<
   { type: "bulleted_list_item" }
 >;
 
+export type NotionNumberedListItemBlock = Extract<
+  GetBlockResponse,
+  { type: "numbered_list_item" }
+>;
+
 export type NotionCodeBlock = Extract<GetBlockResponse, { type: "code" }>;
 
 export type NotionVideoBlock = Extract<GetBlockResponse, { type: "video" }>;

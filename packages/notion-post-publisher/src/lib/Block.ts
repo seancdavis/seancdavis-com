@@ -3,11 +3,12 @@ import type {
   NotionBulletedListItemBlock,
   NotionCodeBlock,
   NotionDividerBlock,
-  NotionParagraphBlock,
-  NotionVideoBlock,
   NotionHeading1Block,
   NotionHeading2Block,
   NotionHeading3Block,
+  NotionNumberedListItemBlock,
+  NotionParagraphBlock,
+  NotionVideoBlock,
 } from "../types/notion";
 
 import {
@@ -17,6 +18,7 @@ import {
   Heading1Block,
   Heading2Block,
   Heading3Block,
+  NumberedListItemBlock,
   ParagraphBlock,
   VideoBlock,
 } from "./blocks";
@@ -28,6 +30,7 @@ type SupportedNotionBlocks =
   | NotionHeading1Block
   | NotionHeading2Block
   | NotionHeading3Block
+  | NotionNumberedListItemBlock
   | NotionParagraphBlock
   | NotionVideoBlock;
 
@@ -38,6 +41,7 @@ const BlockMap = {
   heading_1: Heading1Block,
   heading_2: Heading2Block,
   heading_3: Heading3Block,
+  numbered_list_item: NumberedListItemBlock,
   paragraph: ParagraphBlock,
   video: VideoBlock,
 };
