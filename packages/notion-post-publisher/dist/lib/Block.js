@@ -6,7 +6,9 @@ const BlockMap = {
     bulleted_list_item: blocks_1.BulletedListItemBlock,
     code: blocks_1.CodeBlock,
     divider: blocks_1.DividerBlock,
+    heading_1: blocks_1.Heading1Block,
     heading_2: blocks_1.Heading2Block,
+    heading_3: blocks_1.Heading3Block,
     paragraph: blocks_1.ParagraphBlock,
     video: blocks_1.VideoBlock,
 };

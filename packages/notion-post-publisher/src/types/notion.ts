@@ -2,9 +2,19 @@ import { GetBlockResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export type NotionBlock = Extract<GetBlockResponse, { type: string }>;
 
+export type NotionHeading1Block = Extract<
+  GetBlockResponse,
+  { type: "heading_1" }
+>;
+
 export type NotionHeading2Block = Extract<
   GetBlockResponse,
   { type: "heading_2" }
+>;
+
+export type NotionHeading3Block = Extract<
+  GetBlockResponse,
+  { type: "heading_3" }
 >;
 
 export type NotionParagraphBlock = Extract<

@@ -5,14 +5,18 @@ import type {
   NotionDividerBlock,
   NotionParagraphBlock,
   NotionVideoBlock,
+  NotionHeading1Block,
   NotionHeading2Block,
+  NotionHeading3Block,
 } from "../types/notion";
 
 import {
   BulletedListItemBlock,
   CodeBlock,
   DividerBlock,
+  Heading1Block,
   Heading2Block,
+  Heading3Block,
   ParagraphBlock,
   VideoBlock,
 } from "./blocks";
@@ -21,7 +25,9 @@ type SupportedNotionBlocks =
   | NotionBulletedListItemBlock
   | NotionCodeBlock
   | NotionDividerBlock
+  | NotionHeading1Block
   | NotionHeading2Block
+  | NotionHeading3Block
   | NotionParagraphBlock
   | NotionVideoBlock;
 
@@ -29,7 +35,9 @@ const BlockMap = {
   bulleted_list_item: BulletedListItemBlock,
   code: CodeBlock,
   divider: DividerBlock,
+  heading_1: Heading1Block,
   heading_2: Heading2Block,
+  heading_3: Heading3Block,
   paragraph: ParagraphBlock,
   video: VideoBlock,
 };
