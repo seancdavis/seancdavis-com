@@ -1,4 +1,4 @@
-import type { NotionCalloutBlock, NotionColor } from "../../types/notion";
+import type { NotionCalloutBlock } from "../../types/notion";
 
 import { renderRichText } from "../../utils/render-utils";
 

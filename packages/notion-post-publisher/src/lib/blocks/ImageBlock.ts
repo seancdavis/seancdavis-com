@@ -6,7 +6,7 @@ export class ImageBlock {
 
   constructor(params: NotionImageBlock) {
     this.alt = params.image.caption
-      .map((caption: NotionRichText) => caption)
+      .map((caption: NotionRichText) => caption.plain_text)
       .join("");
     this.href =
       params.image.type === "file"

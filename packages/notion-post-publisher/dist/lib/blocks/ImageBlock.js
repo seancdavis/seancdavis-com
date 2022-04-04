@@ -4,7 +4,7 @@ exports.ImageBlock = void 0;
 class ImageBlock {
     constructor(params) {
         this.alt = params.image.caption
-            .map((caption) => caption)
+            .map((caption) => caption.plain_text)
             .join("");
         this.href =
             params.image.type === "file"
