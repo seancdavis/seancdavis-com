@@ -1,18 +1,20 @@
-import type { NotionImageBlock, NotionColor } from "../../types/notion";
-
-// import { renderRichText } from "../../utils/render-utils";
+import type { NotionImageBlock, NotionRichText } from "../../types/notion";
 
 export class ImageBlock {
-  // text: string;
-  // color: NotionColor;
+  alt: string;
+  href: string;
 
   constructor(params: NotionImageBlock) {
-    // this.text = renderRichText(params.quote.rich_text);
-    // this.color = params.quote.color;
+    this.alt = params.image.caption
+      .map((caption: NotionRichText) => caption)
+      .join("");
+    this.href =
+      params.image.type === "file"
+        ? params.image.file.url
+        : params.image.external.url;
   }
 
   render() {
-    // return `> ${this.text}\n`;
-    return "I am an image";
+    return `{% post_image alt="${this.alt}", src="${this.href}" %}\n`;
   }
 }

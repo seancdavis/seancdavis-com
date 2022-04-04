@@ -1,17 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ImageBlock = void 0;
-// import { renderRichText } from "../../utils/render-utils";
 class ImageBlock {
-    // text: string;
-    // color: NotionColor;
     constructor(params) {
-        // this.text = renderRichText(params.quote.rich_text);
-        // this.color = params.quote.color;
+        this.alt = params.image.caption
+            .map((caption) => caption)
+            .join("");
+        this.href =
+            params.image.type === "file"
+                ? params.image.file.url
+                : params.image.external.url;
     }
     render() {
-        // return `> ${this.text}\n`;
-        return "I am an image";
+        return `{% post_image alt="${this.alt}", src="${this.href}" %}\n`;
     }
 }
 exports.ImageBlock = ImageBlock;
