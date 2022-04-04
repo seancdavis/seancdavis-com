@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.VideoBlock = exports.ParagraphBlock = exports.NumberedListItemBlock = exports.Heading3Block = exports.Heading2Block = exports.Heading1Block = exports.DividerBlock = exports.CodeBlock = exports.BulletedListItemBlock = void 0;
+exports.VideoBlock = exports.QuoteBlock = exports.ParagraphBlock = exports.NumberedListItemBlock = exports.Heading3Block = exports.Heading2Block = exports.Heading1Block = exports.DividerBlock = exports.CodeBlock = exports.BulletedListItemBlock = void 0;
 var BulletedListItemBlock_1 = require("./BulletedListItemBlock");
 Object.defineProperty(exports, "BulletedListItemBlock", { enumerable: true, get: function () { return BulletedListItemBlock_1.BulletedListItemBlock; } });
 var CodeBlock_1 = require("./CodeBlock");
@@ -17,5 +17,7 @@ var NumberedListItemBlock_1 = require("./NumberedListItemBlock");
 Object.defineProperty(exports, "NumberedListItemBlock", { enumerable: true, get: function () { return NumberedListItemBlock_1.NumberedListItemBlock; } });
 var ParagraphBlock_1 = require("./ParagraphBlock");
 Object.defineProperty(exports, "ParagraphBlock", { enumerable: true, get: function () { return ParagraphBlock_1.ParagraphBlock; } });
+var QuoteBlock_1 = require("./QuoteBlock");
+Object.defineProperty(exports, "QuoteBlock", { enumerable: true, get: function () { return QuoteBlock_1.QuoteBlock; } });
 var VideoBlock_1 = require("./VideoBlock");
 Object.defineProperty(exports, "VideoBlock", { enumerable: true, get: function () { return VideoBlock_1.VideoBlock; } });

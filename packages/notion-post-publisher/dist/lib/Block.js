@@ -11,6 +11,7 @@ const BlockMap = {
     heading_3: blocks_1.Heading3Block,
     numbered_list_item: blocks_1.NumberedListItemBlock,
     paragraph: blocks_1.ParagraphBlock,
+    quote: blocks_1.QuoteBlock,
     video: blocks_1.VideoBlock,
 };
 class Block {

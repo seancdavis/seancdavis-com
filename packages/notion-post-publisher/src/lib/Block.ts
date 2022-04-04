@@ -8,6 +8,7 @@ import type {
   NotionHeading3Block,
   NotionNumberedListItemBlock,
   NotionParagraphBlock,
+  NotionQuoteBlock,
   NotionVideoBlock,
 } from "../types/notion";
 
@@ -20,6 +21,7 @@ import {
   Heading3Block,
   NumberedListItemBlock,
   ParagraphBlock,
+  QuoteBlock,
   VideoBlock,
 } from "./blocks";
 
@@ -32,6 +34,7 @@ type SupportedNotionBlocks =
   | NotionHeading3Block
   | NotionNumberedListItemBlock
   | NotionParagraphBlock
+  | NotionQuoteBlock
   | NotionVideoBlock;
 
 const BlockMap = {
@@ -43,6 +46,7 @@ const BlockMap = {
   heading_3: Heading3Block,
   numbered_list_item: NumberedListItemBlock,
   paragraph: ParagraphBlock,
+  quote: QuoteBlock,
   video: VideoBlock,
 };
 

@@ -22,6 +22,8 @@ export type NotionParagraphBlock = Extract<
   { type: "paragraph" }
 >;
 
+export type NotionQuoteBlock = Extract<GetBlockResponse, { type: "quote" }>;
+
 export type NotionBulletedListItemBlock = Extract<
   GetBlockResponse,
   { type: "bulleted_list_item" }
