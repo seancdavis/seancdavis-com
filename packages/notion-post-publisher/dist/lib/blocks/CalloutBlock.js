@@ -5,10 +5,9 @@ const render_utils_1 = require("../../utils/render-utils");
 class CalloutBlock {
     constructor(params) {
         this.text = (0, render_utils_1.renderRichText)(params.callout.rich_text);
-        this.color = params.callout.color;
     }
     render() {
-        return `??? ${this.text}\n`;
+        return `{%  callout type="note" %}\n${this.text}\n{% endcallout %}\n`;
     }
 }
 exports.CalloutBlock = CalloutBlock;
