@@ -1,4 +1,5 @@
 export { BulletedListItemBlock } from "./BulletedListItemBlock";
+export { CalloutBlock } from "./CalloutBlock";
 export { CodeBlock } from "./CodeBlock";
 export { DividerBlock } from "./DividerBlock";
 export { Heading1Block } from "./Heading1Block";

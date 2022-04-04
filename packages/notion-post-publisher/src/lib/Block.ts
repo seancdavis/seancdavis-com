@@ -1,6 +1,7 @@
 import type {
   NotionBlock,
   NotionBulletedListItemBlock,
+  NotionCalloutBlock,
   NotionCodeBlock,
   NotionDividerBlock,
   NotionHeading1Block,
@@ -14,6 +15,7 @@ import type {
 
 import {
   BulletedListItemBlock,
+  CalloutBlock,
   CodeBlock,
   DividerBlock,
   Heading1Block,
@@ -27,6 +29,7 @@ import {
 
 type SupportedNotionBlocks =
   | NotionBulletedListItemBlock
+  | NotionCalloutBlock
   | NotionCodeBlock
   | NotionDividerBlock
   | NotionHeading1Block
@@ -39,6 +42,7 @@ type SupportedNotionBlocks =
 
 const BlockMap = {
   bulleted_list_item: BulletedListItemBlock,
+  callout: CalloutBlock,
   code: CodeBlock,
   divider: DividerBlock,
   heading_1: Heading1Block,

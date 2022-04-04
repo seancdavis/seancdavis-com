@@ -38,6 +38,8 @@ export type NotionCodeBlock = Extract<GetBlockResponse, { type: "code" }>;
 
 export type NotionVideoBlock = Extract<GetBlockResponse, { type: "video" }>;
 
+export type NotionCalloutBlock = Extract<GetBlockResponse, { type: "callout" }>;
+
 export type NotionDividerBlock = Extract<GetBlockResponse, { type: "divider" }>;
 
 /* ----- Shared Types ----- */

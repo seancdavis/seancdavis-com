@@ -4,6 +4,7 @@ exports.Block = void 0;
 const blocks_1 = require("./blocks");
 const BlockMap = {
     bulleted_list_item: blocks_1.BulletedListItemBlock,
+    callout: blocks_1.CalloutBlock,
     code: blocks_1.CodeBlock,
     divider: blocks_1.DividerBlock,
     heading_1: blocks_1.Heading1Block,
