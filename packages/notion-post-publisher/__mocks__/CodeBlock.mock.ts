@@ -2,7 +2,7 @@ import { faker } from "@faker-js/faker";
 
 import { NotionCodeBlock, NotionRichText } from "../src/types/notion";
 
-import { mockRichText, RichTextMockOptions } from "./RichText.mock";
+import { mockRichText } from "./RichText.mock";
 import { mockUser } from "./User.mock";
 
 type CodeBlockMockOptions = {
