@@ -2,11 +2,17 @@ import { faker } from "@faker-js/faker";
 
 import { NotionBulletedListItemBlock } from "../src/types/notion";
 
-import { RichTextMock } from "./RichText.mock";
-import { UserMock } from "./User.mock";
+import { mockRichText, RichTextMockOptions } from "./RichText.mock";
+import { mockUser } from "./User.mock";
 
-export function BulletedListItemMock(): NotionBulletedListItemBlock {
-  const user = UserMock();
+type BulletedListItemBlockMockOptions = {
+  richTextOptions?: RichTextMockOptions;
+};
+
+export function mockBulletedListItemBlock({
+  richTextOptions,
+}: BulletedListItemBlockMockOptions = {}): NotionBulletedListItemBlock {
+  const user = mockUser();
 
   return {
     object: "block",
@@ -19,7 +25,7 @@ export function BulletedListItemMock(): NotionBulletedListItemBlock {
     archived: false,
     type: "bulleted_list_item",
     bulleted_list_item: {
-      rich_text: [RichTextMock()],
+      rich_text: [mockRichText(richTextOptions)],
       color: "default",
     },
   };

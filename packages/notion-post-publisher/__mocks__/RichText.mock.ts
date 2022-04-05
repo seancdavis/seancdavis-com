@@ -2,18 +2,29 @@ import { faker } from "@faker-js/faker";
 
 import { NotionRichText } from "../src/types/notion";
 
-export function RichTextMock(): NotionRichText {
+export type RichTextMockOptions = {
+  bold?: boolean;
+  italic?: boolean;
+  code?: boolean;
+};
+
+export function mockRichText({
+  bold = false,
+  italic = false,
+  code = false,
+}: RichTextMockOptions = {}): NotionRichText {
   const text = faker.lorem.lines(1);
 
   return {
     type: "text",
     text: { content: text, link: null },
     annotations: {
-      bold: false,
-      italic: false,
+      bold,
+      italic,
+      code,
+      // These are not supported in the rich text processor yet.
       strikethrough: false,
       underline: false,
-      code: false,
       color: "default",
     },
     plain_text: text,
