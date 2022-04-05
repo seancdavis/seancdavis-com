@@ -7,7 +7,7 @@ class CalloutBlock {
         this.text = (0, render_utils_1.renderRichText)(params.callout.rich_text);
     }
     render() {
-        return `{%  callout type="note" %}\n${this.text}\n{% endcallout %}\n`;
+        return `{% callout type="note" %}\n${this.text}\n{% endcallout %}\n`;
     }
 }
 exports.CalloutBlock = CalloutBlock;
