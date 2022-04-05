@@ -6,15 +6,15 @@ export type RichTextMockOptions = {
   bold?: boolean;
   italic?: boolean;
   code?: boolean;
+  text?: string;
 };
 
 export function mockRichText({
   bold = false,
   italic = false,
   code = false,
+  text = faker.lorem.lines(1),
 }: RichTextMockOptions = {}): NotionRichText {
-  const text = faker.lorem.lines(1);
-
   return {
     type: "text",
     text: { content: text, link: null },
