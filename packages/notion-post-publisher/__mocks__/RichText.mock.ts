@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 
-import { NotionRichText } from "@/types/notion";
+import { NotionRichText } from "../src/types/notion";
 
 export function RichTextMock(): NotionRichText {
   const text = faker.lorem.lines(1);

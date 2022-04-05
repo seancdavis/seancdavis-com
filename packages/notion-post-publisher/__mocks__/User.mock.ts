@@ -1,5 +1,5 @@
 import { faker } from "@faker-js/faker";
-import { NotionParagraphBlock } from "@/types/notion";
+import { NotionParagraphBlock } from "../src/types/notion";
 
 // Note: NotionParagraphBlock['last_edited_by'] is a common user object shape
 // with Notion.

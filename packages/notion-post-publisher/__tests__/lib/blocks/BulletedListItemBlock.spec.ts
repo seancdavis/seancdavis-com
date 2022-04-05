@@ -1,5 +1,5 @@
-import { BulletedListItemBlock } from "../BulletedListItemBlock";
-import { BulletedListItemMock } from "../__mocks__/BulletedListItem.mock";
+import { BulletedListItemBlock } from "../../../src/lib/blocks/BulletedListItemBlock";
+import { BulletedListItemMock } from "../../../__mocks__/BulletedListItem.mock";
 
 describe("BulletedListItemBlock", () => {
   it("Returns a list item", () => {

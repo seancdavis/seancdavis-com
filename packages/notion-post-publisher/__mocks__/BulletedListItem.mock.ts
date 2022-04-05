@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 
-import { NotionBulletedListItemBlock } from "@/types/notion";
+import { NotionBulletedListItemBlock } from "../src/types/notion";
 
 import { RichTextMock } from "./RichText.mock";
 import { UserMock } from "./User.mock";
