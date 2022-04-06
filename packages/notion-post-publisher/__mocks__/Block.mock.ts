@@ -1,13 +1,13 @@
 import type { NotionBlock } from "../src/types/notion";
-import { mockRichText } from "./RichText.mock";
-import { mockUser } from "./User.mock";
+import { faker } from "@faker-js/faker";
+import { mockRichText, mockUser } from ".";
 
 export function mockInvalidBlock(): NotionBlock {
   const user = mockUser();
 
   return {
     object: "block",
-    id: "4fef2d95-504b-4f2f-89b7-22cdd1990fcd",
+    id: faker.datatype.uuid(),
     created_time: "2022-04-06T09:24:00.000Z",
     last_edited_time: "2022-04-06T09:24:00.000Z",
     created_by: user,

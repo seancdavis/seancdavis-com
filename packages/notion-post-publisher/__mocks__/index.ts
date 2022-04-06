@@ -1,3 +1,4 @@
+/* ----- Blocks ----- */
 export { mockInvalidBlock } from "./Block.mock";
 export { mockBulletedListItemBlock } from "./BulletedListItemBlock.mock";
 export { mockCalloutBlock } from "./CalloutBlock.mock";
@@ -17,3 +18,9 @@ export { mockQuoteBlock } from "./QuoteBlock.mock";
 export { mockRichText } from "./RichText.mock";
 export { mockUser } from "./User.mock";
 export { mockVideoBlock } from "./VideoBlock.mock";
+
+/* ----- Utils ----- */
+export {
+  mockPageBlocksApiResponse,
+  mockPagePropertiesResponse,
+} from "./notion-utils";
