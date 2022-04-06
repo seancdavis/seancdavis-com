@@ -2,7 +2,7 @@ import { CalloutBlock } from "../../../src/lib/blocks/CalloutBlock";
 import { mockCalloutBlock } from "../../../__mocks__/CalloutBlock.mock";
 
 describe("CalloutBlock", () => {
-  it("Returns a list item", () => {
+  it("Renders a callout shortcode", () => {
     const data = mockCalloutBlock();
     const text = data.callout.rich_text[0].plain_text;
     const block = new CalloutBlock(data);
