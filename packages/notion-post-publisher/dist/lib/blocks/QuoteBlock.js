@@ -8,7 +8,7 @@ class QuoteBlock {
         this.color = params.quote.color;
     }
     render() {
-        return `> ${this.text}\n`;
+        return `> ${this.text}`;
     }
 }
 exports.QuoteBlock = QuoteBlock;

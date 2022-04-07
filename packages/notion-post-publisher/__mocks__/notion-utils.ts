@@ -9,9 +9,11 @@ export function mockPageBlocksApiResponse(): NotionBlock[] {
 
 export function mockPagePropertiesResponse(): PostProperties {
   return {
-    title: faker.lorem.lines(1),
-    description: faker.lorem.lines(1),
+    // These are shorter so we don't have to account for newlines when testing
+    // YAML conversion.
+    title: faker.lorem.words(5),
+    description: faker.lorem.words(5),
     tags: ["JavaScript"],
-    tweet: faker.lorem.lines(1),
+    tweet: faker.lorem.words(5),
   };
 }

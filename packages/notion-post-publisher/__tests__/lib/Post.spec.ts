@@ -2,8 +2,11 @@ import fs from "fs";
 import path from "path";
 import { Post } from "../../src/lib/Post";
 import {
+  mockBulletedListItemBlock,
+  mockNumberedListItemBlock,
   mockPageBlocksApiResponse,
   mockPagePropertiesResponse,
+  mockParagraphBlock,
 } from "../../__mocks__";
 import {
   getAllPageBlocks,
@@ -46,16 +49,50 @@ describe("Post", () => {
     it("Sets post content", async () => {
       const blockResponse = await getAllPageBlocks("");
       const properties = await getPageProperties("");
+      // Making an assumption here that each of the properties is populated.
+      // These are set manually by the mock, so we can do this with confidence.
       const frontmatter = `---\ntitle: ${properties.title}\ndescription: ${
         properties.description
       }\ntags:${properties.tags!.map((t) => `\n  - ${t}`)}\ntweet: ${
         properties.tweet
       }\n---\n`;
       const blocks = blockResponse.map((b) => Block.create(b));
-      const body = blocks.map((b) => b.render()).join("\n");
+      // This assumes there are no list blocks, which we know based on the set
+      // mock response.
+      const body = blocks.map((b) => b.render()).join("\n\n") + "\n";
       const expContent = `${frontmatter}\n${body}`;
       const post = await Post.create("SOME_PAGE_ID");
       expect(post.content).toEqual(expContent);
+    });
+    it("Inserts single newlines between consecutive list items", async () => {
+      const blocksResponse = [
+        mockParagraphBlock(),
+        mockBulletedListItemBlock(),
+        mockBulletedListItemBlock(),
+        mockNumberedListItemBlock(),
+        mockNumberedListItemBlock(),
+        mockParagraphBlock(),
+      ];
+      mockedGetAllPageBlocks.mockResolvedValue(blocksResponse);
+      const b = blocksResponse.map((b) => Block.create(b).render());
+      /**
+       * Looks like this:
+       *
+       *  [paragraph]
+       *
+       *  - [bull]
+       *  - [bull]
+       *
+       *  1. [num]
+       *  1. [num]
+       *
+       *  [paragraph]
+       *
+       * Note: Prettier trims the double newline at the end.
+       */
+      const expBody = `${b[0]}\n\n${b[1]}\n${b[2]}\n\n${b[3]}\n${b[4]}\n\n${b[5]}\n`;
+      const post = await Post.create("SOME_PAGE_ID");
+      expect(post.content).toContain(expBody);
     });
   });
 

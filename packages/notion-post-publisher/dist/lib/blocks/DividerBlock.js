@@ -4,7 +4,7 @@ exports.DividerBlock = void 0;
 class DividerBlock {
     constructor(_) { }
     render() {
-        return "---\n";
+        return "---";
     }
 }
 exports.DividerBlock = DividerBlock;

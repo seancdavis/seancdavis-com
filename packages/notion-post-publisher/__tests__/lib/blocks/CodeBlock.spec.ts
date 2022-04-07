@@ -11,7 +11,7 @@ describe("CodeBlock", () => {
     });
     const block = new CodeBlock(data);
     const result = block.render();
-    const expResult = `\`\`\`txt\nHello World\n\`\`\`\n`;
+    const expResult = `\`\`\`txt\nHello World\n\`\`\``;
     expect(result).toBe(expResult);
   });
   // This also tests the lang map from `javascript` to `js`
@@ -20,7 +20,7 @@ describe("CodeBlock", () => {
     const text = data.code.rich_text.map((rt) => rt.plain_text).join("");
     const block = new CodeBlock(data);
     const result = block.render();
-    const expResult = `\`\`\`js\n${text}\n\`\`\`\n`;
+    const expResult = `\`\`\`js\n${text}\n\`\`\``;
     expect(result).toBe(expResult);
   });
 });

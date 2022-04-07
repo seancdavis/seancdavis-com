@@ -7,7 +7,7 @@ describe("QuoteBlock", () => {
     const text = data.quote.rich_text[0].plain_text;
     const block = new QuoteBlock(data);
     const result = block.render();
-    const expResult = `> ${text}\n`;
+    const expResult = `> ${text}`;
     expect(result).toBe(expResult);
   });
   it("Supports annotations", () => {
@@ -15,7 +15,7 @@ describe("QuoteBlock", () => {
     const text = data.quote.rich_text[0].plain_text;
     const block = new QuoteBlock(data);
     const result = block.render();
-    const expResult = `> **${text}**\n`;
+    const expResult = `> **${text}**`;
     expect(result).toBe(expResult);
   });
 });

@@ -7,7 +7,7 @@ describe("Heading3Block", () => {
     const text = data.heading_3.rich_text[0].plain_text;
     const block = new Heading3Block(data);
     const result = block.render();
-    const expResult = `### ${text}\n`;
+    const expResult = `### ${text}`;
     expect(result).toBe(expResult);
   });
   it("Supports annotations", () => {
@@ -15,7 +15,7 @@ describe("Heading3Block", () => {
     const text = data.heading_3.rich_text[0].plain_text;
     const block = new Heading3Block(data);
     const result = block.render();
-    const expResult = `### **${text}**\n`;
+    const expResult = `### **${text}**`;
     expect(result).toBe(expResult);
   });
 });

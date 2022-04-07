@@ -7,7 +7,7 @@ class NumberedListItemBlock {
         this.text = (0, render_utils_1.renderRichText)(params.numbered_list_item.rich_text);
     }
     render() {
-        return `1. ${this.text}\n`;
+        return `1. ${this.text}`;
     }
 }
 exports.NumberedListItemBlock = NumberedListItemBlock;

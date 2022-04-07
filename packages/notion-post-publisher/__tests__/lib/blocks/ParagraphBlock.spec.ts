@@ -8,7 +8,7 @@ describe("ParagraphBlock", () => {
     const text = data.paragraph.rich_text[0].plain_text;
     const block = new ParagraphBlock(data);
     const result = block.render();
-    const expResult = `${text}\n`;
+    const expResult = `${text}`;
     expect(result).toBe(expResult);
   });
   it("Supports annotations", () => {
@@ -18,7 +18,7 @@ describe("ParagraphBlock", () => {
     const text = data.paragraph.rich_text[0].plain_text;
     const block = new ParagraphBlock(data);
     const result = block.render();
-    const expResult = `**${text}**\n`;
+    const expResult = `**${text}**`;
     expect(result).toBe(expResult);
   });
 });

@@ -11,7 +11,7 @@ class VideoBlock {
         this.youtubeId = (0, url_utils_1.extractYouTubeId)(videoParams.external.url);
     }
     render() {
-        return `{% youtube_embed id="${this.youtubeId}" %}\n`;
+        return `{% youtube_embed id="${this.youtubeId}" %}`;
     }
 }
 exports.VideoBlock = VideoBlock;

@@ -12,6 +12,6 @@ export class ParagraphBlock {
   }
 
   render() {
-    return `${this.text}\n`;
+    return this.text;
   }
 }

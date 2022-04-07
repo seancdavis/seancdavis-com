@@ -7,7 +7,7 @@ class BulletedListItemBlock {
         this.text = (0, render_utils_1.renderRichText)(params.bulleted_list_item.rich_text);
     }
     render() {
-        return `- ${this.text}\n`;
+        return `- ${this.text}`;
     }
 }
 exports.BulletedListItemBlock = BulletedListItemBlock;

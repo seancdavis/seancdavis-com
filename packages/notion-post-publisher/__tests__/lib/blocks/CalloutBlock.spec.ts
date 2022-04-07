@@ -7,7 +7,7 @@ describe("CalloutBlock", () => {
     const text = data.callout.rich_text[0].plain_text;
     const block = new CalloutBlock(data);
     const result = block.render();
-    const expResult = `{% callout type="note" %}\n${text}\n{% endcallout %}\n`;
+    const expResult = `{% callout type="note" %}\n${text}\n{% endcallout %}`;
     expect(result).toBe(expResult);
   });
   it("Supports annotations", () => {
@@ -15,7 +15,7 @@ describe("CalloutBlock", () => {
     const text = data.callout.rich_text[0].plain_text;
     const block = new CalloutBlock(data);
     const result = block.render();
-    const expResult = `{% callout type="note" %}\n**${text}**\n{% endcallout %}\n`;
+    const expResult = `{% callout type="note" %}\n**${text}**\n{% endcallout %}`;
     expect(result).toBe(expResult);
   });
 });

@@ -17,6 +17,6 @@ export class VideoBlock {
   }
 
   render() {
-    return `{% youtube_embed id="${this.youtubeId}" %}\n`;
+    return `{% youtube_embed id="${this.youtubeId}" %}`;
   }
 }

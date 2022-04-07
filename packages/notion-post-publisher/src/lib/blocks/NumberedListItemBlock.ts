@@ -10,6 +10,6 @@ export class NumberedListItemBlock {
   }
 
   render() {
-    return `1. ${this.text}\n`;
+    return `1. ${this.text}`;
   }
 }

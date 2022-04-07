@@ -7,7 +7,7 @@ class Heading3Block {
         this.text = (0, render_utils_1.renderRichText)(params.heading_3.rich_text);
     }
     render() {
-        return `### ${this.text}\n`;
+        return `### ${this.text}`;
     }
 }
 exports.Heading3Block = Heading3Block;

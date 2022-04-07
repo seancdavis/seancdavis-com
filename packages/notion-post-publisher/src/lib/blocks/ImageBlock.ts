@@ -15,6 +15,6 @@ export class ImageBlock {
   }
 
   render() {
-    return `{% post_image alt="${this.alt}", src="${this.href}" %}\n`;
+    return `{% post_image alt="${this.alt}", src="${this.href}" %}`;
   }
 }

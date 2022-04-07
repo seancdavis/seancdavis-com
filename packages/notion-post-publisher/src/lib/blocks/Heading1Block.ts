@@ -10,6 +10,6 @@ export class Heading1Block {
   }
 
   render() {
-    return `# ${this.text}\n`;
+    return `# ${this.text}`;
   }
 }

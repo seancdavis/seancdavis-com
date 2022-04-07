@@ -4,6 +4,6 @@ export class DividerBlock {
   constructor(_: NotionDividerBlock) {}
 
   render() {
-    return "---\n";
+    return "---";
   }
 }

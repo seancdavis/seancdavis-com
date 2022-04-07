@@ -10,6 +10,6 @@ export class BulletedListItemBlock {
   }
 
   render() {
-    return `- ${this.text}\n`;
+    return `- ${this.text}`;
   }
 }

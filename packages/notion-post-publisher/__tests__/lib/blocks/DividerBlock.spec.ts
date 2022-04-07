@@ -6,7 +6,7 @@ describe("DividerBlock", () => {
     const data = mockDividerBlock();
     const block = new DividerBlock(data);
     const result = block.render();
-    const expResult = `---\n`;
+    const expResult = "---";
     expect(result).toBe(expResult);
   });
 });

@@ -15,7 +15,7 @@ export class CodeBlock {
   }
 
   render() {
-    return `\`\`\`${this.language}\n${this.code}\n\`\`\`\n`;
+    return `\`\`\`${this.language}\n${this.code}\n\`\`\``;
   }
 
   /**

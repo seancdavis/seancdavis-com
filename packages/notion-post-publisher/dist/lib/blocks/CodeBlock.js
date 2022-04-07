@@ -11,7 +11,7 @@ class CodeBlock {
         this.code = this.extractCode(params.code.rich_text);
     }
     render() {
-        return `\`\`\`${this.language}\n${this.code}\n\`\`\`\n`;
+        return `\`\`\`${this.language}\n${this.code}\n\`\`\``;
     }
     /**
      * Combines the text from the rich_text array.

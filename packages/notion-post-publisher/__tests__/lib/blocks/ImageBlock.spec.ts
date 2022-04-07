@@ -18,7 +18,7 @@ describe("ImageBlock", () => {
     const url = getImageUrl(data);
     const block = new ImageBlock(data);
     const result = block.render();
-    const expResult = `{% post_image alt="${alt}", src="${url}" %}\n`;
+    const expResult = `{% post_image alt="${alt}", src="${url}" %}`;
     expect(result).toBe(expResult);
   });
   it("Renders a post_image shortcode for an uploaded image", () => {
@@ -27,7 +27,7 @@ describe("ImageBlock", () => {
     const url = getImageUrl(data);
     const block = new ImageBlock(data);
     const result = block.render();
-    const expResult = `{% post_image alt="${alt}", src="${url}" %}\n`;
+    const expResult = `{% post_image alt="${alt}", src="${url}" %}`;
     expect(result).toBe(expResult);
   });
   it("Will render a blank alt tag", () => {
@@ -35,7 +35,7 @@ describe("ImageBlock", () => {
     const url = getImageUrl(data);
     const block = new ImageBlock(data);
     const result = block.render();
-    const expResult = `{% post_image alt="", src="${url}" %}\n`;
+    const expResult = `{% post_image alt="", src="${url}" %}`;
     expect(result).toBe(expResult);
   });
 });

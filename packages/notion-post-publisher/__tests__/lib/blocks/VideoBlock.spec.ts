@@ -15,6 +15,6 @@ describe("VideoBlock", () => {
     expect(block.youtubeId).toEqual(id);
     // Check render output
     const result = block.render();
-    expect(result).toBe(`{% youtube_embed id="${id}" %}\n`);
+    expect(result).toBe(`{% youtube_embed id="${id}" %}`);
   });
 });

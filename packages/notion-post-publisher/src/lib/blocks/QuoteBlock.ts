@@ -12,6 +12,6 @@ export class QuoteBlock {
   }
 
   render() {
-    return `> ${this.text}\n`;
+    return `> ${this.text}`;
   }
 }

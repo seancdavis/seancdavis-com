@@ -8,7 +8,7 @@ class ParagraphBlock {
         this.color = params.paragraph.color;
     }
     render() {
-        return `${this.text}\n`;
+        return this.text;
     }
 }
 exports.ParagraphBlock = ParagraphBlock;

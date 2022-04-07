@@ -10,6 +10,6 @@ export class CalloutBlock {
   }
 
   render() {
-    return `{% callout type="note" %}\n${this.text}\n{% endcallout %}\n`;
+    return `{% callout type="note" %}\n${this.text}\n{% endcallout %}`;
   }
 }
