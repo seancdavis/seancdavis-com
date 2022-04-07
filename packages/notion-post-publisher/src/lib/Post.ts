@@ -76,7 +76,7 @@ export class Post {
    *
    * @param {string} notionPageId Page ID of pending post retrieved from Notion
    * database
-   * @returns {Promise<Post}
+   * @returns {Promise<Post>}
    */
   static async create(notionPageId: string): Promise<Post> {
     const notionBlocks = await getAllPageBlocks(notionPageId);

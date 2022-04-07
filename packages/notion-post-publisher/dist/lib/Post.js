@@ -74,7 +74,7 @@ class Post {
      *
      * @param {string} notionPageId Page ID of pending post retrieved from Notion
      * database
-     * @returns {Promise<Post}
+     * @returns {Promise<Post>}
      */
     static create(notionPageId) {
         return __awaiter(this, void 0, void 0, function* () {

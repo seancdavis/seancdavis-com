@@ -29,16 +29,32 @@ describe("Post", () => {
     });
   });
   describe(".validate()", () => {
-    it("Throws an error when no title", async () => {
+    beforeEach(() => {
       mockedGetAllPageBlocks.mockResolvedValue(mockPageBlocksApiResponse());
+      mockedGetPageProperties.mockResolvedValue(mockPagePropertiesResponse());
+    });
+    it("Throws an error when no title", async () => {
       mockedGetPageProperties.mockResolvedValue({
         ...mockPagePropertiesResponse(),
         title: "",
       });
-      const post = await Post.create("SOME_PAGE_ID");
-      expect(post).rejects.toEqual(
-        "Notion Page SOME_PAGE_ID is missing a title."
-      );
+      const errMessage = "Notion Page SOME_PAGE_ID is missing a title.";
+      await expect(Post.create("SOME_PAGE_ID")).rejects.toThrow(errMessage);
+    });
+    it("Throws an error when no description", async () => {
+      mockedGetPageProperties.mockResolvedValue({
+        ...mockPagePropertiesResponse(),
+        description: "",
+      });
+      const properties = await getPageProperties("");
+      const errMessage = `${properties.title} is missing a description.`;
+      await expect(Post.create("SOME_PAGE_ID")).rejects.toThrow(errMessage);
+    });
+    it("Throws an error when no content (empty array of blocks)", async () => {
+      mockedGetAllPageBlocks.mockResolvedValue([]);
+      const properties = await getPageProperties("");
+      const errMessage = `${properties.title} is missing content.`;
+      await expect(Post.create("SOME_PAGE_ID")).rejects.toThrow(errMessage);
     });
   });
 });
