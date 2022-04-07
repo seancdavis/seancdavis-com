@@ -23,48 +23,62 @@ const Block_1 = require("./Block");
 const notion_utils_1 = require("../utils/notion-utils");
 class Post {
     constructor(params) {
-        this.id = params.id;
-        this.blocks = params.blocks;
-        this.properties = params.properties;
-        this.validate();
+        this.validate(params);
+        this.filename = this.getFilename(params.properties.title);
+        this.content = this.getContent(params.blocks, params.properties);
     }
     /* ----- Writing to File ----- */
     writeToFile(postsDir) {
         return __awaiter(this, void 0, void 0, function* () {
-            // Get File path
-            const dateStr = (0, date_fns_1.format)(new Date(), "yyyy-MM-dd");
-            const slug = (0, slugify_1.default)(this.properties.title, { lower: true, strict: true });
-            const filename = `${dateStr}-${slug}.md`;
-            const filePath = path_1.default.join(postsDir, filename);
-            // Build file content
-            const frontmatter = js_yaml_1.default.dump(this.properties);
-            const body = this.blocks.map((block) => block.render()).join("\n");
-            const postContent = `---\n${frontmatter}---\n\n${body}`;
-            // Format file.
-            const formattedPostContent = prettier_1.default.format(postContent, {
-                parser: "markdown",
-            });
-            // Write content to file.
-            fs_1.default.writeFileSync(filePath, formattedPostContent);
-            // Return the filename
-            return filename;
+            const filePath = path_1.default.join(postsDir, this.filename);
+            fs_1.default.writeFileSync(filePath, this.content);
+            return this.filename;
         });
+    }
+    /* ----- Attributes ----- */
+    /**
+     * Builds and returns a filename for this post based on today's date and the
+     * title, in the form: {date}-{slug}.md
+     *
+     * @param title Title string from input properties
+     * @returns Filename string
+     */
+    getFilename(title) {
+        const dateStr = (0, date_fns_1.format)(new Date(), "yyyy-MM-dd");
+        const slug = (0, slugify_1.default)(title, { lower: true, strict: true });
+        return `${dateStr}-${slug}.md`;
+    }
+    /**
+     * Builds a prettierized string of markdown content with properties converted
+     * to YAML frontmatter.
+     *
+     * @param blocks Input array of block content
+     * @param properties Input properties object
+     * @returns Formatted markdown post content.
+     */
+    getContent(blocks, properties) {
+        const frontmatter = js_yaml_1.default.dump(properties);
+        const body = blocks.map((block) => block.render()).join("\n");
+        const postContent = `---\n${frontmatter}---\n\n${body}`;
+        return prettier_1.default.format(postContent, { parser: "markdown" });
     }
     /* ----- Validations ----- */
     /**
      * Validates this classes attributes, throwing errors when the conditions are
      * not enough to be able to properly publish a post.
+     *
+     * @param params Input params from constructor.
      */
-    validate() {
+    validate(params) {
         var _a;
-        if (!this.properties.title) {
-            throw new Error(`Notion Page ${this.id} is missing a title.`);
+        if (!params.properties.title) {
+            throw new Error(`Notion Page ${params.id} is missing a title.`);
         }
-        if (!this.properties.description) {
-            throw new Error(`${this.properties.title} is missing a description.`);
+        if (!params.properties.description) {
+            throw new Error(`${params.properties.title} is missing a description.`);
         }
-        if (((_a = this.blocks) !== null && _a !== void 0 ? _a : []).length === 0) {
-            throw new Error(`${this.properties.title} is missing content.`);
+        if (((_a = params.blocks) !== null && _a !== void 0 ? _a : []).length === 0) {
+            throw new Error(`${params.properties.title} is missing content.`);
         }
     }
     /* ----- Class Methods ----- */
