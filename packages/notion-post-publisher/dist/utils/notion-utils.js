@@ -9,9 +9,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getPageProperties = exports.getAllPageBlocks = exports.getPendingPageIds = void 0;
+exports.markPageAsPublished = exports.getPageProperties = exports.getAllPageBlocks = exports.getPendingPageIds = void 0;
 const client_1 = require("@notionhq/client");
 const notion = new client_1.Client({ auth: process.env.NOTION_API_KEY });
+/* ----- Controls ----- */
+const statusPropertyName = "Status";
+const publishedDatePropertyName = "Publish Date";
+const postLinkPropertyName = "Link";
+const pendingStatus = "Draft: Ready";
+const publishedStatus = "Published";
 /* ----- Utils ----- */
 /**
  * Retrieve a list of id values for all Notion pages with a status of "Draft:
@@ -27,9 +33,9 @@ function getPendingPageIds() {
         const response = yield notion.databases.query({
             database_id: process.env.NOTION_DATABASE_ID,
             filter: {
-                property: "Status",
+                property: statusPropertyName,
                 select: {
-                    equals: "Draft: Ready",
+                    equals: pendingStatus,
                 },
             },
         });
@@ -81,3 +87,35 @@ function getPageProperties(page_id) {
     });
 }
 exports.getPageProperties = getPageProperties;
+/**
+ * Marks a notion page as published by setting its status, publish date, and
+ * link properties.
+ *
+ * @param page_id ID of the Notion page.
+ * @param date Date (string) that the post was published.
+ * @param link Link to the published post.
+ */
+function markPageAsPublished(page_id, date, link) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const page = yield notion.pages.update({
+            page_id,
+            properties: {
+                [statusPropertyName]: {
+                    select: {
+                        name: publishedStatus,
+                    },
+                },
+                [publishedDatePropertyName]: {
+                    date: {
+                        start: date,
+                    },
+                },
+                [postLinkPropertyName]: {
+                    url: link,
+                },
+            },
+        });
+        return page;
+    });
+}
+exports.markPageAsPublished = markPageAsPublished;

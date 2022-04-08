@@ -36,14 +36,21 @@ describe("Post", () => {
       const post = await Post.create("SOME_PAGE_ID");
       expect(post instanceof Post).toBeTruthy();
     });
-    it("Sets post filename", async () => {
+    // This tests all attributes set in the constructor except the content,
+    // which is tested below.
+    it("Sets post attributes", async () => {
       mockedGetPageProperties.mockResolvedValue({
         ...mockPagePropertiesResponse(),
         title: "Hello World",
       });
       const post = await Post.create("SOME_PAGE_ID");
       const dateStr = new Date().toISOString().split("T")[0];
-      const expFilename = `${dateStr}-hello-world.md`;
+      const slug = "hello-world";
+      const expFilename = `${dateStr}-${slug}.md`;
+      expect(post.date).toEqual(dateStr);
+      expect(post.slug).toEqual(slug);
+      expect(post.url).toEqual(`https://www.seancdavis.com/posts/${slug}`);
+      expect(post.title).toEqual("Hello World");
       expect(post.filename).toEqual(expFilename);
     });
     it("Sets post content", async () => {

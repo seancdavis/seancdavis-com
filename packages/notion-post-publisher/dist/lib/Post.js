@@ -25,7 +25,11 @@ const blocks_1 = require("./blocks");
 class Post {
     constructor(params) {
         this.validate(params);
-        this.filename = this.getFilename(params.properties.title);
+        this.title = params.properties.title;
+        this.date = (0, date_fns_1.format)(new Date(), "yyyy-MM-dd");
+        this.slug = (0, slugify_1.default)(this.title, { lower: true, strict: true });
+        this.filename = `${this.date}-${this.slug}.md`;
+        this.url = `https://www.seancdavis.com/posts/${this.slug}`;
         this.content = this.getContent(params.blocks, params.properties);
     }
     /* ----- Writing to File ----- */
@@ -37,18 +41,6 @@ class Post {
         });
     }
     /* ----- Attributes ----- */
-    /**
-     * Builds and returns a filename for this post based on today's date and the
-     * title, in the form: {date}-{slug}.md
-     *
-     * @param title Title string from input properties
-     * @returns Filename string
-     */
-    getFilename(title) {
-        const dateStr = (0, date_fns_1.format)(new Date(), "yyyy-MM-dd");
-        const slug = (0, slugify_1.default)(title, { lower: true, strict: true });
-        return `${dateStr}-${slug}.md`;
-    }
     /**
      * Builds a prettierized string of markdown content with properties converted
      * to YAML frontmatter.

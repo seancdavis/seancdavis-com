@@ -1,4 +1,5 @@
 import { Client } from "@notionhq/client";
+import { UpdatePageResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { NotionBlock } from "../types/notion";
 import type { PostProperties } from "../types/post";
 
@@ -9,6 +10,14 @@ const notion = new Client({ auth: process.env.NOTION_API_KEY });
 type PageResponse = {
   properties: { [key: string]: any };
 };
+
+/* ----- Controls ----- */
+
+const statusPropertyName = "Status";
+const publishedDatePropertyName = "Publish Date";
+const postLinkPropertyName = "Link";
+const pendingStatus = "Draft: Ready";
+const publishedStatus = "Published";
 
 /* ----- Utils ----- */
 
@@ -26,9 +35,9 @@ export async function getPendingPageIds(): Promise<string[]> {
   const response = await notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID,
     filter: {
-      property: "Status",
+      property: statusPropertyName,
       select: {
-        equals: "Draft: Ready",
+        equals: pendingStatus,
       },
     },
   });
@@ -76,4 +85,38 @@ export async function getPageProperties(
     ),
     tweet: properties["Tweet"]?.rich_text?.[0]?.plain_text,
   };
+}
+
+/**
+ * Marks a notion page as published by setting its status, publish date, and
+ * link properties.
+ *
+ * @param page_id ID of the Notion page.
+ * @param date Date (string) that the post was published.
+ * @param link Link to the published post.
+ */
+export async function markPageAsPublished(
+  page_id: string,
+  date: string,
+  link: string
+): Promise<UpdatePageResponse> {
+  const page = await notion.pages.update({
+    page_id,
+    properties: {
+      [statusPropertyName]: {
+        select: {
+          name: publishedStatus,
+        },
+      },
+      [publishedDatePropertyName]: {
+        date: {
+          start: date,
+        },
+      },
+      [postLinkPropertyName]: {
+        url: link,
+      },
+    },
+  });
+  return page;
 }

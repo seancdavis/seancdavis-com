@@ -18,12 +18,20 @@ type PostConstructorInput = {
 };
 
 export class Post {
-  readonly filename: string;
   readonly content: string;
+  readonly date: string;
+  readonly filename: string;
+  readonly url: string;
+  readonly slug: string;
+  readonly title: string;
 
   constructor(params: PostConstructorInput) {
     this.validate(params);
-    this.filename = this.getFilename(params.properties.title);
+    this.title = params.properties.title;
+    this.date = formatDate(new Date(), "yyyy-MM-dd");
+    this.slug = slugify(this.title, { lower: true, strict: true });
+    this.filename = `${this.date}-${this.slug}.md`;
+    this.url = `https://www.seancdavis.com/posts/${this.slug}`;
     this.content = this.getContent(params.blocks, params.properties);
   }
 
@@ -36,19 +44,6 @@ export class Post {
   }
 
   /* ----- Attributes ----- */
-
-  /**
-   * Builds and returns a filename for this post based on today's date and the
-   * title, in the form: {date}-{slug}.md
-   *
-   * @param title Title string from input properties
-   * @returns Filename string
-   */
-  private getFilename(title: string): string {
-    const dateStr = formatDate(new Date(), "yyyy-MM-dd");
-    const slug = slugify(title, { lower: true, strict: true });
-    return `${dateStr}-${slug}.md`;
-  }
 
   /**
    * Builds a prettierized string of markdown content with properties converted
