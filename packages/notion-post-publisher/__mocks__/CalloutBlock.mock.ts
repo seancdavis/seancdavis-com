@@ -5,12 +5,14 @@ import { NotionCalloutBlock } from "../src/types/notion";
 import { mockRichText, RichTextMockOptions } from "./RichText.mock";
 import { mockUser } from "./User.mock";
 
-type CalloutBlockMockOptions = {
+export type CalloutBlockMockOptions = {
   richTextOptions?: RichTextMockOptions;
+  emoji?: "⚠️" | "⚡" | "📋" | "💡" | "😊";
 };
 
 export function mockCalloutBlock({
   richTextOptions,
+  emoji = "😊",
 }: CalloutBlockMockOptions = {}): NotionCalloutBlock {
   const user = mockUser();
 
@@ -26,7 +28,7 @@ export function mockCalloutBlock({
     type: "callout",
     callout: {
       rich_text: [mockRichText(richTextOptions)],
-      icon: { type: "emoji", emoji: "⚡" },
+      icon: { type: "emoji", emoji },
       color: "gray_background",
     },
   };
