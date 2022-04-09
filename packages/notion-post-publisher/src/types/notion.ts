@@ -1,48 +1,38 @@
 import { GetBlockResponse } from "@notionhq/client/build/src/api-endpoints";
 
-export type NotionBlock = Extract<GetBlockResponse, { type: string }>;
+export type NotionBlock = Extract<GetBlockResponse, { type: string }> & {
+  children?: NotionBlock[];
+};
 
-export type NotionHeading1Block = Extract<
-  GetBlockResponse,
-  { type: "heading_1" }
->;
+export type NotionHeading1Block = Extract<NotionBlock, { type: "heading_1" }>;
 
-export type NotionHeading2Block = Extract<
-  GetBlockResponse,
-  { type: "heading_2" }
->;
+export type NotionHeading2Block = Extract<NotionBlock, { type: "heading_2" }>;
 
-export type NotionHeading3Block = Extract<
-  GetBlockResponse,
-  { type: "heading_3" }
->;
+export type NotionHeading3Block = Extract<NotionBlock, { type: "heading_3" }>;
 
-export type NotionParagraphBlock = Extract<
-  GetBlockResponse,
-  { type: "paragraph" }
->;
+export type NotionParagraphBlock = Extract<NotionBlock, { type: "paragraph" }>;
 
-export type NotionQuoteBlock = Extract<GetBlockResponse, { type: "quote" }>;
+export type NotionQuoteBlock = Extract<NotionBlock, { type: "quote" }>;
 
 export type NotionBulletedListItemBlock = Extract<
-  GetBlockResponse,
+  NotionBlock,
   { type: "bulleted_list_item" }
 >;
 
 export type NotionNumberedListItemBlock = Extract<
-  GetBlockResponse,
+  NotionBlock,
   { type: "numbered_list_item" }
 >;
 
-export type NotionCodeBlock = Extract<GetBlockResponse, { type: "code" }>;
+export type NotionCodeBlock = Extract<NotionBlock, { type: "code" }>;
 
-export type NotionImageBlock = Extract<GetBlockResponse, { type: "image" }>;
+export type NotionImageBlock = Extract<NotionBlock, { type: "image" }>;
 
-export type NotionVideoBlock = Extract<GetBlockResponse, { type: "video" }>;
+export type NotionVideoBlock = Extract<NotionBlock, { type: "video" }>;
 
-export type NotionCalloutBlock = Extract<GetBlockResponse, { type: "callout" }>;
+export type NotionCalloutBlock = Extract<NotionBlock, { type: "callout" }>;
 
-export type NotionDividerBlock = Extract<GetBlockResponse, { type: "divider" }>;
+export type NotionDividerBlock = Extract<NotionBlock, { type: "divider" }>;
 
 /* ----- Shared Types ----- */
 

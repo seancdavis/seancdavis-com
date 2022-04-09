@@ -1,4 +1,4 @@
-import type { NotionBulletedListItemBlock } from "@/types/notion";
+import type { NotionBulletedListItemBlock } from "../../types/notion";
 
 import { renderRichText } from "../../utils/render-utils";
 

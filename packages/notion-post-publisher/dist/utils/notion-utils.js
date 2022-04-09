@@ -56,6 +56,14 @@ function getAllPageBlocks(pageId) {
             block_id: pageId,
         });
         const blocks = response.results;
+        // Add child blocks if necessary.
+        const blockPromises = blocks.map((block) => __awaiter(this, void 0, void 0, function* () {
+            if (!block.has_children)
+                return block;
+            block.children = yield getAllPageBlocks(block.id);
+        }));
+        // This is the magic that allows for using async with map.
+        yield Promise.all(blockPromises);
         return blocks;
     });
 }

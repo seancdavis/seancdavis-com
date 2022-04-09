@@ -1,6 +1,7 @@
 import type { NotionCalloutBlock } from "../../types/notion";
 
-import { renderRichText } from "../../utils/render-utils";
+import { renderRichText, trailingNewlines } from "../../utils/render-utils";
+import { Block } from "../Block";
 
 export const CalloutTypeMap: { [key: string]: string } = {
   "⚠️": "warning",
@@ -14,8 +15,19 @@ export class CalloutBlock {
   type: string;
 
   constructor(params: NotionCalloutBlock) {
-    this.text = renderRichText(params.callout.rich_text);
     this.type = this.getType(params.callout.icon);
+    this.text = renderRichText(params.callout.rich_text);
+    if (params.has_children && params.children && params.children.length > 0) {
+      const childBlocks = (params.children ?? []).map((child) => {
+        return Block.create(child);
+      });
+      const childText = childBlocks
+        .map((block, idx) => {
+          return block.render() + trailingNewlines(childBlocks, idx);
+        })
+        .join("");
+      this.text += `\n\n${childText}`;
+    }
   }
 
   /**
@@ -37,6 +49,6 @@ export class CalloutBlock {
   }
 
   render() {
-    return `{% callout type="${this.type}" %}\n${this.text}\n{% endcallout %}`;
+    return `{% callout type="${this.type}" %}\n${this.text}{% endcallout %}`;
   }
 }

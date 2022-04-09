@@ -58,6 +58,21 @@ const BlockMap = {
   video: VideoBlock,
 };
 
+type CreatableBlocks =
+  | Block
+  | BulletedListItemBlock
+  | CalloutBlock
+  | CodeBlock
+  | DividerBlock
+  | Heading1Block
+  | Heading2Block
+  | Heading3Block
+  | ImageBlock
+  | NumberedListItemBlock
+  | ParagraphBlock
+  | QuoteBlock
+  | VideoBlock;
+
 export class Block {
   type: string;
 
@@ -69,7 +84,7 @@ export class Block {
     throw new Error(`Block not supported: ${this.type}`);
   }
 
-  static create(params: NotionBlock) {
+  static create(params: NotionBlock): CreatableBlocks {
     // If the block is not supported, return an instance of this class, a
     // generic block which throws an error on render.
     if (!Object.keys(BlockMap).includes(params.type)) {

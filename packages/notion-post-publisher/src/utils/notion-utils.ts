@@ -56,6 +56,13 @@ export async function getAllPageBlocks(pageId: string): Promise<NotionBlock[]> {
     block_id: pageId,
   });
   const blocks = response.results as unknown as NotionBlock[];
+  // Add child blocks if necessary.
+  const blockPromises = blocks.map(async (block) => {
+    if (!block.has_children) return block;
+    block.children = await getAllPageBlocks(block.id);
+  });
+  // This is the magic that allows for using async with map.
+  await Promise.all(blockPromises);
   return blocks;
 }
 

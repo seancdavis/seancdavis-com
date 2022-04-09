@@ -9,7 +9,7 @@ import type { PostProperties } from "../types/post";
 
 import { Block } from "./Block";
 import { getAllPageBlocks, getPageProperties } from "../utils/notion-utils";
-import { BulletedListItemBlock, NumberedListItemBlock } from "./blocks";
+import { trailingNewlines } from "../utils/render-utils";
 
 type PostConstructorInput = {
   id: string;
@@ -59,31 +59,10 @@ export class Post {
   ): string {
     const frontmatter = yaml.dump(properties);
     const body = blocks
-      .map((block, idx) => block.render() + this.trailingNewlines(blocks, idx))
+      .map((block, idx) => block.render() + trailingNewlines(blocks, idx))
       .join("");
     const postContent = `---\n${frontmatter}---\n\n${body}`;
     return prettier.format(postContent, { parser: "markdown" });
-  }
-
-  private trailingNewlines(
-    blocks: PostConstructorInput["blocks"],
-    index: number
-  ): string {
-    const block = blocks[index];
-    // All blocks other than lists always get two newlines
-    if (
-      !(block instanceof BulletedListItemBlock) &&
-      !(block instanceof NumberedListItemBlock)
-    ) {
-      return "\n\n";
-    }
-    // If there isn't a next item, it doesn't matter, return two newlines.
-    if (!blocks[index + 1]) return "\n\n";
-    // Bulleted and numbered list items get one only if the subsequent item is
-    // of the same type.
-    if (block.constructor === blocks[index + 1].constructor) return "\n";
-    // Otherwise, return two.
-    return "\n\n";
   }
 
   /* ----- Validations ----- */
