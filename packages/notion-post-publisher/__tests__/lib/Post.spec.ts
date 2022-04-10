@@ -95,7 +95,6 @@ describe("Post", () => {
        *
        *  [paragraph]
        *
-       * Note: Prettier trims the double newline at the end.
        */
       const expBody = `${b[0]}\n\n${b[1]}\n${b[2]}\n\n${b[3]}\n${b[4]}\n\n${b[5]}\n`;
       const post = await Post.create("SOME_PAGE_ID");

@@ -44,6 +44,8 @@ export function trailingNewlines(
   index: number
 ): string {
   const block = blocks[index];
+  // If there isn't a next item, return a single newline.
+  if (!blocks[index + 1]) return "\n";
   // All blocks other than lists always get two newlines
   if (
     !(block instanceof BulletedListItemBlock) &&
@@ -51,8 +53,6 @@ export function trailingNewlines(
   ) {
     return "\n\n";
   }
-  // If there isn't a next item, return a single newline.
-  if (!blocks[index + 1]) return "\n";
   // Bulleted and numbered list items get one only if the subsequent item is
   // of the same type.
   if (block.constructor === blocks[index + 1].constructor) return "\n";
