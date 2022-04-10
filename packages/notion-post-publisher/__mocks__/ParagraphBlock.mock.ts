@@ -7,10 +7,12 @@ import { mockUser } from "./User.mock";
 
 type ParagraphBlockMockOptions = {
   richText?: NotionRichText[];
+  hasChildren?: boolean;
 };
 
 export function mockParagraphBlock({
   richText = [mockRichText()],
+  hasChildren = false,
 }: ParagraphBlockMockOptions = {}): NotionParagraphBlock {
   const user = mockUser();
 
@@ -21,7 +23,7 @@ export function mockParagraphBlock({
     last_edited_time: "2022-04-04T19:56:00.000Z",
     created_by: user,
     last_edited_by: user,
-    has_children: false,
+    has_children: hasChildren,
     archived: false,
     type: "paragraph",
     paragraph: {

@@ -52,10 +52,12 @@ exports.getPendingPageIds = getPendingPageIds;
  */
 function getAllPageBlocks(pageId) {
     return __awaiter(this, void 0, void 0, function* () {
+        // console.log(notion.blocks.children.list);
         const response = yield notion.blocks.children.list({
             block_id: pageId,
         });
         const blocks = response.results;
+        // console.log({ response, blocks });
         // Add child blocks if necessary.
         const blockPromises = blocks.map((block) => __awaiter(this, void 0, void 0, function* () {
             if (!block.has_children)
