@@ -13,7 +13,7 @@ class CalloutBlock {
     constructor(params) {
         var _a;
         this.type = this.getType(params.callout.icon);
-        this.text = (0, render_utils_1.renderRichText)(params.callout.rich_text);
+        this.text = (0, render_utils_1.renderRichText)(params.callout.rich_text) + "\n";
         if (params.has_children && params.children && params.children.length > 0) {
             const childBlocks = ((_a = params.children) !== null && _a !== void 0 ? _a : []).map((child) => {
                 return Block_1.Block.create(child);
@@ -23,7 +23,7 @@ class CalloutBlock {
                 return block.render() + (0, render_utils_1.trailingNewlines)(childBlocks, idx);
             })
                 .join("");
-            this.text += `\n\n${childText}`;
+            this.text += `\n${childText}`;
         }
     }
     /**

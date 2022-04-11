@@ -15,7 +15,7 @@ export {
 export { mockNumberedListItemBlock } from "./NumberedListItemBlock.mock";
 export { mockParagraphBlock } from "./ParagraphBlock.mock";
 export { mockQuoteBlock } from "./QuoteBlock.mock";
-export { mockRichText } from "./RichText.mock";
+export { mockRichText, RichTextMockOptions } from "./RichText.mock";
 export { mockUser } from "./User.mock";
 export { mockVideoBlock } from "./VideoBlock.mock";
 

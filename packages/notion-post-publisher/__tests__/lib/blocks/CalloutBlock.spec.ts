@@ -2,6 +2,7 @@ import {
   CalloutBlock,
   CalloutTypeMap,
 } from "../../../src/lib/blocks/CalloutBlock";
+import { mockParagraphBlock } from "../../../__mocks__";
 import {
   mockCalloutBlock,
   CalloutBlockMockOptions,
@@ -31,5 +32,12 @@ describe("CalloutBlock", () => {
     const result = block.render();
     const expResult = `{% callout type="note" %}\n**${text}**\n{% endcallout %}`;
     expect(result).toBe(expResult);
+  });
+  it("Renders children text", () => {
+    const childBlock = mockParagraphBlock();
+    const data = mockCalloutBlock({ children: [childBlock] });
+    const block = new CalloutBlock(data);
+    const result = block.render();
+    expect(result).toContain(childBlock.paragraph.rich_text[0].plain_text);
   });
 });

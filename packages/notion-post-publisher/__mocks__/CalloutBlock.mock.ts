@@ -1,22 +1,29 @@
 import { faker } from "@faker-js/faker";
 
-import { NotionCalloutBlock } from "../src/types/notion";
+import { NotionCalloutBlock, NotionParagraphBlock } from "../src/types/notion";
 
-import { mockRichText, RichTextMockOptions } from "./RichText.mock";
+import {
+  mockRichText,
+  RichTextMockOptions,
+  mockParagraphBlock,
+  mockBulletedListItemBlock,
+  mockNumberedListItemBlock,
+} from ".";
 import { mockUser } from "./User.mock";
 
 export type CalloutBlockMockOptions = {
   richTextOptions?: RichTextMockOptions;
   emoji?: "⚠️" | "⚡" | "📋" | "💡" | "😊";
+  children?: Array<NotionParagraphBlock>;
 };
 
 export function mockCalloutBlock({
   richTextOptions,
   emoji = "😊",
+  children,
 }: CalloutBlockMockOptions = {}): NotionCalloutBlock {
   const user = mockUser();
-
-  return {
+  let props: NotionCalloutBlock = {
     object: "block",
     id: faker.datatype.uuid(),
     created_time: "2022-04-04T20:12:00.000Z",
@@ -32,4 +39,11 @@ export function mockCalloutBlock({
       color: "gray_background",
     },
   };
+
+  if (children && children.length > 0) {
+    props.has_children = true;
+    props.children = children;
+  }
+
+  return props;
 }
