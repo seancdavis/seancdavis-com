@@ -58,7 +58,7 @@ const BlockMap = {
   video: VideoBlock,
 };
 
-type CreatableBlocks =
+export type CreatableBlock =
   | Block
   | BulletedListItemBlock
   | CalloutBlock
@@ -84,7 +84,7 @@ export class Block {
     throw new Error(`Block not supported: ${this.type}`);
   }
 
-  static create(params: NotionBlock): CreatableBlocks {
+  static async create(params: NotionBlock): Promise<CreatableBlock> {
     // If the block is not supported, return an instance of this class, a
     // generic block which throws an error on render.
     if (!Object.keys(BlockMap).includes(params.type)) {
@@ -92,6 +92,10 @@ export class Block {
     }
     // Otherwise, pick a block from the map and return a new instance of it.
     const blockParams = params as SupportedNotionBlocks;
-    return new BlockMap[blockParams.type](blockParams as any);
+    const block = new BlockMap[blockParams.type](blockParams as any);
+    // If prerender() exists on the block instance, run it.
+    if ("prerender" in block) await block.prerender();
+    // Return the block instance.
+    return block;
   }
 }

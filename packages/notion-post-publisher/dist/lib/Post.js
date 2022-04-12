@@ -88,7 +88,11 @@ class Post {
     static create(notionPageId) {
         return __awaiter(this, void 0, void 0, function* () {
             const notionBlocks = yield (0, notion_utils_1.getAllPageBlocks)(notionPageId);
-            const blocks = notionBlocks.map((block) => Block_1.Block.create(block));
+            let blocks = [];
+            yield Promise.all(notionBlocks.map((params) => __awaiter(this, void 0, void 0, function* () {
+                const block = yield Block_1.Block.create(params);
+                blocks.push(block);
+            })));
             const properties = yield (0, notion_utils_1.getPageProperties)(notionPageId);
             return new Post({ id: notionPageId, blocks, properties });
         });

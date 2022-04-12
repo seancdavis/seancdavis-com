@@ -7,13 +7,13 @@ import prettier from "prettier";
 
 import type { PostProperties } from "../types/post";
 
-import { Block } from "./Block";
+import { Block, CreatableBlock } from "./Block";
 import { getAllPageBlocks, getPageProperties } from "../utils/notion-utils";
 import { trailingNewlines } from "../utils/render-utils";
 
 type PostConstructorInput = {
   id: string;
-  blocks: ReturnType<typeof Block.create>[];
+  blocks: CreatableBlock[];
   properties: PostProperties;
 };
 
@@ -97,7 +97,13 @@ export class Post {
    */
   static async create(notionPageId: string): Promise<Post> {
     const notionBlocks = await getAllPageBlocks(notionPageId);
-    const blocks = notionBlocks.map((block) => Block.create(block));
+    let blocks: CreatableBlock[] = [];
+    await Promise.all(
+      notionBlocks.map(async (params) => {
+        const block = await Block.create(params);
+        blocks.push(block);
+      })
+    );
     const properties = await getPageProperties(notionPageId);
     return new Post({ id: notionPageId, blocks, properties });
   }

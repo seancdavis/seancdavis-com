@@ -1,4 +1,4 @@
-import { Block } from "../lib/Block";
+import { CreatableBlock } from "../lib/Block";
 import { BulletedListItemBlock, NumberedListItemBlock } from "../lib/blocks";
 import { NotionRichText } from "../types/notion";
 
@@ -40,7 +40,7 @@ function renderRichTextItem(richText: NotionRichText): string {
  * @returns A string representing the number of newlines to follow
  */
 export function trailingNewlines(
-  blocks: ReturnType<typeof Block.create>[],
+  blocks: CreatableBlock[],
   index: number
 ): string {
   const block = blocks[index];
