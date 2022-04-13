@@ -1,13 +1,12 @@
 import type { NotionImageBlock, NotionRichText } from "../../types/notion";
 import path from "path";
 import fs from "fs";
-import https from "https";
-import { uploadFile } from "../../utils/s3-utils";
+import { downloadFile, uploadFile } from "../../utils/s3-utils";
 import { format } from "date-fns";
 
 // TODO: This is uploading as expected. But we have problems.
 //
-// - [ ] Find a way to make this all work. I'm thinking either all render()
+// - [x] Find a way to make this all work. I'm thinking either all render()
 //   methods are async (a lot of work). Or blocks can be instantiated with a
 //   create method. Perhaps they all inherit from the same base class, so that
 //   only the ones with special requirements override it?
@@ -39,6 +38,10 @@ import { format } from "date-fns";
 //   when running specs.
 // - [ ] Fix CalloutBlock
 // - [ ] Fix QuoteBlock
+// - [x] Fix ImageBlock
+// - [ ] Fix Block
+// - [ ] Fix Post
+// - [ ] Fix render-utils
 
 export class ImageBlock {
   alt: string;
@@ -87,33 +90,10 @@ export class ImageBlock {
    * the temp image after uploading.
    */
   private async processImage() {
-    await this.downloadImage(this.imageUrl, this.tmpFilePath);
+    await downloadFile(this.imageUrl, this.tmpFilePath);
     await uploadFile(this.tmpFilePath, this.s3FilePath);
     this.imageUploaded = true;
-    fs.rmSync(this.tmpFilePath);
-  }
-
-  /**
-   * Downloads the remote image to a temp directory.
-   */
-  private async downloadImage(
-    url: string,
-    tmpFilePath: string
-  ): Promise<boolean> {
-    return new Promise((resolve, reject) => {
-      const file = fs.createWriteStream(tmpFilePath);
-      https.get(url, (response) => {
-        response.pipe(file);
-        file.on("finish", () => {
-          file.close();
-          resolve(true);
-        });
-        file.on("error", (err) => {
-          console.error(err.message);
-          reject(err);
-        });
-      });
-    });
+    if (fs.existsSync(this.tmpFilePath)) fs.rmSync(this.tmpFilePath);
   }
 
   /* ----- Render ----- */

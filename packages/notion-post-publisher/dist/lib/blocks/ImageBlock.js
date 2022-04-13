@@ -15,12 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ImageBlock = void 0;
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
-const https_1 = __importDefault(require("https"));
 const s3_utils_1 = require("../../utils/s3-utils");
 const date_fns_1 = require("date-fns");
 // TODO: This is uploading as expected. But we have problems.
 //
-// - [ ] Find a way to make this all work. I'm thinking either all render()
+// - [x] Find a way to make this all work. I'm thinking either all render()
 //   methods are async (a lot of work). Or blocks can be instantiated with a
 //   create method. Perhaps they all inherit from the same base class, so that
 //   only the ones with special requirements override it?
@@ -52,6 +51,10 @@ const date_fns_1 = require("date-fns");
 //   when running specs.
 // - [ ] Fix CalloutBlock
 // - [ ] Fix QuoteBlock
+// - [x] Fix ImageBlock
+// - [ ] Fix Block
+// - [ ] Fix Post
+// - [ ] Fix render-utils
 class ImageBlock {
     constructor(params) {
         this.imageUploaded = false;
@@ -91,31 +94,11 @@ class ImageBlock {
      */
     processImage() {
         return __awaiter(this, void 0, void 0, function* () {
-            yield this.downloadImage(this.imageUrl, this.tmpFilePath);
+            yield (0, s3_utils_1.downloadFile)(this.imageUrl, this.tmpFilePath);
             yield (0, s3_utils_1.uploadFile)(this.tmpFilePath, this.s3FilePath);
             this.imageUploaded = true;
-            fs_1.default.rmSync(this.tmpFilePath);
-        });
-    }
-    /**
-     * Downloads the remote image to a temp directory.
-     */
-    downloadImage(url, tmpFilePath) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return new Promise((resolve, reject) => {
-                const file = fs_1.default.createWriteStream(tmpFilePath);
-                https_1.default.get(url, (response) => {
-                    response.pipe(file);
-                    file.on("finish", () => {
-                        file.close();
-                        resolve(true);
-                    });
-                    file.on("error", (err) => {
-                        console.error(err.message);
-                        reject(err);
-                    });
-                });
-            });
+            if (fs_1.default.existsSync(this.tmpFilePath))
+                fs_1.default.rmSync(this.tmpFilePath);
         });
     }
     /* ----- Render ----- */

@@ -1,4 +1,5 @@
 import { S3 } from "aws-sdk";
+import https from "https";
 import fs from "fs";
 
 /**
@@ -7,6 +8,8 @@ import fs from "fs";
  * uploading.
  */
 export async function uploadFile(srcFilePath: string, s3FilePath: string) {
+  console.log("--- UPLOAD FILE ---");
+
   if (process.env.SKIP_S3_UPLOAD) return false;
 
   const bucket = process.env.AWS_BUCKET;
@@ -25,6 +28,31 @@ export async function uploadFile(srcFilePath: string, s3FilePath: string) {
       const msg = `Uploaded image: https://${bucket}.s3.amazonaws.com/${s3FilePath}`;
       console.log(msg);
       resolve(s3FilePath);
+    });
+  });
+}
+
+/**
+ * Downloads a remote image to a local directory.
+ */
+export async function downloadFile(
+  url: string,
+  tmpFilePath: string
+): Promise<boolean> {
+  console.log("--- DOWNLOAD FILE ---");
+
+  return new Promise((resolve, reject) => {
+    const file = fs.createWriteStream(tmpFilePath);
+    https.get(url, (response) => {
+      response.pipe(file);
+      file.on("finish", () => {
+        file.close();
+        resolve(true);
+      });
+      file.on("error", (err) => {
+        console.error(err.message);
+        reject(err);
+      });
     });
   });
 }

@@ -17,17 +17,17 @@ export class CalloutBlock {
   constructor(params: NotionCalloutBlock) {
     this.type = this.getType(params.callout.icon);
     this.text = renderRichText(params.callout.rich_text) + "\n";
-    if (params.has_children && params.children && params.children.length > 0) {
-      const childBlocks = (params.children ?? []).map((child) => {
-        return Block.create(child);
-      });
-      const childText = childBlocks
-        .map((block, idx) => {
-          return block.render() + trailingNewlines(childBlocks, idx);
-        })
-        .join("");
-      this.text += `\n${childText}`;
-    }
+    // if (params.has_children && params.children && params.children.length > 0) {
+    //   const childBlocks = (params.children ?? []).map((child) => {
+    //     return Block.create(child);
+    //   });
+    //   const childText = childBlocks
+    //     .map((block, idx) => {
+    //       return block.render() + trailingNewlines(childBlocks, idx);
+    //     })
+    //     .join("");
+    //   this.text += `\n${childText}`;
+    // }
   }
 
   /**
