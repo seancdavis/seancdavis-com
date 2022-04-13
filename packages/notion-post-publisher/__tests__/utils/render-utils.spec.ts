@@ -1,4 +1,4 @@
-import { Block } from "../../src/lib/Block";
+import { Block, CreatableBlock } from "../../src/lib/Block";
 import { renderRichText, trailingNewlines } from "../../src/utils/render-utils";
 import {
   mockBulletedListItemBlock,
@@ -42,16 +42,24 @@ describe("renderRichText", () => {
 });
 
 describe("trailingNewlines()", () => {
-  let blocks: ReturnType<typeof Block.create>[] = [];
-  beforeEach(() => {
-    blocks = [
-      Block.create(mockParagraphBlock()),
-      Block.create(mockBulletedListItemBlock()),
-      Block.create(mockBulletedListItemBlock()),
-      Block.create(mockNumberedListItemBlock()),
-      Block.create(mockNumberedListItemBlock()),
-      Block.create(mockParagraphBlock()),
+  let blocks: CreatableBlock[] = [];
+
+  beforeEach(async () => {
+    const blockData = [
+      mockParagraphBlock(),
+      mockBulletedListItemBlock(),
+      mockBulletedListItemBlock(),
+      mockNumberedListItemBlock(),
+      mockNumberedListItemBlock(),
+      mockParagraphBlock(),
     ];
+    for (const data of blockData) {
+      const block = await Block.create(data);
+      blocks.push(block);
+    }
+  });
+  afterEach(() => {
+    blocks = [];
   });
   it("Returns two newlines after paragraphs", () => {
     expect(trailingNewlines(blocks, 0)).toEqual("\n\n");
