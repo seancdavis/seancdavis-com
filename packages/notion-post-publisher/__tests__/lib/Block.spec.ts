@@ -82,22 +82,22 @@ const supportedBlocks = {
 
 describe("Block", () => {
   describe("[static] .create()", () => {
-    it("returns an instance of Block when type is not supported", () => {
+    it("returns an instance of Block when type is not supported", async () => {
       const params = mockInvalidBlock();
-      const block = Block.create(params);
+      const block = await Block.create(params);
       expect(block instanceof Block).toBeTruthy();
     });
     for (let [name, { mockFn, type }] of Object.entries(supportedBlocks)) {
-      it(`Supports ${name}`, () => {
-        const block = Block.create(mockFn());
+      it(`Supports ${name}`, async () => {
+        const block = await Block.create(mockFn());
         expect(block instanceof type).toBeTruthy();
       });
     }
   });
   describe(".render()", () => {
-    it("Throws an error that block type is not supported.", () => {
+    it("Throws an error that block type is not supported.", async () => {
       const params = mockInvalidBlock();
-      const block = Block.create(params);
+      const block = await Block.create(params);
       expect(() => {
         block.render();
       }).toThrow(`Block not supported: ${params.type}`);

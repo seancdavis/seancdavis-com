@@ -52,7 +52,7 @@ const date_fns_1 = require("date-fns");
 // - [ ] Fix CalloutBlock
 // - [ ] Fix QuoteBlock
 // - [x] Fix ImageBlock
-// - [ ] Fix Block
+// - [x] Fix Block
 // - [ ] Fix Post
 // - [ ] Fix render-utils
 class ImageBlock {

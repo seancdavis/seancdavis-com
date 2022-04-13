@@ -39,7 +39,7 @@ import { format } from "date-fns";
 // - [ ] Fix CalloutBlock
 // - [ ] Fix QuoteBlock
 // - [x] Fix ImageBlock
-// - [ ] Fix Block
+// - [x] Fix Block
 // - [ ] Fix Post
 // - [ ] Fix render-utils
 
