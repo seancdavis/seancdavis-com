@@ -49,8 +49,8 @@ const date_fns_1 = require("date-fns");
 //
 // - [ ] Make sure to mock s3-utils as needed so that things are not uploaded
 //   when running specs.
-// - [ ] Fix CalloutBlock
-// - [ ] Fix QuoteBlock
+// - [x] Fix CalloutBlock
+// - [x] Fix QuoteBlock
 // - [x] Fix ImageBlock
 // - [x] Fix Block
 // - [ ] Fix Post
