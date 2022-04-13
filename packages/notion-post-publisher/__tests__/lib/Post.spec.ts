@@ -12,7 +12,7 @@ import {
   getAllPageBlocks,
   getPageProperties,
 } from "../../src/utils/notion-utils";
-import { Block } from "../../src/lib/Block";
+import { Block, CreatableBlock } from "../../src/lib/Block";
 
 jest.mock("../../src/utils/notion-utils", () => {
   return { getAllPageBlocks: jest.fn(), getPageProperties: jest.fn() };
@@ -63,7 +63,10 @@ describe("Post", () => {
       }\ntags:${properties.tags!.map((t) => `\n  - ${t}`)}\ntweet: ${
         properties.tweet
       }\n---\n`;
-      const blocks = blockResponse.map((b) => Block.create(b));
+      let blocks: CreatableBlock[] = [];
+      for (const res of blockResponse) {
+        blocks.push(await Block.create(res));
+      }
       // This assumes there are no list blocks, which we know based on the set
       // mock response.
       const body = blocks.map((b) => b.render()).join("\n\n") + "\n";
@@ -81,7 +84,12 @@ describe("Post", () => {
         mockParagraphBlock(),
       ];
       mockedGetAllPageBlocks.mockResolvedValue(blocksResponse);
-      const b = blocksResponse.map((b) => Block.create(b).render());
+      let b: string[] = [];
+      for (const res of blocksResponse) {
+        const block = await Block.create(res);
+        if ("prerender" in block) await block.prerender();
+        b.push(block.render() || "");
+      }
       /**
        * Looks like this:
        *

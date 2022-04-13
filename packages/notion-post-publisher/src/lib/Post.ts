@@ -98,12 +98,10 @@ export class Post {
   static async create(notionPageId: string): Promise<Post> {
     const notionBlocks = await getAllPageBlocks(notionPageId);
     let blocks: CreatableBlock[] = [];
-    await Promise.all(
-      notionBlocks.map(async (params) => {
-        const block = await Block.create(params);
-        blocks.push(block);
-      })
-    );
+    for (const params of notionBlocks) {
+      const block = await Block.create(params);
+      blocks.push(block);
+    }
     const properties = await getPageProperties(notionPageId);
     return new Post({ id: notionPageId, blocks, properties });
   }

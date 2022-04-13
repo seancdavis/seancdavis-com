@@ -17,44 +17,6 @@ const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
 const s3_utils_1 = require("../../utils/s3-utils");
 const date_fns_1 = require("date-fns");
-// TODO: This is uploading as expected. But we have problems.
-//
-// - [x] Find a way to make this all work. I'm thinking either all render()
-//   methods are async (a lot of work). Or blocks can be instantiated with a
-//   create method. Perhaps they all inherit from the same base class, so that
-//   only the ones with special requirements override it?
-//
-// UPDATE: Still struggling with this. Asked a question here:
-// https://stackoverflow.com/questions/71841272/type-check-for-a-method-on-a-class-within-union-type-in-typescript
-//
-// But I think the pattern is okay if I can get TS to work. If there is a
-// prerender method, it must be called before render.
-//
-// Alternatively, render could be asynchronous. But I started down that road and
-// it wasn't pretty. Everywhere we're rendering would have to be inside an async
-// function. Maybe that's okay. But this seemed easier. Some blocks need to do
-// async prerender work and others don't. Ideally we'd be able to initialize
-// that from within the constructor, but we can't do that.
-//
-// The more I think about it, perhaps the async render() method is the way to
-// go. I could use an abstract class to ensure each block implements its
-// necessary method appropriately. And when async prerender work has to be done,
-// there's an obvious spot for it. The big benefit here is that the logic
-// follows a similar pattern for every block class, and it'll be easier to type
-// it (TypeScript will be happy).
-//
-// The downside is that the code to render becomes a bit ugly. It has to be
-// awaited inside an async function. Adding to that newline calculations is
-// messy. I'll keep thinking on it.
-//
-// - [ ] Make sure to mock s3-utils as needed so that things are not uploaded
-//   when running specs.
-// - [x] Fix CalloutBlock
-// - [x] Fix QuoteBlock
-// - [x] Fix ImageBlock
-// - [x] Fix Block
-// - [ ] Fix Post
-// - [ ] Fix render-utils
 class ImageBlock {
     constructor(params) {
         this.imageUploaded = false;
