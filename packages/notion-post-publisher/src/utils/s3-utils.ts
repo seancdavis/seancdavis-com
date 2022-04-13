@@ -8,8 +8,6 @@ import fs from "fs";
  * uploading.
  */
 export async function uploadFile(srcFilePath: string, s3FilePath: string) {
-  console.log("--- UPLOAD FILE ---");
-
   if (process.env.SKIP_S3_UPLOAD) return false;
 
   const bucket = process.env.AWS_BUCKET;
@@ -39,8 +37,6 @@ export async function downloadFile(
   url: string,
   tmpFilePath: string
 ): Promise<boolean> {
-  console.log("--- DOWNLOAD FILE ---");
-
   return new Promise((resolve, reject) => {
     const file = fs.createWriteStream(tmpFilePath);
     https.get(url, (response) => {

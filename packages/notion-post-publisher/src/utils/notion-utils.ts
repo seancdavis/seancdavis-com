@@ -52,14 +52,10 @@ export async function getPendingPageIds(): Promise<string[]> {
  * @returns {Promise<NotionBlock[]>}
  */
 export async function getAllPageBlocks(pageId: string): Promise<NotionBlock[]> {
-  // console.log(notion.blocks.children.list);
-
   const response = await notion.blocks.children.list({
     block_id: pageId,
   });
   const blocks = response.results as unknown as NotionBlock[];
-  // console.log({ response, blocks });
-
   // Add child blocks if necessary.
   const blockPromises = blocks.map(async (block) => {
     if (!block.has_children) return block;

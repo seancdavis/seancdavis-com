@@ -23,7 +23,6 @@ const fs_1 = __importDefault(require("fs"));
  */
 function uploadFile(srcFilePath, s3FilePath) {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log("--- UPLOAD FILE ---");
         if (process.env.SKIP_S3_UPLOAD)
             return false;
         const bucket = process.env.AWS_BUCKET;
@@ -51,7 +50,6 @@ exports.uploadFile = uploadFile;
  */
 function downloadFile(url, tmpFilePath) {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log("--- DOWNLOAD FILE ---");
         return new Promise((resolve, reject) => {
             const file = fs_1.default.createWriteStream(tmpFilePath);
             https_1.default.get(url, (response) => {
