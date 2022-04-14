@@ -29,7 +29,8 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-          title: "[Bot] New Post(s) from Notion"
+          title: "New Post(s) from Notion"
           body: ":robot: This pull request was opened automatically by a GitHub Action after running the Notion post publisher script."
           labels: "content,feature: blog"
           commit-message: New post from  Notion
+          branch: bot/notion-post-publisher
