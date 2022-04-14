@@ -1,0 +1,16 @@
+name: Package Tests
+on: push
+jobs:
+  Notion-Post-Publisher:
+    name: "Notion Post Publisher"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Install dependencies
+        run: yarn install
+      - name: Run tests
+        run: |
+          cd packages/notion-post-publisher
+          npm test
