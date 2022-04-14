@@ -1,0 +1,23 @@
+name: Notion Post Publisher
+on: [workflow_dispatch]
+jobs:
+  Notion-Post-Publisher:
+    name: "Notion Post Publisher"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Install dependencies
+        run: yarn install
+      - name: Process pending posts
+        run: |
+          cd www
+          npm publish-posts
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          title: "[Bot] New Post(s) from Notion"
+          body: ":robot: This pull request was opened automatically by a GitHub Action after running the Notion post publisher script."
+          labels: "content,feature: blog"
+          commit-message: New post from  Notion
