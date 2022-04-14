@@ -13,7 +13,7 @@ jobs:
       - name: Process pending posts
         run: |
           cd www
-          npm publish-posts
+          npm run publish-posts
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
