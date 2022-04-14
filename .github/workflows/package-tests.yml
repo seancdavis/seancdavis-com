@@ -1,4 +1,4 @@
-name: CI
+name: Package Tests
 on: push
 jobs:
   Notion-Post-Publisher:
