@@ -5,15 +5,6 @@ type InputConfig = {
   postsDir: string;
 };
 
-// TODO:
-//
-// - [x] Render title
-// - [x] Add support for background colors
-// - [x] Generate and store meta image
-// - [x] Upload images
-// - [x] Store references back on the post
-// - [ ] Write tests?
-
 /**
  * Looks for eligible posts that don't have an image and generates one for each.
  * It then generates a second image with the title to be used as the meta image.

@@ -12,14 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.generateImages = void 0;
 const post_1 = require("./lib/post");
 const config_utils_1 = require("./utils/config-utils");
-// TODO:
-//
-// - [x] Render title
-// - [x] Add support for background colors
-// - [x] Generate and store meta image
-// - [x] Upload images
-// - [x] Store references back on the post
-// - [ ] Write tests?
 /**
  * Looks for eligible posts that don't have an image and generates one for each.
  * It then generates a second image with the title to be used as the meta image.
