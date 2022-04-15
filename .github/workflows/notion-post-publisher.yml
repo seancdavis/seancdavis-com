@@ -42,3 +42,4 @@ jobs:
           labels: "content,feature: blog"
           commit-message: New post from  Notion
           branch: bot/notion-post-publisher
+          branch-suffix: timestamp
