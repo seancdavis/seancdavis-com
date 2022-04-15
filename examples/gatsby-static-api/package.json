@@ -8,10 +8,10 @@
     "gatsby": "^4.11.1",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-manifest": "^4.9.1",
-    "gatsby-plugin-offline": "^5.10.1",
-    "gatsby-plugin-react-helmet": "^5.10.0",
+    "gatsby-plugin-offline": "^5.11.1",
+    "gatsby-plugin-react-helmet": "^5.12.1",
     "gatsby-plugin-sharp": "^4.11.0",
-    "gatsby-source-filesystem": "^4.10.0",
+    "gatsby-source-filesystem": "^4.11.1",
     "gatsby-transformer-sharp": "^4.9.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
@@ -19,7 +19,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "gatsby-transformer-remark": "^5.10.2",
+    "gatsby-transformer-remark": "^5.11.1",
     "prettier": "2.6.1"
   },
   "keywords": [
