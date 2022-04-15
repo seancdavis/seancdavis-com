@@ -1,6 +1,6 @@
 {
   "name": "@seancdavis/netlify-plugin-github-dispatch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Trigger GitHub Action using manifest dispatch after successful Netlify build.",
   "main": "index.js",
   "scripts": {
