@@ -31,7 +31,7 @@ Here we’re using a [named capture group](https://developer.mozilla.org/en-US/d
 
 ## Playground
 
-Here it is in action, with a series of tests for varying input URLs.
+Here it is in action, with a series of tests for varying input URLs. (Use the horizontal and vertical white bars to move the windows around, or [open the sandbox](https://codesandbox.io/s/extract-github-repo-from-url-vkdnhv) for a larger view.)
 
 <iframe src="https://codesandbox.io/embed/js-playground-forked-vkdnhv?fontsize=14&hidenavigation=1&previewwindow=tests&theme=dark"
 style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
