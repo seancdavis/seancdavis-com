@@ -5,8 +5,6 @@ description: >-
   GitHub URL.
 tags:
   - javascript
-  Had a need to extract the repo path from a full GitHub URL. Regex is fun,
-  right?
 image: /posts/220420/extract-github-repo-name-from-url-using-javascript-NdWoNfAS.png
 seo:
   image: >-
