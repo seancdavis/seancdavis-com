@@ -28,7 +28,7 @@ Consider the case of adding a class to your image. While there are markdown proc
 
 Your markdown code looks something like this:
 
-```markdown
+```md
 ![My Image](/path/to/image.jpg)
 ```
 
