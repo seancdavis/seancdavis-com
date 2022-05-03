@@ -7,12 +7,6 @@ tags:
   - javascript
   - markdown
   - vscode
-tweet: >-
-  One of my favorite features of VS Code is that you can do a find and replace
-  using regex groups.
-
-
-  Here’s an scenario I ran into recently where VS Code came to the rescue.
 image: /posts/220503/convert-markdown-image-to-html-in-vs-code-AM5lS5Pd.png
 seo:
   image: /posts/220503/convert-markdown-image-to-html-in-vs-code-BsveLpLv--meta.png
