@@ -4,6 +4,7 @@ description: Bear is one of the best editors out there, but lacks workflows for 
 image: /posts/210616/orange--bear-to-markdown.png
 tags:
   - javascript
+  - markdown
   - node
 ---
 

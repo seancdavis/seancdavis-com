@@ -3,6 +3,7 @@ title: "WTF is Markdown?"
 description: "Markdown is a powerful syntax and tool that enables us to more easily write content for the web."
 image: /posts/210721/wtf--markdown.png
 tags:
+  - markdown
   - wtf
 ---
 
