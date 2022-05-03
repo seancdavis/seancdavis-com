@@ -14,11 +14,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 14
-      - uses: actions/cache@v3
-        id: yarn-cache
-        with:
-          path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install
       - name: Run image generator
