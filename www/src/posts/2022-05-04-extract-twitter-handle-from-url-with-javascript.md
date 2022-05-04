@@ -5,12 +5,6 @@ description: >-
   using JavaScript.
 tags:
   - javascript
-tweet: >-
-  Quick JS snippet to extract the handle from a Twitter URL. 
-
-
-  I’ve used this for being able to display the handle on a page while using the
-  full URL behind as the href for the link.
 image: /posts/220504/extract-twitter-handle-from-url-with-javascript-3Uxv89pD.png
 seo:
   image: >-
