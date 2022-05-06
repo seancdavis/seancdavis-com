@@ -5,12 +5,6 @@ description: >-
   sites as they grow in size and complexity.
 tags:
   - eleventy
-tweet: >-
-  A super simple way to significantly decrease @eleven_ty development builds and
-  improve the DX. More than 2x faster in my case.
-
-
-  Big props to @raymondcamden for this one!
 image: /posts/220505/ignore-files-in-11ty-for-faster-development-builds-CIZIso4Q.png
 seo:
   image: >-
