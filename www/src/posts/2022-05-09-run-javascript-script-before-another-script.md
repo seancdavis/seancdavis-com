@@ -3,13 +3,6 @@ title: Run JavaScript Script Before Another Script
 description: Automatically run scripts with NPM/Yarn before or after another script.
 tags:
   - javascript
-tweet: >-
-  This is a basic feature in how NPM handles the script property in
-  package.json, but I only recently discovered it.
-
-
-  I use it to ensure that a build completes before running visual regression
-  tests without needing to use && to chain commands together.
 image: /posts/220509/run-javascript-script-before-another-script-lvMfPnUi.png
 seo:
   image: /posts/220509/run-javascript-script-before-another-script-JDCWraiR--meta.png
