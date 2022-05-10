@@ -6,9 +6,6 @@ description: >-
   decision-making process.
 tags:
   - developer-advice
-tweet: >-
-  All these page rendering methods we have at our disposal today are incredibly
-  powerful! And yet, I still follow a *static first* approach.
 image: /posts/220510/prerender-if-you-can-prerender-wNRynOWf.png
 seo:
   image: /posts/220510/prerender-if-you-can-prerender-tvfgfT7i--meta.png
