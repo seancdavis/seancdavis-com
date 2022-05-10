@@ -20,7 +20,7 @@ Where do you begin?
 
 How do you know if your page should be server-side rendered? Will your site be able to accommodate everything being prerendered as it scales?
 
-With edge computing evolving into a commodity, there are more _reasonable_ and \_scalable \_options than ever before. The answer isn’t as obvious as it was even three years ago.
+With edge computing evolving into a commodity, there are more _reasonable_ and _scalable_ options than ever before. The answer isn’t as obvious as it was even three years ago.
 
 As I explore these expanding options, I continue to come back to a single foundational principal to govern all decisions that I make about choose the right rendering method for a particular page. As I’ve talked at length about this topic with [Brian Rinaldi](https://twitter.com/remotesynth), I’ll use [his words](https://bejamas.io/blog/understanding-rendering-in-the-jamstack/#when-to-use-what):
 
