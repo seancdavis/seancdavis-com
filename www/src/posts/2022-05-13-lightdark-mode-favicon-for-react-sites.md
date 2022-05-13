@@ -5,10 +5,6 @@ description: >-
   scheme).
 tags:
   - React
-tweet: >-
-  Played around with using a different favicon based on whether the user is in
-  light or dark mode. There isn’t universal support for this, but it’s pretty
-  cool in the browsers that support it.
 image: /posts/220513/lightdark-mode-favicon-for-react-sites-eSbK7mY5.png
 seo:
   image: /posts/220513/lightdark-mode-favicon-for-react-sites-W96fAxb1--meta.png
