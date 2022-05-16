@@ -9,7 +9,7 @@ footer:
   hide_newsletter: true
 sections:
   featured:
-    item: /posts/breaking-down-design-into-components
+    item: /posts/how-to-model-seo-content-for-websites
   recent:
     heading: Recent Posts
     body: The freshest written thoughts, tips, and tutorials from the site.
