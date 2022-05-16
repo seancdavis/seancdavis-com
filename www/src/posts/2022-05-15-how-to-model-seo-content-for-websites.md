@@ -5,13 +5,6 @@ description: >-
   models for SEO meta tags.
 tags:
   - cms
-tweet: >-
-  For whatever reason, building an SEO content system always seems to sneak in
-  at the end of projects and distracts from the launch.
-
-
-  Here’s how I handle SEO content for websites. Maybe some day I’ll learn to do
-  it earlier in the project. 😊
 image: /posts/220515/how-to-model-seo-content-for-websites-vaOneamY.png
 seo:
   image: /posts/220515/how-to-model-seo-content-for-websites-55qnQjPK--meta.png
