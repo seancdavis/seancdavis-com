@@ -13,6 +13,6 @@
   "license": "MIT",
   "dependencies": {
     "http-server": "^14.1.0",
-    "webpack": "^5.70.0"
+    "webpack": "^5.72.1"
   }
 }
