@@ -6,12 +6,6 @@ description: >-
   Jamstack.
 tags:
   - jamstack
-tweet: >-
-  No, this is not another post about the definition of Jamstack.
-
-
-  Well, not entirely. It’s a different way of looking at what Jamstack is by
-  exploring the most valuable artifact of the original movement.
 image: /posts/220518/the-best-thing-about-jamstack-bRAUIx1B.png
 seo:
   image: /posts/220518/the-best-thing-about-jamstack-11FcGvph--meta.png
