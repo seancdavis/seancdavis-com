@@ -5,10 +5,6 @@ description: >-
   unnecessary if conditionals.
 tags:
   - javascript
-tweet: >-
-  This is a pattern I use almost daily with JavaScript. I try to avoid
-  switch-case and if statements except in simple cases and exit conditions
-  because they don’t scale well.
 image: >-
   /posts/220519/use-dynamic-property-maps-over-switch-case-statements-3iMv-f6H.png
 seo:
