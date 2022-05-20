@@ -6,13 +6,6 @@ description: >-
 tags:
   - javascript
   - typescript
-tweet: >-
-  It’s taken a few tries over the years, but I’m finally adopting TypeScript and
-  using it in most of my projects.
-
-
-  This is a follow-up TS version of the dynamic property map post from
-  yesterday.
 image: /posts/220520/mapping-dynamic-object-keys-in-typescript-YnWxaVyk.png
 seo:
   image: /posts/220520/mapping-dynamic-object-keys-in-typescript-uFDrKQSV--meta.png
