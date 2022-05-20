@@ -6,9 +6,6 @@ description: >-
 tags:
   - productivity
   - notion
-tweet: >-
-  What took me from saying “@NotionHQ is okay” to “OMG this thing is amazing”
-  was discovering and establishing these shortcuts and patterns.
 image: /posts/220520/8-notion-pro-tips-to-supercharge-your-productivity-bXRnKt-V.png
 seo:
   image: >-
