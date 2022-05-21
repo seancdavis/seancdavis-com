@@ -1,29 +1,31 @@
 ---
 title: Resetting State on Next.js Route Change
 description: >-
-  Component state doesn’t change when navigating between dynamic routes in
+  Component state doesn't change when navigating between dynamic routes in
   Next.js that use the same component. useEffect can help.
 tags:
-  - next
+  - nextjs
 tweet: >-
   Ended up down a rabbit hole trying to figure out why navigating between pages
-  sharing a component doesn’t reset state with @nextjs.
+  sharing a component doesn't reset state with @nextjs.
 
 
-  Making the route change a dependency to useEffect solved the issue, but it’s
+  Making the route change a dependency to useEffect solved the issue, but it's
   not pretty.
 image: /posts/220521/resetting-state-on-nextjs-route-change-dOtL5oVA.png
 seo:
   image: /posts/220521/resetting-state-on-nextjs-route-change-EvKFQqZr--meta.png
 ---
 
-One of Next.js’s most powerful features, [dynamic routes](https://nextjs.org/docs/routing/dynamic-routes), can be challenging when it comes to managing the state of components that are used on multiple pages.
+One of Next.js's most powerful features, [dynamic routes](https://nextjs.org/docs/routing/dynamic-routes), can be challenging when it comes to managing the state of components that are used on multiple pages.
 
-Consider a dynamic route (`pages/[[…slug]].js`) that tells Next we have two routes for that page: `/` and `/other-page`.
+Consider a dynamic route (`pages/[[...slug]].js`) that tells Next we have two routes for that page: `/` and `/other-page`.
 
 `pages/[[...slug]].js` {.filename}
 
-```typescript
+{% raw %}
+
+```tsx
 export default function DynamicPage(props) {
   return (
     <div style={{ margin: "2rem" }}>
@@ -45,11 +47,15 @@ export async function getStaticPaths() {
 }
 ```
 
-On both pages we’re going to load a button component that has a count clicker, along with a header that uses `next/router` to help us quickly navigate between pages without performing a full reload.
+{% endraw %}
+
+On both pages we're going to load a button component that has a count clicker, along with a header that uses `next/router` to help us quickly navigate between pages without performing a full reload.
 
 `pages/[[...slug]].js` {.filename}
 
-```typescript
+{% raw %}
+
+```tsx
 import { Button } from "../components/Button.jsx";
 import { Header } from "../components/Header.jsx";
 
@@ -66,11 +72,15 @@ export default function DynamicPage(props) {
 // ...
 ```
 
+{% endraw %}
+
 The header looks like this:
 
 `comopnents/Header.jsx` {.filename}
 
-```typescript
+{% raw %}
+
+```tsx
 import Link from "next/link";
 
 export const Header = () => {
@@ -85,11 +95,13 @@ export const Header = () => {
 };
 ```
 
+{% endraw %}
+
 And the button:
 
 `comopnents/Button.jsx` {.filename}
 
-```typescript
+```tsx
 import { useState } from "react";
 
 export const Button = () => {
@@ -118,7 +130,7 @@ To do so, we bring in `next/router` and use the `asPath` property as the `useEff
 
 `comopnents/Button.jsx` {.filename}
 
-```typescript
+```tsx
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
@@ -139,9 +151,9 @@ This gives us the reset behavior:
 
 ## More Complex Scenarios
 
-In some cases, you may be using `useEffect` for other purposes and with other dependencies. In these cases, you can either add additional logic and checks into your existing `useEffect` call, or you call simply add another call with different dependencies. That’s the beauty of hooks in React.
+In some cases, you may be using `useEffect` for other purposes and with other dependencies. In these cases, you can either add additional logic and checks into your existing `useEffect` call, or you call simply add another call with different dependencies. That's the beauty of hooks in React.
 
-```typescript
+```tsx
 useEffect(() => setClickCount(0), [dynamicRoute]);
 useEffect(() => {
   // do other stuff ...
