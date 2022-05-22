@@ -69,7 +69,7 @@ const buttonClassMap: { [K in Button["theme"]]: string } = {
 
 Depending on your compiler options, you may see a type error if you make `theme` an optional type (by appending a `?` to the key).
 
-{% post_image alt="", src="/uploads/220520/Untitled.png" %}
+{% post_image alt="", src="/uploads/220520/type-error-optional-property.png" %}
 
 The way to solve this is to ensure that `K` can’t be `undefined`. We can fix that using the [Exclude](https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers)[ utility type](https://www.typescriptlang.org/docs/handbook/utility-types.html#excludeuniontype-excludedmembers).
 

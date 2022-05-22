@@ -120,7 +120,7 @@ export const Button = () => {
 
 The state is not reset when navigating between _dynamic_ pages using this button. The behavior looks like this:
 
-{% post_image alt="", src="/uploads/220521/Untitled.gif" %}
+{% post_image alt="", src="/uploads/220521/state-not-reset.gif" %}
 
 ## Handing State Reset
 
@@ -147,7 +147,7 @@ export const Button = () => {
 
 This gives us the reset behavior:
 
-{% post_image alt="", src="/uploads/220521/Untitled.gif" %}
+{% post_image alt="", src="/uploads/220521/state-reset.gif" %}
 
 ## More Complex Scenarios
 

@@ -60,7 +60,7 @@ Here are the key elements to note:
 
 Here’s a demo of the result:
 
-{% post_image alt="", src="/uploads/220513/Untitled.gif" %}
+{% post_image alt="", src="/uploads/220513/favicon-os-theme.gif" %}
 
 ## Limited Browser Support
 
@@ -68,4 +68,4 @@ The browser support for [prefers-color-scheme](https://developer.mozilla.org/en-
 
 Some browsers have their own behavior. For example, Safari puts white box behind the icon when in dark mode so there’s no need to adjust.
 
-{% post_image alt="", src="/uploads/220513/Untitled.png" %}
+{% post_image alt="", src="/uploads/220513/favicon-safari-dark.png" %}

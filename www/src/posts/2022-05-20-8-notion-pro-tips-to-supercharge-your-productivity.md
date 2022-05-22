@@ -20,11 +20,11 @@ Instead, what I’ve included here is a collection of tips and tricks that I use
 
 Put your cursor anywhere in a document. Then hold down `cmd+`+`shift` and hit the up or down arrow. This will move the current block up or down in your page.
 
-{% post_image alt="", src="/uploads/220520/Untitled.gif" %}
+{% post_image alt="", src="/uploads/220520/move-block.gif", classes="border-t border-b my-6" %}
 
 You can even highlight and move multiple blocks at the same time.
 
-{% post_image alt="", src="/uploads/220520/Untitled.gif" %}
+{% post_image alt="", src="/uploads/220520/move-multiple-blocks.gif", classes="border-t border-b my-6" %}
 
 Make note that this gets a little weird with nested blocks like lists, as Notion bounces you around indentation levels. It takes a bit to get the hang of it, but eventually you’ll be using this shortcut all the time!
 
@@ -34,19 +34,19 @@ The `cmd`+`d` shortcut is my second favorite shortcut. It duplicates the current
 
 This is particularly helpful when you have a combination of items that you may want to see multiple times on the page.
 
-{% post_image alt="", src="/uploads/220520/Untitled.gif" %}
+{% post_image alt="", src="/uploads/220520/duplicate-block.gif", classes="border-t border-b my-6" %}
 
 ## 3. Favor the Slash Command Over the Mouse
 
 Using the mouse to create blocks is so not you. Instead, type `/` to bring up the blocks context menu to add a new block to your page.
 
-{% post_image alt="", src="/uploads/220520/Untitled.gif" %}
+{% post_image alt="", src="/uploads/220520/slash-command.gif", classes="border-t border-b my-6" %}
 
 Hitting `esc` removes the menu for those pesky times when you actually want to be typing a slash on your page.
 
 And you can also change existing blocks using the slash command. I use this to change background colors or change the type of block.
 
-{% post_image alt="", src="/uploads/220520/Untitled.gif" %}
+{% post_image alt="", src="/uploads/220520/change-background.gif", classes="border-t border-b my-6" %}
 
 ## 4. Add Children to Quotes and Callouts
 
@@ -54,19 +54,19 @@ Most blocks can accept children in Notion. This is especially helpful with block
 
 When I first started using Notion, I would add multi-line callouts using `shift`+`enter`. But it turns out, you can use the trick from #1 to move blocks into the callout. These are _technically_ children of the callout, but they appear at the same level.
 
-{% post_image alt="", src="/uploads/220520/Untitled.gif" %}
+{% post_image alt="", src="/uploads/220520/callout-children.gif", classes="border-t border-b my-6" %}
 
 ## 5. Use Shortcuts for New Blocks
 
 Although the slash command is powerful, some blocks can be [created using keyboard shortcuts](https://www.notion.so/help/keyboard-shortcuts), which can be faster than using the slash command.
 
-{% post_image alt="", src="/uploads/220520/Untitled.gif" %}
+{% post_image alt="", src="/uploads/220520/block-shortcuts.gif", classes="border-t border-b my-6" %}
 
 ## 6. Put Old Content in a Toggle Menu
 
 You can use the combined tricks from #1 and #4 to hide old content away in a collapsible section. I prefer doing this when actively iterating, rather than having to dig through old versions of a document.
 
-{% post_image alt="", src="/uploads/220520/Untitled.png" %}
+{% post_image alt="", src="/uploads/220520/version-toggles.png", classes="border-t border-b my-6" %}
 
 ## 7. Use Template Buttons for Repeatable Content
 
@@ -78,6 +78,6 @@ The biggest downside to template buttons is that they have to be tied to a templ
 
 One trick I love is to do some stylistic breaking up of content using an empty block with a background color in combination with horizontal lines. I love this because it uses the tools we have available to us to create something visually useful.
 
-{% post_image alt="", src="/uploads/220520/Untitled.png" %}
+{% post_image alt="", src="/uploads/220520/styled-break.png", classes="border-t border-b my-6" %}
 
 And this is just an example. There’s much you could do stylistically to your benefit by using blocks in a different way than they were intended.
