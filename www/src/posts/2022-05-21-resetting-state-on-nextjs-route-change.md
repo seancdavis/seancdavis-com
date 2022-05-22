@@ -5,13 +5,6 @@ description: >-
   Next.js that use the same component. useEffect can help.
 tags:
   - nextjs
-tweet: >-
-  Ended up down a rabbit hole trying to figure out why navigating between pages
-  sharing a component doesn't reset state with @nextjs.
-
-
-  Making the route change a dependency to useEffect solved the issue, but it's
-  not pretty.
 image: /posts/220521/resetting-state-on-nextjs-route-change-dOtL5oVA.png
 seo:
   image: /posts/220521/resetting-state-on-nextjs-route-change-EvKFQqZr--meta.png
