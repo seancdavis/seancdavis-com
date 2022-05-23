@@ -6,13 +6,6 @@ description: >-
   cool. But should you use it?
 tags:
   - developer-advice
-tweet: >-
-  It is seriously SO COOL that we can build things like slide decks and videos
-  using the same code we write every day.
-
-
-  But I think we have to adopt these things with the right intention to ensure
-  that using the tool is to our benefit.
 image: >-
   /posts/220522/making-videos-with-code-is-cool-but-is-it-productive-rMWDWgtV.png
 seo:
