@@ -12,7 +12,7 @@
   "dependencies": {
     "canvas": "^2.9.1",
     "faker": "5.5.3",
-    "glob": "^8.0.1",
+    "glob": "^8.0.3",
     "gray-matter": "^4.0.3",
     "slugify": "^1.6.3",
     "yaml": "^2.1.0"
