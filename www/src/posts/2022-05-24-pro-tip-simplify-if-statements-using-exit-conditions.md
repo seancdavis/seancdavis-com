@@ -1,14 +1,10 @@
 ---
-title: 'Pro Tip: Simplify If Statements Using Exit Conditions'
+title: "Pro Tip: Simplify If Statements Using Exit Conditions"
 description: >-
   Exit clauses can help you write less code and make your code more readable.
   Here is a simple example, along with some additional tips.
 tags:
   - javascript
-tweet: >-
-  I learned about exit conditions in my early Ruby days and I use them
-  constantly in JavaScript code. If used appropriately, then can flatten and
-  simplify code.
 image: >-
   /posts/220524/pro-tip-simplify-if-statements-using-exit-conditions-ybtu9fLI.png
 seo:
