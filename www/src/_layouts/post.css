@@ -83,7 +83,7 @@
       inline;
   }
 
-  iframe {
+  iframe:not(.component--code-playground) {
     @apply w-full;
   }
 
