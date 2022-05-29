@@ -24,7 +24,7 @@ Given the simple example above, consider that the data representing the content 
 
 Here’s an example:
 
-```typescript
+```jsx
 const tabsData = [
   {
     label: "This Text",
@@ -45,7 +45,7 @@ Here’s the code for a simple tab component, with comments for context, along w
 
 Note that this assumes that `tabsData` is available this file. (For the demo, below, I just put them all in one file.)
 
-```typescript
+```jsx
 import { useState } from "react";
 
 export function Tabs() {
@@ -65,8 +65,7 @@ export function Tabs() {
                   : "border-transparent hover:border-gray-200"
               }`}
               // Change the active tab on click.
-              onClick={() => setActiveTabIndex(idx)}
-            >
+              onClick={() => setActiveTabIndex(idx)}>
               {tab.label}
             </button>
           );
@@ -90,11 +89,9 @@ There are three key ingredients that bring this together:
 
 ## Try It!
 
-Here’s [a React project built with Vite](https://stackblitz.com/edit/react-tailwind-tabs?file=src%2FTabs.jsx) that showcases the functionality. Take it for a spin. Make some changes, and then bring it into your project.
+Here’s [a React project built with Vite](https://stackblitz.com/edit/react-tailwind-tabs?file=src/Tabs.jsx) that showcases the functionality. Take it for a spin. Make some changes, and then bring it into your project.
 
-{% callout type="warning" %}
-[EMBED PLAYGROUND]
-{% endcallout %}
+{% code_playground url="https://stackblitz.com/edit/react-tailwind-tabs?ctl=1&embed=1&file=src/Tabs.jsx&hideExplorer=1" %}
 
 ## Alternative Approaches
 
@@ -106,10 +103,6 @@ If you feel like you’re being slowed down and want to explore other options, c
 
 This is (I hope) very clearly just a starting point that brings some basic functionality. You’ll likely want to add your own spin to bring this into your project.
 
-{% callout type="warning" %}
-Add link
-{% endcallout %}
-
-I have another post that takes this system and animates the underline. It’s little ideas like this that will make your tab system unique and engaging for your readers.
+I have another post that [takes this system and animates the underline](/posts/animated-sliding-tabs-with-react-and-tailwind/). It’s little ideas like this that will make your tab system unique and engaging for your readers.
 
 Be cautious with the amount of flair you bring. Each element adds complexity to your code and is another thing you should test before publishing. But also don’t forget to have a little fun with it!

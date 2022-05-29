@@ -10,23 +10,23 @@ seo:
     /posts/220528/animated-sliding-tabs-with-react-and-tailwind-_xXPLAXu--meta.png
 ---
 
-{% callout type="warning" %}
-TODO: Add Links
-{% endcallout %}
-
-In a recent post, (INSERT LINK) I explored building a simple tab system in React. ([Here’s the playground](https://stackblitz.com/edit/react-tailwind-tabs?file=src/Tabs.jsx).)
+In a recent post, I explored [building a simple tab system in React](/posts/simple-content-tab-with-react-and-tailwind/). ([Here’s the playground](https://stackblitz.com/edit/react-tailwind-tabs?file=src/Tabs.jsx).)
 
 That’s a good start, but you’re likely going to want to add some flair to make the tabs really shine. While there are a number of fancy things you could pursue, here we’re going to explore replacing the active border with one that is animated to slide from the previously-active tab to the newly-active tab.
 
 {% post_image alt="", src="/uploads/220528/animated-sliding-tab-underline-react-tailwind.gif" %}
 
-Let’s do it! Note that I’m stepping through the process here. But you’re welcome to jump down to the bottom for the full solution, along with a playground.
+Let’s do it!
+
+{% callout type="info" %}
+Note that I’m stepping through the process here. But you’re welcome to [jump down to the bottom](#demo-playground) for the full solution, along with a playground.
+{% endcallout %}
 
 ## The Starting Code
 
 We’ll start from the previous example, which looked like this:
 
-```typescript
+```jsx
 import { useState } from "react";
 
 const tabsData = [
@@ -59,8 +59,7 @@ export function Tabs() {
                   : "border-transparent hover:border-gray-200"
               }`}
               // Change the active tab on click.
-              onClick={() => setActiveTabIndex(idx)}
-            >
+              onClick={() => setActiveTabIndex(idx)}>
               {tab.label}
             </button>
           );
@@ -83,7 +82,7 @@ We’re going to animate the border by … _hiding_ the border. This may seem go
 
 Let’s adjust our markup a bit.
 
-```typescript
+```jsx
 <div>
   <div className="relative">
     <div className="flex space-x-3 border-b">
@@ -92,8 +91,7 @@ Let’s adjust our markup a bit.
           <button
             key={idx}
             className="pt-2 pb-3"
-            onClick={() => setActiveTabIndex(idx)}
-          >
+            onClick={() => setActiveTabIndex(idx)}>
             {tab.label}
           </button>
         );
@@ -121,7 +119,7 @@ Both the position and width of the underline is subject to the content of the ta
 
 Let’s start with just the state. First, add two new state objects, one for the left value and the other for the width.
 
-```typescript
+```jsx
 export function Tabs() {
   const [tabUnderlineWidth, setTabUnderlineWidth] = useState(0);
   const [tabUnderlineLeft, setTabUnderlineLeft] = useState(0);
@@ -130,12 +128,16 @@ export function Tabs() {
 
 And then we can use these values to set the style in our `<span>` underline element.
 
-```typescript
+{% raw %}
+
+```jsx
 <span
   className="absolute bottom-0 block h-1 bg-teal-500 transition-all duration-300"
   style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
 />
 ```
+
+{% endraw %}
 
 But you still won’t see an underline on the screen. That’s because we still haven’t properly set the width or left.
 
@@ -153,7 +155,7 @@ The last missing piece is that we need a way to be able to access the tab button
 
 But we also don’t know how many refs we need. Therefore, we’re storing an array of refs within the ref.
 
-```typescript
+```jsx
 export function Tabs() {
   // useState code ...
 
@@ -165,7 +167,7 @@ export function Tabs() {
 
 And then we attach each tab button to that ref.
 
-```typescript
+```jsx
 {
   tabsData.map((tab, idx) => {
     return (
@@ -174,8 +176,7 @@ And then we attach each tab button to that ref.
         // Add button element to tabsRef array
         ref={(el) => (tabsRef.current[idx] = el)}
         className="pt-2 pb-3"
-        onClick={() => setActiveTabIndex(idx)}
-      >
+        onClick={() => setActiveTabIndex(idx)}>
         {tab.label}
       </button>
     );
@@ -187,7 +188,7 @@ And then we attach each tab button to that ref.
 
 Now we can use the `useEffect` hook to identify the active tab button’s width and position.
 
-```typescript
+```jsx
 export function Tabs() {
   // useState and useRef hook code ...
 
@@ -219,15 +220,15 @@ A few important things to note about this code:
 
 Here’s the full example in a Stackblitz playground.
 
-{% callout type="warning" %}
-EMBED PLAYGROUND
-{% endcallout %}
+{% code_playground url="https://stackblitz.com/edit/react-tailwind-animated-tabs-underline?ctl=1&embed=1&file=src/Tabs.jsx&hideExplorer=1" %}
 
 ## Full Code
 
 Here’s the entire code snippet.
 
-```typescript
+{% raw %}
+
+```jsx
 import { useEffect, useRef, useState } from "react";
 
 const tabsData = [
@@ -274,8 +275,7 @@ export function Tabs() {
                 key={idx}
                 ref={(el) => (tabsRef.current[idx] = el)}
                 className="pt-2 pb-3"
-                onClick={() => setActiveTabIndex(idx)}
-              >
+                onClick={() => setActiveTabIndex(idx)}>
                 {tab.label}
               </button>
             );
@@ -293,3 +293,5 @@ export function Tabs() {
   );
 }
 ```
+
+{% endraw %}
