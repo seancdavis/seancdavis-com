@@ -71,7 +71,7 @@ function compare(a, b) {
 
 We’ve covered all the logic in two lines. Fewer curly braces, and less parsing. We only really have to step through two logical lines rather than examining each condition in isolation.
 
-This can seriously flatten and simplify your code. [Here’s an example](https://www.seancdavis.com/posts/cleaning-up-nested-conditionals/) where I explored nested conditionals and took 25 lines of logic to 3 lines of logical code.
+This can seriously flatten and simplify your code. [Here’s an example](/posts/cleaning-up-nested-conditionals/) where I explored nested conditionals and took 25 lines of logic to 3 lines of logical code.
 
 ## Other Exit Condition Tips and Benefits
 
@@ -83,7 +83,7 @@ If left with two conditions, you can return from a ternary operation, as shown a
 
 ### Accounting for Multiple Exit Conditions
 
-[The example I linked to earlier](https://www.seancdavis.com/posts/cleaning-up-nested-conditionals/) also shows a case of multiple exit conditions. There’s no limit to how many you can use. With each condition, you simplify the logic you have to deal with farther down in the function.
+[The example I linked to earlier](/posts/cleaning-up-nested-conditionals/) also shows a case of multiple exit conditions. There’s no limit to how many you can use. With each condition, you simplify the logic you have to deal with farther down in the function.
 
 In general, though, if you have more than two exit clauses, you could likely simplify your function.
 

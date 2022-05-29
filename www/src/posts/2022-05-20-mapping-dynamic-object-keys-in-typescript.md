@@ -11,9 +11,9 @@ seo:
   image: /posts/220520/mapping-dynamic-object-keys-in-typescript-uFDrKQSV--meta.png
 ---
 
-A pattern I use on an almost daily basis is [dynamic property maps](https://www.seancdavis.com/posts/use-dynamic-property-maps-over-switch-case-statements/). It helps me avoid unnecessary if/else and switch/case statements.
+A pattern I use on an almost daily basis is [dynamic property maps](/posts/use-dynamic-property-maps-over-switch-case-statements/). It helps me avoid unnecessary if/else and switch/case statements.
 
-But it’s a tricky scenario to get right with TypeScript. Consider the example from the [dynamic property map post](https://www.seancdavis.com/posts/use-dynamic-property-maps-over-switch-case-statements/):
+But it’s a tricky scenario to get right with TypeScript. Consider the example from the [dynamic property map post](/posts/use-dynamic-property-maps-over-switch-case-statements/):
 
 ```typescript
 const buttonClassMap = {
