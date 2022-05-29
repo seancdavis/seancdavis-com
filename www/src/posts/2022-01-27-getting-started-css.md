@@ -8,7 +8,7 @@ tags:
 author: pratham
 ---
 
-CSS is an amazing and unique language that servers a great purpose. We can make our websites visually interesting using [CSS](https://www.seancdavis.com/posts/wtf-is-css/). CSS describes the presentation of web pages, including typography, layouts, colors, and more.
+CSS is an amazing and unique language that servers a great purpose. We can make our websites visually interesting using [CSS](/posts/wtf-is-css/). CSS describes the presentation of web pages, including typography, layouts, colors, and more.
 
 ## A Web Without CSS
 

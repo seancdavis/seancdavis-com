@@ -23,7 +23,7 @@ By the time these conversations were becoming more prevalent, the community had 
 
 ## Agonizing over a Definition
 
-That led me to a number of conversations with thought leaders around the Jamstack community, which resulted in the formation of [a strong opinion on what I thought Jamstack had become](https://www.seancdavis.com/posts/jamstack-evolution-and-redefinition/).
+That led me to a number of conversations with thought leaders around the Jamstack community, which resulted in the formation of [a strong opinion on what I thought Jamstack had become](/posts/jamstack-evolution-and-redefinition/).
 
 It didn’t help.
 
