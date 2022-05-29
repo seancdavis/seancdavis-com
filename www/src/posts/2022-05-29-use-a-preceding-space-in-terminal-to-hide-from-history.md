@@ -5,10 +5,6 @@ description: >-
   history.
 tags:
   - quick-tip
-tweet: >-
-  When you’re feeling lazy and don’t want to use an env var for a sensitive
-  value you’re using in your command-line, you can omit the command from
-  history.
 image: >-
   /posts/220529/use-a-preceding-space-in-terminal-to-hide-from-history-cbHrQ9A7.png
 seo:
