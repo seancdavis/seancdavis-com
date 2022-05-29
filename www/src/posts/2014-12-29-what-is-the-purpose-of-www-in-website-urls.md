@@ -20,7 +20,7 @@ _What the heck?_
 
 First, what are we really talking about?
 
-You may have heard the term _domain_ before. We refer to _facebook.com_ and _twitter.com_ as _domains_. I've discussed this when I wrote a basic article on [how the web works](/posts/how-the-web-works#the-://). The TL;DR version of that post is essentially this:
+You may have heard the term _domain_ before. We refer to _facebook.com_ and _twitter.com_ as _domains_. I've discussed this when I wrote a basic article on [how the web works](/posts/how-the-web-works/#the). The TL;DR version of that post is essentially this:
 
 > When you type in a URL in your browser, the browser (if it doesn't have the domain name stored in memory) will contact a **domain name server** to ask which **IP address** the domain names points to. It then sends you to the correct IP address and renders the html (or other data) sent to it.
 >

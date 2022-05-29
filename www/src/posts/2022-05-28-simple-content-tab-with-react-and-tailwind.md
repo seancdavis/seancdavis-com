@@ -97,7 +97,7 @@ Here’s [a React project built with Vite](https://stackblitz.com/edit/react-tai
 
 Building and maintaining this type of functionality can be a pain. It _feels_ like it should be a primitive, and yet it takes interactivity and state management just to get this simple example working.
 
-If you feel like you’re being slowed down and want to explore other options, consider checking out libraries like [Radix UI](radix-ui.com/docs/primitives/components/tabs), where you are subject to a significant amount of style override, but can get the core functionality free and easy (or maybe just _a little_ easier).
+If you feel like you’re being slowed down and want to explore other options, consider checking out libraries like [Radix UI](https://www.radix-ui.com/docs/primitives/components/tabs), where you are subject to a significant amount of style override, but can get the core functionality free and easy (or maybe just _a little_ easier).
 
 ## Adding Flair
 
