@@ -1344,10 +1344,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@faker-js/faker@^7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-7.0.1.tgz#6afdcd3f1000ad0382dda440f1746b5f0c43f832"
-  integrity sha512-d7liuZh+aSPJ7JsWQ/Mu59HQDhYjWk7EPiVGMTL7KUEyrzYdKuMVfD3R0eCW8MezS20n4LoX/9zBfIV9zWdTrA==
+"@faker-js/faker@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-7.1.0.tgz#019eeb2c20030e475a1bd05df1cc7b7e72c039d5"
+  integrity sha512-G+EvE29QUd9/6GTrwA/TK2AiN79W4ZG6kyJqj2RAqUqEd8A8ICnjA3Rj3F2IaaA+sq6WJzs4lh8GJJRDG1UH7A==
 
 "@gar/promisify@^1.0.1":
   version "1.1.3"
