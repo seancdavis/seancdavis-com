@@ -16,7 +16,7 @@ seo:
 
 A typical use of [the ](https://reactjs.org/docs/hooks-reference.html#useref)[useRef](https://reactjs.org/docs/hooks-reference.html#useref)[ hook](https://reactjs.org/docs/hooks-reference.html#useref) is to be able to access the HTML element directly. This is the example from the React docs:
 
-```typescript
+```tsx
 function TextInputWithFocusButton() {
   const inputEl = useRef(null);
   const onButtonClick = () => {
@@ -40,22 +40,24 @@ I often run into a scenario in which I want direct access to elements with a com
 
 Consider if we had a similar component, but rather than focusing a single text input, the button would tab through a series inputs of unknown quantity. In that case, we might track the active input with a state, and then increment the index with each button click.
 
-Because I don’t know how many inputs there will be, I can’t use `useRef` directly on each one. The workaround is to store the ref as an array …
+Because I don’t know how many inputs there will be, I can’t use `useRef` directly on each one. The workaround is to store the ref as an array ...
 
-```typescript
+```tsx
 const inputEls = useRef([]);
 ```
 
-… and then pass a function when applying the reference.
+... and then pass a function when applying the reference.
 
-```typescript
+```tsx
 // An example where `idx` is a known index value
 <input ref={(el) => (inputEls.current[idx] = el)} type="text" />
 ```
 
 In context, that might look something like this:
 
-```typescript
+{% raw %}
+
+```tsx
 import React, { useRef, useState } from "react";
 
 export function Component(props) {
@@ -84,6 +86,8 @@ export function Component(props) {
   );
 }
 ```
+
+{% endraw %}
 
 That leads to this behavior:
 
