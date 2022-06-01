@@ -5,9 +5,6 @@ description: >-
   quantity. Here’s how you can make it work.
 tags:
   - react
-tweet: >-
-  This is a little trick I use all the time — applying multiple HTML elements to
-  a single useRef hook in React.
 image: /posts/220531/storing-multiple-elements-in-a-single-ref-in-react-E0IKu-hI.png
 seo:
   image: >-
