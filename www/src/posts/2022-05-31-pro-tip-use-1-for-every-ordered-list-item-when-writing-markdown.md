@@ -1,16 +1,9 @@
 ---
-title: 'Pro Tip: Use “1.” for Every Ordered List Item when Writing Markdown'
+title: "Pro Tip: Use “1.” for Every Ordered List Item when Writing Markdown"
 description: A quick tip for making ordered lists in markdown easier to write.
 tags:
   - quick-tip
   - markdown
-tweet: >-
-  I was resistant to using 1. for every ordered list item in markdown. But since
-  I’ve gotten comfortable with the switch, I much prefer it.
-
-
-  I do still use sequential numbers when explicitly referencing the number
-  values.
 image: >-
   /posts/220531/pro-tip-use-1-for-every-ordered-list-item-when-writing-markdown-gT1C8rSL.png
 seo:
