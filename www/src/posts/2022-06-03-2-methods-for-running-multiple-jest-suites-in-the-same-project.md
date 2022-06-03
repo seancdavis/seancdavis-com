@@ -4,13 +4,6 @@ description: Multiple approaches on running a subset of Jest tests within a proj
 tags:
   - jest
   - testing
-tweet: >-
-  I’ve been a big fan of Jest for years. It’s trivial to run a subset of tests
-  using the CLI, but I’ve also had to get creative in persisting that subset in
-  CI. 
-
-
-  Here’s how I’ve done it.
 image: >-
   /posts/220603/2-methods-for-running-multiple-jest-suites-in-the-same-project-DShhPvxT.png
 seo:
