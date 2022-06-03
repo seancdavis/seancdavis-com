@@ -158,4 +158,4 @@ Dynamic config is a more permanent solution. This is best used when you are inte
 
 I’ve set up a playground that includes [both scenarios within the same project](https://stackblitz.com/edit/node-yy8lhl?file=index.js). Take a look below:
 
-[PLAYGROUND HERE]
+{% code_playground url="https://stackblitz.com/edit/node-yy8lhl?embed=1&file=index.js" %}
