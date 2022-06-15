@@ -28,7 +28,10 @@ For example:
 
 Here’s the difference:
 
-{% post_image alt="", src="/uploads/220615/youtube-video-rel-comparison.png" %}
+{% post_image
+  alt="Embedded YouTube Related Videos Comparison",
+  src="/uploads/220615/youtube-video-rel-comparison.png",
+  classes="border-t border-b my-6" %}
 
 ## Demo
 
