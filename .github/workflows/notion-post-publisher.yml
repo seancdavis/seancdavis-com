@@ -1,7 +1,7 @@
 name: Notion Post Publisher
 on:
   schedule:
-    - cron: "0 10-16 * * 1-5"
+    - cron: "0 15-21 * * 1-5"
 jobs:
   Notion-Post-Publisher:
     name: "Notion Post Publisher"
