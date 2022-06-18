@@ -54,11 +54,10 @@ After _a lot_ of searching, I found a CSS-only solution. It looks like this:
 
 Here it is in action:
 
-{% callout type="note" %}
-TODO: Embed CodePen
-
-[https://codepen.io/seancdavis/pen/QWQxGNM](https://codepen.io/seancdavis/pen/QWQxGNM)
-{% endcallout %}
+{% codepen
+    user="seancdavis",
+    id="QWQxGNM",
+    title="Native Default Placeholder" %}
 
 ### Issues with CSS-Only
 
@@ -132,8 +131,7 @@ Although it felt clever to put this together, there are some risks:
 
 Here it is in action:
 
-{% callout type="note" %}
-TODO: Embed CodePen
-
-[https://codepen.io/seancdavis/pen/RwQJoww](https://codepen.io/seancdavis/pen/RwQJoww)
-{% endcallout %}
+{% codepen
+    user="seancdavis",
+    id="RwQJoww",
+    title="Faking a Select Placeholder" %}
