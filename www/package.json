@@ -45,7 +45,7 @@
     "prettier": "^2.6.2",
     "slugify": "^1.6.3",
     "tailwindcss": "^3.0.23",
-    "twitter-api-v2": "^1.11.0",
+    "twitter-api-v2": "^1.12.2",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.9.1"
   },
