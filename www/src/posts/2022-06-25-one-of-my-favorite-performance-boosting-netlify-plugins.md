@@ -77,4 +77,4 @@ If you’re building static sites with Netlify, it’s worth looking into this p
 
 ## More on Inlining Critical CSS
 
-If you want to read more about inlining critical CSS, I wrote a brief intro guide.
+If you want to read more about inlining critical CSS, I wrote [a brief intro guide](/posts/a-brief-introduction-to-inlining-critical-css).
