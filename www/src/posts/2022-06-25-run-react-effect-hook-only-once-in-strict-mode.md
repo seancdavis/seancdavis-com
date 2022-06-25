@@ -85,4 +85,6 @@ Now we have an `efectCalled` reference that starts as `false`. It gets set to `t
 
 ## Single Effect Run Demo
 
-See it in action here: [https://stackblitz.com/edit/nextjs-qmztpj?file=pages%2Findex.js,pages%2F_app.js,components%2FEffectRunOnce.tsx,components%2FSimpleEffect.tsx](https://stackblitz.com/edit/nextjs-qmztpj?file=pages%2Findex.js,pages%2F_app.js,components%2FEffectRunOnce.tsx,components%2FSimpleEffect.tsx)
+[Here's a demo](https://stackblitz.com/edit/nextjs-qmztpj?file=components%2FSimpleEffect.tsx,components%2FEffectRunOnce.tsx,pages%2Findex.js) in which you can see both components in action.
+
+{% code_playground url="https://stackblitz.com/edit/nextjs-qmztpj?file=pages/index.js" %}
