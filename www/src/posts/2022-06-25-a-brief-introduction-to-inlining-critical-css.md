@@ -34,7 +34,7 @@ The larger a CSS file gets, the longer it takes to download, which ultimately me
 
 While it makes sense that a global stylesheet would grow over time, it results in a user of a single page downloading the supporting styles for a growing website, when all they _really_ need is the CSS code that supports the content they are viewing at that time.
 
-{% post_image alt="", src="/uploads/220625/Untitled.png" %}
+{% post_image alt="", src="/uploads/220625/global-css-comparison.png" %}
 
 ## Inlining _Critical_ CSS
 
