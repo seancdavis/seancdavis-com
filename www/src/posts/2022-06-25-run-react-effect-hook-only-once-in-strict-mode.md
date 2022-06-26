@@ -24,7 +24,7 @@ A breaking change that came with React 18 was that components are mounted, unmou
 
 Here’s an example of a component with an effect hook that runs twice:
 
-```js
+```jsx
 import { useEffect, useState, useRef } from "react";
 import styles from "../styles/Home.module.css";
 
@@ -56,7 +56,7 @@ I’m using a `ref` object here because I can be sure that the value increments.
 
 To ensure this hook only runs once in development mode, we can add another reference object that tracks whether the callback to `useEffect` has been called. Something like this:
 
-```js
+```jsx
 import { useEffect, useState, useRef } from "react";
 import styles from "../styles/Home.module.css";
 
@@ -87,4 +87,4 @@ Now we have an `efectCalled` reference that starts as `false`. It gets set to `t
 
 [Here's a demo](https://stackblitz.com/edit/nextjs-qmztpj?file=components%2FSimpleEffect.tsx,components%2FEffectRunOnce.tsx,pages%2Findex.js) in which you can see both components in action.
 
-{% code_playground url="https://stackblitz.com/edit/nextjs-qmztpj?file=pages/index.js" %}
+{% code_playground url="https://stackblitz.com/edit/nextjs-qmztpj?ctl=1&ile=pages/index.js" %}
