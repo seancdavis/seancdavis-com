@@ -20,7 +20,7 @@ If you’ve encountered an infinite loop in React, it’s almost certain that yo
 
 Here’s a simple example in which you update and render a counter.
 
-```js
+```jsx
 import { useEffect, useState } from "react";
 
 export const MyInfiniteLoop = () => {
@@ -44,7 +44,7 @@ The way to get around this is to specify an array of dependencies to the effect 
 
 You can instead tell the hook that it has no dependencies, and so it will only render a single time.
 
-```js
+```jsx
 import { useEffect, useState } from "react";
 
 export const MyInfiniteLoop = () => {
