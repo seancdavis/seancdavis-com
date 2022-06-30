@@ -6,6 +6,13 @@ description: >-
 tags:
   - quick-tip
   - jest
+tweet: >-
+  As a follow-up to a post from a few days ago, Jest comes with helpers to
+  target running a specific test.
+
+
+  I’ve found this to be particularly useful while writing new tests or debugging
+  existing tests within large test files or long-running tests.
 image: /posts/220604/run-a-single-jest-test-WK68kC1P.png
 seo:
   image: /posts/220604/run-a-single-jest-test-qz_FG70X--meta.png
