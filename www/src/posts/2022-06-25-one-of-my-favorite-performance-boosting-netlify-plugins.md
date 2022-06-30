@@ -7,10 +7,6 @@ tags:
   - netlify
   - performance
   - css
-tweet: >-
-  One of my absolute favorite @netlify build plugins is one that inlines
-  critical CSS (by @tombonnike). It provided some quick performance wins to my
-  classic SSG sites with (growing) global stylesheets.
 image: >-
   /posts/220625/one-of-my-favorite-performance-boosting-netlify-plugins-oVcu3JAc.png
 seo:

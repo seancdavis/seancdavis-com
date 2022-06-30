@@ -7,13 +7,6 @@ tags:
   - html
   - css
   - javascript
-tweet: >-
-  It always seems like it’s the little things in projects that can be the
-  trickiest to figure out.
-
-
-  Though I have a few more coming behind this one, creating a nice experience
-  with select placeholders was … challenging.
 image: /posts/220616/styling-placeholders-for-select-fields-3dcGveU1.png
 seo:
   image: /posts/220616/styling-placeholders-for-select-fields-R0CPwP6c--meta.png
