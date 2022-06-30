@@ -90,9 +90,9 @@ That’s it! You should now have a working example of automatically opening exte
 
 ## Playground
 
-In the example below, I combined the components into a single component. Play around with it to make it work for you.
+In the [example below](https://stackblitz.com/edit/nextjs-ehvtnq?file=components%2FLink.jsx,pages%2Findex.js), I combined the components into a single component. Play around with it to make it work for you.
 
-[https://stackblitz.com/edit/nextjs-ehvtnq?file=components%2FLink.jsx,pages%2Findex.js,pages%2Fpage-2.js](https://stackblitz.com/edit/nextjs-ehvtnq?file=components%2FLink.jsx,pages%2Findex.js,pages%2Fpage-2.js)
+{% code_playground url="https://stackblitz.com/edit/nextjs-ehvtnq?ctl=1&embed=1&file=components/Link.jsx" %}
 
 ## Next Steps
 
