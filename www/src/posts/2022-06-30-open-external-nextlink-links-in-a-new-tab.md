@@ -22,7 +22,7 @@ I like when links to external pages open in a new tab, while internal pages stay
 
 The first step is to add a custom link component that controls the rendering of the link. The basic logic would look something like this:
 
-```js
+```jsx
 import NextLink from "next/link";
 import { ExternalLink } from "path/to/external/link";
 
@@ -41,7 +41,7 @@ This logic is at the most basic level. If the `href` property passed to the `nex
 
 Now let’s add the external link component:
 
-```js
+```jsx
 import { cloneElement, isValidElement } from "react";
 
 export const ExternalLink = ({ child, href }) => {
@@ -69,13 +69,13 @@ The beauty of this approach is that you don’t have to change anything with you
 
 Wherever you have this in your code:
 
-```js
+```jsx
 import Link from "next/link";
 ```
 
 Change it to this:
 
-```js
+```jsx
 import { Link } from "path/to/link/component";
 ```
 
