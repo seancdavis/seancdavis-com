@@ -6,10 +6,6 @@ description: >-
 tags:
   - nextjs
   - react
-tweet: >-
-  It took me awhile first to figure out why the effect hook was running twice in
-  dev mode. And then quite a bit more digging until I had a reasonable escape
-  hatch to avoid running the effect hook twice in dev mode.
 image: /posts/220625/run-react-effect-hook-only-once-in-strict-mode-iPbgxvcN.png
 seo:
   image: >-
