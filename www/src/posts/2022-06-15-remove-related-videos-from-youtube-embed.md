@@ -5,7 +5,6 @@ description: >-
   tip.
 tags:
   - quick-tip
-tweet: I’ve forgotten this trick enough times that it was time to write it down.
 image: /posts/220615/remove-related-videos-from-youtube-embed-2dNUejzt.png
 seo:
   image: /posts/220615/remove-related-videos-from-youtube-embed-uBzxx6bj--meta.png
