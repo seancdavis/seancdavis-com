@@ -12,7 +12,7 @@
   "author": "Sean C Davis",
   "license": "MIT",
   "dependencies": {
-    "http-server": "^14.1.0",
+    "http-server": "^14.1.1",
     "webpack": "^5.73.0"
   }
 }
