@@ -8,9 +8,6 @@ tags:
   - javascript
   - nextjs
   - react
-tweet: >-
-  There are some utility components I find myself adding to every project. The
-  auto-resolving internal/external link component is a common one.
 image: /posts/220630/open-external-nextlink-links-in-a-new-tab-xSi60sD-.png
 seo:
   image: /posts/220630/open-external-nextlink-links-in-a-new-tab-MpbHt5xd--meta.png
