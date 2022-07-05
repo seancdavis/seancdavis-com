@@ -83,4 +83,4 @@ Now we have an `efectCalled` reference that starts as `false`. It gets set to `t
 
 [Here's a demo](https://stackblitz.com/edit/nextjs-qmztpj?file=components%2FSimpleEffect.tsx,components%2FEffectRunOnce.tsx,pages%2Findex.js) in which you can see both components in action.
 
-{% code_playground url="https://stackblitz.com/edit/nextjs-qmztpj?ctl=1&ile=pages/index.js" %}
+{% code_playground url="https://stackblitz.com/edit/nextjs-qmztpj?ctl=1&file=pages/index.js&embed=1" %}
