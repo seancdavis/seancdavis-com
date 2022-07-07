@@ -3,10 +3,6 @@ title: A CLI Tool for Catching Typos in Code and Content
 description: A handy CLI tool for catching misspellings in any files in your codebase.
 tags:
   - testing
-tweet: >-
-  I just started using cspell’s CLI to run against a docs site that uses local
-  markdown files for content. It’s pretty handy, although I need to hook it up
-  to CI to get the most out of it.
 image: /posts/220630/a-cli-tool-for-catching-typos-in-code-and-content-QP0WnN1s.png
 seo:
   image: >-
