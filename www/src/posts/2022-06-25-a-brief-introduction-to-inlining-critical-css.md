@@ -7,6 +7,13 @@ description: >-
 tags:
   - css
   - performance
+tweet: >-
+  I like classic SSGs for simpler and smaller sites (like my site). But global
+  CSS can become problematic as it grows.
+
+
+  This is a quick intro to inlining CSS and why/how it can give you a nice (and
+  easy) performance boost.
 image: /posts/220625/a-brief-introduction-to-inlining-critical-css-3wySMCPG.png
 seo:
   image: >-
