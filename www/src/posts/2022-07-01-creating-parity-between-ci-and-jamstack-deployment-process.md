@@ -7,10 +7,6 @@ description: >-
 tags:
   - jamstack
   - testing
-tweet: >-
-  Traditional SSG builds can take awhile to run. If you also have a test suite,
-  that can add more time. Splitting those processes up is an option, but it
-  takes some exploration to decide how best to configure it.
 image: >-
   /posts/220701/creating-parity-between-ci-and-jamstack-deployment-process-Qr0czdHx.png
 seo:
