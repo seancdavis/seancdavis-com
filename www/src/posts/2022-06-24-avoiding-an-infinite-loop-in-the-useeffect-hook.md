@@ -3,6 +3,13 @@ title: Avoiding an Infinite Loop in the useEffect Hook
 description: It’s surprisingly easy to create infinite loops in React.
 tags:
   - react
+tweet: >-
+  Although there is an eslint plugin to help avoid it, it’s still frustrating
+  how easy it is to end up in an effect hook infinite loop.
+
+
+  This must trip up every React dev at some point. Why is the default not to
+  have no dependencies?
 image: /posts/220624/avoiding-an-infinite-loop-in-the-useeffect-hook-Vh3kaMtp.png
 seo:
   image: >-
