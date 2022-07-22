@@ -6,11 +6,6 @@ description: >-
   scope to the project.
 tags:
   - design
-tweet: >-
-  Every time I get close to wrapping up a project working with a new designer,
-  I’m reminded of the benefit of considering extremes early on. We require so
-  much flexibility and variability today that it’s impossible to capture a
-  single, idealistic design.
 image: >-
   /posts/220703/designing-a-website-for-variable-content-using-extremes-Fbdl6RfC.png
 seo:
