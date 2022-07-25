@@ -71,6 +71,8 @@ From this list above, notice that articles can be written in many different ways
 - Thought pieces
 - Listicles
 
+Articles must bring something unique. If I can google the title to your proposed article and see useful results, it's probably not the right article to be spending your time on.
+
 ## Payment
 
 At this time, there is no payment for publishing content on this site. The project is purely for the good of the community and does not make any money. Should this site begin to earn money at some point in the future, contributors will be paid.

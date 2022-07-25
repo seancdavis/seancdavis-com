@@ -31,7 +31,7 @@ Cost is negotiable at this time.
 
 I'm also available to write content that promotes your product or project on your behalf. This content can be published on this site or other platforms or publications.
 
-My rate is $125 per hour, which comes out to about $500-750 for the typical post.
+My rate is $175 per hour, which comes out to about $750-1k for the typical post.
 
 ## Advertisements
 
