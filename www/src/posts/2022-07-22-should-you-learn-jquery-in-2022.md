@@ -7,10 +7,6 @@ tags:
   - developer-advice
   - javascript
   - jquery
-tweet: >-
-  When there’s so much changing all the time, it probably doesn’t make sense to
-  invest time in learning legacy software, unless you need it for some
-  job/project.
 image: /posts/220722/should-you-learn-jquery-in-2022-m6KY2pUa.png
 seo:
   image: /posts/220722/should-you-learn-jquery-in-2022-vUVo44rd--meta.png
