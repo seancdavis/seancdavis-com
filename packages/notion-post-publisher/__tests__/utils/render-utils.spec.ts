@@ -19,6 +19,18 @@ describe("renderRichText", () => {
       richTextArr.map((rt) => rt.plain_text).join("")
     );
   });
+  it("Supports links", () => {
+    const url = "https://www.stackbit.com/";
+    const text = "Stackbit Website";
+    const richText = mockRichText({ text, link: { url } });
+    expect(renderRichText([richText])).toEqual(`[${text}](${url})`);
+  });
+  it("Makes links internal", () => {
+    const url = "https://www.seancdavis.com/posts/hello-world";
+    const text = "Some blog post";
+    const richText = mockRichText({ text, link: { url } });
+    expect(renderRichText([richText])).toEqual(`[${text}](/posts/hello-world)`);
+  });
   it("Supports bold", () => {
     const richText = mockRichText({ bold: true });
     const plainText = richText.plain_text;

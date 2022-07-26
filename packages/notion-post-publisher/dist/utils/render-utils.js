@@ -21,7 +21,10 @@ function renderRichTextItem(richText) {
         throw new Error(`Rich text type not supported: ${richText.type}`);
     }
     if (richText.text.link) {
-        return `[${richText.text.content}](${richText.text.link.url})`;
+        // Remove site domain from the URL to make it an internal link. Otherwise it
+        // will open in a new tab within the post.
+        const url = richText.text.link.url.replace(/^https?:\/\/www\.seancdavis\.com\//, "/");
+        return `[${richText.text.content}](${url})`;
     }
     let content = richText.text.content;
     // Wrap the text in annotations, as necessary.
