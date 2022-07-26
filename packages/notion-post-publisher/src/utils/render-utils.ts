@@ -29,12 +29,32 @@ function renderRichTextItem(richText: NotionRichText): string {
     );
     return `[${richText.text.content}](${url})`;
   }
-  let content = richText.text.content;
-  // Wrap the text in annotations, as necessary.
-  if (richText.annotations.code) content = `\`${content}\``;
-  if (richText.annotations.italic) content = `_${content}_`;
-  if (richText.annotations.bold) content = `**${content}**`;
-  return content;
+  // let content = richText.text.content;
+  // // Wrap the text in annotations, as necessary.
+  // if (richText.annotations.code) content = `\`${content}\``;
+  // if (richText.annotations.italic) content = `_${content}_`;
+  // if (richText.annotations.bold) content = `**${content}**`;
+  return wrapRichTextItem(richText.text.content, richText.annotations);
+}
+
+/**
+ * Wrap the text in the appropriate markdown annotations.
+ *
+ * @param content Content from the rich text object
+ * @param annotations Annotation flags from the rich text object
+ * @returns Rich text with the proper markdown annotations
+ */
+function wrapRichTextItem(
+  content: string,
+  annotations: NotionRichText["annotations"]
+) {
+  const leadingWhitespace = (content.match(/^\s+/) || [""])[0];
+  const trailingWhitespace = (content.match(/\s+$/) || [""])[0];
+  let text = content.trim();
+  if (annotations.code) text = `\`${text}\``;
+  if (annotations.italic) text = `_${text}_`;
+  if (annotations.bold) text = `**${text}**`;
+  return `${leadingWhitespace}${text}${trailingWhitespace}`;
 }
 
 /**

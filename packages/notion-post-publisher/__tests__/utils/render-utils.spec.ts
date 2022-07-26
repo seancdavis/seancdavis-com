@@ -51,6 +51,11 @@ describe("renderRichText", () => {
     const plainText = richText.plain_text;
     expect(renderRichText([richText])).toEqual(`**\`${plainText}\`**`);
   });
+  it("Moves leading and trailing whitespace outside annotations", () => {
+    const text = "Hello World";
+    const richText = mockRichText({ bold: true, text: `  ${text}  ` });
+    expect(renderRichText([richText])).toEqual(`  **${text}**  `);
+  });
 });
 
 describe("trailingNewlines()", () => {
