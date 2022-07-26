@@ -5,9 +5,6 @@ description: >-
   remembering or typing the name.
 tags:
   - quick-tip
-tweet: >-
-  “cd -” is a trick I use constantly to quickly change into the previous
-  directory without having to remember or retype the name.
 image: /posts/220723/change-back-to-previous-directory-J3Ad9uPJ.png
 seo:
   image: /posts/220723/change-back-to-previous-directory-5BzDyMno--meta.png
