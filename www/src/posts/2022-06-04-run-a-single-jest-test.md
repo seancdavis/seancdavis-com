@@ -75,7 +75,7 @@ describe("These tests will NOT run", () => {
 
 ## Targeting a Single Test File
 
-In some cases, you may be concerned with targeting a single test within a single test file. I have another post that goes into detail about [running a subset of test files within a Jest test suite](https://www.seancdavis.com/posts/2-methods-for-running-multiple-jest-suites-in-the-same-project/). You can pair the methods in that post with the methods above to pinpoint a single test throughout your suite.
+In some cases, you may be concerned with targeting a single test within a single test file. I have another post that goes into detail about [running a subset of test files within a Jest test suite](/posts/2-methods-for-running-multiple-jest-suites-in-the-same-project/). You can pair the methods in that post with the methods above to pinpoint a single test throughout your suite.
 
 ## References
 

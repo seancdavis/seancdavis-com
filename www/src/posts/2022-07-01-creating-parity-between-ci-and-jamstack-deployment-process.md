@@ -14,7 +14,7 @@ seo:
     /posts/220701/creating-parity-between-ci-and-jamstack-deployment-process-xsWv5xbA--meta.png
 ---
 
-I’ve previously explored whether or not you should [run continuous integration (CI) during your production build process](https://www.seancdavis.com/posts/run-ci-during-build/). There are several factors to consider.
+I’ve previously explored whether or not you should [run continuous integration (CI) during your production build process](/posts/run-ci-during-build/). There are several factors to consider.
 
 If you decide to separate the two, there’s scenario that immediately becomes a challenge: _How do you maintain parity between CI and the production build?_
 

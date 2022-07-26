@@ -9,7 +9,7 @@ seo:
     /posts/220630/a-cli-tool-for-catching-typos-in-code-and-content-KazlyqW9--meta.png
 ---
 
-I’ve previously discussed [using a spell checker in VS Code](https://www.seancdavis.com/posts/use-code-spell-checker/), but it’s easy to miss misspellings when _in the zone_. Plus, an extension alone doesn’t protect against other team members misspelling words.
+I’ve previously discussed [using a spell checker in VS Code](/posts/use-code-spell-checker/), but it’s easy to miss misspellings when _in the zone_. Plus, an extension alone doesn’t protect against other team members misspelling words.
 
 [cspell](https://www.npmjs.com/package/cspell) (the library behind the VS Code plugin) also has a CLI that you could use to check files in your repository.
 
