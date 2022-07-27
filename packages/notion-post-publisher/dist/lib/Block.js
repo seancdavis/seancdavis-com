@@ -23,6 +23,7 @@ const BlockMap = {
     numbered_list_item: blocks_1.NumberedListItemBlock,
     paragraph: blocks_1.ParagraphBlock,
     quote: blocks_1.QuoteBlock,
+    table_of_contents: blocks_1.TableOfContentsBlock,
     video: blocks_1.VideoBlock,
 };
 class Block {

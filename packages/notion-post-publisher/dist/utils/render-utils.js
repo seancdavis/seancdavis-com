@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.trailingNewlines = exports.renderRichText = void 0;
+exports.renderBlocks = exports.trailingNewlines = exports.renderRichText = void 0;
 const blocks_1 = require("../lib/blocks");
 /**
  * Given a an array of rich text objects from Notion, return a markdown string.
@@ -78,3 +78,29 @@ function trailingNewlines(blocks, index) {
     return "\n\n";
 }
 exports.trailingNewlines = trailingNewlines;
+/**
+ * Render an array of blocks to a markdown string.
+ *
+ * @param blocks An array of supported block types
+ * @param linePrefix Preceding string to insert before each line
+ * @returns String of markdown
+ */
+function renderBlocks(blocks, linePrefix) {
+    return blocks
+        .map((block, idx) => {
+        let text = block.render();
+        // If the render method doesn't return a string, skip it.
+        if (!text)
+            return "";
+        // If necessary, prepend the line with the designated characters.
+        if (linePrefix)
+            text = `${linePrefix !== null && linePrefix !== void 0 ? linePrefix : ""}${text}`;
+        // Add newlines after the block ...
+        const newlines = trailingNewlines(blocks, idx);
+        // ... inserting the prefix as necessary
+        text += newlines === "\n\n" ? `\n${linePrefix !== null && linePrefix !== void 0 ? linePrefix : ""}\n` : "\n";
+        return text;
+    })
+        .join("");
+}
+exports.renderBlocks = renderBlocks;

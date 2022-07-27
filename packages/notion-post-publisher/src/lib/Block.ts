@@ -11,6 +11,7 @@ import type {
   NotionNumberedListItemBlock,
   NotionParagraphBlock,
   NotionQuoteBlock,
+  NotionTableOfContentsBlock,
   NotionVideoBlock,
 } from "../types/notion";
 
@@ -26,6 +27,7 @@ import {
   NumberedListItemBlock,
   ParagraphBlock,
   QuoteBlock,
+  TableOfContentsBlock,
   VideoBlock,
 } from "./blocks";
 
@@ -41,6 +43,7 @@ type SupportedNotionBlocks =
   | NotionNumberedListItemBlock
   | NotionParagraphBlock
   | NotionQuoteBlock
+  | NotionTableOfContentsBlock
   | NotionVideoBlock;
 
 const BlockMap = {
@@ -55,6 +58,7 @@ const BlockMap = {
   numbered_list_item: NumberedListItemBlock,
   paragraph: ParagraphBlock,
   quote: QuoteBlock,
+  table_of_contents: TableOfContentsBlock,
   video: VideoBlock,
 };
 
@@ -71,6 +75,7 @@ export type CreatableBlock =
   | NumberedListItemBlock
   | ParagraphBlock
   | QuoteBlock
+  | TableOfContentsBlock
   | VideoBlock;
 
 export class Block {

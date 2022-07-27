@@ -9,4 +9,5 @@ export { ImageBlock } from "./ImageBlock";
 export { NumberedListItemBlock } from "./NumberedListItemBlock";
 export { ParagraphBlock } from "./ParagraphBlock";
 export { QuoteBlock } from "./QuoteBlock";
+export { TableOfContentsBlock } from "./TableOfContentsBlock";
 export { VideoBlock } from "./VideoBlock";

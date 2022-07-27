@@ -40,7 +40,7 @@ describe("QuoteBlock", () => {
       b.push(block);
       if ("prerender" in block) await block.prerender();
     }
-    const expText = `>\n> ${b[0].render()}\n>\n> ${b[1].render()}\n> ${b[2].render()}`;
+    const expText = `>\n> ${b[0].render()}\n> \n> ${b[1].render()}\n> ${b[2].render()}`;
     expect(result).toContain(expText);
   });
   it("Throws an error if prerender was not called", async () => {

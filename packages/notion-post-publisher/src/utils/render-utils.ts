@@ -85,3 +85,30 @@ export function trailingNewlines(
   // Otherwise, return two.
   return "\n\n";
 }
+
+/**
+ * Render an array of blocks to a markdown string.
+ *
+ * @param blocks An array of supported block types
+ * @param linePrefix Preceding string to insert before each line
+ * @returns String of markdown
+ */
+export function renderBlocks(
+  blocks: CreatableBlock[],
+  linePrefix?: string
+): string {
+  return blocks
+    .map((block, idx) => {
+      let text = block.render();
+      // If the render method doesn't return a string, skip it.
+      if (!text) return "";
+      // If necessary, prepend the line with the designated characters.
+      if (linePrefix) text = `${linePrefix ?? ""}${text}`;
+      // Add newlines after the block ...
+      const newlines = trailingNewlines(blocks, idx);
+      // ... inserting the prefix as necessary
+      text += newlines === "\n\n" ? `\n${linePrefix ?? ""}\n` : "\n";
+      return text;
+    })
+    .join("");
+}

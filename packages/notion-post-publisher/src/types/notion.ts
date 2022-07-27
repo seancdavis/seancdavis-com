@@ -34,6 +34,11 @@ export type NotionCalloutBlock = Extract<NotionBlock, { type: "callout" }>;
 
 export type NotionDividerBlock = Extract<NotionBlock, { type: "divider" }>;
 
+export type NotionTableOfContentsBlock = Extract<
+  NotionBlock,
+  { type: "table_of_contents" }
+>;
+
 /* ----- Shared Types ----- */
 
 // These are extracted from types above, but the objects are the same regardless
