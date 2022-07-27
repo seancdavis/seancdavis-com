@@ -4517,10 +4517,10 @@ async@^2.6.2:
   dependencies:
     lodash "^4.17.14"
 
-async@^3.1.0, async@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/async/-/async-3.2.3.tgz#ac53dafd3f4720ee9e8a160628f18ea91df196c9"
-  integrity sha512-spZRyzKL5l5BZQrr/6m/SqFdBN0q3OCI0f9rjfBzCMBIP4p75P620rR3gTmaksNOhmzgdxcaxdNfMy6anrbM0g==
+async@^3.1.0, async@^3.2.3, async@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/async/-/async-3.2.4.tgz#2d22e00f8cddeb5fde5dd33522b56d1cf569a81c"
+  integrity sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -8754,22 +8754,22 @@ gatsby-plugin-react-helmet@^5.15.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-plugin-sharp@^4.17.0:
-  version "4.17.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.17.0.tgz#157901c4e3ac728f562d08d4a846fa1bd888a81c"
-  integrity sha512-+wP4hskMBSNgPYqBX2uqoqb5JUtMMvaZTzYNkZmnKkg85rHeDpUy+eMoCqrhh8wpW/NgcbQ9o6uK43jj2qv0xQ==
+gatsby-plugin-sharp@^4.19.0:
+  version "4.19.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.19.0.tgz#3e1f5b1dc1c1caabd2971aa7852eebe577ed14f3"
+  integrity sha512-2wIxbCoJmZMeCw+V9ht90tmwoSF2eaEKj6j5QMLe+NlLpLOXwmsHjrauMpqd8ILmcKpZTOJr9yEplzbjxlD36A==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.2.0"
-    async "^3.2.3"
+    async "^3.2.4"
     bluebird "^3.7.2"
     debug "^4.3.4"
     filenamify "^4.3.0"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.17.0"
-    gatsby-plugin-utils "^3.11.0"
-    gatsby-telemetry "^3.17.0"
-    got "^11.8.3"
+    gatsby-core-utils "^3.19.0"
+    gatsby-plugin-utils "^3.13.0"
+    gatsby-telemetry "^3.19.0"
+    got "^11.8.5"
     lodash "^4.17.21"
     mini-svg-data-uri "^1.4.4"
     probe-image-size "^7.2.3"
@@ -8847,7 +8847,7 @@ gatsby-source-filesystem@^4.19.0:
     valid-url "^1.0.9"
     xstate "^4.26.1"
 
-gatsby-telemetry@^3.17.0, gatsby-telemetry@^3.19.0:
+gatsby-telemetry@^3.19.0:
   version "3.19.0"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.19.0.tgz#3a77c2948dfd0b517f2bddfe0f6762dbc35624d3"
   integrity sha512-5JQcTm2zCLWTmnXOdOe0gxuk7aRZSTaVrOrytMlwAR7trvtBC/fKqMhJHsYwl5uW9K06F59ZdkC0apJTAPkGww==
@@ -9428,7 +9428,7 @@ good-listener@^1.2.2:
   dependencies:
     delegate "^3.1.2"
 
-got@^11.8.1, got@^11.8.2, got@^11.8.3, got@^11.8.5:
+got@^11.8.1, got@^11.8.2, got@^11.8.5:
   version "11.8.5"
   resolved "https://registry.yarnpkg.com/got/-/got-11.8.5.tgz#ce77d045136de56e8f024bebb82ea349bc730046"
   integrity sha512-o0Je4NvQObAuZPHLFoRSkdG2lTgtcynqymzg2Vupdx6PorhaT5MCbIyXG6d4D94kk8ZG57QeosgdiqfJWhEhlQ==
