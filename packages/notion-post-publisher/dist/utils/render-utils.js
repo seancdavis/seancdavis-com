@@ -12,6 +12,19 @@ function renderRichText(richText) {
 }
 exports.renderRichText = renderRichText;
 /**
+ * Replaces characters used in Notion with those better suited for markdown
+ * files.
+ *
+ * @param text Text to be sanitized
+ * @returns Text with characters replaced for markdown usage
+ */
+function sanitizeText(text) {
+    return text
+        .replace(/…/g, "...")
+        .replace(/[“|”]/g, '"')
+        .replace(/[’|’]/g, "'");
+}
+/**
  * Given a rich text object from Notion, return the resulting markdown string.
  *
  * @returns {string} Text to render to the markdown file.
@@ -24,14 +37,9 @@ function renderRichTextItem(richText) {
         // Remove site domain from the URL to make it an internal link. Otherwise it
         // will open in a new tab within the post.
         const url = richText.text.link.url.replace(/^https?:\/\/www\.seancdavis\.com\//, "/");
-        return `[${richText.text.content}](${url})`;
+        return `[${sanitizeText(richText.text.content)}](${url})`;
     }
-    // let content = richText.text.content;
-    // // Wrap the text in annotations, as necessary.
-    // if (richText.annotations.code) content = `\`${content}\``;
-    // if (richText.annotations.italic) content = `_${content}_`;
-    // if (richText.annotations.bold) content = `**${content}**`;
-    return wrapRichTextItem(richText.text.content, richText.annotations);
+    return wrapRichTextItem(sanitizeText(richText.text.content), richText.annotations);
 }
 /**
  * Wrap the text in the appropriate markdown annotations.

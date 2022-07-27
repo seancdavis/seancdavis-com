@@ -56,6 +56,11 @@ describe("renderRichText", () => {
     const richText = mockRichText({ bold: true, text: `  ${text}  ` });
     expect(renderRichText([richText])).toEqual(`  **${text}**  `);
   });
+  it("Converts a select list of special characters", () => {
+    const text = `“’Hello World’” …`;
+    const richText = mockRichText({ text });
+    expect(renderRichText([richText])).toEqual(`"'Hello World'" ...`);
+  });
 });
 
 describe("trailingNewlines()", () => {
