@@ -2,6 +2,7 @@ import type {
   NotionBlock,
   NotionBulletedListItemBlock,
   NotionCalloutBlock,
+  NotionChildPageBlock,
   NotionCodeBlock,
   NotionDividerBlock,
   NotionHeading1Block,
@@ -18,6 +19,7 @@ import type {
 import {
   BulletedListItemBlock,
   CalloutBlock,
+  ChildPageBlock,
   CodeBlock,
   DividerBlock,
   Heading1Block,
@@ -34,6 +36,7 @@ import {
 type SupportedNotionBlocks =
   | NotionBulletedListItemBlock
   | NotionCalloutBlock
+  | NotionChildPageBlock
   | NotionCodeBlock
   | NotionDividerBlock
   | NotionHeading1Block
@@ -49,6 +52,7 @@ type SupportedNotionBlocks =
 const BlockMap = {
   bulleted_list_item: BulletedListItemBlock,
   callout: CalloutBlock,
+  child_page: ChildPageBlock,
   code: CodeBlock,
   divider: DividerBlock,
   heading_1: Heading1Block,
@@ -66,6 +70,7 @@ export type CreatableBlock =
   | Block
   | BulletedListItemBlock
   | CalloutBlock
+  | ChildPageBlock
   | CodeBlock
   | DividerBlock
   | Heading1Block

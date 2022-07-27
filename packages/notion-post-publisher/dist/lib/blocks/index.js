@@ -1,10 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.VideoBlock = exports.TableOfContentsBlock = exports.QuoteBlock = exports.ParagraphBlock = exports.NumberedListItemBlock = exports.ImageBlock = exports.Heading3Block = exports.Heading2Block = exports.Heading1Block = exports.DividerBlock = exports.CodeBlock = exports.CalloutBlock = exports.BulletedListItemBlock = void 0;
+exports.VideoBlock = exports.TableOfContentsBlock = exports.QuoteBlock = exports.ParagraphBlock = exports.NumberedListItemBlock = exports.ImageBlock = exports.Heading3Block = exports.Heading2Block = exports.Heading1Block = exports.DividerBlock = exports.CodeBlock = exports.ChildPageBlock = exports.CalloutBlock = exports.BulletedListItemBlock = void 0;
 var BulletedListItemBlock_1 = require("./BulletedListItemBlock");
 Object.defineProperty(exports, "BulletedListItemBlock", { enumerable: true, get: function () { return BulletedListItemBlock_1.BulletedListItemBlock; } });
 var CalloutBlock_1 = require("./CalloutBlock");
 Object.defineProperty(exports, "CalloutBlock", { enumerable: true, get: function () { return CalloutBlock_1.CalloutBlock; } });
+var ChildPageBlock_1 = require("./ChildPageBlock");
+Object.defineProperty(exports, "ChildPageBlock", { enumerable: true, get: function () { return ChildPageBlock_1.ChildPageBlock; } });
 var CodeBlock_1 = require("./CodeBlock");
 Object.defineProperty(exports, "CodeBlock", { enumerable: true, get: function () { return CodeBlock_1.CodeBlock; } });
 var DividerBlock_1 = require("./DividerBlock");

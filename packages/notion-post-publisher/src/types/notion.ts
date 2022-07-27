@@ -39,6 +39,8 @@ export type NotionTableOfContentsBlock = Extract<
   { type: "table_of_contents" }
 >;
 
+export type NotionChildPageBlock = Extract<NotionBlock, { type: "child_page" }>;
+
 /* ----- Shared Types ----- */
 
 // These are extracted from types above, but the objects are the same regardless
