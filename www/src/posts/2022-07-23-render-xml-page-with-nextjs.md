@@ -3,9 +3,6 @@ title: Render XML Page with Next.js
 description: Learn how to generate an XML page with Next.js.
 tags:
   - nextjs
-tweet: >-
-  It took me a surprisingly long time to figure out the basics of rendering
-  something other than a typical HTML page with Next.js.
 image: /posts/220723/render-xml-page-with-nextjs-IwegTnLI.png
 seo:
   image: /posts/220723/render-xml-page-with-nextjs-9eeTk0UN--meta.png
