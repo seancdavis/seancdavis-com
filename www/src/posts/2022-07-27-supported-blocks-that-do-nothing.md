@@ -5,6 +5,9 @@ description: >-
   error.
 tags:
   - notion
+image: /posts/220727/supported-blocks-that-do-nothing-lnITBhEz.png
+seo:
+  image: /posts/220727/supported-blocks-that-do-nothing-RSw8eDEt--meta.png
 ---
 
 ## Table of Contents
