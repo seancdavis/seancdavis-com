@@ -20,3 +20,5 @@ jobs:
         run: |
           cd packages/notion-post-publisher
           npm test
+        env:
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
