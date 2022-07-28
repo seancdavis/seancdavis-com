@@ -5,6 +5,7 @@ import type {
   NotionChildPageBlock,
   NotionCodeBlock,
   NotionDividerBlock,
+  NotionEmbedBlock,
   NotionHeading1Block,
   NotionHeading2Block,
   NotionHeading3Block,
@@ -22,6 +23,7 @@ import {
   ChildPageBlock,
   CodeBlock,
   DividerBlock,
+  EmbedBlock,
   Heading1Block,
   Heading2Block,
   Heading3Block,
@@ -39,6 +41,7 @@ type SupportedNotionBlocks =
   | NotionChildPageBlock
   | NotionCodeBlock
   | NotionDividerBlock
+  | NotionEmbedBlock
   | NotionHeading1Block
   | NotionHeading2Block
   | NotionHeading3Block
@@ -55,6 +58,7 @@ const BlockMap = {
   child_page: ChildPageBlock,
   code: CodeBlock,
   divider: DividerBlock,
+  embed: EmbedBlock,
   heading_1: Heading1Block,
   heading_2: Heading2Block,
   heading_3: Heading3Block,
@@ -73,6 +77,7 @@ export type CreatableBlock =
   | ChildPageBlock
   | CodeBlock
   | DividerBlock
+  | EmbedBlock
   | Heading1Block
   | Heading2Block
   | Heading3Block
