@@ -4,11 +4,11 @@ import { NotionEmbedBlock } from "../src/types/notion";
 
 import { mockUser } from "./User.mock";
 
-export function mockEmbedBlock({
-  url = "https://twitter.com/seancdavis29/status/1550468441533870080",
-}: {
-  url: string;
-}): NotionEmbedBlock {
+export function mockEmbedBlock(
+  { url }: { url: string } = {
+    url: "https://twitter.com/seancdavis29/status/1550468441533870080",
+  }
+): NotionEmbedBlock {
   const user = mockUser();
 
   return {
