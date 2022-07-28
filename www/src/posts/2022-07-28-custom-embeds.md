@@ -2,7 +2,10 @@
 title: Custom Embeds
 description: Support for custom embedded elements.
 tags: []
-tweet: "This is a test. Test #3."
+tweet: 'This is a test. Test #3.'
+image: /posts/220728/custom-embeds-umVNdIeR.png
+seo:
+  image: /posts/220728/custom-embeds-4MjoPgK1--meta.png
 ---
 
 ## Video
