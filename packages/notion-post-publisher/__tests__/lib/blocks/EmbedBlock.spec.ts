@@ -42,4 +42,13 @@ describe("EmbedBlock", () => {
       )
     );
   });
+  it("Supports Stackblitz embeds", async () => {
+    const url =
+      "https://stackblitz.com/edit/nextjs-ehvtnq?ctl=1&embed=1&file=components/Link.jsx";
+    const data = mockEmbedBlock({ url });
+    const block = new EmbedBlock(data);
+    await block.prerender();
+    const result = block.render();
+    expect(result).toBe(`{% code_playground url="${url}" %}`);
+  });
 });

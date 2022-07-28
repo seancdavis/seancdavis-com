@@ -108,8 +108,23 @@ class TwitterEmbedBlock {
   }
 }
 
+/* ----- Stackblitz ----- */
+
+class StackblitzEmbedBlock {
+  url: string;
+
+  constructor(params: NotionEmbedBlock) {
+    this.url = params.embed.url;
+  }
+
+  render() {
+    return `{% code_playground url="${this.url}" %}`;
+  }
+}
+
 /* ----- Mapper ----- */
 
 const embedBlockMap: { [key: string]: any } = {
   "twitter.com": TwitterEmbedBlock,
+  "stackblitz.com": StackblitzEmbedBlock,
 };

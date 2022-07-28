@@ -94,7 +94,17 @@ class TwitterEmbedBlock {
         return prettier_1.default.format(output, { parser: "html" });
     }
 }
+/* ----- Stackblitz ----- */
+class StackblitzEmbedBlock {
+    constructor(params) {
+        this.url = params.embed.url;
+    }
+    render() {
+        return `{% code_playground url="${this.url}" %}`;
+    }
+}
 /* ----- Mapper ----- */
 const embedBlockMap = {
     "twitter.com": TwitterEmbedBlock,
+    "stackblitz.com": StackblitzEmbedBlock,
 };
