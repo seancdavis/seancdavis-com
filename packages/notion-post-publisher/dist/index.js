@@ -17,7 +17,6 @@ const Post_1 = require("./lib/Post");
 const notion_utils_1 = require("./utils/notion-utils");
 const chalk_1 = __importDefault(require("chalk"));
 const Logger_1 = require("./lib/Logger");
-/* ----- Controls ----- */
 /* ----- Main Function ----- */
 /**
  * Finds Notion pages in with the state "Draft: Ready", converts them to

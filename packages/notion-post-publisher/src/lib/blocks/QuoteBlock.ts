@@ -4,7 +4,7 @@ import type {
   NotionBlock,
 } from "../../types/notion";
 
-import { renderRichText, trailingNewlines } from "../../utils/render-utils";
+import { renderBlocks, renderRichText } from "../../utils/render-utils";
 import { Block, CreatableBlock } from "../Block";
 
 export class QuoteBlock {
@@ -34,15 +34,7 @@ export class QuoteBlock {
       if ("prerender" in block) await block.prerender();
     }
     // Add children rendered text to callout's text.
-    const childText = childBlocks
-      .map((block, idx) => {
-        let text = `> ${block.render()}`;
-        const newlines = trailingNewlines(childBlocks, idx);
-        // Add the necessary syntax to double newlines.
-        text += newlines === "\n\n" ? "\n>\n" : "\n";
-        return text;
-      })
-      .join("");
+    const childText = renderBlocks(childBlocks, "> ");
     this.text += `\n>\n${childText}`;
     // Children have been processed.
     this.processedChildren = true;

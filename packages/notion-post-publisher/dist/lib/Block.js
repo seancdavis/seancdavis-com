@@ -14,8 +14,10 @@ const blocks_1 = require("./blocks");
 const BlockMap = {
     bulleted_list_item: blocks_1.BulletedListItemBlock,
     callout: blocks_1.CalloutBlock,
+    child_page: blocks_1.ChildPageBlock,
     code: blocks_1.CodeBlock,
     divider: blocks_1.DividerBlock,
+    embed: blocks_1.EmbedBlock,
     heading_1: blocks_1.Heading1Block,
     heading_2: blocks_1.Heading2Block,
     heading_3: blocks_1.Heading3Block,
@@ -23,6 +25,7 @@ const BlockMap = {
     numbered_list_item: blocks_1.NumberedListItemBlock,
     paragraph: blocks_1.ParagraphBlock,
     quote: blocks_1.QuoteBlock,
+    table_of_contents: blocks_1.TableOfContentsBlock,
     video: blocks_1.VideoBlock,
 };
 class Block {

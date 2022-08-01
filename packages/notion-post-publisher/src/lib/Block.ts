@@ -2,8 +2,10 @@ import type {
   NotionBlock,
   NotionBulletedListItemBlock,
   NotionCalloutBlock,
+  NotionChildPageBlock,
   NotionCodeBlock,
   NotionDividerBlock,
+  NotionEmbedBlock,
   NotionHeading1Block,
   NotionHeading2Block,
   NotionHeading3Block,
@@ -11,14 +13,17 @@ import type {
   NotionNumberedListItemBlock,
   NotionParagraphBlock,
   NotionQuoteBlock,
+  NotionTableOfContentsBlock,
   NotionVideoBlock,
 } from "../types/notion";
 
 import {
   BulletedListItemBlock,
   CalloutBlock,
+  ChildPageBlock,
   CodeBlock,
   DividerBlock,
+  EmbedBlock,
   Heading1Block,
   Heading2Block,
   Heading3Block,
@@ -26,14 +31,17 @@ import {
   NumberedListItemBlock,
   ParagraphBlock,
   QuoteBlock,
+  TableOfContentsBlock,
   VideoBlock,
 } from "./blocks";
 
 type SupportedNotionBlocks =
   | NotionBulletedListItemBlock
   | NotionCalloutBlock
+  | NotionChildPageBlock
   | NotionCodeBlock
   | NotionDividerBlock
+  | NotionEmbedBlock
   | NotionHeading1Block
   | NotionHeading2Block
   | NotionHeading3Block
@@ -41,13 +49,16 @@ type SupportedNotionBlocks =
   | NotionNumberedListItemBlock
   | NotionParagraphBlock
   | NotionQuoteBlock
+  | NotionTableOfContentsBlock
   | NotionVideoBlock;
 
 const BlockMap = {
   bulleted_list_item: BulletedListItemBlock,
   callout: CalloutBlock,
+  child_page: ChildPageBlock,
   code: CodeBlock,
   divider: DividerBlock,
+  embed: EmbedBlock,
   heading_1: Heading1Block,
   heading_2: Heading2Block,
   heading_3: Heading3Block,
@@ -55,6 +66,7 @@ const BlockMap = {
   numbered_list_item: NumberedListItemBlock,
   paragraph: ParagraphBlock,
   quote: QuoteBlock,
+  table_of_contents: TableOfContentsBlock,
   video: VideoBlock,
 };
 
@@ -62,8 +74,10 @@ export type CreatableBlock =
   | Block
   | BulletedListItemBlock
   | CalloutBlock
+  | ChildPageBlock
   | CodeBlock
   | DividerBlock
+  | EmbedBlock
   | Heading1Block
   | Heading2Block
   | Heading3Block
@@ -71,6 +85,7 @@ export type CreatableBlock =
   | NumberedListItemBlock
   | ParagraphBlock
   | QuoteBlock
+  | TableOfContentsBlock
   | VideoBlock;
 
 export class Block {

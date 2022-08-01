@@ -58,9 +58,7 @@ class CalloutBlock {
                     yield block.prerender();
             }
             // Add children rendered text to callout's text.
-            const childText = childBlocks
-                .map((block, idx) => block.render() + (0, render_utils_1.trailingNewlines)(childBlocks, idx))
-                .join("");
+            const childText = (0, render_utils_1.renderBlocks)(childBlocks);
             this.text += `\n${childText}`;
             // Children have been processed.
             this.processedChildren = true;

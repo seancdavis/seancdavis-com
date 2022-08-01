@@ -3,6 +3,8 @@ import type { NotionCodeBlock, NotionRichText } from "../../types/notion";
 const LanguageMap: { [key: string]: string } = {
   "plain text": "txt",
   javascript: "js",
+  typescript: "ts",
+  markdown: "md",
 };
 
 export class CodeBlock {

@@ -37,15 +37,7 @@ class QuoteBlock {
                     yield block.prerender();
             }
             // Add children rendered text to callout's text.
-            const childText = childBlocks
-                .map((block, idx) => {
-                let text = `> ${block.render()}`;
-                const newlines = (0, render_utils_1.trailingNewlines)(childBlocks, idx);
-                // Add the necessary syntax to double newlines.
-                text += newlines === "\n\n" ? "\n>\n" : "\n";
-                return text;
-            })
-                .join("");
+            const childText = (0, render_utils_1.renderBlocks)(childBlocks, "> ");
             this.text += `\n>\n${childText}`;
             // Children have been processed.
             this.processedChildren = true;

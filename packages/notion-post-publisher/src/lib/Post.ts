@@ -9,7 +9,7 @@ import type { PostProperties } from "../types/post";
 
 import { Block, CreatableBlock } from "./Block";
 import { getAllPageBlocks, getPageProperties } from "../utils/notion-utils";
-import { trailingNewlines } from "../utils/render-utils";
+import { renderBlocks } from "../utils/render-utils";
 
 type PostConstructorInput = {
   id: string;
@@ -58,9 +58,7 @@ export class Post {
     properties: PostConstructorInput["properties"]
   ): string {
     const frontmatter = yaml.dump(properties);
-    const body = blocks
-      .map((block, idx) => block.render() + trailingNewlines(blocks, idx))
-      .join("");
+    const body = renderBlocks(blocks);
     const postContent = `---\n${frontmatter}---\n\n${body}`;
     return prettier.format(postContent, { parser: "markdown" });
   }
