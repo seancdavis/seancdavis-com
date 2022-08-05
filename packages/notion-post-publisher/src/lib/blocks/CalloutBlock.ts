@@ -1,6 +1,6 @@
 import type { NotionBlock, NotionCalloutBlock } from "../../types/notion";
 
-import { renderRichText, trailingNewlines } from "../../utils/render-utils";
+import { renderBlocks, renderRichText } from "../../utils/render-utils";
 import { Block, CreatableBlock } from "../Block";
 
 export const CalloutTypeMap: { [key: string]: string } = {
@@ -55,9 +55,7 @@ export class CalloutBlock {
       if ("prerender" in block) await block.prerender();
     }
     // Add children rendered text to callout's text.
-    const childText = childBlocks
-      .map((block, idx) => block.render() + trailingNewlines(childBlocks, idx))
-      .join("");
+    const childText = renderBlocks(childBlocks);
     this.text += `\n${childText}`;
     // Children have been processed.
     this.processedChildren = true;

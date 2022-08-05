@@ -19,6 +19,18 @@ describe("renderRichText", () => {
       richTextArr.map((rt) => rt.plain_text).join("")
     );
   });
+  it("Supports links", () => {
+    const url = "https://www.stackbit.com/";
+    const text = "Stackbit Website";
+    const richText = mockRichText({ text, link: { url } });
+    expect(renderRichText([richText])).toEqual(`[${text}](${url})`);
+  });
+  it("Makes links internal", () => {
+    const url = "https://www.seancdavis.com/posts/hello-world";
+    const text = "Some blog post";
+    const richText = mockRichText({ text, link: { url } });
+    expect(renderRichText([richText])).toEqual(`[${text}](/posts/hello-world)`);
+  });
   it("Supports bold", () => {
     const richText = mockRichText({ bold: true });
     const plainText = richText.plain_text;
@@ -38,6 +50,16 @@ describe("renderRichText", () => {
     const richText = mockRichText({ bold: true, code: true });
     const plainText = richText.plain_text;
     expect(renderRichText([richText])).toEqual(`**\`${plainText}\`**`);
+  });
+  it("Moves leading and trailing whitespace outside annotations", () => {
+    const text = "Hello World";
+    const richText = mockRichText({ bold: true, text: `  ${text}  ` });
+    expect(renderRichText([richText])).toEqual(`  **${text}**  `);
+  });
+  it("Converts a select list of special characters", () => {
+    const text = `“’Hello World’” …`;
+    const richText = mockRichText({ text });
+    expect(renderRichText([richText])).toEqual(`"'Hello World'" ...`);
   });
 });
 

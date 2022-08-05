@@ -9,8 +9,6 @@ type InputConfig = {
   postsDir: string;
 };
 
-/* ----- Controls ----- */
-
 /* ----- Main Function ----- */
 
 /**

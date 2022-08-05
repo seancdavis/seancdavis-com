@@ -51,9 +51,7 @@ class Post {
      */
     getContent(blocks, properties) {
         const frontmatter = js_yaml_1.default.dump(properties);
-        const body = blocks
-            .map((block, idx) => block.render() + (0, render_utils_1.trailingNewlines)(blocks, idx))
-            .join("");
+        const body = (0, render_utils_1.renderBlocks)(blocks);
         const postContent = `---\n${frontmatter}---\n\n${body}`;
         return prettier_1.default.format(postContent, { parser: "markdown" });
     }

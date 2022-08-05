@@ -4,6 +4,8 @@ exports.CodeBlock = void 0;
 const LanguageMap = {
     "plain text": "txt",
     javascript: "js",
+    typescript: "ts",
+    markdown: "md",
 };
 class CodeBlock {
     constructor(params) {

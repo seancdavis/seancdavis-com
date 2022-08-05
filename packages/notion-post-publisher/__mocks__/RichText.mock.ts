@@ -7,6 +7,7 @@ export type RichTextMockOptions = {
   italic?: boolean;
   code?: boolean;
   text?: string;
+  link?: null | { url: string };
 };
 
 export function mockRichText({
@@ -14,10 +15,11 @@ export function mockRichText({
   italic = false,
   code = false,
   text = faker.lorem.lines(1),
+  link = null,
 }: RichTextMockOptions = {}): NotionRichText {
   return {
     type: "text",
-    text: { content: text, link: null },
+    text: { content: text, link },
     annotations: {
       bold,
       italic,
