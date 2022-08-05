@@ -17,7 +17,7 @@ seo:
 
 I wrote previously about a pattern for [building XML pages with Next.js](/posts/render-xml-page-with-nextjs/). Let's use that approach to see how we can generate a `sitemap.xml` file using the pages generated from a prerendered [catch all route](https://nextjs.org/docs/routing/dynamic-routes#catch-all-routes).
 
-If your site has a `pages/[...slug].jsx` page that prerenders dynamic content, it likely has a `getStaticPaths()` exported function. This is the function responsible for telling Next.js all the routes that should be fed through that page component.
+If your site has a `pages/[...slug].jsx` (or `pages/[[...slug]].jsx`) page that prerenders dynamic content, it likely has a `getStaticPaths()` exported function. This is the function responsible for telling Next.js all the routes that should be fed through that page component.
 
 We can take advantage of that function by calling it directly, and using the output to generate a sitemap.
 
@@ -68,9 +68,9 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 
 Building on the previous [XML example](/posts/render-xml-page-with-nextjs/), there are a few new things to note:
 
-- `getServerSideProps()` has to be an async function **if the** **`getStaticPaths()`** **function it is using (from** **`[...slug].jsx`\*\***) is an async function.\*\*
+- `getStaticProps()` has to be an async function **if the `getStaticPaths()` function it is using (from `[...slug].jsx`) is an async function.**
 - I set the `baseUrl` explicitly here. You probably want to store that in some place that's easier to maintain and can be shared among other files in your project.
 - `updatedAt` gets updated to the current date and time. If you want to be more accurate, you'll have to find a better way to track when each page was last updated.
 - All change frequency and priority fields are hard-coded. Again, you may want to be more elaborate here.
 
-I hope that helps you! I went through a number of tutorials before I found that the solution for building a sitemap with Next.js can actually be fairly straightforward in many cases, even if it's not a great experience.
+I hope that helps you! I went through a number of tutorials before I found that the solution for building a sitemap with Next.js can actually be fairly straightforward in many cases, even if it's not a great developer experience.
