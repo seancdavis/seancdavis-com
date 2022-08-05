@@ -11,14 +11,14 @@ seo:
 
 Let’s take a look at a few different ways of deleting a batch of branches in a git repo.
 
-- Delete git branches following a pattern
-- Delete all branches except main or master
-- Force deleting branches
-- Delete all branches except the current branch
+- [Delete git branches following a pattern](#delete-all-git-branches-using-an-exclusion-pattern)
+- [Delete all branches except main or master](#delete-all-git-branches-except-main)
+- [Force deleting branches](#force-deleting-git-branches)
+- [Delete all branches except the current branch](#delete-all-git-branches-except-current)
 
 ## Delete All Git Branches Using an Exclusion Pattern
 
-You can list all git branches except a specific branch using the `-v` option in the `grep` command. For example, let’s say you wanted to list branches that include `nodelete` in the name.
+You can list all git branches except a specific branch using the `-v` option in the `grep` command. For example, let’s say you wanted to list branches that **do not include** `nodelete` in the name.
 
 ```txt
 git branch | grep -v nodelete
@@ -55,7 +55,7 @@ git checkout main
 git branch | grep -v "^* main$" | xargs git branch -d
 ```
 
-Here, the `v` means “begins with” and `$` means “ends with.” Therefore, we’re matching exactly `* main`, which is how the main branch will be printed when it is checked out.
+Here, the `^` means "begins with" and `$` means "ends with." Therefore, we’re matching exactly `* main`, which is how the main branch will be printed when it is checked out.
 
 ### Getting Precise with the Branch List
 
