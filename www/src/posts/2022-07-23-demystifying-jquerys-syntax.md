@@ -18,15 +18,15 @@ seo:
   image: /posts/220723/demystifying-jquerys-syntax-OSuBIgBw--meta.png
 ---
 
-While [I don’t think it’s worth the time to proactively learn jQuery today](https://www.seancdavis.com/posts/should-you-learn-jquery-in-2022), I can tell you this — it seems a lot scarier than it is.
+While [I don’t think it’s worth the time to proactively learn jQuery today](/posts/should-you-learn-jquery-in-2022), I can tell you this: it seems a lot scarier than it is.
 
 Why?
 
-Because of the pesky old dollar sign (`$`).
+Because of the pesky dollar symbol (`$`).
 
 ## Why jQuery is Mysterious
 
-Look at this code:
+Consider this code:
 
 ```js
 $("body").addClass("bg-dark");
@@ -39,13 +39,15 @@ From my experience, there are two things with jQuery that make it seem intimidat
 - `$` feels like a special JavaScript notation.
 - Actions are frequently chained to one another.
 
+Let's break it down to see if we can make jQuery more approachable.
+
 ## `$` is an Alias for `jQuery`
 
 Writing `$('body')` is the same as writing `jQuery('body')`. In other words, `$` is just an alias for `jQuery`.
 
 ## `jQuery` is Just a Function
 
-`$` or `jQuery` are just functions. When you run the code `$('body')` this is the same as running any other function in JavaScript.
+`$` (or `jQuery`) is just a function. When you run the code `$('body')`, it is the same as running any other function in JavaScript.
 
 For example, suppose I had the following code:
 
@@ -55,7 +57,7 @@ function _(num) {
 }
 ```
 
-Now if I run `_(1)` I get `2` as the response. In this case `_` is the name of the function. `$` works the same way. It’s just a bit obscure.
+Now if I run `_(1)` I get `2` as the response. In this case `_` is the name of the function. `$` works the same way. It just looks a bit obscure.
 
 ## Functions can Return Objects
 
@@ -104,3 +106,5 @@ And we can break it down like this:
 - `$('body')` is a function call that returns an object.
 - The returned object has an `addClass` property, which is a function.
 - That function will add a class to the DOM element referenced in the initial function call (`body`).
+
+Hopefully this helps jQuery seem a little less mysterious.
