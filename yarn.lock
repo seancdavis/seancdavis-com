@@ -253,12 +253,10 @@
   dependencies:
     "@analytics/type-utils" "^0.6.0"
 
-"@analytics/google-analytics@^0.5.3":
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/@analytics/google-analytics/-/google-analytics-0.5.3.tgz#08642f6e9ab9a76aceb53356ea66c53552eec9b7"
-  integrity sha512-5ZH3hpM8W/rhBrF+3TNjD2ZjabW4A8k/maqF4IGmWWNq31Bd8xh3KAhifDs76xn8hTWKGapTORZLfo87mB+9Dw==
-  dependencies:
-    universal-analytics "^0.4.20"
+"@analytics/google-analytics@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@analytics/google-analytics/-/google-analytics-1.0.3.tgz#4b3966c4b5729ae65f909149b9f1a58ac42dc10f"
+  integrity sha512-LnwefjQaqypjIXhw9GLRYpUz8dkriEC53JTLgJZ+mxSBZTkSrLSi3zuAiuV8rcsI0XfYmlWIav9RgGq92dWd4w==
 
 "@analytics/localstorage-utils@^0.1.8":
   version "0.1.8"
@@ -16076,7 +16074,7 @@ replace-ext@^2.0.0:
   resolved "https://registry.yarnpkg.com/replace-ext/-/replace-ext-2.0.0.tgz#9471c213d22e1bcc26717cd6e50881d88f812b06"
   integrity sha512-UszKE5KVK6JvyD92nzMn9cDapSk6w/CaFZ96CnmDMUqH9oowfxF/ZjRITD25H4DnOQClLA4/j7jLGXXLVKxAug==
 
-request@^2.88.0, request@^2.88.2:
+request@^2.88.0:
   version "2.88.2"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.2.tgz#d73c918731cb5a87da047e207234146f664d12b3"
   integrity sha512-MsvtOrfG9ZcrOwAW+Qi+F6HbD0CWXEh9ou77uOb7FM2WPhwT7smM833PzanhJLsgXjN89Ir6V2PczXNnMpwKhw==
@@ -18340,15 +18338,6 @@ units-css@^0.4.0:
     isnumeric "^0.2.0"
     viewport-dimensions "^0.2.0"
 
-universal-analytics@^0.4.20:
-  version "0.4.23"
-  resolved "https://registry.yarnpkg.com/universal-analytics/-/universal-analytics-0.4.23.tgz#d915e676850c25c4156762471bdd7cf2eaaca8ac"
-  integrity sha512-lgMIH7XBI6OgYn1woDEmxhGdj8yDefMKg7GkWdeATAlQZFrMrNyxSkpDzY57iY0/6fdlzTbBV03OawvvzG+q7A==
-  dependencies:
-    debug "^4.1.1"
-    request "^2.88.2"
-    uuid "^3.0.0"
-
 universal-user-agent@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/universal-user-agent/-/universal-user-agent-6.0.0.tgz#3381f8503b251c0d9cd21bc1de939ec9df5480ee"
@@ -18547,7 +18536,7 @@ uuid@8.0.0:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.0.0.tgz#bc6ccf91b5ff0ac07bbcdbf1c7c4e150db4dbb6c"
   integrity sha512-jOXGuXZAWdsTH7eZLtyXMqUb9EcWMGZNbL9YcGBJl4MH4nrxHmZJhEHvyLFrkxo+28uLb/NYRcStH48fnD0Vzw==
 
-uuid@^3.0.0, uuid@^3.3.2:
+uuid@^3.3.2:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
