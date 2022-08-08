@@ -6,13 +6,6 @@ description: >-
   the syntax to better understand how it works.
 tags:
   - jquery
-tweet: >-
-  No idea why I felt the need to write this. Perhaps to indulge myself with a
-  bit of nostalgia. 
-
-
-  In any case, here’s a quick read for those newer to the JS world who find
-  jQuery to be mysterious.
 image: /posts/220723/demystifying-jquerys-syntax-8a0brSsR.png
 seo:
   image: /posts/220723/demystifying-jquerys-syntax-OSuBIgBw--meta.png
