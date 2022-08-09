@@ -3,9 +3,6 @@ title: Render JSON Page with Next.js
 description: Build a JSON page component with Next.js.
 tags:
   - nextjs
-tweet: >-
-  Here’s how I’ve rendered JSON pages with Next.js. It’s a bit of an odd
-  pattern, but it gets the job done.
 image: /posts/220726/render-json-page-with-nextjs-7lXN52b4.png
 seo:
   image: /posts/220726/render-json-page-with-nextjs-HDrsSrmj--meta.png
