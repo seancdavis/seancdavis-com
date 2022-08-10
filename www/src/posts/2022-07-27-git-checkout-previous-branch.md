@@ -4,12 +4,6 @@ description: Checkout the previous git branch without needing to remember or typ
 tags:
   - git
   - quick-tip
-tweet: >-
-  “git checkout -” switches to the previous branch. 🤯
-
-
-  I randomly stumbled on this trick last week, and I’ve been using it all the
-  time.
 image: /posts/220727/git-checkout-previous-branch-lH09d0gs.png
 seo:
   image: /posts/220727/git-checkout-previous-branch-vPtuVgUI--meta.png
