@@ -3,7 +3,6 @@ title: Delete All Local Git Branches Except One
 description: Delete all local git branches except main, master, or your current branch.
 tags:
   - git
-tweet: Did you know you can clean up your local git branches with a single command?
 image: /posts/220801/delete-all-local-git-branches-except-one-2ZVlk0sP.png
 seo:
   image: /posts/220801/delete-all-local-git-branches-except-one-w94ezixT--meta.png
