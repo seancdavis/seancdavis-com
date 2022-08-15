@@ -7,12 +7,6 @@ tags:
   - github
   - netlify
   - node
-tweet: >-
-  The tweets that share posts I write are automated. I still author them, but
-  they are triggered programmatically as content is published.
-
-
-  Here’s how it works.
 image: /posts/220801/automated-tweets-after-successful-netlify-build-yxCVMezW.png
 seo:
   image: >-
