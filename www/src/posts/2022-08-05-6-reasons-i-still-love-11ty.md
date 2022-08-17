@@ -4,8 +4,8 @@ description: >-
   Two years after launching my site with 11ty, it’s grown considerably, and yet
   I’m still in love with the tool.
 tags:
-  - 11ty
-tweet: "As my site continues to grow, I consider moving away from @eleven_ty. But I’ve continued to stay with it because I really ❤️\_11ty."
+  - eleventy
+tweet: "As my site continues to grow, I consider moving away from @eleven_ty. But I’ve continued to stay with it because I really ❤️ 11ty!"
 image: /posts/220805/6-reasons-i-still-love-11ty-xRF27f-6.png
 seo:
   image: /posts/220805/6-reasons-i-still-love-11ty-ckupy6_U--meta.png
