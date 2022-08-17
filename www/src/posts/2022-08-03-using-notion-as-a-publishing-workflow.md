@@ -63,7 +63,7 @@ Here's how it works:
 1. **Commit, push, and open a PR:** The GitHub action also does all this work to [commit, push, and open a PR](https://github.com/seancdavis/seancdavis-com/blob/c671337f275fd057842ddcf2fda3ae9bf258fd1d/.github/workflows/notion-post-publisher.yml#L40-L48) (with the help of [this action](https://github.com/peter-evans/create-pull-request)).
 1. **Preview content:** The pull request kicks off a preview build on Netlify, which lets me preview the content before it is published.
 1. **Publish post:** I look at the preview, adjust if necessary, and then publish. If I need to make edits, the [GitHub Web Editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) is a handy tool that helps me avoid running the project locally to make minor changes.
-1. **Share to Twitter:** After publishing, a Netlify plugin triggers a separate GitHub action, which triggers another script responsible for scanning the repo for new posts and automatically tweeting links to them.
+1. **Share to Twitter:** After publishing, a Netlify plugin triggers a separate GitHub action, which triggers another script responsible for scanning the repo for new posts and [automatically tweeting links to them](/posts/automated-tweets-after-successful-netlify-build/).
 
 ### Mapping Blocks to Components
 
