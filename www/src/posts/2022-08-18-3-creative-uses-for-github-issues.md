@@ -43,9 +43,9 @@ swyx calls attention to GitHub API's rate limiting, which is an important consid
 
 ### Building a Comment System with GitHub Issues
 
-You may have noticed that the swyx issue also [has comments](https://github.com/sw-yx/swyxkit/issues/10#issuecomment-1008486860) that appear as comments about that particular post. That's because they are!
+You may have noticed that the swyx issue also [has comments](https://github.com/sw-yx/swyxkit/issues/10#issuecomment-1008486860) that appear as commentary for that particular post. That's because they are!
 
-{% post_image alt="", src="/uploads/220818/swyx-comments.png" %}
+{% post_image alt="Comments on swyx blog post", src="/uploads/220818/swyx-comments.png" %}
 
 GitHub issues can also be used as a commenting system. In fact, I'd be much more likely to use them as comments on posts, as they are already designed to be a commenting thread, with built-in reactions.
 
@@ -55,7 +55,9 @@ GitHub issues can also be used as a commenting system. In fact, I'd be much more
 
 Perhaps the oddest of the bunch, you can also host images using GitHub issues. In Method #3 of my [3 Ways to Add an Image to a GitHub README](/posts/three-ways-to-add-image-to-github-readme/), I demonstrate that uploading an image to an issue results in a URL from GitHub's CDN that can be safely used on your site.
 
-{% post_image alt="", src="/uploads/220818/Untitled.png" %}
+{% post_image
+    alt="Upload Image to GitHub Issue",
+    src="/posts/210130/upload-github-image.gif" %}
 
 Note that this may not be the most optimal solution, given that you would be loading images at full size. And I haven't yet implemented this. But, in theory, it _could_ work. It's something to consider, for sure.
 
