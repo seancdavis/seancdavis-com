@@ -22,7 +22,7 @@ The first thing to do is identify the page's SEO ranking. This includes:
 - How much traffic is the page getting?
 - How old is the page?
 - Is it performing well in search results?
-- Are there a number of backlinks already established to this page.
+- Are there a number of backlinks already established to this page?
 
 ## Low-Value Pages Present Little Risk
 
@@ -48,6 +48,6 @@ If you aren't quite sure exactly what you're looking to do, always default to a 
 
 ## Last Step: Update Direct Links
 
-The last thing I do when changing a URL is ensure that I've updated any links to the old URL **that I control.** There will be backlinks from other sites coming to your page, and that's okay. That's what the redirect handles for you.
+The last thing I do when changing a URL is ensure that I've updated any links _that I control_ to the new URL. There will be backlinks from other sites coming to your page, and that's okay. That's what the redirect handles for you.
 
 But, redirects don't have to stay in place forever. And often they don't. Sites grow. The underlying technology changes, and very often redirects don't come along on those big transitions. So, even if you have a permanent redirect for now, it's important to not assume it's always going to be there. Update any links you have that were pointing to the old URL.
