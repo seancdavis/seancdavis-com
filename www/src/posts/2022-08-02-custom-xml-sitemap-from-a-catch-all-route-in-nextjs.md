@@ -5,10 +5,6 @@ description: >-
   done it by leveraging getStaticPaths methods from page components.
 tags:
   - nextjs
-tweet: >-
-  Building a sitemaps with Next.js can be a tricky process. Recently I was able
-  to take advantage of getStaticPaths to DRY up the code and make the process a
-  little simpler.
 image: /posts/220802/custom-xml-sitemap-from-a-catch-all-route-in-nextjs-O4PtZMB7.png
 seo:
   image: >-
