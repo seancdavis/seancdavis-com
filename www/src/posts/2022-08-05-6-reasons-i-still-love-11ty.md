@@ -52,7 +52,7 @@ Separating code and content is a crucial attribute of modern websites, and 11ty 
 
 Because code in an Eleventy site tends to be separate from the content, it's also easy to move that content to another content source when you decide to rebuild your website with a more powerful or "more modern" framework.
 
-If your Eleventy site is successful, it won't scale forever. Eventually, you'll have to move on. That's okay. The beauty of that is that you're already in good shape to do so, at least from a content perspective. Having content in markdown files makes it trivial to move to another site or even to bring into a CMS.
+As your content and team grows, you may outgrow 11ty. That's okay. The beauty of that is that you're already in good shape to do so, at least from a content perspective. Having content in markdown files makes it trivial to move to another site or even to bring into a CMS.
 
 ## 6. Noble Community
 
