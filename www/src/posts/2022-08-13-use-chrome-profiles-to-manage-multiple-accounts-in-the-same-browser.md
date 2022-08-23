@@ -5,9 +5,6 @@ description: >-
   avoid having to constantly sign in and out of web applications.
 tags:
   - productivity
-tweet: >-
-  I’ve been using Chrome profiles for about a year and they have 100% leveled-up
-  my productivity in the browser.
 image: >-
   /posts/220813/use-chrome-profiles-to-manage-multiple-accounts-in-the-same-browser-rJc4V9jO.png
 seo:
