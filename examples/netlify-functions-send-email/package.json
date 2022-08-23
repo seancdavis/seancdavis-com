@@ -12,6 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "http-server": "^14.1.1",
-    "nodemailer": "^6.7.5"
+    "nodemailer": "^6.7.8"
   }
 }
