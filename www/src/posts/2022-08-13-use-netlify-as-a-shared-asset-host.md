@@ -6,9 +6,6 @@ description: >-
   convenient.
 tags:
   - netlify
-tweet: >-
-  I love finding uncommon ways to use @nelity’s CDN-driven hosting service as a
-  way to boost my productivity.
 image: /posts/220813/use-netlify-as-a-shared-asset-host-Ck50oQy2.png
 seo:
   image: /posts/220813/use-netlify-as-a-shared-asset-host-vy2ftW2D--meta.png
