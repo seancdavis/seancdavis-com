@@ -5,9 +5,6 @@ description: >-
   quick. But the wrong way can have a negative affect on SEO rankings.
 tags:
   - seo
-tweet: >-
-  File this one under super simple things that I should always remember and
-  constantly cut corners (to my own detriment).
 image: /posts/220815/safely-changing-a-url-cQCA2-Yz.png
 seo:
   image: /posts/220815/safely-changing-a-url-iOPxugZN--meta.png
