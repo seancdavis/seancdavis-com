@@ -9,7 +9,7 @@ footer:
   hide_newsletter: true
 sections:
   featured:
-    item: /posts/automated-tweets-after-successful-netlify-build
+    item: /posts/is-github-the-best-cms
   recent:
     heading: Recent Posts
     body: The freshest written thoughts, tips, and tutorials from the site.
