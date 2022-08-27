@@ -105,7 +105,7 @@ That one's much easier: _Just do it._ Don't overthink it. Pick one that fits you
 
 But if the tool evolves, or if your site evolves, or if you evolve, it's all fine. All of these tools are API-first, which means that getting the content out is (relatively) easy. And bringing it into another tool isn't much harder. It takes time, but it's doable, and it's a natural transition for today's websites.
 
-Just be sure to be aware of vendor lock-in when choosing a CMS today.
+Just be sure to [be aware of vendor lock-in](/posts/beware-of-modern-web-lock-in/) when choosing a CMS today.
 
 ---
 
