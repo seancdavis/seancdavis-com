@@ -63,7 +63,7 @@ Conditionals are less obvious, but provide the benefit of using JavaScript to yo
 
 When the rendering of some code is conditional, you can clean up the code by abstracting it. Consider a hero component that has an optional image. (Example in JSX.)
 
-```js
+```jsx
 const Hero = (props) => {
   return (
     <div>
@@ -76,7 +76,7 @@ const Hero = (props) => {
 
 If you make the image its own component, you have an easy escape hatch. And that simplifies the hero code.
 
-```js
+```jsx
 const Hero = (props) => {
   return (
     <div>
