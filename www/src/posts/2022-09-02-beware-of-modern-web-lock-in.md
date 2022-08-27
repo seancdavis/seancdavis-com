@@ -5,6 +5,7 @@ description: >-
   and services, vendor lock-in is still very much in play.
 tags:
   - cms
+  - developer-advice
 tweet: >-
   One of (many) reasons I love working at @stackbit is that we minimize vendor
   lock-in for our customers.
