@@ -30,7 +30,7 @@ There are plenty of other super powerful uses for Netlify on the dynamic level. 
 
 ## 1. Asset Host
 
-Netlify can serve as a static asset host. This isn't the most convenient use, but it can be super powerful for a limited number of assets that you want to share across multiple projects, repos, emails, etc.
+Netlify [can serve as a static asset host](/posts/should-i-add-images-to-my-git-repository/). This isn't the most convenient use, but it can be super powerful for a limited number of assets that you want to share across multiple projects, repos, emails, etc.
 
 For example, at [Stackbit](https://www.stackbit.com/), we have a repo that is wired up to [assets.stackbit.com](https://assets.stackbit.com/), and we use it for assets like [our logo](https://assets.stackbit.com/logos/stackbit-full-logo-hydrant.png). That way, wherever we need the logo in a pinch, we just link to this file.
 
