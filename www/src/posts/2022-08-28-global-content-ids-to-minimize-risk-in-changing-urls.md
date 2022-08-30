@@ -5,10 +5,6 @@ description: >-
   flexibility to change URLs without breaking functionality for your visitors.
 tags:
   - quick-tip
-tweet: >-
-  I recently realized how Notion handles URLs, and I love the pattern. It’s not
-  necessarily for every website, but could be a pattern you’d consider employing
-  for your site.
 image: >-
   /posts/220818/global-content-ids-to-minimize-risk-in-changing-urls-7j38ehuo.png
 seo:
