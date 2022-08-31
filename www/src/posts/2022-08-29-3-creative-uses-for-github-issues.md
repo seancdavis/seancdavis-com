@@ -9,9 +9,6 @@ tags:
   - api
   - github
   - Inspiration
-tweet: >-
-  I love finding ways to use tools already in my arsenal for atypical solutions,
-  like using GitHub as a CMS, image host, or commenting system.
 image: /posts/220818/3-creative-uses-for-github-issues-eIhX8fZ9.png
 seo:
   image: /posts/220818/3-creative-uses-for-github-issues-RLD78PDV--meta.png
