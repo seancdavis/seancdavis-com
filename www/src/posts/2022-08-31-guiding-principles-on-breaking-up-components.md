@@ -7,10 +7,6 @@ description: >-
 tags:
   - Components
   - Organization
-tweet: >-
-  It’s taken a lot of practice and a lot of messy code to get to a point where I
-  could write 4 scenarios in which to consider breaking out child components,
-  and 3 ways to organize those components.
 image: /posts/220823/guiding-principles-on-breaking-up-components-VUuWmXVD.png
 seo:
   image: >-
