@@ -6,9 +6,6 @@ description: >-
 tags:
   - git
   - developer-advice
-tweet: >-
-  There are a few projects where I host image assets within the project. But I
-  usually try to avoid it.
 image: /posts/220827/should-i-add-images-to-my-git-repository-Tyx4KpPT.png
 seo:
   image: /posts/220827/should-i-add-images-to-my-git-repository-MScSAaDo--meta.png
