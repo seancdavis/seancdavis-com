@@ -6,13 +6,6 @@ description: >-
 tags:
   - cms
   - developer-advice
-tweet: >-
-  One of (many) reasons I love working at @stackbit is that we minimize vendor
-  lock-in for our customers.
-
-
-  Exploring the ecosystem today, vendor lock-in is less prominent and more
-  hidden. Here are some tips to help in evaluating modern web tools.
 image: /posts/220827/beware-of-modern-web-lock-in-HSmvS0Ke.png
 seo:
   image: /posts/220827/beware-of-modern-web-lock-in-MW6URa1t--meta.png
