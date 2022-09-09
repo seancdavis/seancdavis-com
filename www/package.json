@@ -4,7 +4,7 @@
   "author": "Sean C Davis <scdavis41@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@analytics/google-analytics": "^1.0.3",
@@ -17,7 +17,7 @@
     "algoliasearch": "^4.14.2",
     "analytics": "^0.8.0",
     "autoprefixer": "^10.4.8",
-    "aws-sdk": "^2.1186.0",
+    "aws-sdk": "^2.1205.0",
     "chalk": "^5.0.1",
     "clipboard": "^2.0.11",
     "cssnano": "^5.1.12",
