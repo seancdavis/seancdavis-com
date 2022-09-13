@@ -8,13 +8,6 @@ tags:
   - api
   - jamstack
   - netlify
-tweet: >-
-  This is a collection of patterns that goes back several years for me. But I
-  wanted to bring them together.
-
-
-  Netlify isn’t just for websites. It can also be for web projects that serve
-  your other web projects. 😊
 image: >-
   /posts/220827/4-less-common-but-super-powerful-static-netlify-uses-2MtVruvD.png
 seo:
