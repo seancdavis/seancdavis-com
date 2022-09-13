@@ -9,7 +9,7 @@ footer:
   hide_newsletter: true
 sections:
   featured:
-    item: /posts/is-github-the-best-cms
+    item: /posts/why-are-there-so-many-cmss
   recent:
     heading: Recent Posts
     body: The freshest written thoughts, tips, and tutorials from the site.
