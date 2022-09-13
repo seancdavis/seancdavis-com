@@ -10,7 +10,7 @@
   "author": "Sean C Davis",
   "license": "SEE LICENSE IN PROJECT ROOT",
   "dependencies": {
-    "canvas": "^2.9.3",
+    "canvas": "^2.10.1",
     "faker": "5.5.3",
     "glob": "^8.0.3",
     "gray-matter": "^4.0.3",
