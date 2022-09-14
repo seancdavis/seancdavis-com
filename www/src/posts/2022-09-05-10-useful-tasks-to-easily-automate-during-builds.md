@@ -7,12 +7,6 @@ tags:
   - testing
   - seo
   - performance
-tweet: >-
-  When I step back and look at how everything is orchestrated for my simple
-  site, it’s amazing how it all fits together. 🤩
-
-
-  Here is a list of tasks I’m running during builds today.
 image: /posts/220827/10-useful-tasks-to-easily-automate-during-builds-jJ8w56Kg.png
 seo:
   image: >-
