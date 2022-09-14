@@ -1,27 +1,26 @@
 ---
-title: 'MDX: The Good, The Bad, and The Ugly'
+title: 'MDX: Benefits, Challenges, & Use Cases'
 description: >-
-  MDX is a very cool piece of technology. It gives developers a lot of power in
-  authoring content. But it has enough challenges that suggest we’re ready for
-  something better.
+  MDX is undeniably powerful. It gives developers an excess of flexibility
+  and efficiency in authoring content. But it has enough challenges that
+  suggest we may be ready for something better.
 tags:
   - markdown
   - mdx
 tweet: >-
-  I’ve been hesitating to put this one out there for awhile. I see why folks
-  (developers) like MDX. I really do. And it is absolutely a cool piece of
-  technology. Very cool. Buuuut …
-
-
-  I think we can do better.
+  MDX is undeniably powerful. It's among the most efficient and flexible
+  means of content editing for developers. And yet, it's never felt
+  right to me. 
 image: /posts/220827/mdx-the-good-the-bad-and-the-ugly-7zRabGvw.png
 seo:
   image: /posts/220827/mdx-the-good-the-bad-and-the-ugly-0JBEw-K0--meta.png
 ---
 
-MDX is a very cool and useful piece of technology. But it's not without its challenges. Fortunately, I believe we can learn from and use the patterns established by MDX to move into the next generation of content (for developers) for the web.
+MDX is a very cool and useful piece of technology. But it's also not without its challenges.
 
-## Why I Like MDX
+Let's take a look at both the benefits and challenges of MDX. Then we'll dive into scenarios in which I'd use MDX today, along with alternatives for projects where MDX may not be a good fit.
+
+## Benefits of Using MDX
 
 One of the most valuable things MDX gave us was a _conversation_. The fact that I'm writing this post and thinking about the next generation of web content is, in large part, because MDX popularized a particular type of content editing.
 
@@ -38,7 +37,7 @@ If I consider foundational changes with markdown since it was released by John G
 
 When looking at the history of markdown, MDX is one of the most powerful unlocks of its usage in the last two decades.
 
-### Developers can Move Fast
+### Developers can Move Fast with MDX
 
 MDX led to the ability for developers to create _rich_ and _interactive_ content at speeds they had never known before.
 
@@ -114,6 +113,6 @@ If you're considering using MDX, I'd also encourage you to consider the followin
 
 ---
 
-Like many tools, MDX suits some projects perfectly well, while it isn't a great fit for other projects. Regardless, it is undeniable that it is a cool piece of technology that pushed us forward.
+Like many tools, MDX suits a greay many projects perfectly well, while it isn't a great fit for other projects. Regardless, it is difficult to deny that MDX has moved the content editing experience for developers forward.
 
 Choose what's right for you today, but understand the debt that you may be digging for yourself. And let's use this conversation to work toward the next generation of content editing for developers.
