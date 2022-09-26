@@ -1,16 +1,12 @@
 ---
-title: 'MDX: Benefits, Challenges, & Use Cases'
+title: "MDX: Benefits, Challenges, & Use Cases"
 description: >-
-  MDX is undeniably powerful. It gives developers an excess of flexibility
-  and efficiency in authoring content. But it has enough challenges that
-  suggest we may be ready for something better.
+  MDX is undeniably powerful. It gives developers an excess of flexibility and
+  efficiency in authoring content. But it has enough challenges that suggest we
+  may be ready for something better.
 tags:
   - markdown
   - mdx
-tweet: >-
-  MDX is undeniably powerful. It's among the most efficient and flexible
-  means of content editing for developers. And yet, it's never felt
-  right to me. 
 image: /posts/220827/mdx-the-good-the-bad-and-the-ugly-7zRabGvw.png
 seo:
   image: /posts/220827/mdx-the-good-the-bad-and-the-ugly-0JBEw-K0--meta.png
