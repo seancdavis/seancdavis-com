@@ -16911,10 +16911,10 @@ twitter-api-sdk@^1.1.0:
     abort-controller "^3.0.0"
     node-fetch "^2.6.1"
 
-twitter-api-v2@^1.12.5:
-  version "1.12.5"
-  resolved "https://registry.yarnpkg.com/twitter-api-v2/-/twitter-api-v2-1.12.5.tgz#50b66eabb29ed89b0eb9d911cc4aef8800df65ce"
-  integrity sha512-kgsEjRfm2kdvAgqXd5druYYxykXEXamae6V/TDyYnws0MClcYBlbtOyGn/HPXEfn2NylbQrjDwkCLaD3qkRgMA==
+twitter-api-v2@^1.12.7:
+  version "1.12.7"
+  resolved "https://registry.yarnpkg.com/twitter-api-v2/-/twitter-api-v2-1.12.7.tgz#cbdf8e1af1ebcc534ce328624b0583e64f87f7fd"
+  integrity sha512-kz0/algmi49xejjrKoEJEpXCa1Y0d2MHHhjJZS55ORcqzs8RHxvLO1oWeJNvFz/o+FQW+sFCpmM/5DyYy+QBXw==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
