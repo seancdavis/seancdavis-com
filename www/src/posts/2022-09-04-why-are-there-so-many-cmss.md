@@ -6,12 +6,6 @@ description: >-
 tags:
   - cms
   - jamstack
-tweet: >-
-  Why is it so overwhelming to choose a CMS today? How are there still so many
-  different players in the space?
-
-
-  This is a question I ask myself regularly, and I tried to answer it here.
 image: /posts/220827/why-are-there-so-many-cmss-FuXDxLUc.png
 seo:
   image: /posts/220827/why-are-there-so-many-cmss-7IE0Fagy--meta.png

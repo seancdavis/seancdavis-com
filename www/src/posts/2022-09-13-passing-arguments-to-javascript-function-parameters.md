@@ -5,7 +5,6 @@ description: >-
   parameters) as an argument within another function.
 tags:
   - javascript
-tweet: Back to the basics as I build up some foundation for a few upcoming articles.
 image: /posts/220913/passing-arguments-to-javascript-function-parameters-uJ-Z-b4_.png
 seo:
   image: >-
