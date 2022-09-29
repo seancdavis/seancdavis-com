@@ -5,13 +5,6 @@ description: >-
   arguments to the callback function. Anonymous functions are here to help.
 tags:
   - javascript
-tweet: >-
-  I’ve known the answer to this problem for more than a decade, and it still
-  occasionally trips me up.
-
-
-  When this happens, I write it down, and the chance I remember in the future
-  increases (significantly).
 image: /posts/220928/pass-argument-to-addeventlistener-IBMyPi38.png
 seo:
   image: /posts/220928/pass-argument-to-addeventlistener-eOjya_2B--meta.png
