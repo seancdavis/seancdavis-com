@@ -9,7 +9,7 @@ footer:
   hide_newsletter: true
 sections:
   featured:
-    item: /posts/mdx-the-good-the-bad-and-the-ugly
+    item: /posts/mdx-benefits-challenges-uses-alternatives
   recent:
     heading: Recent Posts
     body: The freshest written thoughts, tips, and tutorials from the site.
