@@ -17,7 +17,7 @@ seo:
   image: /posts/220928/pass-argument-to-addeventlistener-eOjya_2B--meta.png
 ---
 
-Say you have a shared function called `log` that is just a simplified alias to `console.log`:
+Consider the scenario where you have a shared function (example `log` function below) that you want to call after some event occurs, like a click on a particular button.
 
 ```js
 function log(text) {
@@ -25,18 +25,16 @@ function log(text) {
 }
 ```
 
-And **you want to call this function after some event occurs, like a click on a particular button.**
-
 ## Calling Function with Arguments Fires Once
 
-This won't work:
+It may seem like this would solve the problem, but it doesn't:
 
 ```js
 const button = document.getElementById("my-btn");
 button.addEventListener("click", log("Hello!"));
 ```
 
-When you use `log("Hello!")` as an argument, it gets executed when the code is parsed, _not_ when the `addEventListener` function is executed (i.e. when the button is clicked).
+When you use `log("Hello!")` as an argument, it gets executed when the code is parsed, _not_ when the `addEventListener` function is executed (when the button is clicked).
 
 ## Using an Anonymous Function
 
