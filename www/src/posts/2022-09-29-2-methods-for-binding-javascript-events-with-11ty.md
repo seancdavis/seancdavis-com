@@ -6,9 +6,6 @@ description: >-
 tags:
   - eleventy
   - javascript
-tweet: >-
-  @eleven_ty isn’t prescriptive in its use of JavaScript (for good reason). Here
-  are two methods for binding events when using classic JS in your 11ty app.
 image: /posts/220929/2-methods-for-binding-javascript-events-with-11ty-0NcA1UNj.png
 seo:
   image: >-
