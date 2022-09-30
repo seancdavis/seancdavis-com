@@ -23,7 +23,7 @@ But I have two problems with solving problems using the newest, best tool every 
 
 Ample's development team began standardizing on the Jamstack approach for new projects in 2018. We spent the next year or so experimenting with what was available, right around the time the community was starting to explode.
 
-We tried something new on every project. And not just something little. On one project we'd use [Contentful](https://www.contentful.com/) as the CMS. But then an abrupt pricing tier change rubbed us the wrong way, so we tried [Dato](https://www.datocms.com/) on the next project. Dato was affordable — _Yay!_ — but came with a clunky UI, and it presented challenges with its associated front-end tooling. Later, on another project, we couldn't use [AWS](https://aws.amazon.com/) (because _that's_ a good idea... can you sense the sarcasm?) so we tried [GraphCMS](https://graphcms.com/) (don't even get me started).
+We tried something new on every project. And not just something little. On one project we'd use [Contentful](https://www.contentful.com/) as the CMS. But then an abrupt pricing tier change rubbed us the wrong way, so we tried [Dato](https://www.datocms.com/) on the next project. Dato was affordable — _Yay!_ — but came with a clunky UI, and it presented challenges with its associated front-end tooling. Later, on another project, we couldn't use [AWS](https://aws.amazon.com/) (because _that's_ a good idea... can you sense the sarcasm?) so we tried [Hygraph](https://hygraph.com/) (formerly GraphCMS).
 
 The same could be said for the front-end. We tried [Gatsby](https://www.gatsbyjs.org/), and we've also used [Jekyll](https://jekyllrb.com/) and [Middleman](https://middlemanapp.com/).
 
