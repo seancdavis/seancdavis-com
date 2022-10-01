@@ -17,6 +17,10 @@ seo:
   image: /posts/220930/javascript-for-11ty-with-esbuild-J6wkbpgg--meta.png
 ---
 
+{% youtube_embed
+    id="K3ymW_2oRL8",
+    title="Bundle JavaScript for 11ty with esbuild" %}
+
 As your 11ty application grows in size and complexity, it's very likely that:
 
 1. You're going to need JavaScript at some point, and ...
