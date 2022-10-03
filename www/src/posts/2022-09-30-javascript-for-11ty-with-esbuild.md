@@ -6,12 +6,6 @@ description: >-
 tags:
   - eleventy
   - javascript
-tweet: >-
-  This is the first time I’ve really played around with esbuild and it is
-  amazing! It’s super fast and the API is easy to navigate.
-
-
-  Here’s an example that uses esbuild for an 11ty JavaScript bundle.
 image: /posts/220930/javascript-for-11ty-with-esbuild-iv1YeFMX.png
 seo:
   image: /posts/220930/javascript-for-11ty-with-esbuild-J6wkbpgg--meta.png
