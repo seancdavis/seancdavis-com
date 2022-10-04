@@ -5,9 +5,6 @@ description: >-
   most effective way.
 tags:
   - documentation
-tweet: >-
-  There’s a bit of an art (and some science) to capturing screenshots in a way
-  that best complements technical text.
 image: /posts/221004/pro-tips-for-capturing-screenshots-88AJpOsY.png
 seo:
   image: /posts/221004/pro-tips-for-capturing-screenshots-NwzF8e_n--meta.png
