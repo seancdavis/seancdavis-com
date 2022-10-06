@@ -5,10 +5,6 @@ description: >-
   specific URL.
 tags:
   - productivity
-tweet: >-
-  I recently discovered that you can define shortcuts in Chrome that open a
-  specific URL. Rather than remember a URL (or use bookmarks) I can remember a
-  few characters to get to my most frequently-visited sites.
 image: >-
   /posts/221006/keyboard-shortcuts-for-website-with-chrome-site-search-7TFexryo.png
 seo:
