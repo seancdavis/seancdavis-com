@@ -6,10 +6,6 @@ description: >-
 tags:
   - react
   - figma
-tweet: >-
-  I’ve iterated over many patterns for including icons in React projects and
-  have finally found a streamlined process that works really well for most of my
-  projects.
 image: /posts/221006/how-to-add-svg-icons-to-a-react-project-SWvavs88.png
 seo:
   image: /posts/221006/how-to-add-svg-icons-to-a-react-project-InQ7KuJY--meta.png
