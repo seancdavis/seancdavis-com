@@ -1,15 +1,18 @@
 [
   {
+    "id": "8vUYWgg-DPU",
+    "title": "SVG Icons in React Applications"
+  },
+  {
+    "id": "K3ymW_2oRL8",
+    "title": "Bundle JavaScript for 11ty with esbuild"
+  },
+  {
     "id": "Ljj1wGFJqPY",
     "title": "3 Methods for Adding Images to Github README Files"
   },
-  { "id": "YDNouZ8ozv0", "title": "Server-Side Components with Eleventy" },
   {
-    "id": "qvSY-f4fHs8",
-    "title": "Create JSON Pages from Markdown Files with Gatsby"
-  },
-  {
-    "id": "LI6RtnW062U",
-    "title": "Create JSON Pages from External Data with Gatsby"
+    "id": "FFBMgrAa6bs",
+    "title": "Move Lines in VS Code"
   }
 ]
