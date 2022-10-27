@@ -100,6 +100,6 @@ timeline:
         - After six months, I was presented with a dream job at [Stackbit](https://www.stackbit.com/), and that's where I am today.
         - Somewhere in all that chaos, my second kid (Walter) was born.
 map:
-  subheading: Building and writing in
+  subheading: Creating content in
   heading: Cincinnati, Ohio (US)
 ---
