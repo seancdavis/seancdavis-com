@@ -21,6 +21,6 @@ Here are a few ways to get in touch.
 
 Here are responses to frequent messages I receive:
 
-- **Guest Writing:** See [the guest writing page](/guest-writing/) for more info.
-- **Sponsorships:** There is no sponsorship program today. If you want to promote something that is helpful to developers, [send your pitch](/guest-writing/).
-- **Freelance Work:** I'm not taking on any development work right now. I consider teaching and writing gigs. Get in touch for details.
+- **Guest Writing:** I love having new and returning contributors to the site! See [the _guest writing_ page](/guest-writing/) for more info.
+- **Sponsorships:** There are a few forms of sponsorship available. See [the _sponsorships_ page](/sponsorship/) for details.
+- **Freelance Work:** I'm not taking on any development work right now, but I am considering other types of work. See [the _hire me_ page](/hire-me/) for more info.
