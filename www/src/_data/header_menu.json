@@ -15,6 +15,11 @@
     "button": false
   },
   {
+    "label": "Contribute / Hire",
+    "url": "/content-for-developers",
+    "button": false
+  },
+  {
     "label": "Search",
     "url": "/search",
     "icon": "search",
