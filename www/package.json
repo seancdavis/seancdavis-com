@@ -37,7 +37,7 @@
     "netlify-plugin-a11y": "^0.0.12",
     "netlify-plugin-checklinks": "^4.1.1",
     "netlify-plugin-inline-critical-css": "^2.0.0",
-    "postcss": "^8.4.16",
+    "postcss": "^8.4.18",
     "postcss-cli": "^9.0.2",
     "postcss-custom-properties": "^12.1.5",
     "postcss-import": "^14.1.0",
