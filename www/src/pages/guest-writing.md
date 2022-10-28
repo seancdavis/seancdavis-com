@@ -9,6 +9,12 @@ seo:
 
 This site is all about helping developers build better websites through tips, tricks, tutorials, and more. You can become [an open-source contributor](/contributors/) by writing content for the site.
 
+{% callout type="note" %}
+
+If you're looking to add content to the site that promotes a product or brand, please begin by reading [the _sponsorship_ page](/sponsorship/).
+
+{% endcallout %}
+
 ## Level Up Your Skills by Teaching
 
 Writing _anywhere_ is great for these reasons:
