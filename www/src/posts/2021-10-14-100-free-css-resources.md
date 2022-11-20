@@ -11,7 +11,7 @@ author: pratham
 There are a lot of great resources out there to help you write CSS and make your site shine. I've pulled 100 of my favorites together to share with you.
 
 {% callout type="info" %}
-This is a long list! Things are always changing on the web. As resources become out of date, I've replaced them with helpful tips to boost your learning alongside these great resources.
+This is a long list! Things are always changing on the web, and links may become broken over time. If you'd like to suggestion a replacement link or item, you're welcome to open a pull request with the adjusted content. [Here's the source file](https://github.com/seancdavis/seancdavis-com/blob/main/www/src/posts/2021-10-14-100-free-css-resources.md).
 {% endcallout %}
 
 ## Colors
