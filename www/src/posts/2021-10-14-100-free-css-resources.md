@@ -26,34 +26,34 @@ This is a long list! Things are always changing on the web, and links may become
 8. [CSS Gradient Generator](https://www.css-gradient.com/)
 9. [Colors](https://clrs.cc/)
 10. [Flat UI Colors 2](https://flatuicolors.com/)
+11. [Branition Colors](https://branition.com/colors)
 
 ## AI-Integrated Color Picker
 
-11. [Khroma - The AI color tool for designers](http://khroma.co/)
-12. [Colormind - the AI powered color palette generator](http://colormind.io/)
-13. [Eva Design System: Deep learning color generator](https://colors.eva.design/)
-14. [AI Color Generator - Hotpot.ai](https://hotpot.ai/color-generator)
+12. [Khroma - The AI color tool for designers](http://khroma.co/)
+13. [Colormind - the AI powered color palette generator](http://colormind.io/)
+14. [Eva Design System: Deep learning color generator](https://colors.eva.design/)
+15. [AI Color Generator - Hotpot.ai](https://hotpot.ai/color-generator)
 
 ## Code Snippets
 
-15. [The Ultimate CSS Generator | Web Code Tools](https://webcode.tools/generators/css)
-16. [LittleSnippets.net - A free collection of CSS3/HTML snippets. New entries crafted and added daily.](https://littlesnippets.net/)
-17. [Online CSS3 Code Generator With a Simple Graphical Interface - EnjoyCSS](https://enjoycss.com/)
-18. [CSS-Tricks - CSS Snippets](https://css-tricks.com/snippets/css/)
-19. [HTML5, CSS3, JS Demos, Creations and Experiments | CSSDeck](https://cssdeck.com/)
-20. [W3Schools How TO - Code snippets for HTML, CSS and JavaScript](https://www.w3schools.com/howto/)
-21. [Code Snippet - Snipplr Social Repository](https://snipplr.com/)
-22. [Newest 'css' Questions - Stack Overflow](https://stackoverflow.com/questions/tagged/css)
-23. [CodePen CSS Snippets](https://codepen.io/collection/DYpwPE) by [@CaraMiame](https://codepen.io/caramiame)
-24. [453 Pure CSS Only Code Snippets Ξ ℂ𝕠𝕕𝕖𝕄𝕪𝕌𝕀](https://codemyui.com/tag/pure-css/)
+16. [The Ultimate CSS Generator | Web Code Tools](https://webcode.tools/generators/css)
+17. [LittleSnippets.net - A free collection of CSS3/HTML snippets. New entries crafted and added daily.](https://littlesnippets.net/)
+18. [Online CSS3 Code Generator With a Simple Graphical Interface - EnjoyCSS](https://enjoycss.com/)
+19. [CSS-Tricks - CSS Snippets](https://css-tricks.com/snippets/css/)
+20. [HTML5, CSS3, JS Demos, Creations and Experiments | CSSDeck](https://cssdeck.com/)
+21. [W3Schools How TO - Code snippets for HTML, CSS and JavaScript](https://www.w3schools.com/howto/)
+22. [Code Snippet - Snipplr Social Repository](https://snipplr.com/)
+23. [Newest 'css' Questions - Stack Overflow](https://stackoverflow.com/questions/tagged/css)
+24. [CodePen CSS Snippets](https://codepen.io/collection/DYpwPE) by [@CaraMiame](https://codepen.io/caramiame)
+25. [453 Pure CSS Only Code Snippets Ξ ℂ𝕠𝕕𝕖𝕄𝕪𝕌𝕀](https://codemyui.com/tag/pure-css/)
 
 ## Documentation & Notes
 
-25. [W3Schools CSS Tutorial](https://www.w3schools.com/css/)
-26. [CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS)
-27. [DevDocs — CSS documentation](https://devdocs.io/css/)
-28. [CSS Tutorials - GeeksforGeeks](https://www.geeksforgeeks.org/css-tutorials/)
-29. [CSS Tutorial - Tutorials Point](https://www.tutorialspoint.com/tutorial_view.php?cid=css&pid=index.htm)
+26. [W3Schools CSS Tutorial](https://www.w3schools.com/css/)
+27. [CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS)
+28. [DevDocs — CSS documentation](https://devdocs.io/css/)
+29. [CSS Tutorials - GeeksforGeeks](https://www.geeksforgeeks.org/css-tutorials/)
 
 ## CSS Generators
 
@@ -113,72 +113,68 @@ This is a long list! Things are always changing on the web, and links may become
 
 ## YouTube Videos & Channels
 
-68. [CSS Tutorial - Zero to Hero](https://www.youtube.com/1Rs2ND1ryYc)
-
-{% youtube_embed id="1Rs2ND1ryYc", title="CSS Tutorial - Zero to Hero" %}
-
-69. [CSS Crash Course For Absolute Beginners](https://youtu.be/yfoY53QXEnI)
+68. [CSS Crash Course For Absolute Beginners](https://youtu.be/yfoY53QXEnI)
 
 {% youtube_embed id="yfoY53QXEnI", title="CSS Crash Course For Absolute Beginners" %}
 
-70. [Code Artist](https://www.youtube.com/channel/UC15exV5s79D_aYGADudlwpQ) (channel)
-71. [CSS Crash Course In One Hour](https://youtu.be/3_9znKVNe5g)
+69. [Code Artist](https://www.youtube.com/channel/UC15exV5s79D_aYGADudlwpQ) (channel)
+70. [CSS Crash Course In One Hour](https://youtu.be/3_9znKVNe5g)
 
 {% youtube_embed id="3_9znKVNe5g", title="CSS Crash Course In One Hour" %}
 
-72. [Red Stapler](https://www.youtube.com/channel/UCRthRrv06q1iOl86-tTKJhg) (channel)
+71. [Red Stapler](https://www.youtube.com/channel/UCRthRrv06q1iOl86-tTKJhg) (channel)
 
 ## Animation Libraries
 
-73. [Animate.css | A cross-browser library of CSS animations.](https://animate.style/)
-74. [Obnoxious.css](https://tholman.com/obnoxious/)
-75. [CSShake](http://elrumordelaluz.github.io/csshake/)
-76. [AnimXYZ](https://animxyz.com/)
-77. [Animista - CSS Animations on Demand](https://animista.net/)
-78. [Hover.css - A collection of CSS3 powered hover effects](http://ianlunn.github.io/Hover/)
-79. [Magic Animations CSS3](https://www.minimamente.com/project/magic/)
+72. [Animate.css | A cross-browser library of CSS animations.](https://animate.style/)
+73. [Obnoxious.css](https://tholman.com/obnoxious/)
+74. [CSShake](http://elrumordelaluz.github.io/csshake/)
+75. [AnimXYZ](https://animxyz.com/)
+76. [Animista - CSS Animations on Demand](https://animista.net/)
+77. [Hover.css - A collection of CSS3 powered hover effects](http://ianlunn.github.io/Hover/)
+78. [Magic Animations CSS3](https://www.minimamente.com/project/magic/)
 
 ## Twitter Threads
 
-80. [Create your first CSS art](https://twitter.com/Prathkum/status/1306555442298908672) (twitter thread)
+79. [Create your first CSS art](https://twitter.com/Prathkum/status/1306555442298908672) (twitter thread)
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Create your first CSS art✨🎨<br><br>A thread 🧵<br>It contains all resources you need in order to create your first CSS art👇🏻</p>&mdash; Pratham (@Prathkum) <a href="https://twitter.com/Prathkum/status/1306555442298908672?ref_src=twsrc%5Etfw">September 17, 2020</a></blockquote>
 
-81. [A complete beginner's guide to CSS Grid layout](https://twitter.com/Prathkum/status/1374652212928987137) (twitter thread)
+80. [A complete beginner's guide to CSS Grid layout](https://twitter.com/Prathkum/status/1374652212928987137) (twitter thread)
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A complete beginner&#39;s guide to CSS Grid layout 👇🏻 <br><br>Thread🧵 <a href="https://t.co/e0EvyZWTHS">pic.twitter.com/e0EvyZWTHS</a></p>&mdash; Pratham (@Prathkum) <a href="https://twitter.com/Prathkum/status/1374652212928987137?ref_src=twsrc%5Etfw">March 24, 2021</a></blockquote>
 
-82. ⚡️ Tip: Twitter can be an excellent resource for learning. Find the right people to follow.
+81. ⚡️ Tip: Twitter can be an excellent resource for learning. Find the right people to follow.
 
-83. [A quick start guide to CSS animations](https://twitter.com/Prathkum/status/1366278875467153413) (twitter thread)
+82. [A quick start guide to CSS animations](https://twitter.com/Prathkum/status/1366278875467153413) (twitter thread)
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">A quick start guide to CSS animations 👇🏻 <br><br>Thread 🧵 <a href="https://t.co/LvGcZr7qsD">pic.twitter.com/LvGcZr7qsD</a></p>&mdash; Pratham (@Prathkum) <a href="https://twitter.com/Prathkum/status/1366278875467153413?ref_src=twsrc%5Etfw">March 1, 2021</a></blockquote>
 
 ## Website References & Tutorials
 
-84. [CSS Reference - A free visual guide to CSS](https://cssreference.io/)
-85. [Learn to Code HTML & CSS - Beginner & Advanced](https://learn.shayhowe.com/)
-86. [Learn CSS Layout](https://learnlayout.com/)
-87. [CSS Tutorial](https://www.csstutorial.net/)
-88. ⚡️ Tip: Taking breaks along your journey is essential.
-89. [CSS-Tricks](https://css-tricks.com/)
+83. [CSS Reference - A free visual guide to CSS](https://cssreference.io/)
+84. [Learn to Code HTML & CSS - Beginner & Advanced](https://learn.shayhowe.com/)
+85. [Learn CSS Layout](https://learnlayout.com/)
+86. [CSS Tutorial](https://www.csstutorial.net/)
+87. ⚡️ Tip: Taking breaks along your journey is essential.
+88. [CSS-Tricks](https://css-tricks.com/)
 
 ## Learn by Playing
 
-90. [Grid Garden - A game for learning CSS grid layout](https://cssgridgarden.com/)
-91. [Unfolding the Box Model: Exploring CSS 3D Transforms](https://rupl.github.io/unfold/)
-92. [Flexbox Defense](http://www.flexboxdefense.com/)
-93. [CSS Diner - Where we feast on CSS Selectors!](https://flukeout.github.io/)
-94. [Flexbox Froggy - A game for learning CSS flexbox](https://flexboxfroggy.com/)
+89. [Grid Garden - A game for learning CSS grid layout](https://cssgridgarden.com/)
+90. [Unfolding the Box Model: Exploring CSS 3D Transforms](https://rupl.github.io/unfold/)
+91. [Flexbox Defense](http://www.flexboxdefense.com/)
+92. [CSS Diner - Where we feast on CSS Selectors!](https://flukeout.github.io/)
+93. [Flexbox Froggy - A game for learning CSS flexbox](https://flexboxfroggy.com/)
 
 ## Templates
 
-95. [Download 3228 Free Website Templates - CSS & HTML | Free CSS](https://www.free-css.com/free-css-templates)
-96. ⚡️ Tip: Tech gets out of date quickly. Keep looking for new ways to learn.
-97. [Free HTML CSS Templates for your websites](https://www.tooplate.com/free-templates)
-98. [8500+ CSS Templates | Free CSS Templates](https://nicepage.com/css-templates)
-99. [560+ Free HTML CSS Website Templates by TemplateMo](https://templatemo.com/)
-100.  ⚡️ Fill in the blank. Go create something great with CSS. Then share it with the world.
+94. [Download 3228 Free Website Templates - CSS & HTML | Free CSS](https://www.free-css.com/free-css-templates)
+95. ⚡️ Tip: Tech gets out of date quickly. Keep looking for new ways to learn.
+96. [Free HTML CSS Templates for your websites](https://www.tooplate.com/free-templates)
+97. [8500+ CSS Templates | Free CSS Templates](https://nicepage.com/css-templates)
+98. [560+ Free HTML CSS Website Templates by TemplateMo](https://templatemo.com/)
+99.  ⚡️ Fill in the blank. Go create something great with CSS. Then share it with the world.
 
 That's it! If this list of resources was helpful to you, share this post and send some love to [the original tweet](https://twitter.com/Prathkum/status/1376149828514811909).
 
