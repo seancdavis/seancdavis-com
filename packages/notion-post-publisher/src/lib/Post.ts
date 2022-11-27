@@ -8,7 +8,11 @@ import prettier from "prettier";
 import type { PostProperties } from "../types/post";
 
 import { Block, CreatableBlock } from "./Block";
-import { getAllPageBlocks, getPageProperties } from "../utils/notion-utils";
+import {
+  getAllPageBlocks,
+  getPageProperties,
+  createMissingTags,
+} from "../utils/notion-utils";
 import { renderBlocks } from "../utils/render-utils";
 
 type PostConstructorInput = {
@@ -101,6 +105,7 @@ export class Post {
       blocks.push(block);
     }
     const properties = await getPageProperties(notionPageId);
+    await createMissingTags(properties.tags);
     return new Post({ id: notionPageId, blocks, properties });
   }
 }

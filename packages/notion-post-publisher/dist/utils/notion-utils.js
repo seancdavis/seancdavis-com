@@ -8,9 +8,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.markPageAsPublished = exports.getPageProperties = exports.getAllPageBlocks = exports.getPendingPageIds = void 0;
+exports.markPageAsPublished = exports.createMissingTags = exports.getPageProperties = exports.getAllPageBlocks = exports.getPendingPageIds = void 0;
+const path_1 = __importDefault(require("path"));
+const fs_1 = __importDefault(require("fs"));
+const prettier_1 = __importDefault(require("prettier"));
+const js_yaml_1 = __importDefault(require("js-yaml"));
+const fast_glob_1 = __importDefault(require("fast-glob"));
 const client_1 = require("@notionhq/client");
+const string_utils_1 = require("./string-utils");
 const notion = new client_1.Client({ auth: process.env.NOTION_API_KEY });
 /* ----- Controls ----- */
 const statusPropertyName = "Status";
@@ -95,6 +104,26 @@ function getPageProperties(page_id) {
     });
 }
 exports.getPageProperties = getPageProperties;
+function createMissingTags(tags) {
+    return __awaiter(this, void 0, void 0, function* () {
+        if (!tags || tags.length === 0)
+            return [];
+        const tagsDir = path_1.default.join(__dirname, "../../../..", "www/src/topics");
+        const allTagSlugs = fast_glob_1.default
+            .sync(path_1.default.join(tagsDir, "*.md"))
+            .map((filePath) => path_1.default.basename(filePath, path_1.default.extname(filePath)));
+        const newTags = tags.filter((tag) => !allTagSlugs.includes(tag));
+        newTags.map((slug) => {
+            const title = (0, string_utils_1.toTitleCase)(slug.replace(/-/g, " "));
+            const tag = { title, pagination: { data: `collections.${slug}` } };
+            const content = `---\n${js_yaml_1.default.dump(tag)}\n---`;
+            fs_1.default.writeFileSync(path_1.default.join(tagsDir, `${slug}.md`), prettier_1.default.format(content, { parser: "markdown" }));
+            console.log(`Created new topic: ${slug}`);
+        });
+        return newTags;
+    });
+}
+exports.createMissingTags = createMissingTags;
 /**
  * Marks a notion page as published by setting its status, publish date, and
  * link properties.
