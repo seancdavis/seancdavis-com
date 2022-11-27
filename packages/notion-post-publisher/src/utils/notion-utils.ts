@@ -101,9 +101,10 @@ export async function getPageProperties(
 }
 
 /**
+ * Create topic files with basic content for missing tags.
  *
- * @param tags
- * @returns
+ * @param tags A list of tags for a given page
+ * @returns A list of tag slugs created
  */
 export async function createNewTags(tags?: string[]): Promise<string[]> {
   if (!tags || tags.length === 0) return [];

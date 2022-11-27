@@ -105,9 +105,10 @@ function getPageProperties(page_id) {
 }
 exports.getPageProperties = getPageProperties;
 /**
+ * Create topic files with basic content for missing tags.
  *
- * @param tags
- * @returns
+ * @param tags A list of tags for a given page
+ * @returns A list of tag slugs created
  */
 function createNewTags(tags) {
     return __awaiter(this, void 0, void 0, function* () {
