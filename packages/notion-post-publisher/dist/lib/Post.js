@@ -92,7 +92,7 @@ class Post {
                 blocks.push(block);
             }
             const properties = yield (0, notion_utils_1.getPageProperties)(notionPageId);
-            yield (0, notion_utils_1.createMissingTags)(properties.tags);
+            yield (0, notion_utils_1.createNewTags)(properties.tags);
             return new Post({ id: notionPageId, blocks, properties });
         });
     }

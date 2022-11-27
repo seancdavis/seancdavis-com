@@ -100,7 +100,12 @@ export async function getPageProperties(
   };
 }
 
-export async function createMissingTags(tags?: string[]): Promise<string[]> {
+/**
+ *
+ * @param tags
+ * @returns
+ */
+export async function createNewTags(tags?: string[]): Promise<string[]> {
   if (!tags || tags.length === 0) return [];
   const tagsDir = path.join(__dirname, "../../../..", "www/src/topics");
   const allTagSlugs = glob

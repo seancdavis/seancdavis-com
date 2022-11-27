@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.markPageAsPublished = exports.createMissingTags = exports.getPageProperties = exports.getAllPageBlocks = exports.getPendingPageIds = void 0;
+exports.markPageAsPublished = exports.createNewTags = exports.getPageProperties = exports.getAllPageBlocks = exports.getPendingPageIds = void 0;
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
 const prettier_1 = __importDefault(require("prettier"));
@@ -104,7 +104,12 @@ function getPageProperties(page_id) {
     });
 }
 exports.getPageProperties = getPageProperties;
-function createMissingTags(tags) {
+/**
+ *
+ * @param tags
+ * @returns
+ */
+function createNewTags(tags) {
     return __awaiter(this, void 0, void 0, function* () {
         if (!tags || tags.length === 0)
             return [];
@@ -123,7 +128,7 @@ function createMissingTags(tags) {
         return newTags;
     });
 }
-exports.createMissingTags = createMissingTags;
+exports.createNewTags = createNewTags;
 /**
  * Marks a notion page as published by setting its status, publish date, and
  * link properties.

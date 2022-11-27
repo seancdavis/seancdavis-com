@@ -11,7 +11,7 @@ import { Block, CreatableBlock } from "./Block";
 import {
   getAllPageBlocks,
   getPageProperties,
-  createMissingTags,
+  createNewTags,
 } from "../utils/notion-utils";
 import { renderBlocks } from "../utils/render-utils";
 
@@ -105,7 +105,7 @@ export class Post {
       blocks.push(block);
     }
     const properties = await getPageProperties(notionPageId);
-    await createMissingTags(properties.tags);
+    await createNewTags(properties.tags);
     return new Post({ id: notionPageId, blocks, properties });
   }
 }
