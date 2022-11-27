@@ -32,7 +32,9 @@
 }
 
 .post-card--image-wrapper img {
-  @apply h-full
+  @apply border
+    border-gray-200
+    h-full
     object-center
     object-cover;
 }
