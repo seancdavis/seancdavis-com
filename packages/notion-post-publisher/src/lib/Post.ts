@@ -8,12 +8,9 @@ import prettier from "prettier";
 import type { PostProperties } from "../types/post";
 
 import { Block, CreatableBlock } from "./Block";
-import {
-  getAllPageBlocks,
-  getPageProperties,
-  createNewTags,
-} from "../utils/notion-utils";
+import { getAllPageBlocks, getPageProperties } from "../utils/notion-utils";
 import { renderBlocks } from "../utils/render-utils";
+import { createNewTags } from "../utils/www-utils";
 
 type PostConstructorInput = {
   id: string;

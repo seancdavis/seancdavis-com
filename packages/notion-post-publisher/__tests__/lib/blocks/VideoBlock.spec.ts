@@ -1,5 +1,5 @@
 import { VideoBlock } from "../../../src/lib/blocks/VideoBlock";
-import { extractYouTubeId } from "../../../src/utils/url-utils";
+import { extractYouTubeId } from "../../../src/utils/string-utils";
 import { mockVideoBlock } from "../../../__mocks__/VideoBlock.mock";
 
 describe("VideoBlock", () => {

@@ -1,13 +1,7 @@
-import path from "path";
-import fs from "fs";
-import prettier from "prettier";
-import yaml from "js-yaml";
-import glob from "fast-glob";
 import { Client } from "@notionhq/client";
 import { UpdatePageResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { NotionBlock } from "../types/notion";
 import type { PostProperties } from "../types/post";
-import { toTitleCase } from "./string-utils";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
@@ -98,32 +92,6 @@ export async function getPageProperties(
     ),
     tweet: properties["Tweet"]?.rich_text?.[0]?.plain_text,
   };
-}
-
-/**
- * Create topic files with basic content for missing tags.
- *
- * @param tags A list of tags for a given page
- * @returns A list of tag slugs created
- */
-export async function createNewTags(tags?: string[]): Promise<string[]> {
-  if (!tags || tags.length === 0) return [];
-  const tagsDir = path.join(__dirname, "../../../..", "www/src/topics");
-  const allTagSlugs = glob
-    .sync(path.join(tagsDir, "*.md"))
-    .map((filePath) => path.basename(filePath, path.extname(filePath)));
-  const newTags = tags.filter((tag) => !allTagSlugs.includes(tag));
-  newTags.map((slug) => {
-    const title = toTitleCase(slug.replace(/-/g, " "));
-    const tag = { title, pagination: { data: `collections.${slug}` } };
-    const content = `---\n${yaml.dump(tag)}\n---`;
-    fs.writeFileSync(
-      path.join(tagsDir, `${slug}.md`),
-      prettier.format(content, { parser: "markdown" })
-    );
-    console.log(`Created new topic: ${slug}`);
-  });
-  return newTags;
 }
 
 /**

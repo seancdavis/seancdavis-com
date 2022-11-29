@@ -22,6 +22,7 @@ const prettier_1 = __importDefault(require("prettier"));
 const Block_1 = require("./Block");
 const notion_utils_1 = require("../utils/notion-utils");
 const render_utils_1 = require("../utils/render-utils");
+const www_utils_1 = require("../utils/www-utils");
 class Post {
     constructor(params) {
         this.validate(params);
@@ -92,7 +93,7 @@ class Post {
                 blocks.push(block);
             }
             const properties = yield (0, notion_utils_1.getPageProperties)(notionPageId);
-            yield (0, notion_utils_1.createNewTags)(properties.tags);
+            yield (0, www_utils_1.createNewTags)(properties.tags);
             return new Post({ id: notionPageId, blocks, properties });
         });
     }
