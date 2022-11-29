@@ -170,11 +170,12 @@ This is a long list! Things are always changing on the web, and links may become
 ## Templates
 
 94. [Download 3228 Free Website Templates - CSS & HTML | Free CSS](https://www.free-css.com/free-css-templates)
-95. ⚡️ Tip: Tech gets out of date quickly. Keep looking for new ways to learn.
-96. [Free HTML CSS Templates for your websites](https://www.tooplate.com/free-templates)
-97. [8500+ CSS Templates | Free CSS Templates](https://nicepage.com/css-templates)
-98. [560+ Free HTML CSS Website Templates by TemplateMo](https://templatemo.com/)
-99.  ⚡️ Fill in the blank. Go create something great with CSS. Then share it with the world.
+95. [Free HTML CSS Templates for your websites](https://www.tooplate.com/free-templates)
+96. [8500+ CSS Templates | Free CSS Templates](https://nicepage.com/css-templates)
+97. [560+ Free HTML CSS Website Templates by TemplateMo](https://templatemo.com/)
+98. ⚡️ Tip: Tech gets out of date quickly. Keep looking for new ways to learn.
+99.  💥 Fill in the blank. Go create something great with CSS. Then share it with the world.
+100.  🙌 Then share your thing with the world.
 
 That's it! If this list of resources was helpful to you, share this post and send some love to [the original tweet](https://twitter.com/Prathkum/status/1376149828514811909).
 
