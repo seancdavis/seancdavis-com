@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.1262.0",
-    "canvas": "^2.10.1",
+    "canvas": "^2.10.2",
     "date-fns": "^2.29.3",
     "js-yaml": "^4.1.0",
     "nanoid": "<4.0.0"
