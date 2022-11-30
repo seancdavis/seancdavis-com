@@ -1,6 +1,6 @@
 import type { NotionVideoBlock } from "../../types/notion";
 
-import { extractYouTubeId } from "../../utils/url-utils";
+import { extractYouTubeId } from "../../utils/string-utils";
 
 export class VideoBlock {
   youtubeId: string;

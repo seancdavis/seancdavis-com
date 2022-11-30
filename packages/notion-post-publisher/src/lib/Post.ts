@@ -10,6 +10,7 @@ import type { PostProperties } from "../types/post";
 import { Block, CreatableBlock } from "./Block";
 import { getAllPageBlocks, getPageProperties } from "../utils/notion-utils";
 import { renderBlocks } from "../utils/render-utils";
+import { createNewTags } from "../utils/www-utils";
 
 type PostConstructorInput = {
   id: string;
@@ -101,6 +102,7 @@ export class Post {
       blocks.push(block);
     }
     const properties = await getPageProperties(notionPageId);
+    await createNewTags(properties.tags);
     return new Post({ id: notionPageId, blocks, properties });
   }
 }

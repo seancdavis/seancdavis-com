@@ -1,4 +1,10 @@
-import { extractYouTubeId } from "../../src/utils/url-utils";
+import { extractYouTubeId, toTitleCase } from "../../src/utils/string-utils";
+
+describe("toTitleCase", () => {
+  it("Capitalizes the first letter of every word", () => {
+    expect(toTitleCase("this is the title")).toEqual("This Is The Title");
+  });
+});
 
 describe("extractYouTubeId", () => {
   it("Throws when not a valid YouTube URL", () => {
