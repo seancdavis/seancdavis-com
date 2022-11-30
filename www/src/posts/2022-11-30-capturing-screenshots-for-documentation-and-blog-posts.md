@@ -6,10 +6,6 @@ description: >-
 tags:
   - documentation
   - productivity
-tweet: >-
-  For the past year, I’ve iterated consistently on capturing and presenting
-  screenshots for docs and posts. I’m finally happy with the process — this is
-  how I work today.
 image: >-
   /posts/221130/capturing-screenshots-for-documentation-and-blog-posts-P2Edhh8n.png
 seo:
