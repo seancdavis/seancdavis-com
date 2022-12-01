@@ -7,12 +7,6 @@ description: >-
 tags:
   - javascript
   - testing
-tweet: >-
-  This was a fun little experiment to see if I could generate relevant
-  placeholder images using @unsplash’s API. 
-
-
-  Turns out it worked great! (with a few limitations)
 image: /posts/221201/using-unsplash-api-to-seed-placeholder-data-Yw2hycxM.png
 seo:
   image: /posts/221201/using-unsplash-api-to-seed-placeholder-data-LyztSu7d--meta.png
