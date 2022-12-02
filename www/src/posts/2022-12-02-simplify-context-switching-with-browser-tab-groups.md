@@ -5,10 +5,6 @@ description: >-
   into a project after you’ve been pulled away.
 tags:
   - productivity
-tweet: >-
-  I’ve known about tab groups for awhile, but saw them as gimmicky. Started
-  using them last month and it actually helped me stay organized and gave me a
-  little productivity boost.
 image: /posts/221202/simplify-context-switching-with-browser-tab-groups-aoon0RFS.png
 seo:
   image: >-
