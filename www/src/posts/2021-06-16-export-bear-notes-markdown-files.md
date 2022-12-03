@@ -14,6 +14,12 @@ The biggest issue I have with Bear is that it's not easy to do anything with the
 
 Here's a guide to get you started in building a workflow around your Bear notes by exporting them to markdown files.
 
+{% callout type="Example Project" %}
+
+If you'd like to see the code all together, [check out the example project](https://github.com/seancdavis/bear-to-markdown).
+
+{% endcallout %}
+
 ## The Example
 
 We're going to write a single [Node.js](/posts/wtf-is-node) script that will export notes from Bear into markdown files with frontmatter metadata elsewhere on your machine.
@@ -254,7 +260,7 @@ Now we have _just about_ everything we need to write the notes to file.
 
 First, we need one more attribute to write the file — the filename! We'll get that by _slugifying_ the title. [Here's the change to make that happen](https://github.com/seancdavis/seancdavis-com/commit/2c0664c). And the resulting file [looks like this](https://github.com/seancdavis/seancdavis-com/blob/2c0664c/examples/bear-to-markdown/index.js).
 
-Now we're ready to write the note to file! Let's add another function inside our `main()` function to export the note. This will take a prepared note object, build its fronmatter and body, and then write it to file.
+Now we're ready to write the note to file! Let's add another function inside our `main()` function to export the note. This will take a prepared note object, build its frontmatter and body, and then write it to file.
 
 Then we can iterate over each note and run these functions.
 
@@ -360,3 +366,7 @@ _Is there any value in this being a library of sorts?_ In other words, if instea
 I've considered building something like this, but I'm not sure of the usage it would get. I'd love to know what you think or what you are doing with your Bear exporter.
 
 Keep writing, keep exporting, keep being awesome!
+
+## Resources
+
+For a complete look at the code, [check out the example project](https://github.com/seancdavis/bear-to-markdown).
