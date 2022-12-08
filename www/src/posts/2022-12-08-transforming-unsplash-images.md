@@ -5,12 +5,6 @@ description: >-
   images before downloading.
 tags:
   - quick-tip
-tweet: >-
-  One hidden gem with @unsplash is that they serve images using @imgix. This
-  means you can manipulate images on the fly, before downloading.
-
-
-  (Just be sure to follow the fair use policy, and always add attribution!)
 image: /posts/221208/transforming-unsplash-images-PsQECZEG.png
 seo:
   image: /posts/221208/transforming-unsplash-images-RX1EJLpO--meta.png
