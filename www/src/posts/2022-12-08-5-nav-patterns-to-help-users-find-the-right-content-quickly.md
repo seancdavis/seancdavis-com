@@ -5,12 +5,6 @@ description: >-
   content quickly.
 tags:
   - documentation
-tweet: >-
-  Making docs discoverable by Google is only half the battle. It’s also crucial
-  to ensure visitors can navigate quickly once they’ve landed on the site.
-
-
-  Here are a few patterns I’ve put to the test recently.
 image: >-
   /posts/221208/5-nav-patterns-to-help-users-find-the-right-content-quickly-cynNh4fF.png
 seo:
