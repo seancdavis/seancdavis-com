@@ -6,10 +6,6 @@ description: >-
 tags:
   - productivity
   - quick-tip
-tweet: >-
-  I was hesitant to switch to another productivity tool in @raycastapp. But I’m
-  glad I did. I’m feeling more productive, and I was able to delete a few apps
-  in the process!
 image: /posts/221209/deleted-3-apps-thanks-to-raycast-MzS_5CR3.png
 seo:
   image: /posts/221209/deleted-3-apps-thanks-to-raycast-HsbRX4-f--meta.png
