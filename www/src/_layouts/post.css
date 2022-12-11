@@ -91,6 +91,10 @@
     @apply w-full;
   }
 
+  .component--code-playground:not(:last-child) {
+    @apply mb-4;
+  }
+
   /* --- Lists --- */
 
   ul,
