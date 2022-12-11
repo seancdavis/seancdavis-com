@@ -206,7 +206,9 @@ The one thing to make sure you do is have a little fun on your adventure! See yo
 
 ## Resources
 
-[Here is the full code example.](https://github.com/seancdavis/seancdavis-com/tree/cba7d25/examples/simple-postcss-pipeline)
+[Here is the full code example](https://stackblitz.com/edit/simple-postcss-pipeline) (or run it in the playground below).
+
+{% code_playground url="https://stackblitz.com/edit/simple-postcss-pipeline?ctl=1&embed=1&file=src/index.css&view=editor" %}
 
 And here are a couple resources on plugins these authors prefer:
 
