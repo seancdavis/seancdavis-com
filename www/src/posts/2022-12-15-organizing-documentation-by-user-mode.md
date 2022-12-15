@@ -5,13 +5,6 @@ description: >-
   everything by expanding on the Divio documentation system.
 tags:
   - documentation
-tweet: >-
-  I’ve found the Divio documentation system to be a solid foundation for
-  organizing docs.
-
-
-  When we rebuilt the @stackbit docs site, we expanded on this system to
-  introduce more finite objectivity to help both writers and readers.
 image: /posts/221215/organizing-documentation-by-user-mode-JqMJk6S3.png
 seo:
   image: /posts/221215/organizing-documentation-by-user-mode-dhuaRzYi--meta.png
