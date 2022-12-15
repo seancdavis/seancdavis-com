@@ -6,13 +6,6 @@ description: >-
 tags:
   - productivity
   - quick-tip
-tweet: >-
-  It took me far too long to discover clipboard managers, but they have been an
-  absolute game-changer for productivity.
-
-
-  They are especially beneficial when you’re learning and constantly copying and
-  pasting code snippets.
 image: /posts/221213/never-lose-copied-text-again-XHUbjtmu.png
 seo:
   image: /posts/221213/never-lose-copied-text-again-LTHx8ucT--meta.png
