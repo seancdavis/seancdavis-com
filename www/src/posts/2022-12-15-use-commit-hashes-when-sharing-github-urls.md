@@ -6,10 +6,6 @@ description: >-
 tags:
   - quick-tip
   - github
-tweet: >-
-  When you need to share a link to a file on GitHub and also need that link to
-  be available for weeks or months to come, there are better methods than
-  directly navigating to it.
 image: /posts/221215/use-commit-hashes-when-sharing-github-urls-fpHMt0Q1.png
 seo:
   image: /posts/221215/use-commit-hashes-when-sharing-github-urls-3LqjvLDw--meta.png
