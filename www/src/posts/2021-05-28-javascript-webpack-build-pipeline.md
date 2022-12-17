@@ -168,9 +168,11 @@ Now visit localhost:8000, open your browser's console, and you should see the me
 
 If you want to to make changes to JavaScript and see them reflected without reloading your web server, you can use two terminal tabs. Run `npm run serve` in one to run the web server, and `npm run dev` in the other, which will watch for JavaScript changes and rebuild.
 
-## References
+## Playground
 
-- [Full code example](https://github.com/seancdavis/seancdavis-com/tree/0cc19cb/examples/webpack-es6-pipeline)
+Here's [the full code example](https://stackblitz.com/edit/node-jgskpy?file=src/main.js), which you can also view in the playground below:
+
+{% code_playground url="https://stackblitz.com/edit/node-jgskpy?ctl=1&embed=1&file=src/main.js" %}
 
 ---
 
