@@ -179,4 +179,4 @@ No matter where you go with it, I'd love to learn more about your approach or an
 
 ## References
 
-- [Demo code](https://github.com/seancdavis/seancdavis-com/tree/50322c36844e2db007a9daa29d6f22895febc90c/examples/netlify-functions-send-email)
+- [Demo code](https://github.com/seancdavis/netlify-functions-send-email)
