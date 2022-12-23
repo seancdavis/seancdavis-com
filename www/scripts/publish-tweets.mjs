@@ -1,10 +1,11 @@
 import { TwitterApi } from "twitter-api-v2";
-import glob from "glob";
+import axios from "axios";
 import fs from "fs";
+import glob from "glob";
 import matter from "gray-matter";
 import path from "path";
-import yaml from "js-yaml";
 import prettier from "prettier";
+import yaml from "js-yaml";
 
 // --- Twitter Setup ---
 
@@ -16,6 +17,14 @@ const twitterClient = new TwitterApi({
 });
 
 let myTweets = [];
+
+// --- Mastodon Setup ---
+
+const MASTODON_API_HEADERS = {
+  Authorization: `Bearer ${process.env.MASTODON_ACCESS_TOKEN}`,
+};
+
+let myMstStatuses = [];
 
 /**
  * Check whether a tweet has been published recently.
@@ -31,7 +40,48 @@ async function alreadyTweeted(text) {
     );
     myTweets = myTimeline.tweets;
   }
+  // Return whether the timeline has this tweet
   return myTweets.filter((tweet) => tweet.text.startsWith(text)).length > 0;
+}
+
+// --- Mastodon Helpers ---
+
+/**
+ * Check whether a status has been published to Mastodon recently.
+ *
+ * @param {string} text Text to check.
+ * @returns {boolean}
+ */
+async function alreadyPublishedToMastodon(text) {
+  // Get existing statuses, but fetch only once.
+  if (myMstStatuses.length === 0) {
+    const url =
+      process.env.MASTODON_BASE_URL +
+      `/api/v1/accounts/${process.env.MASTODON_USER_ID}/statuses`;
+    const response = await axios.get(url, { limit: 40 });
+    myMstStatuses = response.data;
+  }
+  // Return whether the timeline has this status. We're only checking the first
+  // line of text here because a Mastodon status is written in markdown. This is
+  // still risky because what was meant to be plain text for Twitter could be
+  // rendered as markdown with Mastodon. But this is an edge case we're not
+  // accounting for right now.
+  const isDuplicate = (str) => str.includes(text.split("\n")[0]);
+  return myMstStatuses.map((s) => s.content).filter(isDuplicate).length > 0;
+}
+
+/**
+ * Publishes the given text to Mastodon immediately.
+ *
+ * @param {string} body Text to publish to Mastodon
+ * @returns Axios response
+ */
+async function publishToMastodon(body) {
+  return await axios.post(
+    process.env.MASTODON_BASE_URL + "/api/v1/statuses",
+    { status: body },
+    { headers: MASTODON_API_HEADERS }
+  );
 }
 
 // --- Content Files ---
@@ -69,28 +119,60 @@ function contentWithoutTweet(data, content) {
 
 // --- The Loop ---
 
-let publishedTweets = false;
+let tweetsProcessed = false;
 
 for (const file of contentFiles) {
   const rawContent = fs.readFileSync(file).toString();
   const { data, content } = matter(rawContent);
   // If there is nothing to tweet, go to the next file.
   if (!data.tweet) continue;
-  // If the tweet has been sent recently, go to the next file.
-  if (await alreadyTweeted(data.tweet)) {
-    console.log("Duplicate tweet found. Skipping.");
-    continue;
-  }
-  // Publish the tweet.
+  // Store reference to whether we can remove the tweet from frontmatter.
+  let removeTweet = true;
+  // Build post content.
   const shareUrl = buildShareUrl(file);
-  await twitterClient.v2.tweet(`${data.tweet}\n\n${shareUrl}`);
-  // Remove the tweet from the frontmatter.
-  const newContent = contentWithoutTweet(data, content);
-  fs.writeFileSync(file, newContent);
-  // Log the results.
-  console.log(`Tweet sent: ${data.tweet}`);
-  console.log(`Post updated: ${data.title}`);
-  publishedTweets = true;
+  const postBody = `${data.tweet}\n\n${shareUrl}`;
+  console.log("⏳", "Processing post:\n");
+  postBody.split("\n").map((line) => console.log(`  ${line}`));
+  console.log("");
+  // Check for duplicate tweet or publish to Twitter
+  const foundDuplicateTweet = await alreadyTweeted(data.tweet);
+  if (foundDuplicateTweet) {
+    console.log("➡️", " Duplicate tweet found. Skipping.");
+  } else {
+    await twitterClient.v2.tweet(postBody);
+    console.log("🐦", "Tweet published.");
+  }
+
+  try {
+    const foundDuplicateMstStatus = await alreadyPublishedToMastodon(
+      data.tweet
+    );
+    if (foundDuplicateMstStatus) {
+      console.log("➡️", " Duplicate Mastodon status found. Skipping.");
+    } else {
+      await publishToMastodon(postBody);
+      console.log("🐘", "Mastodon status published.");
+    }
+  } catch {
+    // There is a weird bug with Mastodon where the API seems to fail for a few
+    // minutes after the statuses are updated.
+    //
+    // In this case, we consider this the equivalent of a duplicate. The tweet
+    // will remain pending, but will skip Twitter the next time and hopefully be
+    // able to publish here.
+    removeTweet = false;
+  }
+
+  // Remove the tweet from the frontmatter if both were successful.
+  if (removeTweet) {
+    const newContent = contentWithoutTweet(data, content);
+    fs.writeFileSync(file, newContent);
+    console.log("✏️", " Post updated:", data.title);
+  } else {
+    console.log("⚠️", " Not removing tweet in frontmatter due to issue.");
+  }
+  // Note that we published a tweet for the summary.
+  tweetsProcessed = true;
 }
 
-if (!publishedTweets) console.log("No pending tweets to publish.");
+if (!tweetsProcessed) console.log("✅", "No pending social posts to publish.");
