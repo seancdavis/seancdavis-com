@@ -186,8 +186,12 @@ I take the same approach with CSS. I like having a single CSS file for each comp
 
 That's it for this tutorial! Did you find it useful? What approach are you taking to incorporate components into your Eleventy project?
 
+## Playground
+
+{% code_playground url="https://stackblitz.com/edit/11ty-server-components?ctl=1&embed=1&file=index.njk" %}
+
 ## Resources
 
-- [Method #1 and #2 examples](https://github.com/seancdavis/seancdavis-com/tree/main/examples/eleventy-server-components)
+- [Method #1 and #2 examples](https://stackblitz.com/edit/11ty-server-components?file=index.njk)
 - [Twenty-Ninety](https://github.com/seancdavis/twenty-ninety) (my Eleventy starter kit)
 - [The code for this website](https://github.com/seancdavis/seancdavis-com)
