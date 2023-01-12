@@ -7,12 +7,6 @@ tags:
   - developer-advice
   - testing
   - seo
-tweet: >-
-  This was a meaningful post for me. Not because of the content, but because I
-  used Notion’s AI writing assistant to generate most of the content.
-
-
-  It helped me focus and cut my typical writing time in half!
 image: /posts/230105/11-tasks-before-launching-a-website-paDVSjTP.png
 seo:
   image: /posts/230105/11-tasks-before-launching-a-website-iCAuU32F--meta.png
