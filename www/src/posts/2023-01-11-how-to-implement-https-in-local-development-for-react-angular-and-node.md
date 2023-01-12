@@ -8,6 +8,8 @@ tags:
   - node
   - react
   - security
+  - contributor:daniel-williams
+author: daniel-williams
 image: >-
   /posts/230111/how-to-implement-https-in-local-development-for-react-angular-and-node-3RkRobvF.png
 seo:
