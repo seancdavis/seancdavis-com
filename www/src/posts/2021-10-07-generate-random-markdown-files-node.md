@@ -263,4 +263,4 @@ Run it again and you should see 10 files in the `content` directory (11 if you h
 
 ## Code Reference
 
-I created a more elaborate example project that generates meta images for each post. Take a look [here](https://github.com/seancdavis/seancdavis-com/tree/2741fbaa7b6da7f0f186fed5d2a4dcc4d174c943/examples/generate-meta-images). There is some detail in the README file. And there's more going on, but the general pattern is the similar.
+I created a more elaborate example project that generates meta images for each post. Take a look [here](https://github.com/seancdavis/meta-image-generator-example). There is some detail in the README file. And there's more going on, but the general pattern is the similar.
