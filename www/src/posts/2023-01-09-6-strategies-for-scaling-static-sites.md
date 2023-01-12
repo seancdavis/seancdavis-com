@@ -7,13 +7,6 @@ description: >-
   site grows.
 tags:
   - performance
-tweet: >-
-  I’ve seen static site builds slow significantly even with just a few hundred
-  pages, and have had to find a way to overcome these slow builds and maintain
-  my productivity.
-
-
-  Here are a number of approaches I’ve tried and have seen others try.
 image: /posts/230109/6-strategies-for-scaling-static-sites-p1K8GIEu.png
 seo:
   image: /posts/230109/6-strategies-for-scaling-static-sites-oxAu-FKh--meta.png
