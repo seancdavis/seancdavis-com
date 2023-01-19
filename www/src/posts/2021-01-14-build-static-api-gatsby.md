@@ -22,7 +22,7 @@ If you're a visual learner and prefer the screencast approach, here is a video, 
     id="bvLQ9nD2jLQ",
     title="Building a Static API with GatsbyJS" %}
 
-The written tutorial follows. But if you're just looking for the code reference, [you can find that here](https://github.com/seancdavis/seancdavis-com/tree/main/examples/gatsby-static-api).
+The written tutorial follows. But if you're just looking for the code reference, [you can find that here](https://github.com/seancdavis/gatsby-static-api).
 
 ---
 
@@ -308,6 +308,6 @@ As we wrap, I'd like to mention again that if you're taking this approach, I'd s
 
 ## References
 
-- [Code on GitHub](https://github.com/seancdavis/seancdavis-com/tree/main/examples/gatsby-static-api)
+- [Code on GitHub](https://github.com/seancdavis/gatsby-static-api)
 - [Programmatically Create JSON Pages with Gatsby](/posts/programmatically-create-json-pages-gatsby/)
 - [Video tutorial](https://youtu.be/bvLQ9nD2jLQ)
