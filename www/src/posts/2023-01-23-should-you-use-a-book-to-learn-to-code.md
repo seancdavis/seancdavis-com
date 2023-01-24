@@ -5,10 +5,6 @@ description: >-
   something we can get from a book that we can’t get from a web-based resource?
 tags:
   - developer-advice
-tweet: >-
-  I don’t use books to learn coding skills nearly as much as I did early in my
-  career. But I think that’s more representative of a career arc — books still
-  have their place.
 image: /posts/230123/should-you-use-a-book-to-learn-to-code-XEEmUrFa.png
 seo:
   image: /posts/230123/should-you-use-a-book-to-learn-to-code-olV2BpJE--meta.png
