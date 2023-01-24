@@ -30,7 +30,7 @@
     "instantsearch.js": "^4.44.0",
     "jest": "^27.5.1",
     "jest-image-snapshot": "^5.1.0",
-    "jest-puppeteer": "^6.1.1",
+    "jest-puppeteer": "^6.2.0",
     "js-yaml": "^4.1.0",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.5",
