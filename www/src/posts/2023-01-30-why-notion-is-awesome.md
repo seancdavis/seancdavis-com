@@ -5,13 +5,6 @@ description: >-
   editors, largely as a result of three primary attributes of its approach.
 tags:
   - notion
-tweet: >-
-  I was a Notion hater for a long time. I started and stopped multiple times.
-
-
-  After being pushed back into it for work, and after releasing its API, I love
-  it! I think it’s providing a great experience for both technical and
-  non-technical people.
 image: /posts/230130/why-notion-is-awesome-IB2yRLKC.png
 seo:
   image: /posts/230130/why-notion-is-awesome-A9paymSs--meta.png
