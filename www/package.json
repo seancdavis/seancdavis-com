@@ -22,7 +22,7 @@
     "chalk": "^5.1.2",
     "clipboard": "^2.0.11",
     "cssnano": "^5.1.14",
-    "glob": "^8.0.3",
+    "glob": "^8.1.0",
     "gray-matter": "^4.0.3",
     "html-minifier": "^4.0.0",
     "http-server": "^14.1.1",
