@@ -16,13 +16,17 @@
     "@seancdavis/netlify-plugin-jest": "^0.1.0",
     "algoliasearch": "^4.14.2",
     "analytics": "^0.8.0",
-    "autoprefixer": "^10.4.8",
+    "autoprefixer": "^10.4.13",
     "aws-sdk": "^2.1262.0",
     "axios": "^1.2.1",
+<<<<<<< HEAD
     "chalk": "^4.0.0",
+=======
+    "chalk": "^5.2.0",
+>>>>>>> b23d9f06b799ef14d0d467b623f66c849619dc70
     "clipboard": "^2.0.11",
     "cssnano": "^5.1.14",
-    "glob": "^8.0.3",
+    "glob": "^8.1.0",
     "gray-matter": "^4.0.3",
     "html-minifier": "^4.0.0",
     "http-server": "^14.1.1",
@@ -30,7 +34,7 @@
     "instantsearch.js": "^4.44.0",
     "jest": "^27.5.1",
     "jest-image-snapshot": "^5.1.0",
-    "jest-puppeteer": "^6.1.1",
+    "jest-puppeteer": "^6.2.0",
     "js-yaml": "^4.1.0",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.5",
@@ -45,9 +49,9 @@
     "postcss-nested": "^5.0.5",
     "prettier": "^2.8.2",
     "slugify": "^1.6.3",
-    "tailwindcss": "^3.1.8",
+    "tailwindcss": "^3.2.4",
     "twitter-api-v2": "^1.12.5",
-    "webpack": "^5.73.0",
+    "webpack": "^5.75.0",
     "webpack-cli": "^4.10.0"
   },
   "scripts": {
