@@ -7,12 +7,6 @@ tags:
   - css
   - javascript
   - react
-tweet: >-
-  Ternaries seem okay for specifying classes based on props. But once they get
-  nested, things get icky.
-
-
-  I love the class map object for these situations.
 image: /posts/230203/use-a-class-map-to-set-dynamic-styles-Kcgva4WT.png
 seo:
   image: /posts/230203/use-a-class-map-to-set-dynamic-styles-G5gW8F-J--meta.png
