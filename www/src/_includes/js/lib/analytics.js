@@ -1,5 +1,5 @@
 import Analytics from "analytics";
-import googleAnalytics from "@analytics/google-analytics";
+import googleAnalyticsPlugin from "@analytics/google-analytics";
 
 onInit(() => {
   if (ENV !== "production") return;
@@ -7,8 +7,8 @@ onInit(() => {
   const analytics = Analytics({
     app: "seancdavis-com",
     plugins: [
-      googleAnalytics({
-        measurementIds: "UA-54661520-1",
+      googleAnalyticsPlugin({
+        measurementIds: ["G-0Y7TB8B0N3"],
       }),
     ],
   });
