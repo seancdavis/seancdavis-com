@@ -7,10 +7,6 @@ tags:
   - javascript
   - node
   - slack
-tweet: >-
-  I’ve written a few custom scripts lately where I wanted to notify people of
-  the results. Slack seemed the least intrusive, and it turns out that working
-  with the API is quite simple if you know where to look.
 image: /posts/230216/post-messages-to-slack-with-nodejs-Dn0bsHsx.png
 seo:
   image: /posts/230216/post-messages-to-slack-with-nodejs-Bn0TSML9--meta.png
