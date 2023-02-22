@@ -5,7 +5,9 @@ description: >-
 tags:
   - react
   - vue
+  - contributor:harikrishna
 image: /posts/220722/220722--react-v-vue.png
+author: harikrishna
 ---
 
 With JavaScript frameworks now commonplace in modern web development, many businesses remain torn between React and Vue.js.
