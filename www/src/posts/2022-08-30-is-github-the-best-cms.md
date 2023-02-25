@@ -157,7 +157,7 @@ I (strongly) believe that the best CMS can only be decided within the confines a
 
 For a great many sites out there — hobby projects, personal sites, (most) blogs, medium-sized marketing sites — using local content is a fantastic option when those editing content can understand how to work with structured files.
 
-Then pair the solution with a service like S3, Cloudinary, or Imgix for hosting and delivering visual assets, and you yourself an amazing tool for very little cost.
+Then pair the solution with a service like S3, [Cloudinary](https://cloudinary.com/), or Imgix for hosting and delivering visual assets, and you yourself an amazing tool for very little cost.
 
 But file-based content (GitHub as a CMS) falls down at scale. At some point, reading content from files is not as efficient as reading content from an optimized database, or retrieving it from an API. It also lacks features necessary to most teams operating websites at scale. Large-scale and enterprise-type sites require leaning on industry leaders, like Contentful, Agility, and Sanity. Cost will rise, but that's unavoidable with a site at scale.
 
