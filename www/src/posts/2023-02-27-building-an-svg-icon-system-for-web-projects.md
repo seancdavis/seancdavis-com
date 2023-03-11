@@ -8,10 +8,6 @@ tags:
   - figma
   - html
   - productivity
-tweet: >-
-  Icons seem to be in every project these days. I’ve found that Figma makes it
-  trivial to design a generic and scalable system that I now use to manage icons
-  in all my projects.
 image: /posts/230227/building-an-svg-icon-system-for-web-projects-bQ8Z_uY2.png
 seo:
   image: >-
