@@ -7,10 +7,6 @@ tags:
   - node
   - testing
   - javascript
-tweet: >-
-  I’ve been exploring scripts that test for broken links on a few different
-  websites recently. It turns out that it’s not all that difficult to do if you
-  can leverage existing tools like Linkinator.
 image: /posts/230203/using-nodejs-to-check-for-broken-links-1u1cvAs0.png
 seo:
   image: /posts/230203/using-nodejs-to-check-for-broken-links-teLDHOXS--meta.png

@@ -5,10 +5,6 @@ description: >-
   process.
 tags:
   - astro
-tweet: >-
-  I’ve been tinkering with Astro for a side project. So far, so good. And it’s
-  been a seamless process to apply my icon system within the Astro framework
-  (using Astro components).
 image: /posts/230311/icon-system-for-astro-sites-gLV0Uj9x.png
 seo:
   image: /posts/230311/icon-system-for-astro-sites-bxrZOQbI--meta.png
