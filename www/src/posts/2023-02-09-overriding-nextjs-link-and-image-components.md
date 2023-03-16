@@ -7,10 +7,6 @@ tags:
   - javascript
   - nextjs
   - react
-tweet: >-
-  I use next/link and next/image constantly. But I often abstract them a layer
-  further to account for custom usage and styling — opinions often necessary for
-  keeping the code clean.
 image: /posts/230209/overriding-nextjs-link-and-image-components-K_Y7ggnu.png
 seo:
   image: /posts/230209/overriding-nextjs-link-and-image-components-md-IvW-D--meta.png
