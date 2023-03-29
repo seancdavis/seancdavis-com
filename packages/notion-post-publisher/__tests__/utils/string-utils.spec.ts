@@ -29,4 +29,16 @@ describe("extractYouTubeId", () => {
     const url = "https://www.youtu.be/FFBMgrAa6bs";
     expect(extractYouTubeId(url)).toEqual("FFBMgrAa6bs");
   });
+  it('Extracts the ID from "embed" URLs', () => {
+    const url = "https://www.youtube.com/embed/xEggcolcQZA";
+    expect(extractYouTubeId(url)).toEqual("xEggcolcQZA");
+  });
+  it('Extracts the ID from "shorts" URLs', () => {
+    const url = "https://youtube.com/shorts/XX8HJi_2Pi0";
+    expect(extractYouTubeId(url)).toEqual("XX8HJi_2Pi0");
+  });
+  it('Extracts the ID from "shorts" URLs with "?feature=share"', () => {
+    const url = "https://youtube.com/shorts/XX8HJi_2Pi0?feature=share";
+    expect(extractYouTubeId(url)).toEqual("XX8HJi_2Pi0");
+  });
 });
