@@ -32,6 +32,12 @@
     "button": false
   },
   {
+    "label": "Mastodon",
+    "url": "https://indieweb.social/@seancdavis",
+    "icon": "mastodon",
+    "button": false
+  },
+  {
     "label": "GitHub",
     "url": "https://github.com/seancdavis",
     "icon": "github",
