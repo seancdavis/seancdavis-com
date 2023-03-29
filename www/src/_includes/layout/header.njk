@@ -1,13 +1,13 @@
-<header class="py-3 relative z-20">
-  <div class="container max-w-5xl flex justify-between items-center">
-    <a href="/" class="w-12 inline-block">
+<header class="relative z-20 py-3">
+  <div class="container flex items-center justify-between max-w-5xl">
+    <a href="/" class="inline-block w-12">
       {% svg "seancdavis-logo" %}
       <span class="visible-hidden">Home</span>
     </a>
 
     {# --- Desktop Nav --- #}
 
-    <ul class="items-center space-x-4 hidden lg:flex list-none m-0">
+    <ul class="items-center hidden m-0 space-x-3 list-none lg:flex">
       {% for item in header_menu %}
         <li class="m-0">
           <a href="{{ item.url }}" class="layout--header--desktop-link">
@@ -24,7 +24,7 @@
 
     {# --- Mobile Nav Trigger --- #}
 
-    <button class="lg:hidden w-8 text-right text-gray-blue inline-block" onclick="App.MobileMenu.toggle(event)">
+    <button class="inline-block w-8 text-right lg:hidden text-gray-blue" onclick="App.MobileMenu.toggle(event)">
       {% svg "menu" %}
       <span class="visible-hidden">Open Navigation</span>
     </button>
@@ -33,11 +33,11 @@
 
     <div class="layout--header--mobile-menu" id="layout--header--mobile-menu">
       <div class="container layout--header--mobile-header">
-        <a href="/" class="w-12 inline-block">
+        <a href="/" class="inline-block w-12">
           {% svg "seancdavis-logo-white" %}
           <span class="visible-hidden">Home</span>
         </a>
-        <button class="w-8 text-right opacity-50 text-white" onclick="App.MobileMenu.toggle(event)">
+        <button class="w-8 text-right text-white opacity-50" onclick="App.MobileMenu.toggle(event)">
           {% svg "cancel" %}
           <span class="visible-hidden">Close Navigation</span>
         </button>
@@ -48,7 +48,7 @@
           <li class="mb-0">
             <a href="{{ item.url }}" class="layout--header--mobile-link">
               {% if item.icon %}
-                <span class="inline-block mr-3 w-6">{% svg item.icon %}</span>
+                <span class="inline-block w-6 mr-3">{% svg item.icon %}</span>
                 <span class="inline-block">{{ item.label }}</span>
               {% else %}
                 {{ item.label }}
