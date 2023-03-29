@@ -11,7 +11,7 @@ I get a lot of requests for work. I'm happy to help, but I'm not always availabl
 
 ## Types of Work
 
-I've been hired for many different types of work. Today I limit this to content creation (writing, teaching, speaking), documentation, and consultation.
+I've been hired for many different types of work in the tech space. Today I limit this to content creation (writing, teaching, speaking), documentation, and consultation. I occasionally take on web development work.
 
 ### Writing
 
@@ -30,6 +30,12 @@ Much of the freelance work I've done in the last couple years has had a consulta
 ### Teaching & Speaking
 
 I'm open to teaching workshops and courses, or to giving talks at meetups or conferences. I've done both in the past, and I'm happy to discuss your needs.
+
+### Web Development
+
+I like to work a limited number of freelance web development projects every year to keep me fresh and to work with emerging patterns and technologies. I'd be happy to discuss details to see if it is a good mutual fit, and if I have availability.
+
+If the project would consider using Stackbit for content editing, I'm often more motivated to take it on.
 
 ## Contracting Process
 

@@ -25,4 +25,4 @@ It's also a great way to contribute open-source content to better the web.
 
 ### Hire Me
 
-Sean is also available for hire for content-specific tasks. Details on the preferred arrangement, work, and payment can be found on [the _hire me_ page](/hire-me/)
+Sean is also available for hire for project-based work on a limited basis. Details on the preferred arrangement, work, and payment can be found on [the _hire me_ page](/hire-me/).
