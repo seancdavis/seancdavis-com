@@ -8,12 +8,12 @@ exports.toTitleCase = exports.extractYouTubeId = void 0;
  * @returns ID of the YouTube video
  */
 function extractYouTubeId(url) {
-    const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(shorts\/)|(watch\?))\??(v=)?([^#&?]*).*/;
     const match = url.match(regExp);
-    if (!match || match[7].length !== 11) {
+    if (!match || match[9].length !== 11) {
         throw new Error(`Not a valid YouTube ID: ${url}`);
     }
-    return match[7];
+    return match[9];
 }
 exports.extractYouTubeId = extractYouTubeId;
 /**
