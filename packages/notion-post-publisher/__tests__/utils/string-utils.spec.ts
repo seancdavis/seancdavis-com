@@ -29,6 +29,10 @@ describe("extractYouTubeId", () => {
     const url = "https://www.youtu.be/FFBMgrAa6bs";
     expect(extractYouTubeId(url)).toEqual("FFBMgrAa6bs");
   });
+  it('Extracts the ID from "youtu.be" URLs when "v" is the first character of the ID', () => {
+    const url = "https://www.youtu.be/veCqrhQEjz0";
+    expect(extractYouTubeId(url)).toEqual("veCqrhQEjz0");
+  });
   it('Extracts the ID from "embed" URLs', () => {
     const url = "https://www.youtube.com/embed/xEggcolcQZA";
     expect(extractYouTubeId(url)).toEqual("xEggcolcQZA");

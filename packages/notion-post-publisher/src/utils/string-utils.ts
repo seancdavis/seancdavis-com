@@ -6,12 +6,12 @@
  */
 export function extractYouTubeId(url: string): string {
   const regExp =
-    /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(shorts\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(shorts\/)|(watch\?))\??(v=)?([^#&?]*).*/;
   const match = url.match(regExp);
-  if (!match || match[8].length !== 11) {
+  if (!match || match[9].length !== 11) {
     throw new Error(`Not a valid YouTube ID: ${url}`);
   }
-  return match[8];
+  return match[9];
 }
 
 /**
