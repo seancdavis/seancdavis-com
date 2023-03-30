@@ -4,11 +4,7 @@ description: >-
   An interesting project that helps avoid handing words in layouts, which is
   particularly useful for headings.
 tags:
-  - 'Video: Short'
-tweet: >-
-  Came across this project last month. It’s really interesting, but also reminds
-  me of fixing layouts with jQuery, and I cringed a bit. But, it makes me
-  excited for balanced text to come to CSS.
+  - "Video: Short"
 image: /posts/230329/react-wrap-balancer-is-cool-but-should-you-use-it-BgV3ISae.png
 seo:
   image: >-
