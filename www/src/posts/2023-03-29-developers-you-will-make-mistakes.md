@@ -1,14 +1,10 @@
 ---
-title: 'Developers: You Will Make Mistakes'
+title: "Developers: You Will Make Mistakes"
 description: >-
   Eduardo Bouças shared the worst mistake he’s made as a developer, along with
   advice on what to do when you do make a mistake.
 tags:
-  - 'Video: Short'
-tweet: >-
-  I often ask people I interview about the worst mistake they’ve made in their
-  career. It often leads to great conversations and advice, like this clip from
-  Eduardo Bouças.
+  - "Video: Short"
 image: /posts/230329/developers-you-will-make-mistakes-BxbZqehO.png
 seo:
   image: /posts/230329/developers-you-will-make-mistakes-hfI6FAxI--meta.png
