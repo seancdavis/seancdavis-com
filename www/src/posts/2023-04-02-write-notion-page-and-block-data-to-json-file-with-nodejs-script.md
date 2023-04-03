@@ -147,4 +147,4 @@ Run it again and if your pages have blocks, you'll likely see a lot more content
 
 ---
 
-If you're following the four-part series, [_Part 4_](transform-notion-api-data-into-component-ready-json) is the next and final step of the process, which takes this raw content and transforms it into a more usable object.
+If you're following the four-part series, [_Part 4_](/posts/transform-notion-api-data-into-component-ready-json) is the next and final step of the process, which takes this raw content and transforms it into a more usable object.
