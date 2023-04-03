@@ -9,7 +9,7 @@ footer:
   hide_newsletter: true
 sections:
   featured:
-    item: /posts/11-tasks-before-launching-a-website
+    item: /posts/using-notion-callouts-to-generate-complex-components
   recent:
     heading: Recent Posts
     body: The freshest written thoughts, tips, and tutorials from the site.
