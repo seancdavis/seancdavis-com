@@ -20,9 +20,9 @@ seo:
 This is part of a four-part series on showing the potential of Notion as a CMS for complex websites:
 
 1. **Using Notion Callouts to Generate Complex Components**
-1. [Accessing a Notion Database Using the API](/dd8daa7e418e45958427d673acd7d458)
-1. [Write Notion Page and Block Data to JSON File with Node.js](/75e8127c9a50405e888b23132f893ecf)
-1. [Transform Notion API Data into Component-Ready JSON](/4e4449e6cc524ddda5c6649f306ef945)
+1. [Accessing a Notion Database Using the API](/posts/accessing-a-notion-database-using-the-api)
+1. [Write Notion Page and Block Data to JSON File with Node.js](/posts/write-notion-page-and-block-data-to-json-file-with-nodejs-script)
+1. [Transform Notion API Data into Component-Ready JSON](/posts/transform-notion-api-data-into-component-ready-json)
 
 ---
 
@@ -121,9 +121,9 @@ This will keep us focused in only addressing the guts of the system.
 Here's what we'll cover:
 
 1. **Using Notion Callouts to Generate Complex Components** (this one)
-1. [Accessing a Notion Database Using the API](/dd8daa7e418e45958427d673acd7d458)
-1. [Write Notion Page and Block Data to JSON File with Node.js](/75e8127c9a50405e888b23132f893ecf)
-1. [Transform Notion API Data into Component-Ready JSON](/4e4449e6cc524ddda5c6649f306ef945)
+1. [Accessing a Notion Database Using the API](/posts/accessing-a-notion-database-using-the-api)
+1. [Write Notion Page and Block Data to JSON File with Node.js](/posts/write-notion-page-and-block-data-to-json-file-with-nodejs-script)
+1. [Transform Notion API Data into Component-Ready JSON](/posts/transform-notion-api-data-into-component-ready-json)
 
 ## Other Solutions
 
@@ -145,4 +145,4 @@ I'd suggest keeping the callout system as simple as possible at first (so it's c
 
 ---
 
-And with that, it's time to jump into Part 2 and get things set up!
+And with that, it's time to jump into [Part 2](/posts/accessing-a-notion-database-using-the-api) and get things set up!

@@ -16,10 +16,10 @@ seo:
 
 This is part of a four-part series on showing the potential of Notion as a CMS for complex websites:
 
-1. [Using Notion Callouts to Generate Complex Components](/798f15a836a94c0dac9fedc51a3cc82e)
+1. [Using Notion Callouts to Generate Complex Components](/posts/using-notion-callouts-to-generate-complex-components)
 1. **Accessing a Notion Database Using the API**
-1. [Write Notion Page and Block Data to JSON File with Node.js](/75e8127c9a50405e888b23132f893ecf)
-1. [Transform Notion API Data into Component-Ready JSON](/4e4449e6cc524ddda5c6649f306ef945)
+1. [Write Notion Page and Block Data to JSON File with Node.js](/posts/write-notion-page-and-block-data-to-json-file-with-nodejs-script)
+1. [Transform Notion API Data into Component-Ready JSON](/posts/transform-notion-api-data-into-component-ready-json)
 
 ---
 
@@ -126,4 +126,4 @@ You can then use the proper ID to access pages, blocks, and more within the data
 
 ---
 
-If you're following the four-part series, move on to _Part 3_ to write a script that retrieves page and block content from Notion.
+If you're following the four-part series, move on to [_Part 3_](/posts/write-notion-page-and-block-data-to-json-file-with-nodejs-script) to write a script that retrieves page and block content from Notion.

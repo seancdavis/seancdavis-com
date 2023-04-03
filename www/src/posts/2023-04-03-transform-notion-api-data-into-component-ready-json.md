@@ -19,16 +19,16 @@ seo:
 
 This is part of a four-part series on showing the potential of Notion as a CMS for complex websites:
 
-1. [Using Notion Callouts to Generate Complex Components](https://www.notion.so/Using-Notion-Callouts-to-Generate-Complex-Components-798f15a836a94c0dac9fedc51a3cc82e)
-1. [Accessing a Notion Database Using the API](https://www.notion.so/Accessing-a-Notion-Database-Using-the-API-dd8daa7e418e45958427d673acd7d458)
-1. [Write Notion Page and Block Data to JSON File with Node.js](https://www.notion.so/Write-Notion-Page-and-Block-Data-to-JSON-File-with-Node-js-Script-75e8127c9a50405e888b23132f893ecf)
+1. [Using Notion Callouts to Generate Complex Components](/posts/using-notion-callouts-to-generate-complex-components)
+1. [Accessing a Notion Database Using the API](/posts/accessing-a-notion-database-using-the-api)
+1. [Write Notion Page and Block Data to JSON File with Node.js](/posts/write-notion-page-and-block-data-to-json-file-with-nodejs-script)
 1. **Transform Notion API Data into Component-Ready JSON**
 
 ---
 
-In the previous post, we retrieved page and block content from a Notion database and wrote the raw result to a local JSON file. We want to be able to map this content to components in a website.
+In [the previous post](/posts/write-notion-page-and-block-data-to-json-file-with-nodejs-script), we retrieved page and block content from a Notion database and wrote the raw result to a local JSON file. We want to be able to map this content to components in a website.
 
-Ideally, that content would be in a format where the website and its components don't have to do much work. They can receive properties and use them directly. We'll cover this process in the next article.
+Ideally, that content would be in a format where the website and its components don't have to do much work. They can receive properties and use them directly. That's what we want to build here, so that you could apply the process to whatever framework you choose to use.
 
 ### What the Transformer Script Does
 
@@ -46,7 +46,7 @@ Let's start with a bit of setup.
 
 I'm assuming the following:
 
-- You've exported raw page data from a Notion API, attached raw block data to `children` properties, and have written the results to a JSON file. (If not, go through the previous post.)
+- You've exported raw page data from a Notion API, attached raw block data to `children` properties, and have written the results to a JSON file. (If not, go through [the previous post](/posts/write-notion-page-and-block-data-to-json-file-with-nodejs-script).)
 - You have another [blank Node.js script](/posts/new-javascript-project-setup/) ready to go, along with a way to run the script.
 
 ### Install Dependencies

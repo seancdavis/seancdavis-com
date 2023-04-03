@@ -20,10 +20,10 @@ seo:
 
 This is part of a four-part series on showing the potential of Notion as a CMS for complex websites:
 
-1. [Using Notion Callouts to Generate Complex Components](https://www.notion.so/Using-Notion-Callouts-to-Generate-Complex-Components-798f15a836a94c0dac9fedc51a3cc82e)
-1. [Accessing a Notion Database Using the API](https://www.notion.so/Accessing-a-Notion-Database-Using-the-API-dd8daa7e418e45958427d673acd7d458)
+1. [Using Notion Callouts to Generate Complex Components](/posts/using-notion-callouts-to-generate-complex-components)
+1. [Accessing a Notion Database Using the API](/posts/accessing-a-notion-database-using-the-api)
 1. **Write Notion Page and Block Data to JSON File with Node.js**
-1. [Transform Notion API Data into Component-Ready JSON](https://www.notion.so/Transform-Notion-API-Data-into-Component-Ready-JSON-4e4449e6cc524ddda5c6649f306ef945)
+1. [Transform Notion API Data into Component-Ready JSON](/posts/transform-notion-api-data-into-component-ready-json)
 
 ---
 
@@ -35,9 +35,9 @@ Because block information is not included in the page list response, we'll adjus
 
 You'll need the following for this tutorial:
 
-- A database with a few pages, where at least one of the pages has some content (a few blocks). If you don't have a database, [feel free to copy mine](/673a6770c83a43b5a050f3d99d5236b8?v=5336305ad601461ea06b9392b441f559).
-- Notion integration with a connection established. This process is explained in the previous post in the series.
-- The `id` property of the database from Notion's API. This is not retrievable from the database's URL. This process is also covered in the previous post.
+- A database with a few pages, where at least one of the pages has some content (a few blocks). If you don't have a database, [feel free to copy mine](https://seancdavis.notion.site/673a6770c83a43b5a050f3d99d5236b8?v=5336305ad601461ea06b9392b441f559).
+- Notion integration with a connection established. This process is explained in [the previous post in the series](/posts/accessing-a-notion-database-using-the-api).
+- The `id` property of the database from Notion's API. This is not retrievable from the database's URL. This process is also covered in [the previous post](/posts/accessing-a-notion-database-using-the-api).
 - [Blank Node.js script](/posts/new-javascript-project-setup/) and a way to run the script.
 - The secret token from the Notion integration and a way to store environment variables. If you don't have environment variables
 
@@ -147,4 +147,4 @@ Run it again and if your pages have blocks, you'll likely see a lot more content
 
 ---
 
-If you're following the four-part series, _Part 4_ is the next and final step of the process, which takes this raw content and transforms it into a more usable object.
+If you're following the four-part series, [_Part 4_](transform-notion-api-data-into-component-ready-json) is the next and final step of the process, which takes this raw content and transforms it into a more usable object.
