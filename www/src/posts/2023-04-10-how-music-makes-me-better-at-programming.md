@@ -4,10 +4,6 @@ description: Exploring a few ways that music has helped me in my development car
 tags:
   - developer-advice
   - inspiration
-tweet: >-
-  PJ Hagerty and I talked briefly about how music helps with programming during
-  a Code Sandwich Hour interview. It got me thinking about all the ways music
-  has helped me in my career.
 image: /posts/230410/how-music-makes-me-better-at-programming-n1CXnI4r.png
 seo:
   image: /posts/230410/how-music-makes-me-better-at-programming-DTLjqkvp--meta.png
