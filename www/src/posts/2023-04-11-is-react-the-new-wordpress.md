@@ -6,7 +6,6 @@ description: >-
 tags:
   - react
   - wordpress
-tweet: "Heard a talk from Henri Helvetica where he compared React devs to WordPress devs. 😱\_After being overly offended, I spent some time pondering and came up with an introductory and broad comparison."
 image: /posts/230411/is-react-the-new-wordpress-3hDtiRr0.png
 seo:
   image: /posts/230411/is-react-the-new-wordpress-xnaTrBAe--meta.png
