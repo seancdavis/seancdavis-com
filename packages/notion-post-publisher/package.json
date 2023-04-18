@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@notionhq/client": "^1.0.4",
-    "aws-sdk": "^2.1262.0",
+    "aws-sdk": "^2.1360.0",
     "chalk": "^4.0.0",
     "date-fns": "^2.29.3",
     "fast-glob": "^3.2.12",
