@@ -215,4 +215,4 @@ Once that change is deployed, go back to your home page and you should be redire
 
 ---
 
-This was a super simple example on how to deploy a static JSON API with Netlify. You can head back to [the intro](/posts/how-to-build-static-api#tutorials) to check out specific tutorials on building static APIs from data files using various static site generators.
+This was a super simple example on how to deploy a static JSON API with Netlify. You can head back to [the intro](/posts/how-to-build-static-api/#tutorials) to check out specific tutorials on building static APIs from data files using various static site generators.
