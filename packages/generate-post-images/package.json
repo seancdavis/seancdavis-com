@@ -10,7 +10,7 @@
     "canvas": "^2.11.0",
     "date-fns": "^2.29.3",
     "js-yaml": "^4.1.0",
-    "nanoid": "<4.0.0"
+    "nanoid": "<5.0.0"
   },
   "scripts": {
     "build": "tsc",
