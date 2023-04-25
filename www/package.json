@@ -21,7 +21,7 @@
     "axios": "^1.2.1",
     "chalk": "^4.0.0",
     "clipboard": "^2.0.11",
-    "cssnano": "^5.1.14",
+    "cssnano": "^6.0.0",
     "glob": "^8.1.0",
     "gray-matter": "^4.0.3",
     "html-minifier": "^4.0.0",
