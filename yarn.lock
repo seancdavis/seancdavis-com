@@ -921,10 +921,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@notionhq/client@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/@notionhq/client/-/client-1.0.4.tgz"
-  integrity sha512-m7zZ5l3RUktayf1lRBV1XMb8HSKsmWTv/LZPqP7UGC1NMzOlc+bbTOPNQ4CP/c1P4cP61VWLb/zBq7a3c0nMaw==
+"@notionhq/client@^2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@notionhq/client/-/client-2.2.4.tgz#909e23de7ae8e975ca67cb924afa4f856ff6e5dc"
+  integrity sha512-cr5yW6mIJX1cBDThClklNUY5KfQO0iW3rL/CEpx5gU+7Bv458VqeT9YfM9KIbhuGw0D2a8/+qv0UpveDM6rsOw==
   dependencies:
     "@types/node-fetch" "^2.5.10"
     node-fetch "^2.6.1"
