@@ -7,9 +7,6 @@ tags:
   - jamstack
   - netlify
 tweet: >-
-  Deploying always seemed to me to be the hardest part of building a website. 
-
-
   Jamstack had an underlying component that promoted the simplicity of the
   deployment process. In trivializing this process, @netlify (and others)
   effectively lowered the barrier to entry in building websites.
