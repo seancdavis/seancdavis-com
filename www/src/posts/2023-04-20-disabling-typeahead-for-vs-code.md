@@ -5,10 +5,6 @@ description: >-
   VS Code.
 tags:
   - vscode
-tweet: >-
-  This is one of those *for me* blog posts that you might also find useful. I
-  like to disable typeahead functionality when recording tutorials
-  (intellisense, Copilot, etc.) and I can never remember the right settings.
 image: /posts/230420/disabling-typeahead-for-vs-code-oyo8OcJd.png
 seo:
   image: /posts/230420/disabling-typeahead-for-vs-code-SCTY8Fzx--meta.png

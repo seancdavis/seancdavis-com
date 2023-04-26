@@ -5,9 +5,6 @@ description: >-
   developer. He said: “Seek discomfort.”
 tags:
   - developer-advice
-tweet: >-
-  In work and in life, the times I’ve evolved the fastest have often been a
-  direct result of some uncomfortable situation.
 image: >-
   /posts/230421/seek-discomfort-to-learn-and-grow-faster-as-a-developer-RkM7-jWY.png
 seo:

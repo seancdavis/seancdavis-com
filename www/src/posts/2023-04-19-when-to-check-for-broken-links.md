@@ -5,12 +5,6 @@ description: >-
   when applying the approaches to your site.
 tags:
   - testing
-tweet: >-
-  When should I check for broken links? 
-
-
-  This is another “it depends” question. But I’ve been thinking about this a lot
-  lately, and so I wrote out what I’ve explored.
 image: /posts/230419/when-to-check-for-broken-links-jRs6Z_s5.png
 seo:
   image: /posts/230419/when-to-check-for-broken-links-s2Cn3BYM--meta.png

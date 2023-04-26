@@ -6,10 +6,6 @@ description: >-
 tags:
   - jamstack
   - netlify
-tweet: >-
-  Jamstack had an underlying component that promoted the simplicity of the
-  deployment process. In trivializing this process, @netlify (and others)
-  effectively lowered the barrier to entry in building websites.
 image: /posts/230418/jamstack-made-getting-started-easier-dSS9IAgZ.png
 seo:
   image: /posts/230418/jamstack-made-getting-started-easier-x2AlIjy8--meta.png

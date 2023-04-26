@@ -7,13 +7,6 @@ description: >-
 tags:
   - developer-advice
   - react
-tweet: >-
-  I really like React, but …
-
-
-  I also feel like it’s important to highlight when it may not be the best fit
-  for a project. Especially when there are some really great projects emerging
-  that are solving problems for the web in a unique way.
 image: /posts/230419/react-may-not-be-the-best-tool-for-your-project-1hwxHwC5.png
 seo:
   image: >-
