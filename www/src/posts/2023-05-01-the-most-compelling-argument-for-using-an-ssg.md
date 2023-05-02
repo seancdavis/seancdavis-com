@@ -6,10 +6,6 @@ description: >-
   they were compelling in 2008.
 tags:
   - jamstack
-tweet: >-
-  SSGs were revolutionary when they entered the scene around 2008. But they are
-  still relevant. And they are still great. And for many of the same reasons
-  they were compelling in 2008.
 image: /posts/230501/the-most-compelling-argument-for-using-an-ssg-j1UZ7zgX.png
 seo:
   image: >-
