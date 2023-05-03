@@ -8,10 +8,6 @@ tags:
   - contentful
   - javascript
   - typescript
-tweet: >-
-  I wanted to use TypeScript in a Contentful project recently and realized there
-  isn’t a built-in method for generating type defs, but there are a number of
-  libraries that can help.
 image: >-
   /posts/230503/generating-workable-typescript-types-from-contentful-content-UW-EpXZE.png
 seo:
