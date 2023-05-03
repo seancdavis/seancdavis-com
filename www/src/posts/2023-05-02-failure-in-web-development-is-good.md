@@ -6,10 +6,6 @@ description: >-
   the uncertainty, take risks, and find success faster.
 tags:
   - developer-advice
-tweet: >-
-  I have to remind myself — don't be afraid to fail! It's part of learning and
-  the lessons from it stick for a long time. Plus, something good usually
-  emerges from failure. Take risks and embrace the uncertainty!
 image: /posts/230502/failure-in-web-development-is-good-EdIEF2Oc.png
 seo:
   image: /posts/230502/failure-in-web-development-is-good-1-Rukv_n--meta.png
