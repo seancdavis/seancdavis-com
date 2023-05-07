@@ -1,5 +1,5 @@
 ---
-title: 'Evolving with Our Tools: The Continued Evolution of Static Site Generators'
+title: "Evolving with Our Tools: The Continued Evolution of Static Site Generators"
 description: >-
   Static site generators are still relevant and continue to evolve. You may be
   able to evolve with them, without needing to jump into a new type of
@@ -7,10 +7,6 @@ description: >-
 tags:
   - jamstack
   - ssg
-tweet: >-
-  There are so many new site frameworks with so many capabilities that it’s easy
-  to think of SSGs as old news. But even this classic pattern continues to
-  evolve, and I find myself evolving alongside them.
 image: >-
   /posts/230505/evolving-with-our-tools-the-continued-evolution-of-static-site-generators-uF4RypYk.png
 seo:
