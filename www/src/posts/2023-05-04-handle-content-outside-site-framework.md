@@ -14,6 +14,8 @@ seo:
   image: /posts/230504/handle-content-outside-site-framework-mgpENUKJ--meta.png
 ---
 
+{% youtube_embed id="A-U3F-FhFgs" %}
+
 Open-source developer tools and the communities surrounding them are the backbone of what makes life great as a web developer.
 
 It's often super motivating to jump into start using an open-source tool. Doing so benefits the community. But, it's still important to make decisions on open-source tooling as you would in working with any other product.
