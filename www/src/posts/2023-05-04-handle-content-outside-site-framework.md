@@ -6,9 +6,6 @@ description: >-
   with the added benefit of easier maintainability.
 tags:
   - developer-advice
-tweet: >-
-  I’ve found that separating content from framework code makes it easier to
-  switch to something else in the future and improve your workflow.
 image: /posts/230504/handle-content-outside-site-framework-jmQG2qOo.png
 seo:
   image: /posts/230504/handle-content-outside-site-framework-mgpENUKJ--meta.png
