@@ -14,6 +14,7 @@ import type {
   NotionParagraphBlock,
   NotionQuoteBlock,
   NotionTableOfContentsBlock,
+  NotionToggleBlock,
   NotionVideoBlock,
 } from "../types/notion";
 
@@ -32,6 +33,7 @@ import {
   ParagraphBlock,
   QuoteBlock,
   TableOfContentsBlock,
+  ToggleBlock,
   VideoBlock,
 } from "./blocks";
 
@@ -50,6 +52,7 @@ type SupportedNotionBlocks =
   | NotionParagraphBlock
   | NotionQuoteBlock
   | NotionTableOfContentsBlock
+  | NotionToggleBlock
   | NotionVideoBlock;
 
 const BlockMap = {
@@ -67,6 +70,7 @@ const BlockMap = {
   paragraph: ParagraphBlock,
   quote: QuoteBlock,
   table_of_contents: TableOfContentsBlock,
+  toggle: ToggleBlock,
   video: VideoBlock,
 };
 
@@ -82,6 +86,7 @@ export type CreatableBlock =
   | Heading2Block
   | Heading3Block
   | ImageBlock
+  | ToggleBlock
   | NumberedListItemBlock
   | ParagraphBlock
   | QuoteBlock
