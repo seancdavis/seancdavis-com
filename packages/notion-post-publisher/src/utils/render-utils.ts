@@ -1,3 +1,4 @@
+import chalk from "chalk";
 import { CreatableBlock } from "../lib/Block";
 import { BulletedListItemBlock, NumberedListItemBlock } from "../lib/blocks";
 import { NotionRichText } from "../types/notion";
@@ -31,6 +32,13 @@ function sanitizeText(text: string): string {
  * @returns {string} Text to render to the markdown file.
  */
 function renderRichTextItem(richText: NotionRichText): string {
+  // A mention appears as a link, but the link is to a Notion page, which is
+  // likely inaccessible to the public. We log and ignore these for now.
+  if (richText.type === "mention") {
+    const msg = `Mention found: ${richText.plain_text} (${richText.href})`;
+    console.log(chalk.cyan.bold("[info]"), msg);
+    return "";
+  }
   if (richText.type !== "text") {
     throw new Error(`Rich text type not supported: ${richText.type}`);
   }

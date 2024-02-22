@@ -12,4 +12,5 @@ export { NumberedListItemBlock } from "./NumberedListItemBlock";
 export { ParagraphBlock } from "./ParagraphBlock";
 export { QuoteBlock } from "./QuoteBlock";
 export { TableOfContentsBlock } from "./TableOfContentsBlock";
+export { ToggleBlock } from "./ToggleBlock";
 export { VideoBlock } from "./VideoBlock";

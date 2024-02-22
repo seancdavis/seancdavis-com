@@ -1,6 +1,6 @@
+import { format as formatDate } from "date-fns";
 import fs from "fs";
 import path from "path";
-import { Post } from "../../src/lib/Post";
 import {
   mockBulletedListItemBlock,
   mockNumberedListItemBlock,
@@ -8,11 +8,12 @@ import {
   mockPagePropertiesResponse,
   mockParagraphBlock,
 } from "../../__mocks__";
+import { Block, CreatableBlock } from "../../src/lib/Block";
+import { Post } from "../../src/lib/Post";
 import {
   getAllPageBlocks,
   getPageProperties,
 } from "../../src/utils/notion-utils";
-import { Block, CreatableBlock } from "../../src/lib/Block";
 
 jest.mock("../../src/utils/notion-utils", () => {
   return { getAllPageBlocks: jest.fn(), getPageProperties: jest.fn() };
@@ -44,7 +45,7 @@ describe("Post", () => {
         title: "Hello World",
       });
       const post = await Post.create("SOME_PAGE_ID");
-      const dateStr = new Date().toISOString().split("T")[0];
+      const dateStr = formatDate(new Date(), "yyyy-MM-dd");
       const slug = "hello-world";
       const expFilename = `${dateStr}-${slug}.md`;
       expect(post.date).toEqual(dateStr);

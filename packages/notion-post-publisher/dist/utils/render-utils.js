@@ -1,6 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.renderBlocks = exports.trailingNewlines = exports.renderRichText = void 0;
+const chalk_1 = __importDefault(require("chalk"));
 const blocks_1 = require("../lib/blocks");
 /**
  * Given a an array of rich text objects from Notion, return a markdown string.
@@ -30,6 +34,13 @@ function sanitizeText(text) {
  * @returns {string} Text to render to the markdown file.
  */
 function renderRichTextItem(richText) {
+    // A mention appears as a link, but the link is to a Notion page, which is
+    // likely inaccessible to the public. We log and ignore these for now.
+    if (richText.type === "mention") {
+        const msg = `Mention found: ${richText.plain_text} (${richText.href})`;
+        console.log(chalk_1.default.cyan.bold("[info]"), msg);
+        return "";
+    }
     if (richText.type !== "text") {
         throw new Error(`Rich text type not supported: ${richText.type}`);
     }

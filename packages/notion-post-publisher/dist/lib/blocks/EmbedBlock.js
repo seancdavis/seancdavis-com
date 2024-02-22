@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.EmbedBlock = void 0;
-const twitter_api_sdk_1 = require("twitter-api-sdk");
+const axios_1 = __importDefault(require("axios"));
 const date_fns_1 = require("date-fns");
 const prettier_1 = __importDefault(require("prettier"));
 class EmbedBlock {
@@ -51,31 +51,46 @@ class TwitterEmbedBlock {
         this.id = id;
     }
     prerender() {
-        var _a, _b, _c, _d, _e;
         return __awaiter(this, void 0, void 0, function* () {
-            const client = new twitter_api_sdk_1.Client(process.env.TWITTER_BEARER_TOKEN);
-            const tweet = yield client.tweets.findTweetById(this.id, {
-                "tweet.fields": ["created_at", "text", "author_id"],
-            });
-            if (!((_a = tweet.data) === null || _a === void 0 ? void 0 : _a.author_id) ||
-                !((_b = tweet.data) === null || _b === void 0 ? void 0 : _b.created_at) ||
-                !((_c = tweet.data) === null || _c === void 0 ? void 0 : _c.text)) {
-                throw new Error(`Could not find appropriate attributes for tweet: ${this.id}`);
-            }
-            const author = yield client.users.findUserById(tweet.data.author_id, {
-                "user.fields": ["name", "username"],
-            });
-            if (!((_d = author.data) === null || _d === void 0 ? void 0 : _d.name) || !((_e = author.data) === null || _e === void 0 ? void 0 : _e.username)) {
-                throw new Error(`Could not find appropriate attributes for author: ${tweet.data.author_id}`);
-            }
-            this.tweet = {
-                created_at: new Date(tweet.data.created_at),
-                text: tweet.data.text,
-                author: {
-                    name: author.data.name,
-                    username: author.data.username,
-                },
-            };
+            // const client = new Client(process.env.TWITTER_BEARER_TOKEN!);
+            // console.log(process.env.TWITTER_BEARER_TOKEN);
+            const tweetUrl = `https://twitter.com/_/status/${this.id}`;
+            const response = yield axios_1.default.get(tweetUrl);
+            console.log(response.data, response.status);
+            // let tweet: any;
+            // try {
+            //   tweet = await client.tweets.findTweetById(this.id, {
+            //     "tweet.fields": ["created_at", "text", "author_id"],
+            //   });
+            // } catch (error) {
+            //   console.log(error);
+            //   throw new Error(`Could not find tweet: ${this.id}`);
+            // }
+            // if (
+            //   !tweet.data?.author_id ||
+            //   !tweet.data?.created_at ||
+            //   !tweet.data?.text
+            // ) {
+            //   throw new Error(
+            //     `Could not find appropriate attributes for tweet: ${this.id}`
+            //   );
+            // }
+            // const author = await client.users.findUserById(tweet.data.author_id, {
+            //   "user.fields": ["name", "username"],
+            // });
+            // if (!author.data?.name || !author.data?.username) {
+            //   throw new Error(
+            //     `Could not find appropriate attributes for author: ${tweet.data.author_id}`
+            //   );
+            // }
+            // this.tweet = {
+            //   created_at: new Date(tweet.data.created_at),
+            //   text: tweet.data.text,
+            //   author: {
+            //     name: author.data.name,
+            //     username: author.data.username,
+            //   },
+            // };
         });
     }
     render() {
