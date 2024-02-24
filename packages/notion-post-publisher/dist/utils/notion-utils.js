@@ -75,7 +75,7 @@ exports.getAllPageBlocks = getAllPageBlocks;
  * @returns {Promise<PostProperties>}
  */
 function getPageProperties(page_id) {
-    var _a, _b, _c, _d, _e, _f, _g, _h;
+    var _a, _b, _c, _d, _e;
     return __awaiter(this, void 0, void 0, function* () {
         const page = (yield notion.pages.retrieve({ page_id }));
         const properties = page === null || page === void 0 ? void 0 : page.properties;
@@ -90,7 +90,6 @@ function getPageProperties(page_id) {
             title: (_b = (_a = properties["Name"].title) === null || _a === void 0 ? void 0 : _a[0]) === null || _b === void 0 ? void 0 : _b.plain_text,
             description: (_d = (_c = properties["Description"].rich_text) === null || _c === void 0 ? void 0 : _c[0]) === null || _d === void 0 ? void 0 : _d.plain_text,
             tags: (_e = properties["Tags"].multi_select) === null || _e === void 0 ? void 0 : _e.map((tag) => tag.name),
-            tweet: (_h = (_g = (_f = properties["Tweet"]) === null || _f === void 0 ? void 0 : _f.rich_text) === null || _g === void 0 ? void 0 : _g[0]) === null || _h === void 0 ? void 0 : _h.plain_text,
         };
     });
 }

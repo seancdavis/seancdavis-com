@@ -32,14 +32,6 @@ export class EmbedBlock {
 class TwitterEmbedBlock {
   id: string;
   url: string;
-  tweet?: {
-    created_at: Date;
-    text: string;
-    author: {
-      name: string;
-      username: string;
-    };
-  };
 
   constructor(params: NotionEmbedBlock) {
     this.url = params.embed.url;

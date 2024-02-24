@@ -61,9 +61,7 @@ describe("Post", () => {
       // These are set manually by the mock, so we can do this with confidence.
       const frontmatter = `---\ntitle: ${properties.title}\ndescription: ${
         properties.description
-      }\ntags:${properties.tags!.map((t) => `\n  - ${t}`)}\ntweet: ${
-        properties.tweet
-      }\n---\n`;
+      }\ntags:${properties.tags!.map((t) => `\n  - ${t}`)}\n---\n`;
       let blocks: CreatableBlock[] = [];
       for (const res of blockResponse) {
         blocks.push(await Block.create(res));
