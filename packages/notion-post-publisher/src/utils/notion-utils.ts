@@ -90,7 +90,6 @@ export async function getPageProperties(
     tags: properties["Tags"].multi_select?.map(
       (tag: { name: string }) => tag.name
     ),
-    tweet: properties["Tweet"]?.rich_text?.[0]?.plain_text,
   };
 }
 
