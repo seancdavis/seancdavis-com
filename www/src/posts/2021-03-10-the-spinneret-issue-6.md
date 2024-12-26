@@ -126,6 +126,7 @@ Here they are, in alphabetical order (because I couldn't come up with any better
 - [Deckset](https://www.deckset.com/) is how I've begun building [my talks](https://github.com/seancdavis/talks).
 - When it comes to _error monitoring and reporting_, I'd known about [New Relic](https://newrelic.com/) for years. Recently I came across two competitors, [Bugsnag](https://www.bugsnag.com/) and [Datadog](https://www.datadoghq.com/).
 - [GitHub1s](https://github1s.com/) is a way to edit code in GitHub repo in a hosted VS Code editor. It seems like it might be the same thing as [GitHub Surf](https://github.surf/). But it also seems like these tools are unnecessary as GitHub rolls out [Codespaces](https://github.com/features/codespaces).
+- [JSONingAPI](https://jsoning.com/api/) is a fake online REST API for testing and prototyping.
 - [Mockaroo](https://www.mockaroo.com/) is a little service to mock up to 1k rows of table-structured data.
 - [Mural](https://www.mural.co/) is a collaborative brainstorming application. I spent only a little time in it, but it felt clunky when compared to [Miro](https://miro.com/).
 - [Paw](https://paw.cloud/) is a Mac-only application for querying APIs. It reminds me of [Postman](https://www.postman.com/), which has been my go-to of late. Prior to Postman's redesign, I was using [Insomnia](https://insomnia.rest/).
