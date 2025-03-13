@@ -26,6 +26,7 @@ const BlockMap = {
     paragraph: blocks_1.ParagraphBlock,
     quote: blocks_1.QuoteBlock,
     table_of_contents: blocks_1.TableOfContentsBlock,
+    toggle: blocks_1.ToggleBlock,
     video: blocks_1.VideoBlock,
 };
 class Block {

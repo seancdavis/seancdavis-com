@@ -1,5 +1,7 @@
 {
-  "cSpell.words": [
-    "octokit"
-  ]
+  "cSpell.words": ["octokit"],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.addMissingImports": true
+  }
 }

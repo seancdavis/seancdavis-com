@@ -16,7 +16,5 @@
   "[nunjucks]": {
     "editor.formatOnSave": false
   },
-  "cSpell.words": [
-    "reposts"
-  ]
+  "cSpell.words": ["reposts"]
 }
