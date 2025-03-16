@@ -3,7 +3,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.renderBlocks = exports.trailingNewlines = exports.renderRichText = void 0;
+exports.renderRichText = renderRichText;
+exports.trailingNewlines = trailingNewlines;
+exports.renderBlocks = renderBlocks;
 const chalk_1 = __importDefault(require("chalk"));
 const blocks_1 = require("../lib/blocks");
 /**
@@ -14,7 +16,6 @@ const blocks_1 = require("../lib/blocks");
 function renderRichText(richText) {
     return richText.map((text) => renderRichTextItem(text)).join("");
 }
-exports.renderRichText = renderRichText;
 /**
  * Replaces characters used in Notion with those better suited for markdown
  * files.
@@ -96,7 +97,6 @@ function trailingNewlines(blocks, index) {
     // Otherwise, return two.
     return "\n\n";
 }
-exports.trailingNewlines = trailingNewlines;
 /**
  * Render an array of blocks to a markdown string.
  *
@@ -113,13 +113,12 @@ function renderBlocks(blocks, linePrefix) {
             return "";
         // If necessary, prepend the line with the designated characters.
         if (linePrefix)
-            text = `${linePrefix !== null && linePrefix !== void 0 ? linePrefix : ""}${text}`;
+            text = `${linePrefix ?? ""}${text}`;
         // Add newlines after the block ...
         const newlines = trailingNewlines(blocks, idx);
         // ... inserting the prefix as necessary
-        text += newlines === "\n\n" ? `\n${linePrefix !== null && linePrefix !== void 0 ? linePrefix : ""}\n` : "\n";
+        text += newlines === "\n\n" ? `\n${linePrefix ?? ""}\n` : "\n";
         return text;
     })
         .join("");
 }
-exports.renderBlocks = renderBlocks;

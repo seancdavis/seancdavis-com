@@ -9,7 +9,7 @@ export function mockTableOfContentsBlock(): NotionTableOfContentsBlock {
 
   return {
     object: "block",
-    id: faker.datatype.uuid(),
+    id: faker.string.uuid(),
     created_time: "2022-04-04T19:49:00.000Z",
     last_edited_time: "2022-04-04T19:50:00.000Z",
     created_by: user,
@@ -18,5 +18,10 @@ export function mockTableOfContentsBlock(): NotionTableOfContentsBlock {
     archived: false,
     type: "table_of_contents",
     table_of_contents: { color: "gray" },
+    parent: {
+      type: "page_id",
+      page_id: faker.string.uuid(),
+    },
+    in_trash: false,
   };
 }

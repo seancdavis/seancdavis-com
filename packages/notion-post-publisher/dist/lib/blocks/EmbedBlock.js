@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.EmbedBlock = void 0;
-const prettier_1 = __importDefault(require("prettier"));
+const sync_1 = __importDefault(require("@prettier/sync"));
 class EmbedBlock {
     constructor(params) {
         this.domain = new URL(params.embed.url).hostname;
@@ -28,10 +28,9 @@ exports.EmbedBlock = EmbedBlock;
 /* ----- Twitter ----- */
 class TwitterEmbedBlock {
     constructor(params) {
-        var _a;
         this.url = params.embed.url;
         const matches = this.url.match(/\/status\/(?<id>\d+)/);
-        const id = (_a = matches === null || matches === void 0 ? void 0 : matches.groups) === null || _a === void 0 ? void 0 : _a.id;
+        const id = matches?.groups?.id;
         if (!id) {
             throw new Error(`Could not identify tweet ID from URL: ${this.url}`);
         }
@@ -44,7 +43,7 @@ class TwitterEmbedBlock {
       </blockquote>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     `;
-        return prettier_1.default.format(output, { parser: "html" });
+        return sync_1.default.format(output, { parser: "html" });
     }
 }
 /* ----- Stackblitz ----- */

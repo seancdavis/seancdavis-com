@@ -1,4 +1,4 @@
-import prettier from "prettier";
+import prettier from "@prettier/sync";
 
 import type { NotionEmbedBlock } from "../../types/notion";
 
