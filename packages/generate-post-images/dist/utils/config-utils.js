@@ -1,15 +1,4 @@
 "use strict";
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -30,8 +19,11 @@ function resolveBackgroundConfig(bgConfig) {
     const titleKey = getRandomItem(bgConfig.titleOptionKeys);
     const titleConfig = config_1.default.titles[titleKey];
     // Set the properties on this object, removing titleOptionKeys.
-    const { titleOptionKeys } = bgConfig, bgConfigProps = __rest(bgConfig, ["titleOptionKeys"]);
-    const resBgConfig = Object.assign(Object.assign({}, bgConfigProps), titleConfig);
+    const { titleOptionKeys, ...bgConfigProps } = bgConfig;
+    const resBgConfig = {
+        ...bgConfigProps,
+        ...titleConfig,
+    };
     // Resolve the path to the file.
     const bgDir = path_1.default.join(__dirname, "../../src/assets");
     resBgConfig.filePath = path_1.default.join(bgDir, bgConfig.filePath);

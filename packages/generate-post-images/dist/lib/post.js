@@ -1,13 +1,4 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -34,23 +25,21 @@ class Post {
      * Generates images for featured and meta use, and uploads the resulting tmp
      * files.
      */
-    generateImages() {
-        return __awaiter(this, void 0, void 0, function* () {
-            if (!this.imageConfig)
-                throw new Error("imageConfig not set on post.");
-            const generator = new generator_1.Generator({ post: this, config: this.imageConfig });
-            // Set image references.
-            this.imageRefs = this.getImageRefs();
-            // Generate featured image.
-            yield generator.renderBackground();
-            yield generator.saveAsImage(this.imageRefs.featured.tmpFilePath);
-            // Generate meta image.
-            yield generator.renderTitle();
-            yield generator.saveAsImage(this.imageRefs.meta.tmpFilePath);
-            // Upload files
-            yield (0, s3_utils_1.uploadFile)(this.imageRefs.featured.tmpFilePath, this.imageRefs.featured.s3FilePath);
-            yield (0, s3_utils_1.uploadFile)(this.imageRefs.meta.tmpFilePath, this.imageRefs.meta.s3FilePath);
-        });
+    async generateImages() {
+        if (!this.imageConfig)
+            throw new Error("imageConfig not set on post.");
+        const generator = new generator_1.Generator({ post: this, config: this.imageConfig });
+        // Set image references.
+        this.imageRefs = this.getImageRefs();
+        // Generate featured image.
+        await generator.renderBackground();
+        await generator.saveAsImage(this.imageRefs.featured.tmpFilePath);
+        // Generate meta image.
+        await generator.renderTitle();
+        await generator.saveAsImage(this.imageRefs.meta.tmpFilePath);
+        // Upload files
+        await (0, s3_utils_1.uploadFile)(this.imageRefs.featured.tmpFilePath, this.imageRefs.featured.s3FilePath);
+        await (0, s3_utils_1.uploadFile)(this.imageRefs.meta.tmpFilePath, this.imageRefs.meta.s3FilePath);
     }
     /**
      * Resolves local and s3 image paths for featured and meta images.
@@ -109,39 +98,38 @@ class Post {
      * Set the image references on the object and write them back to file. Does
      * not run if SKIP_UPDATE has been set.
      */
-    updateSrcFile() {
-        return __awaiter(this, void 0, void 0, function* () {
-            // Don't run if we want to skip the update process.
-            if (process.env.SKIP_UPDATE)
-                return;
-            // Can't run if we haven't generated the images yet.
-            if (!this.imageRefs) {
-                throw new Error("imageRefs not set. Must run `generateImages` first.");
-            }
-            // Set image attributes on the object.
-            this.data.image = `/${this.imageRefs.featured.s3FilePath}`;
-            this.data.seo = Object.assign(Object.assign({}, this.data.seo), { image: `/${this.imageRefs.meta.s3FilePath}` });
-            // Convert data to yaml and build a string to write back to the file.
-            const fileContent = `---\n${js_yaml_1.default.dump(this.data)}---\n${this.content}`;
-            fs_1.default.writeFileSync(this.__metadata.filePath, fileContent);
-        });
+    async updateSrcFile() {
+        // Don't run if we want to skip the update process.
+        if (process.env.SKIP_UPDATE)
+            return;
+        // Can't run if we haven't generated the images yet.
+        if (!this.imageRefs) {
+            throw new Error("imageRefs not set. Must run `generateImages` first.");
+        }
+        // Set image attributes on the object.
+        this.data.image = `/${this.imageRefs.featured.s3FilePath}`;
+        this.data.seo = {
+            ...this.data.seo,
+            image: `/${this.imageRefs.meta.s3FilePath}`,
+        };
+        // Convert data to yaml and build a string to write back to the file.
+        const fileContent = `---\n${js_yaml_1.default.dump(this.data)}---\n${this.content}`;
+        fs_1.default.writeFileSync(this.__metadata.filePath, fileContent);
     }
     /**
      * Removes the local generated images unless SKIP_CLEANUP has been set.
      */
-    rmTmpFiles() {
-        return __awaiter(this, void 0, void 0, function* () {
-            // If SKIP_CLEANUP is set, don't do the cleanup.
-            if (process.env.SKIP_CLEANUP)
-                return;
-            // We can't remove anything if we don't know what to remove.
-            if (!this.imageRefs) {
-                throw new Error("imageRefs not set. Don't know what to remove.");
-            }
-            // Remove the temp files.
-            fs_1.default.unlinkSync(this.imageRefs.featured.tmpFilePath);
-            fs_1.default.unlinkSync(this.imageRefs.meta.tmpFilePath);
-        });
+    async rmTmpFiles() {
+        // If SKIP_CLEANUP is set, don't do the cleanup.
+        if (process.env.SKIP_CLEANUP)
+            return;
+        // We can't remove anything if we don't know what to remove.
+        if (!this.imageRefs) {
+            throw new Error("imageRefs not set. Don't know what to remove.");
+        }
+        // Remove the temp files.
+        fs_1.default.unlinkSync(this.imageRefs.featured.tmpFilePath);
+        fs_1.default.unlinkSync(this.imageRefs.meta.tmpFilePath);
     }
     /* ----- Init Utils ----- */
     /**
