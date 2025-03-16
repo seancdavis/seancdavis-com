@@ -1,11 +1,11 @@
-import path from "path";
-import fs from "fs";
-import prettier from "prettier";
-import yaml from "js-yaml";
+import prettier from "@prettier/sync";
 import glob from "fast-glob";
+import fs from "fs";
+import yaml from "js-yaml";
+import path from "path";
 
-import { toTitleCase } from "./string-utils";
 import { TOPICS_DIR } from "../constants";
+import { toTitleCase } from "./string-utils";
 
 /**
  * Create topic files with basic content for missing tags. This makes an

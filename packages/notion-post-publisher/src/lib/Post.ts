@@ -1,16 +1,16 @@
+import prettier from "@prettier/sync";
+import { format as formatDate } from "date-fns";
 import fs from "fs";
+import yaml from "js-yaml";
 import path from "path";
 import slugify from "slugify";
-import yaml from "js-yaml";
-import { format as formatDate } from "date-fns";
-import prettier from "prettier";
 
 import type { PostProperties } from "../types/post";
 
-import { Block, CreatableBlock } from "./Block";
 import { getAllPageBlocks, getPageProperties } from "../utils/notion-utils";
 import { renderBlocks } from "../utils/render-utils";
 import { createNewTags } from "../utils/www-utils";
+import { Block, CreatableBlock } from "./Block";
 
 type PostConstructorInput = {
   id: string;

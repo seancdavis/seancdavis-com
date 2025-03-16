@@ -1,6 +1,6 @@
-import { EmbedBlock } from "../../../src/lib/blocks/EmbedBlock";
-import prettier from "prettier";
+import prettier from "@prettier/sync";
 import { mockEmbedBlock } from "../../../__mocks__/EmbedBlock.mock";
+import { EmbedBlock } from "../../../src/lib/blocks/EmbedBlock";
 
 describe("EmbedBlock", () => {
   it("throws an error when not supported", () => {

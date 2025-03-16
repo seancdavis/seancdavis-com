@@ -24,7 +24,7 @@ export function mockCodeBlock({
 
   return {
     object: "block",
-    id: faker.datatype.uuid(),
+    id: faker.string.uuid(),
     created_time: "2022-04-04T20:12:00.000Z",
     last_edited_time: "2022-04-04T21:02:00.000Z",
     created_by: user,
@@ -37,5 +37,10 @@ export function mockCodeBlock({
       rich_text: richText,
       language,
     },
+    parent: {
+      type: "page_id",
+      page_id: faker.string.uuid(),
+    },
+    in_trash: false,
   };
 }

@@ -9,7 +9,7 @@ export function mockChildPageBlock(): NotionChildPageBlock {
 
   return {
     object: "block",
-    id: faker.datatype.uuid(),
+    id: faker.string.uuid(),
     created_time: "2022-04-04T19:49:00.000Z",
     last_edited_time: "2022-04-04T19:50:00.000Z",
     created_by: user,
@@ -19,5 +19,10 @@ export function mockChildPageBlock(): NotionChildPageBlock {
     type: "child_page",
     child_page: { title: faker.lorem.lines(1) },
     children: [],
+    parent: {
+      type: "page_id",
+      page_id: faker.string.uuid(),
+    },
+    in_trash: false,
   };
 }

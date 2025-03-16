@@ -113,11 +113,11 @@ function renderBlocks(blocks, linePrefix) {
             return "";
         // If necessary, prepend the line with the designated characters.
         if (linePrefix)
-            text = `${linePrefix !== null && linePrefix !== void 0 ? linePrefix : ""}${text}`;
+            text = `${linePrefix ?? ""}${text}`;
         // Add newlines after the block ...
         const newlines = trailingNewlines(blocks, idx);
         // ... inserting the prefix as necessary
-        text += newlines === "\n\n" ? `\n${linePrefix !== null && linePrefix !== void 0 ? linePrefix : ""}\n` : "\n";
+        text += newlines === "\n\n" ? `\n${linePrefix ?? ""}\n` : "\n";
         return text;
     })
         .join("");

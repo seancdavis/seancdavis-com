@@ -13,7 +13,7 @@ function mockGenericImage(): Omit<NotionImageBlock, "image"> {
 
   return {
     object: "block",
-    id: faker.datatype.uuid(),
+    id: faker.string.uuid(),
     created_time: "2022-04-04T20:14:00.000Z",
     last_edited_time: "2022-04-04T20:24:00.000Z",
     created_by: user,
@@ -21,6 +21,11 @@ function mockGenericImage(): Omit<NotionImageBlock, "image"> {
     has_children: false,
     archived: false,
     type: "image",
+    parent: {
+      type: "page_id",
+      page_id: faker.string.uuid(),
+    },
+    in_trash: false,
   };
 }
 
