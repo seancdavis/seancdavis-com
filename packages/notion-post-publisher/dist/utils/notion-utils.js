@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.markPageAsPublished = exports.getPageProperties = exports.getAllPageBlocks = exports.getPendingPageIds = void 0;
+exports.getPendingPageIds = getPendingPageIds;
+exports.getAllPageBlocks = getAllPageBlocks;
+exports.getPageProperties = getPageProperties;
+exports.markPageAsPublished = markPageAsPublished;
 const client_1 = require("@notionhq/client");
 const notion = new client_1.Client({ auth: process.env.NOTION_API_KEY });
 /* ----- Controls ----- */
@@ -31,7 +34,6 @@ async function getPendingPageIds() {
     });
     return (response.results || []).map((res) => res.id);
 }
-exports.getPendingPageIds = getPendingPageIds;
 /**
  * Resolve all blocks for a page, accounting for block children and pagination
  * only where necessary to serve basic post features.
@@ -54,7 +56,6 @@ async function getAllPageBlocks(pageId) {
     await Promise.all(blockPromises);
     return blocks;
 }
-exports.getAllPageBlocks = getAllPageBlocks;
 /**
  * Retrieve the page from Notion API and extract only the properties.
  *
@@ -77,7 +78,6 @@ async function getPageProperties(page_id) {
         tags: properties["Tags"].multi_select?.map((tag) => tag.name),
     };
 }
-exports.getPageProperties = getPageProperties;
 /**
  * Marks a notion page as published by setting its status, publish date, and
  * link properties.
@@ -107,4 +107,3 @@ async function markPageAsPublished(page_id, date, link) {
     });
     return page;
 }
-exports.markPageAsPublished = markPageAsPublished;

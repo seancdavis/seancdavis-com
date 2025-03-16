@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createNewTags = void 0;
+exports.createNewTags = createNewTags;
 const sync_1 = __importDefault(require("@prettier/sync"));
 const fast_glob_1 = __importDefault(require("fast-glob"));
 const fs_1 = __importDefault(require("fs"));
@@ -37,4 +37,3 @@ async function createNewTags(tags) {
     });
     return newTags;
 }
-exports.createNewTags = createNewTags;

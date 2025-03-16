@@ -3,7 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.downloadFile = exports.uploadFile = void 0;
+exports.uploadFile = uploadFile;
+exports.downloadFile = downloadFile;
 const aws_sdk_1 = require("aws-sdk");
 const https_1 = __importDefault(require("https"));
 const fs_1 = __importDefault(require("fs"));
@@ -33,7 +34,6 @@ async function uploadFile(srcFilePath, s3FilePath) {
         });
     });
 }
-exports.uploadFile = uploadFile;
 /**
  * Downloads a remote image to a local directory.
  */
@@ -53,4 +53,3 @@ async function downloadFile(url, tmpFilePath) {
         });
     });
 }
-exports.downloadFile = downloadFile;

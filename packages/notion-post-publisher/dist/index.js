@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.publishPosts = void 0;
+exports.publishPosts = publishPosts;
 const Post_1 = require("./lib/Post");
 const notion_utils_1 = require("./utils/notion-utils");
 const chalk_1 = __importDefault(require("chalk"));
@@ -39,4 +39,3 @@ async function publishPosts(config) {
         }
     }
 }
-exports.publishPosts = publishPosts;
