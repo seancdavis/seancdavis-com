@@ -13,7 +13,7 @@
     "@notionhq/client": "^2.3.0",
     "@prettier/sync": "^0.5.2",
     "aws-sdk": "^2.1692.0",
-    "chalk": "^5.4.1",
+    "chalk": "<5.0.0",
     "date-fns": "^4.1.0",
     "fast-glob": "^3.3.3",
     "js-yaml": "^4.1.0",
