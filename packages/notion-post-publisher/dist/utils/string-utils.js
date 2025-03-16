@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.toTitleCase = exports.extractYouTubeId = void 0;
+exports.extractYouTubeId = extractYouTubeId;
+exports.toTitleCase = toTitleCase;
 /**
  * Extracts the YouTube ID value from a valid YouTube URL.
  *
@@ -15,7 +16,6 @@ function extractYouTubeId(url) {
     }
     return match[9];
 }
-exports.extractYouTubeId = extractYouTubeId;
 /**
  * Capitalizes the first character in every word in a string.
  *
@@ -27,4 +27,3 @@ function toTitleCase(str) {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
 }
-exports.toTitleCase = toTitleCase;

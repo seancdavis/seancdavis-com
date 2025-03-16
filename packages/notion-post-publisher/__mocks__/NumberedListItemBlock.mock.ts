@@ -16,7 +16,7 @@ export function mockNumberedListItemBlock({
 
   return {
     object: "block",
-    id: faker.datatype.uuid(),
+    id: faker.string.uuid(),
     created_time: "2022-04-03T11:58:00.000Z",
     last_edited_time: "2022-04-04T20:09:00.000Z",
     created_by: user,
@@ -28,5 +28,10 @@ export function mockNumberedListItemBlock({
       rich_text: [mockRichText(richTextOptions)],
       color: "default",
     },
+    parent: {
+      type: "page_id",
+      page_id: faker.string.uuid(),
+    },
+    in_trash: false,
   };
 }

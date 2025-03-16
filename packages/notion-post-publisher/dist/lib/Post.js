@@ -1,28 +1,19 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Post = void 0;
+const sync_1 = __importDefault(require("@prettier/sync"));
+const date_fns_1 = require("date-fns");
 const fs_1 = __importDefault(require("fs"));
+const js_yaml_1 = __importDefault(require("js-yaml"));
 const path_1 = __importDefault(require("path"));
 const slugify_1 = __importDefault(require("slugify"));
-const js_yaml_1 = __importDefault(require("js-yaml"));
-const date_fns_1 = require("date-fns");
-const prettier_1 = __importDefault(require("prettier"));
-const Block_1 = require("./Block");
 const notion_utils_1 = require("../utils/notion-utils");
 const render_utils_1 = require("../utils/render-utils");
 const www_utils_1 = require("../utils/www-utils");
+const Block_1 = require("./Block");
 class Post {
     constructor(params) {
         this.validate(params);
@@ -34,12 +25,10 @@ class Post {
         this.content = this.getContent(params.blocks, params.properties);
     }
     /* ----- Writing to File ----- */
-    writeToFile(postsDir) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const filePath = path_1.default.join(postsDir, this.filename);
-            fs_1.default.writeFileSync(filePath, this.content);
-            return this.filename;
-        });
+    async writeToFile(postsDir) {
+        const filePath = path_1.default.join(postsDir, this.filename);
+        fs_1.default.writeFileSync(filePath, this.content);
+        return this.filename;
     }
     /* ----- Attributes ----- */
     /**
@@ -54,7 +43,7 @@ class Post {
         const frontmatter = js_yaml_1.default.dump(properties);
         const body = (0, render_utils_1.renderBlocks)(blocks);
         const postContent = `---\n${frontmatter}---\n\n${body}`;
-        return prettier_1.default.format(postContent, { parser: "markdown" });
+        return sync_1.default.format(postContent, { parser: "markdown" });
     }
     /* ----- Validations ----- */
     /**
@@ -64,14 +53,13 @@ class Post {
      * @param params Input params from constructor.
      */
     validate(params) {
-        var _a;
         if (!params.properties.title) {
             throw new Error(`Notion Page ${params.id} is missing a title.`);
         }
         if (!params.properties.description) {
             throw new Error(`${params.properties.title} is missing a description.`);
         }
-        if (((_a = params.blocks) !== null && _a !== void 0 ? _a : []).length === 0) {
+        if ((params.blocks ?? []).length === 0) {
             throw new Error(`${params.properties.title} is missing content.`);
         }
     }
@@ -84,18 +72,16 @@ class Post {
      * database
      * @returns {Promise<Post>}
      */
-    static create(notionPageId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const notionBlocks = yield (0, notion_utils_1.getAllPageBlocks)(notionPageId);
-            let blocks = [];
-            for (const params of notionBlocks) {
-                const block = yield Block_1.Block.create(params);
-                blocks.push(block);
-            }
-            const properties = yield (0, notion_utils_1.getPageProperties)(notionPageId);
-            yield (0, www_utils_1.createNewTags)(properties.tags);
-            return new Post({ id: notionPageId, blocks, properties });
-        });
+    static async create(notionPageId) {
+        const notionBlocks = await (0, notion_utils_1.getAllPageBlocks)(notionPageId);
+        let blocks = [];
+        for (const params of notionBlocks) {
+            const block = await Block_1.Block.create(params);
+            blocks.push(block);
+        }
+        const properties = await (0, notion_utils_1.getPageProperties)(notionPageId);
+        await (0, www_utils_1.createNewTags)(properties.tags);
+        return new Post({ id: notionPageId, blocks, properties });
     }
 }
 exports.Post = Post;
