@@ -2,3 +2,6 @@
 .envrc
 node_modules
 yarn-error.log
+
+# Local Netlify folder
+.netlify
