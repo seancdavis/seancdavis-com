@@ -5,9 +5,9 @@ export class Logger {
     console.log(chalk.green.bold("[success]"), msg);
   }
 
-  debug(msg: string) {
+  debug(msg: unknown) {
     if (process.env.DEBUG) {
-      console.log(chalk.blue.bold("[debug]"), msg);
+      console.log(chalk.blue.bold("[debug]"), String(msg));
     }
   }
 

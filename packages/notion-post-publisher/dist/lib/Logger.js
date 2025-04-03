@@ -11,7 +11,7 @@ class Logger {
     }
     debug(msg) {
         if (process.env.DEBUG) {
-            console.log(chalk_1.default.blue.bold("[debug]"), msg);
+            console.log(chalk_1.default.blue.bold("[debug]"), String(msg));
         }
     }
     error(msg) {
