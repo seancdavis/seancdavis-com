@@ -1,22 +1,4 @@
-import type {
-  NotionBlock,
-  NotionBulletedListItemBlock,
-  NotionCalloutBlock,
-  NotionChildPageBlock,
-  NotionCodeBlock,
-  NotionDividerBlock,
-  NotionEmbedBlock,
-  NotionHeading1Block,
-  NotionHeading2Block,
-  NotionHeading3Block,
-  NotionImageBlock,
-  NotionNumberedListItemBlock,
-  NotionParagraphBlock,
-  NotionQuoteBlock,
-  NotionTableOfContentsBlock,
-  NotionToggleBlock,
-  NotionVideoBlock,
-} from "../types/notion";
+import type { NotionBlock } from "../types/notion";
 import { logger } from "../utils/logger-utils";
 
 import {
@@ -37,24 +19,6 @@ import {
   ToggleBlock,
   VideoBlock,
 } from "./blocks";
-
-type SupportedNotionBlocks =
-  | NotionBulletedListItemBlock
-  | NotionCalloutBlock
-  | NotionChildPageBlock
-  | NotionCodeBlock
-  | NotionDividerBlock
-  | NotionEmbedBlock
-  | NotionHeading1Block
-  | NotionHeading2Block
-  | NotionHeading3Block
-  | NotionImageBlock
-  | NotionNumberedListItemBlock
-  | NotionParagraphBlock
-  | NotionQuoteBlock
-  | NotionTableOfContentsBlock
-  | NotionToggleBlock
-  | NotionVideoBlock;
 
 const BlockMap = {
   bulleted_list_item: BulletedListItemBlock,
@@ -113,8 +77,8 @@ export class Block {
       return new Block(params.type);
     }
     // Otherwise, pick a block from the map and return a new instance of it.
-    const blockParams = params as SupportedNotionBlocks;
-    const block = new BlockMap[blockParams.type](blockParams as any);
+    const blockType = params.type as keyof typeof BlockMap;
+    const block = new BlockMap[blockType](blockType as any);
     // If prerender() exists on the block instance, run it.
     if ("prerender" in block) await block.prerender();
     // Return the block instance.

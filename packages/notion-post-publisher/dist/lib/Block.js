@@ -36,8 +36,8 @@ class Block {
             return new Block(params.type);
         }
         // Otherwise, pick a block from the map and return a new instance of it.
-        const blockParams = params;
-        const block = new BlockMap[blockParams.type](blockParams);
+        const blockType = params.type;
+        const block = new BlockMap[blockType](blockType);
         // If prerender() exists on the block instance, run it.
         if ("prerender" in block)
             await block.prerender();
