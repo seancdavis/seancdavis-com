@@ -39,9 +39,6 @@ const BlockMap = {
   video: VideoBlock,
 };
 
-logger.debug(Object.keys(BlockMap));
-logger.debug(Object.values(BlockMap));
-
 export type CreatableBlock =
   | Block
   | BulletedListItemBlock

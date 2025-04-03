@@ -21,8 +21,6 @@ const BlockMap = {
     toggle: blocks_1.ToggleBlock,
     video: blocks_1.VideoBlock,
 };
-logger_utils_1.logger.debug(Object.keys(BlockMap));
-logger_utils_1.logger.debug(Object.values(BlockMap));
 class Block {
     constructor(type) {
         this.type = type;
