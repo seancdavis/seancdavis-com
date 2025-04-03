@@ -1,7 +1,7 @@
-import { Post } from "./lib/Post";
-import { getPendingPageIds, markPageAsPublished } from "./utils/notion-utils";
 import chalk from "chalk";
-import { Logger } from "./lib/Logger";
+import { Post } from "./lib/Post";
+import { logger } from "./utils/logger-utils";
+import { getPendingPageIds, markPageAsPublished } from "./utils/notion-utils";
 
 /* ----- Types ----- */
 
@@ -21,8 +21,11 @@ type InputConfig = {
  */
 export async function publishPosts(config: InputConfig) {
   const pageIds = await getPendingPageIds();
-  const logger = new Logger();
-
+  logger.debug(
+    `Processing ${pageIds.length} pages${
+      pageIds.length > 0 ? ":\n  ⋅ " + pageIds.join("\n  ⋅ ") : "."
+    }`
+  );
   for (const pageId of pageIds) {
     try {
       const post = await Post.create(pageId);

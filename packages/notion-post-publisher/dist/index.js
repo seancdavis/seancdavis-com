@@ -4,10 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.publishPosts = publishPosts;
-const Post_1 = require("./lib/Post");
-const notion_utils_1 = require("./utils/notion-utils");
 const chalk_1 = __importDefault(require("chalk"));
-const Logger_1 = require("./lib/Logger");
+const Post_1 = require("./lib/Post");
+const logger_utils_1 = require("./utils/logger-utils");
+const notion_utils_1 = require("./utils/notion-utils");
 /* ----- Main Function ----- */
 /**
  * Finds Notion pages in with the state "Draft: Ready", converts them to
@@ -19,15 +19,15 @@ const Logger_1 = require("./lib/Logger");
  */
 async function publishPosts(config) {
     const pageIds = await (0, notion_utils_1.getPendingPageIds)();
-    const logger = new Logger_1.Logger();
+    logger_utils_1.logger.debug(`Processing ${pageIds.length} pages${pageIds.length > 0 ? ":\n  ⋅ " + pageIds.join("\n  ⋅ ") : "."}`);
     for (const pageId of pageIds) {
         try {
             const post = await Post_1.Post.create(pageId);
             await post.writeToFile(config.postsDir);
-            logger.success(`Added post: ${post.filename}`);
+            logger_utils_1.logger.success(`Added post: ${post.filename}`);
             if (!process.env.SKIP_NOTION_UPDATE) {
                 await (0, notion_utils_1.markPageAsPublished)(pageId, post.date, post.url);
-                logger.success(`Set notion page as published: ${post.title}`);
+                logger_utils_1.logger.success(`Set notion page as published: ${post.title}`);
             }
         }
         catch (err) {
