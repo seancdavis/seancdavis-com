@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Block = void 0;
+const logger_utils_1 = require("../utils/logger-utils");
 const blocks_1 = require("./blocks");
 const BlockMap = {
     bulleted_list_item: blocks_1.BulletedListItemBlock,
@@ -28,6 +29,7 @@ class Block {
         throw new Error(`Block not supported: ${this.type}`);
     }
     static async create(params) {
+        logger_utils_1.logger.debug(`Creating block: ${params.type}`);
         // If the block is not supported, return an instance of this class, a
         // generic block which throws an error on render.
         if (!Object.keys(BlockMap).includes(params.type)) {

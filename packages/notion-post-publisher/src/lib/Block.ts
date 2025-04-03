@@ -17,6 +17,7 @@ import type {
   NotionToggleBlock,
   NotionVideoBlock,
 } from "../types/notion";
+import { logger } from "../utils/logger-utils";
 
 import {
   BulletedListItemBlock,
@@ -105,6 +106,7 @@ export class Block {
   }
 
   static async create(params: NotionBlock): Promise<CreatableBlock> {
+    logger.debug(`Creating block: ${params.type}`);
     // If the block is not supported, return an instance of this class, a
     // generic block which throws an error on render.
     if (!Object.keys(BlockMap).includes(params.type)) {

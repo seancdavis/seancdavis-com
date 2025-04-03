@@ -9,5 +9,13 @@ class Logger {
     success(msg) {
         console.log(chalk_1.default.green.bold("[success]"), msg);
     }
+    debug(msg) {
+        if (process.env.DEBUG) {
+            console.log(chalk_1.default.blue.bold("[debug]"), msg);
+        }
+    }
+    error(msg) {
+        console.log(chalk_1.default.red.bold("[error]"), msg);
+    }
 }
 exports.Logger = Logger;
