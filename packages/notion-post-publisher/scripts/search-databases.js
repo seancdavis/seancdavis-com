@@ -6,7 +6,7 @@ const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
 (async () => {
   const response = await notion.search({
-    query: "playground",
+    query: "content",
     filter: {
       property: "object",
       value: "database",
