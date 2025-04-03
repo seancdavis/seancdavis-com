@@ -39,6 +39,9 @@ const BlockMap = {
   video: VideoBlock,
 };
 
+logger.debug(Object.keys(BlockMap));
+logger.debug(Object.values(BlockMap));
+
 export type CreatableBlock =
   | Block
   | BulletedListItemBlock
@@ -78,7 +81,7 @@ export class Block {
     }
     // Otherwise, pick a block from the map and return a new instance of it.
     const blockType = params.type as keyof typeof BlockMap;
-    const block = new BlockMap[blockType](blockType as any);
+    const block = new BlockMap[blockType](params as any);
     // If prerender() exists on the block instance, run it.
     if ("prerender" in block) await block.prerender();
     // Return the block instance.

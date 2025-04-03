@@ -21,6 +21,8 @@ const BlockMap = {
     toggle: blocks_1.ToggleBlock,
     video: blocks_1.VideoBlock,
 };
+logger_utils_1.logger.debug(Object.keys(BlockMap));
+logger_utils_1.logger.debug(Object.values(BlockMap));
 class Block {
     constructor(type) {
         this.type = type;
@@ -37,7 +39,7 @@ class Block {
         }
         // Otherwise, pick a block from the map and return a new instance of it.
         const blockType = params.type;
-        const block = new BlockMap[blockType](blockType);
+        const block = new BlockMap[blockType](params);
         // If prerender() exists on the block instance, run it.
         if ("prerender" in block)
             await block.prerender();
