@@ -26,15 +26,15 @@
     "button": false
   },
   {
-    "label": "Twitter",
-    "url": "https://twitter.com/seancdavis29",
-    "icon": "twitter",
+    "label": "Bluesky",
+    "url": "https://bsky.app/profile/seancdavis.com",
+    "icon": "bluesky",
     "button": false
   },
   {
-    "label": "Mastodon",
-    "url": "https://indieweb.social/@seancdavis",
-    "icon": "mastodon",
+    "label": "LinkedIn",
+    "url": "https://www.linkedin.com/in/seancdavis29/",
+    "icon": "linkedin",
     "button": false
   },
   {

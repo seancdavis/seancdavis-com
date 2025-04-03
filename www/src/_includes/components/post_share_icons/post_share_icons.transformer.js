@@ -7,12 +7,18 @@ const SocialLink = ({ icon, url, classes }) => {
 };
 
 module.exports = ({ base_url, page_url, title, classes = "" }) => {
-  const encodedTitle = encodeURIComponent(`${title} by @seancdavis29`);
   const fullUrl = `${base_url}${page_url}`;
   const encodedUrl = encodeURIComponent(fullUrl);
+  const encodedTwitterText = encodeURIComponent(`${title} by @seancdavis29`);
+  const encodedBlueskyText = encodeURIComponent(
+    `${title} by @seancdavis.com ${fullUrl}`
+  );
 
-  const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`;
-  let icons = [SocialLink({ icon: "twitter", url: twitterUrl, classes })];
+  const blueskyUrl = `https://bsky.app/intent/compose?text=${encodedBlueskyText}`;
+  let icons = [SocialLink({ icon: "bluesky", url: blueskyUrl, classes })];
+
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedTwitterText}&url=${encodedUrl}`;
+  icons.push(SocialLink({ icon: "twitter", url: twitterUrl, classes }));
 
   const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
   icons.push(SocialLink({ icon: "linkedin", url: linkedinUrl, classes }));

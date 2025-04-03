@@ -2,15 +2,18 @@
 {% include "layout/header.njk" %}
 
 <div class="py-12">
-  <div class="layout--post--grid mb-12">
+  <div class="mb-12 layout--post--grid">
     {# --- Left Column --- #}
-    <div><!-- --></div>
+    <div>
+      <!-- -->
+    </div>
 
     {# --- Middle Column --- #}
     <div>
-      <div class="layout--post--body text-lg max-w-3xl mx-auto bg-white shadow-sm">
+      <div class="max-w-3xl mx-auto text-lg bg-white shadow-sm layout--post--body">
         {% if image %}
-          {% image path=image, lg="832px" %}
+          {% image path = image,
+          lg = "832px" %}
         {% endif %}
 
         <div class="p-8">
@@ -18,27 +21,28 @@
             {% if topics.length > 0 %}
               <div class="mb-4 text-sm">
                 {% for topic in topics %}
-                  {% topic_badge topic=topic, classes="mr-1" %}
+                  {% topic_badge topic = topic,
+                  classes = "mr-1" %}
                 {% endfor %}
               </div>
             {% endif %}
-            <h1 class="text-4xl leading-snug mb-4 max-w-lg mx-auto">
+            <h1 class="max-w-lg mx-auto mb-4 text-4xl leading-snug">
               {{ title }}
             </h1>
             {% if contributor %}
               {% contributor contributor=contributor, classes="mb-4 justify-center" %}
             {% endif %}
             {% if description %}
-              <p class="text-xl mb-0 text-gray-700 max-w-2xl mx-auto">
+              <p class="max-w-2xl mx-auto mb-0 text-xl text-gray-700">
                 {{ description }}
               </p>
             {% endif %}
             {% if canonical_url %}
-              {% repost_note url=canonical_url  %}
+              {% repost_note url = canonical_url %}
             {% endif %}
           </div>
 
-          <div class="my-12 h-1 bg-gray-200 w-24 mx-auto"></div>
+          <div class="w-24 h-1 mx-auto my-12 bg-gray-200"></div>
 
           <div class="layout--post--content">
             {{ content | safe }}
@@ -49,7 +53,7 @@
 
     {# --- Right Column --- #}
     <div>
-      <div class="flex flex-col items-start sticky" style="top: 1rem;">
+      <div class="sticky flex flex-col items-start" style="top: 1rem;">
         {% post_share_icons
               base_url=seo_defaults.base_url,
               page_url=page.url,
@@ -61,11 +65,8 @@
 
   {# --- Connect --- #}
 
-  <div class="container text-center py-8">
+  <div class="container py-8 text-center">
     <h3 class="subheading">Let's Connect</h3>
-    {% social_link
-        link={ icon: "twitter", url: "https://twitter.com/messages/compose?recipient_id=23583938" },
-        classes="mx-3 bg-white shadow-sm" %}
     {% social_link
         link={ icon:"linkedin", url: "https://www.linkedin.com/in/seancdavis29/" },
         classes="mx-3 bg-white shadow-sm" %}
@@ -77,10 +78,10 @@
   {# --- Related Articles --- #}
 
   {% if (related_posts.length !== 0) and (env !== "test" or related_posts.length > 0) %}
-    <div class="max-w-md md:max-w-xl lg:max-w-7xl mx-auto px-4 py-12">
+    <div class="max-w-md px-4 py-12 mx-auto md:max-w-xl lg:max-w-7xl">
       <h3 class="subheading">Keep Reading</h3>
 
-      <div class="grid gap-4 grid-cols-1 lg:grid-cols-3">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
         {% for post in collections.posts | get_related_posts(related_posts, tags, page.fileSlug, content) %}
           {% post_card post=post, wrapperClasses="bg-white shadow-sm md:layout-horizontal lg:layout-expanded" %}
         {% endfor %}
