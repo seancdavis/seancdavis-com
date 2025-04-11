@@ -22,13 +22,4 @@ When asked to write a new blog post, write in the style of the markdown files fo
 - Don't try to use fancy words. Stick to terms and phrases I typically use.
 - Date new posts with today's date.
 - Don't stack headings. There should always be a paragraph (or even a short sentence) between headings.
-
-### AI disclosure
-
-Add the following disclosure to new posts:
-
-```md
----
-
-_Disclosure: AI tools were used to generate this post from an outline I wrote and specific rules I've defined based on my writing history and style._
-```
+- Add `ai: true` to the frontmatter

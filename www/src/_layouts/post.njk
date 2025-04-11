@@ -46,6 +46,14 @@
 
           <div class="layout--post--content">
             {{ content | safe }}
+            {% if ai %}
+              <hr>
+              <p>
+                <em>
+                  Disclosure: AI tools were used to generate this post from an outline I wrote and specific rules I've defined based on my writing history and style.
+                </em>
+              </p>
+            {% endif %}
           </div>
         </div>
       </div>
