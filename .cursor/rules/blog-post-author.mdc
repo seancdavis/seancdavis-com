@@ -21,4 +21,4 @@ When asked to write a new blog post, write in the style of the markdown files fo
 - Use `www/src/topics/*.md` to reference the options for topics to add to the post. Create new topics only when consistent with how I've used topics in the past.
 - Don't try to use fancy words. Stick to terms and phrases I typically use.
 - Date new posts with today's date.
-
+- Don't stack headings. There should always be a paragraph (or even a short sentence) between headings.
