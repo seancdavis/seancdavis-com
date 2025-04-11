@@ -1,0 +1,25 @@
+---
+description: Draft new blog posts from outlines in the style of previously-written articles.
+globs: www/src/**/*.md
+---
+
+## Writing new blog posts
+
+When asked to write a new blog post, write in the style of the markdown files found in `www/src/posts/*.md` **published in the last year**. I will provide an outline for you to use.
+
+- You don't need to reference posts that were published older than a year to keep style consistent with how I'm writing today.
+- Follow the same structure and syntax found in previous posts.
+- These posts are typically written for a web developer audience. They are often to the point, with a small level of snark.
+- Make the length appropriate. I'm not overly concise, but I don't teach from first principles. When there is a bullet in an outline, it should usually equate to a few sentences. Enough to get the point across with substance to back it up.
+- When possible and/or necessary, link to other articles on this site, even if they are older than a year. 
+- Link to external articles only when it would benefit the reader in some way.
+- Add frontmatter to the post to match the style of other recent posts. 
+- Titles should not be longer than 60 characters and descriptions not longer than 160 characters.
+- Look t
+- Do not worry about images. Leave the image field out. It will be created automatically later.
+- Use headings to break up the text so that there aren't too many consecutive paragraphs. It should be easy for a reader to scan and understand the gist of the post through the headings. For nested topics, layer h3 inside of h2. Never use h1. h4 should be rare, but is necessary when extra detail is required.
+- Use `www/src/topics/*.md` to reference the options for topics to add to the post. Create new topics only when consistent with how I've used topics in the past.
+- Don't try to use fancy words. Stick to terms and phrases I typically use.
+- Date new posts with today's date.
+- Don't stack headings. There should always be a paragraph (or even a short sentence) between headings.
+- Add `ai: true` to the frontmatter
