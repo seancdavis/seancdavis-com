@@ -1,11 +1,15 @@
 ---
 title: Why I started blogging again
 description: >-
-  After a two-year break from blogging, I'm back at it. Here's what led to the pause,
-  why I'm writing again, and seven benefits that come from regular writing.
+  After a two-year break from blogging, I'm back at it. Here's what led to the
+  pause, why I'm writing again, and seven benefits that come from regular
+  writing.
 tags:
   - inspiration
 ai: true
+image: /posts/250412/why-i-started-blogging-again-1CCBPvpK.png
+seo:
+  image: /posts/250412/why-i-started-blogging-again-HGKR2VDp--meta.png
 ---
 
 Writing is one of those things that is easy to put off. There's always something more urgent, something that feels more productive, trying to steal the time I use for writing. It takes constant vigilance to keep the guardrails in place to protect that time.
