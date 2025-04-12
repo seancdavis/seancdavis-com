@@ -30,7 +30,9 @@ We're going to build a simple waitlist application. Users can submit their email
 
 The demo is available at [full-stack-11ty.netlify.app](https://full-stack-11ty.netlify.app/), and the source code is on GitHub at [seancdavis/full-stack-11ty](https://github.com/seancdavis/full-stack-11ty). You can also click the button below to deploy the app to your Netlify account.
 
-{% post_image alt="", src="/uploads/250411/button.svg" %}
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/seancdavis/full-stack-11ty" target="_blank" rel="noopener noreferrer">
+  <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />
+</a>
 
 Let's walk through the process of building this thing using only 11ty and Netlify.
 
@@ -369,7 +371,7 @@ export default async function handler(req: Request, context: Context) {
         `<div class="feedback">${decodeURIComponent(feedback)}</div>`,
         {
           html: true,
-        },
+        }
       );
     },
   });
@@ -474,7 +476,7 @@ export default async function handler(req: Request, context: Context) {
   response.headers.set("Cache-Control", "public, max-age=0, must-revalidate");
   response.headers.set(
     "Netlify-CDN-Cache-Control",
-    "public, max-age=300, stale-while-revalidate=31536000, durable",
+    "public, max-age=300, stale-while-revalidate=31536000, durable"
   );
 
   // Create an HTML Rewriter instance with a transformer for the feedback element
@@ -485,7 +487,7 @@ export default async function handler(req: Request, context: Context) {
         `<div class="waitlist-count">There are ${waitlistEmails.length} people on the waitlist</div>`,
         {
           html: true,
-        },
+        }
       );
     },
   });
