@@ -1,0 +1,5 @@
+.component--dtn-button {
+  @apply inline-block mb-4 no-underline;
+
+  border: none !important;
+}
