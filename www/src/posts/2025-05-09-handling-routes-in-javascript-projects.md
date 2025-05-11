@@ -37,6 +37,8 @@ And then I'll import and use the routes in a page or component. Here's an exampl
 
 `src/components/Header.astro` {.filename}
 
+{% raw %}
+
 ```html
 ---
 import { ROUTES } from '@constants'
@@ -45,6 +47,8 @@ import { ROUTES } from '@constants'
 <!-- ... -->
 <a href="{{ ROUTES.dashboard }}">Dashboard</a>
 ```
+
+{% endraw %}
 
 ### Using TypeScript for consistency
 
@@ -87,6 +91,8 @@ In this case, you're always calling a function to have a route string returned, 
 
 `src/components/Header.astro` {.filename}
 
+{% raw %}
+
 ```html
 ---
 import { ROUTES } from '@constants'
@@ -98,6 +104,8 @@ const userId = await getCurrentUser()
 <a href="{{ ROUTES.dashboard() }}">Dashboard</a>
 <a href="{{ ROUTES.users(userId) }}">My Profile</a>
 ```
+
+{% endraw %}
 
 ### Structure routes by type
 
@@ -138,14 +146,14 @@ Or perhaps you'd choose to have repeatable groups that forced you into a consist
 
 ```js
 type RouteGroup = {
-  view: (param1: string) => string;
-  edit: (param1: string) => string;
-  create: string;
+  view: (param1: string) => string,
+  edit: (param1: string) => string,
+  create: string,
 };
 
 type RoutesConfig = {
-  static: Record<string, string>;
-  users: RouteGroup;
+  static: Record<string, string>,
+  users: RouteGroup,
 };
 
 export const ROUTES: RoutesConfig = {
