@@ -8035,10 +8035,10 @@ mute-stream@0.0.7:
   resolved "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.7.tgz"
   integrity sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=
 
-nanoid@<4.0.0:
-  version "3.3.10"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.10.tgz#7bc882237698ef787d5cbba109e3b0168ba6e7b1"
-  integrity sha512-vSJJTG+t/dIKAUhUDw/dLdZ9s//5OxcHqLaDWWrW4Cdq7o6tdLIczUkMXt2MBNmk6sJRZBZRXVixs7URY1CmIg==
+nanoid@<6.0.0:
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-5.1.6.tgz#30363f664797e7d40429f6c16946d6bd7a3f26c9"
+  integrity sha512-c7+7RQ+dMB5dPwwCp4ee1/iV/q2P6aK1mTZcfr1BTuVlyW9hJYiMPybJCcnBlQtuSmTIWNeazm/zqNoZSSElBg==
 
 nanoid@^3.3.4:
   version "3.3.4"
