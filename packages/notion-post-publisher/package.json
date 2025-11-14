@@ -16,7 +16,7 @@
     "chalk": "<5.0.0",
     "date-fns": "^4.1.0",
     "fast-glob": "^3.3.3",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.1.1",
     "prettier": "^3.5.3",
     "slugify": "^1.6.6"
   },

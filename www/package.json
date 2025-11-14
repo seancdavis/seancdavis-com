@@ -31,7 +31,7 @@
     "jest": "^27.5.1",
     "jest-image-snapshot": "^5.1.0",
     "jest-puppeteer": "^6.2.0",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.1.1",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.5",
     "markdown-it-attrs": "^4.1.6",
