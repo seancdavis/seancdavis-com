@@ -1,10 +1,13 @@
 ---
 title: Celebrating My First Half Marathon
 description: Reflections on running and completing my first half marathon.
-date: 2025-05-15
+date: 2025-05-15T00:00:00.000Z
 ai: true
 topics:
   - inspiration
+image: /posts/250515/celebrating-my-first-half-marathon-tcdvyBi9.png
+seo:
+  image: /posts/250515/celebrating-my-first-half-marathon-eV5RlNhh--meta.png
 ---
 
 ## Sports Kid, Not a Runner
