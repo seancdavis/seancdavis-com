@@ -7,6 +7,9 @@ tags:
   - developer-advice
   - inspiration
 ai: true
+image: /posts/251118/when-ai-finally-clicked-for-me-ESLpQCjx.png
+seo:
+  image: /posts/251118/when-ai-finally-clicked-for-me-rze0KOeM--meta.png
 ---
 
 2025 has been a challenging year for me. But somewhere in the middle of all that chaos, something shifted. AI went from feeling like an existential threat to my career to sparking the kind of excitement I haven't felt in years.
