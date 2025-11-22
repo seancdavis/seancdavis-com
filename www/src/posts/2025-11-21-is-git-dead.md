@@ -1,70 +1,75 @@
 ---
-title: Is Git Dead?
-description: Git isn't going anywhere, but millions of people are building for the web without it. What does that mean for the future?
+title: Is Git dead?
+description: Git may seem timeless, but millions of people are building for the web without it.
 tags:
+  - ai
   - git
-  - developer-advice
-ai: true
 ---
 
-Is Git dead?
+_Is Git dead?_
 
-That's a dramatic title, so let's get the first thing out of the way: the answer is no.
+Yeah, I know. Click bait. So let's get the answer out there right away: _No. At least not yet._
 
-## Git is very much alive
+## Git is thriving
 
-Being at GitHub Universe last month really solidified that for me. There are all types of developers out there — not just 17 million front-end JavaScript developers, but millions and millions more who use Git for code version control.
+Being at GitHub Universe last month reaffirmed for me that Git is very much alive. There may be 17 million JavaScript developers, but there are millions more who use Git for code version control. (From what I could find, this is somewhere between 100-150 million developers worldwide.)
 
-As a result, Git has become the core of the majority of developer workloads. That foundation really comes from Git because it's been, for the last 15 or so years, the primary mechanism through which we've moved code around the internet. It's that fundamental trigger of "something has changed, and now we need to do something as a result of it."
+Git is at the core of developer workflows. For the last 15 or so years, Git has been the primary mechanism through which we've moved code around the internet. It's that fundamental IFTTT trigger: _something has changed in the code (or content), and now we need to **do something else** as a result of the change._
 
-We can see how rich that space is and how much potential there is by looking at all of the stuff that GitHub is working on. I always say: if Git is the foundation of this and GitHub is really the platform where most developer workflows are rooted, then no — it's not going away. Not anytime soon, at least. And I think we're going to see some really cool and useful flows that have Git at their foundation.
+We can see how rich that space is and how much potential there is by looking at [everything GitHub is working on](https://github.com/events/universe/recap).
 
-## But let's be honest: Git is goofy
+With Git as the foundation of these workflows, and GitHub as the most popular platform that enables the work to happen, then no. Git is not dead. Not anytime soon, at least. (In fact, just the opposite. I think we're going to see some really cool and creative uses of AI workflows with Git as their foundation.)
 
-Let's admit it — Git is a little goofy. Especially for those new to development, it's just got a lot of concepts that are hard to grasp when you're already just trying to understand how code works.
+## Git is not for everyone
 
-Now couple that with another reality: there are millions and millions of people today building websites through AI agents who have no understanding of what the code actually does and how it works.
+For those of us who have been around web development for awhile, Git is second nature. But if you look back to the those early days, you may recall Git feeling a little ... goofy. It is version control, but the concepts unique to Git take a little getting used to.
 
-Within that group, there's a spectrum of interest in understanding the underlying technology. Some people are actually trying to build things for real — for business or to improve in some way professionally. Even if they don't necessarily want to be developers, they may want to understand what's actually happening.
+Meanwhile, LLMs and AI coding agents have opened up web development to an order of magnitude more people — many of them who have no understanding of what the code actually does and how it works.
 
-On the other end of the spectrum, there are people who just find it really cool to spin things up, or they want to build their own website. They're not doing it for financial, professional, or career gain — even indirectly. It might just be for fun.
+Within that group, there's a spectrum of interest in understanding the underlying technology. Some people are actually trying to build things for professional or personal improvement or accomplishment. Even if they don't necessarily want to be developers, they may want to understand how things are working.
+
+On the other end of the spectrum, there are people who just find it really cool to spin things up, or they want to build their own website. They're not doing it for financial, professional, or career gain, even indirectly. It might just be for fun. These folks likely have no interest in learning Git at all. Version control is table stakes and achieved through UI and chat interactions.
 
 ## A new opportunity for Git education
 
-I think there's a subset of new developers today who would be open to learning Git. And I think there is an opportunity to rethink how we introduce this new cohort to Git in a way that can enable them to be successful — because they might not necessarily actually touch it directly, but often through an agent.
+For those that do want to understand how things work under the hood, there is an opportunity to rethink how we introduce them to Git in a way they can grasp and apply quickly and successfully. (This may mean they don't necessarily actually touch Git directly, but through an agent.)
 
-What becomes more important than knowing the commands is knowing about the paradigm and the way it works. We don't have to memorize the commands, but we can understand the language to use to instruct our agents on what to do using Git workflows. I see a really good future in that sense.
+What becomes more important than knowing the commands is understanding the unique paradigms of Git to be able to bend it to new/custom workflows. To not memorize the commands, but to use natural language to instruct agents to leverage the power of the web to achieve their goals.
 
-## The growing non-Git cohort
+## Version control for vibe coders
 
-But there's a big portion of the spectrum that doesn't actually even care and won't necessarily find it useful. I think it could help them, but there's a growing contingent of folks that, even if they could benefit from Git, might not need it.
+But how do we serve the folks that don't care how things work, but just want them to work?
 
-And I think that's really interesting because, for 10 years, the vast majority of Netlify users used Git as that foundation. Git workflows were really what drove activity and usage of Netlify. And there have always been non-Git workflows for Netlify — they just haven't been super prevalent.
+I'd suspect they, too, would want to have version control, and that they'd expect to interact with versions through a UI or chat interface.
 
-Well, we're actually seeing a shift there. We're seeing this desire for more and more people not wanting or needing Git. And I think that's really interesting.
+Does that mean that Git is still the foundation they're working with?
 
-## What are our options?
+I don't know. But I think we have to consider a world where the answer may be _no_.
 
-We have options here.
+## Opening paths for exploration
 
-### Abstraction layers
+What's really exciting to me about being at Netlify today is that much of our job right now is opening paths for exploration. About providing a platform for creators across the developer spectrum to build for the web in the way that makes the most sense for them.
 
-Is there a layer of abstraction where Git is still the foundation, and then we introduce tooling to make the way we interact with version control simpler for people who don't want or need to understand how code works? People who don't have any interest in having a GitHub account and might not need a GitHub account?
+### Git workflows on Netlify
 
-To me, that's a really interesting concept: people might actually just skip GitHub. You can have this full flow of how you build your website, and you might not actually need GitHub to be part of it — while also not being the developer who understands how the code works.
+For the last decade, the vast majority of Netlify users used Git as the foundation of CI/CD workflows:
 
-This has always been possible. It's just that it hasn't really made sense for developers to do it because Git is so powerful. But now there are other tools.
+- Push to GitHub and, _voila!_, a few minutes later, your site is live in production!
+- Open a pull request, get a preview URL for your changes, and share it with your team for feedback.
 
-### Alternatives to Git
+I've been a Netlify user for many years, and relied on these flows for dozen (maybe hundreds) of projects. It's perfect for me.
 
-Maybe there's actually not a need for Git in every scenario. Maybe we have other ways that we can simplify version control without this tool.
+### Non-Git workflows on Netlify
 
-## The bottom line
+Meanwhile, there have always been non-Git workflows for Netlify:
 
-So is Git dead? No, not by a long shot.
+- [Drag and drop a folder](https://app.netlify.com/drop) and your site immediately deploys. No Git.
+- Run `netlify deploy --prod` with the [Netlify CLI](https://docs.netlify.com/cli/get-started/) in a local folder and your site is live, while Netlify knows nothing of your use (or non-use) of Git.
 
-Will it ever die? I don't know.
+## The excitement is in the adventure
 
-Will it be necessary for building for the web in the future? Probably not.
+I love being in this space right now because we don't need to know where we're going. We can simply open up paths for people to explore and see where they lead.
 
-And I would argue that there's a real opportunity for us to think about tooling and education around people who don't and wouldn't value Git — because they don't need it.
+Does that mean the future of web development is a future without Git?
+
+I guess we'll find out.
