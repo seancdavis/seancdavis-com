@@ -151,7 +151,6 @@ title: [Max 60 characters]
 description: [Max 160 characters]
 tags:
   - [use existing topics from www/src/topics/*.md]
-ai: true
 ---
 ```
 
@@ -178,7 +177,6 @@ Before finalizing a post, verify:
 - [ ] Frontmatter is complete and accurate
 - [ ] Title ≤ 60 characters
 - [ ] Description ≤ 160 characters
-- [ ] Added `ai: true` to frontmatter
 
 ### Final Notes
 
