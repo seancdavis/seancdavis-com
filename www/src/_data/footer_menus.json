@@ -29,11 +29,15 @@
     "links": [
       {
         "label": "Twitter",
-        "url": "https://twitter.com/seancdavis29"
+        "url": "https://x.com/seancdavis29"
       },
       {
         "label": "YouTube",
         "url": "https://www.youtube.com/channel/UCskZ3MNbeGSVyOTL0L5ooww"
+      },
+      {
+        "label": "Bluesky",
+        "url": "https://bsky.app/profile/seancdavis.com"
       },
       {
         "label": "GitHub",
