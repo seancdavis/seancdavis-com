@@ -1,9 +1,14 @@
 ---
 title: Is Git dead?
-description: Git may seem timeless, but millions of people are building for the web without it.
+description: >-
+  Git may seem timeless, but millions of people are building for the web without
+  it.
 tags:
   - ai
   - git
+image: /posts/251121/is-git-dead-EWBAWAF_.png
+seo:
+  image: /posts/251121/is-git-dead-qEjy9xPv--meta.png
 ---
 
 _Is Git dead?_
