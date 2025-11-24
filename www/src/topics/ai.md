@@ -1,5 +1,5 @@
 ---
-title: Ai
+title: AI
 pagination:
   data: collections.ai
 ---

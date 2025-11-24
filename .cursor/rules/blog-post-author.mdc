@@ -20,10 +20,12 @@ Before writing a post, read 3-5 recent posts (within the last year) from `www/sr
 - **Second person address**: Speak directly to the reader using "you"
 - **Contractions**: Always use them naturally (do not → don't, I am → I'm, you will → you'll)
 - **Honesty and vulnerability**: Admit mistakes, share struggles, acknowledge when something didn't work
+- **Self-aware and playful**: Call out your own choices. If using clickbait, acknowledge it: "Yeah, I know. Click bait."
 - **Confident but humble**: Frame advice as "here's what I do" or "this is what worked for me", not prescriptive rules
 - **Occasional profanity**: Use sparingly and only when it feels natural (see: "Does Your Code Spark Joy?" - "So I got the fuck out")
 - **No excessive praise**: Avoid over-the-top validation. Be direct and objective.
 - **Humor**: Light touches of wit and self-deprecation, but never forced
+- **Optimism and curiosity**: End on forward-looking, curious notes rather than declarative conclusions. "I guess we'll find out" over "The bottom line"
 
 **What to avoid:**
 - Don't sound like marketing copy or sales material
@@ -42,7 +44,9 @@ Before writing a post, read 3-5 recent posts (within the last year) from `www/sr
 
 **Emphasis techniques:**
 - Italics for emphasis or introducing key concepts: _static_, _adapters_, _why_
+- Italics for key phrases and questions at the start of posts: "_Is Git dead?_"
 - Bold for important takeaways or statements: **The only way to get better is to begin.**
+- Combine bold and italic within sentences for layered emphasis: "_something changed, and now we need to **do something else**_"
 - Use rhetorical questions to engage: "Why does it matter to you?", "What would Marie Kondo say?"
 
 **Common patterns:**
@@ -50,6 +54,8 @@ Before writing a post, read 3-5 recent posts (within the last year) from `www/sr
 - "Pro tip:" for quick, actionable advice
 - Personal anecdotes to introduce topics
 - "I love [this approach] because..." when explaining preferences
+- Acknowledge dramatic or clickbait choices upfront: "Yeah, I know. Click bait."
+- Express uncertainty confidently: "I don't know" or "I guess we'll find out"
 
 ### Structure & Formatting
 
@@ -64,9 +70,12 @@ Before writing a post, read 3-5 recent posts (within the last year) from `www/sr
 - Use ## for main sections (never use h1)
 - Use ### for subsections when needed
 - h4 should be rare
+- **Always use sentence case** for all headings (including the title): "Version control for vibe coders" not "Version Control for Vibe Coders"
 - Headings should be descriptive and scannable
+- Be creative with heading names - choose engaging, personality-filled phrases over generic ones
 - Never stack headings - always have at least a sentence between them
-- Good heading examples: "Benefits of Regular Writing", "Use Exit Conditions Simplify and Flatten Code", "Getting Started"
+- Good heading examples: "Benefits of regular writing", "Version control for vibe coders", "The excitement is in the adventure", "Getting started"
+- Avoid generic headings like "The bottom line", "Conclusion", "What are our options?" when more creative alternatives exist
 
 **Code blocks:**
 - Use proper syntax highlighting (```ts, ```js, etc.)
@@ -83,9 +92,12 @@ Before writing a post, read 3-5 recent posts (within the last year) from `www/sr
 
 **Other elements:**
 - Link to other posts on the site frequently (even older ones when relevant)
-- Link to external resources only when they add real value
+- Link to external resources when they add real value (e.g., GitHub Universe recap, official docs)
 - Use blockquotes for quotes from others
 - Include specific examples before generalizing
+- Add concrete data and numbers when relevant: "100-150 million developers worldwide", "dozens (maybe hundreds) of projects"
+- Provide real product examples and features: specific CLI commands, drag-and-drop URLs, actual workflows
+- Reference personal timeline and experience: "I've been a Netlify user for many years"
 
 ### Content Approach
 
@@ -103,6 +115,13 @@ Before writing a post, read 3-5 recent posts (within the last year) from `www/sr
 - Acknowledge different paths: "This worked for me, but..."
 - End with encouragement
 - Combine practical advice with inspiration
+
+**Opinion/thought pieces:**
+- Share what excites you about the current moment or trend
+- Acknowledge uncertainty about the future: "I don't know" is a valid answer
+- End with curiosity and open questions rather than definitive conclusions
+- Use specific observations from your work: "What's really exciting to me about being at Netlify today is..."
+- Frame trends as opportunities for exploration rather than problems to solve
 
 **Key principles:**
 - Specific before general (show concrete example first, then extract principle)
@@ -135,6 +154,9 @@ Before writing a post, read 3-5 recent posts (within the last year) from `www/sr
 - "That's fine. Great, really!" (to validate alternatives)
 - "Look..." (to get direct)
 - "It's worth noting..."
+- "What's really exciting to me about..."
+- "I guess we'll find out"
+- "Yeah, I know..."
 
 **Common phrases to avoid:**
 - "Leverage" (use "use" instead)
@@ -147,17 +169,18 @@ Before writing a post, read 3-5 recent posts (within the last year) from `www/sr
 
 ```yaml
 ---
-title: [Max 60 characters]
+title: [Max 60 characters, sentence case]
 description: [Max 160 characters]
 tags:
   - [use existing topics from www/src/topics/*.md]
-ai: true
 ---
 ```
 
+- **Title uses sentence case**: "Is Git dead?" not "Is Git Dead?"
 - Do not include image fields (these are generated separately)
 - Date new posts with today's date in the filename: YYYY-MM-DD-title-slug.md
 - Use topics consistently with past usage
+- Think broadly about relevant tags - if the post discusses AI agents, include the "ai" tag even if the main topic is something else
 - Create new topics only when truly necessary and consistent with existing patterns
 
 ### Quality Checklist
@@ -170,15 +193,20 @@ Before finalizing a post, verify:
 - [ ] Avoided jargon and buzzwords without context
 - [ ] Mixed short and long sentences
 - [ ] Used em dashes for asides
-- [ ] Headings are descriptive and scannable
+- [ ] **All headings use sentence case** (including title)
+- [ ] Headings are descriptive, scannable, and creative (avoid generic phrases)
 - [ ] No stacked headings (always text between them)
+- [ ] Used italics for emphasis on key phrases
+- [ ] Added concrete numbers and data where relevant
+- [ ] Included specific product examples and commands when applicable
 - [ ] Code blocks have syntax highlighting when relevant
 - [ ] Links to other site posts where appropriate
-- [ ] Ended with encouragement or call to action
+- [ ] Links to valuable external resources when they add context
+- [ ] Ended with curiosity, encouragement, or forward-looking statement (not generic conclusion)
 - [ ] Frontmatter is complete and accurate
-- [ ] Title ≤ 60 characters
+- [ ] Title ≤ 60 characters and uses sentence case
 - [ ] Description ≤ 160 characters
-- [ ] Added `ai: true` to frontmatter
+- [ ] Considered all relevant tags (not just the obvious main topic)
 
 ### Final Notes
 

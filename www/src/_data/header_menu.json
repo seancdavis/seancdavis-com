@@ -26,15 +26,15 @@
     "button": false
   },
   {
-    "label": "Bluesky",
-    "url": "https://bsky.app/profile/seancdavis.com",
-    "icon": "bluesky",
+    "label": "Twitter",
+    "url": "https://x.com/seancdavis29",
+    "icon": "twitter",
     "button": false
   },
   {
-    "label": "LinkedIn",
-    "url": "https://www.linkedin.com/in/seancdavis29/",
-    "icon": "linkedin",
+    "label": "YouTube",
+    "url": "https://www.youtube.com/channel/UCskZ3MNbeGSVyOTL0L5ooww",
+    "icon": "youtube",
     "button": false
   },
   {
