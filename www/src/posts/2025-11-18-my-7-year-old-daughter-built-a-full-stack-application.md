@@ -19,19 +19,19 @@ The more I think about this, the more it blows my mind.
 
 Here's the story of how my kids' candy haul became this interactive trick-or-treat tracker.
 
-{% post_image alt="", src="/uploads/251118/image.png" %}
+{% post_image alt="Candy haul on the dining room table", src="/uploads/251118/251124-candy-haul.png" %}
 
-{% post_image alt="", src="/uploads/251118/image.png" %}
+{% post_image alt="Trick or treat tracker - picture graph demo", src="/uploads/251118/251124-demo-picture-graph.png" %}
 
 First things first. She sorted and grouped all the candy, then counted and recorded the haul.
 
 I did actually experiment to see if I could get a model to read this image and convert to a data table, but after a few tries, we determined it'd be faster to count manually.
 
-{% post_image alt="", src="/uploads/251118/image.png" %}
+{% post_image alt="Candy haul paper record sheets for counting", src="/uploads/251118/251124-record-sheets.png" %}
 
 We're ready! Her first prompt to Bolt: "I want you to build a candy website" ...
 
-{% post_image alt="", src="/uploads/251118/ssstwitter.com_1763490506708.gif" %}
+{% post_image alt="Prompt to build a candy website (first try)", src="/uploads/251118/251124-first-try.gif" %}
 
 And, well, Bolt built a candy website. A full-fledged e-commerce website to sell candy.
 
@@ -39,11 +39,11 @@ But not the bar graph visualization she was aiming for.
 
 So we talked a bit about context and instruction detail. I suggested she start over.
 
-{% post_image alt="", src="/uploads/251118/image.png" %}
+{% post_image alt="Candy e-commerce website screenshot", src="/uploads/251118/251124-candy-store.png" %}
 
 Next attempt: "I went trick-or-treating and I want you to build a bar graph of candy" ...
 
-{% post_image alt="", src="/uploads/251118/MEoDJw8uvyzSlTz2.gif" %}
+{% post_image alt="Prompt to build a trick or treat tracker (second try)", src="/uploads/251118/251124-second-try.gif" %}
 
 We let it cook 🍳 and I was shocked to find that it built essentially what we wanted!
 
@@ -51,7 +51,7 @@ There was no data at first, but it wired up a database and we were rolling. She 
 
 About 15 minutes later, we had essentially the results we were hoping for.
 
-{% post_image alt="", src="/uploads/251118/image.png" %}
+{% post_image alt="Trick or treat tracker with admin operations", src="/uploads/251118/251124-second-try.png" %}
 
 That's more or less the end of the story, though there were a few other things we worked on, and I stepped in to provider the finer details to get Bolt working right.
 
@@ -59,9 +59,9 @@ That's more or less the end of the story, though there were a few other things w
 - Making the bar graph vertical was probably the hardest part. And I doubt it scales well. It took a lot of coercing Bolt specifically for this data set. (I also used that change as an excuse to remove the % values, which didn't make a lot of sense.)
 - She wanted to share it with her class, so write access couldn't be available from the home page. I also helped with suggesting the write access go in an admin route with simple auth. That was surprisingly easy.
 
-{% post_image alt="", src="/uploads/251118/image.png" %}
+{% post_image alt="Complete - picture graph view", src="/uploads/251118/251124-public-picture-graph.png" %}
 
-{% post_image alt="", src="/uploads/251118/image.png" %}
+{% post_image alt="Complete app - bar graph view", src="/uploads/251118/251124-demo-bar-graph.png" %}
 
 The power of these tools is undeniable. They aren't perfect. And it takes practice to understand which tools are right for which jobs.
 
