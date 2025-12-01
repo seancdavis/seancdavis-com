@@ -6,6 +6,11 @@ description: >-
 tags:
   - ai
   - bolt
+image: >-
+  /posts/251124/my-7-year-old-daughter-built-a-full-stack-application-0gVXu2Fx.png
+seo:
+  image: >-
+    /posts/251124/my-7-year-old-daughter-built-a-full-stack-application-Xvqso2PD--meta.png
 ---
 
 My 7-year-old daughter built a full-stack application. Mostly by herself.
