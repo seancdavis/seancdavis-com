@@ -6665,19 +6665,17 @@ jest-haste-map@^29.7.0:
   optionalDependencies:
     fsevents "^2.3.2"
 
-jest-image-snapshot@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.npmjs.org/jest-image-snapshot/-/jest-image-snapshot-5.1.0.tgz"
-  integrity sha512-GpTaiJehsVeMRvszSuMkRK0ODSHxr31zalk3qoHVqHKGztgYlJ+Y6AheWHU6azODuoVpMQH52zY/sxri9d/GaA==
+jest-image-snapshot@^6.5.1:
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/jest-image-snapshot/-/jest-image-snapshot-6.5.1.tgz#cc714aff86187ecf38f90c506b443769aff87499"
+  integrity sha512-xlJFufgfY2Z4DsRsjcnTwxuynvo1bKdhf4OfcEftNuUAK+BwSCUtPmwlBGJhQ0XJXfm9JMAi/4BhQiHbaV8HrA==
   dependencies:
-    chalk "^1.1.3"
+    chalk "^4.0.0"
     get-stdin "^5.0.1"
     glur "^1.1.2"
     lodash "^4.17.4"
-    mkdirp "^0.5.1"
     pixelmatch "^5.1.0"
     pngjs "^3.4.0"
-    rimraf "^2.6.2"
     ssim.js "^3.1.1"
 
 jest-jasmine2@^27.5.1:
@@ -9870,7 +9868,7 @@ rimraf@3.0.2, rimraf@^3.0.0, rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-rimraf@^2.6.1, rimraf@^2.6.2, rimraf@^2.6.3, rimraf@^2.7.1:
+rimraf@^2.6.1, rimraf@^2.6.3, rimraf@^2.7.1:
   version "2.7.1"
   resolved "https://registry.npmjs.org/rimraf/-/rimraf-2.7.1.tgz"
   integrity sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==
