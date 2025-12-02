@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@notionhq/client": "^2.3.0",
-    "@prettier/sync": "^0.5.2",
+    "@prettier/sync": "^0.6.1",
     "aws-sdk": "^2.1692.0",
     "chalk": "<5.0.0",
     "date-fns": "^4.1.0",
