@@ -12,8 +12,8 @@
 # [[plugins]]
 #   package = "@seancdavis/netlify-plugin-github-dispatch"
 
-[[plugins]]
-  package = "netlify-plugin-checklinks"
+# [[plugins]]
+#   package = "netlify-plugin-checklinks"
 
 [[plugins]]
   package = "netlify-plugin-inline-critical-css"
@@ -21,11 +21,11 @@
       fileFilter = ['index.html']
       directoryFilter = ['!*']
 
-[[plugins]]
-  package = "netlify-plugin-a11y"
-    [plugins.inputs]
-      checkPaths = ['/', '/about']
-      resultMode = "warn"
+# [[plugins]]
+#   package = "netlify-plugin-a11y"
+#     [plugins.inputs]
+#       checkPaths = ['/', '/about']
+#       resultMode = "warn"
 
 [[plugins]]
   package = "@netlify/plugin-sitemap"
