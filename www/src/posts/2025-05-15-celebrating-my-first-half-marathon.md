@@ -1,9 +1,7 @@
 ---
 title: Celebrating My First Half Marathon
 description: >-
-  How I went from hating running to completing my first half marathon, and what
-  I learned about myself along the way.
-date: 2025-05-15T00:00:00.000Z
+  After only running more than a 5k once in my life, this is the journey to training and running a half marathon.
 ai: true
 tags:
   - inspiration
@@ -12,55 +10,82 @@ seo:
   image: /posts/250515/celebrating-my-first-half-marathon-eV5RlNhh--meta.png
 ---
 
-I never thought I'd call myself a runner. For most of my life, running was something I did on the way to doing something else—chasing a ball, getting to a base, avoiding a tackle. Running for the sake of running? That was never the plan.
+I never thought I'd call myself a runner. For most of my life, I hated running without _something else_ attached to it. Running was for catching a ball, getting to a base, avoiding a tackle.
 
-## Growing Up in Sports
+## Growing up in and around sports
 
-I played sports through high school and was decent at it. The practices were brutal, though. Running was always the punishment, the conditioning, the thing we had to endure before we got to the good stuff. I ran track as a sprinter, but cross country never appealed to me.
+My childhood was sports. Playing and watching sports was part of everyday life. And although I never really had the physical build to be great, I found some success and spent most of my high school years around football.
 
-There's a story about trying out for the high school baseball team that still sticks with me. The tryout required running five miles in 35 minutes—seven-minute miles on a closed course. For baseball. A sport where you can be overweight and successful, where running is maybe the fourth or fifth most important skill. A friend who couldn't come close to that time made the team because he was a left-handed pitcher, which the team needed.
+Over all those years, there's a story that stays stuck in my mind while trying out for the baseball team. The tryout required running five miles in 45 minutes. Why was that necessary? And why did they still let the kid who missed the mark by several minutes compete? That's another story.
 
-That kind of thing shapes how you see running. It was never something I did for enjoyment.
+But I did it. And, to my knowledge, it's the only time before August 2024 that I ran more than a 5km (~3 miles) at one time, while not also doing _something else_.
 
-## Something Shifted
+## The first shift: a mental health outlet
 
-Over the years, I picked up running occasionally and always put it back down. It hurt. Breathing was hard. My body ached. There was no joy in it, just a means to an end—usually burning calories or trying to get in better shape.
+Over the years, I picked up running occasionally and always put it back down, usually pretty quickly. It hurt. Breathing was hard. My body ached. There was no joy in it, just a means to an end — usually trying to burn calories more productively.
 
-Then, in August 2024, something changed. I went for a run without really knowing why. It still hurt. Breathing was still hard. I only made it about two miles. But my brain quieted down in a way it hadn't before.
+In August 2024, something changed. I went for a run without really knowing why. It still hurt. Breathing was still hard. I only made it about two miles. But my brain, which had been yelling at me all day, quieted down a bit. It was at peace in a way it hadn't been in many years.
 
-The pain became an outlet. I could shut off the constant mental chatter and focus on how my body felt. It wasn't fun, exactly, but it was interesting. It felt like a mental health practice disguised as exercise.
+That pain became an outlet. I could shut off the constant mental chatter and focus on how my body felt. It wasn't fun, exactly, but it was effective. It was a mental health outlet during a time when I needed one.
 
-## Getting Serious
+## Two early milestones to set the stage for the half
 
-I registered for a 7K race—about four and a half miles. After finishing that, I experimented with longer distances. The first time I ran five miles, I came home and just stood there for a moment, catching my breath, thinking: I've never done that before by choice.
+After about a month of running these short distances every few days, I registered for a 7k race (~4.5 miles), mostly for the post-race beers. I still had no idea what I was doing, and I'd mostly been running 2-3 miles at a time. But I finished! And the energy at the race was exhilarating! 
 
-For someone who had never willingly run that far, it felt like a massive accomplishment. And that's when I realized this could be sustainable.
+Feeding off of that high, I experimented with longer distances. The first time I ran five miles, I came home and just stood in front yard for a moment, catching my breath and thinking, _I've never done that before by choice._
 
-I started talking to runners I knew, asking for advice. Two things changed everything:
+For someone who had never willingly run that far, it felt like a massive accomplishment. Far more so than the race. That was the moment I realized this could be sustainable.
 
-1. **Get proper shoes.** I'd been putting this off, but it matters.
-2. **You don't have to go fast.** Learning to slow down, control my breathing, and manage my heart rate transformed the experience.
+## The three essentials (for me)
 
-## Setbacks Along the Way
+So I started talking to runners I knew, asking for advice to help make it sustainable (given I still didn't really know what I was doing). Looking back on it now, there were three moments that really stood out.
 
-Right after I finally bought real running shoes—right when I was getting serious—my knee started hurting. I remember a run over the Christmas holiday at my in-laws' house where I had to stop at four miles because the pain was too much.
+### Getting proper shoes
 
-A doctor visit and a few weeks off later, I learned I needed to switch up the muscles I was using. It took time and several painful runs to get back on track.
+My younger brother is a lifelong runner, and one of the first things he told me was to get proper shoes. Not just running shoes, but to go get shoes made to fit my body. And to max them out at 500 miles. That and stretching being the two things biggest factors in staving off injuries.
 
-I also dealt with a surprising amount of anxiety before runs. Figuring out the right time of day, what to eat, how to plan my week—it all took trial and error. I started planning my runs two weeks out, with a long run each week and a gradual increase in total mileage.
+The new shoes felt really goofy. But I felt the difference almost immediately.
 
-## Race Day
+### Treating asthma
 
-By the time race day arrived, I was ready. I'd run 12 miles once and 11 miles another time. My plan was conservative—nine-minute miles, finish in about two hours.
+I've had "light asthma" for years, but it only really seemed to flare up at night. I just happened to be at the doctor at mentioned that I was running more and asked about using the inhaler for recovery.
 
-I blew that out of the water.
+The doc told me to hit it ahead of time. _You have asthma_ was the hint. For some reason, it never occurred to me that maybe running actually was harder (and less enjoyable) for me because my breathing is more difficult. 
 
-The race itself was a completely different experience than a 5K. The energy, the distance, the accomplishment at the end—it was an order of magnitude different. I set a distance PR, and I already know I'll do a marathon someday. Not immediately, but it's on the horizon.
+The first time I hit the inhaler before a run was like I had a super power. I had _no idea_ how much extra effort my lungs were giving just to keep me going.
 
-## What Running Means Now
+### Slowing down
 
-I've changed over the past several months. Something that started as a way to quiet my brain has become a practice I genuinely look forward to. There's a part of me now that didn't exist before—a runner's identity that still feels strange to claim.
+I did a causual beer run a few months later. A friend of a friend is an ultra running competitor (does those competitions that last days). But I loved talking to him about getting more into running, and I asked his advice.
 
-I'm not going to over-analyze it. I'm just going to keep running, keep learning, and enjoy the process. One or two races a year feels right. A marathon eventually. And whatever else the journey brings.
+He said: "You don't have to go fast." Humans evolved to run long distances at slower paces. And if I could find a pace that was comfortable, I could go for much longer.
 
-The hills don't intimidate me anymore. I learned the right skills, and they're manageable now. That's probably a metaphor for something, but I'll leave that alone.
+That was the final thing I needed. I played around with pace and found that I could keep going (and enjoy it) if I found the right pace.
+
+## Working up to 13.1
+
+While things started to click, the injuries also set it. I had to nurse a few along the way.
+
+During the longest recovery session, I made a plan. Our half marathon was a little more than three months away, and I thought I could get into race shape by then, slowly increasing my mileage.
+
+I saw the doc again for treating the injuries, and got back on the path. 
+
+I look back on that time period fondly. I'd been dealing with some significant anxiety that made the longer runs really difficult in some ways. But as I learned to navigate that, I was getting a rush from keeping my body going for longer and longer periods of time. Every week brought a new challenge to **run farther than I've ever run in my life.** My neighbors probably got tired of me celebrating after a good practice.
+
+## Reaching the goal!
+
+By the time race day arrived, I was ready. I'd run more than 10 miles four times. My plan was conservative — nine-minute miles would have me finishing just under two hours.
+
+But I fed on the energy. It was an incredible experience to be surrounded by thousands of runners, and supporters crammed on the edge of the course nearly every step of the way.
+
+I didn't just break a nine-minute pace, I broke an eight-minute pace!
+
+## What running means to me now
+
+Something that started as a way to quiet my brain has become a practice I genuinely look forward to. There's a part of me now that didn't exist before. I'm a runner. And I like being a runner.
+
+I'm not afraid of hills. I'm not afraid of long distances (well, mostly — my anxieties are still noisy). 
+
+I don't do it to win. I do it for exercise and to have fun. And it's the _fun_ part that I never thought was possible.
+
+So I'm just going to keep running, keep learning, and enjoy the process. Compete in a few races every year. Maybe consider a marathon. Maybe. Eventually. And I look forward to whatever else the journey brings.
