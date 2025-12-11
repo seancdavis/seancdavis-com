@@ -6,7 +6,6 @@ description: >-
   writing.
 tags:
   - inspiration
-ai: true
 image: /posts/250412/why-i-started-blogging-again-1CCBPvpK.png
 seo:
   image: /posts/250412/why-i-started-blogging-again-HGKR2VDp--meta.png

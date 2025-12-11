@@ -1,8 +1,8 @@
 name: Notion Post Publisher
 on:
   workflow_dispatch: {}
-  schedule:
-    - cron: "0 15-21 * * 1-5"
+  # schedule:
+  #   - cron: "0 15-21 * * 1-5"
 jobs:
   Notion-Post-Publisher:
     name: "Notion Post Publisher"

@@ -1,25 +1,217 @@
 ---
 description: Draft new blog posts from outlines in the style of previously-written articles.
 globs: www/src/**/*.md
+alwaysApply: false
 ---
 
 ## Writing new blog posts
 
-When asked to write a new blog post, write in the style of the markdown files found in `www/src/posts/*.md` **published in the last year**. I will provide an outline for you to use.
+When asked to write a new blog post, write in the style of the markdown files found in `www/src/posts/*.md` **published in the last year**. I will often provide a transcript from a voice recording that you'll use as the basis for the post.
 
-- You don't need to reference posts that were published older than a year to keep style consistent with how I'm writing today.
-- Follow the same structure and syntax found in previous posts.
-- These posts are typically written for a web developer audience. They are often to the point, with a small level of snark.
-- Make the length appropriate. I'm not overly concise, but I don't teach from first principles. When there is a bullet in an outline, it should usually equate to a few sentences. Enough to get the point across with substance to back it up.
-- When possible and/or necessary, link to other articles on this site, even if they are older than a year. 
-- Link to external articles only when it would benefit the reader in some way.
-- Add frontmatter to the post to match the style of other recent posts. 
-- Titles should not be longer than 60 characters and descriptions not longer than 160 characters.
-- Look t
-- Do not worry about images. Leave the image field out. It will be created automatically later.
-- Use headings to break up the text so that there aren't too many consecutive paragraphs. It should be easy for a reader to scan and understand the gist of the post through the headings. For nested topics, layer h3 inside of h2. Never use h1. h4 should be rare, but is necessary when extra detail is required.
-- Use `www/src/topics/*.md` to reference the options for topics to add to the post. Create new topics only when consistent with how I've used topics in the past.
-- Don't try to use fancy words. Stick to terms and phrases I typically use.
-- Date new posts with today's date.
-- Don't stack headings. There should always be a paragraph (or even a short sentence) between headings.
-- Add `ai: true` to the frontmatter
+### Required Reading
+
+Before writing a post, read 3-5 recent posts (within the last year) from `www/src/posts/` (published within the last year) to calibrate your understanding of current voice and style. Focus on posts with similar topics or formats to what you're writing.
+
+### Voice & Tone
+
+**The Golden Rule:** Write conversationally, as if explaining something to a colleague over coffee. Not formal, not academic, not trying to impress.
+
+- **First person perspective**: Use "I" liberally. Share personal experiences, opinions, and what you've learned.
+- **Second person address**: Speak directly to the reader using "you"
+- **Contractions**: Always use them naturally (do not → don't, I am → I'm, you will → you'll)
+- **Honesty and vulnerability**: Admit mistakes, share struggles, acknowledge when something didn't work
+- **Self-aware and playful**: Call out your own choices. If using clickbait, acknowledge it: "Yeah, I know. Click bait."
+- **Confident but humble**: Frame advice as "here's what I do" or "this is what worked for me", not prescriptive rules
+- **Occasional profanity**: Use sparingly and only when it feels natural (see: "Does Your Code Spark Joy?" - "So I got the fuck out")
+- **No excessive praise**: Avoid over-the-top validation. Be direct and objective.
+- **Humor**: Light touches of wit and self-deprecation, but never forced
+- **Optimism and curiosity**: End on forward-looking, curious notes rather than declarative conclusions. "I guess we'll find out" over "The bottom line"
+
+**What to avoid:**
+- Don't sound like marketing copy or sales material
+- Don't use buzzwords without explanation or context
+- Don't be preachy or condescending
+- Don't use corporate speak or jargon without purpose
+- Don't try to sound smarter than you need to
+
+### Language Patterns
+
+**Sentence structure:**
+- Mix short, punchy sentences with longer explanatory ones
+- Use em dashes (—) for asides and additional context. Put spaces between em dashes and words.
+- Start sentences with conjunctions when it flows: "And yet...", "But that's not all...", "So..."
+- Use conversational transitions: "Look", "Right", "Well", "Yeah"
+
+**Emphasis techniques:**
+- Italics for emphasis or introducing key concepts: _static_, _adapters_, _why_
+- Italics for key phrases and questions at the start of posts: "_Is Git dead?_"
+- Bold for important takeaways or statements: **The only way to get better is to begin.**
+- Combine bold and italic within sentences for layered emphasis: "_something changed, and now we need to **do something else**_"
+- Use rhetorical questions to engage: "Why does it matter to you?", "What would Marie Kondo say?"
+
+**Common patterns:**
+- "WTF is..." for explainer posts
+- "Pro tip:" for quick, actionable advice
+- Personal anecdotes to introduce topics
+- "I love [this approach] because..." when explaining preferences
+- Acknowledge dramatic or clickbait choices upfront: "Yeah, I know. Click bait."
+- Express uncertainty confidently: "I don't know" or "I guess we'll find out"
+
+### Structure & Formatting
+
+**Post organization:**
+1. Hook with a relatable problem or personal story
+2. Build context or explain the evolution of thinking
+3. Present the solution or main point
+4. Provide examples (often code examples for technical posts)
+5. End with encouragement or a call to action
+
+**Headings:**
+- Use ## for main sections (never use h1)
+- Use ### for subsections when needed
+- h4 should be rare
+- **Always use sentence case** for all headings (including the title): "Version control for vibe coders" not "Version Control for Vibe Coders"
+- Headings should be descriptive and scannable
+- Be creative with heading names - choose engaging, personality-filled phrases over generic ones
+- Never stack headings - always have at least a sentence between them
+- Good heading examples: "Benefits of regular writing", "Version control for vibe coders", "The excitement is in the adventure", "Getting started"
+- Avoid generic headings like "The bottom line", "Conclusion", "What are our options?" when more creative alternatives exist
+
+**Code blocks:**
+- Use proper syntax highlighting (```ts, ```js, etc.)
+- Add filename labels above code blocks when relevant: `src/constants.ts` {.filename}
+- Show evolution: bad example → improved example → final solution
+- Include comments in code only when they clarify intent
+- Keep examples focused and realistic
+
+**Lists:**
+- Use numbered lists for steps or sequential items
+- Use bullet points for collections of ideas
+- Keep list items parallel in structure
+- Each item should be substantive (a few sentences) not just fragments
+
+**Other elements:**
+- Link to other posts on the site frequently (even older ones when relevant)
+- Link to external resources when they add real value (e.g., GitHub Universe recap, official docs)
+- Use blockquotes for quotes from others
+- Include specific examples before generalizing
+- Add concrete data and numbers when relevant: "100-150 million developers worldwide", "dozens (maybe hundreds) of projects"
+- Provide real product examples and features: specific CLI commands, drag-and-drop URLs, actual workflows
+- Reference personal timeline and experience: "I've been a Netlify user for many years"
+
+### Content Approach
+
+**Technical posts:**
+- Start with the natural/naive approach
+- Show evolution of thinking: "Then you need X, so you do Y..."
+- Acknowledge tradeoffs: "Potential Downfalls", "Other Considerations"
+- Provide variations: "Variations on constant", "Find your pattern"
+- Be opinionated but open: "This is what I do. Use it and adjust it."
+- Give escape hatches: Acknowledge when the advice doesn't apply
+
+**Career/advice posts:**
+- Ground in personal experience, not theory
+- Share specific stories or examples
+- Acknowledge different paths: "This worked for me, but..."
+- End with encouragement
+- Combine practical advice with inspiration
+
+**Opinion/thought pieces:**
+- Share what excites you about the current moment or trend
+- Acknowledge uncertainty about the future: "I don't know" is a valid answer
+- End with curiosity and open questions rather than definitive conclusions
+- Use specific observations from your work: "What's really exciting to me about being at Netlify today is..."
+- Frame trends as opportunities for exploration rather than problems to solve
+
+**Key principles:**
+- Specific before general (show concrete example first, then extract principle)
+- Problems before solutions (set up why something matters)
+- Acknowledge complexity while simplifying
+- Show your work and thought process
+- Reference past learnings and how thinking has evolved
+
+### Writing Guidelines
+
+**Length:**
+- Match the length to the topic
+- Not overly concise, but don't teach from first principles
+- Each outline bullet typically becomes a few substantive sentences
+- Short posts (500-800 words) are fine for simple topics
+- Longer posts (1500-2500 words) for comprehensive topics
+
+**Readability:**
+- Break up text with headings so content is scannable
+- Avoid too many consecutive paragraphs without breaks
+- Readers should understand the gist from headings alone
+- Use lists to organize related points
+- Code examples break up text naturally
+
+**Common phrases to use:**
+- "Here's what I've been doing..."
+- "In my experience..."
+- "This is simply what works for me"
+- "And yet..." (to introduce contrast)
+- "That's fine. Great, really!" (to validate alternatives)
+- "Look..." (to get direct)
+- "It's worth noting..."
+- "What's really exciting to me about..."
+- "I guess we'll find out"
+- "Yeah, I know..."
+
+**Common phrases to avoid:**
+- "Leverage" (use "use" instead)
+- "Utilize" (use "use" instead)
+- "In order to" (use "to" instead)
+- "It is important to note that" (just say it directly)
+- Overly formal transitions
+
+### Frontmatter Requirements
+
+```yaml
+---
+title: [Max 60 characters, sentence case]
+description: [Max 160 characters]
+tags:
+  - [use existing topics from www/src/topics/*.md]
+---
+```
+
+- **Title uses sentence case**: "Is Git dead?" not "Is Git Dead?"
+- Do not include image fields (these are generated separately)
+- Date new posts with today's date in the filename: YYYY-MM-DD-title-slug.md
+- Use topics consistently with past usage
+- Think broadly about relevant tags - if the post discusses AI agents, include the "ai" tag even if the main topic is something else
+- Create new topics only when truly necessary and consistent with existing patterns
+
+### Quality Checklist
+
+Before finalizing a post, verify:
+- [ ] Read 3-5 recent posts to calibrate voice
+- [ ] Used contractions naturally throughout
+- [ ] Used first person ("I") and second person ("you")
+- [ ] Included personal experience or examples
+- [ ] Avoided jargon and buzzwords without context
+- [ ] Mixed short and long sentences
+- [ ] Used em dashes for asides
+- [ ] **All headings use sentence case** (including title)
+- [ ] Headings are descriptive, scannable, and creative (avoid generic phrases)
+- [ ] No stacked headings (always text between them)
+- [ ] Used italics for emphasis on key phrases
+- [ ] Added concrete numbers and data where relevant
+- [ ] Included specific product examples and commands when applicable
+- [ ] Code blocks have syntax highlighting when relevant
+- [ ] Links to other site posts where appropriate
+- [ ] Links to valuable external resources when they add context
+- [ ] Ended with curiosity, encouragement, or forward-looking statement (not generic conclusion)
+- [ ] Frontmatter is complete and accurate
+- [ ] Title ≤ 60 characters and uses sentence case
+- [ ] Description ≤ 160 characters
+- [ ] Considered all relevant tags (not just the obvious main topic)
+
+### Final Notes
+
+- Read the posts you're emulating out loud. Does it sound like a real person talking?
+- When in doubt, be more casual and conversational
+- It's okay to have opinions and preferences - share them
+- Don't try to be comprehensive - be helpful for the specific problem
+- Remember: You're sharing what you've learned, not lecturing on what others must do
