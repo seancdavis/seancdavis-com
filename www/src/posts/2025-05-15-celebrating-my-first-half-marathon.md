@@ -30,7 +30,7 @@ That pain became an outlet. I could shut off the constant mental chatter and foc
 
 ## Two early milestones to set the stage for the half
 
-After about a month of running these short distances every few days, I registered for a 7k race (~4.5 miles), mostly for the post-race beers. I still had no idea what I was doing, and I'd mostly been running 2-3 miles at a time. But I finished! And the energy at the race was exhilarating! 
+After about a month of running these short distances every few days, I registered for a 7k race (~4.5 miles), mostly for the post-race beers. I still had no idea what I was doing, and I'd mostly been running 2-3 miles at a time. But I finished! And the energy at the race was exhilarating!
 
 Feeding off of that high, I experimented with longer distances. The first time I ran five miles, I came home and just stood in front yard for a moment, catching my breath and thinking, _I've never done that before by choice._
 
@@ -50,13 +50,13 @@ The new shoes felt really goofy. But I felt the difference almost immediately.
 
 I've had "light asthma" for years, but it only really seemed to flare up at night. I just happened to be at the doctor at mentioned that I was running more and asked about using the inhaler for recovery.
 
-The doc told me to hit it ahead of time. _You have asthma_ was the hint. For some reason, it never occurred to me that maybe running actually was harder (and less enjoyable) for me because my breathing is more difficult. 
+The doc told me to hit it ahead of time. _You have asthma_ was the hint. For some reason, it never occurred to me that maybe running actually was harder (and less enjoyable) for me because my breathing is more difficult.
 
 The first time I hit the inhaler before a run was like I had a super power. I had _no idea_ how much extra effort my lungs were giving just to keep me going.
 
 ### Slowing down
 
-I did a causual beer run a few months later. A friend of a friend is an ultra running competitor (does those competitions that last days). But I loved talking to him about getting more into running, and I asked his advice.
+I did a casual beer run a few months later. A friend of a friend is an ultra running competitor (does those competitions that last days). But I loved talking to him about getting more into running, and I asked his advice.
 
 He said: "You don't have to go fast." Humans evolved to run long distances at slower paces. And if I could find a pace that was comfortable, I could go for much longer.
 
@@ -68,7 +68,7 @@ While things started to click, the injuries also set it. I had to nurse a few al
 
 During the longest recovery session, I made a plan. Our half marathon was a little more than three months away, and I thought I could get into race shape by then, slowly increasing my mileage.
 
-I saw the doc again for treating the injuries, and got back on the path. 
+I saw the doc again for treating the injuries, and got back on the path.
 
 I look back on that time period fondly. I'd been dealing with some significant anxiety that made the longer runs really difficult in some ways. But as I learned to navigate that, I was getting a rush from keeping my body going for longer and longer periods of time. Every week brought a new challenge to **run farther than I've ever run in my life.** My neighbors probably got tired of me celebrating after a good practice.
 
@@ -84,7 +84,7 @@ I didn't just break a nine-minute pace, I broke an eight-minute pace!
 
 Something that started as a way to quiet my brain has become a practice I genuinely look forward to. There's a part of me now that didn't exist before. I'm a runner. And I like being a runner.
 
-I'm not afraid of hills. I'm not afraid of long distances (well, mostly — my anxieties are still noisy). 
+I'm not afraid of hills. I'm not afraid of long distances (well, mostly — my anxieties are still noisy).
 
 I don't do it to win. I do it for exercise and to have fun. And it's the _fun_ part that I never thought was possible.
 
