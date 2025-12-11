@@ -15,21 +15,16 @@
 # [[plugins]]
 #   package = "netlify-plugin-checklinks"
 
-  [plugins.inputs]
-    skipPatterns = ["https://www.netlify.com/img/deploy/button.svg"]
-
 [[plugins]]
   package = "netlify-plugin-inline-critical-css"
     [plugins.inputs]
       fileFilter = ['index.html']
       directoryFilter = ['!*']
 
-# Temporarily disabled due to Pa11y timeout issues in CI
-# The pa11y timeout (30000ms) is an infrastructure limitation
 # [[plugins]]
 #   package = "netlify-plugin-a11y"
 #     [plugins.inputs]
-#       checkPaths = ['/']
+#       checkPaths = ['/', '/about']
 #       resultMode = "warn"
 
 [[plugins]]
