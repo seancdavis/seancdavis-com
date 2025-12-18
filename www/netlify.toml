@@ -5,10 +5,10 @@
 [[plugins]]
   package = "@seancdavis/netlify-plugin-jest"
 
-# Note: This is the portion of the workflow that triggers publishing new tweets 
-# after a build was completed. The Twitter API no longer works and I can't use 
+# Note: This is the portion of the workflow that triggers publishing new tweets
+# after a build was completed. The Twitter API no longer works and I can't use
 # it programmatically. Tweets will go back to being published manually.
-# 
+#
 # [[plugins]]
 #   package = "@seancdavis/netlify-plugin-github-dispatch"
 
