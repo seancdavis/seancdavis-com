@@ -1284,13 +1284,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@notionhq/client@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@notionhq/client/-/client-2.3.0.tgz#4feecb012ebcd4116df14a9e2c77afed7eeb73cd"
-  integrity sha512-l7WqTCpQqC+HibkB9chghONQTYcxNQT0/rOJemBfmuKQRTu2vuV8B3yA395iKaUdDo7HI+0KvQaz9687Xskzkw==
-  dependencies:
-    "@types/node-fetch" "^2.5.10"
-    node-fetch "^2.6.1"
+"@notionhq/client@^5.6.0":
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/@notionhq/client/-/client-5.6.0.tgz#13fea40462f570150d6d8c2341d47323462e971c"
+  integrity sha512-eA3dO87vQJhFmR59utXH8r0nnulW7C7oTcxfp3bpiiTiv59luCkOkbbALCIa8TzBDdELoRD/zJEIfKcynyFR6Q==
 
 "@octokit/auth-token@^3.0.0":
   version "3.0.0"
@@ -1762,14 +1759,6 @@
   version "1.2.2"
   resolved "https://registry.npmjs.org/@types/minimist/-/minimist-1.2.2.tgz"
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
-
-"@types/node-fetch@^2.5.10":
-  version "2.6.1"
-  resolved "https://registry.npmjs.org/@types/node-fetch/-/node-fetch-2.6.1.tgz"
-  integrity sha512-oMqjURCaxoSIsHSr1E47QHzbmzNR5rK8McHuNb11BOM9cHcIK3Avy0s/b2JlXHoQGTYS3NsvWzV1M0iK7l0wbA==
-  dependencies:
-    "@types/node" "*"
-    form-data "^3.0.0"
 
 "@types/node@*", "@types/node@>=10.0.0":
   version "17.0.39"
