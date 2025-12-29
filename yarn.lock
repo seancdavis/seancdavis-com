@@ -5910,10 +5910,12 @@ inquirer@^6.3.1:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-instantsearch.css@^7.4.5:
-  version "7.4.5"
-  resolved "https://registry.npmjs.org/instantsearch.css/-/instantsearch.css-7.4.5.tgz"
-  integrity sha512-iIGBYjCokU93DDB8kbeztKtlu4qVEyTg1xvS6iSO1YvqRwkIZgf0tmsl/GytsLdZhuw8j4wEaeYsCzNbeJ/zEQ==
+instantsearch.css@^8.9.0:
+  version "8.9.0"
+  resolved "https://registry.yarnpkg.com/instantsearch.css/-/instantsearch.css-8.9.0.tgz#4feb639c760d511a977003348a70160bdd2c28af"
+  integrity sha512-mD8wuVCvIR9WLzi9tSLextESqgzfvUaAclaK+rnP2nmTZXXHTAOnCyoVomPaRBSs4ivEYG/uMnPKsm0yUxd9LQ==
+  dependencies:
+    tweakpane "4.0.5"
 
 instantsearch.js@^4.44.0:
   version "4.44.0"
@@ -11031,6 +11033,11 @@ tunnel-agent@^0.6.0:
   integrity sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=
   dependencies:
     safe-buffer "^5.0.1"
+
+tweakpane@4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/tweakpane/-/tweakpane-4.0.5.tgz#696572c4294c48a11cc0a3c487ea89ad1491e09a"
+  integrity sha512-rxEXdSI+ArlG1RyO6FghC4ZUX8JkEfz8F3v1JuteXSV0pEtHJzyo07fcDG+NsJfN5L39kSbCYbB9cBGHyuI/tQ==
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
