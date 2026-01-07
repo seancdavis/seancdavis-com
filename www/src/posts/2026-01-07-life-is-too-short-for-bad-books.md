@@ -5,6 +5,9 @@ description: >-
   transformed the way I read.
 tags:
   - inspiration
+image: /posts/260107/life-is-too-short-for-bad-books-7t484fLd.png
+seo:
+  image: /posts/260107/life-is-too-short-for-bad-books-hE0culv0--meta.png
 ---
 
 I don't think you should finish a bad book.
