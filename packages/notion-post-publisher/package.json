@@ -12,7 +12,7 @@
   "dependencies": {
     "@notionhq/client": "^2.3.0",
     "@prettier/sync": "^0.5.2",
-    "aws-sdk": "^2.1692.0",
+    "@aws-sdk/client-s3": "^3.726.0",
     "chalk": "<5.0.0",
     "date-fns": "^4.1.0",
     "fast-glob": "^3.3.3",

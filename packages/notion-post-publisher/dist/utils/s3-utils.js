@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.uploadFile = uploadFile;
 exports.downloadFile = downloadFile;
-const aws_sdk_1 = require("aws-sdk");
+const client_s3_1 = require("@aws-sdk/client-s3");
 const https_1 = __importDefault(require("https"));
 const fs_1 = __importDefault(require("fs"));
 /**
@@ -17,22 +17,17 @@ async function uploadFile(srcFilePath, s3FilePath) {
     if (process.env.SKIP_S3_UPLOAD)
         return false;
     const bucket = process.env.AWS_BUCKET;
-    const s3 = new aws_sdk_1.S3({ apiVersion: "2006-03-01" });
+    const s3 = new client_s3_1.S3Client({});
     const params = {
         Body: fs_1.default.readFileSync(srcFilePath),
         Bucket: bucket,
         Key: s3FilePath,
         ContentType: "image/png",
     };
-    return new Promise((resolve, reject) => {
-        s3.putObject(params, (err) => {
-            if (err)
-                return reject(err);
-            const msg = `Uploaded image: https://${bucket}.s3.amazonaws.com/${s3FilePath}`;
-            console.log(msg);
-            resolve(s3FilePath);
-        });
-    });
+    await s3.send(new client_s3_1.PutObjectCommand(params));
+    const msg = `Uploaded image: https://${bucket}.s3.amazonaws.com/${s3FilePath}`;
+    console.log(msg);
+    return s3FilePath;
 }
 /**
  * Downloads a remote image to a local directory.
