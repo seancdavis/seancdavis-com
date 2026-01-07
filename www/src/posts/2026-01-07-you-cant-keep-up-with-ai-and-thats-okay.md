@@ -6,6 +6,9 @@ description: >-
 tags:
   - ai
   - developer-advice
+image: /posts/260107/you-cant-keep-up-with-ai-and-thats-okay--8xkUpWD.png
+seo:
+  image: /posts/260107/you-cant-keep-up-with-ai-and-thats-okay-guTkye7t--meta.png
 ---
 
 I took about a week and a half off over the holidays. Did some minimal tinkering, built one little project, but mostly focused on family. Didn't consume much content. Just unplugged.
