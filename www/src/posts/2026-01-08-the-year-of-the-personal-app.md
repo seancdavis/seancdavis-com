@@ -6,6 +6,9 @@ description: >-
 tags:
   - ai
   - developer-advice
+image: /posts/260108/the-year-of-the-personal-app-rlJeXZ0d.png
+seo:
+  image: /posts/260108/the-year-of-the-personal-app--JTYip_N--meta.png
 ---
 
 I've generally shied away from predictions lately. Things are changing so fast that it sometimes feels silly to say "this is what's going to happen this year" when it can be hard to predict what's going to happen tomorrow.
