@@ -1,4 +1,4 @@
-import { S3 } from "aws-sdk";
+import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 import https from "https";
 import fs from "fs";
 
@@ -12,7 +12,7 @@ export async function uploadFile(srcFilePath: string, s3FilePath: string) {
 
   const bucket = process.env.AWS_BUCKET;
 
-  const s3 = new S3({ apiVersion: "2006-03-01" });
+  const s3 = new S3Client({});
   const params = {
     Body: fs.readFileSync(srcFilePath),
     Bucket: bucket!,
@@ -20,14 +20,10 @@ export async function uploadFile(srcFilePath: string, s3FilePath: string) {
     ContentType: "image/png",
   };
 
-  return new Promise((resolve, reject) => {
-    s3.putObject(params, (err) => {
-      if (err) return reject(err);
-      const msg = `Uploaded image: https://${bucket}.s3.amazonaws.com/${s3FilePath}`;
-      console.log(msg);
-      resolve(s3FilePath);
-    });
-  });
+  await s3.send(new PutObjectCommand(params));
+  const msg = `Uploaded image: https://${bucket}.s3.amazonaws.com/${s3FilePath}`;
+  console.log(msg);
+  return s3FilePath;
 }
 
 /**

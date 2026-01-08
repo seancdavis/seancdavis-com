@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.formatTitle = void 0;
+exports.formatTitle = formatTitle;
 /**
  * Builds a string to use to set the current font on the canvas.
  */
@@ -69,4 +69,3 @@ function formatTitle(title, context, options) {
     fontSize = Math.min(...text.map((line) => findMaxFontSize(line, context, options.maxFontSize, options.maxLineWidth)));
     return { fontSize, text };
 }
-exports.formatTitle = formatTitle;

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateImages = void 0;
+exports.generateImages = generateImages;
 const post_1 = require("./lib/post");
 const config_utils_1 = require("./utils/config-utils");
 /**
@@ -22,4 +22,3 @@ async function generateImages(config) {
         await post.rmTmpFiles();
     }
 }
-exports.generateImages = generateImages;
