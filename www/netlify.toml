@@ -38,6 +38,5 @@
     trailingSlash = true
     exclude = [
       "./dist/404.html",
-      "./dist/search/index.html",
       "./dist/demos/**/**"
     ]
