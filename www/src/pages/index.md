@@ -9,7 +9,7 @@ footer:
   hide_newsletter: true
 sections:
   featured:
-    item: /posts/the-era-of-the-personal-app
+    item: /posts/era-of-the-personal-app
   recent:
     heading: Recent Posts
     body: The freshest written thoughts, tips, and tutorials from the site.
