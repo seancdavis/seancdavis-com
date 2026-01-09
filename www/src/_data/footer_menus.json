@@ -53,10 +53,6 @@
     "heading": "Site References",
     "links": [
       {
-        "label": "Search",
-        "url": "/search"
-      },
-      {
         "label": "License",
         "url": "/license"
       },

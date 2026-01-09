@@ -20,12 +20,6 @@
     "button": false
   },
   {
-    "label": "Search",
-    "url": "/search",
-    "icon": "search",
-    "button": false
-  },
-  {
     "label": "Twitter",
     "url": "https://x.com/seancdavis29",
     "icon": "twitter",
