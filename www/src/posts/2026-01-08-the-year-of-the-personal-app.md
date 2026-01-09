@@ -13,15 +13,15 @@ seo:
 
 I read [Matt Biilmann's predictions for 2026](https://biilmann.blog/articles/predictions-for-2026/) and it got me thinking about where we're headed.
 
-I have one specific take: we're on the precipice of the era of personal software.
+I think that we're on the precipice of the era of personal software.
 
 ## The problem with software today
 
-When we have a problem that can be solved with software, we generally reach for an existing app. Both the [Google Play Store](https://www.androidheadlines.com/2013/07/google-play-store-beats-apples-appstore-to-1-million-apps-available.html) and App Store hit 1 million applications back in 2013. People have been reaching for software to solve specific problems for a long time.
+When we have a problem that can be solved with software, we generally reach for an existing app. Both the Google Play Store and App Store hit 1 million applications [back in 2013](https://www.androidheadlines.com/2013/07/google-play-store-beats-apples-appstore-to-1-million-apps-available.html). People have been reaching for software to solve specific problems for a long time.
 
 But there have always been two opposing challenges with this model.
 
-### 1. Software built for the masses, not for you
+### 1. Software is built for the masses, not for you
 
 You find an app that somebody else built, and it either doesn't have everything you need, isn't customizable enough, or requires workarounds to fit your workflow.
 
