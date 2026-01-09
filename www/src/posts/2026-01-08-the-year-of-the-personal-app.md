@@ -47,7 +47,9 @@ But a lot of what's come out of these tools has been just that — demos, experi
 
 That's changing.
 
-I'm seeing more and more people really relying on AI to write their code. More converts to this new way of working. I just caught [this from Ben Holmes](https://x.com/BHolmesDev/status/2008601602500997376) yesterday.
+I'm seeing more and more people really relying on AI to write their code. More converts to this new way of working. I just caught this from Ben Holmes yesterday:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">A lot of developers are using agents to write their code these days. I was a hold-out... but Claude Opus 4.5 finally cracked me.<br><br>So, I made a video walking through how I write code with agents end-to-end. We&#39;ll talk plans, rules, and everything else in my setup! <a href="https://t.co/6BlgRwbUXQ">pic.twitter.com/6BlgRwbUXQ</a></p>&mdash; Ben Holmes (@BHolmesDev) <a href="https://twitter.com/BHolmesDev/status/2008601602500997376?ref_src=twsrc%5Etfw">January 6, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### The personal app becomes viable
 
