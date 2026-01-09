@@ -99,6 +99,15 @@ Before writing a post, read 3-5 recent posts (within the last year) from `www/sr
 - Provide real product examples and features: specific CLI commands, drag-and-drop URLs, actual workflows
 - Reference personal timeline and experience: "I've been a Netlify user for many years"
 
+**Embedding tweets:**
+To embed a tweet, use the standard Twitter embed format. Get the embed code from Twitter/X's "Embed Tweet" option, which looks like:
+
+```html
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">[Tweet content]</p>&mdash; [Author] (@[handle]) <a href="https://twitter.com/[handle]/status/[id]">[Date]</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+
+The blockquote provides a pre-rendered fallback, and the widgets.js script enhances it when the page loads.
+
 ### Content Approach
 
 **Technical posts:**
