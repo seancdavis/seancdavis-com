@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.726.0",
-    "canvas": "^3.1.0",
+    "canvas": "^3.2.1",
     "date-fns": "^4.1.0",
     "js-yaml": "^4.1.0",
     "nanoid": "<4.0.0"
