@@ -4,7 +4,7 @@
   "author": "Sean C Davis <scdavis41@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@analytics/google-analytics": "^1.0.5",
