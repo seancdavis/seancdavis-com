@@ -25,11 +25,15 @@ For years, I had a mantra I'd share with developers who felt overwhelmed by the 
 
 My advice was usually: read about it, do some loose tinkering to understand the approach that tool was taking, but fight the urge to rebuild everything immediately. When you have a small project, pick up a new tool to learn and see how it meshes with your other preferences. Adjust your toolkit gradually as these tools earn your trust over time, and you get the sense that they will last.
 
-While that advice is still relevant, there are two fundamental differences today:
+While that advice is still relevant, the landscape is different today.
 
-1. The rate of change is an order of magnitude faster. We're not seeing a new framework every week. We're seeing several new tools, new apps, and new ways to build apps every single day. New ways to set up your environment, new skills to teach AI agents — it's relentless.
+### Rate of change is an order of magnitude faster
 
-2. The bigger shift is that the rate of _adoption_ has changed. In the past, you could read about a new CMS in a day and build a proof of concept in a day. But you couldn't actually move an app to a new service in a day. That took weeks or months.
+We're not seeing a new framework every week. We're seeing several new tools, new apps, and new ways to build apps every single day. New ways to set up your environment, new skills to teach AI agents — it's relentless.
+
+### Rate of adoption is immediate
+
+The bigger shift is that the rate of _adoption_ has changed. In the past, you could read about a new CMS in a day and build a proof of concept in a day. But you couldn't actually move an app to a new service in a day. That took weeks or months.
 
 Now you can adopt new tools almost as fast as they appear. That sounds great, until you realize it also means the treadmill never stops.
 
@@ -65,14 +69,14 @@ The world is moving really fast. It's more important that you have balance than 
 
 ## Keep a pulse, keep building
 
-Keep a pulse on the advancements. I think it's a massive mistake to ignore what's happening. But you don't need to be the person who picks up every new model every single day.
+I think it's a massive mistake to ignore how web development is changing. But you also don't need to be the person who picks up every new model every single day.
 
 Claude is moving fast. It's going to get leapfrogged by Gemini or Codex, then leapfrog them back. If you want to stick with one tool that's solving your problems, that's fine. You don't have to chase the leader board.
 
 Take time off. Spend it with your family, with other people you want to be around, and explore the world outside of AI. You'll miss a lot of the advancement, you'll miss things in the world of AI, just as you'll miss sites during your travels. There's too much for one person to do and too much for one person to see, and that's okay.
 
-When you get back, get back to tinkering. One of the benefits of AI is that you can tinker _while_ you do your work. You can adopt new practices on the fly, without it being a separate learning project. Use that.
+When you get back, get back to tinkering. One of the benefits of AI is that you can tinker _while_ you do your work. You can adopt new practices on the fly, without it being a separate learning project. Take advantage of that.
 
 Remember that you're never going to understand everything, you're never going to try everything, you're never going to see everything. That's not failure; that's part of the human experience.
 
-**The goal isn't to keep up. The goal is to keep building, to keep living, and to have a little fun along the way.**
+**The goal isn't to keep up with everything. The goal is to keep building, to keep learning, to keep living, and to have a little fun along the way.**
