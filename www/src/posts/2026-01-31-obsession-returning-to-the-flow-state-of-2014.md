@@ -5,7 +5,6 @@ description: >-
 tags:
   - ai
   - developer-advice
-image: /images/seancdavis-logo.png
 ---
 
 I spent the better part of two full days last week absolutely hammering on Claude code, pushing it further than I ever have before. And something interesting happened. It felt like I had transported myself back to 2014-2015, the peak of my Ruby on Rails development. It was the first time in a long, long time that I felt truly obsessed with what I was doing.
