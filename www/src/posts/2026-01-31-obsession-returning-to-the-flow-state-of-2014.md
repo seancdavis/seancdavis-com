@@ -1,10 +1,16 @@
 ---
-title: "Obsession: Returning to the Flow State of 2014"
+title: 'Obsession: Returning to the Flow State of 2014'
 description: >-
-  How modern AI coding tools haven't just made me faster, they have transported me back to the head-in-the-sand, deep-working feeling of my peak Ruby on Rails days.
+  How modern AI coding tools haven't just made me faster, they have transported
+  me back to the head-in-the-sand, deep-working feeling of my peak Ruby on Rails
+  days.
 tags:
   - ai
   - developer-advice
+image: /posts/260131/obsession-returning-to-the-flow-state-of-2014-PzmbwjGj.png
+seo:
+  image: >-
+    /posts/260131/obsession-returning-to-the-flow-state-of-2014-D2pTlVEQ--meta.png
 ---
 
 I spent the better part of two full days last week absolutely hammering on Claude Code, pushing it further than I ever have before. And something interesting happened. It felt like I had transported myself back to 2014-2015, the peak of my Ruby on Rails development. It was the first time in a long, long time that I felt truly obsessed with what I was doing.
