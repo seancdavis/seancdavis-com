@@ -16,7 +16,7 @@
     "@seancdavis/netlify-plugin-jest": "^0.1.0",
     "analytics": "^0.8.0",
     "autoprefixer": "^10.4.22",
-    "axios": "^1.13.2",
+    "axios": "^1.13.4",
     "chalk": "^4.0.0",
     "clipboard": "^2.0.11",
     "cssnano": "^5.1.14",
