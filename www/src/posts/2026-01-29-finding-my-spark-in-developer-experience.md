@@ -1,12 +1,17 @@
 ---
 title: Finding my spark in Developer Experience
 description: >-
-  A personal story about my shift from leading a developer education team, facing mental health challenges and an identity crisis with AI, and finding a new path in developer experience.
+  A personal story about my shift from leading a developer education team,
+  facing mental health challenges and an identity crisis with AI, and finding a
+  new path in developer experience.
 tags:
   - career
   - mental-health
   - developer-experience
   - ai
+image: /posts/260129/finding-my-spark-in-developer-experience-_wZzY_Y0.png
+seo:
+  image: /posts/260129/finding-my-spark-in-developer-experience-q_u0Rdmg--meta.png
 ---
 
 I'm going to come out and say it: 2025 was, for the most part, a really hard year for me.
