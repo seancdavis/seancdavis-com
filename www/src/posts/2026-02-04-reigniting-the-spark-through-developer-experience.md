@@ -1,7 +1,12 @@
 ---
 title: Reigniting the spark through developer experience
 description: >-
-  Facing mental health challenges and a developer identity crisis, then beginning to find some answers.
+  Facing mental health challenges and a developer identity crisis, then
+  beginning to find some answers.
+image: /posts/260204/reigniting-the-spark-through-developer-experience-vlQaKis2.png
+seo:
+  image: >-
+    /posts/260204/reigniting-the-spark-through-developer-experience-t6VpAIsf--meta.png
 ---
 
 2025 was a hard year for me. While I'm sure it can get a lot worse (knocks on wood), much of it was a struggle.
