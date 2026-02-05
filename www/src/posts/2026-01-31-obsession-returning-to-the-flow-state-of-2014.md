@@ -1,5 +1,5 @@
 ---
-title: 'Obsession: Returning to the Flow State of 2014'
+title: "Obsession: returning to the flow state of 2014"
 description: >-
   How modern AI coding tools haven't just made me faster, they have transported
   me back to the head-in-the-sand, deep-working feeling of my peak Ruby on Rails
@@ -17,7 +17,7 @@ I spent the better part of two full days last week absolutely hammering on Claud
 
 ## The head-in-the-sand flow
 
-You know that feeling of being head-in-the-sand, absolutely cranking, hitting walls, and getting frustrated because I want this thing to work and I want it to work right now, but it's not working. I know I needed to tear myself away from the screen, but it was hard to focus fully on anything else. 
+You know that feeling of being head-in-the-sand, absolutely cranking, hitting walls, and getting frustrated because I want this thing to work and I want it to work right now, but it's not working. I know I needed to tear myself away from the screen, but it was hard to focus fully on anything else.
 
 I found myself shirking other life responsibilities just to keep building. I woke up early on Saturday, knowing I needed to look at the family budget, but instead I spent three hours building.
 
@@ -41,7 +41,7 @@ And it turns out that the flow state looks completely different today (for me). 
 
 ### Maximizing effectiveness in working with AI
 
-I had been forming the idea that people who could context-switch most effectively were the most productive with AI tools, but I don't think that's the case. It's at least not _all_ about context switching. I think it's more of a combination of three things: 
+I had been forming the idea that people who could context-switch most effectively were the most productive with AI tools, but I don't think that's the case. It's at least not _all_ about context switching. I think it's more of a combination of three things:
 
 - Establishing a level of focus to determine what you want an agent to build
 - Communicating clearly what you're trying to build
