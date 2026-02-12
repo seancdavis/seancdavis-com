@@ -6,6 +6,9 @@ description: >-
 tags:
   - ai
   - developer-advice
+image: /posts/260205/build-over-buy-nqT5lJ_u.png
+seo:
+  image: /posts/260205/build-over-buy-X-2d8YbW--meta.png
 ---
 
 We're in what I've been calling [the era of the personal app](/posts/era-of-the-personal-app/). Anybody can build anything they want — very specific to them, their workflows, their preferences. And if something doesn't work exactly the way you want it to, you can probably just rebuild it.
