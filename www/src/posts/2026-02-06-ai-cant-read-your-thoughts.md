@@ -7,6 +7,9 @@ description: >-
 tags:
   - ai
   - developer-advice
+image: /posts/260206/ai-cant-read-your-thoughts-ERVFeZr3.png
+seo:
+  image: /posts/260206/ai-cant-read-your-thoughts-wennqtoO--meta.png
 ---
 
 There's a lot of hype around AI coding tools right now. _Just tell it to make an app and it works._
