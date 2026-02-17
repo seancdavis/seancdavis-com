@@ -6,6 +6,10 @@ description: >-
 tags:
   - ai
   - developer-advice
+related_posts:
+  - ai-cant-read-your-thoughts
+  - the-push-toward-async-work
+  - finding-balance-with-context-switching
 image: /posts/260205/build-over-buy-nqT5lJ_u.png
 seo:
   image: /posts/260205/build-over-buy-X-2d8YbW--meta.png
@@ -61,7 +65,7 @@ As a builder with a deep history in software development, I want to build with t
 
 If what I want to build requires a specific workflow or integrations into other tools, I don't need another layer on top of that stack. I can just build it. And it's now trivial to make it completely customized to my exact needs.
 
-It's so much faster than it was before. And it's constantly getting faster.
+It's so much faster than it was before. And it's constantly getting faster. I've been [running multiple projects at once](/posts/finding-balance-with-context-switching/) and building custom solutions in less time than it used to take to evaluate off-the-shelf alternatives.
 
 And yet, it seems like there's a new tool on the market daily that sits above these services. I've struggled adopting these because they just feel like software that can be recreated to work exactly the way I want to work. (That may be completely wrong.) 
 
@@ -87,10 +91,10 @@ At the same time, that work will have a residual effect, making it easier to bui
 
 ## The joy of building with control
 
-AI development has opened up a whole new world of moving at lightning speed with the same level of control that developers are used to. We'll likely get to a point where developers don't need to go as low-level as they have before. But they will always need (and want) the level of control they've always had.
+AI development has opened up a whole new world of moving at lightning speed with the same level of control that developers are used to. We'll likely get to a point where developers don't need to go as low-level as they have before. But they will always need (and want) the level of control they've always had. And that control starts with [the thinking you do before prompting](/posts/ai-cant-read-your-thoughts/) — knowing what you want to build and why.
 
 And that's why AI development feels so good to me right now. I can create things lightning fast, and I never feel like something's been taken away from me. Instead, I have a new tool that has pushed me one step further up the path of convergence.
 
 That push will continue. But the joy of creating, the speed of creating, the level of control in creating — those things are not going away. If anything is going to change, it's that the speed and joy will increase.
 
-That's why I'm having so much fun building today. And it's why I'm really excited for the future of software development.
+That's why I'm having so much fun building today. And it's why I'm really excited for the future of software development. Once you have a strong foundation, the key is learning [when to stay hands-on and when to hand things off](/posts/the-push-toward-async-work/).

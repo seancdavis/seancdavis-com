@@ -7,6 +7,10 @@ description: >-
 tags:
   - ai
   - developer-advice
+related_posts:
+  - the-push-toward-async-work
+  - finding-balance-with-context-switching
+  - build-over-buy-era
 image: /posts/260206/ai-cant-read-your-thoughts-ERVFeZr3.png
 seo:
   image: /posts/260206/ai-cant-read-your-thoughts-wennqtoO--meta.png
@@ -16,7 +20,7 @@ There's a lot of hype around AI coding tools right now. A mantra I keep hearing 
 
 And what's amazing is that it does work, at least in many cases. Tools like Bolt, Lovable, and others have really lowered the barrier to getting an application up and running with very little prompting.
 
-But the more you want that something to be yours — to actually fit how you work, how you think, how you want it to fit in, the problem you're trying to solve — the more you realize that "make me an app" is just the beginning of a long and potentially endless journey of thinking.
+But the more you want that something to be yours — to actually fit how you work, how you think, how you want it to fit in, the problem you're trying to solve — the more you realize that "make me an app" is just the beginning of a long and potentially endless journey of thinking. And once you've done that thinking, the [ability to build exactly what you want](/posts/build-over-buy-era/) has never been more accessible.
 
 ## AI tools can do a lot
 
@@ -46,7 +50,7 @@ So you might get something that hasn't been created before, but it's very likely
 
 This doesn't even have to involve a technical background. I find myself doing this too — I don't really know what I'm going to build, I just know the core of the problem. And while I might have a longer prompt than someone without a technical background, the solution might end up just as generic.
 
-One way to approach this is to just pick one thing at a time and keep changing it until you really like what you've got. That way, you're doing all the planning through building and iteration. You are, and have become, the product manager.
+One way to approach this is to just pick one thing at a time and keep changing it until you really like what you've got. That way, you're doing all the planning through building and iteration. You are, and have become, the product manager. And the more you iterate, the more you'll find [a rhythm for balancing multiple threads](/posts/finding-balance-with-context-switching/) of work.
 
 ## Product thinking still matters
 
@@ -62,6 +66,6 @@ And you can do that today.
 
 But you'll get there faster and with better results if you think first. Outline the problem (even if it's totally erratic). Understand what you're actually trying to build. Work with AI to build a rock-solid plan. Be clear about the constraints and trade-offs. Then hand it off.
 
-The pre-implementation phase doesn't have to take much time, but it still offers significant value. And if done well, it leads to a prompt from which an agent can craft an MVP of a solution that is 90% or more complete.
+The pre-implementation phase doesn't have to take much time, but it still offers significant value. And if done well, it leads to a prompt from which an agent can craft an MVP of a solution that is 90% or more complete. Once that MVP is in place, you can [shift to async workflows](/posts/the-push-toward-async-work/) and let agents handle the polish while you move on to the next thing.
 
 Think, plan quickly, and happy building!

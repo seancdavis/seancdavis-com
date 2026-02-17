@@ -7,6 +7,10 @@ description: >-
 tags:
   - ai
   - developer-advice
+related_posts:
+  - finding-balance-with-context-switching
+  - ai-cant-read-your-thoughts
+  - build-over-buy-era
 image: /posts/260213/the-push-toward-async-work--aYlQ82p.png
 seo:
   image: /posts/260213/the-push-toward-async-work-nUaJj1If--meta.png
@@ -21,7 +25,7 @@ It's a two-phased approach:
 
 ## MVP work requires tight feedback loops
 
-When I'm standing up a new project from scratch, I don't just fire off a prompt and walk away. I'm still forming thoughts and ideas about what this thing actually is, and I've noticed that the MVP comes out stronger if I stay tapped in and work within tighter feedback loops with my coding agent.
+When I'm standing up a new project from scratch, I don't just fire off a prompt and walk away. I'm still forming thoughts and ideas about what this thing actually is, and I've noticed that the MVP comes out stronger if I stay tapped in and work within tighter feedback loops with my coding agent. [The thinking matters](/posts/ai-cant-read-your-thoughts/) — a lot.
 
 For those early stages, I want quick back-and-forth messages with the agent. I want to be in the loop — peppering messages, trying things, course-correcting. That can be while the code is being written or while we're working on a detailed plan. Either way, it takes a lot of my attention if it's going to start from a strong foundation.
 
@@ -43,7 +47,7 @@ This doesn't mean the agent has to build the entire MVP. But these integration p
 
 Once I get to a place where there's enough definition — enough confidence in what this thing actually is and how it works, including roughly the visual design, basic behaviors, and integrations — that's when I switch modes. That's when I want to work asynchronously.
 
-The synchronous work is really about being thoughtful during the MVP stage, whatever that means to you. Once that's stable, much of the remaining work — small gaps, polish, and expansion — can be offloaded. You can let agents run in parallel while you move on to the next thing that requires your deeper attention.
+The synchronous work is really about being thoughtful during the MVP stage, whatever that means to you. Once that's stable, much of the remaining work — small gaps, polish, and expansion — can be offloaded. You can let agents run in parallel while you [move on to the next thing](/posts/finding-balance-with-context-switching/) that requires your deeper attention.
 
 ## Drive to get past the synchronous stage
 
@@ -53,4 +57,4 @@ At this point, I strongly recommend that you stay focused while getting an MVP s
 
 I'm still experimenting with this, and the needle is moving rapidly. Tools are evolving, my agent is getting better at writing plans and translating them into code, and platforms like Netlify are delivering an agent experience that makes it easier to set up infrastructure and integrations seamlessly. These things will continue to get better, fast. I suspect my opinion on the right balance will change soon.
 
-For now, stay focused as you work through your core idea, but continue to drive toward async work so you're always putting your human mind — the thing that can't be replaced — into where it can be of most value.
+For now, stay focused as you work through your core idea, but continue to drive toward async work so you're always putting your human mind — the thing that can't be replaced — into where it can be of most value. And with the [foundational tooling available today](/posts/build-over-buy-era/), it's never been easier to make that shift.

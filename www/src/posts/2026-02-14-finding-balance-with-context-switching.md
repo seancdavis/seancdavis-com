@@ -6,6 +6,10 @@ tags:
   - ai
   - productivity
   - developer-advice
+related_posts:
+  - the-push-toward-async-work
+  - ai-cant-read-your-thoughts
+  - build-over-buy-era
 image: /posts/260214/finding-balance-with-context-switching-mWekfMQT.png
 seo:
   image: /posts/260214/finding-balance-with-context-switching-A0F9ph48--meta.png
@@ -25,19 +29,19 @@ Writing code was most productive when I had dedicated blocks of time to minimize
 
 With AI doing the coding — and seeing people spin up whole applications virtually overnight — I wondered if we might be living in an opposite world. I wondered if working with AI was actually all about context switching, because in the end, all we're doing is providing context so that the AI agent can do its work.
 
-I spent the better part of two full days absolutely hammering on Claude — further than I've ever pushed it. I was running multiple terminal sessions, bouncing between them, trying to build three or four applications at the same time.
+I spent the better part of two full days absolutely hammering on Claude — further than I've ever pushed it. I was running multiple terminal sessions, bouncing between them, trying to [build three or four applications](/posts/build-over-buy-era/) at the same time.
 
 ### Three streams is my max
 
 What I found was that four concurrent sessions was too many. It was just too many threads of thought, and there was always some interaction I'd need with the first project before I could get to the fourth.
 
-This was while actively standing up applications from scratch — not just adding one little feature, but doing the heavy lifting of building something new. I felt too slow when I was working on only one, and an agent was always waiting when I was working on four. So, depending on the length of feedback cycles (which is somewhat dependent on what I'm building and where I am in the process), having two to three concurrent projects has felt good.
+This was while actively standing up applications from scratch — not just adding one little feature, but doing the heavy lifting of building something new. I felt too slow when I was working on only one, and an agent was always waiting when I was working on four. So, depending on the length of feedback cycles (which is somewhat dependent on what I'm building and where I am in the process), having two to three concurrent projects has felt good. At some point, I expect that to [shift toward async work](/posts/the-push-toward-async-work/) as the projects mature.
 
 ## Staying open to evolution
 
 I tested this theory, and I was wrong — at least partially. There _is_ a new balance for me, and it really does make me feel ultra productive. But that doesn't mean this is the way I'll always work.
 
-One thing I found throughout this process is that human thought is the key to making all of this work. Even though coding agents can work for longer and longer in isolation, they still need that human input. But _how_ I work, when and where that input comes from — that's going to keep changing.
+One thing I found throughout this process is that [human thought is the key](/posts/ai-cant-read-your-thoughts/) to making all of this work. Even though coding agents can work for longer and longer in isolation, they still need that human input. But _how_ I work, when and where that input comes from — that's going to keep changing.
 
 Maybe these two to three synchronous projects won't be the case in a month. Maybe as some of these projects I've built mature, I start working on more, but smaller features. I don't really know what the future holds, but I know I have to be open to adaptation. Things are changing so fast right now, and I need to be able and willing to change my working style to keep up.
 
