@@ -47,7 +47,14 @@ Before writing a post, read 3-5 recent posts (within the last year) from `www/sr
 - Italics for key phrases and questions at the start of posts: "_Is Git dead?_"
 - Bold for important takeaways or statements: **The only way to get better is to begin.**
 - Combine bold and italic within sentences for layered emphasis: "_something changed, and now we need to **do something else**_"
-- Use rhetorical questions to engage: "Why does it matter to you?", "What would Marie Kondo say?"
+
+**Avoid leading/rhetorical questions:**
+- Don't ask questions on behalf of the reader and then answer them — just give the content directly
+- Bad: "Why would we do that? Because it makes the code easier to maintain."
+- Good: "We do that because it makes the code easier to maintain."
+- Bad: "What's the benefit here? Well, it turns out..."
+- Good: "The benefit is that..."
+- Exception: Genuine questions that frame an exploration are fine (e.g., "_Is Git dead?_" as a post hook), but don't pepper the body with rhetorical questions
 
 **Common patterns:**
 - "WTF is..." for explainer posts
@@ -68,14 +75,16 @@ Before writing a post, read 3-5 recent posts (within the last year) from `www/sr
 
 **Headings:**
 - Use ## for main sections (never use h1)
-- Use ### for subsections when needed
+- Use ### for subsections when needed — and use them liberally
 - h4 should be rare
-- **Always use sentence case** for all headings (including the title): "Version control for vibe coders" not "Version Control for Vibe Coders"
-- Headings should be descriptive and scannable
-- Be creative with heading names - choose engaging, personality-filled phrases over generic ones
-- Never stack headings - always have at least a sentence between them
-- Good heading examples: "Benefits of regular writing", "Version control for vibe coders", "The excitement is in the adventure", "Getting started"
-- Avoid generic headings like "The bottom line", "Conclusion", "What are our options?" when more creative alternatives exist
+- **Always use sentence case** for all headings (including the title): "Version control for vibe coders" not "Version Control for Vibe Coders". Note: Older posts may use title case — ignore that pattern. Sentence case is the current standard.
+- **Headings must be specific and directional** — tell the reader where that section is going. A reader skimming headings should understand the post's argument and takeaways.
+- Never use generic headings like "The bottom line", "Conclusion", "Key considerations", or "What are our options?" — these tell the reader nothing about the content
+- Good heading examples: "Benefits of regular writing", "Version control for vibe coders", "The excitement is in the adventure", "Smaller commits make reviews easier"
+- Bad heading examples: "Why it matters", "The solution", "Moving forward", "Final thoughts"
+- Never stack headings — always have at least a sentence between them
+- **Break up long sections with h3s**: When an h2 section reaches roughly 5 paragraphs or contains multiple distinct ideas, use h3 subheadings to create visual breaks and improve scannability. This helps both human readers and AI agents understand the hierarchy and key points.
+- Prefer h3 subheadings over long bulleted/numbered lists with multi-sentence items — h3s create better visual hierarchy and are easier to skim
 
 **Code blocks:**
 - Use proper syntax highlighting (```ts, ```js, etc.)
@@ -186,7 +195,7 @@ tags:
 ```
 
 - **Title uses sentence case**: "Is Git dead?" not "Is Git Dead?"
-- Do not include image fields (these are generated separately)
+- **Never include image fields** in frontmatter (no `image`, `thumbnail`, `og_image`, etc.) — images are generated automatically by the build process
 - Date new posts with today's date in the filename: YYYY-MM-DD-title-slug.md
 - Use topics consistently with past usage
 - Think broadly about relevant tags - if the post discusses AI agents, include the "ai" tag even if the main topic is something else
@@ -202,9 +211,11 @@ Before finalizing a post, verify:
 - [ ] Avoided jargon and buzzwords without context
 - [ ] Mixed short and long sentences
 - [ ] Used em dashes for asides
-- [ ] **All headings use sentence case** (including title)
-- [ ] Headings are descriptive, scannable, and creative (avoid generic phrases)
+- [ ] **All headings use sentence case** (including title) — ignore title case in older posts
+- [ ] Headings are specific and directional — they tell the reader where the section is going (not generic like "Why it matters" or "The solution")
+- [ ] Long h2 sections (~5+ paragraphs or multiple ideas) are broken up with h3 subheadings
 - [ ] No stacked headings (always text between them)
+- [ ] No leading/rhetorical questions — content is stated directly rather than "Why? Because..."
 - [ ] Used italics for emphasis on key phrases
 - [ ] Added concrete numbers and data where relevant
 - [ ] Included specific product examples and commands when applicable
@@ -213,6 +224,7 @@ Before finalizing a post, verify:
 - [ ] Links to valuable external resources when they add context
 - [ ] Ended with curiosity, encouragement, or forward-looking statement (not generic conclusion)
 - [ ] Frontmatter is complete and accurate
+- [ ] No image fields in frontmatter (images are auto-generated)
 - [ ] Title ≤ 60 characters and uses sentence case
 - [ ] Description ≤ 160 characters
 - [ ] Considered all relevant tags (not just the obvious main topic)
