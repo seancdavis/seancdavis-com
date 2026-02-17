@@ -7,6 +7,9 @@ description: >-
 tags:
   - ai
   - developer-advice
+image: /posts/260213/the-push-toward-async-work--aYlQ82p.png
+seo:
+  image: /posts/260213/the-push-toward-async-work-nUaJj1If--meta.png
 ---
 
 I've been doing a lot of building lately. Multiple-projects-at-once, [hitting-that-obsession-flow-state](/posts/obsession-returning-to-the-flow-state-of-2014/) kind of building. And in the process, I've started to notice a pattern emerging in how I work most effectively with AI coding tools.
