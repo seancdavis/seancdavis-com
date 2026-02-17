@@ -1,11 +1,15 @@
 ---
 title: Finding balance with context switching
 description: >-
-  I tested my theory that those who context switch best produce the most value today. This is how I found my limit.
+  I tested my theory that those who context switch best produce the most value
+  today. This is how I found my limit.
 tags:
   - ai
   - productivity
   - developer-advice
+image: /posts/260214/finding-balance-with-context-switching-mWekfMQT.png
+seo:
+  image: /posts/260214/finding-balance-with-context-switching-A0F9ph48--meta.png
 ---
 
 I've done a lot of building with AI coding agents over the last couple weeks — standing up new projects, pushing tools like Claude harder than I ever have. Going into it, I had assumed that the people who could context switch the most in this new world were the ones set up best for success. And that I — someone who craves deep, focused work — was not built for this new world.
