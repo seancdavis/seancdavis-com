@@ -6,6 +6,9 @@ description: >-
 tags:
   - ai
   - developer-advice
+image: /posts/260226/it-takes-time-to-learn-how-to-work-with-ai-jBnizLGO.png
+seo:
+  image: /posts/260226/it-takes-time-to-learn-how-to-work-with-ai-3qvn-RFt--meta.png
 ---
 
 I had drinks last week with a former colleague — a developer I've known for years. He's been in the industry a while, writes good code, and is genuinely skilled at what he does. He's also deeply skeptical of AI.
