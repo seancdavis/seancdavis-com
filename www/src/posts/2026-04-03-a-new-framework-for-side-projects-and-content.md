@@ -1,11 +1,16 @@
 ---
 title: A new framework for side projects and content
 description: >-
-  I'm shifting how I build and create. Less scattered, more focused — with weekly themes, YouTube-first content, and social media as the megaphone.
+  I'm shifting how I build and create. Less scattered, more focused — with
+  weekly themes, YouTube-first content, and social media as the megaphone.
 tags:
   - ai
   - productivity
   - inspiration
+image: /posts/260403/a-new-framework-for-side-projects-and-content-G3vwqUKq.png
+seo:
+  image: >-
+    /posts/260403/a-new-framework-for-side-projects-and-content-MlfIPfTn--meta.png
 ---
 
 Over the last five or six months, something shifted for me. I changed roles, started building with AI, and [found a spark I hadn't felt in years](/posts/obsession-returning-to-the-flow-state-of-2014/). I went absolutely ham. Building all the time. Couldn't stop. Got obsessed.
