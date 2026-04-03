@@ -7,6 +7,9 @@ tags:
   - ai
   - productivity
   - inspiration
+image: /posts/260403/my-new-approach-to-creating-and-sharing-cI2dtxz5.png
+seo:
+  image: /posts/260403/my-new-approach-to-creating-and-sharing-2TOm_Qvw--meta.png
 ---
 
 Over the last six months, I've undergone a serious shift. I changed roles, started building furiously with AI, and [found a spark I hadn't felt in years](/posts/obsession-returning-to-the-flow-state-of-2014/). I was building constantly, obsessed, couldn't stop.
