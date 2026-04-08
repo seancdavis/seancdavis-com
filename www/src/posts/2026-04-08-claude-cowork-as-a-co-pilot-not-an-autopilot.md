@@ -8,6 +8,10 @@ tags:
   - productivity
   - inspiration
   - developer-advice
+image: /posts/260408/claude-cowork-as-a-co-pilot-not-an-autopilot-wxRov2qo.png
+seo:
+  image: >-
+    /posts/260408/claude-cowork-as-a-co-pilot-not-an-autopilot-ls-mCMmw--meta.png
 ---
 
 A few weeks back I took some PTO — part of it a solo camping trip, the kind where you actually get to sit with your thoughts for a while. And one of the things I kept turning over was this tension I'd been feeling about how I use AI.
