@@ -1,13 +1,13 @@
 ---
-title: Claude Cowork as a co-pilot, not an autopilot
+title: An updated mental model for choosing the right AI tool
 description: >-
-  After six months of building furiously with AI, I finally have a mental model
-  that makes sense of all these tools — and Cowork fits in a very specific spot.
+  After six months of building furiously with AI, I finally mapped out a clean
+  framework for which tool to reach for — and when.
 tags:
   - ai
   - productivity
-  - inspiration
   - developer-advice
+date: 2026-04-08
 image: /posts/260408/claude-cowork-as-a-co-pilot-not-an-autopilot-wxRov2qo.png
 seo:
   image: >-
@@ -20,15 +20,13 @@ I'd spent six months just hammering. Building apps, spinning up agents, pushing 
 
 I came back from that trip with a clearer head and [a new approach to creating and sharing](/posts/my-new-approach-to-creating-and-sharing/). Weekly themes. Video-first content. Spending max one hour a day to produce something publishable. But that plan immediately raised a new question: how do I actually use these AI tools to make that happen?
 
-That's what I've been figuring out this week.
-
 ## The problem with "just use AI"
 
 I use a lot of AI tools. Claude Code for heavy development. A thin wrapper I've built around the Claude API — I'm calling it OpenClaw — for async capture from anywhere (it runs via Telegram, which means I can use it from my phone at 6am without sitting down at a computer). A custom agent team called RockTree for certain async coding tasks. And now Cowork.
 
 The thing I kept bumping into was that I didn't have a clean mental model for _when_ to reach for which one. And without that mental model, every tool starts to feel like overhead. You spend cognitive energy deciding whether to open this app or that app, and the tools that were supposed to make you faster start making you slower.
 
-So I spent a chunk of yesterday mapping it out. And I think it breaks down cleanly along two axes: **where you are** and **how synchronous the work is**.
+So I spent a chunk of time mapping it out. And I think it breaks down cleanly along two axes: **where you are** and **how synchronous the work is**.
 
 ### OpenClaw: anywhere, async, quick capture
 
@@ -50,26 +48,14 @@ Your co-pilot is not going to fly the plane without you. You're both in the cock
 
 For me right now, that means the content engine: recording a video, transcribing it, writing a blog post, creating a thumbnail, uploading to YouTube, posting on socials. Every step of that requires human judgment at the key moments, but the execution is something I can offload. That's a Cowork job.
 
-## Replacing an app with a workflow
+## Why the distinction matters
 
-The other thing I want to talk about is paredown — a little social media filtering app I built. The idea was to ingest posts from my Twitter lists, run them through AI-powered filters, and surface only what was actually relevant to me. It worked. Kind of. It was clunky, it depended on a scraping service I was paying $30/month for, and the lists had to be public, which was its own problem.
+Before I had this framework, every new AI tool felt like it was competing with the others. Is this better than Claude Code? Should I switch? Do I need this?
 
-I'd been noodling on how to improve it, and yesterday I realized: this is a better Cowork job than an app job.
+With the two-axis model, there's no competition. They're filling different slots. When I'm away from my desk and need to capture something fast, I reach for OpenClaw — nothing else fits that slot. When I'm building something complex, I open Claude Code. When I'm at my desk working through a multi-step workflow that doesn't involve software development, I open Cowork.
 
-Part of what pushed me toward rebuilding paredown as an app originally was the [era of the personal app](/posts/era-of-the-personal-app/) mentality — and I still believe in that. But the more time I spend with Cowork, the clearer the distinction becomes. Build an app when you need to collaborate, distribute, or share the mechanism with other people. Build an app when the thing needs to run on a schedule you're not around for. 
+The cognitive overhead of choosing is gone. And that, weirdly, might be the most valuable thing the framework has given me — not some optimal allocation of AI resources, but the ability to just start working without spending five minutes deciding which tool to open.
 
-But when you're already sitting at your desk and you want to do a quick review of what's worth your attention? That's a co-pilot job. I can just say: _hey, let's look at what's out there this morning_ — and it goes and does it, shows me the results, and I decide what to do with them.
+I'm still refining this. There are edges I haven't figured out yet — RockTree fits somewhere in here, and I'm not totally sure where. But the core model is working, and it's already changing how I structure my days.
 
-I rebuilt that workflow in Cowork yesterday morning. It's not just reading my lists anymore — it also does dynamic discovery based on whatever I tell it to look for that day. It flags potential new accounts worth following. It keeps memory across sessions. And because I'm sitting there with it, I can redirect it in real time. No app needed.
-
-## Why I was skeptical and why I changed my mind
-
-I'll be honest — I initially wrote Cowork off as not for developers. I figured it was a productivity tool for non-technical users and I could just use Claude Code for everything. That was wrong.
-
-What I missed is that Cowork fills a gap that Claude Code doesn't. Code is for _building_. Cowork is for _doing_ — executing multi-step workflows where the work itself isn't software development. There's a whole category of stuff I do every day that falls into that bucket, and I'd been either doing it manually or ignoring it.
-
-The content engine I'm building this week is a perfect example. Writing a blog post, creating a thumbnail in Figma, uploading a video to YouTube, posting on three social platforms — that's not a development task. It's a repeatable workflow. And having a co-pilot run alongside me while I do it is genuinely faster than doing it alone.
-
-I don't know exactly where this goes. I'm on day one. But it has me excited in the same way that Claude Code got me excited about a year ago — this sense that the ceiling just got a lot higher. And yeah, I'm still figuring it out. But I'll keep you posted.
-
-We'll see how this goes.
+More to come.
