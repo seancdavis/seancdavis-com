@@ -1,13 +1,16 @@
 ---
 title: My first experiment with Claude Cowork
 description: >-
-  I'd written Cowork off as a tool for non-developers. Then I rebuilt a $30/month
-  app as a morning workflow and changed my mind.
+  I'd written Cowork off as a tool for non-developers. Then I rebuilt a
+  $30/month app as a morning workflow and changed my mind.
 tags:
   - ai
   - productivity
   - developer-advice
-date: 2026-04-09
+date: 2026-04-09T00:00:00.000Z
+image: /posts/260409/my-first-experiment-with-claude-cowork-aIp50euM.png
+seo:
+  image: /posts/260409/my-first-experiment-with-claude-cowork-xl2gDrTx--meta.png
 ---
 
 Yesterday I wrote about [the mental model I've landed on for choosing between AI tools](/posts/an-updated-mental-model-for-choosing-the-right-ai-tool/). The short version: Cowork is a co-pilot, not an autopilot. It's for work where you're already at your desk and the bottleneck is bandwidth, not judgment.
