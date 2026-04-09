@@ -47,4 +47,4 @@ The content engine I'm building this week is the clearest example. Writing a blo
 
 I'm writing this after just a couple of days with this new mental model, so I don't have strong conclusions yet — but the early signals are strong. I'm going to keep looking for new use cases where Cowork can remove repeatable tasks from my day and help me stay focused on work that actually requires my thinking.
 
-Much more to come. Let's get back to building.
+Much more to come. And now, back to building!
