@@ -30,7 +30,7 @@ After spending some time mapping this out, I think it breaks down cleanly along 
 
 ### OpenClaw: async, structured capture
 
-OpenClaw is an open-source project I've built for async capture from anywhere and everyday conversations. It runs via Telegram, so it's available whether I'm on a walk, in the car, or at a coffee shop at 6am. I use it for a food journal, personal journaling, building better habits, recording events and scenarios in a structured and predictable way — anything where I want to get something into my system without sitting down at a computer.
+[OpenClaw](https://openclaw.ai/) is an open-source project I've built for async capture from anywhere and everyday conversations. It runs via Telegram, so it's available whether I'm on a walk, in the car, or at a coffee shop at 6am. I use it for a food journal, personal journaling, building better habits, recording events and scenarios in a structured and predictable way — anything where I want to get something into my system without sitting down at a computer.
 
 The artifact is always structured content stored somewhere I can access and evaluate it later. And once I post the message, I don't need to be there. That's the whole point.
 
@@ -42,7 +42,7 @@ When I need to build something serious — multi-file changes, complex architect
 
 There's a category I haven't talked much about yet: async coding tasks. These are coding jobs I want done without sitting in the driver's seat.
 
-For my work at Netlify, I use Netlify's agent runners — a tool we're constantly improving to optimize that async workflow. For side projects, I've stood up a custom agent team I call rocktree. Its source of truth is a GitHub Projects board: it checks for issues that are ready to work, follows a series of defined tasks to get the job done, and sends it back to me for review.
+For my work at Netlify, I use Netlify's agent runners — a tool we're constantly improving to optimize that async workflow. For side projects, I've stood up a custom agent team I call [rocktree](https://www.rocktree.ai/). Its source of truth is a GitHub Projects board: it checks for issues that are ready to work, follows a series of defined tasks to get the job done, and sends it back to me for review.
 
 The artifact is a pull request — concrete code output I can review and ship.
 
