@@ -40,9 +40,9 @@ When I need to build something serious — multi-file changes, complex architect
 
 ### rocktree and Netlify agent runners: async coding tasks
 
-There's a category I haven't talked much about yet: async coding tasks. These are coding jobs I want done without sitting in the driver's seat.
+The category I've been tinkering with for a few months is async coding tasks. These are coding jobs I want done without sitting in the driver's seat.
 
-For my work at Netlify, I use Netlify's agent runners — a tool we're constantly improving to optimize that async workflow. For side projects, I've stood up a custom agent team I call [rocktree](https://www.rocktree.ai/). Its source of truth is a GitHub Projects board: it checks for issues that are ready to work, follows a series of defined tasks to get the job done, and sends it back to me for review.
+For my work at Netlify, I tend to use Netlify's agent runners — a tool we're constantly improving to optimize that async workflow. For side projects, I've stood up a custom agent team I call [rocktree](https://www.rocktree.ai/). Its source of truth is a GitHub Projects board: it checks for issues that are ready to work, follows a series of defined tasks to get the job done, and sends it back to me for review.
 
 The artifact is a pull request — concrete code output I can review and ship.
 
