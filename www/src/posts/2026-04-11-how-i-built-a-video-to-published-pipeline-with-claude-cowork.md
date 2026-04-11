@@ -8,7 +8,12 @@ tags:
   - ai
   - productivity
   - developer-advice
-date: 2026-04-11
+date: 2026-04-11T00:00:00.000Z
+image: >-
+  /posts/260411/how-i-built-a-video-to-published-pipeline-with-claude-cowork-PBOUO8ri.png
+seo:
+  image: >-
+    /posts/260411/how-i-built-a-video-to-published-pipeline-with-claude-cowork-68Lac9Ut--meta.png
 ---
 
 I've been producing videos for a while. And even when I'm keeping things intentionally loose — minimal edits, live-adjacent delivery — going from a raw recording to something published and promoted has consistently taken me two to four hours. That's the kind of friction that makes you record less, share less, put less out into the world.
