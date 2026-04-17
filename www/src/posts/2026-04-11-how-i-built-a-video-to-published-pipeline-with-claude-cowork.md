@@ -7,7 +7,12 @@ tags:
   - ai
   - productivity
   - developer-advice
-date: 2026-04-11
+date: 2026-04-11T00:00:00.000Z
+image: >-
+  /posts/260411/how-i-built-a-video-to-published-pipeline-with-claude-cowork-Qdu0M4K6.png
+seo:
+  image: >-
+    /posts/260411/how-i-built-a-video-to-published-pipeline-with-claude-cowork-OqfD8bzO--meta.png
 ---
 
 I've been producing various types of videos for many years. And even in the most streamlined scenarios — where I'm minimizing edits and treating the recording as though it were live — going from nothing to a published, distributed video is usually going to take three to four hours.
