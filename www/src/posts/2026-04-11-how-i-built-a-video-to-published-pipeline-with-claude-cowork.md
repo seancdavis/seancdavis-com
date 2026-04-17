@@ -1,96 +1,73 @@
 ---
 title: How I built a video-to-published pipeline with Claude Cowork
 description: >-
-  A walkthrough of the automated publishing pipeline I built this week: drop a
-  video in a folder, and Claude handles transcription, YouTube upload, thumbnail
-  drafting, blog post generation, and social scheduling — with me as editor.
+  A walkthrough of the pipeline I built with Claude Cowork: I drop in a video,
+  Claude handles distribution and promotion, and I stay in the loop as editor.
 tags:
   - ai
   - productivity
   - developer-advice
-date: 2026-04-11T00:00:00.000Z
-image: >-
-  /posts/260411/how-i-built-a-video-to-published-pipeline-with-claude-cowork-PBOUO8ri.png
-seo:
-  image: >-
-    /posts/260411/how-i-built-a-video-to-published-pipeline-with-claude-cowork-68Lac9Ut--meta.png
+date: 2026-04-11
 ---
 
-I've been producing videos for a while. And even when I'm keeping things intentionally loose — minimal edits, live-adjacent delivery — going from a raw recording to something published and promoted has consistently taken me two to four hours. That's the kind of friction that makes you record less, share less, put less out into the world.
+I've been producing various types of videos for many years. And even in the most streamlined scenarios — where I'm minimizing edits and treating the recording as though it were live — going from nothing to a published, distributed video is usually going to take three to four hours.
 
-My hypothesis going into this week: most of that time is spent on repeatable execution tasks, not judgment calls. And if that's true, a lot of it should be delegatable to an AI co-pilot.
+With that level of commitment, it's hard to produce as much as I want to. The work tends to span several days, so getting one video done in a week starts to feel like an accomplishment. That's not the pace I want.
 
-So I built a pipeline with Claude Cowork to test it. Here's how it works.
+After tinkering with Claude Cowork, I developed a hypothesis: if Cowork could handle a lot of those repeated tasks and I could keep my time focused on the recording and the things that require human judgment, I might just be able to record and publish daily.
 
-## The goal
+## The one-hour daily goal
 
-I want to record for 15–20 minutes, do a light editing pass, and be completely done — video live, blog post drafted, social posts sent or scheduled — in under an hour total. That's the hypothesis. This week was the first real attempt at it.
+The goal I've established is to get through the recording, editing, distribution, and promotion process in about an hour — so I can do that essentially every day.
 
-I'm not trying to hand the whole thing to an AI and walk away. I want to stay in every loop. The reason is simple: this is my voice, my ideas, my audience. AI can handle the execution. The judgment — what angle to take, whether a draft actually sounds like me, which ideas are worth emphasizing — that stays with me. What I'm optimizing for is getting *more* of my thinking out into the world, not a faster way to ship content I haven't really looked at.
+But to do that without sacrificing my voice — which is exactly what happens when I'm not careful about the process — I need to stay in the loop. Cowork handles the execution and proposes direction. I handle the judgment: the overall angle, the editing, making sure the voice that comes through is actually mine across every channel.
 
-## The setup
+The point isn't to produce more content for its own sake. It's to get more of my actual thoughts into the world. There's a real difference between that and putting out content that's masquerading as me. This feels like the future of what it means to distribute your voice — more presence, less execution overhead.
 
-I have a project folder in Claude Cowork with a single inbox directory. When I'm done with a light edit, I export the video and drop it in that folder. Then I start a session and say go.
+## The video production pipeline
 
-The pipeline runs through six phases, and I'm involved at specific checkpoints.
+I have a project set up in Claude Cowork with a directory dedicated to this workflow. The pipeline runs through six phases, and I'm in the loop at each one.
 
-### Phase 1: Intake
+### Phase 1: Recording
 
-Cowork picks up the video from the inbox, derives a slug from the filename, creates a dated working directory, and moves the file in. This is pure bookkeeping and takes a few seconds. When it's done, the folder is ready and the inbox is empty.
+I record a video. I try to keep it to 10–20 minutes. If there were major goofs — a bug I'm waiting on, a long awkward pause, something egregious — I note the timestamp and cut it. Otherwise I treat it as though it were live and just go with it. Then I drop the exported video into an inbox folder inside my Cowork project directory.
 
-### Phase 2: Transcription and planning
+### Phase 2: Cowork setup
 
-The first real step is transcription. Cowork runs the video through Whisper locally and produces a transcript. For a 20-minute recording, this has taken about a minute — fast enough that it doesn't feel like waiting.
+Cowork picks up the video from the inbox, generates an appropriate slug for the project, creates a dated working directory, and moves the file in.
 
-With the transcript in hand, Cowork proposes a YouTube title and description, a blog post title and description, and a note on whether the blog should take a different angle than the video. That last part matters. A 20-minute rambling conversation has a lot of threads in it. A blog post works better when it's making one argument. So sometimes the blog title and frame diverge from the video's, and that's intentional.
+### Phase 3: Transcription and planning
 
-I review these proposals, iterate back and forth until they're right, and give the go-ahead. Only then does anything else happen.
+Cowork runs the video through Whisper locally to produce a transcript. For a 20-minute recording, this usually takes a minute or two — fast enough that it doesn't feel like waiting.
 
-### Phase 3: Blog post and PR
+Once the transcript is ready, Cowork proposes a YouTube title and description, a blog post title and description, and a general summary of the direction to take in the blog post to complement the video.
 
-Once I approve the plan, Cowork drafts a full blog post in my voice — first-person, conversational, structured around the approved angle. It saves the draft to the working directory, then creates a branch in my `seancdavis-com` repo, commits the post file, and opens a pull request. I get a link to review the draft in GitHub.
+That last piece matters. While I might ramble in a video — jumping between threads, circling back, digressing — there's usually a more cohesive story that can be extracted for blog format. Staying too close to an off-the-cuff transcription tends to produce something erratic and unfocused. In some cases, there might actually be two blog posts worth of material in a single recording.
 
-I don't merge the PR at this point. That's another deliberate checkpoint. I'll read the draft, edit what needs editing, and merge when it's actually ready — not just when it's generated.
+I review these proposals, give the go-ahead or push back and iterate, then approve to continue.
 
-### Phase 4: Thumbnail and YouTube upload
+### Phase 4: Blog post draft
 
-In parallel with the blog post, Cowork opens Figma in the browser, finds my thumbnail template, duplicates the most recent frame, drops it into the current month's column, and updates the text with the approved title. It takes a screenshot and sends it to me: here's the thumbnail draft, make any tweaks, tell me when it's ready to export.
+With the direction approved, Cowork drafts a full blog post following the style guide and rules I've established — to keep the structure consistent and ensure the voice is authentic to me, drawn directly from the transcript. It then submits that draft for review via a pull request on my repository, so I can see the deploy preview on Netlify and come back in chat with comments.
 
-Once I confirm, it exports the thumbnail as a PNG and uploads it to YouTube alongside the video — using the YouTube API with credentials I've set up in a project folder. Title, description, tags, and thumbnail all get set in one shot. It sends me the YouTube URL.
+To comment, I typically record a voice note and share the transcription back in the chat thread with the agent. We continue to iterate until the post is ready to publish.
 
-This is the phase that surprised me most. I expected it to be clunky. It was not. Having a co-pilot handle the YouTube upload, which I genuinely dislike doing manually, while I do something else — that alone felt like a real unlock.
+### Phase 5: YouTube video and thumbnail
 
-### Phase 5: Social post drafts
+In parallel with the blog post, Cowork opens Figma in the browser, finds my thumbnail template, and uses it to generate a proposal for the thumbnail for this particular video. I usually need to make a few tweaks, then export and drop the finalized version into the project directory. Once it's there, I tell Cowork it's ready — and it uploads the video with the appropriate title, description, and thumbnail, then sends me the YouTube URL.
 
-With the YouTube URL in hand, Cowork writes a social-posts markdown file structured into two sets:
+### Phase 6: Social media promotion
 
-- **Set 1** — posts about the video, to go out immediately
-- **Set 2** — posts about the blog, to be scheduled for the next business day
+Now with the video and blog post published, Cowork writes social promotion post drafts in a Markdown file in two sets. The first promotes the video and goes out immediately. The second promotes the blog post and gets scheduled for the following business day.
 
-Each set has drafts for X, Bluesky, and LinkedIn. The tone varies by platform: punchy for X, link-card-optimized for Bluesky, more reflective and long-form for LinkedIn.
+Each set has drafts for X, Bluesky, and LinkedIn. The tone varies to suit each platform without sacrificing my voice — punchy for X, link-card-aware for Bluesky, more reflective and long-form for LinkedIn.
 
-I open that file in VS Code, edit what I want to change, and reply saying it's ready.
+I open that draft, make my edits, and tell Cowork when it's approved. Then it gets to work. For the platforms where it can post and schedule natively, it does that. For Bluesky — which has no native scheduling — it spins up a custom scheduled task that fires at the right time. Scheduling a platform that doesn't support scheduling. That part is genuinely clever.
 
-One manual exception: X video posts. The video embeds better when it's posted natively, which requires me to do it myself. Cowork writes me the suggested copy and I handle that one.
+## Early results
 
-### Phase 6: Post and schedule
+I've been through this process a few times now, and every time there's something small to tweak in the system. So it's definitely still taking more than an hour for each body of work.
 
-Cowork posts the Set 1 content immediately — Bluesky via the AT Protocol API, LinkedIn via browser automation against the shadow DOM. For the scheduled Set 2 content, it uses Twitter's and LinkedIn's built-in scheduling UIs for those platforms, and for Bluesky (which has no native scheduling), it creates a one-time scheduled task inside Cowork that fires at the right time.
+At the same time, it feels really good. A lot is happening, and the foundation gets stronger each time. I'm still quite a ways from proving the hypothesis, but I don't think it's out of the question.
 
-That last part is genuinely clever. Cowork scheduling itself to post something later, because the platform doesn't support it natively. It handled all of this during our first real run.
-
-## How it went
-
-The first run wasn't perfect. The transcript looked great. The YouTube upload worked. The blog draft needed edits — the initial version tried to cover two different threads from the video and I split it into two separate posts. The Bluesky posting required a few iterations before it got the link card preview working right. The LinkedIn post went through cleanly.
-
-Total time from recording to published: longer than an hour this first time, mostly because I was working through the setup while building it. That's fine. The point of week one was to get the mechanism in place, not to hit the time goal yet.
-
-Week two is where the actual test starts. Recording every day, targeting four to five hours total across the whole week, and seeing if I can come away with four to five distinct assets — video and written — actually out in the world. I think the answer is yes. I'll find out.
-
-## What I'm not doing
-
-I want to be clear about what's not happening here. Cowork is not writing for me. It's writing *from* me — from transcripts of me talking, from direction I give it in the chat, from edits I make before anything goes live. My voice doesn't go away because an AI is handling logistics. It stays in the work because I'm in every approval loop, and nothing ships without me having read and signed off on it.
-
-The goal isn't to produce more content automatically. It's to remove the execution overhead so that the time I spend on content is spent on things that actually require my judgment — the ideas, the framing, the editing pass — rather than YouTube upload queues and social scheduling UIs.
-
-That feels like the right way to use these tools. More of my thinking in the world, less of my time spent on the parts of publishing that a computer can handle. We'll see if the hypothesis holds.
+This feels like the future — getting more of what is actually my voice and my thinking out into the world, across various mediums, without needing to do as much of the execution myself. Like having a personal assistant throughout the entire video production process. I'm not quite there yet, but I'm excited about the prospect.
