@@ -15,19 +15,19 @@ seo:
     /posts/260411/how-i-built-a-video-to-published-pipeline-with-claude-cowork-OqfD8bzO--meta.png
 ---
 
-I've been producing various types of videos for many years. And even in the most streamlined scenarios — where I'm minimizing edits and treating the recording as though it were live — going from nothing to a published, distributed video is usually going to take three to four hours.
+I've been producing various types of videos for many years. And even in the most streamlined scenarios — where I'm minimizing edits and treating the recording as live — going from nothing to a published, distributed video usually takes 3-4 hours.
 
-With that level of commitment, it's hard to produce as much as I want to. The work tends to span several days, so getting one video done in a week starts to feel like an accomplishment. That's not the pace I want.
+With that level of commitment, it's hard to produce as much as I want to. The work tends to span several days, so getting one video done in a week has felt like an accomplishment. I feel like I should be able to move faster.
 
-After tinkering with Claude Cowork, I developed a hypothesis: if Cowork could handle a lot of those repeated tasks and I could keep my time focused on the recording and the things that require human judgment, I might just be able to record and publish daily.
+After tinkering with Claude Cowork, I developed a hypothesis: _If Cowork could handle the repeatable tasks and I could keep my time focused on the recording and the things that require human judgment, I might just be able to record and publish daily._
 
 ## The one-hour daily goal
 
-The goal I've established is to get through the recording, editing, distribution, and promotion process in about an hour — so I can do that essentially every day.
+My goal is to complete the recording, editing, distribution, and promotion process in about an hour, so I can do that on an almost daily basis.
 
-But to do that without sacrificing my voice — which is exactly what happens when I'm not careful about the process — I need to stay in the loop. Cowork handles the execution and proposes direction. I handle the judgment: the overall angle, the editing, making sure the voice that comes through is actually mine across every channel.
+But to do that without sacrificing my voice, I need to stay in the loop. Cowork handles the execution and proposes direction. I handle the judgment: the overall angle, the editing, making sure the voice that comes through is actually mine across every channel.
 
-The point isn't to produce more content for its own sake. It's to get more of my actual thoughts into the world. There's a real difference between that and putting out content that's masquerading as me. This feels like the future of what it means to distribute your voice — more presence, less execution overhead.
+The point isn't to produce more content for its own sake. It's to get more of my actual thoughts into the world. There's a real difference between that and unreviewed, AI slop. This feels like the future of how people will distribute their voice.
 
 ## The video production pipeline
 
@@ -35,7 +35,7 @@ I have a project set up in Claude Cowork with a directory dedicated to this work
 
 ### Phase 1: Recording
 
-I record a video. I try to keep it to 10–20 minutes. If there were major goofs — a bug I'm waiting on, a long awkward pause, something egregious — I note the timestamp and cut it. Otherwise I treat it as though it were live and just go with it. Then I drop the exported video into an inbox folder inside my Cowork project directory.
+I record a video. I try to keep it to 10–20 minutes. If there were major goofs, I note the timestamp and cut it. Otherwise, I treat it as live and just go with it. Then I drop the exported video into an inbox folder inside my Cowork project directory.
 
 ### Phase 2: Cowork setup
 
@@ -43,11 +43,11 @@ Cowork picks up the video from the inbox, generates an appropriate slug for the 
 
 ### Phase 3: Transcription and planning
 
-Cowork runs the video through Whisper locally to produce a transcript. For a 20-minute recording, this usually takes a minute or two — fast enough that it doesn't feel like waiting.
+Cowork runs the video through Whisper locally to produce a transcript. For a 20-minute recording, this usually takes a few minutes, so I tend to work on something else while the early processing is happening.
 
-Once the transcript is ready, Cowork proposes a YouTube title and description, a blog post title and description, and a general summary of the direction to take in the blog post to complement the video.
+Once the transcript is ready, Cowork proposes a YouTube title and description, a blog post title and description, and a general summary of the blog post direction to complement the video.
 
-That last piece matters. While I might ramble in a video — jumping between threads, circling back, digressing — there's usually a more cohesive story that can be extracted for blog format. Staying too close to an off-the-cuff transcription tends to produce something erratic and unfocused. In some cases, there might actually be two blog posts worth of material in a single recording.
+(I'm excited about the idea of getting a blog post from these recordings. It lets me ramble in the video, but then focus on key points in a more cohesive and coherent way in writing.)
 
 I review these proposals, give the go-ahead or push back and iterate, then approve to continue.
 
@@ -55,7 +55,7 @@ I review these proposals, give the go-ahead or push back and iterate, then appro
 
 With the direction approved, Cowork drafts a full blog post following the style guide and rules I've established — to keep the structure consistent and ensure the voice is authentic to me, drawn directly from the transcript. It then submits that draft for review via a pull request on my repository, so I can see the deploy preview on Netlify and come back in chat with comments.
 
-To comment, I typically record a voice note and share the transcription back in the chat thread with the agent. We continue to iterate until the post is ready to publish.
+To comment, I typically record a voice note and share the transcription back in the chat thread with the agent. We continue to iterate until the post is ready to publish. I frame this as though I am an editor in a live meeting with the agent, so I can vary between specific feedback and more general direction adjustments.
 
 ### Phase 5: YouTube video and thumbnail
 
@@ -63,11 +63,11 @@ In parallel with the blog post, Cowork opens Figma in the browser, finds my thum
 
 ### Phase 6: Social media promotion
 
-Now with the video and blog post published, Cowork writes social promotion post drafts in a Markdown file in two sets. The first promotes the video and goes out immediately. The second promotes the blog post and gets scheduled for the following business day.
+With the video and blog post published, Cowork writes social promotion post drafts in a Markdown file in two sets. The first promotes the video and goes out immediately. The second promotes the blog post and gets scheduled for the following business day.
 
-Each set has drafts for X, Bluesky, and LinkedIn. The tone varies to suit each platform without sacrificing my voice — punchy for X, link-card-aware for Bluesky, more reflective and long-form for LinkedIn.
+Each set has drafts for X, Bluesky, and LinkedIn. The tone varies to suit each platform, while maintaining authenticity.
 
-I open that draft, make my edits, and tell Cowork when it's approved. Then it gets to work. For the platforms where it can post and schedule natively, it does that. For Bluesky — which has no native scheduling — it spins up a custom scheduled task that fires at the right time. Scheduling a platform that doesn't support scheduling. That part is genuinely clever.
+I open that draft, make my edits, and tell Cowork when it's approved. Then it gets to work. For the platforms where it can post and schedule natively, it does that. For Bluesky — which has no native scheduling — it spins up a custom scheduled task that fires at the right time. (Being able to schedule Bluesky posts in this way is very convenient!)
 
 ## Early results
 
