@@ -1,12 +1,19 @@
 ---
-title: "The Handoff Doc: How to Move a Claude Chat Project to Cowork Without Losing Context"
+title: >-
+  The Handoff Doc: How to Move a Claude Chat Project to Cowork Without Losing
+  Context
 description: >-
-  When you move a Claude Chat project to Cowork, the import feature doesn't carry your conversation history. Here's a simple workaround using a handoff doc to preserve the context that matters.
+  When you move a Claude Chat project to Cowork, the import feature doesn't
+  carry your conversation history. Here's a simple workaround using a handoff
+  doc to preserve the context that matters.
 tags:
   - claude
   - cowork
   - ai-workflow
   - productivity
+image: /posts/260419/chat-to-cowork-pz3HK1F6.png
+seo:
+  image: /posts/260419/chat-to-cowork-BC47S4ve--meta.png
 ---
 
 If you've been working in Claude Chat and hit the point where you need more than conversation — you want file output, a working directory, an agent that can actually *build things* — the natural move is to take that project to Cowork. And on the surface, Claude makes it look easy. You go to Projects, click "Import," pick your Chat project, and done.
