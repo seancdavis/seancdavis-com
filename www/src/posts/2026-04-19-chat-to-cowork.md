@@ -1,57 +1,50 @@
 ---
-title: >-
-  The Handoff Doc: How to Move a Claude Chat Project to Cowork Without Losing
-  Context
+title: Using a handoff doc to move a project from Claude Chat to Cowork
 description: >-
-  When you move a Claude Chat project to Cowork, the import feature doesn't
-  carry your conversation history. Here's a simple workaround using a handoff
-  doc to preserve the context that matters.
+  A quick workaround for preserving context history when wanting to move a project from Claude Chat to Cowork.
 tags:
+  - ai
   - claude
   - cowork
   - ai-workflow
   - productivity
-image: /posts/260419/chat-to-cowork-pz3HK1F6.png
-seo:
-  image: /posts/260419/chat-to-cowork-BC47S4ve--meta.png
+date: 2026-04-19
 ---
 
-If you've been working in Claude Chat and hit the point where you need more than conversation — you want file output, a working directory, an agent that can actually *build things* — the natural move is to take that project to Cowork. And on the surface, Claude makes it look easy. You go to Projects, click "Import," pick your Chat project, and done.
+On the surface, moving a Claude Chat project into Cowork looks simple. You go to Projects, click "Import," pick your project, and it comes right over.
 
-Except it's not done. What you actually get is a blank Cowork project with none of your history.
+Except when you open it, there's nothing there. No decisions, no history, no context — just a blank slate.
 
-I ran into this with a personal rebranding project I'd been working on. Weeks of back-and-forth with a Chat agent: color palette decisions, brand direction Q&A, iterations on the visual language. We'd landed on a palette I was really happy with, and I was ready to start building actual assets. That meant moving to Cowork. And when I did, the new agent had no idea any of it had happened.
+I ran into this with a personal rebranding project. The back-and-forth had been going really well — we'd worked through a color system, landed on a palette I was happy with, and I was ready to start actually building things out. That meant moving to Cowork, where I could have the agent write to files, create assets, run a real project. And when I made the switch, the new agent had no idea any of it had happened.
 
-Here's what I do instead.
+The import feature just doesn't carry your conversation history. That might change eventually. For now, here's what I do.
 
-## The Handoff Doc
+## Create a handoff doc before you leave
 
-Before you leave your Chat project, ask the agent to create a handoff document. Something like this works well:
+Before you close out your Chat project, ask the agent to package up everything that matters. What I asked mine was roughly:
 
-> "I'm going to move this project over to Cowork. Can you create a handoff document with the full history of our work — decisions we've made, questions you've asked me with my answers, files we've created, and anything the next agent needs to know to pick up where we left off?"
+> "I'm going to move this project over to Cowork. Is there a way for me to export and copy the history? Including references to files you've created, questions you've asked me with the answers, et cetera."
 
-The agent will pull together a structured summary of everything meaningful from your conversation. In my case it included the final palette, the iterations we'd gone through, the reasoning behind the choices, and notes on what was still open. It also dropped the reference files — palette exports, mood board notes — into a folder alongside the document.
+It created a handoff document — a structured summary of all the decisions we'd made, the iterations on the palette, the reasoning behind choices, what was still open. It also dropped the reference files into a folder alongside it so the new agent would have everything it needed.
 
-That's it. That's the whole trick.
+That's the whole thing. Two minutes, maybe.
 
-## Picking It Up in Cowork
+## Drop the folder in and point the new agent at it
 
-Once you're in the new Cowork project, you drop that folder into your working directory and tell the agent where to look:
+Once you're in Cowork, drop that folder into your working directory and tell the agent where to look:
 
-> "The project handoff docs are in the working directory. The final palette is locked in, but you'll see the full decision history. Let's pick up from typeface selection."
+> "The project handoff docs are now in the working directory. You can see we have a final palette — that's locked in. But you should see the full history of the decisions made. Now we've got to nail down the typefaces. Let's pick it up from there."
 
-The agent reads the handoff doc, gets up to speed, and you're moving again without having to re-explain anything.
+The agent reads through it, gets oriented, and you're moving again without having to re-explain everything from scratch.
 
-It's a manual step, but it takes about two minutes. And it's a much more reliable way to carry context than hoping the import feature does what you expect — at least right now.
+## Claude synthesizes — it doesn't just dump a transcript
 
-## Why This Works
+One thing I've come to appreciate about this approach: when you ask Claude to create a handoff doc, it's not just writing out a raw transcript. It's distilling what actually mattered — the decisions, the open questions, the reasoning that led there. That compressed version is more useful to a new agent than a chat log would be, because it's organized around what matters rather than the order things happened.
 
-Claude is really good at synthesis. When you ask it to create a handoff doc, it's not just dumping a transcript — it's distilling the meaningful stuff: the decisions, the open questions, the artifacts. That compressed context is actually more useful to a new agent than a raw chat log would be, because it's organized around what matters rather than the chronological order things happened.
+I've started using this pattern beyond just Chat → Cowork migrations. Any time I'm picking up a thread in a new session, I'll ask the previous agent to write a brief summary of where things landed. It keeps things coherent without requiring you to re-litigate decisions you've already made. (I wrote about [the full publishing pipeline I've built around this kind of workflow](/posts/how-i-built-a-video-to-published-pipeline-with-claude-cowork/) if you want more context on how it all fits together.)
 
-I've started using this pattern beyond just Chat→Cowork migrations. Any time I'm starting a new conversation on a topic I've explored before, I'll ask the previous agent to write a brief summary of where we landed. It's a lightweight way to build continuity across sessions.
+## Context continuity is still an unsolved problem in AI tools
 
-## The Bigger Picture
+There's a real gap in AI tooling right now around carrying what you've learned and decided across sessions, tools, and agents. The handoff doc is a workaround — but it points at something worth thinking about: the value of a project isn't just in the output files, it's in the reasoning and decisions that led there. Preserving and reusing that reasoning is one of the more underrated parts of working effectively with these tools.
 
-Right now there's a real gap in AI tooling around context continuity — carrying what you've learned and decided across sessions, tools, and agents. The handoff doc is a workaround, but it points at something important: the value of a project isn't just in the output files, it's in the reasoning and decisions that led there. Finding ways to preserve and reuse that reasoning is one of the more underrated parts of working effectively with AI tools.
-
-For now though: before you move projects, ask for the handoff doc. Your future self will thank you.
+For now: ask for the handoff doc before you move. It takes two minutes and it's reliable.
