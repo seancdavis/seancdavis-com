@@ -1,14 +1,18 @@
 ---
 title: Using a handoff doc to move a project from Claude Chat to Cowork
 description: >-
-  A quick workaround for preserving context history when wanting to move a project from Claude Chat to Cowork.
+  A quick workaround for preserving context history when wanting to move a
+  project from Claude Chat to Cowork.
 tags:
   - ai
   - claude
   - cowork
   - ai-workflow
   - productivity
-date: 2026-04-19
+date: 2026-04-19T00:00:00.000Z
+image: /posts/260419/chat-to-cowork-yVnCjA6Z.png
+seo:
+  image: /posts/260419/chat-to-cowork-Y44oMnMC--meta.png
 ---
 
 On the surface, moving a Claude Chat project into Cowork looks simple. You go to Projects, click "Import," pick your project, and it comes right over.
