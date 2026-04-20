@@ -9,7 +9,12 @@ tags:
   - design
   - figma
   - productivity
-date: 2026-04-19
+date: 2026-04-19T00:00:00.000Z
+image: >-
+  /posts/260419/3-things-i-learned-using-claude-as-my-creative-director-VLUuKDZk.png
+seo:
+  image: >-
+    /posts/260419/3-things-i-learned-using-claude-as-my-creative-director-pvZS85oE--meta.png
 ---
 
 I set out last week to work through a personal rebrand project. Simple enough concept. But here's the thing I kept running into every time I've tried this in the past: the blank canvas is paralyzing.
