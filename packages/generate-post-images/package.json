@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "devDependencies": {
     "@types/js-yaml": "^4.0.5",
-    "typescript": "^5.8.2"
+    "typescript": "^6.0.3"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.726.0",
