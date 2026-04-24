@@ -66,9 +66,13 @@ The third thing I learned is about where you end up. A brand direction that live
 
 Once we'd settled on a color palette, I asked Claude to build it out the way Tailwind does, with all the shades and saturation levels for each brand color, so I'd have everything I'd eventually need for the web. It generated a `tokens.json` file and a markdown walkthrough for importing it directly into Figma.
 
+{% post_image alt="Figma tokens.json and import instructions", src="/uploads/260419/2026-04-19-figma-output.png" %}
+
 I was skeptical this would work cleanly. In the past, getting a color palette properly into Figma as variables has taken me 60 to 90 minutes. I'm not fast in Figma, and setting up tokens manually is tedious. This took less than ten minutes, including working through one small import hiccup.
 
 From there, Claude generated SVG mockups I could drag directly into Figma. They're not using the token variables, just raw hex values, but all the styles and variables are sitting in Figma now, and I can start building components from there.
+
+{% post_image alt="Palette mockups for Figma", src="/uploads/260419/2026-04-19-palette-grid.svg" %}
 
 ### This is still an incremental process
 
